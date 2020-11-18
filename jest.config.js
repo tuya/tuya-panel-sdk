@@ -6,7 +6,6 @@ module.exports = {
     '^image![a-zA-Z0-9$_-]+$': 'GlobalImageStub',
     '^[@./a-zA-Z0-9$_-]+\\.(png|gif)$': 'RelativeImageStub',
   },
-  coverageDirectory: './coverage/',
   collectCoverageFrom: [
     'src/basic/**/*.js',
     '!**/interface.js',
