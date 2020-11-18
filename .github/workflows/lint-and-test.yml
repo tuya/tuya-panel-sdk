@@ -8,10 +8,10 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
       - name: Install modules
         run: yarn
-      - name: Run Prettier
-        run: yarn format
+      # - name: Run Prettier
+        # run: yarn format
       - name: Run ESLint
-        run: yarn lint
+        run: yarn lint --no-error-on-unmatched-pattern
       - name: Run Test
         run: yarn test --silent --forceExit --passWithNoTests
       - name: Upload coverage to Codecov
