@@ -1,4 +1,4 @@
-name: Upload coverage to Codecov
+name: Lint And Test
 on: push
 jobs:
   build:
@@ -8,6 +8,10 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v1
       - name: Install modules
         run: yarn
+      - name: Run Prettier
+        run: yarn format
+      - name: Run ESLint
+        run: yarn lint
       - name: Run Test
         run: yarn test --silent --forceExit --passWithNoTests
       - name: Upload coverage to Codecov
