@@ -15,10 +15,24 @@
 </p>
 </center>
 
-## 业务组件划分
+## 组件发布脚本
 
-| package                                                      | description    | maintainer           |
-| ------------------------------------------------------------ | -------------- | -------------------- |
-| [tuya-native-elements](packages/tuya-native-elements)        | 通用业务组件包 | @xinxin.li @zengzhao |
-| [tuya-native-standard-elements](packages/tuya-native-standard-elementsl) | 公版业务组件包 | @xinxin.li           |
-| [tuya-native-animation-elements](packages/tuya-native-animation-elements) | 动画组件包     | @zengzhao @huangtt   |
+> 以下脚本会按 `自动查询子包更新状态` -> `生成 changelog` -> `生成 git tag` -> `git push --follow-tags` -> `npm publish` 的顺序执行
+
+### 发布预备版
+
+```sh
+$ yarn release:pre # bump 预备补丁版本，eg. 0.1.1-rc.0 -> 0.1.1-rc.1 or 0.1.0 -> 0.1.1-rc.0
+$ yarn release:prepatch # 发布预备补丁版本，eg. 0.1.0 -> 0.1.1-rc.0
+$ yarn release:preminor # 发布预备次要版本，eg. 0.1.0 -> 0.2.0-rc.0
+$ yarn release:premajor # 发布预备主要版本，eg. 0.1.0 -> 1.0.0-rc.0
+```
+
+### 发布正式版
+
+```shell
+$ yarn release # 根据 conventional commits 自动 bump version
+$ yarn release:patch # 发布补丁版本，eg. 0.0.1 -> 0.0.2
+$ yarn release:minor # 布次要版本，eg. 0.0.1 -> 0.1.0
+$ yarn release:major # 发布主要版本，eg. 0.0.1 -> 1.0.0
+```
