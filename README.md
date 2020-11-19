@@ -14,3 +14,11 @@
   <img src="https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
 </p>
 </center>
+
+## 业务组件划分
+
+| package                                                      | description    | maintainer           |
+| ------------------------------------------------------------ | -------------- | -------------------- |
+| [tuya-native-elements](packages/tuya-native-elements)        | 通用业务组件包 | @xinxin.li @zengzhao |
+| [tuya-native-standard-elements](packages/tuya-native-standard-elementsl) | 公版业务组件包 | @xinxin.li           |
+| [tuya-native-animation-elements](packages/tuya-native-animation-elements) | 动画组件包     | @zengzhao @huangtt   |
