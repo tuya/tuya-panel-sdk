@@ -1,0 +1,64 @@
+{
+  "rnVersion": [
+    "5.1",
+    "5.28"
+  ],
+  "license": "ISC",
+  "author": "",
+  "pid": [],
+  "uiid": "",
+  "version": "3.0.0-rc",
+  "scripts": {
+    "postinstall": "patch-package",
+    "start": "react-native start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "main": "index.ios.js",
+  "description": "",
+  "dependencies": {
+    "base64-js": "1.3.1",
+    "camelcase": "^5.0.0",
+    "color": "^0.11.1",
+    "create-react-context": "^0.3.0",
+    "d3-interpolate": "^1.4.0",
+    "events": "^1.1.1",
+    "lodash": "^4.17.11",
+    "metro-config": "0.59.0",
+    "moment": "^2.20.1",
+    "prop-types": "^15.6.2",
+    "react": "16.8.3",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-native": "0.59.10",
+    "react-native-deprecated-custom-components": "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486",
+    "react-native-maps": "0.27.1",
+    "react-native-svg": "5.5.1",
+    "react-native-video": "3.2.1",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-actions": "^2.6.1",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^1.0.0",
+    "redux-thunk": "^2.3.0",
+    "rxjs": "^6.3.1",
+    "rxjs-compat": "^6.3.1",
+    "style-equal": "^1.0.0",
+    "styled-components": "^3.4.10",
+    "tuya-panel-kit": "^4.0.0-rc.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@types/react": "16.8.6",
+    "@types/react-native": "^0.57.65",
+    "@types/tuya-panel-kit": "^2.0.0",
+    "babel-jest": "^22.1.0",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^22.1.1",
+    "metro-react-native-babel-preset": "^0.51.0",
+    "patch-package": "^6.2.2",
+    "react-test-renderer": "^16.2.0"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
