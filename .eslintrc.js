@@ -31,6 +31,7 @@ module.exports = {
     'no-restricted-globals': 0, // 禁用特定的全局变量
     'no-use-before-define': 0, // 禁止定义前使用
     'no-unused-expressions': 0, // 禁止未使用过的表达式
+    'no-underscore-dangle': 0,
     'max-classes-per-file': 0,
     'prefer-destructuring': [
       2,
@@ -57,6 +58,7 @@ module.exports = {
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
     'react-native/split-platform-components': 0,
+    '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/camelcase': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
     '@typescript-eslint/ban-ts-ignore': 0,
