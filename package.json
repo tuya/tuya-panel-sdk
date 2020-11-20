@@ -59,7 +59,8 @@
     "test": "jest",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
-    "sync": "./scripts/sync.sh"
+    "sync": "./scripts/sync.sh",
+    "sync:form-github": "./scripts/sync-from-github.sh"
   },
   "config": {
     "commitizen": {
