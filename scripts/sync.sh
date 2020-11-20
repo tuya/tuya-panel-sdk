@@ -1,7 +1,6 @@
 #!/bin/bash
-var=$(git remote get-url origin)
-echo $var
-if [ $var != 'https://github.com/tuya/tuya-panel-sdk.git' ]
+origin=$(git remote get-url origin)
+if [ $origin != 'https://github.com/tuya/tuya-panel-sdk.git' ]
 then
   git fetch origin
   git remote add github https://github.com/tuya/tuya-panel-sdk.git
