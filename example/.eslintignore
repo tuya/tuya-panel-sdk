@@ -1,0 +1,4 @@
+*/node_modules/**/*
+webpack.*
+__tests__/**
+public/*
