@@ -1,9 +1,3 @@
 node_modules
-packages/tuya-native-elements/src/bar-chart/*.js
-packages/tuya-native-elements/src/curve-chart/*.js
-packages/tuya-native-elements/src/radio-button/*.js
-packages/tuya-native-elements/src/regulator/*.js
-packages/tuya-native-elements/src/timer/*.js
-packages/tuya-native-elements/src/timer/*/*.js
 lib
 dist
