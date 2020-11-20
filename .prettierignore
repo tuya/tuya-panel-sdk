@@ -1,0 +1,8 @@
+packages/tuya-native-elements/src/basic/bar-chart/*.js
+packages/tuya-native-elements/src/basic/curve-chart/*.js
+packages/tuya-native-elements/src/basic/radio-button/*.js
+packages/tuya-native-elements/src/basic/regulator/*.js
+packages/tuya-native-elements/src/basic/timer/*.js
+packages/tuya-native-elements/src/basic/timer/*/*.js
+lib
+dist
