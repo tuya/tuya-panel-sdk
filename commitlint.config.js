@@ -4,6 +4,6 @@ module.exports = {
     // must add these rules
     'type-empty': [2, 'never'],
     'subject-empty': [2, 'never'],
-    'scope-case': [2, 'never', 'pascal-case'],
+    'scope-case': [1, 'never', 'pascal-case'],
   },
 };
