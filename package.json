@@ -58,7 +58,8 @@
     "commit": "git cz",
     "test": "jest",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix",
-    "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}"
+    "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
+    "sync": "./scripts/sync.sh"
   },
   "config": {
     "commitizen": {
