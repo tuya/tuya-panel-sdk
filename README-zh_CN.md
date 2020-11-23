@@ -14,4 +14,4 @@
   <img src="https://github.com/TuyaInc/tuya-panel-kit/workflows/Lint%20Code/badge.svg" />
 </p>
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
