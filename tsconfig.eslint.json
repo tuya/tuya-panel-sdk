@@ -10,6 +10,8 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/**/*.js",
-    "packages/**/*.jsx"
+    "packages/**/*.jsx",
+    "example/**/*.js",
+    "example/.eslintrc.js"
   ]
 }
