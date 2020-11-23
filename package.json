@@ -67,7 +67,8 @@
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "sync": "./scripts/sync.sh",
-    "sync:form-github": "./scripts/sync-from-github.sh"
+    "build": "lerna run build --parallel",
+    "buildOne": "lerna run build --parallel --scope"
   },
   "config": {
     "commitizen": {
