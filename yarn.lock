@@ -4615,6 +4615,11 @@ eslint-plugin-jsx-a11y@^6.3.1:
     jsx-ast-utils "^3.1.0"
     language-tags "^1.0.5"
 
+eslint-plugin-literal-blacklist@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-literal-blacklist/-/eslint-plugin-literal-blacklist-0.1.2.tgz#e55f667322312d330bb4371447ae35e786b92847"
+  integrity sha512-VSL5nWSx8hW/20oBTATmnWm9MBXFIe6sXqmmCl+/YX78EJEa4S2TuvB7zKyl6yxpOYCW1FU2RO1Q8/9S6GX5og==
+
 eslint-plugin-prettier@^3.1.4:
   version "3.1.4"
   resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-3.1.4.tgz#168ab43154e2ea57db992a2cd097c828171f75c2"
