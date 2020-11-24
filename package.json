@@ -42,7 +42,7 @@
     "react": "16.8.3",
     "react-native": "0.59.10",
     "react-native-mock-render": "^0.1.9",
-    "typescript": "^4.0.5"
+    "typescript": "4.0.5"
   },
   "peerDependencies": {
     "react": "16.8.3",
@@ -84,11 +84,11 @@
     }
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
+    "packages/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix --ignore-path .eslintignore",
       "git add ."
     ],
-    "**/*.{md,json}": [
+    "packages/**/*.{md,json}": [
       "prettier --write",
       "git add ."
     ]
