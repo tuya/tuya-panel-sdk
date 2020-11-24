@@ -15,6 +15,7 @@ sync-doc:
   only:
     refs:
       - sync
+      - tuya-panel-robot-sdk
   before_script:
     - git config --global user.name "tuyafe"
     - git config --global user.email "tuyafe@tuya.com"
