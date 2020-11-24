@@ -23,7 +23,8 @@ module.exports = {
       'tuya.ia',
       'tuya.m',
       'tuya.industry',
-      'tuya.smarthome'
+      'tuya.smarthome',
+      '@tuya-rn'
     ]],
     'global-require': 0,
     'lines-between-class-members': [
