@@ -9,6 +9,7 @@ module.exports = {
     'prettier/react',
     'prettier/@typescript-eslint',
   ],
+  plugins: ['literal-blacklist'],
   parserOptions: {
     project: 'tsconfig.eslint.json',
   },
@@ -17,6 +18,13 @@ module.exports = {
     'jest/globals': true,
   },
   rules: {
+    'literal-blacklist/literal-blacklist': [2, [
+      'tuya.ai',
+      'tuya.ia',
+      'tuya.m',
+      'tuya.industry',
+      'tuya.smarthome'
+    ]],
     'global-require': 0,
     'lines-between-class-members': [
       // 要求或禁止在类成员之间出现空行
