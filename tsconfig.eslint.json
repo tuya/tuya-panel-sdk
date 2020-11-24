@@ -1,7 +1,6 @@
 {
   "extends": "./tsconfig.json",
   "include": [
-    ".eslintrc.js",
     ".prettierrc.js",
     "commitlint.config.js",
     "babel.config.js",
