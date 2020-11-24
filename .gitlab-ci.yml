@@ -1,0 +1,24 @@
+image: registry.shdocker.tuya-inc.top/fe-base/compile/node:12.13
+
+cache:
+  paths:
+    - node_modules/
+
+notify:
+  only:
+    - tags
+  script:
+    - echo 'Start notify'
+    - node scripts/ci/notify.js
+
+sync-doc:
+  only:
+    refs:
+      - sync
+  before_script:
+    - git config --global user.name "tuyafe"
+    - git config --global user.email "tuyafe@tuya.com"
+    - yarn
+  script:
+    - echo 'ESLint code'
+    - yarn lint --no-error-on-unmatched-pattern
