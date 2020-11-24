@@ -56,6 +56,8 @@ export default class RCTGyroMap extends Component {
   static defaultProps = {
     width: viewWidth,
     height: viewHeight,
+    pileIcon: 'https://images.tuyacn.com/app/android/dot-bak@2x.png',
+    markerIcon: 'https://images.tuyacn.com/misc/marker1.png',
     radius: 1,
     clearData: false,
     pointType: 'square',
