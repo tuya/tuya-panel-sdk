@@ -1,7 +1,7 @@
 {
-  "name": "@tuya-rn/tuya-native-robot-elements",
+  "name": "@tuya-rn/tuya-native-robot-sdk",
   "version": "0.3.28",
-  "description": "涂鸦扫地机器人业务组件库",
+  "description": "涂鸦扫地机器人对外业务组件库",
   "main": "./lib/index.js",
   "scripts": {
     "tscw": "./node_modules/typescript/bin/tsc -w",
