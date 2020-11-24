@@ -6,7 +6,9 @@ import { Utils } from 'tuya-panel-kit';
 const TYRCTPointMap = requireNativeComponent('TYRCTPointMap');
 export const TYRCTGyroMapManager = NativeModules.TYRCTTransferManager;
 
-const { RatioUtils: { viewHeight, viewWidth } } = Utils;
+const {
+  RatioUtils: { viewHeight, viewWidth },
+} = Utils;
 
 /**
  * 原生陀螺仪扫地机地图，Plain封装

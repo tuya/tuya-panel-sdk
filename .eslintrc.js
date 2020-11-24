@@ -66,6 +66,7 @@ module.exports = {
     'react-native/no-raw-text': 0,
     'react-native/no-inline-styles': 0,
     'react-native/split-platform-components': 0,
+    'react/forbid-prop-types': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/camelcase': 0,
     '@typescript-eslint/no-non-null-assertion': 0,
