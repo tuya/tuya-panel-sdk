@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { requireNativeComponent, NativeModules } from 'react-native';
-import { Utils } from '@tuya-rn/tuya-native-components';
+import { Utils } from 'tuya-panel-kit';
 
 const TYRCTPointMap = requireNativeComponent('TYRCTPointMap');
 export const TYRCTGyroMapManager = NativeModules.TYRCTTransferManager;
