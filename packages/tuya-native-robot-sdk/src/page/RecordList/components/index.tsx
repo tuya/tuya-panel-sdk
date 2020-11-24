@@ -1,1 +1,0 @@
-export { default as ItemCell } from './item-cell';
