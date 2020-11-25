@@ -1,7 +1,0 @@
-example
-# /src
-/@types
-*.md
-/*.js
-/*.yalcignore
-./@types/index.d.ts
