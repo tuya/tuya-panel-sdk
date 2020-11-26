@@ -1,7 +1,7 @@
 #!/bin/bash
 origin=$(git remote get-url origin)
 branch=$(git branch | grep "*")
-if [[ $origin = 'https://registry.code.tuya-inc.top/TuyaRN/tuya-native-elements.git' && $branch = 'sync' ]]
+if [[ $origin = 'https://registry.code.tuya-inc.top/TuyaRN/tuya-native-elements.git' && $branch = '* sync' ]]
 then
   git remote add github https://github.com/tuya/tuya-panel-sdk.git
   git fetch github main
