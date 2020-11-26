@@ -1,5 +1,5 @@
 {
-  "name": "@tuya-rn/tuya-native-robot-sdk",
+  "name": "tuya-native-robot-sdk",
   "version": "0.3.28",
   "description": "涂鸦扫地机器人对外业务组件库",
   "main": "./lib/index.js",
@@ -35,11 +35,10 @@
     "typescript": "^3.6.4"
   },
   "peerDependencies": {
-    "@tuya-rn/tuya-native-components": "^4.0.1",
-    "@tuya-rn/tuya-native-elements": "^3.2.14",
     "react": "^16.0.0",
     "react-native": "^0.51.0",
-    "react-native-svg": "5.5.1"
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^2.0.0-rc.7"
   },
   "license": "ISC"
 }
