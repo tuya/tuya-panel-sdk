@@ -6842,7 +6842,7 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-kit@~4.0.0-rc.0:
+tuya-panel-kit@^4.0.0-rc.0:
   version "4.0.0-rc.0"
   resolved "https://registry.npm.taobao.org/tuya-panel-kit/download/tuya-panel-kit-4.0.0-rc.0.tgz#301e30c6015dfecc35cf27b8e427587614ae977d"
   integrity sha1-MB4wxgFd/sw1zye45CdYdhSul30=

@@ -14,7 +14,6 @@
     "@types/react": "^16.9.56",
     "@types/react-native": "^0.63.35",
     "@types/tuya-panel-kit": "^2.0.0",
-    "@typescript-eslint/eslint-plugin": "^4.4.1",
     "babel-jest": "^26.6.3",
     "commitizen": "^4.2.2",
     "commitlint-config-cz": "^0.13.2",
@@ -22,27 +21,18 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint": "^7.13.0",
-    "eslint-config-airbnb-typescript": "^12.0.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.0",
-    "eslint-plugin-jest": "^24.1.3",
-    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-config-tuya-panel": "^0.2.1",
     "eslint-plugin-literal-blacklist": "^0.1.2",
-    "eslint-plugin-prettier": "^3.1.4",
-    "eslint-plugin-react": "^7.20.3",
-    "eslint-plugin-react-hooks": "^4.0.8",
-    "eslint-plugin-react-native": "^3.10.0",
+    "eslint-plugin-optimize-regex": "^1.2.0",
     "husky": "^4.3.0",
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.1",
     "metro-react-native-babel-preset": "^0.64.0",
-    "prettier": "^2.1.2",
     "react": "16.8.3",
     "react-native": "0.59.10",
     "react-native-mock-render": "^0.1.9",
-    "typescript": "4.0.5"
+    "typescript": "^4.0.5"
   },
   "peerDependencies": {
     "react": "16.8.3",
@@ -84,11 +74,11 @@
     }
   },
   "lint-staged": {
-    "packages/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix --ignore-path .eslintignore",
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
       "git add ."
     ],
-    "packages/**/*.{md,json}": [
+    "**/*.{md,json}": [
       "prettier --write",
       "git add ."
     ]
