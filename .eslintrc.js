@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['tuya-panel'],
-  plugins: ['literal-blacklist', 'optimize-regex'],
+  plugins: ['literal-blacklist'],
   rules: {
     'literal-blacklist/literal-blacklist': [
       2,
