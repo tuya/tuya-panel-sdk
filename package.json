@@ -23,7 +23,6 @@
     "enzyme-to-json": "^3.6.1",
     "eslint-config-tuya-panel": "^0.2.1",
     "eslint-plugin-literal-blacklist": "^0.1.2",
-    "eslint-plugin-optimize-regex": "^1.2.0",
     "husky": "^4.3.0",
     "jest": "^26.6.3",
     "lerna": "^3.22.1",
