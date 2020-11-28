@@ -4,8 +4,8 @@ module.exports = {
   rules: {
     'literal-check/literal-check': [
       2,
-      ['tuya.ai', 'tuya.ia', 'tuya.m', 'tuya.industry', 'tuya.smarthome'],
-      ['tuya.m.device.media.latest', 'tuya.m.device.media.detail', 'tuya.m.s'],
+      ['tuya.'],
+      ['tuya.m.device.media.latest', 'tuya.m.device.media.detail'],
     ],
   },
 };
