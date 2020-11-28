@@ -121,7 +121,7 @@ export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Erro
 
 /** ------------------------------------------------------------------- */
 
-export interface getGyroMapLatestMediaOpts {
+export interface IGetGyroMapLatestMediaOpts {
   offset?: string;
   limit?: number;
 }
@@ -147,11 +147,11 @@ export interface IGyroMapMediaExport {
 /**
  *  查询最新一次流服务记录详情数据
  *
- * @param {getGyroMapLatestMediaOpts} opt
+ * @param {IGetGyroMapLatestMediaOpts} opt
  * @returns
  */
 export function getGyroMapLatestMedia(
-  opt: getGyroMapLatestMediaOpts = {}
+  opt: IGetGyroMapLatestMediaOpts = {}
 ): Promise<IGyroMapMediaExport | Error> {
   const { offset = '', limit = 500 } = opt || {};
   const a = 'tuya.m.device.media.latest';
@@ -178,7 +178,7 @@ export function getGyroMapLatestMedia(
     });
 }
 
-export interface getGyroMapHistoryMediaOpts extends getGyroMapLatestMediaOpts {
+export interface IGetGyroMapHistoryMediaOpts extends IGetGyroMapLatestMediaOpts {
   subRecordId: string;
 }
 
@@ -186,11 +186,11 @@ export interface getGyroMapHistoryMediaOpts extends getGyroMapLatestMediaOpts {
  * 查询某次流服务记录详情数据
  *
  * @export
- * @param {getGyroMapHistoryMediaOpts} opt
+ * @param {IGetGyroMapHistoryMediaOpts} opt
  * @returns
  */
 export function getGyroMapHistoryMediaBySubRecordId(
-  opt: getGyroMapHistoryMediaOpts
+  opt: IGetGyroMapHistoryMediaOpts
 ): Promise<IGyroMapMediaExport | IMessage> {
   const { subRecordId = '', offset = '', limit = 500 } = opt || {};
 
