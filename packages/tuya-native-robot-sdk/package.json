@@ -1,7 +1,7 @@
 {
   "name": "tuya-native-robot-sdk",
   "version": "0.3.28",
-  "description": "涂鸦扫地机器人业务组件库",
+  "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
     "tscw": "./node_modules/typescript/bin/tsc -w",
@@ -25,7 +25,7 @@
     "react": "^16.0.0",
     "react-native": "^0.51.0",
     "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "4.0.0-rc.0"
+    "tuya-panel-kit": "^4.0.0-rc.0"
   },
   "license": "MIT"
 }
