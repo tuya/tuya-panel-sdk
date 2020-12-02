@@ -1,12 +1,12 @@
 ## tuya-panel-robot-sdk
 
-Tuya sweeping robot business component library
+涂鸦扫地机业务组件
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README-zh.md) | 简体中文
 
 [![](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk) [![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
 
-## Install
+## 安装
 
 ```sh
 $ npm install tuya-panel-robot-sdk
@@ -14,7 +14,7 @@ $ npm install tuya-panel-robot-sdk
 $ yarn add tuya-panel-robot-sdk
 ```
 
-## Usage
+## 使用
 
 ```js
 import { RCTGyroMap } from 'tuya-panel-robot-sdk';
@@ -24,4 +24,4 @@ import { RCTGyroMap } from 'tuya-panel-robot-sdk';
 
 ## Doc
 
-see [link](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/robot-vacuum-sdk-development) for detail docs
+查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/robot-vacuum-sdk-development)获取详细文档
