@@ -1,0 +1,20 @@
+name: ESLint And Test
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: c-hive/gha-yarn-cache@v1
+      - name: Install modules
+        run: yarn
+      # - name: Run Prettier
+        # run: yarn format
+      - name: Run ESLint
+        run: yarn lint --no-error-on-unmatched-pattern
+      - name: Run Test
+        run: yarn test --silent --forceExit --passWithNoTests
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          directory: ./coverage/
