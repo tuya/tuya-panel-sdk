@@ -2,7 +2,7 @@
 
 涂鸦扫地机业务组件
 
-[English](./README-zh.md) | 简体中文
+[English](./README.md) | 简体中文
 
 [![](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk) [![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
 
