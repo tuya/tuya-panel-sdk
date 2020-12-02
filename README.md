@@ -7,7 +7,9 @@ English | [简体中文](./README-zh_CN.md)
 ## Support
 
 Tuya Developer Center: https://developer.tuya.com/en/
+
 Tuya Smart Help Center: https://support.tuya.com/en/help
+
 Technical Support Council: https://iot.tuya.com/council/
 
 ## License
