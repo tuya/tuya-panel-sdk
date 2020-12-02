@@ -59,7 +59,7 @@
     "sync:github": "./scripts/sync-from-github.sh",
     "sync": "./scripts/sync.sh",
     "build": "lerna run build --parallel",
-    "buildOne": "lerna run build --parallel --scope"
+    "build:robot": "lerna run build --parallel --scope tuya-panel-robot-sdk"
   },
   "config": {
     "commitizen": {
