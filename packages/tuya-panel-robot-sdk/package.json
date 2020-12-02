@@ -4,8 +4,8 @@
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
-    "tscw": "./node_modules/typescript/bin/tsc -w",
-    "start": "./node_modules/typescript/bin/tsc -w",
+    "tscw": "tsc -w",
+    "start": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
