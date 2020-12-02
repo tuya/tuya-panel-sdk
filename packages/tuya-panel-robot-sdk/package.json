@@ -1,5 +1,5 @@
 {
-  "name": "tuya-native-robot-sdk",
+  "name": "tuya-panel-robot-sdk",
   "version": "0.3.28",
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
