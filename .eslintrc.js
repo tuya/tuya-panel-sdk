@@ -7,5 +7,6 @@ module.exports = {
       ['tuya.'],
       ['tuya.m.device.media.latest', 'tuya.m.device.media.detail'],
     ],
+    'react/forbid-prop-types': 0
   },
 };
