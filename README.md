@@ -1,6 +1,6 @@
 ## tuya-panel-sdk
 
-The tuya-panel-sdk series component package is a layer of React Native UI Components based on tuya-panel-kit
+The tuya-panel-sdk is a series of category SDKs based on [tuya-panel-kit](https://github.com/tuya/tuya-panel-kit)
 
 English | [简体中文](./README-zh_CN.md)
 
