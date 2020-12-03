@@ -1,6 +1,6 @@
 ## tuya-panel-sdk
 
-tuya-panel-sdk 系列组件包是在 tuya-panel-kit 基础上做的一层 React Native UI Components
+tuya-panel-sdk 是在 [tuya-panel-kit](https://github.com/tuya/tuya-panel-kit) 基础上做的一系列品类 SDK
 
 [English](./README.md) | 简体中文
 
