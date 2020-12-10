@@ -7,7 +7,8 @@ then
   # git remote add github https://github.com/tuya/tuya-panel-sdk.git
   # git reset --soft 6b7e211d607bf9a7f008c6aeebea6d9360b9828c
   git rm --cached scripts/sync-from-github.sh scripts/sync.sh
-  git commit -am "chore: sync gitlab to github" --no-verify
+  git update-index --assume-unchanged scripts/sync-from-github.sh scripts/sync.sh
+  git commit -m "chore: sync gitlab to github" --no-verify
   git push github sync -f
   git add .
   git commit -m "chore: sync gitlab to github" --no-verify
