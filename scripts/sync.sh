@@ -8,6 +8,8 @@ then
   git rm --cached scripts/sync-from-github.sh scripts/sync.sh
   git push github sync -f
   git remote rm github
+  git reset .
+  git push origin sync -f
 else
   echo -e "\033[31mERROR:  请在内部仓库的 sync 分支执行该脚本\033[0m"
   exit 1
