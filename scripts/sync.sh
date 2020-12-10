@@ -6,6 +6,7 @@ then
   git fetch origin sync
   git remote add github https://github.com/tuya/tuya-panel-sdk.git
   git rm --cached scripts/sync-from-github.sh scripts/sync.sh
+  git update-index --assume-unchanged scripts/sync-from-github.sh scripts/sync.sh
   git push github sync -f
   git remote rm github
   git reset .
