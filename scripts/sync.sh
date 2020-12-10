@@ -5,11 +5,7 @@ if [[ $origin = 'https://registry.code.tuya-inc.top/TuyaRN/tuya-native-elements.
 then
   git fetch origin sync
   git remote add github https://github.com/tuya/tuya-panel-sdk.git
-  git rm --cached scripts/sync-from-github.sh scripts/sync.sh
-  git update-index --assume-unchanged scripts/sync-from-github.sh scripts/sync.sh
   git push github sync -f
-  git remote rm github
-  git reset .
   git push origin sync -f
 else
   echo -e "\033[31mERROR:  请在内部仓库的 sync 分支执行该脚本\033[0m"
