@@ -6,11 +6,7 @@ then
   git fetch origin sync
   git remote add github https://github.com/tuya/tuya-panel-sdk.git
   git rm --cached scripts/sync-from-github.sh scripts/sync.sh
-  git update-index --assume-unchanged scripts/sync-from-github.sh scripts/sync.sh examples/
   git push github sync -f
-  git add .
-  git commit -m "chore: upload inner files" --no-verify
-  git push origin sync -f
   git remote rm github
 else
   echo -e "\033[31mERROR:  请在内部仓库的 sync 分支执行该脚本\033[0m"
