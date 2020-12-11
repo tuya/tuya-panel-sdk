@@ -16,7 +16,6 @@ import Home from '../scenes/Home';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
-// import specialSubRouters from './specialSubRouters';
 // import BasicInfo from '../../../packages/tuya-panel-sdk/package.json';
 // import LampInfo from '../../../packages/tuya-panel-lamp-sdk/package.json';
 // import RobotInfo from '../../../packages/tuya-panel-robot-sdk/package.json';
