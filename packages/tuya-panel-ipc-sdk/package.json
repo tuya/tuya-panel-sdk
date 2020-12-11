@@ -27,5 +27,6 @@
     "react-native-svg": "5.5.1",
     "tuya-panel-kit": "^4.0.0-rc.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "0e3828d8dc208cac93bfc445c912018d1d775ec8"
 }
