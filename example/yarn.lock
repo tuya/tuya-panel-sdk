@@ -5590,9 +5590,10 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.npm.taobao.org/react-lifecycles-compat/download/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha1-TxonOv38jzSIqMUWv9p4+HI1I2I=
 
-"react-native-deprecated-custom-components@git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486":
-  version "0.1.1"
-  resolved "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486"
+react-native-deprecated-custom-components@0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-deprecated-custom-components/-/react-native-deprecated-custom-components-0.1.2.tgz#ba10d40942bd90e1a98f989fd2809ea2466d413f"
+  integrity sha512-CDI9xfR/7UIWV0plveokfqvTWzNDrEo3dLk3IqllQ6pENNMnX20kcGwQVbIYYDx4TttEstVeZWgMrQ3L7lZzkw==
   dependencies:
     create-react-class "15.6.0"
     fbjs "~0.8.9"
@@ -6842,10 +6843,10 @@ tunnel-agent@^0.6.0:
   dependencies:
     safe-buffer "^5.0.1"
 
-tuya-panel-kit@^4.0.0-rc.0:
-  version "4.0.0-rc.0"
-  resolved "https://registry.npm.taobao.org/tuya-panel-kit/download/tuya-panel-kit-4.0.0-rc.0.tgz#301e30c6015dfecc35cf27b8e427587614ae977d"
-  integrity sha1-MB4wxgFd/sw1zye45CdYdhSul30=
+tuya-panel-kit@~4.0.0-rc.1:
+  version "4.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/tuya-panel-kit/-/tuya-panel-kit-4.0.0-rc.1.tgz#53ea1d1e23397f9f13ff464122093cfcda977acf"
+  integrity sha512-O9+3z2866+2Fg4MpykYIEAE8IM+WUqAgqM9jTYrqhUiWTnrSVp08PyIJoiuRgLWeegNeByBNSSNA2rjQ9V+Nhg==
   dependencies:
     "@react-native-community/masked-view" "0.1.10"
     "@react-navigation/native" "5.7.3"
@@ -6856,7 +6857,7 @@ tuya-panel-kit@^4.0.0-rc.0:
     hoist-non-react-statics "^3.3.0"
     prop-types "^15.6.1"
     react-addons-shallow-compare "^15.6.2"
-    react-native-deprecated-custom-components "git+https://github.com/facebookarchive/react-native-custom-components.git#83c4fa19ccc9b6cd48ff80e457c493332819b486"
+    react-native-deprecated-custom-components "0.1.2"
     react-native-gesture-handler "1.8.0"
     react-native-reanimated "1.13.0"
     react-native-safe-area-context "3.1.7"
