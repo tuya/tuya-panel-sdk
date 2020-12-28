@@ -1,0 +1,31 @@
+{
+  "name": "@tuya-smart/tuya-panel-ipc-sdk",
+  "version": "0.0.1",
+  "description": "涂鸦Ipc业务组件库",
+  "main": "./lib/index.js",
+  "scripts": {
+    "tscw": "tsc -w",
+    "start": "tsc -w",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "build": "tsc -d",
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "prepublishOnly": "yarn build"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "style-equal": "^1.0.0",
+    "styled-components": "^3.4.10",
+    "typescript": "^3.6.4"
+  },
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10",
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.0.0-rc.0"
+  },
+  "license": "MIT"
+}
