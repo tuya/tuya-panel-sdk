@@ -59,8 +59,6 @@
     "test": "jest",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
-    "sync:github": "./scripts/sync-from-github.sh",
-    "sync": "./scripts/sync.sh",
     "build": "lerna run build --parallel",
     "build:ipc": "lerna run build --parallel --scope tuya-panel-ipc-sdk",
     "build:robot": "lerna run build --parallel --scope tuya-panel-robot-sdk"
