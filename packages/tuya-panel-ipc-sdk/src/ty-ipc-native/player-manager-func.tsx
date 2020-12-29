@@ -44,6 +44,7 @@ class PlayerManagerFun {
       return false;
     }
     if (privateMode) {
+      exitPlayPreview(true);
       TYEvent.emit('streamStatus', { status: 1 });
       return false;
     }
@@ -483,6 +484,7 @@ class PlayerManagerFun {
 
   // 从非预览RN页面跳转至视频预览界面组件销毁时调用
   backLivePlayWillUnmount = () => {
+    TYEvent.emit('isEnterRnPage', false);
     TYEvent.emit('backLivePreview', '');
   };
 
