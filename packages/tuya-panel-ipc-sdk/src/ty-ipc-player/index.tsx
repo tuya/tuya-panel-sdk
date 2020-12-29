@@ -68,6 +68,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   wirlessFlag: boolean;
   p2pListener: any;
   isFirstJudgeP2p: boolean;
+  otherRnPage: boolean;
   constructor(props: TYIpcPlayerProps) {
     super(props);
     this.state = {
@@ -93,6 +94,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.prevP2PConnect = false;
     this.wirlessFlag = false;
     this.isFirstJudgeP2p = true;
+    this.otherRnPage = false;
   }
 
   componentWillMount() {
@@ -109,6 +111,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('deviceDataChange', this.dpChange);
     TYEvent.on('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.on('getCameraConfig', this.getCameraConfig);
+    TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
     TYIpcPlayerManager.startPlay(
       this.props.isWirless,
       this.props.privateMode,
@@ -131,7 +134,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         hightScaleMode,
         channelNum,
       } = this.props;
-      if (this.goToBack) {
+      if (this.goToBack && !this.otherRnPage) {
         this.onLivePage = true;
         let sendNativePage = 0;
         let sendCameraAction = 0;
@@ -145,16 +148,16 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           cameraAction: sendNativePage,
           nativePage: sendCameraAction,
         });
+        TYIpcPlayerManager.startPlay(
+          isWirless,
+          privateMode,
+          deviceOnline,
+          clarityStatus,
+          voiceStatus,
+          hightScaleMode,
+          channelNum
+        );
       }
-      TYIpcPlayerManager.startPlay(
-        isWirless,
-        privateMode,
-        deviceOnline,
-        clarityStatus,
-        voiceStatus,
-        hightScaleMode,
-        channelNum
-      );
       this.goToBack = false;
     });
 
@@ -352,6 +355,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.off('deviceDataChange', this.dpChange);
     TYEvent.off('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.off('getCameraConfig', this.getCameraConfig);
+    TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
     AppState.removeEventListener('change', this.handleAppStateChange);
     this.foregroundListener.remove();
     this.backPressListener.remove();
@@ -365,6 +369,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // 退出视频预览界面
     TYIpcPlayerManager.backPlayPreview();
   }
+
+  jugeIsEnterRnPage = (value: boolean) => {
+    this.otherRnPage = value;
+  };
 
   dpChange = (data: any) => {
     const changedp = data.payload;
@@ -562,8 +570,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       if (videoStatus === 1) {
         this.setState({
           showLoading: true,
-          loadText: Strings.getLang('tyIpc_re_connect_stream'),
           showRetry: false,
+          loadText: Strings.getLang('tyIpc_re_connect_stream'),
+          showAnimation: true,
         });
         TYDevice.putDeviceData({
           basic_private: false,
