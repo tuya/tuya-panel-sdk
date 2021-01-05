@@ -1,4 +1,4 @@
-## tuya-panel-robot-sdk
+## @tuya-smart/tuya-panel-robot-sdk
 
 SDK development kit for Tuya panel sweeping robot
 
@@ -9,15 +9,15 @@ English | [简体中文](./README-zh_CN.md)
 ## Install
 
 ```sh
-$ npm install tuya-panel-robot-sdk
+$ npm install @tuya-smart/tuya-panel-robot-sdk
 // or
-$ yarn add tuya-panel-robot-sdk
+$ yarn add @tuya-smart/tuya-panel-robot-sdk
 ```
 
 ## Usage
 
 ```js
-import { RCTGyroMap } from 'tuya-panel-robot-sdk';
+import { RCTGyroMap } from '@tuya-smart/tuya-panel-robot-sdk';
 
 ...
 ```
