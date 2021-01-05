@@ -1,10 +1,10 @@
 ## tuya-panel-robot-sdk
 
-涂鸦扫地机业务组件
+涂鸦面板扫地机器人 sdk 开发工具包
 
 [English](./README.md) | 简体中文
 
-[![](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk) [![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
+[![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
 
 ## 安装
 
