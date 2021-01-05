@@ -1,3 +1,4 @@
+// @ts-nocheck
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { TYSdk, TYText, IconFont } from 'tuya-panel-kit';
