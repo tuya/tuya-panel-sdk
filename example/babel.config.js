@@ -22,7 +22,7 @@ module.exports = {
           // 'tuya-panel-health-sdk': '../packages/tuya-panel-health-sdk/lib/index.js',
           // 'tuya-panel-fullroom-sdk': '../packages/tuya-panel-fullroom-sdk/lib/index.js',
           // 'tuya-panel-gateway-sdk': '../packages/tuya-panel-gateway-sdk/lib/index.js',
-          // 'tuya-panel-ipc-sdk': '../packages/tuya-panel-ipc-sdk/lib/index.js',
+          'tuya-panel-ipc-sdk': '../packages/tuya-panel-ipc-sdk/lib/index.js',
           // 'tuya-panel-lock-sdk': '../packages/tuya-panel-lock-sdk/lib/index.js',
           // 'tuya-panel-electrician-sdk/lib/index.js': '../packages/tuya-panel-electrician-sdk/lib/index.js',
           // 'tuya-panel-remote-sdk': '../packages/tuya-panel-remote-sdk/lib/index.js',
