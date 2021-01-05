@@ -1,10 +1,10 @@
 ## tuya-panel-robot-sdk
 
-Tuya sweeping robot business component library
+SDK development kit for Tuya panel sweeping robot
 
 English | [简体中文](./README-zh_CN.md)
 
-[![](https://img.shields.io/npm/v/tuya-panel-kit/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk) [![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
+[![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
 
 ## Install
 
