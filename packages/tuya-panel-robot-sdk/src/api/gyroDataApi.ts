@@ -50,25 +50,24 @@ export function getGyroMapHistoryList(
 ): Promise<IRecordExportList | Error> {
   const { cleanRecordCode = 'clean_record', page = 0, pageLimit = 10 } = opt || {};
   const dpIds = [Number(TYSdk.device.getDpIdByCode(cleanRecordCode))];
-  const a = 'm.smart.scale.history.get.list';
+  const a = 'tuya.m.sweeper.cleaning.history.get';
   const offset = page * pageLimit;
 
   const postData = {
     devId: TYSdk.devInfo.devId,
-    dpIds,
     offset,
     limit: pageLimit,
-    userId: '0',
   };
   const version = '1.0';
 
   return TYSdk.apiRequest(a, postData, version)
     .then((data: IRecordOriginList) => {
-      const { hasNext = false, totalCount = 0 } = data;
+      // const { hasNext = false, totalCount = 0 } = data;
+      const { totalCount = 0 } = data;
       if (typeof data.datas === 'undefined' || data.datas.length === 0) {
         return {
           dataList: [],
-          hasNext,
+          hasNext: false,
         };
       }
       const dataList = data.datas.map(({ uuid, dps, gmtCreate }) => {
@@ -84,7 +83,7 @@ export function getGyroMapHistoryList(
 
       return {
         dataList,
-        hasNext,
+        hasNext: offset + dataList.length < totalCount,
       };
     })
     .catch(err => {
@@ -101,7 +100,7 @@ export function getGyroMapHistoryList(
  * @returns
  */
 export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Error> {
-  const a = 'm.smart.scale.history.delete';
+  const a = 'tuya.m.sweeper.cleaning.history.delete';
 
   if (!ids || !ids.length) return resolveErr({ message: 'Missing parameters: id' });
   const postData = {
