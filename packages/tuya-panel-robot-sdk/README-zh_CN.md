@@ -1,4 +1,4 @@
-## tuya-panel-robot-sdk
+## @tuya-smart/tuya-panel-robot-sdk
 
 涂鸦面板扫地机器人 sdk 开发工具包
 
@@ -9,15 +9,15 @@
 ## 安装
 
 ```sh
-$ npm install tuya-panel-robot-sdk
+$ npm install @tuya-smart/tuya-panel-robot-sdk
 // or
-$ yarn add tuya-panel-robot-sdk
+$ yarn add @tuya-smart/tuya-panel-robot-sdk
 ```
 
 ## 使用
 
 ```js
-import { RCTGyroMap } from 'tuya-panel-robot-sdk';
+import { RCTGyroMap } from '@tuya-smart/tuya-panel-robot-sdk';
 
 ...
 ```
