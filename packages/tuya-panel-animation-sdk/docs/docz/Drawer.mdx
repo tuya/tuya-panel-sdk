@@ -1,0 +1,98 @@
+---
+name: Drawer
+nameZh: 抽屉动画
+menu: tuya-native-animation-elements
+route: /tuya-native-animation-elements/Drawer
+---
+
+import { Playground } from 'docz';
+import { TYSdk, Utils, I18N, defaultTheme } from '@tuya-rn/tuya-native-components';
+import Drawer from '@tuya-rn/tuya-native-animation-elements/lib/components/drawer/index.js';
+import Props from '../../Props';
+
+# Drawer 抽屉动画
+
+## 简介
+
+\_负责人: Ivvan（黄婷婷）
+
+`Drawer` 是 抽屉组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  {() => {
+    const [state, set] = React.useState({ visible: false, placement: 'left' });
+    const setState = value => set({ ...state, ...value });
+    const imgUrlList = [
+      'https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png',
+      'https://images.tuyacn.com/rms-static/3f750ea0-94bc-11ea-a593-57b2fa093611-1589334682762.png?tyName=speed2.png',
+      'https://images.tuyacn.com/rms-static/3f773180-94bc-11ea-8e3b-e3ecba4013ec-1589334682776.png?tyName=speed3.png',
+    ];
+    return (
+      <View
+        style={{
+          height: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'row',
+        }}
+      >
+        {['left', 'right', 'top', 'bottom'].map(item => (
+          <TouchableOpacity
+            key={item}
+            onPress={() => {
+              setState({ visible: true, placement: item });
+            }}
+          >
+            <View
+              style={{
+                width: 60,
+                height: 60,
+                backgroundColor: 'red',
+                justifyContent: 'center',
+                alignItems: 'center',
+                marginRight: 16,
+              }}
+            >
+              <Text>点击打开{item}抽屉</Text>
+            </View>
+          </TouchableOpacity>
+        ))}
+        <Drawer
+          width={['left', 'right'].includes(state.placement) ? 375 / 2 : 375}
+          height={['left', 'right'].includes(state.placement) ? 812 : 812 / 2}
+          placement={state.placement}
+          visible={state.visible}
+          onClose={() => {
+            setState({ visible: false });
+          }}
+          renderContent={() => (
+            <View
+              style={{
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'red',
+              }}
+            >
+              {imgUrlList.map(item => (
+                <View
+                  style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center' }}
+                  key={item}
+                >
+                  <Image source={{ uri: item }} style={{ width: 100, height: 100 }} />
+                </View>
+              ))}
+            </View>
+          )}
+        />
+      </View>
+    );
+  }}
+</Playground>
+
+## API
+
+<Props path="tuya-native-animation-elements/src/components/drawer/index.js" of={Drawer} />

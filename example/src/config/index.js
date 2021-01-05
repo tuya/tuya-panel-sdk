@@ -1,6 +1,6 @@
 export const SCOPE_MAP = {
   // '@tuya-smart/tuya-panel-sdk': 'Basic',
-  // '@tuya-smart/tuya-panel-animation-sdk': 'Animation',
+  '@tuya-smart/tuya-panel-animation-sdk': 'Animation',
   // '@tuya-smart/tuya-panel-cbt-sdk': 'Cbt',
   // '@tuya-smart/tuya-panel-cooker-sdk': 'Cooker',
   // '@tuya-smart/tuya-panel-electrician-sdk': 'Electrician',

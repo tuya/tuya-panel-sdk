@@ -1,0 +1,43 @@
+---
+name: Particle
+nameZh: 扩散/吸收粒子的动画
+menu: tuya-native-animation-elements
+route: /tuya-native-animation-elements/Particle
+---
+
+import { Playground } from 'docz';
+import { TYSdk, Utils, I18N, defaultTheme } from '@tuya-rn/tuya-native-components';
+import Particle from '@tuya-rn/tuya-native-animation-elements/lib/components/particle/index.js';
+import Props from '../../Props';
+
+# Particle 扩散/吸收粒子的动画
+
+## 简介
+
+\_负责人: Twist（唐晓俊）
+
+`Particle` 是扩散/吸收粒子的动画组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  <View style={{ flex: 1 }}>
+    <Particle.absorb
+      // type="absorb"
+      width={375}
+      height={375}
+      radius={50}
+      tolerance={15}
+      amount={30}
+      duration={3000}
+      color={i => this.getColor(i)}
+      active={animateSwitch}
+    />
+  </View>
+</Playground>
+
+## API
+
+<Props path="tuya-native-animation-elements/src/components/particle/index.js" of={Particle} />

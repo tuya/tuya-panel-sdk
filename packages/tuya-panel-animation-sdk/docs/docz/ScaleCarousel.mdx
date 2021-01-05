@@ -1,0 +1,45 @@
+---
+name: ScaleCarousel
+nameZh: 轮播切换动画
+menu: tuya-native-animation-elements
+route: /tuya-native-animation-elements/ScaleCarousel
+---
+
+import { Playground } from 'docz';
+import { TYSdk, Utils, I18N, defaultTheme } from '@tuya-rn/tuya-native-components';
+import ScaleCarousel from '@tuya-rn/tuya-native-animation-elements/lib/components/scaleCarousel/index.js';
+import Props from '../../Props';
+
+# ScaleCarousel 轮播切换动画
+
+## 简介
+
+\_负责人: Ivvan（黄婷婷）
+
+`ScaleCarousel` 是基于轮播图改造的轮播切换组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  {() => {
+    const [state, set] = React.useState({ selectedIndex: 0 });
+    const setState = value => set({ ...state, ...value });
+    return (
+      <ScaleCarousel
+        selectedIndex={selectedIndex}
+        carouselChange={index => {
+          setState({ selectedIndex: index });
+        }}
+      />
+    );
+  }}
+</Playground>
+
+## API
+
+<Props
+  path="tuya-native-animation-elements/src/components/scaleCarousel/index.js"
+  of={ScaleCarousel}
+/>

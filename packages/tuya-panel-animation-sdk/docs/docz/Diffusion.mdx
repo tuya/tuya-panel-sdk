@@ -1,0 +1,41 @@
+---
+name: Diffusion
+nameZh: 波纹扩散动画
+menu: tuya-native-animation-elements
+route: /tuya-native-animation-elements/Diffusion
+---
+
+import { Playground } from 'docz';
+import { TYSdk, Utils, I18N, defaultTheme } from '@tuya-rn/tuya-native-components';
+import Diffusion from '@tuya-rn/tuya-native-animation-elements/lib/components/diffusion/index.js';
+import Props from '../../Props';
+
+# Diffusion 波纹扩散动画
+
+## 简介
+
+\_负责人: Ivvan（黄婷婷）
+
+`Diffusion` 是波纹扩散动画组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  <View
+    style={{
+      height: '100%',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#338BFF',
+    }}
+  >
+    <Diffusion style={{ position: 'absolute' }} />
+    <View style={{ width: 100, height: 100, borderRadius: 50, backgroundColor: '#fff' }} />
+  </View>
+</Playground>
+
+## API
+
+<Props path="tuya-native-animation-elements/src/components/diffusion/index.js" of={Diffusion} />

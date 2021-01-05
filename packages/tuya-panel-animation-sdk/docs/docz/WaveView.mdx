@@ -1,0 +1,42 @@
+---
+name: WaveView
+nameZh: 水波动画
+menu: tuya-native-animation-elements
+route: /tuya-native-animation-elements/WaveView
+---
+
+import { Playground } from 'docz';
+import { TYSdk, Utils, I18N, defaultTheme } from '@tuya-rn/tuya-native-components';
+import WaveView from '@tuya-rn/tuya-native-animation-elements/lib/components/waveView/index.js';
+import Props from '../../Props';
+
+# WaveView 水波动画
+
+## 简介
+
+\_负责人: 花伦 (闫佳兴)
+
+`WaveView` 是 水波动效组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  {() => {
+    return (
+      <View style={{ height: '100%', alignItems: 'center', justifyContent: 'center' }}>
+        <WaveView
+          style={{ width: 120, height: 120 }}
+          H={60}
+          waveParams={[{ A: 25, T: 140, fill: '#64c3d6' }, { A: 20, T: 100, fill: '#0092ba' }]}
+          animated={true}
+        />
+      </View>
+    );
+  }}
+</Playground>
+
+## API
+
+<Props path="tuya-native-animation-elements/src/components/waveView/index.js" of={WaveView} />

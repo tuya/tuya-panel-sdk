@@ -1,0 +1,43 @@
+## 简介
+
+_负责人: Ivvan（黄婷婷）
+
+`ModeChange` 是 模式切换组件，直观的模式更改体验。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+  {() => {
+    const [state, set] = React.useState({ imgIndex: 0 });
+    const setState = value => set({ ...state, ...value });
+    const imgUrlList = [
+      'https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png',
+      'https://images.tuyacn.com/rms-static/3f750ea0-94bc-11ea-a593-57b2fa093611-1589334682762.png?tyName=speed2.png',
+      'https://images.tuyacn.com/rms-static/3f773180-94bc-11ea-8e3b-e3ecba4013ec-1589334682776.png?tyName=speed3.png',
+    ];
+    return (
+      <View style={{ height:'100%', alignItems: 'center', justifyContent: 'center' }}>
+        <TouchableOpacity
+          activeOpacity={1}
+          onPress={() => {
+            setState({ imgIndex: state.imgIndex === imgUrlList.length - 1  ? 0 : state.imgIndex + 1 });
+          }}
+        >
+          <ModeChange.Scale imgUrl={imgUrlList[state.imgIndex]}  imgStyle={{ tintColor: 'red',width:30,height:30 }}/>
+        </TouchableOpacity>
+        <ModeChange.Move
+          imgUrl={imgUrlList[state.imgIndex]}
+          imgStyle={{ tintColor: 'red',width:80,height:80 }}
+          onStartAnimted={() => {
+            console.log('start');
+          }}
+          onEndAnimted={() => {
+            console.log('end');
+          }}
+        />
+      </View>
+     );
+  }}
+</Playground>

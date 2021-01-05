@@ -1,0 +1,66 @@
+## 简介
+
+_负责人: Ivvan（黄婷婷）
+
+`ScaleCarousel` 是横向选择器组件,可以扩展成块手势移动组件或数字选择器组件。
+
+## 代码演示
+
+### 基础使用
+
+<Playground>
+ {() => {
+    const [state, set] = React.useState({ activeIndex: 2 });
+    const setState = activeIndex => set({ ...state, ...activeIndex });
+    return (
+      <View>
+        <HorPicker
+          style={{ marginTop: 50 }}
+          renderContent={_.times(20, i => (
+            <View style={{ width: 100, height: 100, backgroundColor: 'red' }}>
+              <TYText>{i}</TYText>
+            </View>
+          ))}
+          label=""
+          showTickMark={false}
+          number={3}
+          activeIndex={activeIndex}
+          onValueChange={activeIndex => {
+            setState({
+              activeIndex,
+            });
+          }}
+        />
+        <HorPicker
+          style={{ marginTop: 50 }}
+          renderContent={_.times(20, i => (
+            <View style={{ width: 170, height: 100, backgroundColor: 'red' }}>
+              <TYText>{i}</TYText>
+            </View>
+          ))}
+          label=""
+          showTickMark={false}
+          number={2}
+          activeIndex={activeIndex}
+          onValueChange={activeIndex => {
+            setState({
+              activeIndex,
+            });
+          }}
+        />
+        <HorPicker
+          pickItemStyle={{ height: 100 }}
+          style={{ marginTop: 50 }}
+          showTickMark={true}
+          activeIndex={activeIndex}
+          onValueChange={activeIndex => {
+            setState({
+              activeIndex,
+            });
+          }}
+        />
+      </View>
+    )
+ }}
+</Playground>
+
