@@ -36,6 +36,12 @@
     "tuya-panel-kit": "^4.0.0-rc.0",
     "typescript": "^4.0.5"
   },
+  "peerDependencies": {
+    "@tuya-rn/tuya-native-components": "4.0.0",
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-svg": "5.5.1"
+  },
   "scripts": {
     "release:pre": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
     "release:prepatch": "yarn build && lerna publish --canary patch --yes --pre-dist-tag=rc --preid=rc",
