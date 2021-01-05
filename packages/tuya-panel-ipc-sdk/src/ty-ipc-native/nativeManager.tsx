@@ -1,3 +1,4 @@
+// @ts-nocheck
 /* eslint-disable consistent-return */
 /* eslint-disable no-console */
 import { TYSdk } from 'tuya-panel-kit';
