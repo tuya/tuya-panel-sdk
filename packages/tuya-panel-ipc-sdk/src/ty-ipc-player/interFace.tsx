@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Res from './res';
 import TYIpcPlayerManager from '../ty-ipc-native';
 import Strings from './i18n';
