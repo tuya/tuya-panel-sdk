@@ -4,7 +4,7 @@
 
 [English](./README.md) | 简体中文
 
-[![](https://img.shields.io/npm/v/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/tuya-panel-robot-sdk)
+[![](https://img.shields.io/npm/v/@tuya-smart/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/@tuya-smart/tuya-panel-robot-sdk)
 
 ## 安装
 
