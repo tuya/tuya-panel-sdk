@@ -2,9 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "*": [
-        "*"
-      ]
+      "*": ["*"]
     },
     "allowJs": true,
     "jsx": "react",
@@ -22,25 +20,9 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     // "allowUnreachableCode": true,
-    "lib": [
-      "es5",
-      "es6",
-      "es2015",
-      "es2016",
-      "es2017",
-      "es2018",
-      "esnext"
-    ],
-    "typeRoots": [
-      "./@types/"
-    ]
+    "lib": ["es5", "es6", "es2015", "es2016", "es2017", "es2018", "esnext"],
+    "typeRoots": ["./@types/"]
   },
-  "include": [
-    "./src/**/*",
-    "@types/index.d.ts"
-  ],
-  "exclude": [
-    "./node_modules",
-    "./node_modules/@types/"
-  ]
+  "include": ["./src/**/*", "./@types/index.d.ts"],
+  "exclude": ["./node_modules", "./node_modules/@types/"]
 }

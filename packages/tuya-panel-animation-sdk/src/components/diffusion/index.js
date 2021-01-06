@@ -94,9 +94,11 @@ export default class Diffusion extends Component {
     }
     this.state = obj;
   }
+
   componentDidMount = () => {
     this.props.startAnimated && this.startAnimated();
   };
+
   componentDidUpdate = preProps => {
     if (preProps.startAnimated !== this.props.startAnimated) {
       if (this.props.startAnimated) {
@@ -106,9 +108,11 @@ export default class Diffusion extends Component {
       }
     }
   };
+
   componentWillUnmount = () => {
     this.stopAnimated();
   };
+
   timeHandle = [];
   timeHandle1 = [];
   stopAnimated = () => {
@@ -131,6 +135,7 @@ export default class Diffusion extends Component {
       this.childTask(i, true);
     }
   };
+
   childTask = (i, isInit = false) => {
     const animationConfig = {
       ...DIFFUSION_DEFAULT_ANIMATION_CONFIG,
@@ -179,6 +184,7 @@ export default class Diffusion extends Component {
       )
     );
   };
+
   render() {
     const {
       width,

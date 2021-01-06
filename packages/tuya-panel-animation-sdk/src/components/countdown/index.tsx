@@ -1,22 +1,22 @@
-import _ from 'lodash';
 import React, { Component } from 'react';
-import P from 'prop-types';
 import { Svg, Path } from 'react-native-svg';
 import {
   View,
   Animated,
   TouchableOpacity,
   StyleSheet,
-  ViewPropTypes as VP,
-  ColorPropType as CP,
   Easing,
+  ViewStyle,
+  StyleProp,
 } from 'react-native';
 import { TYText, UnitText, Utils } from 'tuya-panel-kit';
 import { createAnimation } from '../../utils';
 
 const { convertX: cx } = Utils.RatioUtils;
+
 const CountDownD =
   'M841.142857 1024h-658.285714a36.571429 36.571429 0 0 1-35.986286-29.988571L146.285714 987.428571V877.714286a366.153143 366.153143 0 0 1 365.714286-365.714286 366.226286 366.226286 0 0 1-365.714286-365.714286V36.571429a36.571429 36.571429 0 0 1 36.571429-36.571429h658.285714a36.571429 36.571429 0 0 1 36.571429 36.571429V146.285714a366.153143 366.153143 0 0 1-365.714286 365.714286 365.714286 365.714286 0 0 1 365.714286 349.842286V987.428571a36.571429 36.571429 0 0 1-29.988572 35.986286zM512 585.142857a292.132571 292.132571 0 0 0-292.571429 277.942857V950.857143h585.142858v-73.142857a292.571429 292.571429 0 0 0-292.571429-292.571429zM219.428571 73.142857v73.142857a292.571429 292.571429 0 1 0 585.142858 0V73.142857z m117.028572 789.942857a36.571429 36.571429 0 0 1-35.108572-46.811428 218.770286 218.770286 0 0 1 124.781715-140.507429 36.571429 36.571429 0 1 1 28.672 67.291429 146.285714 146.285714 0 0 0-83.309715 93.842285 36.571429 36.571429 0 0 1-35.035428 26.185143z';
+
 const COUNTDOWN_DEFAULT_ANIMATION_CONFIG = {
   easing: Easing.linear,
   duration: 400,
@@ -24,89 +24,64 @@ const COUNTDOWN_DEFAULT_ANIMATION_CONFIG = {
   isInteraction: true,
   useNativeDriver: true,
 };
-const CountDownPropTypes = {
-  /**
-   *  倒计时时间
-   */
-  countdownLeft: P.number.isRequired,
-  /**
-   *  是否显示倒计时
-   */
-  countDownShow: P.bool.isRequired,
-  /**
-   *  倒计时开始时触发
-   */
-  startCountdown: P.func,
-  /**
-   *  倒计时结束时触发
-   */
-  endCountdown: P.func,
-  /**
-   *  外层块样式
-   */
-  style: VP.style,
-  /**
-   *  显示倒计时时背景颜色
-   */
-  activeBgColor: P.string,
-  /**
-   *  显示图标时背景颜色
-   */
-  inactiveBgColor: P.string,
-  /**
-   *  为倒计时时文字
-   */
-  clickEndText: P.string,
-  /**
-   *  为图标时文字
-   */
-  countdownText: P.string,
-  /**
-   *  是否禁用
-   */
-  disabled: P.bool,
-  /**
-   *  图标颜色
-   */
-  color: CP,
-  /**
-   *  图标尺寸
-   */
-  size: P.object,
-  /**
-   *  倒计时icon,p路径
-   */
-  countDownIcon: P.string,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
 
-const CountDownDefaultProps = {
-  endCountdown: () => {},
-  startCountdown: () => {},
-  style: {},
-  activeBgColor: 'rgba(0,0,0,0.6)',
-  inactiveBgColor: 'rgba(0,0,0,0.5)',
-  clickEndText: '点击结束',
-  countdownText: '倒计时',
-  disabled: false,
-  color: '#fff',
-  size: { width: cx(24), height: cx(24) },
-  countDownIcon: CountDownD,
-  animationConfig: COUNTDOWN_DEFAULT_ANIMATION_CONFIG,
-};
-export default class CountDown extends Component {
-  static propTypes = CountDownPropTypes;
-  static defaultProps = CountDownDefaultProps;
-  state = {};
+export interface CountDownPropTypes {
+  countdownLeft: number;
+  countDownShow: boolean;
+  startCountdown?: () => void;
+  endCountdown?: () => void;
+  style?: StyleProp<ViewStyle>;
+  activeBgColor?: string;
+  inactiveBgColor?: string;
+  clickEndText?: string;
+  countdownText?: string;
+  disabled?: boolean;
+  color?: string;
+  size?: {
+    width?: number;
+    height?: number;
+  };
+  countDownIcon?: string;
+  animationConfig?: {
+    easing: (...args: any[]) => any;
+    duration: number;
+    delay: number;
+    isInteraction: boolean;
+    useNativeDriver: boolean;
+  };
+}
+
+export interface CountDownStates {
+  countdownTextTop?: Animated.Value;
+  countdownImage?: Animated.Value;
+  countdownTextOpacity?: Animated.Value;
+  countdownImageOpacity?: Animated.Value;
+  clickDisabled?: boolean;
+}
+
+export default class CountDown extends Component<CountDownPropTypes, CountDownStates> {
+  static defaultProps: CountDownPropTypes = {
+    countdownLeft: 150,
+    countDownShow: true,
+    endCountdown: () => {},
+    startCountdown: () => {},
+    style: {},
+    activeBgColor: 'rgba(0,0,0,0.6)',
+    inactiveBgColor: 'rgba(0,0,0,0.5)',
+    clickEndText: 'Click to end',
+    countdownText: 'Countdown',
+    disabled: false,
+    color: '#fff',
+    size: { width: 24, height: 24 },
+    countDownIcon: CountDownD,
+    animationConfig: COUNTDOWN_DEFAULT_ANIMATION_CONFIG,
+  };
+
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
   componentDidMount = () => {
     this.setState({
       countdownTextTop: new Animated.Value(this.props.countDownShow ? 0 : cx(68)),
@@ -139,7 +114,7 @@ export default class CountDown extends Component {
     Animated.parallel([
       createAnimation({
         value: countdownTextTop,
-        tpValue: ifShow ? 0 : cx(68),
+        toValue: ifShow ? 0 : cx(68),
         duration,
         delay,
         easing,

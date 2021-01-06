@@ -15,7 +15,7 @@ import CountDownAnimatedScene from './countdown';
 // import ParticleScene from './particle';
 
 export default class AnimatedScene extends Component {
-  // static CountDown = CountDownAnimatedScene;
+  static CountDown = CountDownAnimatedScene;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Animation.+\w*$/.test(r.id)));
   }
