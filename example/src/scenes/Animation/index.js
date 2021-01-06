@@ -3,11 +3,11 @@ import { TYFlatList } from 'tuya-panel-kit';
 import { produceRouterDatas } from '../../utils';
 import { subRouters } from '../../config/routers';
 import CountDownAnimatedScene from './countdown';
+import DiffusionAnimatedScene from './diffusion';
 // import TimeCheckAnimatedScene from './timeCheck';
 // import NumberChangeAnimatedScene from './numberChange';
 // import ModeChangeAnimatedScene from './modeChange';
 // import DrawerAnimatedScene from './drawer';
-// import DiffusionAnimatedScene from './diffusion';
 // import JitterAlertAnimatedScene from './jitterAlert';
 // import WaveViewAnimatedScene from './waveView';
 // import ScaleCarouselAnimatedScene from './scaleCarousel';
@@ -16,6 +16,8 @@ import CountDownAnimatedScene from './countdown';
 
 export default class AnimatedScene extends Component {
   static CountDown = CountDownAnimatedScene;
+  static Diffusion = DiffusionAnimatedScene;
+
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Animation.+\w*$/.test(r.id)));
   }
@@ -23,7 +25,6 @@ export default class AnimatedScene extends Component {
   // static NumberChange = NumberChangeAnimatedScene;
   // static ModeChange = ModeChangeAnimatedScene;
   // static Drawer = DrawerAnimatedScene;
-  // static Diffusion = DiffusionAnimatedScene;
   // static JitterAlert = JitterAlertAnimatedScene;
   // static WaveView = WaveViewAnimatedScene;
   // static ScaleCarousel = ScaleCarouselAnimatedScene;

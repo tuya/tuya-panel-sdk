@@ -174,4 +174,154 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
   export class CountDown extends React.Component<CountDownProps> {}
 
   // diffusion
+
+  export interface DiffusionProps {
+    /**
+     * @language zh-CN
+     * @description 波纹颜色
+     * @defaultValue 'rgba(255,255,255,0.5)'
+     */
+    /**
+     * @language en-US
+     * @description Ripple color
+     * @defaultValue 'rgba(255,255,255,0.5)'
+     */
+    color?: string;
+    /**
+     * @language zh-CN
+     * @description 最内圈波纹半径大小
+     * @defaultValue 50
+     */
+    /**
+     * @language en-US
+     * @description The radius of the innermost ring ripple
+     * @defaultValue 50
+     */
+    radius?: number;
+    /**
+     * @language zh-CN
+     * @description 扩散后最大值波纹半径大小
+     * @defaultValue 100
+     */
+    /**
+     * @language en-US
+     * @description Maximum ripple radius after diffusion
+     * @defaultValue 100
+     */
+    maxRadius?: number;
+    /**
+     * @language zh-CN
+     * @description 波纹宽度大小
+     * @defaultValue 5
+     */
+    /**
+     * @language en-US
+     * @description Ripples width
+     * @defaultValue 5
+     */
+    width?: number;
+    /**
+     * @language zh-CN
+     * @description 波纹循环一次条数
+     * @defaultValue 2
+     */
+    /**
+     * @language en-US
+     * @description Number of ripples at a time
+     * @defaultValue 2
+     */
+    number?: number;
+    /**
+     * @language zh-CN
+     * @description 波纹间隔多久出现
+     * @defaultValue 1000
+     */
+    /**
+     * @language en-US
+     * @description How often does the ripple appear
+     * @defaultValue 1000
+     */
+    mainDelay?: number;
+    /**
+     *  间隔多久进行循环，为0代表持续循环
+     */
+    /**
+     * @language zh-CN
+     * @description 间隔多久进行循环，0 代表持续循环
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description How long is the interval to cycle, 0 means continuous cycle
+     * @defaultValue 0
+     */
+    intervalTime?: number;
+    /**
+     * @language zh-CN
+     * @description 是否开始执行动画
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to start the animation
+     * @defaultValue true
+     */
+    startAnimated?: bool;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 圆圈样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Circle style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    circleStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 渲染自定义内容
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Render custom content
+     * @defaultValue () => {}
+     */
+    renderContent?: () => void;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 2000, delay: 0, isInteraction: true, useNativeDriver: false }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 2000, delay: 0, isInteraction: true, useNativeDriver: false }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+
+  export class Diffusion extends React.Component<DiffusionProps> {}
 }
