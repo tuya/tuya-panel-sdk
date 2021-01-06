@@ -15,6 +15,8 @@ export interface IGetGyroHistoryListOpts {
   cleanRecordCode?: string;
   page?: number;
   pageLimit?: number;
+  startTime?: string; // unix时间戳
+  endTime?: string; // unix时间戳
 }
 
 export interface IRecordOriginList {
@@ -24,8 +26,10 @@ export interface IRecordOriginList {
 }
 
 export interface IRecordOriginData {
-  uuid: string;
-  dps: [{ [index: string]: string }];
+  recordId: string;
+  value: string;
+  dpId: number;
+  // dps: [{ [index: string]: string }];
   gmtCreate: number;
 }
 
@@ -48,14 +52,24 @@ export interface IRecordExportData {
 export function getGyroMapHistoryList(
   opt: IGetGyroHistoryListOpts
 ): Promise<IRecordExportList | Error> {
-  const { cleanRecordCode = 'clean_record', page = 0, pageLimit = 10 } = opt || {};
-  const dpIds = [Number(TYSdk.device.getDpIdByCode(cleanRecordCode))];
+  const now = 852048000000;
+  const defaultEnd = new Date().getTime();
+  const {
+    cleanRecordCode = 'clean_record',
+    page = 0,
+    pageLimit = 10,
+    startTime = now,
+    endTime = defaultEnd,
+  } = opt || {};
+  // const dpIds = [Number(TYSdk.device.getDpIdByCode(cleanRecordCode))];
   const a = 'tuya.m.sweeper.cleaning.history.get';
   const offset = page * pageLimit;
 
   const postData = {
     devId: TYSdk.devInfo.devId,
     offset,
+    startTime,
+    endTime,
     limit: pageLimit,
   };
   const version = '1.0';
@@ -70,12 +84,12 @@ export function getGyroMapHistoryList(
           hasNext: false,
         };
       }
-      const dataList = data.datas.map(({ uuid, dps, gmtCreate }) => {
-        const [recordDp] = dps;
-        const value = recordDp[TYSdk.device.getDpIdByCode(cleanRecordCode)];
+      const dataList = data.datas.map(({ recordId, value, gmtCreate }) => {
+        // const [recordDp] = dps;
+        // const value = recordDp[TYSdk.device.getDpIdByCode(cleanRecordCode)];
 
         return {
-          id: uuid,
+          id: recordId,
           value,
           timestamp: gmtCreate,
         };
