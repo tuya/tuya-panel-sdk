@@ -1,9 +1,9 @@
 import CountDown from './components/countdown';
 import Diffusion from './components/diffusion';
+import Drawer from './components/drawer';
 // import TimeCheck from './components/timeCheck';
 // import ModeChange from './components/modeChange';
 // import NumberChange from './components/numberChange';
-// import Drawer from './components/drawer';
 // import JitterAlert from './components/jitterAlert';
 // import WaveView from './components/waveView';
 // import ScaleCarousel from './components/scaleCarousel';
@@ -13,10 +13,10 @@ import Diffusion from './components/diffusion';
 export {
   CountDown,
   Diffusion,
+  Drawer,
   // TimeCheck,
   // ModeChange,
   // NumberChange,
-  // Drawer,
   // JitterAlert,
   // WaveView,
   // ScaleCarousel,

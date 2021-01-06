@@ -159,6 +159,7 @@ export default class Drawer extends Component {
       }
     }
   };
+
   boxLeft = 0;
   endOnce = true;
   direction = 'row';
@@ -176,6 +177,7 @@ export default class Drawer extends Component {
       }
     ),
   });
+
   checkIfDisabled = (placement, dx, dy) => {
     switch (placement) {
       case 'left':
@@ -202,6 +204,7 @@ export default class Drawer extends Component {
         return false;
     }
   };
+
   checkIfClick = (evt, dx, dy) => {
     switch (this.props.placement) {
       case 'left':
@@ -228,6 +231,7 @@ export default class Drawer extends Component {
         return false;
     }
   };
+
   _handleMove(__, { dx, dy }) {
     const { placement, width, height } = this.props;
     if (this.checkIfDisabled(placement, dx, dy) || !this.endOnce) {
@@ -252,6 +256,7 @@ export default class Drawer extends Component {
       this.boxLeft = this.direction === 'row' ? dx : dy;
     }
   }
+
   _handleRelease = (evt, { dx, dy }) => {
     const { visible, width, height, placement, maskClosable } = this.props;
     this.endOnce = false;
@@ -291,6 +296,7 @@ export default class Drawer extends Component {
       });
     }
   };
+
   render() {
     const {
       maskStyle,
@@ -324,14 +330,12 @@ export default class Drawer extends Component {
           />
         )}
         <Animated.View
-          style={[
-            {
-              flexDirection: 'row',
-              position: 'absolute',
-              [['left', 'right'].includes(placement) ? 'top' : 'left']: 0,
-              [placement]: this.state.boxLeft,
-            },
-          ]}
+          style={{
+            flexDirection: 'row',
+            position: 'absolute',
+            [['left', 'right'].includes(placement) ? 'top' : 'left']: 0,
+            [placement]: this.state.boxLeft,
+          }}
         >
           <View style={[drawerStyle, { width, height }]}>{renderContent()}</View>
         </Animated.View>

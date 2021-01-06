@@ -324,4 +324,168 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
   }
 
   export class Diffusion extends React.Component<DiffusionProps> {}
+
+  // Drawer
+
+  export interface DrawerProps {
+    /**
+     * @language zh-CN
+     * @description 是否可见
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Is it visible
+     * @defaultValue false
+     */
+    visible: boolean;
+    /**
+     * @language zh-CN
+     * @description 渲染自定义内容
+     * @defaultValue () => ( <View style={{ width: '100%', height: '100%', backgroundColor: 'red' }} /> )
+     */
+    /**
+     * @language en-US
+     * @description Render custom content
+     * @defaultValue () => ( <View style={{ width: '100%', height: '100%', backgroundColor: 'red' }} /> )
+     */
+    renderContent?: () => React.ReactNode;
+    /**
+     * @language zh-CN
+     * @description 遮罩层样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Mask layer style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    maskStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 弹出层样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Pop-up layer style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    drawerStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 最外层容器样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Outer container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 抽屉方向
+     * @defaultValue 'left'
+     */
+    /**
+     * @language en-US
+     * @description Drawer direction
+     * @defaultValue 'left'
+     */
+    placement?: 'left' | 'right' | 'top' | 'bottom';
+    /**
+     * @language zh-CN
+     * @description 点击抽屉关闭回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Click the drawer to close the callback
+     * @defaultValue () => {}
+     */
+    onClose?: () => void;
+    /**
+     * @language zh-CN
+     * @description 点击抽屉开启或者关闭后的回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Click the callback after the drawer is opened or closed
+     * @defaultValue () => {}
+     */
+    onStateChange?: () => void;
+    /**
+     *  Drawer宽度
+     */
+    /**
+     * @language zh-CN
+     * @description 抽屉宽度
+     * @defaultValue winWidth / 2
+     */
+    /**
+     * @language en-US
+     * @description Drawer width
+     * @defaultValue winWidth / 2
+     */
+    width?: number;
+    /**
+     * @language zh-CN
+     * @description 抽屉高度，一般在 placement 为 top 或 bottom 时使用
+     * @defaultValue winHeight
+     */
+    /**
+     * @language en-US
+     * @description Drawer height, generally used when placement is top or bottom
+     * @defaultValue winHeight
+     */
+    height?: number;
+    /**
+     * @language zh-CN
+     * @description 点击蒙层是否允许关闭
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Click whether the mask is allowed to close
+     * @defaultValue true
+     */
+    maskClosable?: boolean;
+    /**
+     * @language zh-CN
+     * @description 遮罩是否可见
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether the mask is visible
+     * @defaultValue true
+     */
+    maskVisible?: boolean;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+    };
+  }
+
+  export class Drawer extends React.Component<DrawerProps> {}
 }
