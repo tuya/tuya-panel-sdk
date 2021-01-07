@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { StyleProp, ViewStyle } from 'react-native';
-
+import { StyleProp, ViewStyle, ColorPropType } from 'react-native';
+import { IconFont } from 'tuya-panel-kit';
 declare module '@tuya-smart/tuya-panel-animation-sdk' {
   // CountDown
   export interface CountDownProps {
@@ -488,4 +488,129 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
   }
 
   export class Drawer extends React.Component<DrawerProps> {}
+
+  // JitterAlert
+
+  export interface JitterAlertProps extends IconFont {
+    /**
+     * @language zh-CN
+     * @description 是否开始抖动动画
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to start shaking animation
+     * @defaultValue true
+     */
+    active?: boolean;
+    /**
+     * @language zh-CN
+     * @description 抖动左右摆动角度
+     * @defaultValue 15
+     */
+    /**
+     * @language en-US
+     * @description Jitter left and right swing angle
+     * @defaultValue 15
+     */
+    degree?: number;
+    /**
+     * @language zh-CN
+     * @description 抖动动效循环时间间隔，单位:ms
+     * @defaultValue 200
+     */
+    /**
+     * @language en-US
+     * @description Jitter motion cycle time interval, unit: ms
+     * @defaultValue 200
+     */
+    interval?: number;
+    /**
+     * @language zh-CN
+     * @description 抖动图标的颜色
+     * @defaultValue '#000'
+     */
+    /**
+     * @language en-US
+     * @description The color of the dither icon
+     * @defaultValue '#000'
+     */
+    color?: ColorPropType;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue null
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 图标路径
+     * @defaultValue 'M512 922.24c44.16 0 79.36-35.2 79.36-80H432.64c0 45.44 35.2 80 79.36 80z m260.48-260.48V453.76C772.48 328.96 684.8 224 569.6 197.12v-26.24c0-29.44-16-55.04-43.52-61.44C486.4 99.84 454.4 129.92 454.4 169.6v27.52C339.2 224 251.52 328.96 251.52 453.76v208L172.8 743.04v40.32h678.4v-40.32l-78.72-81.28z'
+     */
+    /**
+     * @language en-US
+     * @description Icon path
+     * @defaultValue 'M512 922.24c44.16 0 79.36-35.2 79.36-80H432.64c0 45.44 35.2 80 79.36 80z m260.48-260.48V453.76C772.48 328.96 684.8 224 569.6 197.12v-26.24c0-29.44-16-55.04-43.52-61.44C486.4 99.84 454.4 129.92 454.4 169.6v27.52C339.2 224 251.52 328.96 251.52 453.76v208L172.8 743.04v40.32h678.4v-40.32l-78.72-81.28z'
+     */
+    path?: string;
+    /**
+     * @language zh-CN
+     * @description 图标点击触发事件
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Icon click trigger event
+     * @defaultValue () => {}
+     */
+    onPress?: () => void;
+    /**
+     * @language zh-CN
+     * @description 图标尺寸
+     * @defaultValue { width: 24, height: 24 }
+     */
+    /**
+     * @language en-US
+     * @description Icon size
+     * @defaultValue { width: 24, height: 24 }
+     */
+    size?: { width: number; height: number };
+    /**
+     * @language zh-CN
+     * @description 自定义子组件
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Custom subcomponent
+     * @defaultValue null
+     */
+    children?: React.ReactNode;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+
+  export class JitterAlert extends React.Component<JitterAlertProps> {}
 }

@@ -70,8 +70,8 @@ class JitterAlert extends PureComponent {
     path: defaultPath,
     onPress: () => {},
     size: {
-      width: cx(24),
-      height: cx(24),
+      width: 24,
+      height: 24,
     },
     children: null,
     animationConfig: {
