@@ -1,19 +1,9 @@
 import { NativeModules } from 'react-native';
+import { IBitmapToImageOpt } from './interface';
 
 const TYLaserManager = NativeModules.TYRCTLaserManager;
 
 // ------------------------------------------------
-
-interface BitmapToImageOpt {
-  width: number,
-  height: number,
-  points: string,
-  pointLength: number,
-  colorsMaps: {[index: string]: string},
-  scale: number,
-  orientation: 'up' | 'down' | 'left' | 'right' | 'upMirrored' | 'downMirrored' | 'leftMirrored' | 'rightMirrored'
-}
-
 /**
  * 激光位图数据转化为base64图片
  *
@@ -21,11 +11,22 @@ interface BitmapToImageOpt {
  * @param {BitmapToImageOpt} opts
  * @returns
  */
-export function laserBitmapToImageBase64(opts: BitmapToImageOpt) {
+export function laserBitmapToImageBase64(opts: IBitmapToImageOpt) {
   const { width, height, points, pointLength, colorsMaps, scale, orientation } = opts;
   return new Promise((resolve, reject) => {
-    if (!TYLaserManager.laserBitmapToImageBase64) reject('no TYLaserManager.laserBitmapToImageBase64');
+    if (!TYLaserManager.laserBitmapToImageBase64)
+      reject(new Error('no TYLaserManager.laserBitmapToImageBase64'));
 
-    TYLaserManager.laserBitmapToImageBase64(width, height, points, pointLength, JSON.stringify(colorsMaps), scale, orientation, resolve, reject)
-  })
+    TYLaserManager.laserBitmapToImageBase64(
+      width,
+      height,
+      points,
+      pointLength,
+      JSON.stringify(colorsMaps),
+      scale,
+      orientation,
+      resolve,
+      reject
+    );
+  });
 }
