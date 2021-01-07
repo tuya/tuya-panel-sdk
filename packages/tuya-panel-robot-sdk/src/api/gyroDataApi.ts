@@ -1,48 +1,20 @@
 import { TYSdk } from 'tuya-panel-kit';
-
-interface IMessage {
-  code?: string;
-  message: string;
-  errorMsg?: string;
-}
+import {
+  IMessage,
+  IGetGyroHistoryListOpts,
+  IRecordExportList,
+  IRecordOriginList,
+  IGetGyroMapLatestMediaOpts,
+  IGyroMapMediaExport,
+  IGetGyroMapHistoryMediaOpts,
+  IGyroMapMediaOrigin,
+} from './interface';
 
 function resolveErr(e: IMessage): Promise<Error> {
   return Promise.reject(new Error(`${e.message || e.errorMsg}`));
 }
 
 /** ------------------------------------------------------------------- */
-export interface IGetGyroHistoryListOpts {
-  cleanRecordCode?: string;
-  page?: number;
-  pageLimit?: number;
-  startTime?: string; // unix时间戳
-  endTime?: string; // unix时间戳
-}
-
-export interface IRecordOriginList {
-  datas: IRecordOriginData[];
-  hasNext: boolean;
-  totalCount: number;
-}
-
-export interface IRecordOriginData {
-  recordId: string;
-  value: string;
-  dpId: number;
-  // dps: [{ [index: string]: string }];
-  gmtCreate: number;
-}
-
-export interface IRecordExportList {
-  dataList: IRecordExportData[];
-  hasNext: boolean;
-}
-
-export interface IRecordExportData {
-  id: string;
-  value: string;
-  timestamp: number;
-}
 /**
  *  陀螺仪-查询清扫记录列表
  *
@@ -61,7 +33,6 @@ export function getGyroMapHistoryList(
     startTime = now,
     endTime = defaultEnd,
   } = opt || {};
-  // const dpIds = [Number(TYSdk.device.getDpIdByCode(cleanRecordCode))];
   const a = 'tuya.m.sweeper.cleaning.history.get';
   const offset = page * pageLimit;
 
@@ -85,9 +56,6 @@ export function getGyroMapHistoryList(
         };
       }
       const dataList = data.datas.map(({ recordId, value, gmtCreate }) => {
-        // const [recordDp] = dps;
-        // const value = recordDp[TYSdk.device.getDpIdByCode(cleanRecordCode)];
-
         return {
           id: recordId,
           value,
@@ -134,29 +102,6 @@ export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Erro
 
 /** ------------------------------------------------------------------- */
 
-export interface IGetGyroMapLatestMediaOpts {
-  offset?: string;
-  limit?: number;
-}
-
-export interface IGyroMapMediaOrigin {
-  dataList: string[];
-  datatype: number;
-  devId: string;
-  endTime: number;
-  hasNext: boolean;
-  mapId: number;
-  startRow: string;
-  startTime: number;
-  status: number;
-  subRecordId: number;
-}
-
-export interface IGyroMapMediaExport {
-  dataList: string[];
-  subRecordId: number;
-  nextOffset: string;
-}
 /**
  *  查询最新一次流服务记录详情数据
  *
@@ -189,10 +134,6 @@ export function getGyroMapLatestMedia(
     .catch(err => {
       return resolveErr(err);
     });
-}
-
-export interface IGetGyroMapHistoryMediaOpts extends IGetGyroMapLatestMediaOpts {
-  subRecordId: string;
 }
 
 /**
