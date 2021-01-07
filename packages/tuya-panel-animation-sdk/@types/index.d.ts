@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StyleProp, ViewStyle, ColorPropType } from 'react-native';
+import { StyleProp, ViewStyle, ColorPropType, ImageStyle } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
 declare module '@tuya-smart/tuya-panel-animation-sdk' {
   // CountDown
@@ -613,4 +613,257 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
   }
 
   export class JitterAlert extends React.Component<JitterAlertProps> {}
+
+  // ModeChange
+
+  export interface ModeChangeProps {
+    /**
+     * @language zh-CN
+     * @description 图片
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Image
+     * @defaultValue null
+     */
+    imgUrl: number | string;
+    /**
+     * @language zh-CN
+     * @description 图片样式
+     * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
+     * @defaultValue { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' }
+     */
+    /**
+     * @language en-US
+     * @description The image style
+     * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
+     * @defaultValue { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' }
+     */
+    imgStyle?: StyleProp<ImageStyle>;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 160, height: 160 }
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 160, height: 160 }
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 初始化加载是否使用动画
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to use animation for initial loading
+     * @defaultValue true
+     */
+    useInitAnimated?: boolean;
+    /**
+     * @language zh-CN
+     * @description 第一次加载延迟时间
+     * @defaultValue 400
+     */
+    /**
+     * @language en-US
+     * @description First load delay time
+     * @defaultValue 400
+     */
+    initDelay?: number;
+    /**
+     * @language zh-CN
+     * @description 是否禁用
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Whether to disable
+     * @defaultValue false
+     */
+    disabled?: boolean;
+    /**
+     * @language zh-CN
+     * @description 动画切换时向上移动的距离
+     * @defaultValue 20
+     */
+    /**
+     * @language en-US
+     * @description The distance to move up when the animation is switched
+     * @defaultValue 20
+     */
+    moveTop?: number;
+    /**
+     * @language zh-CN
+     * @description 动画开始时回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Callback when the animation starts
+     * @defaultValue () => {}
+     */
+    onStartAnimted?: () => void;
+    /**
+     * @language zh-CN
+     * @description 动画结束时回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Callback when the animation ends
+     * @defaultValue () => {}
+     */
+    onEndAnimted?: () => void;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+
+  export interface ModeChangeScaleProps {
+    /**
+     * @language zh-CN
+     * @description 图片
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Image
+     * @defaultValue null
+     */
+    imgUrl: number | string;
+    /**
+     * @language zh-CN
+     * @description 图片样式
+     * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
+     * @defaultValue { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' }
+     */
+    /**
+     * @language en-US
+     * @description The image style
+     * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
+     * @defaultValue { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' }
+     */
+    imgStyle?: StyleProp<ImageStyle>;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 46, height: 46, backgroundColor: 'rgba(0,0,0,0.8)', borderRadius: 23 }
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 46, height: 46, backgroundColor: 'rgba(0,0,0,0.8)', borderRadius: 23 }
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 初始化加载是否使用动画
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to use animation for initial loading
+     * @defaultValue true
+     */
+    useInitAnimated?: boolean;
+    /**
+     * @language zh-CN
+     * @description 第一次加载延迟时间
+     * @defaultValue 400
+     */
+    /**
+     * @language en-US
+     * @description First load delay time
+     * @defaultValue 400
+     */
+    initDelay?: number;
+    /**
+     * @language zh-CN
+     * @description 是否禁用
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Whether to disable
+     * @defaultValue false
+     */
+    disabled?: boolean;
+    /**
+     * @language zh-CN
+     * @description 动画切换时向上移动的距离
+     * @defaultValue 20
+     */
+    /**
+     * @language en-US
+     * @description The distance to move up when the animation is switched
+     * @defaultValue 20
+     */
+    moveTop?: number;
+    /**
+     * @language zh-CN
+     * @description 动画开始时回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Callback when the animation starts
+     * @defaultValue () => {}
+     */
+    onStartAnimted?: () => void;
+    /**
+     * @language zh-CN
+     * @description 动画结束时回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Callback when the animation ends
+     * @defaultValue () => {}
+     */
+    onEndAnimted?: () => void;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 500, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 500, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+
+  export class ModeChange extends React.Component<ModeChangeProps> {
+    static Move: React.ElementType<ModeChangeProps>;
+    static Scale: React.ElementType<ModeChangeScaleProps>;
+  }
 }

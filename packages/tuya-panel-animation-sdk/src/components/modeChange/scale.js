@@ -2,10 +2,8 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { ViewPropTypes as VP, Easing, Image, View, Animated } from 'react-native';
 import P from 'prop-types';
-import { Utils } from 'tuya-panel-kit';
 import { createAnimation, getImageUrl } from '../../utils';
 
-const { convertX: cx } = Utils.RatioUtils;
 const ScalePropTypes = {
   /**
    *  当前图标
@@ -51,15 +49,15 @@ const ScalePropTypes = {
   }),
 };
 const ScaleDefaultProps = {
-  imgStyle: { width: cx(24), height: cx(24), resizeMode: 'stretch', tintColor: '#fff' },
+  imgStyle: { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' },
   disabled: false,
   style: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: cx(46),
-    height: cx(46),
+    width: 46,
+    height: 46,
     backgroundColor: 'rgba(0,0,0,0.8)',
-    borderRadius: cx(23),
+    borderRadius: 23,
   },
   useInitAnimated: true,
   initDelay: 400,
@@ -86,6 +84,7 @@ export default class Scale extends Component {
       imgUrl: getImageUrl(props.imgUrl),
     };
   }
+
   componentDidMount = () => {
     const { useInitAnimated, initDelay } = this.props;
     if (useInitAnimated) {

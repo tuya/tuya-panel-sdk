@@ -2,10 +2,8 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { ViewPropTypes as VP, Easing, Image, View, Animated } from 'react-native';
 import P from 'prop-types';
-import { Utils } from 'tuya-panel-kit';
 import { createAnimation, getImageUrl } from '../../utils';
 
-const { convertX: cx } = Utils.RatioUtils;
 const MovePropTypes = {
   /**
    *  当前图标
@@ -55,15 +53,15 @@ const MovePropTypes = {
   }),
 };
 const MoveDefaultProps = {
-  imgStyle: { width: cx(80), height: cx(80), resizeMode: 'stretch', tintColor: '#fff' },
+  imgStyle: { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' },
   disabled: false,
   style: {
     justifyContent: 'center',
     alignItems: 'center',
-    width: cx(160),
-    height: cx(160),
+    width: 160,
+    height: 160,
   },
-  moveTop: cx(20),
+  moveTop: 20,
   useInitAnimated: true,
   initDelay: 400,
   onStartAnimted: () => {},
@@ -89,6 +87,7 @@ export default class Move extends Component {
       imgUrl: getImageUrl(props.imgUrl),
     };
   }
+
   componentDidMount = () => {
     const { useInitAnimated, initDelay } = this.props;
     if (useInitAnimated) {
