@@ -2,10 +2,9 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import P from 'prop-types';
 import { ViewPropTypes as VP, Easing, View, Animated } from 'react-native';
-import { UnitText, TYText, Utils } from 'tuya-panel-kit';
+import { UnitText, TYText } from 'tuya-panel-kit';
 import { createAnimation } from '../../utils';
 
-const { convertX: cx } = Utils.RatioUtils;
 const NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG = {
   easing: Easing.bezier(0, 0, 0.25, 1),
   duration: 800,
@@ -13,6 +12,7 @@ const NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG = {
   isInteraction: true,
   useNativeDriver: true,
 };
+
 const NumberChangePropTypes = {
   /**
    *  当前value
@@ -57,11 +57,12 @@ const NumberChangePropTypes = {
     useNativeDriver: P.bool,
   }),
 };
+
 const NumberChangeDefaultProps = {
   value: 0,
   useUnitText: false,
   color: '#000',
-  size: cx(16),
+  size: 16,
   disabled: false,
   useInitAnimated: true,
   style: {
@@ -88,6 +89,7 @@ export default class NumberChange extends Component {
       this.setState({ displayValue: innerValue.toFixed(this.fixedNumber) });
     });
   }
+
   componentDidMount = () => {
     const { initDelay, value, useInitAnimated } = this.props;
     if (useInitAnimated) {
@@ -132,8 +134,6 @@ export default class NumberChange extends Component {
   getFixedNumber = value => {
     return `${value}`.indexOf('.') !== -1 ? `${value}`.split('.')[1].length : 0;
   };
-  AnimatedText;
-  fixedNumber;
 
   render() {
     const { style, useUnitText, color, size, disabled } = this.props;

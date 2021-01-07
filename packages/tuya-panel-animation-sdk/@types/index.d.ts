@@ -866,4 +866,119 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     static Move: React.ElementType<ModeChangeProps>;
     static Scale: React.ElementType<ModeChangeScaleProps>;
   }
+
+  // NumberChange
+
+  export interface NumberChangeProps {
+    /**
+     * @language zh-CN
+     * @description 当前值
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description The current value
+     * @defaultValue 0
+     */
+    value?: number;
+
+    /**
+     * @language zh-CN
+     * @description 是否使用 UnitText 组件
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Whether to use UnitText component
+     * @defaultValue false
+     */
+    useUnitText?: boolean;
+    /**
+     * @language zh-CN
+     * @description 字体颜色
+     * @defaultValue '#000'
+     */
+    /**
+     * @language en-US
+     * @description Text color
+     * @defaultValue '#000'
+     */
+    color?: string;
+    /**
+     * @language zh-CN
+     * @description 字体大小
+     * @defaultValue 16
+     */
+    /**
+     * @language en-US
+     * @description Font size
+     * @defaultValue 16
+     */
+    size?: number;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center' }
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center' }
+     */
+    style: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 初始化加载是否使用动画
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to use animation for initial loading
+     * @defaultValue true
+     */
+    useInitAnimated?: boolean;
+    /**
+     * @language zh-CN
+     * @description 第一次加载延迟时间
+     * @defaultValue 400
+     */
+    /**
+     * @language en-US
+     * @description First load delay time
+     * @defaultValue 400
+     */
+    initDelay?: number;
+    /**
+     * @language zh-CN
+     * @description 是否禁用
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Whether to disable
+     * @defaultValue false
+     */
+    disabled?: boolean;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 800, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.bezier(0, 0, 0.25, 1), duration: 800, delay: 0, isInteraction: true, useNativeDriver: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+
+  export class NumberChange extends React.Component<NumberChangeProps> {}
 }
