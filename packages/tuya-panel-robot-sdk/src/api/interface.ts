@@ -52,7 +52,6 @@ export interface IRecordOriginData {
   recordId: string;
   value: string;
   dpId: number;
-  // dps: [{ [index: string]: string }];
   gmtCreate: number;
 }
 
