@@ -4,11 +4,9 @@ import Drawer from './components/drawer';
 import JitterAlert from './components/jitterAlert';
 import ModeChange from './components/modeChange';
 import NumberChange from './components/numberChange';
-// import TimeCheck from './components/timeCheck';
-// import WaveView from './components/waveView';
-// import ScaleCarousel from './components/scaleCarousel';
-// import HorPicker from './components/horPicker';
-// import Particle from './components/particle';
+import WaveView from './components/waveView';
+import HorPicker from './components/horPicker';
+import Particle from './components/particle';
 
 export {
   CountDown,
@@ -17,9 +15,7 @@ export {
   JitterAlert,
   ModeChange,
   NumberChange,
-  // TimeCheck,
-  // WaveView,
-  // ScaleCarousel,
-  // HorPicker,
-  // Particle,
+  WaveView,
+  HorPicker,
+  Particle,
 };

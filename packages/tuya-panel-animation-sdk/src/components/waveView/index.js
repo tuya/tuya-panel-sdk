@@ -5,6 +5,7 @@ import Svg, { Path } from 'react-native-svg';
 import { createAnimation } from '../../utils';
 
 const AnimatedSvg = Animated.createAnimatedComponent(Svg);
+
 const defaultStyle = {
   width: 100,
   height: 100,

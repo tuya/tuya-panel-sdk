@@ -927,7 +927,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
      * @defaultValue { justifyContent: 'center', alignItems: 'center' }
      */
-    style: StyleProp<ViewStyle>;
+    style?: StyleProp<ViewStyle>;
     /**
      * @language zh-CN
      * @description 初始化加载是否使用动画
@@ -981,4 +981,355 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
   }
 
   export class NumberChange extends React.Component<NumberChangeProps> {}
+
+  // WaveView
+
+  export interface WaveView {
+    /**
+     * @desc
+     */
+    /**
+     * @language zh-CN
+     * @description 水波高度（百分比）
+     * @defaultValue 50
+     */
+    /**
+     * @language en-US
+     * @description Water wave height (percentage)
+     * @defaultValue 50
+     */
+    H?: number;
+    /**
+     * @language zh-CN
+     * @description 水波数组: [{ A: 波峰高度, T: 单组波峰+波谷长度, fill: 填充色 }]
+     * @defaultValue []
+     */
+    /**
+     * @language en-US
+     * @description Wave array: [{ A: height of crest, T: length of single group of crest + trough, fill: fill color }]
+     * @defaultValue []
+     */
+    waveParams?: { A: number; T: number; fill: string }[];
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center' }
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { justifyContent: 'center', alignItems: 'center' }
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 是否挂载后立刻运动
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to exercise immediately after mounting
+     * @defaultValue true
+     */
+    animated?: boolean;
+    /**
+     * @language zh-CN
+     * @description 动画配置项
+     * @defaultValue { easing: Easing.linear, duration: 5000, delay: 2000, isInteraction: true, useNativeDriver: true }
+     */
+    /**
+     * @language en-US
+     * @description Animation configuration items
+     * @defaultValue { easing: Easing.linear, duration: 5000, delay: 2000, isInteraction: true, useNativeDriver: true }
+     */
+    animationConfig?: {
+      easing?: (...args: any[]) => any;
+      duration?: number;
+      delay?: number;
+      isInteraction?: boolean;
+      useNativeDriver?: boolean;
+    };
+  }
+  export class WaveView extends React.Component<WaveViewProps> {}
+
+  // Particle
+
+  export interface ParticleProps {
+    /**
+     * @language zh-CN
+     * @description 粒子的数量
+     * @defaultValue 50
+     */
+    /**
+     * @language en-US
+     * @description Number of particles
+     * @defaultValue 50
+     */
+    amount?: number;
+    /**
+     * @language zh-CN
+     * @description 粒子的颜色
+     * @defaultValue '#fff'
+     */
+    /**
+     * @language en-US
+     * @description Color of particles
+     * @defaultValue '#fff'
+     */
+    color?: string | string[] | Func;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue {}
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 容器宽度
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description The width of container
+     * @defaultValue undefined
+     */
+    width: number;
+    /**
+     * @language zh-CN
+     * @description 容器高度
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description The height of container
+     * @defaultValue undefined
+     */
+    height: number;
+
+    /**
+     * @language zh-CN
+     * @description 动画执行一次的持续时间，单位是 ms
+     * @defaultValue 2000
+     */
+    /**
+     * @language en-US
+     * @description Duration of the animation once, unit is ms.
+     * @defaultValue 2000
+     */
+    duration?: number;
+    /**
+     * @language zh-CN
+     * @description 动画是否执行
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether the animation is executed
+     * @defaultValue true
+     */
+    active?: boolean;
+    /**
+     * @language zh-CN
+     * @description 中间空白的部分的半径
+     * @defaultValue 100
+     */
+    /**
+     * @language en-US
+     * @description The radius of the blank part
+     * @defaultValue 100
+     */
+    radius?: number;
+    /**
+     * @language zh-CN
+     * @description radius 属性的容差值, 使得 radius 在 [ radius - tolerance, radius + tolerance ] 的范围中随机取值
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description The tolerance value of the radius attribute, so that the radius is randomly selected in the range of [radius-tolerance, radius+tolerance]
+     * @defaultValue 0
+     */
+    tolerance?: number;
+    /**
+     * @language zh-CN
+     * @description 粒子的运动形式 diffuse：从中间向外扩散， absorb：从外向中间吸引
+     * @defaultValue 'diffuse'
+     */
+    /**
+     * @language en-US
+     * @description The motion form of particles diffuse: diffuse outward from the middle, absorb: attract from the outside to the middle
+     * @defaultValue 'diffuse'
+     */
+    type?: 'diffuse' | 'absorb';
+    /**
+     * @language zh-CN
+     * @description 粒子的半径
+     * @defaultValue 2
+     */
+    /**
+     * @language en-US
+     * @description Particle radius
+     * @defaultValue 2
+     */
+    dotRadius?: number | number[] | Func;
+  }
+
+  export class Particle extends React.Component<ParticleProps> {
+    static Diffuse: React.ElementType<Omit<ParticleDiffuse, 'type'>>;
+    static Absorb: React.ElementType<Omit<ParticleDiffuse, 'type'>>;
+  }
+
+  // HorPicker
+
+  export interface HorPickerProps {
+    /**
+     * @language zh-CN
+     * @description 当前选择的 index
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Currently selected index
+     * @defaultValue null
+     */
+    activeIndex: number;
+    /**
+     * @language zh-CN
+     * @description 是否禁用滑动
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Whether to disable sliding
+     * @defaultValue false
+     */
+    disabled?: boolean;
+    /**
+     * @language zh-CN
+     * @description 内容样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Container style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue {}
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 每一个 picker 样式
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { height: 100 }
+     */
+    /**
+     * @language en-US
+     * @description Every picker style
+     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+     * @defaultValue { height: 100 }
+     */
+    pickItemStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 值变化时触发
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Trigger when the value changes
+     * @defaultValue () => {}
+     */
+    onValueChange?: () => void;
+
+    /**
+     * @language zh-CN
+     * @description 选中时单位字体大小
+     * @defaultValue 14
+     */
+    /**
+     * @language en-US
+     * @description Unit font size when selected
+     * @defaultValue 14
+     */
+    unitFontSize?: number;
+    /**
+     * @language zh-CN
+     * @description 未选中时单位字缩放比例
+     * @defaultValue 0.6
+     */
+    /**
+     * @language en-US
+     * @description Unit word scaling when not selected
+     * @defaultValue 0.6
+     */
+    unPickerScale?: number;
+    /**
+     * @language zh-CN
+     * @description 单位
+     * @defaultValue 'Bags'
+     */
+    /**
+     * @language en-US
+     * @description Label
+     * @defaultValue 'Bags'
+     */
+    label?: string;
+
+    /**
+     * @language zh-CN
+     * @description 一屏展示的数量
+     * @defaultValue 7
+     */
+    /**
+     * @language en-US
+     * @description The number of one screen display
+     * @defaultValue 7
+     */
+    number?: number;
+    /**
+     * @language zh-CN
+     * @description 主题色
+     * @defaultValue 'red'
+     */
+    /**
+     * @language en-US
+     * @description Theme color
+     * @defaultValue 'red'
+     */
+    themeColor?: ColorPropType;
+    /**
+     * @language zh-CN
+     * @description 自定义内容
+     * @defaultValue _.times(20, i => <TYText style={{ fontSize: 46 }}>{i}</TYText>)
+     */
+    /**
+     * @language en-US
+     * @description Custom content
+     * @defaultValue _.times(20, i => <TYText style={{ fontSize: 46 }}>{i}</TYText>)
+     */
+    renderContent?: React.ReactNode;
+    /**
+     * @language zh-CN
+     * @description 是否展示刻度尺
+     * @defaultValue true
+     */
+    /**
+     * @language en-US
+     * @description Whether to display the scale
+     * @defaultValue true
+     */
+    showTickMark?: boolean;
+  }
+
+  export class HorPicker extends React.Component<HorPickerProps> {}
 }

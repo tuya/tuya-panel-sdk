@@ -1,10 +1,9 @@
-/* eslint-disable react/prefer-stateless-function */
+/* eslint-disable no-return-assign */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, FlatList, StyleSheet, ViewPropTypes, Animated, ColorPropType } from 'react-native';
 import { Utils, TYText } from 'tuya-panel-kit';
 import _ from 'lodash';
-import { StyledPickerContainer, StyledPickerItemView } from './styled';
 import TickMark from './tickMark';
 import { createAnimation } from '../../utils';
 
@@ -63,17 +62,18 @@ export default class HorPicker extends Component {
 
   static defaultProps = {
     style: {},
-    pickItemStyle: { height: cx(100) },
+    pickItemStyle: { height: 100 },
     disabled: false,
-    unitFontSize: cx(14),
+    unitFontSize: 14,
     unPickerScale: 0.6,
-    label: '份',
+    label: 'Bags',
     onValueChange: () => {},
     number: 7,
     themeColor: 'red',
-    renderContent: _.times(20, i => <TYText style={{ fontSize: cx(46) }}>{i}</TYText>),
+    renderContent: _.times(20, i => <TYText style={{ fontSize: 46 }}>{i}</TYText>),
     showTickMark: true,
   };
+
   constructor(props) {
     super(props);
     this.initScreenNumber = parseInt(props.number / 2, 10);
@@ -102,6 +102,7 @@ export default class HorPicker extends Component {
       this.resetActiveIndex(this.props.activeIndex, true);
     }
   };
+
   initScreenNumber = 3;
 
   initData = () => {
@@ -164,6 +165,7 @@ export default class HorPicker extends Component {
     this.stateIndex = nowIndex;
     this._setStyle(nowIndex);
   };
+
   _setStyle = (activeIndex, ifScroll) => {
     const { unPickerScale, number, renderContent, showTickMark } = this.props;
     const pickerItemWidth = winWidth / number;
@@ -188,6 +190,7 @@ export default class HorPicker extends Component {
         );
       }
     }
+
     showTickMark &&
       animatedArr.push(
         createAnimation({
@@ -202,10 +205,47 @@ export default class HorPicker extends Component {
     Animated.parallel(animatedArr).start();
     ifScroll && this.forceUpdate();
   };
+
   _onValueChange = () => {
     this.props.onValueChange && this.props.onValueChange(this.stateIndex);
   };
-  _renderContent = () => {
+
+  _renderPickerItem = (item, index) => {
+    const pickerItemWidth = winWidth / this.props.number;
+    return (
+      <TouchableOpacity
+        style={{ justifyContent: 'flex-start', alignItems: 'center' }}
+        activeOpacity={1}
+      >
+        <Animated.View
+          ref={ref => (this[`scrollView${index - this.initScreenNumber}`] = ref)}
+          style={[
+            this.props.pickItemStyle,
+            {
+              justifyContent: 'flex-start',
+              alignItems: 'center',
+              width: pickerItemWidth,
+              transform: [
+                {
+                  scale:
+                    _.get(this[`scrollView${index - this.initScreenNumber}data`], 'scale') ||
+                    new Animated.Value(1),
+                },
+              ],
+              opacity:
+                _.get(this[`scrollView${index - this.initScreenNumber}data`], 'opacity') ||
+                new Animated.Value(1),
+            },
+          ]}
+          activeOpacity={1}
+        >
+          {item === '' ? null : this.props.renderContent[index - this.initScreenNumber]}
+        </Animated.View>
+      </TouchableOpacity>
+    );
+  };
+
+  render() {
     const {
       disabled,
       style,
@@ -226,7 +266,10 @@ export default class HorPicker extends Component {
     ]);
     return (
       <View>
-        <StyledPickerContainer style={style} disabled={disabled}>
+        <View
+          style={[styles.pickerContainer, { opacity: disabled ? 0.6 : 1 }, style]}
+          disabled={disabled}
+        >
           {showTickMark && (
             <TickMark
               style={{ position: 'absolute', top: this.props.pickItemStyle.height - cx(10) }}
@@ -250,7 +293,7 @@ export default class HorPicker extends Component {
               scrollsToTop={false}
               scrollEnabled={!disabled}
               horizontal={true}
-              onLayout={e => {
+              onLayout={() => {
                 this.scrollToIndex(`scrollView`, this.stateIndex);
                 this._setStyle(this.stateIndex);
               }}
@@ -305,56 +348,29 @@ export default class HorPicker extends Component {
               }}
             />
           </View>
-        </StyledPickerContainer>
+        </View>
       </View>
     );
-  };
-
-  _renderPickerItem = (item, index) => {
-    const pickerItemWidth = winWidth / this.props.number;
-    return (
-      <StyledPickerItemView activeOpacity={1}>
-        <Animated.View
-          ref={ref => (this[`scrollView${index - this.initScreenNumber}`] = ref)}
-          style={[
-            this.props.pickItemStyle,
-            {
-              justifyContent: 'flex-start',
-              alignItems: 'center',
-              width: pickerItemWidth,
-              transform: [
-                {
-                  scale:
-                    _.get(this[`scrollView${index - this.initScreenNumber}data`], 'scale') ||
-                    new Animated.Value(1),
-                },
-              ],
-              opacity:
-                _.get(this[`scrollView${index - this.initScreenNumber}data`], 'opacity') ||
-                new Animated.Value(1),
-            },
-          ]}
-          activeOpacity={1}
-        >
-          {item === '' ? null : this.props.renderContent[index - this.initScreenNumber]}
-        </Animated.View>
-      </StyledPickerItemView>
-    );
-  };
-
-  render() {
-    return this._renderContent();
   }
 }
 
 const styles = StyleSheet.create({
   center: {
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
   labelText: {
-    position: 'absolute',
-    fontSize: cx(12),
     alignSelf: 'center',
+    fontSize: cx(12),
+    position: 'absolute',
+  },
+  pickerContainer: {
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    paddingTop: cx(20),
+    width: '100%',
   },
 });

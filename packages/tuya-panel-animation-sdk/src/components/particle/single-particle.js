@@ -67,8 +67,8 @@ export default class SingleParticle extends Component {
       typeof dr === 'function'
         ? dr() || DEFAULT_DOT_RADIUS
         : Array.isArray(dr)
-          ? dr[Math.floor(dr.length * Math.random())]
-          : dr;
+        ? dr[Math.floor(dr.length * Math.random())]
+        : dr;
     this.dotRadius = typeof _dotRadius === 'number' ? _dotRadius : DEFAULT_DOT_RADIUS;
     this.state = {
       rx,

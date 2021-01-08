@@ -44,8 +44,8 @@ export default class Particle extends PureComponent {
             typeof color === 'function'
               ? color(i)
               : Array.isArray(color)
-                ? color[Math.floor(color.length * Math.random())]
-                : color;
+              ? color[Math.floor(color.length * Math.random())]
+              : color;
           return <SingleParticle key={i} {...singleParticleProps} color={singleColor} />;
         })}
       </View>
