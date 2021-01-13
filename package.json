@@ -13,7 +13,7 @@
     "@types/jest": "^26.0.15",
     "@types/react": "^16.9.56",
     "@types/react-native": "^0.63.35",
-    "@types/tuya-panel-kit": "^4.0.0",
+    "@types/tuya-panel-kit": "^4.0.1",
     "babel-jest": "^26.6.3",
     "commitizen": "^4.2.2",
     "commitlint-config-cz": "^0.13.2",
