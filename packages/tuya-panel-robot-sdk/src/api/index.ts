@@ -1,2 +1,3 @@
 import * as GyroDataApi from './gyroDataApi';
-export { GyroDataApi };
+import * as laserUiApi from './laserUiApi';
+export { GyroDataApi, laserUiApi };
