@@ -1,44 +1,20 @@
 import { TYSdk } from 'tuya-panel-kit';
-
-interface IMessage {
-  code?: string;
-  message: string;
-  errorMsg?: string;
-}
+import {
+  IMessage,
+  IGetGyroHistoryListOpts,
+  IRecordExportList,
+  IRecordOriginList,
+  IGetGyroMapLatestMediaOpts,
+  IGyroMapMediaExport,
+  IGetGyroMapHistoryMediaOpts,
+  IGyroMapMediaOrigin,
+} from './interface';
 
 function resolveErr(e: IMessage): Promise<Error> {
   return Promise.reject(new Error(`${e.message || e.errorMsg}`));
 }
 
 /** ------------------------------------------------------------------- */
-export interface IGetGyroHistoryListOpts {
-  cleanRecordCode?: string;
-  page?: number;
-  pageLimit?: number;
-}
-
-export interface IRecordOriginList {
-  datas: IRecordOriginData[];
-  hasNext: boolean;
-  totalCount: number;
-}
-
-export interface IRecordOriginData {
-  uuid: string;
-  dps: [{ [index: string]: string }];
-  gmtCreate: number;
-}
-
-export interface IRecordExportList {
-  dataList: IRecordExportData[];
-  hasNext: boolean;
-}
-
-export interface IRecordExportData {
-  id: string;
-  value: string;
-  timestamp: number;
-}
 /**
  *  陀螺仪-查询清扫记录列表
  *
@@ -48,35 +24,40 @@ export interface IRecordExportData {
 export function getGyroMapHistoryList(
   opt: IGetGyroHistoryListOpts
 ): Promise<IRecordExportList | Error> {
-  const { cleanRecordCode = 'clean_record', page = 0, pageLimit = 10 } = opt || {};
-  const dpIds = [Number(TYSdk.device.getDpIdByCode(cleanRecordCode))];
-  const a = 'm.smart.scale.history.get.list';
+  const now = 852048000000;
+  const defaultEnd = new Date().getTime();
+  const {
+    cleanRecordCode = 'clean_record',
+    page = 0,
+    pageLimit = 10,
+    startTime = now,
+    endTime = defaultEnd,
+  } = opt || {};
+  const a = 'tuya.m.sweeper.cleaning.history.get';
   const offset = page * pageLimit;
 
   const postData = {
     devId: TYSdk.devInfo.devId,
-    dpIds,
     offset,
+    startTime,
+    endTime,
     limit: pageLimit,
-    userId: '0',
   };
   const version = '1.0';
 
   return TYSdk.apiRequest(a, postData, version)
     .then((data: IRecordOriginList) => {
-      const { hasNext = false, totalCount = 0 } = data;
+      // const { hasNext = false, totalCount = 0 } = data;
+      const { totalCount = 0 } = data;
       if (typeof data.datas === 'undefined' || data.datas.length === 0) {
         return {
           dataList: [],
-          hasNext,
+          hasNext: false,
         };
       }
-      const dataList = data.datas.map(({ uuid, dps, gmtCreate }) => {
-        const [recordDp] = dps;
-        const value = recordDp[TYSdk.device.getDpIdByCode(cleanRecordCode)];
-
+      const dataList = data.datas.map(({ recordId, value, gmtCreate }) => {
         return {
-          id: uuid,
+          id: recordId,
           value,
           timestamp: gmtCreate,
         };
@@ -84,7 +65,7 @@ export function getGyroMapHistoryList(
 
       return {
         dataList,
-        hasNext,
+        hasNext: offset + dataList.length < totalCount,
       };
     })
     .catch(err => {
@@ -101,7 +82,7 @@ export function getGyroMapHistoryList(
  * @returns
  */
 export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Error> {
-  const a = 'm.smart.scale.history.delete';
+  const a = 'tuya.m.sweeper.cleaning.history.delete';
 
   if (!ids || !ids.length) return resolveErr({ message: 'Missing parameters: id' });
   const postData = {
@@ -121,29 +102,6 @@ export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Erro
 
 /** ------------------------------------------------------------------- */
 
-export interface IGetGyroMapLatestMediaOpts {
-  offset?: string;
-  limit?: number;
-}
-
-export interface IGyroMapMediaOrigin {
-  dataList: string[];
-  datatype: number;
-  devId: string;
-  endTime: number;
-  hasNext: boolean;
-  mapId: number;
-  startRow: string;
-  startTime: number;
-  status: number;
-  subRecordId: number;
-}
-
-export interface IGyroMapMediaExport {
-  dataList: string[];
-  subRecordId: number;
-  nextOffset: string;
-}
 /**
  *  查询最新一次流服务记录详情数据
  *
@@ -176,10 +134,6 @@ export function getGyroMapLatestMedia(
     .catch(err => {
       return resolveErr(err);
     });
-}
-
-export interface IGetGyroMapHistoryMediaOpts extends IGetGyroMapLatestMediaOpts {
-  subRecordId: string;
 }
 
 /**
