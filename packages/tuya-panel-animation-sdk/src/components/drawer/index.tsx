@@ -1,7 +1,8 @@
+/* eslint-disable react/no-did-update-set-state */
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import _ from 'lodash';
 import React, { Component } from 'react';
-import P from 'prop-types';
-import { ViewPropTypes as VP, Easing, View, Animated, PanResponder } from 'react-native';
+import { Easing, View, Animated, PanResponder, StyleProp, ViewStyle } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import { createAnimation } from '../../utils';
 
@@ -12,98 +13,66 @@ const DRAWER_DEFAULT_ANIMATION_CONFIG = {
   delay: 0,
   isInteraction: true,
 };
-const DrawerPropTypes = {
-  /**
-   *  是否可见
-   */
-  visible: P.bool.isRequired,
-  /**
-   *  自定义内容
-   */
-  renderContent: P.func,
-  /**
-   *  遮罩层样式
-   */
-  maskStyle: VP.style,
-  /**
-   *  弹出层样式
-   */
-  drawerStyle: VP.style,
-  /**
-   *  设置 Drawer 最外层容器的样式
-   */
-  style: VP.style,
-  /**
-   *  抽屉方向 【'left','right','top','bottom'】
-   */
-  placement: P.oneOf(['left', 'right', 'top', 'bottom']),
-  /**
-   *  点击抽屉关闭回调
-   */
-  onClose: P.func,
-  /**
-   *  点击抽屉开启或者关闭后的回调
-   */
-  onStateChange: P.func,
-  /**
-   *  Drawer宽度
-   */
-  width: P.number,
-  /**
-   *  Drawer高度，一般在 placement 为 top 或 bottom 时使用
-   */
-  height: P.number,
-  /**
-   *  点击蒙层是否允许关闭
-   */
-  maskClosable: P.bool,
-  /**
-   *  遮罩是否可见
-   */
-  maskVisible: P.bool,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-  }),
-};
-const DrawerDefaultProps = {
-  maskStyle: {
-    width: winWidth,
-    height: winHeight,
-    backgroundColor: 'rgba(0,0,0,0.6)',
-    position: 'absolute',
-  },
-  drawerStyle: {
-    backgroundColor: '#F8F8F8',
-  },
-  style: {},
-  placement: 'left',
-  maskVisible: true,
-  maskClosable: true,
-  renderContent: () => (
-    <View
-      style={{
-        width: '100%',
-        height: '100%',
-        backgroundColor: 'red',
-      }}
-    />
-  ),
-  onClose: () => {},
-  onStateChange: () => {},
-  width: winWidth / 2,
-  height: winHeight,
-  animationConfig: DRAWER_DEFAULT_ANIMATION_CONFIG,
-};
 
-export default class Drawer extends Component {
-  static propTypes = DrawerPropTypes;
-  static defaultProps = DrawerDefaultProps;
+export interface DrawerPropTypes {
+  visible?: boolean;
+  renderContent?: () => React.ReactNode;
+  maskStyle?: StyleProp<ViewStyle>;
+  drawerStyle?: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
+  placement?: 'left' | 'right' | 'top' | 'bottom';
+  onClose?: () => void;
+  onStateChange?: (visible?: boolean) => void;
+  width?: number;
+  height?: number;
+  maskClosable?: boolean;
+  maskVisible?: boolean;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+  };
+}
+
+export interface DrawerStateTypes {
+  boxLeft: Animated.Value;
+  maskOpacity: Animated.Value;
+  maskState: boolean;
+}
+
+export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes> {
+  static defaultProps: DrawerPropTypes = {
+    visible: false,
+    maskStyle: {
+      width: winWidth,
+      height: winHeight,
+      backgroundColor: 'rgba(0,0,0,0.6)',
+      position: 'absolute',
+    },
+    drawerStyle: {
+      backgroundColor: '#F8F8F8',
+    },
+    style: {},
+    placement: 'left',
+    maskVisible: true,
+    maskClosable: true,
+    renderContent: () => (
+      <View
+        style={{
+          width: '100%',
+          height: '100%',
+          backgroundColor: 'red',
+        }}
+      />
+    ),
+    onClose: () => {},
+    onStateChange: () => {},
+    width: winWidth / 2,
+    height: winHeight,
+    animationConfig: DRAWER_DEFAULT_ANIMATION_CONFIG,
+  };
+
   constructor(props) {
     super(props);
     this.direction = ['left', 'right'].includes(props.placement) ? 'row' : 'column';
@@ -160,6 +129,7 @@ export default class Drawer extends Component {
     }
   };
 
+  range: number;
   boxLeft = 0;
   endOnce = true;
   direction = 'row';
@@ -241,6 +211,7 @@ export default class Drawer extends Component {
       this.direction === 'row'
         ? (winWidth - width - Math.abs(dx)) / (winWidth - width)
         : (winHeight - height - Math.abs(dy)) / (winHeight - height);
+    // @ts-ignore
     if (this.state.boxLeft._value > -this.range) {
       this.setState(
         {

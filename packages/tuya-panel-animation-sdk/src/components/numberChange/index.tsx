@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import P from 'prop-types';
-import { ViewPropTypes as VP, Easing, View, Animated } from 'react-native';
+import { Easing, View, Animated, ViewStyle, StyleProp } from 'react-native';
 import { UnitText, TYText } from 'tuya-panel-kit';
 import { createAnimation } from '../../utils';
 
@@ -13,78 +12,53 @@ const NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG = {
   useNativeDriver: true,
 };
 
-const NumberChangePropTypes = {
-  /**
-   *  当前value
-   */
-  value: P.number,
-  /**
-   *  是否使用unittext
-   */
-  useUnitText: P.bool,
-  /**
-   *  字体颜色
-   */
-  color: P.string,
-  /**
-   *  字体大小
-   */
-  size: P.number,
-  /**
-   *  外层view块样式
-   */
-  style: VP.style,
-  /**
-   *  初始化加载是否使用动画
-   */
-  useInitAnimated: P.bool,
-  /**
-   *  第一次加载延迟时间
-   */
-  initDelay: P.number,
-  /**
-   *  是否禁用
-   */
-  disabled: P.bool,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
+interface NumberChangePropTypes {
+  value?: number;
+  useUnitText?: boolean;
+  color?: string;
+  size?: number;
+  style?: StyleProp<ViewStyle>;
+  useInitAnimated?: boolean;
+  initDelay?: number;
+  disabled?: boolean;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver?: boolean;
+  };
+}
 
-const NumberChangeDefaultProps = {
-  value: 0,
-  useUnitText: false,
-  color: '#000',
-  size: 16,
-  disabled: false,
-  useInitAnimated: true,
-  style: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  initDelay: 400,
-  animationConfig: NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG,
-};
+interface NumberChangeStateTypes {
+  value: Animated.Value;
+  displayValue: string;
+}
 
-export default class NumberChange extends Component {
-  static propTypes = NumberChangePropTypes;
-  static defaultProps = NumberChangeDefaultProps;
+export default class NumberChange extends Component<NumberChangePropTypes, NumberChangeStateTypes> {
+  static defaultProps: NumberChangePropTypes = {
+    value: 0,
+    useUnitText: false,
+    color: '#000',
+    size: 16,
+    disabled: false,
+    useInitAnimated: true,
+    style: {
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    initDelay: 400,
+    animationConfig: NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG,
+  };
+
   constructor(props) {
     super(props);
     const value = new Animated.Value(props.useInitAnimated ? 0 : props.value);
     this.state = {
       value,
-      displayValue: props.useInitAnimated ? 0 : props.value,
+      displayValue: props.useInitAnimated ? 0 : props.value.toString(),
     };
     this.fixedNumber = this.getFixedNumber(props.value);
-    this.TextComponent = props.useUnitText ? UnitText : TYText;
     value.addListener(({ value: innerValue }) => {
       this.setState({ displayValue: innerValue.toFixed(this.fixedNumber) });
     });
@@ -102,7 +76,7 @@ export default class NumberChange extends Component {
         value: this.state.value,
         toValue: value,
         duration,
-        initDelay,
+        delay: initDelay,
         easing,
         useNativeDriver,
         isInteraction,
@@ -135,25 +109,17 @@ export default class NumberChange extends Component {
     return `${value}`.indexOf('.') !== -1 ? `${value}`.split('.')[1].length : 0;
   };
 
+  fixedNumber: number;
+
   render() {
     const { style, useUnitText, color, size, disabled } = this.props;
-    let propsType = {};
-    if (useUnitText) {
-      propsType = {
-        value: this.state.displayValue,
-        valueColor: color,
-        valueSize: size,
-      };
-    } else {
-      propsType = {
-        text: this.state.displayValue,
-        color,
-        size,
-      };
-    }
     return (
       <View style={[style, disabled && { opacity: 0.5 }]}>
-        <this.TextComponent {...propsType} />
+        {useUnitText ? (
+          <UnitText value={this.state.displayValue} valueColor={color} valueSize={size} />
+        ) : (
+          <TYText color={color} size={size} text={this.state.displayValue} />
+        )}
       </View>
     );
   }

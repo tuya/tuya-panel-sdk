@@ -1,7 +1,6 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import P from 'prop-types';
-import { ViewPropTypes as VP, Easing, View, Animated } from 'react-native';
+import { Easing, View, Animated, ViewStyle, StyleProp } from 'react-native';
 import { createAnimation } from '../../utils';
 
 const DIFFUSION_DEFAULT_ANIMATION_CONFIG = {
@@ -11,80 +10,44 @@ const DIFFUSION_DEFAULT_ANIMATION_CONFIG = {
   isInteraction: true,
   useNativeDriver: false,
 };
-const DiffusionPropTypes = {
-  /**
-   *  波纹颜色
-   */
-  color: P.string,
-  /**
-   *  最内圈波纹半径大小
-   */
-  radius: P.number,
-  /**
-   *  扩散后最大值波纹半径大小
-   */
-  maxRadius: P.number,
-  /**
-   *  波纹宽度大小
-   */
-  width: P.number,
-  /**
-   *  波纹循环一次条数
-   */
-  number: P.number,
-  /**
-   *  波纹间隔多久出现
-   */
-  mainDelay: P.number,
-  /**
-   *  间隔多久进行循环，为0代表持续循环
-   */
-  intervalTime: P.number,
-  /**
-   *  是否开始动画标志
-   */
-  startAnimated: P.bool,
-  /**
-   *  容器样式
-   */
-  style: VP.style,
-  /**
-   *  圆圈样式
-   */
-  circleStyle: VP.style,
-  /**
-   * 渲染自定义内容
-   */
-  renderContent: P.func,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
-const DiffusionDefaultProps = {
-  radius: 50,
-  maxRadius: 100,
-  color: 'rgba(255,255,255,0.5)',
-  width: 5,
-  number: 2,
-  intervalTime: 0,
-  startAnimated: true,
-  mainDelay: 1000,
-  animationConfig: DIFFUSION_DEFAULT_ANIMATION_CONFIG,
-  style: {},
-  circleStyle: {},
-  renderContent: () => {},
-};
 
-export default class Diffusion extends Component {
-  static propTypes = DiffusionPropTypes;
-  static defaultProps = DiffusionDefaultProps;
+export interface DiffusionProps {
+  color?: string;
+  radius?: number;
+  maxRadius?: number;
+  width?: number;
+  number?: number;
+  mainDelay?: number;
+  intervalTime?: number;
+  startAnimated?: boolean;
+  style?: StyleProp<ViewStyle>;
+  circleStyle?: StyleProp<ViewStyle>;
+  renderContent?: () => React.ReactNode;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver?: boolean;
+  };
+}
+
+export default class Diffusion extends Component<DiffusionProps> {
+  static defaultProps: DiffusionProps = {
+    radius: 50,
+    maxRadius: 100,
+    color: 'rgba(255,255,255,0.5)',
+    width: 5,
+    number: 2,
+    intervalTime: 0,
+    startAnimated: true,
+    mainDelay: 1000,
+    animationConfig: DIFFUSION_DEFAULT_ANIMATION_CONFIG,
+    style: {},
+    circleStyle: {},
+    renderContent: null,
+  };
+
   constructor(props) {
     super(props);
     const obj = {};

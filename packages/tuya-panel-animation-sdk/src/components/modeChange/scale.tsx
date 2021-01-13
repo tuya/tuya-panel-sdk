@@ -1,70 +1,35 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { ViewPropTypes as VP, Easing, Image, View, Animated } from 'react-native';
-import P from 'prop-types';
+import {
+  Easing,
+  ImageSourcePropType,
+  View,
+  Animated,
+  StyleProp,
+  ImageStyle,
+  ViewStyle,
+} from 'react-native';
 import { createAnimation, getImageUrl } from '../../utils';
 
-const ScalePropTypes = {
-  /**
-   *  当前图标
-   */
-  imgUrl: P.oneOfType([P.number, P.string]).isRequired,
-  /**
-   *  图片样式
-   */
-  imgStyle: Image.propTypes.style,
-  /**
-   *  外层view块样式
-   */
-  style: VP.style,
-  /**
-   *  初始化加载是否使用动画
-   */
-  useInitAnimated: P.bool,
-  /**
-   *  第一次加载延迟时间
-   */
-  initDelay: P.number,
-  /**
-   *  是否禁用
-   */
-  disabled: P.bool,
-  /**
-   *  动画开始时回调
-   */
-  onStartAnimted: P.func,
-  /**
-   *  动画结束时回调
-   */
-  onEndAnimted: P.func,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
-const ScaleDefaultProps = {
-  imgStyle: { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' },
-  disabled: false,
-  style: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 46,
-    height: 46,
-    backgroundColor: 'rgba(0,0,0,0.8)',
-    borderRadius: 23,
-  },
-  useInitAnimated: true,
-  initDelay: 400,
-  onStartAnimted: () => {},
-  onEndAnimted: () => {},
-  animationConfig: SCALE_DEFAULT_ANIMATION_CONFIG,
-};
+interface ModeChangeScaleProps {
+  imgUrl: number | string;
+  imgStyle?: StyleProp<ImageStyle>;
+  style?: StyleProp<ViewStyle>;
+  useInitAnimated?: boolean;
+  initDelay?: number;
+  disabled?: boolean;
+  moveTop?: number;
+  onStartAnimted?: () => void;
+  onEndAnimted?: () => void;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver?: boolean;
+  };
+}
+
 const SCALE_DEFAULT_ANIMATION_CONFIG = {
   easing: Easing.bezier(0, 0, 0.25, 1),
   duration: 500,
@@ -73,9 +38,32 @@ const SCALE_DEFAULT_ANIMATION_CONFIG = {
   useNativeDriver: true,
 };
 
-export default class Scale extends Component {
-  static propTypes = ScalePropTypes;
-  static defaultProps = ScaleDefaultProps;
+interface ModeChangeScaleState {
+  opacity: Animated.Value;
+  moveTop?: Animated.Value;
+  scale: Animated.Value;
+  imgUrl: ImageSourcePropType;
+}
+
+export default class Scale extends Component<ModeChangeScaleProps, ModeChangeScaleState> {
+  static defaultProps = {
+    imgStyle: { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' },
+    disabled: false,
+    style: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 46,
+      height: 46,
+      backgroundColor: 'rgba(0,0,0,0.8)',
+      borderRadius: 23,
+    },
+    useInitAnimated: true,
+    initDelay: 400,
+    onStartAnimted: () => {},
+    onEndAnimted: () => {},
+    animationConfig: SCALE_DEFAULT_ANIMATION_CONFIG,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -99,7 +87,7 @@ export default class Scale extends Component {
           value: this.state.opacity,
           toValue: 1,
           duration: duration / 2,
-          initDelay,
+          delay: initDelay,
           easing,
           useNativeDriver,
           isInteraction,
@@ -108,7 +96,7 @@ export default class Scale extends Component {
           value: this.state.scale,
           toValue: 1,
           duration: duration / 2,
-          initDelay,
+          delay: initDelay,
           easing,
           useNativeDriver,
           isInteraction,
@@ -174,7 +162,6 @@ export default class Scale extends Component {
     }
   };
 
-  imgUrl;
   render() {
     const { style, disabled, imgStyle } = this.props;
     const { opacity, scale } = this.state;

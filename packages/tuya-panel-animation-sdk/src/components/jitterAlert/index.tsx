@@ -1,65 +1,30 @@
 import React, { PureComponent } from 'react';
-import { Animated, ColorPropType, Easing, ViewPropTypes, TouchableOpacity } from 'react-native';
+import { Animated, Easing, TouchableOpacity, ViewStyle, StyleProp } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
-import P, { element } from 'prop-types';
 
 const defaultPath =
   'M512 922.24c44.16 0 79.36-35.2 79.36-80H432.64c0 45.44 35.2 80 79.36 80z m260.48-260.48V453.76C772.48 328.96 684.8 224 569.6 197.12v-26.24c0-29.44-16-55.04-43.52-61.44C486.4 99.84 454.4 129.92 454.4 169.6v27.52C339.2 224 251.52 328.96 251.52 453.76v208L172.8 743.04v40.32h678.4v-40.32l-78.72-81.28z';
 
-class JitterAlert extends PureComponent {
-  static propTypes = {
-    /**
-     * 是否开始抖动动画
-     */
-    active: P.bool,
-    /**
-     * 抖动左右摆动角度
-     */
-    degree: P.number,
-    /**
-     * 抖动动效循环时间间隔，单位:ms
-     */
-    interval: P.number,
-    /**
-     * 抖动图标的颜色
-     */
-    color: ColorPropType,
-    /**
-     * 容器样式
-     */
-    style: ViewPropTypes.style,
-    /**
-     * 抖动icon svg path
-     */
-    path: P.string,
-    /**
-     * icon点击事件
-     */
-    onPress: P.func,
-    /**
-     * 抖动图标尺寸
-     */
-    size: P.shape({ width: P.number, height: P.number }),
-    /**
-     * 其余IconFont props
-     */
-    ...IconFont.propTypes,
-    /**
-     * 自定义抖动组件
-     */
-    children: element,
-    /**
-     * animationConfig 动画配置项
-     */
-    animationConfig: P.shape({
-      easing: P.func,
-      duration: P.number,
-      delay: P.number,
-      isInteraction: P.bool,
-      useNativeDriver: P.bool,
-    }),
+interface JitterAlertProps extends IconFont {
+  active?: boolean;
+  degree?: number;
+  interval?: number;
+  color?: string;
+  style?: StyleProp<ViewStyle>;
+  path?: string;
+  onPress?: () => void;
+  size?: { width: number; height: number };
+  renderContent?: React.ReactNode;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver: boolean;
   };
+}
 
+class JitterAlert extends PureComponent<JitterAlertProps> {
   static defaultProps = {
     active: true,
     degree: 15,
@@ -72,7 +37,7 @@ class JitterAlert extends PureComponent {
       width: 24,
       height: 24,
     },
-    children: null,
+    renderContent: null,
     animationConfig: {
       easing: Easing.linear,
       duration: 500,
@@ -101,6 +66,9 @@ class JitterAlert extends PureComponent {
   componentWillUnmount() {
     this.stopAnimated();
   }
+
+  animatedValueArr: number[];
+  animatedValue: Animated.Value;
 
   startAnimated() {
     const { animationConfig, interval, active } = this.props;
@@ -133,7 +101,7 @@ class JitterAlert extends PureComponent {
   };
 
   render() {
-    const { degree, style, path, onPress, size, children, ...restIconFontProps } = this.props;
+    const { degree, style, path, onPress, size, renderContent, ...restIconFontProps } = this.props;
     const imgRotate = this.animatedValue.interpolate({
       inputRange: [0, 1],
       outputRange: [`-${degree}deg`, `${degree}deg`],
@@ -141,8 +109,8 @@ class JitterAlert extends PureComponent {
     return (
       <Animated.View style={[{ ...size }, style, { transform: [{ rotate: imgRotate }] }]}>
         <TouchableOpacity onPress={onPress}>
-          {React.isValidElement(children) ? (
-            children
+          {React.isValidElement(renderContent) ? (
+            renderContent
           ) : (
             <IconFont d={path} {...size} {...restIconFontProps} />
           )}

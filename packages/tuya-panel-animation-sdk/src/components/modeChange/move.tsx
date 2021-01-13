@@ -1,73 +1,35 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { ViewPropTypes as VP, Easing, Image, View, Animated } from 'react-native';
-import P from 'prop-types';
+import {
+  Easing,
+  View,
+  Animated,
+  ImageStyle,
+  StyleProp,
+  ViewStyle,
+  ImageSourcePropType,
+} from 'react-native';
 import { createAnimation, getImageUrl } from '../../utils';
 
-const MovePropTypes = {
-  /**
-   *  当前图标
-   */
-  imgUrl: P.oneOfType([P.number, P.string]).isRequired,
-  /**
-   *  图片样式
-   */
-  imgStyle: Image.propTypes.style,
-  /**
-   *  外层view块样式
-   */
-  style: VP.style,
-  /**
-   *  初始化加载是否使用动画
-   */
-  useInitAnimated: P.bool,
-  /**
-   *  第一次加载延迟时间
-   */
-  initDelay: P.number,
-  /**
-   *  是否禁用
-   */
-  disabled: P.bool,
-  /**
-   *  动画切换时向上移动的距离
-   */
-  moveTop: P.number,
-  /**
-   *  动画开始时回调
-   */
-  onStartAnimted: P.func,
-  /**
-   *  动画结束时回调
-   */
-  onEndAnimted: P.func,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
-const MoveDefaultProps = {
-  imgStyle: { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' },
-  disabled: false,
-  style: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: 160,
-    height: 160,
-  },
-  moveTop: 20,
-  useInitAnimated: true,
-  initDelay: 400,
-  onStartAnimted: () => {},
-  onEndAnimted: () => {},
-  animationConfig: MOVE_DEFAULT_ANIMATION_CONFIG,
-};
+interface ModeChangeProps {
+  imgUrl: number | string;
+  imgStyle?: StyleProp<ImageStyle>;
+  style?: StyleProp<ViewStyle>;
+  useInitAnimated?: boolean;
+  initDelay?: number;
+  disabled?: boolean;
+  moveTop?: number;
+  onStartAnimted?: () => void;
+  onEndAnimted?: () => void;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver?: boolean;
+  };
+}
+
 const MOVE_DEFAULT_ANIMATION_CONFIG = {
   easing: Easing.bezier(0, 0, 0.25, 1),
   duration: 400,
@@ -76,9 +38,30 @@ const MOVE_DEFAULT_ANIMATION_CONFIG = {
   useNativeDriver: true,
 };
 
-export default class Move extends Component {
-  static propTypes = MovePropTypes;
-  static defaultProps = MoveDefaultProps;
+interface ModeChangeState {
+  opacity: Animated.Value;
+  moveTop: Animated.Value;
+  imgUrl: ImageSourcePropType;
+}
+
+export default class Move extends Component<ModeChangeProps, ModeChangeState> {
+  static defaultProps = {
+    imgStyle: { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' },
+    disabled: false,
+    style: {
+      justifyContent: 'center',
+      alignItems: 'center',
+      width: 160,
+      height: 160,
+    },
+    moveTop: 20,
+    useInitAnimated: true,
+    initDelay: 400,
+    onStartAnimted: () => {},
+    onEndAnimted: () => {},
+    animationConfig: MOVE_DEFAULT_ANIMATION_CONFIG,
+  };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -102,7 +85,7 @@ export default class Move extends Component {
           value: this.state.opacity,
           toValue: 1,
           duration: duration / 2,
-          initDelay,
+          delay: initDelay,
           easing,
           useNativeDriver,
           isInteraction,
@@ -111,7 +94,7 @@ export default class Move extends Component {
           value: this.state.moveTop,
           toValue: 0,
           duration: duration / 2,
-          initDelay,
+          delay: initDelay,
           easing,
           useNativeDriver,
           isInteraction,
@@ -184,7 +167,6 @@ export default class Move extends Component {
     }
   };
 
-  imgUrl;
   render() {
     const { style, disabled, imgStyle } = this.props;
     const { opacity, moveTop } = this.state;

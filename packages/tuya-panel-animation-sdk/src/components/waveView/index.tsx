@@ -1,6 +1,5 @@
 import React from 'react';
-import P from 'prop-types';
-import { View, Animated, Easing, ViewPropTypes as VP } from 'react-native';
+import { View, Animated, Easing, ViewStyle, StyleProp } from 'react-native';
 import Svg, { Path } from 'react-native-svg';
 import { createAnimation } from '../../utils';
 
@@ -37,59 +36,39 @@ const WAVEVIEW_DEFAULT_ANIMATION_CONFIG = {
  * ---------+------------------------+__V___
  */
 
-const WaveViewPropTypes = {
-  /**
-   * @desc 水波高度（百分比）
-   */
-  H: P.number,
-  /**
-   * @desc 水波数组:{ A: 25, T: 140, fill: '#64c3d6' },
-   *  A: 波峰高度  T: 单组波峰+波谷长度  fill: 填充色
-   */
-  waveParams: P.array,
-  /**
-   * @desc 外层块样式
-   */
-  style: VP.style,
-  /**
-   * @desc 是否挂载后立刻运动
-   */
-  animated: P.bool,
-  /**
-   *  动画配置项
-   */
-  animationConfig: P.shape({
-    easing: P.func,
-    duration: P.number,
-    delay: P.number,
-    isInteraction: P.bool,
-    useNativeDriver: P.bool,
-  }),
-};
+interface WaveViewPropTypes {
+  H?: number;
+  waveParams?: { A: number; T: number; fill: string }[];
+  style?: StyleProp<ViewStyle>;
+  animated?: boolean;
+  animationConfig?: {
+    easing?: (...args: any[]) => any;
+    duration?: number;
+    delay?: number;
+    isInteraction?: boolean;
+    useNativeDriver?: boolean;
+  };
+}
 
-const WaveViewDefaultProps = {
-  H: 50,
-  waveParams: [],
-  style: defaultStyle,
-  animated: true,
-  animationConfig: WAVEVIEW_DEFAULT_ANIMATION_CONFIG,
-};
+interface WaveViewStateTypes {
+  H?: number;
+  waveParams?: { A: number; T: number; fill: string }[];
+  style?: { width: number };
+}
 
-/**
- * @class Wave
- *
- * @prop {Number} H water level
- * @prop {Array} waveParams list of params: {A, T, fill}
- * @prop {bool} animated
- */
-class Wave extends React.PureComponent {
-  static propTypes = WaveViewPropTypes;
-  static defaultProps = WaveViewDefaultProps;
+class Wave extends React.PureComponent<WaveViewPropTypes, WaveViewStateTypes> {
+  static defaultProps: WaveViewPropTypes = {
+    H: 50,
+    waveParams: [],
+    style: {},
+    animated: true,
+    animationConfig: WAVEVIEW_DEFAULT_ANIMATION_CONFIG,
+  };
 
   constructor(props) {
     super(props);
-
     const { H, waveParams, animated, style } = this.props;
+    /* eslint-disable prefer-object-spread */
     const wrapStyle = Object.assign({ ...defaultStyle }, style);
 
     this.state = {
@@ -125,6 +104,10 @@ class Wave extends React.PureComponent {
     this._animations = null;
   }
 
+  _animValues: Animated.Value[];
+  _animations: Animated.Value[];
+  _animated: boolean;
+
   startAnim() {
     this.stopAnim();
     const animationConfig = {
@@ -146,6 +129,8 @@ class Wave extends React.PureComponent {
           isInteraction,
         })
       );
+      /* eslint-disable @typescript-eslint/ban-ts-comment */
+      // @ts-ignore
       this._animations.push(anim);
       anim.start();
     }
@@ -154,6 +139,7 @@ class Wave extends React.PureComponent {
 
   stopAnim() {
     for (let i = 0; i < this._animations.length; i++) {
+      // @ts-ignore
       this._animations[i].stop();
       this._animations[i] = null;
     }

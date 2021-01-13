@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Diffusion components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Array [
+        Object {
+          "borderColor": "rgba(255,255,255,0.5)",
+          "borderWidth": 5,
+          "position": "absolute",
+        },
+        Object {},
+        Object {
+          "borderRadius": 50,
+          "height": 100,
+          "opacity": 0,
+          "width": 100,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Array [
+        Object {
+          "borderColor": "rgba(255,255,255,0.5)",
+          "borderWidth": 5,
+          "position": "absolute",
+        },
+        Object {},
+        Object {
+          "borderRadius": 50,
+          "height": 100,
+          "opacity": 0,
+          "width": 100,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 50,
+          "height": 100,
+          "width": 100,
+        }
+      }
+    />
+  </View>
+</View>
+`;

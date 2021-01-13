@@ -2,179 +2,7 @@ import * as React from 'react';
 import { StyleProp, ViewStyle, ColorPropType, ImageStyle } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
 declare module '@tuya-smart/tuya-panel-animation-sdk' {
-  // CountDown
-  export interface CountDownProps {
-    /**
-     * @language zh-CN
-     * @description 倒计时时间，单位是 s
-     * @defaultValue 150
-     */
-    /**
-     * @language en-US
-     * @description Countdown time, unit is "s".
-     * @defaultValue 150
-     */
-    countdownLeft: number;
-    /**
-     * @language zh-CN
-     * @description 是否显示倒计时
-     * @defaultValue true
-     */
-    /**
-     * @language en-US
-     * @description Whether to display countdown
-     * @defaultValue true
-     */
-    countDownShow: boolean;
-    /**
-     * @language zh-CN
-     * @description 倒计时开始时触发
-     * @defaultValue () => {}
-     */
-    /**
-     * @language en-US
-     * @description Triggered when the countdown starts
-     * @defaultValue () => {}
-     */
-    startCountdown?: () => void;
-    /**
-     * @language zh-CN
-     * @description 倒计时结束时触发
-     * @defaultValue () => {}
-     */
-    /**
-     * @language en-US
-     * @description Triggered at the end of the countdown
-     * @defaultValue () => {}
-     */
-    endCountdown?: () => void;
-    /**
-     * @language zh-CN
-     * @description 内容样式
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue null
-     */
-    /**
-     * @language en-US
-     * @description Container style
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue null
-     */
-    style?: StyleProp<ViewStyle>;
-    /**
-     * @language zh-CN
-     * @description 显示倒计时时的背景颜色
-     * @defaultValue 'rgba(0,0,0,0.6)'
-     */
-    /**
-     * @language en-US
-     * @description Display the background color when countdown
-     * @defaultValue 'rgba(0,0,0,0.6)'
-     */
-    activeBgColor?: string;
-    /**
-     * @language zh-CN
-     * @description 显示图标时背景颜色
-     * @defaultValue 'rgba(0,0,0,0.5)'
-     */
-    /**
-     * @language en-US
-     * @description The background color when the icon is displayed
-     * @defaultValue 'rgba(0,0,0,0.5)'
-     */
-    inactiveBgColor?: string;
-    /**
-     * @language zh-CN
-     * @description 为倒计时时显示的文案
-     * @defaultValue Click to end
-     */
-    /**
-     * @language en-US
-     * @description Is the copy displayed during countdown
-     * @defaultValue Click to end
-     */
-    clickEndText?: string;
-    /**
-     * @language zh-CN
-     * @description 为图标时显示的文案
-     * @defaultValue Countdown
-     */
-    /**
-     * @language en-US
-     * @description Copywriting displayed when icon
-     * @defaultValue Countdown
-     */
-    countdownText?: string;
-    /**
-     * @language zh-CN
-     * @description 是否禁用
-     * @defaultValue false
-     */
-    /**
-     * @language en-US
-     * @description Whether to disable
-     * @defaultValue false
-     */
-    disabled?: boolean;
-    /**
-     * @language zh-CN
-     * @description 图标颜色
-     * @defaultValue '#fff'
-     */
-    /**
-     * @language en-US
-     * @description Icon color
-     * @defaultValue '#fff'
-     */
-    color?: string;
-    /**
-     * @language zh-CN
-     * @description 图标尺寸
-     * @defaultValue { width: 24, height: 24 }
-     */
-    /**
-     * @language en-US
-     * @description Icon size
-     * @defaultValue
-     */
-    size?: {
-      width?: number;
-      height?: number;
-    };
-    /**
-     * @language zh-CN
-     * @description 倒计时图标路径
-     * @defaultValue 'M841.142857 1024h-658.285714a36.571429 36.571429 0 0 1-35.986286-29.988571L146.285714 987.428571V877.714286a366.153143 366.153143 0 0 1 365.714286-365.714286 366.226286 366.226286 0 0 1-365.714286-365.714286V36.571429a36.571429 36.571429 0 0 1 36.571429-36.571429h658.285714a36.571429 36.571429 0 0 1 36.571429 36.571429V146.285714a366.153143 366.153143 0 0 1-365.714286 365.714286 365.714286 365.714286 0 0 1 365.714286 349.842286V987.428571a36.571429 36.571429 0 0 1-29.988572 35.986286zM512 585.142857a292.132571 292.132571 0 0 0-292.571429 277.942857V950.857143h585.142858v-73.142857a292.571429 292.571429 0 0 0-292.571429-292.571429zM219.428571 73.142857v73.142857a292.571429 292.571429 0 1 0 585.142858 0V73.142857z m117.028572 789.942857a36.571429 36.571429 0 0 1-35.108572-46.811428 218.770286 218.770286 0 0 1 124.781715-140.507429 36.571429 36.571429 0 1 1 28.672 67.291429 146.285714 146.285714 0 0 0-83.309715 93.842285 36.571429 36.571429 0 0 1-35.035428 26.185143z'
-     */
-    /**
-     * @language en-US
-     * @description Countdown icon path
-     * @defaultValue 'M841.142857 1024h-658.285714a36.571429 36.571429 0 0 1-35.986286-29.988571L146.285714 987.428571V877.714286a366.153143 366.153143 0 0 1 365.714286-365.714286 366.226286 366.226286 0 0 1-365.714286-365.714286V36.571429a36.571429 36.571429 0 0 1 36.571429-36.571429h658.285714a36.571429 36.571429 0 0 1 36.571429 36.571429V146.285714a366.153143 366.153143 0 0 1-365.714286 365.714286 365.714286 365.714286 0 0 1 365.714286 349.842286V987.428571a36.571429 36.571429 0 0 1-29.988572 35.986286zM512 585.142857a292.132571 292.132571 0 0 0-292.571429 277.942857V950.857143h585.142858v-73.142857a292.571429 292.571429 0 0 0-292.571429-292.571429zM219.428571 73.142857v73.142857a292.571429 292.571429 0 1 0 585.142858 0V73.142857z m117.028572 789.942857a36.571429 36.571429 0 0 1-35.108572-46.811428 218.770286 218.770286 0 0 1 124.781715-140.507429 36.571429 36.571429 0 1 1 28.672 67.291429 146.285714 146.285714 0 0 0-83.309715 93.842285 36.571429 36.571429 0 0 1-35.035428 26.185143z'
-     */
-    countDownIcon?: string;
-    /**
-     * @language zh-CN
-     * @description 动画配置项
-     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
-     */
-    /**
-     * @language en-US
-     * @description Animation configuration items
-     * @defaultValue { easing: Easing.linear, duration: 400, delay: 0, isInteraction: true, useNativeDriver: true }
-     */
-    animationConfig?: {
-      easing?: (...args: any[]) => any;
-      duration?: number;
-      delay?: number;
-      isInteraction?: boolean;
-      useNativeDriver?: boolean;
-    };
-  }
-
-  export class CountDown extends React.Component<CountDownProps> {}
-
   // diffusion
-
   export interface DiffusionProps {
     /**
      * @language zh-CN
@@ -266,7 +94,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Whether to start the animation
      * @defaultValue true
      */
-    startAnimated?: bool;
+    startAnimated?: boolean;
     /**
      * @language zh-CN
      * @description 内容样式
@@ -296,14 +124,14 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     /**
      * @language zh-CN
      * @description 渲染自定义内容
-     * @defaultValue () => {}
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description Render custom content
-     * @defaultValue () => {}
+     * @defaultValue null
      */
-    renderContent?: () => void;
+    renderContent?: () => React.ReactNode;
     /**
      * @language zh-CN
      * @description 动画配置项
@@ -338,7 +166,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Is it visible
      * @defaultValue false
      */
-    visible: boolean;
+    visible?: boolean;
     /**
      * @language zh-CN
      * @description 渲染自定义内容
@@ -349,7 +177,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Render custom content
      * @defaultValue () => ( <View style={{ width: '100%', height: '100%', backgroundColor: 'red' }} /> )
      */
-    renderContent?: () => React.ReactNode;
+    renderContent?: (visible?: boolean) => React.ReactNode;
     /**
      * @language zh-CN
      * @description 遮罩层样式
@@ -592,7 +420,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Custom subcomponent
      * @defaultValue null
      */
-    children?: React.ReactNode;
+    renderContent?: React.ReactNode;
     /**
      * @language zh-CN
      * @description 动画配置项
@@ -1053,283 +881,4 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     };
   }
   export class WaveView extends React.Component<WaveViewProps> {}
-
-  // Particle
-
-  export interface ParticleProps {
-    /**
-     * @language zh-CN
-     * @description 粒子的数量
-     * @defaultValue 50
-     */
-    /**
-     * @language en-US
-     * @description Number of particles
-     * @defaultValue 50
-     */
-    amount?: number;
-    /**
-     * @language zh-CN
-     * @description 粒子的颜色
-     * @defaultValue '#fff'
-     */
-    /**
-     * @language en-US
-     * @description Color of particles
-     * @defaultValue '#fff'
-     */
-    color?: string | string[] | Func;
-    /**
-     * @language zh-CN
-     * @description 内容样式
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue {}
-     */
-    /**
-     * @language en-US
-     * @description Container style
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue {}
-     */
-    style?: StyleProp<ViewStyle>;
-    /**
-     * @language zh-CN
-     * @description 容器宽度
-     * @defaultValue undefined
-     */
-    /**
-     * @language en-US
-     * @description The width of container
-     * @defaultValue undefined
-     */
-    width: number;
-    /**
-     * @language zh-CN
-     * @description 容器高度
-     * @defaultValue undefined
-     */
-    /**
-     * @language en-US
-     * @description The height of container
-     * @defaultValue undefined
-     */
-    height: number;
-
-    /**
-     * @language zh-CN
-     * @description 动画执行一次的持续时间，单位是 ms
-     * @defaultValue 2000
-     */
-    /**
-     * @language en-US
-     * @description Duration of the animation once, unit is ms.
-     * @defaultValue 2000
-     */
-    duration?: number;
-    /**
-     * @language zh-CN
-     * @description 动画是否执行
-     * @defaultValue true
-     */
-    /**
-     * @language en-US
-     * @description Whether the animation is executed
-     * @defaultValue true
-     */
-    active?: boolean;
-    /**
-     * @language zh-CN
-     * @description 中间空白的部分的半径
-     * @defaultValue 100
-     */
-    /**
-     * @language en-US
-     * @description The radius of the blank part
-     * @defaultValue 100
-     */
-    radius?: number;
-    /**
-     * @language zh-CN
-     * @description radius 属性的容差值, 使得 radius 在 [ radius - tolerance, radius + tolerance ] 的范围中随机取值
-     * @defaultValue 0
-     */
-    /**
-     * @language en-US
-     * @description The tolerance value of the radius attribute, so that the radius is randomly selected in the range of [radius-tolerance, radius+tolerance]
-     * @defaultValue 0
-     */
-    tolerance?: number;
-    /**
-     * @language zh-CN
-     * @description 粒子的运动形式 diffuse：从中间向外扩散， absorb：从外向中间吸引
-     * @defaultValue 'diffuse'
-     */
-    /**
-     * @language en-US
-     * @description The motion form of particles diffuse: diffuse outward from the middle, absorb: attract from the outside to the middle
-     * @defaultValue 'diffuse'
-     */
-    type?: 'diffuse' | 'absorb';
-    /**
-     * @language zh-CN
-     * @description 粒子的半径
-     * @defaultValue 2
-     */
-    /**
-     * @language en-US
-     * @description Particle radius
-     * @defaultValue 2
-     */
-    dotRadius?: number | number[] | Func;
-  }
-
-  export class Particle extends React.Component<ParticleProps> {
-    static Diffuse: React.ElementType<Omit<ParticleDiffuse, 'type'>>;
-    static Absorb: React.ElementType<Omit<ParticleDiffuse, 'type'>>;
-  }
-
-  // HorPicker
-
-  export interface HorPickerProps {
-    /**
-     * @language zh-CN
-     * @description 当前选择的 index
-     * @defaultValue null
-     */
-    /**
-     * @language en-US
-     * @description Currently selected index
-     * @defaultValue null
-     */
-    activeIndex: number;
-    /**
-     * @language zh-CN
-     * @description 是否禁用滑动
-     * @defaultValue false
-     */
-    /**
-     * @language en-US
-     * @description Whether to disable sliding
-     * @defaultValue false
-     */
-    disabled?: boolean;
-    /**
-     * @language zh-CN
-     * @description 内容样式
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue {}
-     */
-    /**
-     * @language en-US
-     * @description Container style
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue {}
-     */
-    style?: StyleProp<ViewStyle>;
-    /**
-     * @language zh-CN
-     * @description 每一个 picker 样式
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { height: 100 }
-     */
-    /**
-     * @language en-US
-     * @description Every picker style
-     * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { height: 100 }
-     */
-    pickItemStyle?: StyleProp<ViewStyle>;
-    /**
-     * @language zh-CN
-     * @description 值变化时触发
-     * @defaultValue () => {}
-     */
-    /**
-     * @language en-US
-     * @description Trigger when the value changes
-     * @defaultValue () => {}
-     */
-    onValueChange?: () => void;
-
-    /**
-     * @language zh-CN
-     * @description 选中时单位字体大小
-     * @defaultValue 14
-     */
-    /**
-     * @language en-US
-     * @description Unit font size when selected
-     * @defaultValue 14
-     */
-    unitFontSize?: number;
-    /**
-     * @language zh-CN
-     * @description 未选中时单位字缩放比例
-     * @defaultValue 0.6
-     */
-    /**
-     * @language en-US
-     * @description Unit word scaling when not selected
-     * @defaultValue 0.6
-     */
-    unPickerScale?: number;
-    /**
-     * @language zh-CN
-     * @description 单位
-     * @defaultValue 'Bags'
-     */
-    /**
-     * @language en-US
-     * @description Label
-     * @defaultValue 'Bags'
-     */
-    label?: string;
-
-    /**
-     * @language zh-CN
-     * @description 一屏展示的数量
-     * @defaultValue 7
-     */
-    /**
-     * @language en-US
-     * @description The number of one screen display
-     * @defaultValue 7
-     */
-    number?: number;
-    /**
-     * @language zh-CN
-     * @description 主题色
-     * @defaultValue 'red'
-     */
-    /**
-     * @language en-US
-     * @description Theme color
-     * @defaultValue 'red'
-     */
-    themeColor?: ColorPropType;
-    /**
-     * @language zh-CN
-     * @description 自定义内容
-     * @defaultValue _.times(20, i => <TYText style={{ fontSize: 46 }}>{i}</TYText>)
-     */
-    /**
-     * @language en-US
-     * @description Custom content
-     * @defaultValue _.times(20, i => <TYText style={{ fontSize: 46 }}>{i}</TYText>)
-     */
-    renderContent?: React.ReactNode;
-    /**
-     * @language zh-CN
-     * @description 是否展示刻度尺
-     * @defaultValue true
-     */
-    /**
-     * @language en-US
-     * @description Whether to display the scale
-     * @defaultValue true
-     */
-    showTickMark?: boolean;
-  }
-
-  export class HorPicker extends React.Component<HorPickerProps> {}
 }
