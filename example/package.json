@@ -49,7 +49,7 @@
     "@babel/plugin-proposal-decorators": "^7.8.3",
     "@types/react": "16.8.6",
     "@types/react-native": "^0.57.65",
-    "@types/tuya-panel-kit": "^2.0.0",
+    "@types/tuya-panel-kit": "^4.0.1",
     "babel-jest": "^22.1.0",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
