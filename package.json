@@ -37,10 +37,10 @@
     "typescript": "^4.0.5"
   },
   "peerDependencies": {
-    "@tuya-rn/tuya-native-components": "^4.0.0",
-    "react": "^16.0.0",
-    "react-native": "^0.51.0",
-    "react-native-svg": "5.5.1"
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.1.0"
   },
   "scripts": {
     "release:pre": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
@@ -60,8 +60,8 @@
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "build": "lerna run build --parallel",
-    "build:ipc": "lerna run build --parallel --scope tuya-panel-ipc-sdk",
-    "build:robot": "lerna run build --parallel --scope tuya-panel-robot-sdk"
+    "build:ipc": "lerna run build --parallel --scope @tuya-smart/tuya-panel-ipc-sdk",
+    "build:robot": "lerna run build --parallel --scope @tuya-smart/tuya-panel-robot-sdk"
   },
   "config": {
     "commitizen": {
