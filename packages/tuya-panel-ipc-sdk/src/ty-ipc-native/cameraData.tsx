@@ -1,4 +1,3 @@
-// @ts-nocheck
 import Strings from '../ty-ipc-player/i18n';
 
 export const decodeClarityDic = {

@@ -1,4 +1,3 @@
-// @ts-nocheck
 /* eslint-disable prefer-promise-reject-errors */
 /* eslint-disable no-console */
 /* eslint-disable consistent-return */
@@ -413,7 +412,7 @@ class PlayerManagerFun {
 
   /*
     进入native消息中心预览界面
-    3.17及以上
+    3.17及以上        
     devId: 设备id
     msgId: 消息id
     msgTitle: 消息标题

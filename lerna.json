@@ -5,6 +5,7 @@
   "useWorkspaces": true,
   "command": {
     "publish": {
+      "access": "public",
       "ignoreChanges": ["ignored-file", "**/docs/**", "*.md"],
       "message": "chore(release): publish %s",
       "registry": "https://registry.npmjs.org"

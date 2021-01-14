@@ -1,6 +1,6 @@
 {
   "name": "@tuya-smart/tuya-panel-ipc-sdk",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "description": "涂鸦Ipc业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "react": "16.8.3",
     "react-native": "0.59.10",
     "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "4.1.0"
+    "tuya-panel-kit": "^4.1.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "0e3828d8dc208cac93bfc445c912018d1d775ec8"
 }

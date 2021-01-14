@@ -1,6 +1,6 @@
 {
   "name": "@tuya-smart/tuya-panel-robot-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
@@ -25,7 +25,8 @@
     "react": "^16.0.0",
     "react-native": "^0.51.0",
     "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "4.1.0"
+    "tuya-panel-kit": "^4.1.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "0e3828d8dc208cac93bfc445c912018d1d775ec8"
 }
