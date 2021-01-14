@@ -13,8 +13,9 @@ interface JitterAlertProps extends IconFont {
   style?: StyleProp<ViewStyle>;
   path?: string;
   onPress?: () => void;
-  size?: { width: number; height: number };
+  size?: number;
   renderContent?: React.ReactNode;
+  activeOpacity?: number;
   animationConfig?: {
     easing?: (...args: any[]) => any;
     duration?: number;
@@ -33,10 +34,8 @@ class JitterAlert extends PureComponent<JitterAlertProps> {
     style: {},
     path: defaultPath,
     onPress: () => {},
-    size: {
-      width: 24,
-      height: 24,
-    },
+    size: 24,
+    activeOpacity: 0.8,
     renderContent: null,
     animationConfig: {
       easing: Easing.linear,
@@ -54,12 +53,12 @@ class JitterAlert extends PureComponent<JitterAlertProps> {
   }
 
   componentDidMount() {
-    this.checkShouldStartAnimated();
+    this.checkShouldStartAnimated(this.props.active);
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.active !== this.props.active) {
-      this.checkShouldStartAnimated();
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.active !== this.props.active) {
+      this.checkShouldStartAnimated(nextProps.active);
     }
   }
 
@@ -92,8 +91,8 @@ class JitterAlert extends PureComponent<JitterAlertProps> {
     this.animatedValue.stopAnimation();
   }
 
-  checkShouldStartAnimated = () => {
-    if (this.props.active) {
+  checkShouldStartAnimated = active => {
+    if (active) {
       this.startAnimated();
     } else {
       this.stopAnimated();
@@ -101,18 +100,27 @@ class JitterAlert extends PureComponent<JitterAlertProps> {
   };
 
   render() {
-    const { degree, style, path, onPress, size, renderContent, ...restIconFontProps } = this.props;
+    const {
+      degree,
+      style,
+      path,
+      onPress,
+      size,
+      renderContent,
+      activeOpacity,
+      ...restIconFontProps
+    } = this.props;
     const imgRotate = this.animatedValue.interpolate({
       inputRange: [0, 1],
       outputRange: [`-${degree}deg`, `${degree}deg`],
     });
     return (
-      <Animated.View style={[{ ...size }, style, { transform: [{ rotate: imgRotate }] }]}>
-        <TouchableOpacity onPress={onPress}>
+      <Animated.View style={[style, { transform: [{ rotate: imgRotate }] }]}>
+        <TouchableOpacity onPress={onPress} activeOpacity={activeOpacity}>
           {React.isValidElement(renderContent) ? (
             renderContent
           ) : (
-            <IconFont d={path} {...size} {...restIconFontProps} />
+            <IconFont d={path} size={size} {...restIconFontProps} />
           )}
         </TouchableOpacity>
       </Animated.View>

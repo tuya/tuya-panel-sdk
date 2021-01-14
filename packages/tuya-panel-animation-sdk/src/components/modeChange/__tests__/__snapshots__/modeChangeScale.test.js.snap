@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModeChange.Scale components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 160,
+        "justifyContent": "center",
+        "width": 160,
+      },
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "borderRadius": 23,
+        "height": 46,
+        "justifyContent": "center",
+        "width": 46,
+      },
+      false,
+    ]
+  }
+>
+  <AnimatedComponent
+    source={
+      Object {
+        "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "height": 24,
+          "resizeMode": "stretch",
+          "tintColor": "#fff",
+          "width": 24,
+        },
+        Object {
+          "height": 30,
+          "tintColor": "red",
+          "width": 30,
+        },
+        Object {
+          "opacity": 0,
+        },
+        Object {
+          "transform": Array [
+            Object {
+              "scale": 0,
+            },
+          ],
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ModeChange.Scale components renderContent render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 160,
+        "justifyContent": "center",
+        "width": 160,
+      },
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.8)",
+        "borderRadius": 23,
+        "height": 46,
+        "justifyContent": "center",
+        "width": 46,
+      },
+      false,
+    ]
+  }
+>
+  <IconFont
+    name="power"
+  />
+</View>
+`;

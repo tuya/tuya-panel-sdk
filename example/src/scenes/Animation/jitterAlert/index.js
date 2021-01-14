@@ -23,6 +23,8 @@ class JitterAlertAnimatedScene extends PureComponent {
           onPress={() => {
             // 点击抖动图标回调
           }}
+          size={148}
+          // renderContent={<View style={{ width: 200, height: 200, backgroundColor: '#f0f' }} />}
         />
       </View>
     );

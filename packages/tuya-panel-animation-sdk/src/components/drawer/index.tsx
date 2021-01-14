@@ -16,7 +16,7 @@ const DRAWER_DEFAULT_ANIMATION_CONFIG = {
 
 export interface DrawerPropTypes {
   visible?: boolean;
-  renderContent?: () => React.ReactNode;
+  renderContent?: React.ReactNode;
   maskStyle?: StyleProp<ViewStyle>;
   drawerStyle?: StyleProp<ViewStyle>;
   style?: StyleProp<ViewStyle>;
@@ -57,15 +57,7 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
     placement: 'left',
     maskVisible: true,
     maskClosable: true,
-    renderContent: () => (
-      <View
-        style={{
-          width: '100%',
-          height: '100%',
-          backgroundColor: 'red',
-        }}
-      />
-    ),
+    renderContent: null,
     onClose: () => {},
     onStateChange: () => {},
     width: winWidth / 2,
@@ -77,6 +69,7 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
     super(props);
     this.direction = ['left', 'right'].includes(props.placement) ? 'row' : 'column';
     this.range = ['left', 'right'].includes(props.placement) ? winWidth : winHeight;
+    this.endOnce = true;
     this.state = {
       boxLeft: new Animated.Value(props.visible ? 0 : -this.range),
       maskOpacity: new Animated.Value(+props.visible),
@@ -84,22 +77,22 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
     };
   }
 
-  componentDidUpdate = preProps => {
-    if (preProps.placement !== this.props.placement) {
-      this.direction = ['left', 'right'].includes(this.props.placement) ? 'row' : 'column';
-      this.range = ['left', 'right'].includes(this.props.placement) ? winWidth : winHeight;
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.placement !== this.props.placement) {
+      this.direction = ['left', 'right'].includes(nextProps.placement) ? 'row' : 'column';
+      this.range = ['left', 'right'].includes(nextProps.placement) ? winWidth : winHeight;
     }
-    if (preProps.visible !== this.props.visible) {
+    if (nextProps.visible !== this.props.visible) {
       const animationConfig = {
         ...DRAWER_DEFAULT_ANIMATION_CONFIG,
-        ...this.props.animationConfig,
+        ...nextProps.animationConfig,
       };
       const { duration, delay, easing, isInteraction } = animationConfig;
       this.setState({ maskState: true }, () => {
         Animated.parallel([
           createAnimation({
             value: this.state.boxLeft,
-            toValue: this.props.visible ? 0 : -this.range,
+            toValue: nextProps.visible ? 0 : -this.range,
             duration,
             delay,
             easing,
@@ -108,7 +101,7 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
           }),
           createAnimation({
             value: this.state.maskOpacity,
-            toValue: +this.props.visible,
+            toValue: +nextProps.visible,
             duration,
             delay,
             easing,
@@ -116,23 +109,24 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
             isInteraction,
           }),
         ]).start(() => {
-          if (!this.props.visible) {
+          if (!nextProps.visible) {
             this.setState({ maskState: false });
             this.endOnce = true;
           }
-          this.props.onStateChange(this.props.visible);
+          nextProps.onStateChange(nextProps.visible);
         });
       });
-      if (!this.props.visible) {
+      if (!nextProps.visible) {
         this.boxLeft = 0;
       }
     }
   };
 
   range: number;
-  boxLeft = 0;
-  endOnce = true;
-  direction = 'row';
+  boxLeft: number;
+  endOnce: boolean;
+  direction: string;
+
   _panResponder = PanResponder.create({
     onStartShouldSetPanResponder: () => true,
     onMoveShouldSetPanResponder: () => false,
@@ -308,7 +302,7 @@ export default class Drawer extends Component<DrawerPropTypes, DrawerStateTypes>
             [placement]: this.state.boxLeft,
           }}
         >
-          <View style={[drawerStyle, { width, height }]}>{renderContent()}</View>
+          <View style={[drawerStyle, { width, height }]}>{renderContent}</View>
         </Animated.View>
       </View>
     );

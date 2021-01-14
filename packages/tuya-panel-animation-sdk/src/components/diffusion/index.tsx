@@ -22,7 +22,7 @@ export interface DiffusionProps {
   startAnimated?: boolean;
   style?: StyleProp<ViewStyle>;
   circleStyle?: StyleProp<ViewStyle>;
-  renderContent?: () => React.ReactNode;
+  renderContent?: React.ReactNode;
   animationConfig?: {
     easing?: (...args: any[]) => any;
     duration?: number;
@@ -62,9 +62,9 @@ export default class Diffusion extends Component<DiffusionProps> {
     this.props.startAnimated && this.startAnimated();
   };
 
-  componentDidUpdate = preProps => {
-    if (preProps.startAnimated !== this.props.startAnimated) {
-      if (this.props.startAnimated) {
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.startAnimated !== this.props.startAnimated) {
+      if (nextProps.startAnimated) {
         this.startAnimated();
       } else {
         this.stopAnimated();
@@ -189,7 +189,7 @@ export default class Diffusion extends Component<DiffusionProps> {
               />
             );
           })}
-        <View style={{ position: 'absolute' }}>{renderContent()}</View>
+        <View style={{ position: 'absolute' }}>{renderContent}</View>
       </View>
     );
   }

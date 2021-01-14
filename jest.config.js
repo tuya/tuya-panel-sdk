@@ -10,8 +10,6 @@ if (JEST_TEST_DIR) {
   collectCoverageFromDir = `packages/${JEST_TEST_DIR}/src/components/**/*.[jt]s?(x)`;
 }
 
-console.log(process.argv, 'process.argv======');
-
 module.exports = {
   preset: 'react-native',
   verbose: true,

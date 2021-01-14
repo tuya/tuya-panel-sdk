@@ -19,6 +19,7 @@ interface ModeChangeScaleProps {
   initDelay?: number;
   disabled?: boolean;
   moveTop?: number;
+  renderContent?: React.ReactNode;
   onStartAnimted?: () => void;
   onEndAnimted?: () => void;
   animationConfig?: {
@@ -47,7 +48,7 @@ interface ModeChangeScaleState {
 
 export default class Scale extends Component<ModeChangeScaleProps, ModeChangeScaleState> {
   static defaultProps = {
-    imgStyle: { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' },
+    imgStyle: null,
     disabled: false,
     style: {
       justifyContent: 'center',
@@ -57,6 +58,7 @@ export default class Scale extends Component<ModeChangeScaleProps, ModeChangeSca
       backgroundColor: 'rgba(0,0,0,0.8)',
       borderRadius: 23,
     },
+    renderContent: null,
     useInitAnimated: true,
     initDelay: 400,
     onStartAnimted: () => {},
@@ -107,14 +109,14 @@ export default class Scale extends Component<ModeChangeScaleProps, ModeChangeSca
     }
   };
 
-  componentDidUpdate = preProps => {
-    if (preProps.imgUrl !== this.props.imgUrl) {
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.imgUrl !== this.props.imgUrl) {
       const animationConfig = {
         ...SCALE_DEFAULT_ANIMATION_CONFIG,
-        ...this.props.animationConfig,
+        ...nextProps.animationConfig,
       };
       const { duration, delay, easing, useNativeDriver, isInteraction } = animationConfig;
-      this.props.onStartAnimted && this.props.onStartAnimted();
+      nextProps.onStartAnimted && nextProps.onStartAnimted();
       Animated.parallel([
         createAnimation({
           value: this.state.opacity,
@@ -135,7 +137,7 @@ export default class Scale extends Component<ModeChangeScaleProps, ModeChangeSca
           isInteraction,
         }),
       ]).start(() => {
-        this.setState({ imgUrl: getImageUrl(this.props.imgUrl) });
+        this.setState({ imgUrl: getImageUrl(nextProps.imgUrl) });
         Animated.parallel([
           createAnimation({
             value: this.state.opacity,
@@ -156,21 +158,41 @@ export default class Scale extends Component<ModeChangeScaleProps, ModeChangeSca
             isInteraction,
           }),
         ]).start(() => {
-          this.props.onEndAnimted && this.props.onEndAnimted();
+          nextProps.onEndAnimted && nextProps.onEndAnimted();
         });
       });
     }
   };
 
   render() {
-    const { style, disabled, imgStyle } = this.props;
+    const { style, disabled, imgStyle, renderContent } = this.props;
     const { opacity, scale } = this.state;
     return (
-      <View style={[style, disabled && { opacity: 0.5 }]}>
-        <Animated.Image
-          source={this.state.imgUrl}
-          style={[imgStyle, { opacity }, { transform: [{ scale }] }]}
-        />
+      <View
+        style={[
+          {
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 160,
+            height: 160,
+          },
+          style,
+          disabled && { opacity: 0.5 },
+        ]}
+      >
+        {React.isValidElement(renderContent) ? (
+          renderContent
+        ) : (
+          <Animated.Image
+            source={this.state.imgUrl}
+            style={[
+              { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' },
+              imgStyle,
+              { opacity },
+              { transform: [{ scale }] },
+            ]}
+          />
+        )}
       </View>
     );
   }

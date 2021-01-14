@@ -14,13 +14,9 @@ export default class DiffusionAnimatedScene extends PureComponent {
         }}
       >
         <Diffusion
-          renderContent={() => {
-            return (
-              <View
-                style={{ width: 100, height: 100, borderRadius: 50, backgroundColor: '#fff' }}
-              />
-            );
-          }}
+          renderContent={
+            <View style={{ width: 100, height: 100, borderRadius: 50, backgroundColor: '#fff' }} />
+          }
         />
       </View>
     );

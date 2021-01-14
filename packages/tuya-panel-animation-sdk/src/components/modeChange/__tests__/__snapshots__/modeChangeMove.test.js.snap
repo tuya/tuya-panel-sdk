@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModeChange.Scale components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 160,
+        "justifyContent": "center",
+        "width": 160,
+      },
+      null,
+      false,
+    ]
+  }
+>
+  <AnimatedComponent
+    source={
+      Object {
+        "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "height": 80,
+          "resizeMode": "stretch",
+          "tintColor": "#fff",
+          "width": 80,
+        },
+        Object {
+          "height": 80,
+          "tintColor": "red",
+          "width": 80,
+        },
+        Object {
+          "opacity": 0,
+        },
+        Object {
+          "transform": Array [
+            Object {
+              "translateY": 20,
+            },
+          ],
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ModeChange.Scale components renderContent render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 160,
+        "justifyContent": "center",
+        "width": 160,
+      },
+      null,
+      false,
+    ]
+  }
+>
+  <IconFont
+    name="power"
+  />
+</View>
+`;

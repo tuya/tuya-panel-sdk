@@ -50,7 +50,7 @@ export default class DrawerAnimatedScene extends PureComponent {
           onStateChange={state => {
             console.log(state);
           }}
-          renderContent={() => (
+          renderContent={
             <View
               style={{
                 width: '100%',
@@ -67,7 +67,7 @@ export default class DrawerAnimatedScene extends PureComponent {
                 </View>
               ))}
             </View>
-          )}
+          }
         />
       </View>
     );

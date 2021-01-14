@@ -84,13 +84,13 @@ export default class NumberChange extends Component<NumberChangePropTypes, Numbe
     }
   };
 
-  componentDidUpdate = preProps => {
-    if (preProps.value !== this.props.value) {
-      this.fixedNumber = this.getFixedNumber(this.props.value);
-      const { value } = this.props;
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.value !== this.props.value) {
+      this.fixedNumber = this.getFixedNumber(nextProps.value);
+      const { value } = nextProps;
       const animationConfig = {
         ...NUMBERCHANGE_DEFAULT_ANIMATION_CONFIG,
-        ...this.props.animationConfig,
+        ...nextProps.animationConfig,
       };
       const { duration, delay, easing, useNativeDriver, isInteraction } = animationConfig;
       createAnimation({

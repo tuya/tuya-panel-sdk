@@ -131,7 +131,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Render custom content
      * @defaultValue null
      */
-    renderContent?: () => React.ReactNode;
+    renderContent?: React.ReactNode;
     /**
      * @language zh-CN
      * @description 动画配置项
@@ -170,14 +170,14 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     /**
      * @language zh-CN
      * @description 渲染自定义内容
-     * @defaultValue () => ( <View style={{ width: '100%', height: '100%', backgroundColor: 'red' }} /> )
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description Render custom content
-     * @defaultValue () => ( <View style={{ width: '100%', height: '100%', backgroundColor: 'red' }} /> )
+     * @defaultValue null
      */
-    renderContent?: (visible?: boolean) => React.ReactNode;
+    renderContent?: React.ReactNode;
     /**
      * @language zh-CN
      * @description 遮罩层样式
@@ -249,7 +249,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @description Click the callback after the drawer is opened or closed
      * @defaultValue () => {}
      */
-    onStateChange?: () => void;
+    onStateChange?: (visible?: boolean) => void;
     /**
      *  Drawer宽度
      */
@@ -402,14 +402,25 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     /**
      * @language zh-CN
      * @description 图标尺寸
-     * @defaultValue { width: 24, height: 24 }
+     * @defaultValue 24
      */
     /**
      * @language en-US
      * @description Icon size
-     * @defaultValue { width: 24, height: 24 }
+     * @defaultValue 24
      */
-    size?: { width: number; height: number };
+    size?: number;
+    /**
+     * @language zh-CN
+     * @description 按下按钮的透明度
+     * @defaultValue 0.8
+     */
+    /**
+     * @language en-US
+     * @description Transparency of the button pressed
+     * @defaultValue 0.8
+     */
+    activeOpacity?: number;
     /**
      * @language zh-CN
      * @description 自定义子组件
@@ -460,26 +471,26 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @language zh-CN
      * @description 图片样式
      * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
-     * @defaultValue { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' }
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description The image style
      * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
-     * @defaultValue { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' }
+     * @defaultValue null
      */
     imgStyle?: StyleProp<ImageStyle>;
     /**
      * @language zh-CN
      * @description 内容样式
      * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 160, height: 160 }
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description Container style
      * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 160, height: 160 }
+     * @defaultValue null
      */
     style?: StyleProp<ViewStyle>;
     /**
@@ -526,6 +537,17 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @defaultValue 20
      */
     moveTop?: number;
+    /**
+     * @language zh-CN
+     * @description 渲染自定义内容
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Render custom content
+     * @defaultValue null
+     */
+    renderContent?: React.ReactNode;
     /**
      * @language zh-CN
      * @description 动画开始时回调
@@ -583,26 +605,26 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @language zh-CN
      * @description 图片样式
      * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
-     * @defaultValue { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' }
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description The image style
      * @types <a target="_blank" href="https://reactnative.dev/docs/image-style-props">StyleProp<ImageStyle></a>
-     * @defaultValue { width: 24, height: 24, resizeMode: 'stretch', tintColor: '#fff' }
+     * @defaultValue null
      */
     imgStyle?: StyleProp<ImageStyle>;
     /**
      * @language zh-CN
      * @description 内容样式
      * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 46, height: 46, backgroundColor: 'rgba(0,0,0,0.8)', borderRadius: 23 }
+     * @defaultValue null
      */
     /**
      * @language en-US
      * @description Container style
      * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-     * @defaultValue { justifyContent: 'center', alignItems: 'center', width: 46, height: 46, backgroundColor: 'rgba(0,0,0,0.8)', borderRadius: 23 }
+     * @defaultValue null
      */
     style?: StyleProp<ViewStyle>;
     /**
@@ -649,6 +671,17 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
      * @defaultValue 20
      */
     moveTop?: number;
+    /**
+     * @language zh-CN
+     * @description 渲染自定义内容
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Render custom content
+     * @defaultValue null
+     */
+    renderContent?: React.ReactNode;
     /**
      * @language zh-CN
      * @description 动画开始时回调

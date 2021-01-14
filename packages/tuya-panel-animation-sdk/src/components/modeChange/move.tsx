@@ -21,6 +21,7 @@ interface ModeChangeProps {
   moveTop?: number;
   onStartAnimted?: () => void;
   onEndAnimted?: () => void;
+  renderContent?: React.ReactNode;
   animationConfig?: {
     easing?: (...args: any[]) => any;
     duration?: number;
@@ -46,14 +47,10 @@ interface ModeChangeState {
 
 export default class Move extends Component<ModeChangeProps, ModeChangeState> {
   static defaultProps = {
-    imgStyle: { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' },
+    imgStyle: null,
     disabled: false,
-    style: {
-      justifyContent: 'center',
-      alignItems: 'center',
-      width: 160,
-      height: 160,
-    },
+    style: null,
+    renderContent: null,
     moveTop: 20,
     useInitAnimated: true,
     initDelay: 400,
@@ -105,14 +102,14 @@ export default class Move extends Component<ModeChangeProps, ModeChangeState> {
     }
   };
 
-  componentDidUpdate = preProps => {
-    if (preProps.imgUrl !== this.props.imgUrl) {
+  componentWillReceiveProps = nextProps => {
+    if (nextProps.imgUrl !== this.props.imgUrl) {
       const animationConfig = {
         ...MOVE_DEFAULT_ANIMATION_CONFIG,
-        ...this.props.animationConfig,
+        ...nextProps.animationConfig,
       };
       const { duration, delay, easing, useNativeDriver, isInteraction } = animationConfig;
-      this.props.onStartAnimted && this.props.onStartAnimted();
+      nextProps.onStartAnimted && nextProps.onStartAnimted();
       Animated.parallel([
         createAnimation({
           value: this.state.opacity,
@@ -125,7 +122,7 @@ export default class Move extends Component<ModeChangeProps, ModeChangeState> {
         }),
         createAnimation({
           value: this.state.moveTop,
-          toValue: -this.props.moveTop,
+          toValue: -nextProps.moveTop,
           duration: duration / 2,
           delay,
           easing,
@@ -135,8 +132,8 @@ export default class Move extends Component<ModeChangeProps, ModeChangeState> {
       ]).start(() => {
         this.setState(
           {
-            imgUrl: getImageUrl(this.props.imgUrl),
-            moveTop: new Animated.Value(this.props.moveTop),
+            imgUrl: getImageUrl(nextProps.imgUrl),
+            moveTop: new Animated.Value(nextProps.moveTop),
           },
           () => {
             Animated.parallel([
@@ -159,7 +156,7 @@ export default class Move extends Component<ModeChangeProps, ModeChangeState> {
                 isInteraction,
               }),
             ]).start(() => {
-              this.props.onEndAnimted && this.props.onEndAnimted();
+              nextProps.onEndAnimted && nextProps.onEndAnimted();
             });
           }
         );
@@ -168,14 +165,34 @@ export default class Move extends Component<ModeChangeProps, ModeChangeState> {
   };
 
   render() {
-    const { style, disabled, imgStyle } = this.props;
+    const { style, disabled, imgStyle, renderContent } = this.props;
     const { opacity, moveTop } = this.state;
     return (
-      <View style={[style, disabled && { opacity: 0.5 }]}>
-        <Animated.Image
-          source={this.state.imgUrl}
-          style={[imgStyle, { opacity }, { transform: [{ translateY: moveTop }] }]}
-        />
+      <View
+        style={[
+          {
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: 160,
+            height: 160,
+          },
+          style,
+          disabled && { opacity: 0.5 },
+        ]}
+      >
+        {React.isValidElement(renderContent) ? (
+          renderContent
+        ) : (
+          <Animated.Image
+            source={this.state.imgUrl}
+            style={[
+              { width: 80, height: 80, resizeMode: 'stretch', tintColor: '#fff' },
+              imgStyle,
+              { opacity },
+              { transform: [{ translateY: moveTop }] },
+            ]}
+          />
+        )}
       </View>
     );
   }
