@@ -494,8 +494,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   getScreenOrientation = (data: { isFullScreen: number }) => {
     const { isFullScreen } = data;
     const sendData = Boolean(isFullScreen);
-    sendData ? TYNative.disablePopGesture() : TYNative.enablePopGesture();
-
+    if (isIOS) {
+      sendData ? TYNative.disablePopGesture() : TYNative.enablePopGesture();
+    }
     this.props.onChangeScreenOrientation(sendData);
   };
 

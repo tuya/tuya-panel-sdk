@@ -11,6 +11,14 @@
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
     "prepublishOnly": "yarn build"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TuyaInc/tuya-panel-kit-template.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TuyaInc/tuya-panel-kit-template/issues"
+  },
+  "homepage": "https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/ipc-sdk/ipc-components?categoryId=827056",
   "dependencies": {
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.17",
