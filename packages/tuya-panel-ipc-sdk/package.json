@@ -13,10 +13,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TuyaInc/tuya-panel-kit-template.git"
+    "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
   },
   "bugs": {
-    "url": "https://github.com/TuyaInc/tuya-panel-kit-template/issues"
+    "url": "https://github.com/tuya/tuya-panel-sdk/issues"
   },
   "homepage": "https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/ipc-sdk/ipc-components?categoryId=827056",
   "dependencies": {
