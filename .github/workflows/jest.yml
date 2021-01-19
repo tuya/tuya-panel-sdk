@@ -13,4 +13,5 @@ jobs:
         uses: codecov/codecov-action@v1
         with:
           flags: animation
+          override_branch: animation
           directory: ./packages/tuya-panel-animation-sdk/coverage/
