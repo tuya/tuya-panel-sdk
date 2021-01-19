@@ -1,6 +1,6 @@
 {
   "name": "@tuya-smart/tuya-panel-ipc-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "涂鸦Ipc业务组件库",
   "main": "./lib/index.js",
   "scripts": {
