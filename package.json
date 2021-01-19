@@ -51,7 +51,7 @@
     "release:nextminor": "yarn build && lerna publish preminor --pre-dist-tag=next --preid=next",
     "release:nextmajor": "yarn build && lerna publish premajor --pre-dist-tag=next --preid=next",
     "commit": "git cz",
-    "test": "jest",
+    "test": "lerna run test --parallel",
     "test:animation": "cd packages/tuya-panel-animation-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
