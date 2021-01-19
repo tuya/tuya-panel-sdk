@@ -6,13 +6,11 @@ module.exports = {
   moduleNameMapper: {
     '^image![a-zA-Z0-9$_-]+$': 'GlobalImageStub',
     '^[@./a-zA-Z0-9$_-]+\\.(png|gif)$': 'RelativeImageStub',
-    // 'tuya-panel-kit$': '<rootDir>/__mocks__/tuya-panel-kit',
   },
   modulePathIgnorePatterns: [
     '<rootDir>/example',
     '<rootDir>/example/node_modules',
-    '<rootDir>/__mock__/tuya-panel-kit',
-    '<rootDir>/__mock__/tuya-panel-kit/components',
+    '<rootDir>/packages/*/lib',
   ],
   testEnvironment: 'node',
   globals: {
