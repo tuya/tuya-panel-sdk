@@ -79,7 +79,7 @@ exports[`ModeChange.Scale components renderContent render 1`] = `
     ]
   }
 >
-  <IconFont
+  <Component
     name="power"
   />
 </View>

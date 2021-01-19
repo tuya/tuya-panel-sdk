@@ -13,9 +13,12 @@ exports[`NumberChange components basic render 1`] = `
   }
 >
   <TYText
+    align={null}
     color="#000"
     size={16}
     text={0}
+    type={null}
+    weight={null}
   />
 </View>
 `;
@@ -34,7 +37,7 @@ exports[`NumberChange components useUnitText render 1`] = `
     ]
   }
 >
-  <UnitText
+  <Component
     value="60"
     valueColor="#000"
     valueSize={16}

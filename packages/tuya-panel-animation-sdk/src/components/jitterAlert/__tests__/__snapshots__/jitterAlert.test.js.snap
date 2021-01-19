@@ -19,7 +19,7 @@ exports[`jitterAlert components basic render 1`] = `
     activeOpacity={0.8}
     onPress={[Function]}
   >
-    <IconFont
+    <Component
       active={true}
       animationConfig={
         Object {

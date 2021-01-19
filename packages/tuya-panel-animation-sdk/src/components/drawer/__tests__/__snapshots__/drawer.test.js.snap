@@ -33,13 +33,13 @@ exports[`Drawer components basic render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
           "left": 0,
-          "opacity": NaN,
+          "opacity": 1,
         },
       ]
     }
@@ -139,13 +139,13 @@ exports[`Drawer components bottom render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
           "bottom": 0,
-          "opacity": NaN,
+          "opacity": 1,
         },
       ]
     }
@@ -245,12 +245,12 @@ exports[`Drawer components other render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
-          "opacity": NaN,
+          "opacity": 1,
           "other": 0,
         },
       ]
@@ -351,12 +351,12 @@ exports[`Drawer components other2 render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
-          "opacity": NaN,
+          "opacity": 1,
           "other": 0,
         },
       ]
@@ -457,9 +457,9 @@ exports[`Drawer components right render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
           "opacity": 1,
@@ -563,9 +563,9 @@ exports[`Drawer components top render 1`] = `
         },
         Object {
           "backgroundColor": "rgba(0,0,0,0.6)",
-          "height": undefined,
+          "height": 1334,
           "position": "absolute",
-          "width": undefined,
+          "width": 750,
         },
         Object {
           "opacity": 1,
