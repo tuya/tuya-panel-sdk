@@ -11,7 +11,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '10.x'
-      - uses: c-hive/gha-yarn-cache@v1
       - run: yarn install
       - name: Add dependencies for commitlint action
         env:

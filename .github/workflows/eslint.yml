@@ -1,0 +1,11 @@
+name: ESLint
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Install modules
+        run: yarn
+      - name: Run ESLint
+        run: yarn lint --no-error-on-unmatched-pattern
