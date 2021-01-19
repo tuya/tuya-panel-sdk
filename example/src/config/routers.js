@@ -9,7 +9,7 @@ import Home from '../scenes/Home';
 // import LockCategory from '../scenes/Lock';
 // import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
-// import AnimationCategory from '../scenes/Animation';
+import AnimationCategory from '../scenes/Animation';
 // import Remote from '../scenes/Remote';
 // import Ipc from '../scenes/Ipc';
 // import Electrician from '../scenes/Electrician';
@@ -26,7 +26,7 @@ import Home from '../scenes/Home';
 // import FullRoomInfo from '../../../packages/tuya-panel-fullroom-sdk/package.json';
 // import GatewayInfo from '../../../packages/tuya-panel-gateway-sdk/package.json';
 // import CbtInfo from '../../../packages/tuya-panel-cbt-sdk/package.json';
-// import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.json';
+import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.json';
 // import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
 // import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
 // import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
@@ -114,12 +114,12 @@ export const elementsRouters = _.sortBy(
     //   subTitle: CbtInfo.version,
     //   Scene: CbtCategory,
     // },
-    // {
-    //   id: 'Animation',
-    //   title: AnimationInfo.name,
-    //   subTitle: AnimationInfo.version,
-    //   Scene: AnimationCategory,
-    // },
+    {
+      id: 'Animation',
+      title: AnimationInfo.name,
+      subTitle: AnimationInfo.version,
+      Scene: AnimationCategory,
+    },
     // {
     //   id: 'Remote',
     //   title: RemoteInfo.name,

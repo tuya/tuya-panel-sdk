@@ -1,0 +1,637 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Drawer components basic render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "top": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "left": 0,
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 667,
+            "width": 125,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Drawer components bottom render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "bottom": 0,
+        "left": 0,
+        "position": "absolute",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "bottom": 0,
+          "opacity": 1,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "bottom": 0,
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 222.33333333333334,
+            "width": 375,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Drawer components other render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "left": 0,
+        "other": 0,
+        "position": "absolute",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+          "other": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "left": 0,
+        "other": 0,
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 222.33333333333334,
+            "width": 375,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Drawer components other2 render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "left": 0,
+        "other": 0,
+        "position": "absolute",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+          "other": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "left": 0,
+        "other": 0,
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 222.33333333333334,
+            "width": 375,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Drawer components right render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "top": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+          "right": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "position": "absolute",
+        "right": 0,
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 667,
+            "width": 125,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Drawer components top render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  style={
+    Array [
+      Object {
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "left": 0,
+        },
+        Object {
+          "backgroundColor": "rgba(0,0,0,0.6)",
+          "height": 1334,
+          "position": "absolute",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+          "top": 0,
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Object {
+        "flexDirection": "row",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+          },
+          Object {
+            "height": 222.33333333333334,
+            "width": 375,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "red",
+            "height": "100%",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          key="https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png"
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "width": 100,
+              }
+            }
+          />
+        </View>
+      </View>
+    </View>
+  </AnimatedComponent>
+</View>
+`;
