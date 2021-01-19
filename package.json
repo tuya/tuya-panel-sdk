@@ -10,11 +10,11 @@
     "@babel/runtime": "^7.12.5",
     "@commitlint/cli": "^11.0.0",
     "@types/enzyme": "^3.10.8",
-    "@types/jest": "^26.0.15",
+    "@types/jest": "^24.0.19",
     "@types/react": "^16.9.56",
     "@types/react-native": "^0.63.35",
-    "@types/tuya-panel-kit": "^4.0.1",
-    "babel-jest": "^26.6.3",
+    "@types/tuya-panel-kit": "^4.0.0",
+    "babel-jest": "24.9.0",
     "commitizen": "^4.2.2",
     "commitlint-config-cz": "^0.13.2",
     "cpy-cli": "^3.1.1",
@@ -26,21 +26,16 @@
     "eslint-config-tuya-panel": "^0.2.4",
     "eslint-plugin-literal-check": "^0.1.2",
     "husky": "^4.3.0",
-    "jest": "^26.6.3",
+    "jest": "24.9.0",
     "lerna": "^3.22.1",
     "lint-staged": "^10.5.1",
     "metro-react-native-babel-preset": "^0.64.0",
     "react": "16.8.3",
     "react-native": "0.59.10",
     "react-native-mock-render": "^0.1.9",
-    "tuya-panel-kit": "^4.0.0-rc.0",
+    "react-test-renderer": "17.0.1",
+    "tuya-panel-kit": "^4.2.1",
     "typescript": "^4.0.5"
-  },
-  "peerDependencies": {
-    "react": "16.0.0",
-    "react-native": "0.51.0",
-    "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "^4.1.0"
   },
   "scripts": {
     "release:pre": "yarn build && lerna publish --canary --yes --pre-dist-tag=rc --preid=rc",
@@ -57,11 +52,13 @@
     "release:nextmajor": "yarn build && lerna publish premajor --pre-dist-tag=next --preid=next",
     "commit": "git cz",
     "test": "jest",
+    "test:animation": "cd packages/tuya-panel-animation-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "build": "lerna run build --parallel",
     "build:ipc": "lerna run build --parallel --scope @tuya-smart/tuya-panel-ipc-sdk",
-    "build:robot": "lerna run build --parallel --scope @tuya-smart/tuya-panel-robot-sdk"
+    "build:robot": "lerna run build --scope @tuya-smart/tuya-panel-robot-sdk",
+    "build:animation": "lerna run build --scope @tuya-smart/tuya-panel-animation-sdk"
   },
   "config": {
     "commitizen": {
@@ -77,10 +74,6 @@
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "git add ."
-    ],
-    "**/*.{md,json}": [
-      "prettier --write",
       "git add ."
     ]
   }
