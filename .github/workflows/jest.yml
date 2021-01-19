@@ -9,8 +9,6 @@ jobs:
         run: yarn
       - name: Run Test
         run: npx lerna run test -- --silent --forceExit --passWithNoTests
-      - name: ls
-        run: cd ./packages/tuya-panel-animation-sdk/coverage/ && ls
       - name: Upload animation coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
