@@ -14,3 +14,13 @@ jobs:
         with:
           override_branch: animation
           directory: ./packages/tuya-panel-animation-sdk/coverage/
+      - name: Upload ipc coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          override_branch: ipc
+          directory: ./packages/tuya-panel-ipc-sdk/coverage/
+      - name: Upload robot coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          override_branch: robot
+          directory: ./packages/tuya-panel-robot-sdk/coverage/
