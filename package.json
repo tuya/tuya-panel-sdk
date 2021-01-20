@@ -53,6 +53,7 @@
     "commit": "git cz",
     "test": "lerna run test --parallel",
     "test:animation": "cd packages/tuya-panel-animation-sdk && yarn test",
+    "test:ipc": "cd packages/tuya-panel-ipc-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "build": "lerna run build --parallel",
