@@ -28,6 +28,8 @@ module.exports = {
           // 'tuya-panel-remote-sdk': '../packages/tuya-panel-remote-sdk/lib/index.js',
           '@tuya-smart/tuya-panel-animation-sdk':
             '../packages/tuya-panel-animation-sdk/lib/index.js',
+          '@tuya-smart/tuya-panel-electrician-sdk':
+            '../packages/tuya-panel-electrician-sdk/lib/index.js',
         },
       },
     ],
