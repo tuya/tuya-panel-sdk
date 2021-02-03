@@ -12,7 +12,7 @@ import Home from '../scenes/Home';
 import AnimationCategory from '../scenes/Animation';
 // import Remote from '../scenes/Remote';
 // import Ipc from '../scenes/Ipc';
-// import Electrician from '../scenes/Electrician';
+import Electrician from '../scenes/Electrician';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
@@ -29,7 +29,7 @@ import AnimationCategory from '../scenes/Animation';
 import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.json';
 // import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
 // import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
-// import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
+import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
 // import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
 import { traverseRouters } from '../utils';
 
@@ -132,12 +132,12 @@ export const elementsRouters = _.sortBy(
     //   subTitle: IpcInfo.version,
     //   Scene: Ipc,
     // },
-    // {
-    //   id: 'Electrician',
-    //   title: ElectricianInfo.name,
-    //   subTitle: ElectricianInfo.version,
-    //   Scene: Electrician,
-    // },
+    {
+      id: 'Electrician',
+      title: ElectricianInfo.name,
+      subTitle: ElectricianInfo.version,
+      Scene: Electrician,
+    },
   ],
   'id'
 );
