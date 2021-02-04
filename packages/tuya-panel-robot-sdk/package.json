@@ -4,6 +4,7 @@
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
+    "test": "jest",
     "tscw": "tsc -w",
     "start": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
