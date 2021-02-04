@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { StyleProp, ViewStyle, ColorPropType, ImageStyle } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
-declare module '@tuya-smart/tuya-panel-animation-sdk' {
+
   // diffusion
   export interface DiffusionProps {
     /**
@@ -845,7 +845,7 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
 
   // WaveView
 
-  export interface WaveView {
+  export interface WaveViewProps {
     /**
      * @desc
      */
@@ -914,4 +914,3 @@ declare module '@tuya-smart/tuya-panel-animation-sdk' {
     };
   }
   export class WaveView extends React.Component<WaveViewProps> {}
-}
