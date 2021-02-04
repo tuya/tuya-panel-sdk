@@ -4,6 +4,7 @@
   "description": "涂鸦Ipc业务组件库",
   "main": "./lib/index.js",
   "scripts": {
+    "test": "jest",
     "tscw": "tsc -w",
     "start": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
