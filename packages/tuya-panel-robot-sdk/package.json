@@ -1,6 +1,6 @@
 {
   "name": "@tuya-smart/tuya-panel-robot-sdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
