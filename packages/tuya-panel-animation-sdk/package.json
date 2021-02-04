@@ -1,6 +1,6 @@
 {
   "name": "@tuya-smart/tuya-panel-animation-sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "涂鸦动画组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
