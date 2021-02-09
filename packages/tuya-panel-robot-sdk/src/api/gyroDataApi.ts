@@ -47,7 +47,6 @@ export function getGyroMapHistoryList(
 
   return TYSdk.apiRequest(a, postData, version)
     .then((data: IRecordOriginList) => {
-      // const { hasNext = false, totalCount = 0 } = data;
       const { totalCount = 0 } = data;
       if (typeof data.datas === 'undefined' || data.datas.length === 0) {
         return {
