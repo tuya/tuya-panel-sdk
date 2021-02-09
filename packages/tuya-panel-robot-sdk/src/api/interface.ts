@@ -111,3 +111,70 @@ export interface IBitmapToImageOpt {
     | 'leftMirrored'
     | 'rightMirrored';
 }
+
+export interface IGetLaserHistoryListOpts {
+  /**
+   * 查询第几页数，默认值：0
+   *
+   * @type {number}
+   * @memberof IGetLaserHistoryListOpts
+   */
+  page?: number;
+  /**
+   * 每页展示最多数据，默认值：10
+   *
+   * @type {number}
+   * @memberof IGetLaserHistoryListOpts
+   */
+  pageLimit?: number;
+}
+
+export interface ILaserOriginRecordList {
+  totalCount: number;
+  datas: {
+    id: number;
+    bucket: string;
+    extend: string;
+    devId: string;
+    file: string;
+    /**
+     *  unix 时间戳
+     *
+     * @type {number}
+     * @memberof ILaserOriginRecordList
+     */
+    time: number;
+    fileType: string;
+  }[];
+}
+
+export interface ILaserRecordExportList {
+  dataList: {
+    id: number;
+    file: string;
+    value: string;
+    timestamp: number;
+  }[];
+  hasNext: boolean;
+}
+
+export interface ILaserRecordExportList {
+  dataList: {
+    id: number;
+    file: string;
+    value: string;
+    timestamp: number;
+  }[];
+  hasNext: boolean;
+}
+
+export interface ILaserMultiFloorExportList {
+  dataList: {
+    id: number;
+    historyFile: string;
+    backupFile: string;
+    value: string;
+    timestamp: number;
+  }[];
+  hasNext: boolean;
+}
