@@ -13,6 +13,6 @@ export default class LaserDataApi extends PureComponent {
   }
 
   render() {
-    return <View><Text>输出效果请参考开发者文档</Text></View>;
+    return <View><Text>输出效果请参考console 或 开发者文档</Text></View>;
   }
 }
