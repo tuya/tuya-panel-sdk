@@ -5,7 +5,7 @@ module.exports = {
     'literal-check/literal-check': [
       2,
       ['tuya.'],
-      ['tuya.m.device.media.latest', 'tuya.m.device.media.detail', 'tuya.m.sweeper.cleaning.history.get', 'tuya.m.sweeper.cleaning.history.delete'],
+      ['tuya.m.device.media.latest', 'tuya.m.device.media.detail', 'tuya.m.sweeper.cleaning.history.get', 'tuya.m.sweeper.cleaning.history.delete', 'tuya.m.dev.common.file.list'],
     ],
     'react/forbid-prop-types': 0
   },
