@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya-smart/tuya-panel-robot-sdk@1.0.3...@tuya-smart/tuya-panel-robot-sdk@1.0.4) (2021-02-23)
+
+
+### Features
+
+* **tuya-panel-robot-sdk:** 修正文档 ([6fb5e12](https://github.com/tuya/tuya-panel-sdk/commit/6fb5e12d3cfd83cfbf68f77f4042b402fcd7cd30))
+* **tuya-panel-robot-sdk:** 增加激光清扫记录接口 ([d46c8e2](https://github.com/tuya/tuya-panel-sdk/commit/d46c8e2f2c974ebad4693106922b51d69c11aed4))
+
+
+
+
+
 ## [1.0.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya-smart/tuya-panel-robot-sdk@1.0.2...@tuya-smart/tuya-panel-robot-sdk@1.0.3) (2021-02-04)
 
 **Note:** Version bump only for package @tuya-smart/tuya-panel-robot-sdk
