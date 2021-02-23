@@ -25,4 +25,4 @@ import { RCTGyroMap } from '@tuya-smart/tuya-panel-robot-sdk';
 
 ## Doc
 
-查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/robot-vacuum-sdk-development)获取详细文档
+查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/robot-vacuum-sdk-development/robot-vacuum-sdk-development?id=Ka62dti5h2fjw)获取详细文档
