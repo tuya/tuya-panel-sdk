@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import { laserDataApi } from '@tuya-smart/tuya-panel-robot-sdk';
 
 export default class LaserDataApi extends PureComponent {
@@ -13,6 +13,6 @@ export default class LaserDataApi extends PureComponent {
   }
 
   render() {
-    return <View />;
+    return <View><Text>输出效果请参考console 或 开发者文档</Text></View>;
   }
 }
