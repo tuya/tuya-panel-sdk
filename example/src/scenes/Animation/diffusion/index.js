@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { Diffusion } from '@tuya-smart/tuya-panel-animation-sdk';
+import { Diffusion } from '@tuya/tuya-panel-animation-sdk';
 
 export default class DiffusionAnimatedScene extends PureComponent {
   render() {
