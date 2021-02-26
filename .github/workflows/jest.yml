@@ -24,3 +24,8 @@ jobs:
         with:
           override_branch: robot
           directory: ./packages/tuya-panel-robot-sdk/coverage/
+      - name: Upload api coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          override_branch: api
+          directory: ./packages/tuya-panel-api/coverage/
