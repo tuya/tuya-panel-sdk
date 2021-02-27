@@ -1,5 +1,6 @@
 // 场景相关接口
 export interface Scene {
+  dpId: number;
   bindType: number;
   /**
    * 按键ID
