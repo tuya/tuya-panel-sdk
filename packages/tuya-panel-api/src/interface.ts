@@ -166,6 +166,29 @@ export interface IGetLastTimerPeriod {
   instruct?: string;
 }
 
+export interface IGetAstronomicalList {
+  bizId: string;
+}
+
+export interface IAstronomical {
+  bizId: string;
+  bizType: number;
+  loops: string;
+  dps: any;
+  astronomicalType: number;
+  timezone: string;
+  date: string;
+  time: string;
+  offsetType: number;
+  lat: number;
+  lon: number;
+}
+
+export interface IUpdateAstronomicalStatus {
+  id: string;
+  status: number;
+}
+
 // 电费统计接口
 export interface IUpdateBillConfigure {
   devId: string;
@@ -199,7 +222,22 @@ export interface IUpdateGroupDpName {
 
 export interface IGetWeatherQuality {
   devId: string;
-  codes: any;
+  isLocal: boolean;
+}
+export interface IGetWeathers {
+  devId: string;
+  dataRange?: number;
+}
+
+export interface ISaveCustomizePosition {
+  devId: string;
+  lon: string;
+  lat: string;
+  locationName?: string;
+}
+
+export interface IGetCustomizePosition {
+  devId: string;
 }
 
 // 数据统计接口
@@ -208,7 +246,7 @@ export interface IGetLogInSpecifiedTime {
   dpIds: string;
   offset: number;
   limit: number;
-  sortType?: string;
+  sortType?: 'DESC' | 'ASC';
   startTime?: string;
   endTime?: string;
 }
@@ -218,7 +256,7 @@ export interface IGetDpReportLog {
   dpIds: string;
   offset: number;
   limit: number;
-  sortType?: string;
+  sortType?: 'DESC' | 'ASC';
 }
 
 export interface IGetDpLogDays {
@@ -232,7 +270,7 @@ export interface IGetDpLogDays {
 export interface IGetDpResultByMonth {
   devId: string;
   dpId: string;
-  type: string;
+  type: 'sum' | 'minux' | 'mac';
 }
 
 export interface IGetDpResultByHour {
@@ -241,7 +279,7 @@ export interface IGetDpResultByHour {
   date: string;
   uid?: string;
   auto?: number;
-  type: string;
+  type: 'sum' | 'minux' | 'avg';
 }
 
 export interface IGetDataWithSpecified {
@@ -251,7 +289,7 @@ export interface IGetDataWithSpecified {
   endDay: string;
   uid?: string;
   auto?: number;
-  type: string;
+  type: 'sum' | 'minux' | 'avg';
 }
 
 export interface IGetWeekWithSpecified {
@@ -259,7 +297,7 @@ export interface IGetWeekWithSpecified {
   dpId: string;
   startWeek: string;
   endWeek: string;
-  type: string;
+  type: 'sum' | 'minux' | 'avg';
 }
 
 export interface IGetMonthWithSpecified {
@@ -269,7 +307,7 @@ export interface IGetMonthWithSpecified {
   endMonth: string;
   uid?: string;
   auto?: number;
-  type: string;
+  type: 'sum' | 'minux' | 'avg';
 }
 
 export interface IGetMultiDpsAllResult {
