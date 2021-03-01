@@ -40,7 +40,15 @@ module.exports = {
         'tuya.m.clock.dps.group.update',
         'tuya.m.clock.batch.status.update',
         'tuya.m.clock.category.status.update',
-        'tuya.m.timer.nearest.get'
+        'tuya.m.timer.nearest.get',
+        'tuya.m.public.weathers.get',
+        'tuya.m.device.customize.position.save',
+        'tuya.m.device.customize.position.get',
+        'tuya.m.timer.astronomical.list',
+        'tuya.m.timer.astronomical.add',
+        'tuya.m.timer.astronomical.update',
+        'tuya.m.timer.astronomical.status.update',
+        'tuya.m.timer.astronomical.remove'
       ],
     ],
     'react/forbid-prop-types': 0
