@@ -27,6 +27,9 @@ interface AudioLoadParam {
   fullBackImg?: any;
   fullBackImgStyle: any;
 }
+interface PlayerProps {
+  [propname: string]: any;
+}
 interface RockerDirect {
   rockerEnabled: false;
   up: false;
@@ -116,7 +119,7 @@ export interface TYIpcPlayerProps {
   voiceStatus: 'OFF' | 'ON';
   isShareDeveice: boolean;
   reConnect: () => any;
-  onChangeStreamStatus: (status: number) => any;
+  onChangeStreamStatus: (status: number, errMsg?: any) => any;
   onChangeScreenOrientation: (isFullScreen: boolean) => any;
   onChangeZoomStatus?: (zoomStatus: any) => any;
   onChangeRecording: (isRecording: boolean) => any;
@@ -135,6 +138,7 @@ export interface TYIpcPlayerProps {
   onChangeSupportedMicWay?: (data: any) => any;
   onListenTalkingChangeMute?: (data: any) => any;
   onListenIsTalking?: (data: any) => any;
+  onListenSessionDisConnect?: () => void;
   getCloudCameraConfig: (data: any) => any;
   showCutScreen: boolean;
   pressEnterAlbum?: () => any;
@@ -160,6 +164,7 @@ export interface TYIpcPlayerProps {
   audioLoadParam: AudioLoadParam;
   audioLoadText: string;
   enterBackDisConP2P: boolean;
+  playerProps: PlayerProps;
 }
 
 export const _defaultProps = {
@@ -202,4 +207,5 @@ export const _defaultProps = {
   audioLoadParam: _defaultAudioLoadParam,
   audioLoadText: Strings.getLang('tyIpc_audio_only'),
   enterBackDisConP2P: true,
+  playerProps: {},
 };
