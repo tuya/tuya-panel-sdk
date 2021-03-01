@@ -10,6 +10,9 @@ import {
   IModDeleteTaskByCategory,
   IGetDpLastTimer,
   IGetLastTimerPeriod,
+  IGetAstronomicalList,
+  IAstronomical,
+  IUpdateAstronomicalStatus,
 } from './interface';
 
 /**
@@ -88,7 +91,7 @@ const queryGroupTimerTasks = (params: IQueryTimerTasks): Promise<any> => {
 };
 
 /**
- * 修改单次定时
+ * 修改分组定时
  * @param {string} bizId 单设备 ID（devId） 或者群组设备 ID（groupId)
  * @param {number} bizType 资源类型。0：单设备；1：群组设备。
  * @param {string} actionsArray [{/“dps/”:{},/“time/”:“”,/“timerId/”:“”}]，JSON 数据格式。
@@ -164,6 +167,76 @@ const getLastTimerPeriod = (params: IGetLastTimerPeriod): Promise<any> => {
   });
 };
 
+/**
+ * 获取天文定时列表
+ */
+const getAstronomicalList = (params: IGetAstronomicalList): Promise<any> => {
+  return TYSdk.apiRequest('tuya.m.timer.astronomical.list', {
+    ...params,
+  });
+};
+
+/**
+ * 添加天文定时
+ * @param {string} bizId 设备 ID 或群组 ID
+ * @param {number} bizType 0:设备; 1:设备群组
+ * @param {string} loops 周期
+ * @param {any} dps dp 点，json 格式
+ * @param {number} astronomicalType 天文类型， 0:日出; 1:日落
+ * @param {string} timezone 时区
+ * @param {string} date 日期 yyyyMMdd
+ * @param {string} time 偏移时间，“HH:mm” 24 进制
+ * @param {number} offsetType 偏移类型，-1 : 向前; 0 正常; 1 : 向后
+ * @param {number} lat 纬度
+ * @param {number} lon 经度
+ */
+const addAstronomical = (params: IAstronomical): Promise<any> => {
+  return TYSdk.apiRequest('tuya.m.timer.astronomical.add', {
+    ...params,
+  });
+};
+
+/**
+ * 修改天文定时
+ * @param {string} bizId 设备 ID 或群组 ID
+ * @param {number} bizType 0:设备; 1:设备群组
+ * @param {string} loops 周期
+ * @param {any} dps dp 点，json 格式
+ * @param {number} astronomicalType 天文类型， 0:日出; 1:日落
+ * @param {string} timezone 时区
+ * @param {string} date 日期 yyyyMMdd
+ * @param {string} time 偏移时间，“HH:mm” 24 进制
+ * @param {number} offsetType 偏移类型，-1 : 向前; 0 正常; 1 : 向后
+ * @param {number} lat 纬度
+ * @param {number} lon 经度
+ */
+const updateAstronomical = (params: IAstronomical): Promise<any> => {
+  return TYSdk.apiRequest('tuya.m.timer.astronomical.update', {
+    ...params,
+  });
+};
+
+/**
+ * 修改天文定时使能
+ * @param {string} id 定时任务id
+ * @param {number} status 0:关闭；1开启
+ */
+const updateAstronomicalStatus = (params: IUpdateAstronomicalStatus): Promise<any> => {
+  return TYSdk.apiRequest('tuya.m.timer.astronomical.status.update', {
+    ...params,
+  });
+};
+
+/**
+ * 删除天文定时
+ * @param {string} id 定时任务 id
+ */
+const removeAstronomical = (params: { id: string }): Promise<any> => {
+  return TYSdk.apiRequest('tuya.m.timer.astronomical.remove', {
+    ...params,
+  });
+};
+
 export default {
   addSingleTimer,
   queryTimerTasks,
@@ -176,4 +249,9 @@ export default {
   getDpLastTimer,
   getDpsLastTimer,
   getLastTimerPeriod,
+  getAstronomicalList,
+  addAstronomical,
+  updateAstronomical,
+  updateAstronomicalStatus,
+  removeAstronomical,
 };
