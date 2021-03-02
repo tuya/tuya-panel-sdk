@@ -25,4 +25,4 @@ import { TYIpcPlayer, TYIpcNative, TYIpcTopBar } from '@tuya/tuya-panel-ipc-sdk'
 
 ## Doc
 
-查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/ipc-vacuum-sdk-development)获取详细文档
+查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/ipc-sdk/ipc-components?categoryId=827056)获取详细文档
