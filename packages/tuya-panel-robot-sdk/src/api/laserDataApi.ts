@@ -1,4 +1,4 @@
-import { TYSdk } from 'tuya-panel-kit';
+import { TYSdk, Utils } from 'tuya-panel-kit';
 import {
   IMessage,
   IGetLaserHistoryListOpts,
@@ -14,7 +14,6 @@ function resolveErr(e: IMessage): Promise<Error> {
 
 /**
  * 获取激光品类地图历史记录
- *
  * @export
  * @param {IGetLaserHistoryListOpts} opt
  * @return {*}  {(Promise<ILaserRecordExportList | Error>)}
