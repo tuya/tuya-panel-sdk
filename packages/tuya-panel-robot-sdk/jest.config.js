@@ -5,7 +5,9 @@ module.exports = {
   name: pkg.name,
   displayName: pkg.name,
   rootDir: '../..',
-  testMatch: ['<rootDir>/packages/tuya-panel-robot-sdk/src/**/__tests__/?(*.)+(test).[jt]s?(x)'],
+  testMatch: [
+    '<rootDir>/packages/tuya-panel-robot-sdk/src/components/**/__tests__/?(*.)+(test).[jt]s?(x)',
+  ],
   coverageDirectory: '<rootDir>/packages/tuya-panel-robot-sdk/coverage/',
-  collectCoverageFrom: ['<rootDir>/packages/tuya-panel-robot-sdk/src/**/*.[jt]s?(x)'],
+  collectCoverageFrom: ['<rootDir>/packages/tuya-panel-robot-sdk/src/components/**/*.[jt]s?(x)'],
 };
