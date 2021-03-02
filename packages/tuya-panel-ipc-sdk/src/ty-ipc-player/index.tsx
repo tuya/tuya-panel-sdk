@@ -583,7 +583,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         return false;
       }
 
-      this.props.onListenRetryClick() && this.props.onListenRetryClick();
+      this.props.onListenRetryClick && this.props.onListenRetryClick();
       TYIpcPlayerManager.startPlay(
         isWirless,
         privateMode,
