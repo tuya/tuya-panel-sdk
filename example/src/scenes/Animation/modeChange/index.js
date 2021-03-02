@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View, TouchableOpacity } from 'react-native';
-import { ModeChange } from '@tuya-smart/tuya-panel-animation-sdk';
+import { ModeChange } from '@tuya/tuya-panel-animation-sdk';
 
 const imgUrlList = [
   'https://images.tuyacn.com/rms-static/3f5ccbb0-94bc-11ea-8e3b-e3ecba4013ec-1589334682603.png?tyName=speed1.png',
