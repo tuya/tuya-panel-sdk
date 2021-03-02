@@ -12,6 +12,10 @@
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
     "prepublishOnly": "yarn build"
   },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "dependencies": {
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2"
