@@ -43,8 +43,8 @@ const connectAndstartPreView = (
       TYEvent.emit('p2pIsConnected', true);
       startPreview(clarityStatus, voiceStatus, hightScaleMode);
     },
-    () => {
-      TYEvent.emit('streamStatus', { status: 3 });
+    errMsg => {
+      TYEvent.emit('streamStatus', { status: 3, errMsg });
     }
   );
 };
@@ -68,8 +68,8 @@ const connectAndstartPreViewWithChannel = (
       TYEvent.emit('p2pIsConnected', true);
       startPreviewWithChannel(clarityStatus, voiceStatus, hightScaleMode, channelNum);
     },
-    () => {
-      TYEvent.emit('streamStatus', { status: 3 });
+    errMsg => {
+      TYEvent.emit('streamStatus', { status: 3, errMsg });
     }
   );
 };
@@ -92,8 +92,8 @@ const startPreview = (clarityStatus: string, voiceStatus: string, hightScaleMode
       }
       operatMute(voiceStatus);
     },
-    () => {
-      TYEvent.emit('streamStatus', { status: 5 });
+    errMsg => {
+      TYEvent.emit('streamStatus', { status: 5, errMsg });
     }
   );
 };
@@ -130,18 +130,18 @@ const startPreviewWithChannel = (
               }
               operatMute(voiceStatus);
             },
-            () => {
-              TYEvent.emit('streamStatus', { status: 5 });
+            errMsg => {
+              TYEvent.emit('streamStatus', { status: 5, errMsg });
             }
           );
         },
-        () => {
-          TYEvent.emit('streamStatus', { status: 5 });
+        errMsg => {
+          TYEvent.emit('streamStatus', { status: 5, errMsg });
         }
       );
     },
-    () => {
-      TYEvent.emit('streamStatus', { status: 5 });
+    errMsg => {
+      TYEvent.emit('streamStatus', { status: 5, errMsg });
     }
   );
 };
