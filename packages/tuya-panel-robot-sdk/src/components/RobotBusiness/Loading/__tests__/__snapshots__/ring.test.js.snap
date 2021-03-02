@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        undefined,
+      ]
+    }
+  >
+    <CircleLoading
+      backgroundColor="rgba(0,0,0,.1)"
+      color="#fff"
+      loading={false}
+      size={28}
+      strokeWidth={4}
+      style={Object {}}
+    />
+  </View>
+</View>
+`;
