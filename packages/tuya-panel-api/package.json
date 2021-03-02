@@ -1,0 +1,31 @@
+{
+  "name": "@tuya/tuya-panel-api",
+  "version": "1.0.0",
+  "description": "tuya-panel-api, is a general cloud interface collection library",
+  "keywords": [
+    "tuya",
+    "api"
+  ],
+  "author": "youngjuning <youngjuning@aliyun.com>",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "scripts": {
+    "start": "tsc -w",
+    "build": "tsc -d",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/"
+  },
+  "dependencies": {
+    "tuya-panel-kit": "^4.3.4"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/tuya/tuya-panel-sdk/tree/main/packages/tuya-panel-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-sdk/issues"
+  }
+}

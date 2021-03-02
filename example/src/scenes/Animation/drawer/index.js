@@ -1,7 +1,7 @@
 import React, { PureComponent } from 'react';
 import { View, TouchableOpacity, Text, Image } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import { Drawer } from '@tuya-smart/tuya-panel-animation-sdk';
+import { Drawer } from '@tuya/tuya-panel-animation-sdk';
 
 const { winWidth, winHeight } = Utils.RatioUtils;
 const imgUrlList = [
