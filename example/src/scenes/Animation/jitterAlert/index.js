@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { JitterAlert } from '@tuya-smart/tuya-panel-animation-sdk';
+import { JitterAlert } from '@tuya/tuya-panel-animation-sdk';
 import { Button, TYText } from 'tuya-panel-kit';
 
 class JitterAlertAnimatedScene extends PureComponent {

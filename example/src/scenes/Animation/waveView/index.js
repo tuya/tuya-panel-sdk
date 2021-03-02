@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { WaveView } from '@tuya-smart/tuya-panel-animation-sdk';
+import { WaveView } from '@tuya/tuya-panel-animation-sdk';
 
 export default class WaveViewAnimatedScene extends PureComponent {
   render() {

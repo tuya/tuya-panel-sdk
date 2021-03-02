@@ -57,9 +57,10 @@
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "build": "lerna run build --parallel",
-    "build:ipc": "lerna run build --parallel --scope @tuya-smart/tuya-panel-ipc-sdk",
-    "build:robot": "lerna run build --scope @tuya-smart/tuya-panel-robot-sdk",
-    "build:animation": "lerna run build --scope @tuya-smart/tuya-panel-animation-sdk"
+    "build:ipc": "lerna run build --parallel --scope @tuya/tuya-panel-ipc-sdk",
+    "build:robot": "lerna run build --scope @tuya/tuya-panel-robot-sdk",
+    "build:animation": "lerna run build --scope @tuya/tuya-panel-animation-sdk",
+    "build:api": "lerna run build --scope @tuya/tuya-panel-api"
   },
   "config": {
     "commitizen": {
