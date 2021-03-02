@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { NumberChange } from '@tuya-smart/tuya-panel-animation-sdk';
+import { NumberChange } from '@tuya/tuya-panel-animation-sdk';
 
 export default class NumberChangeAnimatedScene extends PureComponent {
   render() {

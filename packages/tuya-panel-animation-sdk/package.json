@@ -1,9 +1,13 @@
 {
-  "name": "@tuya-smart/tuya-panel-animation-sdk",
+  "name": "@tuya/tuya-panel-animation-sdk",
   "version": "1.0.0",
   "description": "涂鸦动画组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "scripts": {
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",

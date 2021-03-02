@@ -69,6 +69,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   p2pListener: any;
   isFirstJudgeP2p: boolean;
   otherRnPage: boolean;
+  props: any;
   constructor(props: TYIpcPlayerProps) {
     super(props);
     this.state = {
@@ -291,6 +292,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           );
           return false;
         }
+        this.props.onListenSessionDisConnect();
         // session断开和进入后台调用同样的逻辑
         exitPlayPreview();
       }
@@ -500,8 +502,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.props.onChangeScreenOrientation(sendData);
   };
 
-  getStreamStatus = (data: { status: number }) => {
-    const { status } = data;
+  getStreamStatus = (data: { status: number; errMsg?: any }) => {
+    const { status, errMsg } = data;
     const { clarityStatus } = this.props;
     // 监听到视频流获取的状态变化,将视频流状态
     let showLoading = true;
@@ -538,7 +540,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       videoStatus: status,
       showAnimation,
     });
-    this.props.onChangeStreamStatus(status);
+    this.props.onChangeStreamStatus(status, errMsg);
   };
 
   onChangePreview = () => {};
@@ -637,6 +639,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       audioLoadParam,
       audioLoadText,
       clarityStatus,
+      playerProps,
     } = this.props;
     const realWidth = isFullScreen ? fullPlayerWidth : playerWidth;
     const realHeight = isFullScreen ? fullPlayerHeight : playerHeight;
@@ -653,6 +656,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
                 width: realWidth,
                 height: realHeight,
               }}
+              {...playerProps}
             />
           ) : (
             <NativePlayer
@@ -664,6 +668,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
                 width: realWidth,
                 height: realHeight,
               }}
+              {...playerProps}
             />
           )
         ) : (
@@ -675,6 +680,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               width: realWidth,
               height: realHeight,
             }}
+            {...playerProps}
           />
         )}
 

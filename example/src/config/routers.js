@@ -4,7 +4,7 @@ import Home from '../scenes/Home';
 // import LampCategory from '../scenes/Lamp';
 // import StandardCategory from '../scenes/Standard';
 // import SensorCategory from '../scenes/Sensor';
-// import SweepRobotCategory from '../scenes/SweepRobot';
+import SweepRobotCategory from '../scenes/SweepRobot';
 // import Health from '../scenes/Health';
 // import LockCategory from '../scenes/Lock';
 // import GateWayCategory from '../scenes/Gateway';
@@ -18,7 +18,7 @@ import Electrician from '../scenes/Electrician';
 // import FullRoomCategory from '../scenes/FullRoom';
 // import BasicInfo from '../../../packages/tuya-panel-sdk/package.json';
 // import LampInfo from '../../../packages/tuya-panel-lamp-sdk/package.json';
-// import RobotInfo from '../../../packages/tuya-panel-robot-sdk/package.json';
+import RobotInfo from '../../../packages/tuya-panel-robot-sdk/package.json';
 // import StandardInfo from '../../../packages/tuya-panel-standard-sdk/package.json';
 // // import OSInfo from '../../../packages/tuya-panel-os-sdk/package.json';
 // import SensorInfo from '../../../packages/tuya-panel-sensor-sdk/package.json';
@@ -66,12 +66,12 @@ export const elementsRouters = _.sortBy(
     //   subTitle: StandardInfo.version,
     //   Scene: StandardCategory,
     // },
-    // {
-    //   id: 'SweepRobot',
-    //   title: RobotInfo.name,
-    //   subTitle: RobotInfo.version,
-    //   Scene: SweepRobotCategory,
-    // },
+    {
+      id: 'SweepRobot',
+      title: RobotInfo.name,
+      subTitle: RobotInfo.version,
+      Scene: SweepRobotCategory,
+    },
     // {
     //   id: 'OS',
     //   title: OSInfo.name,
