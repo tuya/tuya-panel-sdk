@@ -108,6 +108,7 @@ export interface IRCTLaserMapProps {
   }) => void /** native 创建一个地图组件实例之后回调 mapId 给到面板 */;
   onLongPressInAreaView?: (data: { id: string }) => void /** 禁区 / 划区框长按命名事件 */;
   onClickSplitArea?: (data: any) => void /** 点击分区的回调 * */;
+  onClickRoom?: (data: any) => void /** 点击房间属性回调 * */;
 }
 
 interface IRCTLaserMapState {
@@ -157,10 +158,6 @@ export default class RCTLaserMap extends PureComponent<IRCTLaserMapProps, IRCTLa
 
     factorInfo: {},
     hasTypeMap: false,
-
-    // onLaserMapPoints: (data: any) => {},
-    // onMapId: (data: { mapId: string }) => {},
-    // onLongPressInAreaView: (data: { id: string }) => {},
   };
 
   constructor(props) {
@@ -190,6 +187,7 @@ export default class RCTLaserMap extends PureComponent<IRCTLaserMapProps, IRCTLa
       onMapId,
       onLongPressInAreaView,
       onClickSplitArea,
+      onClickRoom,
       ...props
     } = this.props;
     const { layoutHeight, layoutWidth } = this.state;
@@ -205,6 +203,7 @@ export default class RCTLaserMap extends PureComponent<IRCTLaserMapProps, IRCTLa
             onLaserMapPoints={this.handleEvent(onLaserMapPoints)}
             onMapId={this.handleEvent(onMapId)}
             onLongPressInAreaView={this.handleEvent(onLongPressInAreaView)}
+            onClickRoom={this.handleEvent(onClickRoom)}
           />
         )}
       </View>
