@@ -4,4 +4,4 @@ import * as OssDataApi from './ossDataApi';
 import * as laserDataApi from './laserDataApi';
 import * as customApi from './customApi';
 
-export { GyroDataApi, laserUiApi, laserDataApi, OssDataApi, customApi };
+export default { GyroDataApi, laserUiApi, laserDataApi, OssDataApi, customApi };
