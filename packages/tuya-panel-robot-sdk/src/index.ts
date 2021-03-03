@@ -1,5 +1,3 @@
-/** 接口 */
-export * from './api';
 /** UI组件 */
 export * from './components';
 
