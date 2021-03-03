@@ -178,3 +178,15 @@ export interface ILaserMultiFloorExportList {
   }[];
   hasNext: boolean;
 }
+export interface IStreamData {
+  dataList: string[];
+  hasNext: boolean;
+  startRow: number;
+  subRecordId: number;
+}
+export interface ITransferParams {
+  subRecordId: number;
+  start: number;
+  size: number;
+  mapId?: number;
+}
