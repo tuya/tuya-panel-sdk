@@ -1,4 +1,4 @@
-import { Observable } from 'rxjs';
+import { empty, concat, fromEventPattern, of } from 'rxjs';
 import { pluck, filter, distinctUntilChanged } from 'rxjs/operators';
 import { TYSdk } from 'tuya-panel-kit';
 
@@ -20,9 +20,9 @@ export function createDpValue$<T>(
   }
   if (!isExist) {
     console.warn(`${code} dp is not exist!!!!`);
-    return Observable.empty<T>();
+    return empty();
   }
-  const initial$ = initial ? Observable.of(TYSdk.devInfo.state) : Observable.empty();
+  const initial$ = initial ? of(TYSdk.devInfo.state) : empty();
 
   const dpHandle = (data, fn) => {
     switch (data.type) {
@@ -34,20 +34,20 @@ export function createDpValue$<T>(
     }
   };
 
-  const value$ = Observable.fromEventPattern<T>(
+  const value$ = fromEventPattern<T>(
     handle => TYSdk.event.on('deviceDataChange', data => dpHandle(data, handle)),
     handle => TYSdk.event.remove('deviceDataChange', data => dpHandle(data, handle))
   );
 
   if (options && options.distinct) {
-    return Observable.concat<T>(initial$, value$).pipe(
+    return concat<T>(initial$, value$).pipe(
       pluck(code),
       distinctUntilChanged<T>(),
       filter(value => value !== undefined)
     );
   }
 
-  return Observable.concat<T>(initial$, value$).pipe(
+  return concat<T>(initial$, value$).pipe(
     pluck(code),
     filter<T>(value => value !== undefined)
   );
