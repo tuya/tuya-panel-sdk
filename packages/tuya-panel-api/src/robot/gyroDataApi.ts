@@ -8,6 +8,8 @@ import {
   IGyroMapMediaExport,
   IGetGyroMapHistoryMediaOpts,
   IGyroMapMediaOrigin,
+  IStreamData,
+  ITransferParams,
 } from './interface';
 
 function resolveErr(e: IMessage): Promise<Error> {
@@ -173,4 +175,54 @@ export function getGyroMapHistoryMediaBySubRecordId(
       return resolveErr(err);
     });
 }
+
+/** ------------------------------------------------------------------- */
+
+/**
+ * 陀螺仪地图-获取最新清扫地图v3 (配合流服务v2使用)
+ * @returns
+ */
+export function getGyroMapLatestMediaV3({
+  subRecordId,
+  start,
+  size,
+}: ITransferParams): Promise<IStreamData> {
+  const startRow = typeof start === 'undefined' ? '' : start;
+  return TYSdk.apiRequest(
+    'tuya.m.device.media.latest',
+    {
+      devId: TYSdk.devInfo.devId,
+      start: startRow,
+      size,
+      subRecordId,
+      datatype: 0,
+    },
+    '3.0'
+  );
+}
+
+/** ------------------------------------------------------------------- */
+
+/** 陀螺仪-获取清扫记录v3 (配合流服务v2使用) */
+export function getGyroMapHistoryMediaV3({
+  subRecordId,
+  mapId,
+  start,
+  size,
+}: ITransferParams): Promise<IStreamData> {
+  const startRow = typeof start === 'undefined' ? '' : start;
+  return TYSdk.apiRequest(
+    'tuya.m.device.media.detail',
+    {
+      devId: TYSdk.devInfo.devId,
+      subRecordId,
+      datatype: 0,
+      mapId,
+      start: startRow,
+      size,
+    },
+    '3.0'
+  );
+}
+
 /** ------------------------------------------------------------------- */

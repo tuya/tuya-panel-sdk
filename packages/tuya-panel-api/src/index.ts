@@ -4,6 +4,7 @@ import currencySdk from './currency';
 import alarmSdk from './alarm';
 import statSdk from './statistic';
 import deviceSdk from './device';
+import robotSdk from './robot';
 
 export const TYCommonKits = {
   sceneSdk,
@@ -12,4 +13,5 @@ export const TYCommonKits = {
   alarmSdk,
   statSdk,
   deviceSdk,
+  robotSdk,
 };
