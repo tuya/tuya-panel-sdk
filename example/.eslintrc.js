@@ -14,7 +14,7 @@ module.exports = {
       '@tuya/tuya-panel-remote-sdk',
       '@tuya/tuya-panel-animation-sdk',
       '@tuya/tuya-panel-ipc-sdk',
-      '@tuya-smart/tuya-panel-electrician-sdk',
+      '@tuya/tuya-panel-electrician-sdk',
     ],
     'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
   },
