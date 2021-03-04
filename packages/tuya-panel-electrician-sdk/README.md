@@ -18,7 +18,7 @@ $ yarn add @tuya/tuya-panel-electrician-sdk
 ## Usage
 
 ```js
-import { CountdownView } from '@tuya/tuya-panel-robot-sdk';
+import { CountdownView } from '@tuya/tuya-panel-electrician-sdk';
 
 ...
 ```
