@@ -292,7 +292,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           );
           return false;
         }
-        this.props.onListenSessionDisConnect();
+        this.props.onListenSessionDisConnect && this.props.onListenSessionDisConnect();
         // session断开和进入后台调用同样的逻辑
         exitPlayPreview();
       }
@@ -583,6 +583,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         return false;
       }
 
+      this.props.onListenRetryClick && this.props.onListenRetryClick();
       TYIpcPlayerManager.startPlay(
         isWirless,
         privateMode,
