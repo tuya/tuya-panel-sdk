@@ -1,5 +1,5 @@
 import { TYSdk } from 'tuya-panel-kit';
-import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 import _isUndefined from 'lodash/isUndefined';
 import _isFunction from 'lodash/isFunction';
 
@@ -271,5 +271,5 @@ export function isNotError(value: unknown): boolean {
  * @param error
  */
 export function extractError(error: Error) {
-  return Observable.of(error);
+  return of(error);
 }
