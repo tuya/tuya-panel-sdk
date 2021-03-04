@@ -17,4 +17,10 @@ $ yarn add @tuya/tuya-panel-animation-sdk
 
 ## 使用
 
+```sh
+import { Diffusion } from '@tuya/tuya-panel-animation-sdk'
+```
+
 ## 文档
+
+动画组件更多文档请参考 [Tuya Design](https://panel-docs.tuyacn.com/tuya-panel-animation-sdk/Diffusion)

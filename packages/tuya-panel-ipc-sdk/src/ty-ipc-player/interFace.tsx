@@ -139,6 +139,7 @@ export interface TYIpcPlayerProps {
   onListenTalkingChangeMute?: (data: any) => any;
   onListenIsTalking?: (data: any) => any;
   onListenSessionDisConnect?: () => void;
+  onListenRetryClick?: () => void;
   getCloudCameraConfig: (data: any) => any;
   showCutScreen: boolean;
   pressEnterAlbum?: () => any;
