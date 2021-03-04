@@ -2,7 +2,6 @@ import * as FunctionUtils from './FunctionUtils';
 import * as PressCoordinateUtils from './PressCoordinateUtils';
 import * as StringsUtils from './StringsUtils';
 import * as RxUtils from './RxUtils';
-import * as MapServiceChannelUtils from './MapServiceChannelUtils';
 
 import LoggerUtils from './LoggerUtils';
 import SvgBrushUtils from './SvgBrush';
@@ -19,7 +18,6 @@ export default {
   RxUtils,
   SvgBrushUtils,
   StringsUtils,
-  MapServiceChannelUtils,
   Lz4,
   Binary,
 
