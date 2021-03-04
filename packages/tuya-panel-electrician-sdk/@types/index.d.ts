@@ -8,7 +8,7 @@ import {
   ColorPropType,
   ImageStyle,
 } from 'react-native';
-declare module '@tuya-smart/tuya-panel-electrician-sdk' {
+declare module '@tuya/tuya-panel-electrician-sdk' {
   export interface CountdownProps {
     /**
      * @language zh-CN
