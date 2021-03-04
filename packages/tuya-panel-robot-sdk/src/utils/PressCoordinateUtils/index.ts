@@ -137,7 +137,7 @@ export function convertColorToArgbHex(originColor?: string): string {
     tmp = rgb;
     tmpAlpha = parseInt(a, 16);
   }
-  const [r, g, b, a] = color.decode(tmp);
+  const [r, g, b, a] = color.decodeColorData(tmp);
   if (!_isUndefined(a)) {
     tmpAlpha = _floor(Number(a) * 255);
   }
@@ -154,7 +154,7 @@ export function convertColorToRgbaHex(originColor?: string): string {
   const tmp = originColor;
   let tmpAlpha = 255;
 
-  const [r, g, b, a] = color.decode(tmp);
+  const [r, g, b, a] = color.decodeColorData(tmp);
   if (!_isUndefined(a)) {
     tmpAlpha = _floor(Number(a) * 255);
   }
