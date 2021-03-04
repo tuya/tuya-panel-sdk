@@ -2,7 +2,7 @@
 /* eslint-disable import/extensions */
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
-import { CountdownView } from '@tuya-smart/tuya-panel-electrician-sdk';
+import { CountdownView } from '@tuya/tuya-panel-electrician-sdk';
 
 export default class Countdown extends PureComponent {
   render() {
