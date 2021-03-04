@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RCTLaserMap components basic render 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+/>
+`;
+
+exports[`RCTLaserMap components renders correctly 1`] = `
+<View
+  onLayout={[Function]}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <_class
+    appointData={Array []}
+    appointIcon="https://images.tuyacn.com/smart/Group6@2x.png"
+    currentPos={Object {}}
+    edit={false}
+    factorInfo={Object {}}
+    hasTypeMap={false}
+    height={100}
+    isRotate={false}
+    markerIcon="https://images.tuyacn.com/app/android/dian.png"
+    maxZoomScale={4}
+    minAreaWidth={20}
+    minZoomScale={1}
+    onClickRoom={[Function]}
+    onClickSplitArea={[Function]}
+    onLaserMapPoints={[Function]}
+    onLongPressInAreaView={[Function]}
+    onMapId={[Function]}
+    pathColor="#ffffff"
+    pathData=""
+    pathWidth={0.8}
+    pileIcon="https://images.tuyacn.com/smart/chongdian2x.png"
+    pilePosition={Object {}}
+    planPathColor="#FFD700"
+    planPathData=""
+    planPathWidth={0.8}
+    scale={
+      Object {
+        "scale": 1,
+        "x": undefined,
+        "y": undefined,
+      }
+    }
+    splitColor="#ffffff"
+    sweepRegionColor="#80B0F523"
+    sweepRegionData={Array []}
+    virtualAreaColor="#80F53D23"
+    virtualAreaData={Array []}
+    virtualWallColor="#ffF5A623"
+    virtualWallData={Array []}
+    width={100}
+  />
+</View>
+`;
