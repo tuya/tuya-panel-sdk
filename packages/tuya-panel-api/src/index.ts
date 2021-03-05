@@ -1,2 +1,5 @@
-export * as commonApi from './common';
-export * as robotApi from './robot';
+import common from './common';
+import robot from './robot';
+
+export const commonApi = common;
+export const robotApi = robot;
