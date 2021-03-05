@@ -1,6 +1,8 @@
 import React, { PureComponent } from 'react';
 import { View, Text } from 'react-native';
-import { laserDataApi } from '@tuya/tuya-panel-robot-sdk';
+import { robotApi } from '@tuya/tuya-panel-api';
+
+const { laserDataApi } = robotApi;
 
 export default class LaserDataApi extends PureComponent {
   componentDidMount() {

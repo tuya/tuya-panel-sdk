@@ -17,7 +17,7 @@ $ yarn add @tuya/tuya-panel-api
 ## Usage
 
 ```js
-import { sceneSdk, timerSdk, currencySdk } from '@tuya/tuya-panel-api';
+import { commonApi, robotApi } from '@tuya/tuya-panel-api';
 ...
 ```
 
