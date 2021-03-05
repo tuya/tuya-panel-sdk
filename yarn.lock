@@ -12693,29 +12693,6 @@ tuya-panel-kit@^4.2.1:
     style-equal "^1.0.0"
     styled-components "^3.4.10"
 
-tuya-panel-kit@^4.3.4:
-  version "4.3.4"
-  resolved "https://registry.yarnpkg.com/tuya-panel-kit/-/tuya-panel-kit-4.3.4.tgz#9c97f02c5f0100b96fa38115b1c6436c6e8d18eb"
-  integrity sha512-prHt64rgvdKMgBmyN+cCweP+TK8pVdQjxksQpwqC3iyyA/tWyFjpFj3zdqRYU1f1w2lRcua02Uyz1hEvgELqRw==
-  dependencies:
-    "@react-native-community/masked-view" "0.1.10"
-    "@react-navigation/native" "5.7.3"
-    "@react-navigation/stack" "5.9.0"
-    babel-cli "^6.26.0"
-    color "^0.11.1"
-    events "^1.1.1"
-    hoist-non-react-statics "^3.3.0"
-    prop-types "^15.6.1"
-    react-addons-shallow-compare "^15.6.2"
-    react-native-deprecated-custom-components "0.1.2"
-    react-native-gesture-handler "1.8.0"
-    react-native-reanimated "1.13.0"
-    react-native-safe-area-context "3.1.7"
-    react-native-screens "2.10.1"
-    react-native-svg "5.5.1"
-    style-equal "^1.0.0"
-    styled-components "^3.4.10"
-
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
   resolved "https://registry.yarnpkg.com/tweetnacl/-/tweetnacl-0.14.5.tgz#5ae68177f192d4456269d108afa93ff8743f4f64"
