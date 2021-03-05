@@ -15,6 +15,7 @@ module.exports = {
           // 'tuya-panel-sdk': '../packages/tuya-panel-sdk/lib/index.js',
           // 'tuya-panel-cbt-sdk': '../packages/tuya-panel-cbt-sdk/lib/index.js',
           // 'tuya-panel-lamp-sdk': '../packages/tuya-panel-lamp-sdk/lib/index.js',
+          '@tuya/tuya-panel-api': '../packages/tuya-panel-api/lib/index.js',
           '@tuya/tuya-panel-robot-sdk': '../packages/tuya-panel-robot-sdk/lib/index.js',
           // 'tuya-panel-standard-sdk': '../packages/tuya-panel-standard-sdk/lib/index.js',
           // 'tuya-panel-os-sdk': '../packages/tuya-panel-os-sdk/lib/index.js',
