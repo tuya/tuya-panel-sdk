@@ -14,7 +14,10 @@
     "build": "tsc -d",
     "prebuild": "../../node_modules/del-cli/cli.js lib/"
   },
-  "dependencies": {
+  "peerDependencies": {
+    "react": "16.8.3",
+    "react-native": "0.59.10",
+    "react-native-svg": "5.5.1",
     "tuya-panel-kit": "^4.3.4"
   },
   "publishConfig": {
