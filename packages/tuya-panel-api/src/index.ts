@@ -1,17 +1,2 @@
-import sceneSdk from './scene';
-import timerSdk from './timer';
-import currencySdk from './currency';
-import alarmSdk from './alarm';
-import statSdk from './statistic';
-import deviceSdk from './device';
-import robotSdk from './robot';
-
-export const TYCommonKits = {
-  sceneSdk,
-  timerSdk,
-  currencySdk,
-  alarmSdk,
-  statSdk,
-  deviceSdk,
-  robotSdk,
-};
+export * as commonApi from './common';
+export * as robotApi from './robot';
