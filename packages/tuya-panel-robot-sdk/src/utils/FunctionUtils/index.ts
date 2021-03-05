@@ -1,5 +1,6 @@
+/* eslint-disable consistent-return */
 import { TYSdk } from 'tuya-panel-kit';
-import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 import _isUndefined from 'lodash/isUndefined';
 import _isFunction from 'lodash/isFunction';
 
@@ -24,7 +25,7 @@ export async function sequencePromise(...promises: any[]) {
   return results;
 }
 
-export function handleError(e: Error): void {
+export function handleError(e: CustomError): void {
   CustomError.handleError(e);
 }
 
@@ -47,6 +48,7 @@ export const createSingleton = (createInstance: () => any): any => {
  */
 
 type ExpectValues = {
+  key: string | number;
   dpCode: string;
   value?: any;
   comparator?: (dpValue: any) => boolean;
@@ -227,6 +229,7 @@ export function getClassSingletonInstance<T>(ClassObj: any, ...params: any[]) {
   if (ClassObj[name]) {
     return ClassObj[name] as T;
   }
+  // eslint-disable-next-line no-param-reassign
   ClassObj[name] = new ClassObj(...params);
 
   return ClassObj[name] as T;
@@ -239,9 +242,9 @@ export function getClassSingletonInstance<T>(ClassObj: any, ...params: any[]) {
  */
 export function CoastTime(fn: (...args: any[]) => any, key: string) {
   return (...args) => {
-    const startTime = new Date();
+    const startTime = new Date().valueOf();
     const res = fn(...args);
-    const endTime = new Date();
+    const endTime = new Date().valueOf();
     console.log(`coastTime-${key}`, endTime - startTime);
     return res;
   };
@@ -260,7 +263,7 @@ export function isNumber(obj: unknown): boolean {
  * @param value
  */
 export function isNotError(value: unknown): boolean {
-  if (value instanceof Error) {
+  if (value instanceof CustomError) {
     handleError(value);
     return false;
   }
@@ -271,5 +274,5 @@ export function isNotError(value: unknown): boolean {
  * @param error
  */
 export function extractError(error: Error) {
-  return Observable.of(error);
+  return of(error);
 }
