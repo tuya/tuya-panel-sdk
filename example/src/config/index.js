@@ -3,7 +3,7 @@ export const SCOPE_MAP = {
   '@tuya/tuya-panel-animation-sdk': 'Animation',
   // '@tuya/tuya-panel-cbt-sdk': 'Cbt',
   // '@tuya/tuya-panel-cooker-sdk': 'Cooker',
-  // '@tuya/tuya-panel-electrician-sdk': 'Electrician',
+  '@tuya/tuya-panel-electrician-sdk': 'Electrician',
   // '@tuya/tuya-panel-fullroom-sdk': 'FullRoom',
   // '@tuya/tuya-panel-gateway-sdk': 'Gateway',
   // '@tuya/tuya-panel-health-sdk': 'Health',
