@@ -11,6 +11,9 @@
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@types/color": "0.12.1",
     "@types/lodash": "^4.14.149",
@@ -23,12 +26,12 @@
     "style-equal": "^1.0.0"
   },
   "peerDependencies": {
-    "tuya-panel-kit": "^4.1.0",
     "react": "^16.0.0",
     "react-native": "^0.51.0",
-    "react-native-svg": "5.5.1"
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.1.0"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
   },
@@ -36,5 +39,5 @@
     "url": "https://github.com/tuya/tuya-panel-sdk/issues"
   },
   "license": "ISC",
-  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+  "gitHead": "50abf27d0ff4da4fd933a650ef3cfe1c3acd6d44"
 }
