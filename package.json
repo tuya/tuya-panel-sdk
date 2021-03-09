@@ -60,6 +60,7 @@
     "build:ipc": "lerna run build --parallel --scope @tuya/tuya-panel-ipc-sdk",
     "build:robot": "lerna run build --scope @tuya/tuya-panel-robot-sdk",
     "build:animation": "lerna run build --scope @tuya/tuya-panel-animation-sdk",
+    "build:electrician": "lerna run build --scope @tuya/tuya-panel-electrician-sdk",
     "build:api": "lerna run build --scope @tuya/tuya-panel-api"
   },
   "config": {
