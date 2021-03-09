@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Countdown components basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  ellipsizeMode="tail"
+  numberOfLines={1}
+  size="large"
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "color": "#333",
+        "fontSize": 24,
+      },
+      Object {
+        "color": "#132412",
+      },
+    ]
+  }
+  type="paragraph"
+  weight={null}
+>
+  01:00:00
+</TYText>
+`;
+
+exports[`Countdown components componentWillReceiveProps render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  ellipsizeMode="tail"
+  numberOfLines={1}
+  size="large"
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "color": "#333",
+        "fontSize": 24,
+      },
+      Object {
+        "color": "#132412",
+      },
+    ]
+  }
+  type="paragraph"
+  weight={null}
+>
+  01:00:00
+</TYText>
+`;
+
+exports[`Countdown components componentWillReceiveProps render 2`] = `
+<TYText
+  align={null}
+  color={null}
+  ellipsizeMode="tail"
+  numberOfLines={1}
+  size="large"
+  style={
+    Array [
+      Object {
+        "alignSelf": "stretch",
+        "color": "#333",
+        "fontSize": 24,
+      },
+      Object {
+        "color": "#132412",
+      },
+    ]
+  }
+  type="paragraph"
+  weight={null}
+>
+  01:00:00
+</TYText>
+`;
