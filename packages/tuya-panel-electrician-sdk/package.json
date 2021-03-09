@@ -1,0 +1,40 @@
+{
+  "name": "@tuya/tuya-panel-electrician-sdk",
+  "version": "1.0.0",
+  "description": "涂鸦电工业务组件库",
+  "main": "./lib/index.js",
+  "types": "./@types/index.d.ts",
+  "scripts": {
+    "dev": "tsc -w",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "build": "tsc -d",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/color": "0.12.1",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
+    "color": "0.11.4",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react-addons-shallow-compare": "^15.6.2",
+    "style-equal": "^1.0.0"
+  },
+  "peerDependencies": {
+    "tuya-panel-kit": "^4.1.0",
+    "react": "^16.0.0",
+    "react-native": "^0.51.0",
+    "react-native-svg": "5.5.1"
+  },
+   "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-sdk/issues"
+  },
+  "license": "ISC",
+  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+}
