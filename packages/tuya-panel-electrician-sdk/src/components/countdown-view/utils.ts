@@ -1,6 +1,8 @@
-export const formatTimeValue = (type, value) => value * getTimePlus(type);
+const formatTimeValue = (type, value) => {
+  return value * getTimePlus(type);
+};
 
-export const getTimePlus = type => {
+const getTimePlus = type => {
   let plus = 1;
   switch (type) {
     case 'min':
@@ -14,3 +16,5 @@ export const getTimePlus = type => {
   }
   return plus;
 };
+
+export { formatTimeValue, getTimePlus };
