@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 import React, { PureComponent } from 'react';
 import { View } from 'react-native';
 import { CountdownView } from '@tuya/tuya-panel-electrician-sdk';

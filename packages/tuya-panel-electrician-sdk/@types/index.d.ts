@@ -1,13 +1,5 @@
 import * as React from 'react';
-import {
-  StyleProp,
-  Animated,
-  PanResponderGestureState,
-  GestureResponderEvent,
-  ViewStyle,
-  ColorPropType,
-  ImageStyle,
-} from 'react-native';
+import { StyleProp, ViewStyle } from 'react-native';
 declare module '@tuya/tuya-panel-electrician-sdk' {
   export interface CountdownProps {
     /**
@@ -78,5 +70,131 @@ declare module '@tuya/tuya-panel-electrician-sdk' {
     countdownTextStyle: any;
   }
 
-  export class CountdownView extends React.Component<DrawerProps> {}
+  export class CountdownView extends React.Component<CountdownProps> {}
+
+  type TimeUnitType = 's' | 'min' | 'hour';
+  type CountdownType = 'm' | 'hm';
+  export interface CountdownListProps {
+    /**
+     * @language zh-CN
+     * @description dp标识符集
+     * @defaultValue []
+     */
+    /**
+     * @language en-US
+     * @description Set of DP identifiers
+     * @defaultValue []
+     */
+    dpCodes: string[];
+    /**
+     * @language zh-CN
+     * @description 时间单位
+     * @defaultValue hour
+     */
+    /**
+     * @language en-US
+     * @description Unit of time
+     * @defaultValue hour
+     */
+    timeUnit: Omit<TimeUnitType, 'hour'>;
+    /**
+     * @language zh-CN
+     * @description 倒计时数据最小单位
+     * @defaultValue m
+     */
+    /**
+     * @language en-US
+     * @description Minimal unit of countdown data
+     * @defaultValue m
+     */
+    countdownType: CountdownType;
+  }
+
+  export class CountdownList extends React.Component<CountdownListProps> {}
+
+  export interface SocketViewProps {
+    /**
+     * @language zh-CN
+     * @description 插座按钮样式
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Socket button style
+     * @defaultValue null
+     */
+    socketWrapperStyle: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 插座按钮图标
+     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png'
+     */
+    /**
+     * @language en-US
+     * @description Socket button icon
+     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png'
+     */
+    socketBackgroundImage:
+      | string
+      | number = 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png';
+    /**
+     * @language zh-CN
+     * @description 插座按钮图标大小
+     * @defaultValue { width: 240, height: 240 }
+     */
+    /**
+     * @language en-US
+     * @description Socket button icon size
+     * @defaultValue { width: 240, height: 240 }
+     */
+    socketBackgroundImageSize: { [key: string]: number } = { width: 240, height: 240 };
+    /**
+     * @language zh-CN
+     * @description 插座图标
+     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png'
+     */
+    /**
+     * @language en-US
+     * @description Socket button icon
+     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png'
+     */
+    socketImage:
+      | string
+      | number = 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png';
+    /**
+     * @language zh-CN
+     * @description 插座图标大小
+     * @defaultValue { width: 140, height: 140 }
+     */
+    /**
+     * @language en-US
+     * @description Socket icon size
+     * @defaultValue { width: 140, height: 140 }
+     */
+    socketImageSize: { [key: string]: number } = { width: 140, height: 140 };
+    /**
+     * @language zh-CN
+     * @description 插座图标颜色
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description Color of socket icon
+     * @defaultValue null
+     */
+    socketImageTintColor: string;
+    /**
+     * @language zh-CN
+     * @description 按钮回调
+     * @defaultValue () => {}
+     */
+    /**
+     * @language en-US
+     * @description Button callback
+     * @defaultValue () => {}
+     */
+    onPress: () => void;
+  }
+
+  export class SocketView extends React.Component<SocketViewProps> {}
 }

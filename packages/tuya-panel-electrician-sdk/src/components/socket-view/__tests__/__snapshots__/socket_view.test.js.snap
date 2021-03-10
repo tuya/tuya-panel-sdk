@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocketView components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#123452",
+    }
+  }
+>
+  <ImageBackground
+    imageStyle={
+      Array [
+        Object {
+          "height": 240,
+          "width": 240,
+        },
+      ]
+    }
+    source={
+      Object {
+        "uri": "http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png",
+      }
+    }
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "height": 240,
+          "width": 240,
+        },
+      ]
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png",
+        }
+      }
+      style={
+        Array [
+          Object {
+            "height": 140,
+            "width": 140,
+          },
+          Object {
+            "tintColor": "#123512",
+          },
+        ]
+      }
+    />
+  </ImageBackground>
+</TouchableOpacity>
+`;
