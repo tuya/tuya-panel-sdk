@@ -6,7 +6,7 @@
     },
     "allowJs": true,
     "jsx": "react",
-    "module": "esnext",
+    "module": "commonjs",
     "target": "es2018",
     "moduleResolution": "node",
     "noImplicitAny": false,
