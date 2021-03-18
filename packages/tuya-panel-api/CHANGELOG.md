@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.0.1...@tuya/tuya-panel-api@1.1.0) (2021-03-18)
+
+
+### Features
+
+* Tuya panel electrician api ([bb5f870](https://github.com/tuya/tuya-panel-sdk/commit/bb5f870a7f860684e0f15cfe3ca6fe2e9da7869f))
+
+
+
+
+
 ## 1.0.1 (2021-03-05)
 
 
