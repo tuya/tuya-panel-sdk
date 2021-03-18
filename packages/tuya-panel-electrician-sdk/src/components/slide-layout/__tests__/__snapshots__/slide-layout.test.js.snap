@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocketView components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      Object {
+        "backgroundColor": "#124122",
+      },
+    ]
+  }
+>
+  <ScrollViewMock
+    alwaysBounceVertical={false}
+    bounces={false}
+    onScroll={[Function]}
+    onScrollEndDrag={[Function]}
+    onTouchEnd={[Function]}
+    onTouchStart={[Function]}
+    showsVerticalScrollIndicator={false}
+    stickyHeaderIndices={
+      Array [
+        0,
+      ]
+    }
+  >
+    <AnimatedComponent
+      onLayout={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <View />
+    </AnimatedComponent>
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "zIndex": 20,
+          },
+          Object {
+            "backgroundColor": "#924122",
+          },
+        ]
+      }
+    >
+      <View />
+    </View>
+  </ScrollViewMock>
+</View>
+`;
