@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PushAnimate components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {
+        "height": 100,
+        "width": 100,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "left": 0,
+          "margin": -1,
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 999,
+        },
+        undefined,
+        Object {
+          "transform": Array [
+            Object {
+              "matrix": Array [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+              ],
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="linear-gradient"
+      stops={
+        Object {
+          "0%": "rgba(223,229,232, 0.3)",
+          "100%": "rgba(247,249,250,0.3)",
+        }
+      }
+      style={null}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      <Rect
+        height={100}
+        rx={0}
+        ry={0}
+        width={100}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </AnimatedComponent>
+</View>
+`;

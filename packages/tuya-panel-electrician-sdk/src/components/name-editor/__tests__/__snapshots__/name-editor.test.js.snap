@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nameditor components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "minHeight": 40,
+        "padding": 8,
+      },
+      Object {
+        "backgroundColor": "#981231",
+      },
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    ellipsizeMode="tail"
+    numberOfLines={2}
+    size="large"
+    style={
+      Array [
+        Object {
+          "color": "#333",
+          "fontSize": 24,
+        },
+        Object {
+          "marginRight": 10,
+        },
+        Object {
+          "fontSize": 12,
+        },
+      ]
+    }
+    type="paragraph"
+    weight={null}
+  />
+  <Component
+    color="#812345"
+    d="M512 0a365.714286 365.714286 0 0 1 365.714286 365.714286c0 134.582857-121.929143 354.011429-365.714286 658.285714-243.785143-304.274286-365.714286-523.702857-365.714286-658.285714a365.714286 365.714286 0 0 1 365.714286-365.714286z m0 219.428571a146.285714 146.285714 0 1 0 0 292.571429 146.285714 146.285714 0 0 0 0-292.571429z"
+    size={12}
+  />
+</TouchableOpacity>
+`;
