@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountdownList components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+    }
+  }
+>
+  <TYFlatList
+    data={Array []}
+    flatListRef={null}
+    separatorStyle={null}
+    useART={false}
+  />
+</View>
+`;
+
+exports[`CountdownList components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+    }
+  }
+>
+  <TYFlatList
+    data={Array []}
+    flatListRef={null}
+    separatorStyle={null}
+    useART={false}
+  />
+</View>
+`;
+
+exports[`CountdownList components componentWillReceiveProps render 2`] = `
+<View
+  style={
+    Object {
+      "alignSelf": "stretch",
+    }
+  }
+>
+  <TYFlatList
+    data={Array []}
+    flatListRef={null}
+    separatorStyle={null}
+    useART={false}
+  />
+</View>
+`;
