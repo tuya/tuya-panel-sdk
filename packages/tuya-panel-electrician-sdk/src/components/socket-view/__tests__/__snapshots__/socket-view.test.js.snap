@@ -58,3 +58,54 @@ exports[`SocketView components basic render 1`] = `
   </ImageBackground>
 </TouchableOpacity>
 `;
+
+exports[`SocketView components basic render2 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "#123452",
+    }
+  }
+>
+  <ImageBackground
+    imageStyle={
+      Array [
+        Object {
+          "height": 240,
+          "width": 240,
+        },
+      ]
+    }
+    source={200}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "height": 240,
+          "width": 240,
+        },
+      ]
+    }
+  >
+    <Image
+      source={13}
+      style={
+        Array [
+          Object {
+            "height": 140,
+            "width": 140,
+          },
+          Object {
+            "tintColor": "#123512",
+          },
+        ]
+      }
+    />
+  </ImageBackground>
+</TouchableOpacity>
+`;

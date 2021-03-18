@@ -4,16 +4,14 @@ import CountdownList from '../index';
 
 describe('CountdownList components', () => {
   it('basic render', () => {
-    const wrapper = shallow(
-      <CountdownList dpCodes={['countdown_1']} timeUnit="hour" countdownType="hm" />
-    );
+    const wrapper = shallow(<CountdownList dpCodes={[]} timeUnit="hour" countdownType="hm" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('componentWillReceiveProps render', () => {
-    let dpCodes = ['countdown_1'];
+    let dpCodes = [];
     const wrapper = shallow(<CountdownList dpCodes={dpCodes} timeUnit="hour" countdownType="hm" />);
-    dpCodes = ['countdown_2'];
+    dpCodes = [];
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ wrapper });
     expect(wrapper).toMatchSnapshot();
