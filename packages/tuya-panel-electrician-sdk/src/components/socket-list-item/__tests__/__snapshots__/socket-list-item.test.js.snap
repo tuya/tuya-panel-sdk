@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SocketView components basic render 1`] = `
+exports[`SocketListItem components basic render 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
   onPress={[Function]}

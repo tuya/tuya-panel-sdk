@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nameditor components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "backgroundColor": "#FFFFFF",
+        "borderRadius": 32,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 686,
+      },
+      Object {
+        "backgroundColor": "#129012",
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 144,
+          "justifyContent": "space-between",
+          "paddingHorizontal": 32,
+          "width": 686,
+        },
+        Object {
+          "backgroundColor": "#983124",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "flex-start",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#00B294",
+              "borderRadius": 36,
+              "height": 72,
+              "justifyContent": "center",
+              "marginRight": 32,
+              "width": 72,
+            },
+            Object {
+              "backgroundColor": "#812345",
+            },
+          ]
+        }
+      >
+        <Image
+          source="M512 0a365.714286 365.714286 0 0 1 365.714286 365.714286c0 134.582857-121.929143 354.011429-365.714286 658.285714-243.785143-304.274286-365.714286-523.702857-365.714286-658.285714a365.714286 365.714286 0 0 1 365.714286-365.714286z m0 219.428571a146.285714 146.285714 0 1 0 0 292.571429 146.285714 146.285714 0 0 0 0-292.571429z"
+          style={
+            Object {
+              "tintColor": "#ffffff",
+            }
+          }
+        />
+      </View>
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+              "color": "#333333",
+              "fontSize": 32,
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "#333333",
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        title
+      </TYText>
+    </View>
+    <Component
+      color="#812345"
+      d="M512 0a365.714286 365.714286 0 0 1 365.714286 365.714286c0 134.582857-121.929143 354.011429-365.714286 658.285714-243.785143-304.274286-365.714286-523.702857-365.714286-658.285714a365.714286 365.714286 0 0 1 365.714286-365.714286z m0 219.428571a146.285714 146.285714 0 1 0 0 292.571429 146.285714 146.285714 0 0 0 0-292.571429z"
+      size={20}
+    />
+  </TouchableOpacity>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "overflow": "hidden",
+          "width": 686,
+        },
+        Object {
+          "height": 0,
+        },
+        Object {
+          "backgroundColor": "#129087",
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>
+</View>
+`;

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 const formatTimeValue = (type, value) => {
   return value * getTimePlus(type);
 };
