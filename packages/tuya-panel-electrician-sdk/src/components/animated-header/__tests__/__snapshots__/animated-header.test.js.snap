@@ -1,0 +1,302 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimsatedHeader components AnimatedHeader render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F8F8F8",
+      "flex": 1,
+      "height": 1334,
+      "justifyContent": "flex-start",
+      "width": 750,
+    }
+  }
+>
+  <Header
+    headerTextColor="#333333"
+    iconPath={null}
+    opacity={1}
+    rightDisable={false}
+    setChange={[Function]}
+    tintColor="#272929"
+    title="title"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "height": 1334,
+        "width": 750,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`AnimsatedHeader components Header render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(34,35,67,.3)",
+          "width": 750,
+        },
+        Object {
+          "height": 88,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#FFFFFF",
+          "flexDirection": "row",
+          "height": 88,
+          "justifyContent": "space-between",
+          "paddingLeft": 22,
+          "paddingRight": 24,
+          "paddingTop": 44,
+          "width": 750,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          onPress={[Function]}
+          style={
+            Object {
+              "alignItems": "flex-start",
+              "height": 80,
+              "justifyContent": "center",
+              "width": 80,
+            }
+          }
+        >
+          <Component
+            color="#333333"
+            name="backIos"
+            size={18}
+          />
+        </TouchableOpacity>
+      </AnimatedComponent>
+      <TYText
+        align={null}
+        color={null}
+        numberOfLines={1}
+        size={null}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#333",
+            "fontSize": 17,
+            "fontWeight": "bold",
+            "maxWidth": 560,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        title
+      </TYText>
+      <AnimatedComponent
+        style={
+          Object {
+            "opacity": 1,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`AnimsatedHeader components TopAnimation no content render 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "alignSelf": "center",
+      "bottom": 0,
+      "flex": 1,
+      "height": 1334,
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 750,
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,.4)",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,.4)",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "height": 682,
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 300,
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>
+</AnimatedComponent>
+`;
+
+exports[`AnimsatedHeader components TopAnimation render 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "alignSelf": "center",
+      "bottom": 0,
+      "flex": 1,
+      "height": 1334,
+      "left": 0,
+      "position": "absolute",
+      "top": 0,
+      "width": 750,
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,.4)",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 750,
+        },
+        Object {
+          "opacity": 1,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,.4)",
+          "bottom": 0,
+          "flex": 1,
+          "height": 1334,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#FFFFFF",
+          "height": 682,
+          "overflow": "hidden",
+          "position": "absolute",
+          "top": 0,
+          "width": 750,
+        },
+        Object {
+          "height": 300,
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>
+</AnimatedComponent>
+`;
+
+exports[`AnimsatedHeader components unmount AnimsatedHeader 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#F8F8F8",
+      "flex": 1,
+      "height": 1334,
+      "justifyContent": "flex-start",
+      "width": 750,
+    }
+  }
+>
+  <Header
+    headerTextColor="#333333"
+    iconPath="M754.773333 170.666667a64 64 0 0 1 42.581334 111.744L614.4 445.781333l0.042667 406.186667a64 64 0 0 1-57.856 63.701333l-6.144 0.298667a64 64 0 0 1-39.68-13.738667l-119.466667-94.336a64 64 0 0 1-24.32-50.218666l-0.042667-314.410667-152.021333-165.248a64 64 0 0 1-0.853333-85.76l4.608-4.693333A64 64 0 0 1 261.930667 170.666667z m-55.978666 85.333333H310.570667l130.432 141.781333a42.666667 42.666667 0 0 1 10.922666 23.594667L452.266667 426.666667l-0.042667 320.64 76.8 60.629333L529.066667 426.666667a42.666667 42.666667 0 0 1 10.624-28.16l3.626666-3.669334L698.794667 256zM853.333333 736a32 32 0 0 1 4.352 63.701333L853.333333 800h-128a32 32 0 0 1-4.352-63.701333L725.333333 736h128z m0-128a32 32 0 0 1 4.352 63.701333L853.333333 672h-128a32 32 0 0 1-4.352-63.701333L725.333333 608h128z m0-128a32 32 0 0 1 4.352 63.701333L853.333333 544h-128a32 32 0 0 1-4.352-63.701333L725.333333 480h128z"
+    opacity={1}
+    rightDisable={false}
+    setChange={[Function]}
+    tintColor="#272929"
+    title="title"
+  />
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "height": 1334,
+        "width": 750,
+      }
+    }
+  />
+</View>
+`;
