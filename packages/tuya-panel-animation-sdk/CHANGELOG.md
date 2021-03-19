@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.0.1...@tuya/tuya-panel-animation-sdk@1.1.0) (2021-03-18)
+
+
+### Features
+
+* **Countdown:** fix confilt ([f6ccd75](https://github.com/tuya/tuya-panel-sdk/commit/f6ccd755435a0ac6b898e1eae304b8db2c512640))
+
+
+
+
+
 ## 1.0.1 (2021-03-05)
 
 
