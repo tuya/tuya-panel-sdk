@@ -37,7 +37,7 @@ const TwoPir: React.FC<TwoPirProps> & { defaultProps: Partial<TwoPirProps> } = p
         <TouchableOpacity
           style={[styles.twoPirPieBox, { alignItems: 'flex-end' }]}
           activeOpacity={0.8}
-          onPress={() => props.changePir(dpCodeA, dpCodeAValue)}
+          onPress={() => props.onChangePir(dpCodeA, dpCodeAValue)}
         >
           <Image
             source={Res.twoPirLeftPie}
@@ -72,7 +72,7 @@ const TwoPir: React.FC<TwoPirProps> & { defaultProps: Partial<TwoPirProps> } = p
         <TouchableOpacity
           style={[styles.twoPirPieBox, { alignItems: 'flex-start' }]}
           activeOpacity={0.8}
-          onPress={() => props.changePir(dpCodeB, dpCodeBValue)}
+          onPress={() => props.onChangePir(dpCodeB, dpCodeBValue)}
         >
           <Image
             source={Res.twoPirRightPie}

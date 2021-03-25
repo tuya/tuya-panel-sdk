@@ -19,33 +19,46 @@ const IpcPir: React.FC = () => {
 
   return (
     <ScrollView
+      scrollEnabled
       contentContainerStyle={styles.TYIpcPirPage}
       showsVerticalScrollIndicator={false}
       alwaysBounceVertical={false}
     >
       <TYText style={styles.descTxt} text="Description: Single area control" />
+      {/* <TYText style={styles.descTxt} text="描述: 单个告警区域设置" /> */}
       <TYIpcPir
         title="Set PIR alarm area"
+        // title="设置告警区域"
         onChangePir={onChangePir}
         dpCodeAValue={dpCodeAValue}
         pieNumber={1}
+        onText="开"
+        offText="关"
       />
       <TYText style={styles.descTxt} text="Description: Two area control" />
+      {/* <TYText style={styles.descTxt} text="描述: 两片告警区域设置" /> */}
       <TYIpcPir
         title="Set PIR alarm area"
+        // title="设置告警区域"
         onChangePir={onChangePir}
         dpCodeAValue={dpCodeAValue}
         dpCodeBValue={dpCodeBValue}
         pieNumber={2}
+        // onText="开"
+        // offText="关"
       />
       <TYText style={styles.descTxt} text="Description: Three area control" />
+      {/* <TYText style={styles.descTxt} text="描述: 三片告警区域设置" /> */}
       <TYIpcPir
         title="Set PIR alarm area"
+        // title="设置告警区域"
         onChangePir={onChangePir}
         dpCodeAValue={dpCodeAValue}
         dpCodeBValue={dpCodeBValue}
         dpCodeCValue={dpCodeCValue}
         pieNumber={3}
+        // onText="开"
+        // offText="关"
       />
     </ScrollView>
   );
@@ -53,7 +66,7 @@ const IpcPir: React.FC = () => {
 
 const styles = StyleSheet.create({
   TYIpcPirPage: {
-    flex: 1,
+    paddingBottom: 50,
   },
   descTxt: {
     color: 'red',

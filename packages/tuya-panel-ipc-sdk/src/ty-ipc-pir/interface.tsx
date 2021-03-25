@@ -41,7 +41,7 @@ interface commonPir {
   // 图片高度
   pirHeight: number;
   // 对应pir区域控制开关
-  changePir: (param1: string, param2: boolean) => void;
+  onChangePir: (param1: string, param2: boolean) => void;
   // 开启文本
   OnText: string;
   // 关闭文本
