@@ -1,3 +1,4 @@
+import React from 'react';
 import { Text } from 'react-native';
 import { shallow } from 'enzyme';
 import TYIpcLayoutAuto from '../index';
