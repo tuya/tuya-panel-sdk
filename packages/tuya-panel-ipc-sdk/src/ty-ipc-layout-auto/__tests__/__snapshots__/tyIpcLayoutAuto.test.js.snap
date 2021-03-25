@@ -1,0 +1,115 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IpcLayoutAuto components basic render 1`] = `
+<ScrollViewMock
+  alwaysBounceVertical={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#eeeeee",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#eeeeee",
+      },
+    ]
+  }
+  scrollEnabled={false}
+  showsVerticalScrollIndicator={false}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text>
+      Hello Ipc
+    </Text>
+  </View>
+</ScrollViewMock>
+`;
+
+exports[`IpcLayoutAuto components basic render containerHeight less than scrollHeight 1`] = `
+<ScrollViewMock
+  alwaysBounceVertical={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#eeeeee",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#eeeeee",
+      },
+    ]
+  }
+  scrollEnabled={false}
+  showsVerticalScrollIndicator={false}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text>
+      Hello Ipc
+    </Text>
+  </View>
+</ScrollViewMock>
+`;
+
+exports[`IpcLayoutAuto components scrollEnabled is true 1`] = `
+<ScrollViewMock
+  alwaysBounceVertical={false}
+  contentContainerStyle={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#eeeeee",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#eeeeee",
+      },
+    ]
+  }
+  scrollEnabled={false}
+  showsVerticalScrollIndicator={false}
+>
+  <View
+    onLayout={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text>
+      Hello Ipc
+    </Text>
+  </View>
+</ScrollViewMock>
+`;

@@ -7,7 +7,7 @@ import Res from './res';
 
 const { cx } = publicConfig;
 
-const TwoPir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> } = props => {
+const ThreePir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> } = props => {
   const {
     dpCodeA,
     dpCodeAValue,
@@ -44,7 +44,7 @@ const TwoPir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> }
           <TouchableOpacity
             style={[styles.threePirSwitchValueBox, { left: '8%' }]}
             activeOpacity={0.7}
-            onPress={() => props.changePir(dpCodeA, dpCodeAValue)}
+            onPress={() => props.onChangePir(dpCodeA, dpCodeAValue)}
           >
             <TYText
               style={[
@@ -80,7 +80,7 @@ const TwoPir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> }
           <TouchableOpacity
             activeOpacity={0.7}
             style={[styles.threePirSwitchValueBox, { right: '8%' }]}
-            onPress={() => props.changePir(dpCodeC, dpCodeCValue)}
+            onPress={() => props.onChangePir(dpCodeC, dpCodeCValue)}
           >
             <TYText
               style={[
@@ -118,7 +118,7 @@ const TwoPir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> }
           <TouchableOpacity
             style={[styles.threePirSwitchValueBox, { bottom: '5%' }]}
             activeOpacity={0.7}
-            onPress={() => props.changePir(dpCodeB, dpCodeBValue)}
+            onPress={() => props.onChangePir(dpCodeB, dpCodeBValue)}
           >
             <TYText
               style={[
@@ -138,7 +138,7 @@ const TwoPir: React.FC<ThreePirProps> & { defaultProps: Partial<ThreePirProps> }
   );
 };
 
-TwoPir.defaultProps = {
+ThreePir.defaultProps = {
   activeColor: '#fc2f07',
 };
 
@@ -195,4 +195,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default TwoPir;
+export default ThreePir;

@@ -32,7 +32,7 @@ const TYIpcPir: React.FC<TYIpcPirProps> & { defaultProps: Partial<TYIpcPirProps>
     pieBtnTextStyle,
   } = props;
 
-  const changePir = (dpCode, value) => {
+  const onChangePir = (dpCode, value) => {
     props.onChangePir(dpCode, value);
   };
 
@@ -47,35 +47,34 @@ const TYIpcPir: React.FC<TYIpcPirProps> & { defaultProps: Partial<TYIpcPirProps>
       />
       {pieNumber === 1 && (
         <OnePir
-          activeColor={activeColor}
           dpCodeA={dpCodeA}
           dpCodeAValue={dpCodeAValue}
           pirWidth={pirWidth}
           pirHeight={pirHeight}
-          changePir={changePir}
+          onChangePir={onChangePir}
           OnText={OnText}
           OffText={OffText}
           pieBtnTextStyle={pieBtnTextStyle}
+          activeColor={activeColor}
         />
       )}
       {pieNumber === 2 && (
         <TwoPir
-          activeColor={activeColor}
           dpCodeA={dpCodeA}
           dpCodeAValue={dpCodeAValue}
           dpCodeB={dpCodeB}
           dpCodeBValue={dpCodeBValue}
           pirWidth={pirWidth}
           pirHeight={pirHeight}
-          changePir={changePir}
+          onChangePir={onChangePir}
           OnText={OnText}
           OffText={OffText}
           pieBtnTextStyle={pieBtnTextStyle}
+          activeColor={activeColor}
         />
       )}
       {pieNumber === 3 && (
         <ThreePir
-          activeColor={activeColor}
           dpCodeA={dpCodeA}
           dpCodeAValue={dpCodeAValue}
           dpCodeB={dpCodeB}
@@ -84,10 +83,11 @@ const TYIpcPir: React.FC<TYIpcPirProps> & { defaultProps: Partial<TYIpcPirProps>
           dpCodeCValue={dpCodeCValue}
           pirWidth={pirWidth}
           pirHeight={pirHeight}
-          changePir={changePir}
+          onChangePir={onChangePir}
           OnText={OnText}
           OffText={OffText}
           pieBtnTextStyle={pieBtnTextStyle}
+          activeColor={activeColor}
         />
       )}
     </View>
@@ -108,6 +108,7 @@ TYIpcPir.defaultProps = {
   dpCodeC: 'flight_pir_c',
   dpCodeCValue: false,
   pieBtnTextStyle: {},
+  onChangePir: () => {},
 };
 
 export default TYIpcPir;
