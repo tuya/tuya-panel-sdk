@@ -2,7 +2,7 @@
   "name": "@tuya/tuya-panel-ipc-sdk",
   "version": "1.0.3",
   "description": "涂鸦Ipc业务组件库",
-  "main": "./src/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "jest",
     "tscw": "tsc -w",
