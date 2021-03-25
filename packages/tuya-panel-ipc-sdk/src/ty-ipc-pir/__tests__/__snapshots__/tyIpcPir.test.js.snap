@@ -1,0 +1,2353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcPir components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999999",
+          "fontSize": 28,
+          "marginVertical": 30,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    PIR Title
+  </TYText>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": 16,
+        },
+        Object {
+          "tintColor": undefined,
+        },
+      ]
+    }
+  />
+  <OnePir
+    OffText="OFF"
+    OnText="ON"
+    activeColor="#fc2f07"
+    dpCodeA="flight_pir_a"
+    dpCodeAValue={false}
+    onChangePir={[Function]}
+    pieBtnTextStyle={Object {}}
+    pirHeight={260}
+    pirWidth={654}
+  />
+</View>
+`;
+
+exports[`TYIpcPir components one pir component dpcode value is true and color is default 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": "100%",
+        },
+        Object {
+          "tintColor": undefined,
+        },
+      ]
+    }
+  />
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 8,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          Object {
+            "tintColor": "#fc2f07",
+          },
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+            "position": "absolute",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      ON
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcPir components one pir component dpcode value is true and color is not default 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": "100%",
+        },
+        Object {
+          "tintColor": "#eeeeee",
+        },
+      ]
+    }
+  />
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 8,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+            "position": "absolute",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      ON
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcPir components one pir component render one area 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 8,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+            "position": "absolute",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#333",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      OFF
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcPir components one pir component should have onChangePir event 1`] = `
+<View
+  style={
+    Array [
+      Object {},
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 8,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+            "position": "absolute",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#333",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      OFF
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcPir components pieNumber is 2 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999999",
+          "fontSize": 28,
+          "marginVertical": 30,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    PIR Title
+  </TYText>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": 16,
+        },
+        Object {
+          "tintColor": undefined,
+        },
+      ]
+    }
+  />
+  <TwoPir
+    OffText="OFF"
+    OnText="ON"
+    activeColor="#fc2f07"
+    dpCodeA="flight_pir_a"
+    dpCodeAValue={false}
+    dpCodeB="flight_pir_b"
+    dpCodeBValue={false}
+    onChangePir={[Function]}
+    pieBtnTextStyle={Object {}}
+    pirHeight={260}
+    pirWidth={654}
+  />
+</View>
+`;
+
+exports[`TYIpcPir components pieNumber is 3 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999999",
+          "fontSize": 28,
+          "marginVertical": 30,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    PIR Title
+  </TYText>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": 16,
+        },
+        Object {
+          "tintColor": undefined,
+        },
+      ]
+    }
+  />
+  <ThreePir
+    OffText="OFF"
+    OnText="ON"
+    activeColor="#fc2f07"
+    dpCodeA="flight_pir_a"
+    dpCodeAValue={false}
+    dpCodeB="flight_pir_b"
+    dpCodeBValue={false}
+    dpCodeC="flight_pir_c"
+    dpCodeCValue={false}
+    onChangePir={[Function]}
+    pieBtnTextStyle={Object {}}
+    pirHeight={260}
+    pirWidth={654}
+  />
+</View>
+`;
+
+exports[`TYIpcPir components some pir is true 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999999",
+          "fontSize": 28,
+          "marginVertical": 30,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    PIR Title
+  </TYText>
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "resizeMode": "contain",
+          "width": 16,
+        },
+        Object {
+          "tintColor": "#fc2f07",
+        },
+      ]
+    }
+  />
+  <OnePir
+    OffText="OFF"
+    OnText="ON"
+    activeColor="#fc2f07"
+    dpCodeA="flight_pir_a"
+    dpCodeAValue={true}
+    onChangePir={[Function]}
+    pieBtnTextStyle={Object {}}
+    pirHeight={260}
+    pirWidth={654}
+  />
+</View>
+`;
+
+exports[`TYIpcPir components three pir component dpcode value is true and color is default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 40,
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "resizeMode": "contain",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#fc2f07",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "left": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "top": 0,
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#fc2f07",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "right": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "left": "50%",
+        "marginLeft": -110,
+        "position": "absolute",
+        "width": 226,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "top": 0,
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": -28,
+        "position": "absolute",
+        "width": 452,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#fc2f07",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "bottom": "5%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components three pir component dpcode value is true and color is not default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 40,
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "resizeMode": "contain",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#eeeeee",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "left": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "top": 0,
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#eeeeee",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "right": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "left": "50%",
+        "marginLeft": -110,
+        "position": "absolute",
+        "width": 226,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "resizeMode": "contain",
+            "top": 0,
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": -28,
+        "position": "absolute",
+        "width": 452,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": "#eeeeee",
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "bottom": "5%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#fff",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          ON
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components three pir component render three area 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 40,
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "left": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "right": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "left": "50%",
+        "marginLeft": -110,
+        "position": "absolute",
+        "width": 226,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": -28,
+        "position": "absolute",
+        "width": 452,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "bottom": "5%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components three pir component should have onChangePir event 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "marginBottom": 40,
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "left": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {},
+        Object {
+          "width": 150,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "right": "8%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "left": "50%",
+        "marginLeft": -110,
+        "position": "absolute",
+        "width": 226,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "bottom": -28,
+        "position": "absolute",
+        "width": 452,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 8,
+          "justifyContent": "center",
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+        }
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "100%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TouchableOpacity
+        activeOpacity={0.7}
+        onPress={[Function]}
+        style={
+          Array [
+            Object {
+              "position": "absolute",
+            },
+            Object {
+              "bottom": "5%",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "fontSize": 24,
+                "paddingHorizontal": 36,
+                "paddingVertical": 16,
+                "textAlign": "center",
+              },
+              Object {
+                "color": "#333",
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OFF
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components two pir component dpcode value is true and color is default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-end",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": "#fc2f07",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "right": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        ON
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "tintColor": undefined,
+          },
+        ]
+      }
+    />
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-start",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": "#fc2f07",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "left": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        ON
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components two pir component dpcode value is true and color is not default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 0,
+            "top": 0,
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-end",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": "#eeeeee",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "right": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        ON
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "tintColor": "#eeeeee",
+          },
+        ]
+      }
+    />
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-start",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": "#eeeeee",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#fff",
+              "left": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        ON
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components two pir component render two area 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-end",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#333",
+              "right": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        OFF
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-start",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#333",
+              "left": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        OFF
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`TYIpcPir components two pir component should have onChangePir event 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "height": 200,
+        "width": 300,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-end",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#333",
+              "right": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        OFF
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+        },
+        Object {
+          "width": 148,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "bottom": 8,
+            "justifyContent": "center",
+            "left": 0,
+            "position": "absolute",
+            "right": 0,
+          },
+          Object {
+            "alignItems": "flex-start",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "resizeMode": "contain",
+              "width": "92%",
+            },
+            Object {
+              "tintColor": undefined,
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+              "position": "absolute",
+              "textAlign": "center",
+            },
+            Object {
+              "color": "#333",
+              "left": "40%",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        OFF
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;

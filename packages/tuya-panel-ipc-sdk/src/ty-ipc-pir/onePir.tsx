@@ -32,7 +32,7 @@ const OnePir: React.FC<OnePirProps> & { defaultProps: Partial<OnePirProps> } = p
       <TouchableOpacity
         style={styles.onePirPieBox}
         activeOpacity={0.8}
-        onPress={() => props.changePir(dpCodeA, dpCodeAValue)}
+        onPress={() => props.onChangePir(dpCodeA, dpCodeAValue)}
       >
         <Image
           source={Res.onePirPie}
