@@ -13,7 +13,7 @@
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
     "prepublishOnly": "yarn build",
-    "test": "jest"
+    "test": "jest -u"
   },
   "dependencies": {
     "lodash": "^4.17.11",

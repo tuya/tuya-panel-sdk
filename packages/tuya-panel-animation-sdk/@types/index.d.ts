@@ -847,9 +847,6 @@ export class NumberChange extends React.Component<NumberChangeProps> {}
 
 export interface WaveViewProps {
   /**
-   * @desc
-   */
-  /**
    * @language zh-CN
    * @description 水波高度（百分比）
    * @defaultValue 50
@@ -914,3 +911,119 @@ export interface WaveViewProps {
   };
 }
 export class WaveView extends React.Component<WaveViewProps> {}
+
+export interface ParticleProps {
+  /**
+   * @language zh-CN
+   * @description 容器宽度
+   * @defaultValue 375
+   */
+  /**
+   * @language en-US
+   * @description Container width
+   * @defaultValue 375
+   */
+  width?: number;
+  /**
+   * @language zh-CN
+   * @description 容器高度
+   * @defaultValue 375
+   */
+  /**
+   * @language en-US
+   * @description Container height
+   * @defaultValue 375
+   */
+  height?: number;
+  /**
+   * @language zh-CN
+   * @description 内容样式
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Container style
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue {}
+   */
+  style?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 动画执行一次的持续时间
+   * @defaultValue 3000
+   */
+  /**
+   * @language en-US
+   * @description The duration of the animation execution once
+   * @defaultValue 3000
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 动画是否执行
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether the animation is executed
+   * @defaultValue true
+   */
+  active?: boolean;
+  /**
+   * @language zh-CN
+   * @description 中间空白的部分的半径
+   * @defaultValue 50
+   */
+  /**
+   * @language en-US
+   * @description The radius of the blank part in the middle
+   * @defaultValue 50
+   */
+  radius?: number;
+  /**
+   * @language zh-CN
+   * @description 粒子的运动形式 diffuse: 从中间向外扩散, absorb: 从外向中间吸引
+   * @defaultValue diffuse
+   */
+  /**
+   * @language en-US
+   * @description The motion form of particles diffuse: diffuse outward from the middle, absorb: attract from the outside to the middle
+   * @defaultValue diffuse
+   */
+  type?: 'diffuse' | 'absorb';
+  /**
+   * @language zh-CN
+   * @description 粒子的颜色
+   * @defaultValue #fff
+   */
+  /**
+   * @language en-US
+   * @description Particle color
+   * @defaultValue #fff
+   */
+  color?: string | string[];
+  /**
+   * @language zh-CN
+   * @description 粒子的半径
+   * @defaultValue 2
+   */
+  /**
+   * @language en-US
+   * @description The radius of the particle
+   * @defaultValue 2
+   */
+  dotRadius?: number | number[];
+  /**
+   * @language zh-CN
+   * @description 粒子的总数量
+   * @defaultValue 50
+   */
+  /**
+   * @language en-US
+   * @description Total number of particles
+   * @defaultValue 50
+   */
+  amount?: number;
+}
+export class Particle extends React.Component<ParticleProps> {}
