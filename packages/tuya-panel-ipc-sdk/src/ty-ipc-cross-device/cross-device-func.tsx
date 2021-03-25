@@ -6,15 +6,15 @@ import HomeDevManager from './homeDevNativeApi';
 
 const TYEvent = TYSdk.event;
 
-interface dpsInfo {
+type DpsInfo = {
   dpId: string;
   [propName: string]: string;
-}
+};
 
-interface PutDevDpInfo {
+type PutDevDpInfo = {
   devId: string;
-  dps: dpsInfo;
-}
+  dps: DpsInfo;
+};
 
 // 此功能3.24.5版本以上支持
 class CrossDeviceManagerFun {
