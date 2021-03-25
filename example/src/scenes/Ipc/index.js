@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
+import { TYFlatList } from 'tuya-panel-kit';
 import { produceRouterDatas } from '../../utils';
 import { subRouters } from '../../config/routers';
 import IpcPirScene from './IpcPir';
