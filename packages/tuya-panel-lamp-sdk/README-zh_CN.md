@@ -1,13 +1,13 @@
 ## @tuya/tuya-panel-lamp-sdk
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
 
-Lamp business component library
+涂鸦照明组件库
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-lamp-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-lamp-sdk)
 [![](https://codecov.io/gh/tuya/tuya-panel-sdk/branch/lamp/graph/badge.svg)](https://codecov.io/gh/tuya/tuya-panel-sdk/branches/lamp)
 
-## Install
+## 安装
 
 ```sh
 $ npm install @tuya/tuya-panel-lamp-sdk
@@ -15,10 +15,10 @@ $ npm install @tuya/tuya-panel-lamp-sdk
 $ yarn add @tuya/tuya-panel-lamp-sdk
 ```
 
-## Usage
+## 使用
 
 ```js
 import { HuePicker } from '@tuya/tuya-panel-lamp-sdk'
 ```
 
-## Doc
+## 文档
