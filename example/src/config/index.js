@@ -8,7 +8,7 @@ export const SCOPE_MAP = {
   // '@tuya/tuya-panel-gateway-sdk': 'Gateway',
   // '@tuya/tuya-panel-health-sdk': 'Health',
   // '@tuya/tuya-panel-ipc-sdk': 'Ipc',
-  // '@tuya/tuya-panel-lamp-sdk': 'Lamp',
+  '@tuya/tuya-panel-lamp-sdk': 'Lamp',
   // '@tuya/tuya-panel-remote-sdk': 'Remote',
   // '@tuya/tuya-panel-robot-sdk': 'SweepRobot',
   // '@tuya/tuya-panel-sensor-sdk': 'Sensor',
