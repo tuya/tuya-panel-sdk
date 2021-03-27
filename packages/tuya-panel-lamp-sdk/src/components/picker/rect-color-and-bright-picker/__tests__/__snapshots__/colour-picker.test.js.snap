@@ -1,0 +1,1458 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColourPicker basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RectPicker
+    bgs={
+      Array [
+        Object {
+          "colors": Array [
+            Object {
+              "offset": "0%",
+              "stopColor": "#FFFC00",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "18%",
+              "stopColor": "#C3FF45",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "34%",
+              "stopColor": "#39DDFC",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "51%",
+              "stopColor": "#6382FC",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "67%",
+              "stopColor": "#FF3FD5",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "82%",
+              "stopColor": "#FE491F",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "100%",
+              "stopColor": "#FFB900",
+              "stopOpacity": 1,
+            },
+          ],
+        },
+        Object {
+          "colors": Array [
+            Object {
+              "offset": "0%",
+              "stopColor": "#fff",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "24%",
+              "stopColor": "#fff",
+              "stopOpacity": 0.9,
+            },
+            Object {
+              "offset": "100%",
+              "stopColor": "#fff",
+              "stopOpacity": 0,
+            },
+          ],
+          "x2": "0%",
+          "y2": "100%",
+        },
+      ]
+    }
+    clickEnabled={true}
+    coorToValue={[Function]}
+    disabled={false}
+    hueOffset={60}
+    initData={[Function]}
+    lossColor="rgba(0,0,0,0.2)"
+    lossShow={false}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    showThumbWhenDisabled={true}
+    thumbComponent={[Function]}
+    thumbImg={1}
+    thumbSize={38}
+    touchThumbSize={60}
+    value={
+      Object {
+        "hue": 100,
+        "saturation": 500,
+        "value": 500,
+      }
+    }
+    valueToColor={[Function]}
+    valueToCoor={[Function]}
+  />
+  <Slider
+    activeColor="#fff"
+    clickEnabled={true}
+    disabled={false}
+    fontColor="#000"
+    invalidSwipeDistance={7}
+    max={1000}
+    min={10}
+    minPercent={1}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    trackColor="#313131"
+    value={500}
+  />
+</View>
+`;
+
+exports[`ColourPicker componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      undefined,
+    ]
+  }
+>
+  <RectPicker
+    bgs={
+      Array [
+        Object {
+          "colors": Array [
+            Object {
+              "offset": "0%",
+              "stopColor": "#FFFC00",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "18%",
+              "stopColor": "#C3FF45",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "34%",
+              "stopColor": "#39DDFC",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "51%",
+              "stopColor": "#6382FC",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "67%",
+              "stopColor": "#FF3FD5",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "82%",
+              "stopColor": "#FE491F",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "100%",
+              "stopColor": "#FFB900",
+              "stopOpacity": 1,
+            },
+          ],
+        },
+        Object {
+          "colors": Array [
+            Object {
+              "offset": "0%",
+              "stopColor": "#fff",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "24%",
+              "stopColor": "#fff",
+              "stopOpacity": 0.9,
+            },
+            Object {
+              "offset": "100%",
+              "stopColor": "#fff",
+              "stopOpacity": 0,
+            },
+          ],
+          "x2": "0%",
+          "y2": "100%",
+        },
+      ]
+    }
+    clickEnabled={true}
+    coorToValue={[Function]}
+    disabled={false}
+    hueOffset={60}
+    initData={[Function]}
+    lossColor="rgba(0,0,0,0.2)"
+    lossShow={false}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    showThumbWhenDisabled={true}
+    thumbComponent={[Function]}
+    thumbImg={1}
+    thumbSize={30}
+    touchThumbSize={60}
+    value={
+      Object {
+        "hue": 100,
+        "saturation": 500,
+        "value": 500,
+      }
+    }
+    valueToColor={[Function]}
+    valueToCoor={[Function]}
+  />
+  <Slider
+    activeColor="#fff"
+    clickEnabled={true}
+    disabled={false}
+    fontColor="#000"
+    invalidSwipeDistance={7}
+    max={1000}
+    min={10}
+    minPercent={1}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    trackColor="#313131"
+    value={500}
+  />
+</View>
+`;
+
+exports[`ColourPicker rectPicker mount 1`] = `
+<ColourPicker
+  bgs={
+    Array [
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#FFFC00",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "18%",
+            "stopColor": "#C3FF45",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "34%",
+            "stopColor": "#39DDFC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "51%",
+            "stopColor": "#6382FC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "67%",
+            "stopColor": "#FF3FD5",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "82%",
+            "stopColor": "#FE491F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#FFB900",
+            "stopOpacity": 1,
+          },
+        ],
+      },
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#fff",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "24%",
+            "stopColor": "#fff",
+            "stopOpacity": 0.9,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#fff",
+            "stopOpacity": 0,
+          },
+        ],
+        "x2": "0%",
+        "y2": "100%",
+      },
+    ]
+  }
+  brightOption={Object {}}
+  clickEnabled={true}
+  disabled={false}
+  hideBright={false}
+  hueOffset={60}
+  lossColor="rgba(0,0,0,0.2)"
+  lossShow={false}
+  lossSliderColor="rgba(255,255,255,0.4)"
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  showThumbWhenDisabled={true}
+  thumbComponent={[Function]}
+  thumbImg={1}
+  thumbSize={38}
+  touchThumbSize={60}
+  value={
+    Object {
+      "hue": 100,
+      "saturation": 500,
+      "value": 500,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <RectPicker
+        bgs={
+          Array [
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#FFFC00",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "18%",
+                  "stopColor": "#C3FF45",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "34%",
+                  "stopColor": "#39DDFC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "51%",
+                  "stopColor": "#6382FC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "67%",
+                  "stopColor": "#FF3FD5",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "82%",
+                  "stopColor": "#FE491F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#FFB900",
+                  "stopOpacity": 1,
+                },
+              ],
+            },
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "24%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0.9,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0,
+                },
+              ],
+              "x2": "0%",
+              "y2": "100%",
+            },
+          ]
+        }
+        clickEnabled={true}
+        coorToValue={[Function]}
+        disabled={false}
+        hueOffset={60}
+        initData={[Function]}
+        lossColor="rgba(0,0,0,0.2)"
+        lossShow={false}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        showThumbWhenDisabled={true}
+        thumbComponent={[Function]}
+        thumbImg={1}
+        thumbSize={38}
+        touchThumbSize={60}
+        value={
+          Object {
+            "hue": 100,
+            "saturation": 500,
+            "value": 500,
+          }
+        }
+        valueToColor={[Function]}
+        valueToCoor={[Function]}
+      >
+        <View
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </RectPicker>
+      <Slider
+        activeColor="#fff"
+        clickEnabled={true}
+        disabled={false}
+        fontColor="#000"
+        invalidSwipeDistance={7}
+        max={1000}
+        min={10}
+        minPercent={1}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        trackColor="#313131"
+        value={500}
+      >
+        <View
+          accessibilityLabel="ReactColorPicker_Slider"
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 44,
+                "justifyContent": "center",
+                "marginTop": 2,
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="ReactColorPicker_Slider"
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 44,
+                  "justifyContent": "center",
+                  "marginTop": 2,
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#313131",
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "backgroundColor": "#313131",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#313131",
+                      "height": "100%",
+                      "width": "100%",
+                    },
+                    Object {
+                      "backgroundColor": "#313131",
+                    },
+                  ]
+                }
+              />
+            </View>
+            <AnimatedComponent
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                  },
+                  Object {
+                    "backgroundColor": "#fff",
+                    "width": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "width": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "width": 0,
+                    }
+                  }
+                />
+              </View>
+            </AnimatedComponent>
+          </View>
+        </View>
+      </Slider>
+    </View>
+  </View>
+</ColourPicker>
+`;
+
+exports[`ColourPicker rectPicker mount disable 1`] = `
+<ColourPicker
+  bgs={
+    Array [
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#FFFC00",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "18%",
+            "stopColor": "#C3FF45",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "34%",
+            "stopColor": "#39DDFC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "51%",
+            "stopColor": "#6382FC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "67%",
+            "stopColor": "#FF3FD5",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "82%",
+            "stopColor": "#FE491F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#FFB900",
+            "stopOpacity": 1,
+          },
+        ],
+      },
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#fff",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "24%",
+            "stopColor": "#fff",
+            "stopOpacity": 0.9,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#fff",
+            "stopOpacity": 0,
+          },
+        ],
+        "x2": "0%",
+        "y2": "100%",
+      },
+    ]
+  }
+  brightOption={Object {}}
+  clickEnabled={true}
+  disabled={true}
+  hideBright={false}
+  hueOffset={60}
+  lossColor="rgba(0,0,0,0.2)"
+  lossShow={false}
+  lossSliderColor="rgba(255,255,255,0.4)"
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  showThumbWhenDisabled={true}
+  thumbComponent={[Function]}
+  thumbImg={1}
+  thumbSize={38}
+  touchThumbSize={60}
+  value={
+    Object {
+      "hue": 100,
+      "saturation": 500,
+      "value": 500,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <RectPicker
+        bgs={
+          Array [
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#FFFC00",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "18%",
+                  "stopColor": "#C3FF45",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "34%",
+                  "stopColor": "#39DDFC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "51%",
+                  "stopColor": "#6382FC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "67%",
+                  "stopColor": "#FF3FD5",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "82%",
+                  "stopColor": "#FE491F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#FFB900",
+                  "stopOpacity": 1,
+                },
+              ],
+            },
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "24%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0.9,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0,
+                },
+              ],
+              "x2": "0%",
+              "y2": "100%",
+            },
+          ]
+        }
+        clickEnabled={true}
+        coorToValue={[Function]}
+        disabled={true}
+        hueOffset={60}
+        initData={[Function]}
+        lossColor="rgba(0,0,0,0.2)"
+        lossShow={false}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        showThumbWhenDisabled={true}
+        thumbComponent={[Function]}
+        thumbImg={1}
+        thumbSize={38}
+        touchThumbSize={60}
+        value={
+          Object {
+            "hue": 100,
+            "saturation": 500,
+            "value": 500,
+          }
+        }
+        valueToColor={[Function]}
+        valueToCoor={[Function]}
+      >
+        <View
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </RectPicker>
+      <Slider
+        activeColor="#fff"
+        clickEnabled={true}
+        disabled={false}
+        fontColor="#000"
+        invalidSwipeDistance={7}
+        max={1000}
+        min={10}
+        minPercent={1}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        trackColor="#313131"
+        value={500}
+      >
+        <View
+          accessibilityLabel="ReactColorPicker_Slider"
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 44,
+                "justifyContent": "center",
+                "marginTop": 2,
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="ReactColorPicker_Slider"
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 44,
+                  "justifyContent": "center",
+                  "marginTop": 2,
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#313131",
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "backgroundColor": "#313131",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#313131",
+                      "height": "100%",
+                      "width": "100%",
+                    },
+                    Object {
+                      "backgroundColor": "#313131",
+                    },
+                  ]
+                }
+              />
+            </View>
+            <AnimatedComponent
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                  },
+                  Object {
+                    "backgroundColor": "#fff",
+                    "width": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "width": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "width": 0,
+                    }
+                  }
+                />
+              </View>
+            </AnimatedComponent>
+          </View>
+        </View>
+      </Slider>
+    </View>
+  </View>
+</ColourPicker>
+`;
+
+exports[`ColourPicker slider mount 1`] = `
+<ColourPicker
+  bgs={
+    Array [
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#FFFC00",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "18%",
+            "stopColor": "#C3FF45",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "34%",
+            "stopColor": "#39DDFC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "51%",
+            "stopColor": "#6382FC",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "67%",
+            "stopColor": "#FF3FD5",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "82%",
+            "stopColor": "#FE491F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#FFB900",
+            "stopOpacity": 1,
+          },
+        ],
+      },
+      Object {
+        "colors": Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#fff",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "24%",
+            "stopColor": "#fff",
+            "stopOpacity": 0.9,
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#fff",
+            "stopOpacity": 0,
+          },
+        ],
+        "x2": "0%",
+        "y2": "100%",
+      },
+    ]
+  }
+  brightOption={Object {}}
+  clickEnabled={true}
+  disabled={false}
+  hideBright={false}
+  hueOffset={60}
+  lossColor="rgba(0,0,0,0.2)"
+  lossShow={false}
+  lossSliderColor="rgba(255,255,255,0.4)"
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  showThumbWhenDisabled={true}
+  thumbComponent={[Function]}
+  thumbImg={1}
+  thumbSize={38}
+  touchThumbSize={60}
+  value={
+    Object {
+      "hue": 100,
+      "saturation": 500,
+      "value": 500,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          undefined,
+        ]
+      }
+    >
+      <RectPicker
+        bgs={
+          Array [
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#FFFC00",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "18%",
+                  "stopColor": "#C3FF45",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "34%",
+                  "stopColor": "#39DDFC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "51%",
+                  "stopColor": "#6382FC",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "67%",
+                  "stopColor": "#FF3FD5",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "82%",
+                  "stopColor": "#FE491F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#FFB900",
+                  "stopOpacity": 1,
+                },
+              ],
+            },
+            Object {
+              "colors": Array [
+                Object {
+                  "offset": "0%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "24%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0.9,
+                },
+                Object {
+                  "offset": "100%",
+                  "stopColor": "#fff",
+                  "stopOpacity": 0,
+                },
+              ],
+              "x2": "0%",
+              "y2": "100%",
+            },
+          ]
+        }
+        clickEnabled={true}
+        coorToValue={[Function]}
+        disabled={false}
+        hueOffset={60}
+        initData={[Function]}
+        lossColor="rgba(0,0,0,0.2)"
+        lossShow={false}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        showThumbWhenDisabled={true}
+        thumbComponent={[Function]}
+        thumbImg={1}
+        thumbSize={38}
+        touchThumbSize={60}
+        value={
+          Object {
+            "hue": 100,
+            "saturation": 500,
+            "value": 500,
+          }
+        }
+        valueToColor={[Function]}
+        valueToCoor={[Function]}
+      >
+        <View
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "flex": 1,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "flex": 1,
+                },
+                undefined,
+              ]
+            }
+          />
+        </View>
+      </RectPicker>
+      <Slider
+        activeColor="#fff"
+        clickEnabled={true}
+        disabled={false}
+        fontColor="#000"
+        invalidSwipeDistance={7}
+        max={1000}
+        min={10}
+        minPercent={1}
+        onGrant={[Function]}
+        onMove={[Function]}
+        onPress={[Function]}
+        onRelease={[Function]}
+        trackColor="#313131"
+        value={500}
+      >
+        <View
+          accessibilityLabel="ReactColorPicker_Slider"
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 44,
+                "justifyContent": "center",
+                "marginTop": 2,
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            accessibilityLabel="ReactColorPicker_Slider"
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                  "height": 44,
+                  "justifyContent": "center",
+                  "marginTop": 2,
+                  "width": "100%",
+                },
+                undefined,
+              ]
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#313131",
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "backgroundColor": "#313131",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#313131",
+                      "height": "100%",
+                      "width": "100%",
+                    },
+                    Object {
+                      "backgroundColor": "#313131",
+                    },
+                  ]
+                }
+              />
+            </View>
+            <AnimatedComponent
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                  },
+                  Object {
+                    "backgroundColor": "#fff",
+                    "width": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "width": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "width": 0,
+                    }
+                  }
+                />
+              </View>
+            </AnimatedComponent>
+          </View>
+        </View>
+      </Slider>
+    </View>
+  </View>
+</ColourPicker>
+`;
