@@ -124,8 +124,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     );
     // 进入前台
     // const listen = new NativeEventEmitter(NativeModules.TYRCTCameraManager);
-    // console.log(listen, 'listen');
-    this.foregroundListener = DeviceEventEmitter.addListener('enterForegroundEvent', value => {
+    this.foregroundListener = DeviceEventEmitter.addListener('enterForegroundEvent', () => {
       const {
         isWirless,
         privateMode,
@@ -162,7 +161,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.goToBack = false;
     });
 
-    this.backgroundListener = DeviceEventEmitter.addListener('enterBackgroundEvent', value => {
+    this.backgroundListener = DeviceEventEmitter.addListener('enterBackgroundEvent', () => {
       this.goToBack = true;
       this.onLivePage = false;
       // 先不将此事件开放出去
@@ -184,17 +183,14 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       return false;
     });
     // 监听全屏时屏幕点击事件
-    this.fullScreenPlayerClickListener = DeviceEventEmitter.addListener(
-      'didTapVideoView',
-      value => {
-        const { isFullScreen, hideFullMenu } = this.props;
-        if (isFullScreen) {
-          this.props.onFullScreenTapView(!hideFullMenu);
-        } else {
-          this.props.onNormalScreenTapView();
-        }
+    this.fullScreenPlayerClickListener = DeviceEventEmitter.addListener('didTapVideoView', () => {
+      const { isFullScreen, hideFullMenu } = this.props;
+      if (isFullScreen) {
+        this.props.onFullScreenTapView(!hideFullMenu);
+      } else {
+        this.props.onNormalScreenTapView();
       }
-    );
+    });
     // 监听视频播放展示为按宽还是按高
     this.zoomFreeListener = DeviceEventEmitter.addListener('zoomFree', (value: any) => {
       const { zoomStatus, scaleStatus, currentVideoScale } = value;
@@ -335,7 +331,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     }
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps) {
     if (nextProps.isFullScreen) {
       if (nextProps.fullPlayerWidth < nextProps.fullPlayerHeight) {
         return false;
