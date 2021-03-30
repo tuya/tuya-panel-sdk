@@ -331,7 +331,7 @@ class PlayerManagerFun {
   enableStopTalk = (isTwoTalk: boolean) => {
     !isTwoTalk &&
       CameraManager.enableMute(
-        !isTwoTalk,
+        isTwoTalk,
         () => {
           TYEvent.emit('talkingChangeMute', { voiceStatus: !isTwoTalk ? 'ON' : 'OFF' });
         },
