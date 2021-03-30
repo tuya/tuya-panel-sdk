@@ -55,6 +55,7 @@
     "test:animation": "cd packages/tuya-panel-animation-sdk && yarn test",
     "test:ipc": "cd packages/tuya-panel-ipc-sdk && yarn test",
     "test:elec": "cd packages/tuya-panel-electrician-sdk && yarn test",
+    "test:lamp": "cd packages/tuya-panel-lamp-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "build": "lerna run build",
@@ -62,7 +63,8 @@
     "build:robot": "lerna run build --scope @tuya/tuya-panel-robot-sdk",
     "build:animation": "lerna run build --scope @tuya/tuya-panel-animation-sdk",
     "build:electrician": "lerna run build --scope @tuya/tuya-panel-electrician-sdk",
-    "build:api": "lerna run build --scope @tuya/tuya-panel-api"
+    "build:api": "lerna run build --scope @tuya/tuya-panel-api",
+    "build:lamp": "lerna run build --scope @tuya/tuya-panel-lamp-sdk"
   },
   "config": {
     "commitizen": {
