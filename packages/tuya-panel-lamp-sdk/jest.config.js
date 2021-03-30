@@ -12,5 +12,6 @@ module.exports = {
   coverageDirectory: '<rootDir>/packages/tuya-panel-lamp-sdk/coverage/',
   collectCoverageFrom: [
     '<rootDir>/packages/tuya-panel-lamp-sdk/src/components/picker/**/*.[jt]s?(x)',
+    '!<rootDir>/packages/tuya-panel-lamp-sdk/src/components/picker/rect-color-and-bright-picker/icons/index.ts',
   ],
 };
