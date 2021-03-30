@@ -29,3 +29,8 @@ jobs:
         with:
           override_branch: electrician
           directory: ./packages/tuya-panel-electrician-sdk/coverage/
+      - name: Upload lamp coverage to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          override_branch: lamp
+          directory: ./packages/tuya-panel-lamp-sdk/coverage/
