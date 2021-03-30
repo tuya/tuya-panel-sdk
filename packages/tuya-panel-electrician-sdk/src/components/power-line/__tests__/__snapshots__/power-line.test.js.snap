@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PushAnimate components basic render 1`] = `
+<AnimatedComponent
+  style={
+    Object {
+      "height": 25,
+      "opacity": 1,
+      "width": 120,
+    }
+  }
+>
+  <Svg
+    height="25"
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 120 25"
+    width="120"
+  >
+    <G
+      fill="none"
+    >
+      <AnimatedComponent
+        d="M0 12 H26.57 L35.19 0 L42.56 22.24 L49.66 12 H67.78 L74.02 2.76 L80.43 15.91 L88.03 9.98 H102.89"
+        stroke="#981241"
+        strokeDasharray="80,200"
+        strokeDashoffset={280}
+        strokeWidth="2"
+      />
+    </G>
+  </Svg>
+</AnimatedComponent>
+`;
