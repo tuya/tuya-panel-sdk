@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocketView components basic render 1`] = `
+<View
+  style={
+    Object {
+      "width": 290,
+    }
+  }
+>
+  <ScrollViewMock
+    contentContainerStyle={
+      Object {
+        "alignItems": "center",
+        "paddingRight": 225,
+      }
+    }
+    decelerationRate="fast"
+    horizontal={true}
+    onMomentumScrollEnd={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onScrollBeginDrag={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    showsHorizontalScrollIndicator={false}
+    snapToAlignment="center"
+    snapToInterval={90}
+  />
+</View>
+`;
