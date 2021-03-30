@@ -8,6 +8,7 @@ import JitterAlertAnimatedScene from './jitterAlert';
 import ModeChangeAnimatedScene from './modeChange';
 import NumberChangeAnimatedScene from './numberChange';
 import WaveViewAnimatedScene from './waveView';
+import ParticleAnimatedScene from './particle';
 
 export default class AnimatedScene extends Component {
   static Diffusion = DiffusionAnimatedScene;
@@ -16,6 +17,7 @@ export default class AnimatedScene extends Component {
   static ModeChange = ModeChangeAnimatedScene;
   static NumberChange = NumberChangeAnimatedScene;
   static WaveView = WaveViewAnimatedScene;
+  static Particle = ParticleAnimatedScene;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Animation.+\w*$/.test(r.id)));
