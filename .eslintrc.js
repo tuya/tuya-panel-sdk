@@ -48,9 +48,17 @@ module.exports = {
         'tuya.m.timer.astronomical.add',
         'tuya.m.timer.astronomical.update',
         'tuya.m.timer.astronomical.status.update',
-        'tuya.m.timer.astronomical.remove'
+        'tuya.m.timer.astronomical.remove',
+        'tuya.m.linkage.dev.list',
+        'tuya.m.linkage.rule.brief.query',
+        'tuya.m.linkage.associative.entity.id.category.query',
+        'tuya.m.linkage.associative.entity.bind',
+        'tuya.m.linkage.associative.entity.remove',
+        'tuya.m.linkage.rule.trigger',
+        'tuya.m.linkage.rule.enable',
+        'tuya.m.linkage.rule.disable',
       ],
     ],
-    'react/forbid-prop-types': 0
+    'react/forbid-prop-types': 0,
   },
 };
