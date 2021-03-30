@@ -4,6 +4,7 @@ exports[`HueSaturationPicker components basic render 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
+  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -127,6 +128,7 @@ exports[`HueSaturationPicker components componentWillReceiveProps render 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
+  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -246,6 +248,7 @@ exports[`HueSaturationPicker components render touch 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
+  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -365,6 +368,7 @@ exports[`HueSaturationPicker components render touch disabled 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
+  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
