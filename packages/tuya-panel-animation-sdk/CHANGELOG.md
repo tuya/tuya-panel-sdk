@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.1.0...@tuya/tuya-panel-animation-sdk@1.2.0) (2021-03-30)
+
+
+### Features
+
+* **Particle:** Added particle divergence and merge animation ([0490322](https://github.com/tuya/tuya-panel-sdk/commit/0490322a580b17039b6c9824479fb5eed918094a))
+
+
+
+
+
 # [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.0.1...@tuya/tuya-panel-animation-sdk@1.1.0) (2021-03-18)
 
 
