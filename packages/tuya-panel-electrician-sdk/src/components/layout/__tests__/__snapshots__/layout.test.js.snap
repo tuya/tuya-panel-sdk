@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nameditor components basic render 1`] = `
+<View
+  style={
+    Object {
+      "bottom": 0,
+      "left": 0,
+      "position": "absolute",
+      "right": 0,
+      "top": 0,
+      "transform": Array [
+        Object {
+          "translateX": 0,
+        },
+        Object {
+          "translateY": 0,
+        },
+        Object {
+          "scaleX": 1,
+        },
+        Object {
+          "scaleY": 1,
+        },
+        Object {
+          "rotate": "0deg",
+        },
+        Object {
+          "skewX": "0deg",
+        },
+        Object {
+          "skewY": "0deg",
+        },
+      ],
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {
+          "borderRadius": 0,
+          "overflow": "hidden",
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <View />
+  </AnimatedComponent>
+  <AnimateContainerView
+    addAnimateListener={[Function]}
+    duration={1000}
+    name=""
+    onChange={[MockFunction]}
+    onClose={[Function]}
+    onRequestClose={null}
+    onSlideAnimateEnd={[Function]}
+    onSlideAnimateStart={[Function]}
+    showModal={true}
+    style={null}
+    touchEnableArea={100}
+  >
+    <View />
+  </AnimateContainerView>
+</View>
+`;

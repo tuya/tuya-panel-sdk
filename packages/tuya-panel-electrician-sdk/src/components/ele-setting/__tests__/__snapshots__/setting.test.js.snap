@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nameditor components basic render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#F8F8F8",
+      "flex": 1,
+      "paddingTop": 12,
+    }
+  }
+>
+  <TYSectionLists
+    contentContainerStyle={
+      Object {
+        "paddingTop": 0,
+      }
+    }
+    headerStyle={null}
+    keyExtractor={[Function]}
+    sectionListRef={null}
+    sections={Array []}
+    separatorStyle={null}
+    useART={false}
+  />
+</View>
+`;
