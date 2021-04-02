@@ -469,6 +469,7 @@ class PlayerManagerFun {
   */
   enterRnPage = (id, data) => {
     const TYNavigator = TYSdk.Navigator;
+    TYEvent.emit('activeChangeScale', {});
     exitPlayPreview();
     TYNavigator.push({
       id,

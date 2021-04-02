@@ -28,6 +28,7 @@ interface AudioLoadParam {
   fullBackImgStyle: any;
 }
 interface PlayerProps {
+  showZoomInTimes: boolean;
   [propname: string]: any;
 }
 interface RockerDirect {
@@ -122,6 +123,8 @@ export interface TYIpcPlayerProps {
   onChangeStreamStatus: (status: number, errMsg?: any) => any;
   onChangeScreenOrientation: (isFullScreen: boolean) => any;
   onChangeZoomStatus?: (zoomStatus: any) => any;
+  // 如进入前台, 从Rn页面返回才会主动触发, 横竖屏转换
+  onChangeActiveZoomStatus?: (zoomStatus: number) => any;
   onChangeRecording: (isRecording: boolean) => any;
   zoomStatus: number;
   isFullScreen: boolean;
@@ -208,5 +211,7 @@ export const _defaultProps = {
   audioLoadParam: _defaultAudioLoadParam,
   audioLoadText: Strings.getLang('tyIpc_audio_only'),
   enterBackDisConP2P: true,
-  playerProps: {},
+  playerProps: {
+    showZoomInTimes: false,
+  },
 };
