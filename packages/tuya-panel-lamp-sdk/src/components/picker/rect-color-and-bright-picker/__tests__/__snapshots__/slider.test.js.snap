@@ -1,0 +1,456 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider Percent render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "left": 0,
+        "position": "absolute",
+      },
+      Object {
+        "height": undefined,
+        "width": undefined,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "row",
+      }
+    }
+  >
+    <Component
+      d="M512 736a32 32 0 0 1 32 32v32a32 32 0 0 1-64 0v-32a32 32 0 0 1 32-32z m-158.4-65.6a32 32 0 0 1 0 45.248l-22.624 22.624a32 32 0 0 1-45.248-45.248l22.624-22.624a32 32 0 0 1 45.248 0z m362.048 0l22.624 22.624a32 32 0 0 1-45.248 45.248l-22.624-22.624a32 32 0 1 1 45.248-45.248zM512 352a160 160 0 1 1 0 320 160 160 0 0 1 0-320z m-256 128a32 32 0 0 1 0 64H224a32 32 0 0 1 0-64h32z m544 0a32 32 0 0 1 0 64h-32a32 32 0 0 1 0-64h32z m-61.728-194.272a32 32 0 0 1 0 45.248l-22.624 22.624a32 32 0 1 1-45.248-45.248l22.624-22.624a32 32 0 0 1 45.248 0z m-407.296 0l22.624 22.624a32 32 0 1 1-45.248 45.248l-22.624-22.624a32 32 0 0 1 45.248-45.248zM512 192a32 32 0 0 1 32 32v32a32 32 0 0 1-64 0V224a32 32 0 0 1 32-32z"
+      size={32}
+      style={
+        Object {
+          "marginLeft": 16,
+        }
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "marginLeft": 9,
+            "width": 50,
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      50%
+    </TYText>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": undefined,
+        "flexDirection": "row",
+        "height": "100%",
+        "opacity": 1,
+        "overflow": "hidden",
+        "position": "absolute",
+        "width": undefined,
+      }
+    }
+  >
+    <Component
+      d="M512 736a32 32 0 0 1 32 32v32a32 32 0 0 1-64 0v-32a32 32 0 0 1 32-32z m-158.4-65.6a32 32 0 0 1 0 45.248l-22.624 22.624a32 32 0 0 1-45.248-45.248l22.624-22.624a32 32 0 0 1 45.248 0z m362.048 0l22.624 22.624a32 32 0 0 1-45.248 45.248l-22.624-22.624a32 32 0 1 1 45.248-45.248zM512 352a160 160 0 1 1 0 320 160 160 0 0 1 0-320z m-256 128a32 32 0 0 1 0 64H224a32 32 0 0 1 0-64h32z m544 0a32 32 0 0 1 0 64h-32a32 32 0 0 1 0-64h32z m-61.728-194.272a32 32 0 0 1 0 45.248l-22.624 22.624a32 32 0 1 1-45.248-45.248l22.624-22.624a32 32 0 0 1 45.248 0z m-407.296 0l22.624 22.624a32 32 0 1 1-45.248 45.248l-22.624-22.624a32 32 0 0 1 45.248-45.248zM512 192a32 32 0 0 1 32 32v32a32 32 0 0 1-64 0V224a32 32 0 0 1 32-32z"
+      size={32}
+      style={
+        Object {
+          "marginLeft": 16,
+        }
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "marginLeft": 9,
+            "width": 50,
+          },
+          Object {
+            "color": undefined,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      50%
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`Slider basic mount 1`] = `
+<Slider
+  activeColor="#fff"
+  clickEnabled={false}
+  disabled={false}
+  fontColor="#000"
+  invalidSwipeDistance={7}
+  max={1000}
+  min={10}
+  minPercent={1}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  trackColor="#313131"
+  value={100}
+>
+  <View
+    accessibilityLabel="ReactColorPicker_Slider"
+    onLayout={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": 44,
+          "justifyContent": "center",
+          "marginTop": 2,
+          "width": "100%",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      accessibilityLabel="ReactColorPicker_Slider"
+      onLayout={[Function]}
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      pointerEvents="box-only"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 44,
+            "justifyContent": "center",
+            "marginTop": 2,
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#313131",
+              "height": "100%",
+              "width": "100%",
+            },
+            Object {
+              "backgroundColor": "#313131",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "#313131",
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "backgroundColor": "#313131",
+              },
+            ]
+          }
+        />
+      </View>
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#fff",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+            },
+            Object {
+              "backgroundColor": "#fff",
+              "width": 0,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#fff",
+              "height": "100%",
+              "left": 0,
+              "position": "absolute",
+              "width": 0,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "height": "100%",
+                "left": 0,
+                "position": "absolute",
+                "width": 0,
+              }
+            }
+          />
+        </View>
+      </AnimatedComponent>
+    </View>
+  </View>
+</Slider>
+`;
+
+exports[`Slider basic render 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "center",
+        "marginTop": 2,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#313131",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#313131",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#fff",
+          "width": 0,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Slider render touch 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "center",
+        "marginTop": 2,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#313131",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#313131",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#fff",
+          "width": NaN,
+        },
+      ]
+    }
+  />
+  <Percent
+    brightWidth={NaN}
+    colorInner="#000"
+    colorOver="#fff"
+    height={44}
+    percent={10}
+  />
+</View>
+`;
+
+exports[`Slider render touch disabled 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "center",
+        "marginTop": 2,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#313131",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#313131",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "height": "100%",
+          "left": 0,
+          "position": "absolute",
+        },
+        Object {
+          "backgroundColor": "#fff",
+          "width": 0,
+        },
+      ]
+    }
+  />
+</View>
+`;
