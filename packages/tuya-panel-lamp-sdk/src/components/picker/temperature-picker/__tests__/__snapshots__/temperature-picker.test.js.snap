@@ -1,0 +1,521 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TemperaturePicker components basic render 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  max={1000}
+  min={0}
+  offsetAngle={180}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  sideOffset={10}
+  step={1}
+  storageKey="temperature_picker"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "width": 604,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={1000}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 540,
+          "justifyContent": "center",
+          "width": 540,
+        }
+      }
+    >
+      <Svg
+        height={540}
+        preserveAspectRatio="xMidYMid meet"
+        width={540}
+      >
+        <Defs>
+          <LinearGradient
+            id="temperaturePicker_540138"
+            x1="0%"
+            x2="100%"
+            y1="50%"
+            y2="50%"
+          >
+            <Stop
+              key="0"
+              offset="0%"
+              stopColor="#FFCA5C"
+              stopOpacity={1}
+            />
+            <Stop
+              key="1"
+              offset="50%"
+              stopColor="#fff"
+              stopOpacity={1}
+            />
+            <Stop
+              key="2"
+              offset="100%"
+              stopColor="#CDECFE"
+              stopOpacity={1}
+            />
+          </LinearGradient>
+        </Defs>
+        <Path
+          d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M138 270A132 132 0 1 1 402 270A132 132 0 1 1 138 270Z"
+          fill="url(#temperaturePicker_540138)"
+        />
+      </Svg>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+  <View
+    accessibilityLabel="TemperaturePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 604,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`TemperaturePicker components componentWillReceiveProps render 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  max={1000}
+  min={0}
+  offsetAngle={180}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  sideOffset={10}
+  step={1}
+  storageKey="temperature_picker"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "width": 604,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={0}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 540,
+          "justifyContent": "center",
+          "width": 540,
+        }
+      }
+    >
+      <Svg
+        height={540}
+        preserveAspectRatio="xMidYMid meet"
+        width={540}
+      >
+        <Defs>
+          <LinearGradient
+            id="temperaturePicker_540138"
+            x1="0%"
+            x2="100%"
+            y1="50%"
+            y2="50%"
+          >
+            <Stop
+              key="0"
+              offset="0%"
+              stopColor="#FFCA5C"
+              stopOpacity={1}
+            />
+            <Stop
+              key="1"
+              offset="50%"
+              stopColor="#fff"
+              stopOpacity={1}
+            />
+            <Stop
+              key="2"
+              offset="100%"
+              stopColor="#CDECFE"
+              stopOpacity={1}
+            />
+          </LinearGradient>
+        </Defs>
+        <Path
+          d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M138 270A132 132 0 1 1 402 270A132 132 0 1 1 138 270Z"
+          fill="url(#temperaturePicker_540138)"
+        />
+      </Svg>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+  <View
+    accessibilityLabel="TemperaturePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 604,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`TemperaturePicker components render touch 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  max={1000}
+  min={0}
+  offsetAngle={180}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  sideOffset={10}
+  step={1}
+  storageKey="temperature_picker"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "width": 604,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={1000}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 540,
+          "justifyContent": "center",
+          "width": 540,
+        }
+      }
+    >
+      <Svg
+        height={540}
+        preserveAspectRatio="xMidYMid meet"
+        width={540}
+      >
+        <Defs>
+          <LinearGradient
+            id="temperaturePicker_540270"
+            x1="0%"
+            x2="100%"
+            y1="50%"
+            y2="50%"
+          >
+            <Stop
+              key="0"
+              offset="0%"
+              stopColor="#FFCA5C"
+              stopOpacity={1}
+            />
+            <Stop
+              key="1"
+              offset="50%"
+              stopColor="#fff"
+              stopOpacity={1}
+            />
+            <Stop
+              key="2"
+              offset="100%"
+              stopColor="#CDECFE"
+              stopOpacity={1}
+            />
+          </LinearGradient>
+        </Defs>
+        <Path
+          d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M270 270A0 0 0 1 1 270 270A0 0 0 1 1 270 270Z"
+          fill="url(#temperaturePicker_540270)"
+        />
+      </Svg>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+  <View
+    accessibilityLabel="TemperaturePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 604,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`TemperaturePicker components render touch disabled 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  max={1000}
+  min={0}
+  offsetAngle={180}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  sideOffset={10}
+  step={1}
+  storageKey="temperature_picker"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "width": 604,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={1000}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 540,
+          "justifyContent": "center",
+          "width": 540,
+        }
+      }
+    >
+      <Svg
+        height={540}
+        preserveAspectRatio="xMidYMid meet"
+        width={540}
+      >
+        <Defs>
+          <LinearGradient
+            id="temperaturePicker_540138"
+            x1="0%"
+            x2="100%"
+            y1="50%"
+            y2="50%"
+          >
+            <Stop
+              key="0"
+              offset="0%"
+              stopColor="#FFCA5C"
+              stopOpacity={1}
+            />
+            <Stop
+              key="1"
+              offset="50%"
+              stopColor="#fff"
+              stopOpacity={1}
+            />
+            <Stop
+              key="2"
+              offset="100%"
+              stopColor="#CDECFE"
+              stopOpacity={1}
+            />
+          </LinearGradient>
+        </Defs>
+        <Path
+          d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M138 270A132 132 0 1 1 402 270A132 132 0 1 1 138 270Z"
+          fill="url(#temperaturePicker_540138)"
+        />
+      </Svg>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 604,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+  <View
+    accessibilityLabel="TemperaturePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 604,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 604,
+      }
+    }
+  />
+</View>
+`;

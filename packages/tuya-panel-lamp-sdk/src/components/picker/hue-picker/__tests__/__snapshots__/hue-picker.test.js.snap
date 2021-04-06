@@ -1,0 +1,437 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HuePicker components basic render 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  offsetAngle={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "width": 540,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={0}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 540,
+          "width": 540,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FF0000",
+            "borderColor": "#fff",
+            "borderRadius": 56,
+            "borderWidth": 8,
+            "height": 112,
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "translateX": 210,
+              },
+              Object {
+                "translateY": -0,
+              },
+            ],
+            "width": 112,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    accessibilityLabel="huePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 540,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`HuePicker components componentWillReceiveProps render 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  offsetAngle={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "width": 540,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={0}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 540,
+          "width": 540,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FF0000",
+            "borderColor": "#fff",
+            "borderRadius": 56,
+            "borderWidth": 8,
+            "height": 112,
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "translateX": 210,
+              },
+              Object {
+                "translateY": -0,
+              },
+            ],
+            "width": 112,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    accessibilityLabel="huePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 540,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`HuePicker components render touch 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  offsetAngle={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "width": 540,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={300}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 540,
+          "width": 540,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FF00FF",
+            "borderColor": "#fff",
+            "borderRadius": 56,
+            "borderWidth": 8,
+            "height": 112,
+            "opacity": 1,
+            "transform": Array [
+              Object {
+                "translateX": 67.50000000000001,
+              },
+              Object {
+                "translateY": 116.9134295108992,
+              },
+            ],
+            "width": 112,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    accessibilityLabel="huePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 540,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`HuePicker components render touch disabled 1`] = `
+<View
+  disalbedThumbOpacity={0.4}
+  hideThumb={false}
+  offsetAngle={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "width": 540,
+      },
+      undefined,
+    ]
+  }
+  touchOffset={0}
+  touchThumbRadius={0}
+  value={300}
+>
+  <View
+    style={
+      Object {
+        "height": 540,
+        "width": 540,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 540,
+          "width": 540,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FF00FF",
+            "borderColor": "#fff",
+            "borderRadius": 56,
+            "borderWidth": 8,
+            "height": 112,
+            "opacity": 0,
+            "transform": Array [
+              Object {
+                "translateX": 105.00000000000003,
+              },
+              Object {
+                "translateY": 181.8653347947321,
+              },
+            ],
+            "width": 112,
+          },
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    accessibilityLabel="huePicker"
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Object {
+        "height": 540,
+        "left": 0,
+        "position": "absolute",
+        "top": 0,
+        "width": 540,
+      }
+    }
+  />
+</View>
+`;
