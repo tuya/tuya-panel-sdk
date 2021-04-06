@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.0.3...@tuya/tuya-panel-ipc-sdk@1.1.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* fix single mic voice err ([9d20d5c](https://github.com/tuya/tuya-panel-sdk/commit/9d20d5c5b5c385be606b080edba231f2a3e37f38))
+* reset eslint error tip ([60f18e8](https://github.com/tuya/tuya-panel-sdk/commit/60f18e8d701f83d0abb4b76ebd3c4ff87bf8f849))
+* reset package path ([8bdb7d3](https://github.com/tuya/tuya-panel-sdk/commit/8bdb7d300c818f42822758f87569c4bff9599617))
+* type ([b0567f4](https://github.com/tuya/tuya-panel-sdk/commit/b0567f49899e500f01c14d60c855384d763db0bd))
+
+
+### Features
+
+*  add pir, grid, layout, cross module ([eb05766](https://github.com/tuya/tuya-panel-sdk/commit/eb05766167644d3b9264a5470c28008249557500))
+* add Pir component ([aa13f58](https://github.com/tuya/tuya-panel-sdk/commit/aa13f58b149df751a1619aa8b87684708b3b6332))
+
+
+
+
+
 ## 1.0.3 (2021-03-05)
 
 

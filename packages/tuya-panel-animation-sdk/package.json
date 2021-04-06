@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-animation-sdk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "涂鸦动画组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
@@ -13,7 +13,7 @@
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
     "prepublishOnly": "yarn build",
-    "test": "jest"
+    "test": "jest -u"
   },
   "dependencies": {
     "lodash": "^4.17.11",
