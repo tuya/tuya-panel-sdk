@@ -120,6 +120,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.on('getCameraConfig', this.getCameraConfig);
     TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.on('activeChangeScale', this.activeChangeScale);
     TYIpcPlayerManager.startPlay(
       this.props.isWirless,
       this.props.privateMode,
@@ -364,7 +365,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.off('deviceDataChange', this.dpChange);
     TYEvent.off('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.off('getCameraConfig', this.getCameraConfig);
-    TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.off('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.off('activeChangeScale', this.activeChangeScale);
     AppState.removeEventListener('change', this.handleAppStateChange);
     this.foregroundListener.remove();
     this.backPressListener.remove();
@@ -404,6 +406,11 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   jugeIsEnterRnPage = (value: boolean) => {
     this.otherRnPage = value;
+  };
+
+  activeChangeScale = () => {
+    this.props.onChangeActiveZoomStatus &&
+      this.props.onChangeActiveZoomStatus({ zoomStatus: this.state.currentScaleStatus });
   };
 
   dpChange = (data: any) => {
@@ -503,7 +510,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   };
 
   changeZoomInTimes = (scaleStatues: number) => {
-    console.log(scaleStatues, '');
     this.props.onChangeActiveZoomStatus({ zoomStatus: scaleStatues });
   };
 
