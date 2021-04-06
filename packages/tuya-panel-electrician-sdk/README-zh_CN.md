@@ -5,7 +5,7 @@
 电工业务组件库
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-electrician-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-electrician-sdk)
-[![](https://codecov.io/gh/tuya/tuya-panel-sdk/branch/electrician/graph/badge.svg)](https://codecov.io/gh/tuya/tuya-panel-sdk/branches/electrician)
+[![](https://codecov.io/gh/tuya/tuya-panel-sdk/branchs/electrician/graph/badge.svg)](https://codecov.io/gh/tuya/tuya-panel-sdk/branches/electrician)
 
 ## 安装
 
