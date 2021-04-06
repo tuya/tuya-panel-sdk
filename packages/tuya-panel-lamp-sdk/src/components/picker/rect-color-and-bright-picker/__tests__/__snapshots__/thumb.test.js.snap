@@ -1,0 +1,191 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Thumb base render 1`] = `
+<AnimatedComponent
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "position": "absolute",
+      },
+      Object {
+        "height": NaN,
+        "left": NaN,
+        "top": NaN,
+        "transform": Array [
+          Object {
+            "translateX": 10,
+          },
+          Object {
+            "translateY": 10,
+          },
+        ],
+        "width": NaN,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": undefined,
+        "borderRadius": NaN,
+        "height": undefined,
+        "width": undefined,
+      }
+    }
+  />
+  <Image
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {
+          "height": NaN,
+          "width": NaN,
+        },
+      ]
+    }
+  />
+</AnimatedComponent>
+`;
+
+exports[`Thumb basic mount 1`] = `
+<Thumb
+  x={10}
+  y={0}
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": NaN,
+          "left": NaN,
+          "top": NaN,
+          "transform": Array [
+            Object {
+              "translateX": 10,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+          "width": NaN,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": NaN,
+          "justifyContent": "center",
+          "left": NaN,
+          "position": "absolute",
+          "top": NaN,
+          "transform": Array [
+            Object {
+              "translateX": 10,
+            },
+            Object {
+              "translateY": 0,
+            },
+          ],
+          "width": NaN,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "height": NaN,
+            "justifyContent": "center",
+            "left": NaN,
+            "position": "absolute",
+            "top": NaN,
+            "transform": Array [
+              Object {
+                "translateX": 10,
+              },
+              Object {
+                "translateY": 0,
+              },
+            ],
+            "width": NaN,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": undefined,
+              "borderRadius": NaN,
+              "height": undefined,
+              "width": undefined,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "backgroundColor": undefined,
+                "borderRadius": NaN,
+                "height": undefined,
+                "width": undefined,
+              }
+            }
+          />
+        </View>
+        <Image
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": NaN,
+                "width": NaN,
+              },
+            ]
+          }
+        >
+          <Image
+            style={
+              Array [
+                Object {
+                  "bottom": 0,
+                  "left": 0,
+                  "position": "absolute",
+                  "right": 0,
+                  "top": 0,
+                },
+                Object {
+                  "height": NaN,
+                  "width": NaN,
+                },
+              ]
+            }
+          />
+        </Image>
+      </View>
+    </View>
+  </AnimatedComponent>
+</Thumb>
+`;
