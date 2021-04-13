@@ -10,7 +10,7 @@ jobs:
       - name: build
         run: yarn run build
       - name: Run Test
-        run: npx lerna run test:lamp -- --silent --forceExit --passWithNoTests
+        run: cd packages/tuya-panel-lamp-sdk && yarn test --silent --forceExit --passWithNoTests
       - name: Upload lamp coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
