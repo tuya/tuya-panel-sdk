@@ -28,6 +28,8 @@ interface AudioLoadParam {
   fullBackImgStyle: any;
 }
 interface PlayerProps {
+  showZoomInTimes: boolean;
+  maxScaleMultiple: number;
   [propname: string]: any;
 }
 interface RockerDirect {
@@ -96,6 +98,8 @@ const _defaultTimerInterValStyle = {
   timeStyle: {},
 };
 
+const _defaultZoomInTimesStyle = {};
+
 const _defaultTwoMicStyle = {
   topFullPage: {},
   topNormalPage: {},
@@ -122,6 +126,8 @@ export interface TYIpcPlayerProps {
   onChangeStreamStatus: (status: number, errMsg?: any) => any;
   onChangeScreenOrientation: (isFullScreen: boolean) => any;
   onChangeZoomStatus?: (zoomStatus: any) => any;
+  // 如进入前台, 从Rn页面返回才会主动触发, 横竖屏转换, 必传
+  onChangeActiveZoomStatus: (zoomStatus: number) => any;
   onChangeRecording: (isRecording: boolean) => any;
   zoomStatus: number;
   isFullScreen: boolean;
@@ -166,6 +172,7 @@ export interface TYIpcPlayerProps {
   audioLoadText: string;
   enterBackDisConP2P: boolean;
   playerProps: PlayerProps;
+  zoomInTimesStyle: any;
 }
 
 export const _defaultProps = {
@@ -208,5 +215,9 @@ export const _defaultProps = {
   audioLoadParam: _defaultAudioLoadParam,
   audioLoadText: Strings.getLang('tyIpc_audio_only'),
   enterBackDisConP2P: true,
-  playerProps: {},
+  playerProps: {
+    showZoomInTimes: false,
+    maxScaleMultiple: 6,
+  },
+  zoomInTimesStyle: _defaultZoomInTimesStyle,
 };
