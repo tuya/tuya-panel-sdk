@@ -24,6 +24,7 @@ import OneWayMic from './components/oneWayMic';
 import TwoWayMic from './components/twoWayMic';
 import TimeInterval from './components/timeInterval';
 import AudioOnlyMode from './components/audioOnlyMode';
+import ZoomInTimes from './components/zoomInTimes';
 import { TYIpcPlayerProps, _defaultProps } from './interFace';
 import { videoLoadText } from '../ty-ipc-native/cameraData';
 
@@ -50,6 +51,8 @@ interface TYIpcPlayerState {
   isRecording: boolean;
   videoStatus: number;
   zoomVideoStatus: number;
+  currentVideoScale: number;
+  currentScaleStatus: number;
 }
 
 class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
@@ -70,6 +73,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   isFirstJudgeP2p: boolean;
   otherRnPage: boolean;
   props: any;
+  currentScaleStatus: number;
   constructor(props: TYIpcPlayerProps) {
     super(props);
     this.state = {
@@ -89,6 +93,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       isRecording: false,
       videoStatus: -1,
       zoomVideoStatus: props.scaleMultiple === undefined ? 0 : props.scaleMultiple,
+      // 记录App 推送的比例及当前视频播放比例
+      currentScaleStatus: -1,
+      currentVideoScale: 1,
     };
     this.goToBack = false;
     this.onLivePage = true;
@@ -113,6 +120,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.on('getCameraConfig', this.getCameraConfig);
     TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.on('activeChangeScale', this.activeChangeScale);
     TYIpcPlayerManager.startPlay(
       this.props.isWirless,
       this.props.privateMode,
@@ -134,6 +142,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         hightScaleMode,
         channelNum,
       } = this.props;
+      this.resetMulScaleWithBefore();
       if (this.goToBack && !this.otherRnPage) {
         this.onLivePage = true;
         let sendNativePage = 0;
@@ -194,22 +203,23 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // 监听视频播放展示为按宽还是按高
     this.zoomFreeListener = DeviceEventEmitter.addListener('zoomFree', (value: any) => {
       const { zoomStatus, scaleStatus, currentVideoScale } = value;
-      const { isFullScreen, scaleMultiple } = this.props;
-      if (isFullScreen) {
-        return false;
-      }
+      console.log('dsdsd', currentVideoScale);
+      const { scaleMultiple } = this.props;
+      // if (isFullScreen) {
+      //   return false;
+      // }
       const sendStatus = scaleMultiple === undefined ? zoomStatus : scaleStatus;
-      setTimeout(() => {
-        this.setState({
-          zoomVideoStatus: sendStatus,
-        });
-      }, 0);
       this.props.onChangeZoomStatus &&
         scaleMultiple === undefined &&
         this.props.onChangeZoomStatus(sendStatus);
-      this.props.onChangeZoomStatus &&
-        scaleMultiple !== undefined &&
+      if (this.props.onChangeZoomStatus && scaleMultiple !== undefined) {
+        console.log('dsdsd', currentVideoScale);
+        this.setState({
+          currentScaleStatus: scaleStatus,
+          currentVideoScale,
+        });
         this.props.onChangeZoomStatus({ scaleStatus, currentVideoScale });
+      }
     });
     // 安卓3.18监听进入后台的事件
     this.enterPhoneBackgroundListener = DeviceEventEmitter.addListener(
@@ -325,6 +335,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       });
     }
     if (!_.isEqual(scaleMultiple, nextProps.scaleMultiple)) {
+      console.log('sddsds');
+      console.log(nextProps.scaleMultiple);
       this.setState({
         zoomVideoStatus: nextProps.scaleMultiple,
       });
@@ -353,7 +365,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.off('deviceDataChange', this.dpChange);
     TYEvent.off('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.off('getCameraConfig', this.getCameraConfig);
-    TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.off('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.off('activeChangeScale', this.activeChangeScale);
     AppState.removeEventListener('change', this.handleAppStateChange);
     this.foregroundListener.remove();
     this.backPressListener.remove();
@@ -368,8 +381,36 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYIpcPlayerManager.backPlayPreview();
   }
 
+  // 还原设置视频缩放比例值
+  resetMulScaleWithBefore = (value?: number) => {
+    let sendStatus = this.state.currentScaleStatus;
+    // 等于0表示还原为按宽
+    // 等于1表示按高传-2
+    if (value === 0) {
+      sendStatus = -1;
+    } else if (value === 1) {
+      sendStatus = -2;
+    }
+    this.props.onChangeActiveZoomStatus &&
+      this.props.onChangeActiveZoomStatus({ zoomStatus: sendStatus });
+  };
+
+  // 获取视频播放比例值
+  getRealPlayerScale = (isFullScreen, zoomVideoStatus, playerProps) => {
+    // showZoomInTimes 为需要在全屏自己编写全屏比例放大功能时添加
+    if (isFullScreen && isIOS && !playerProps.showZoomInTimes) {
+      return -2;
+    }
+    return zoomVideoStatus;
+  };
+
   jugeIsEnterRnPage = (value: boolean) => {
     this.otherRnPage = value;
+  };
+
+  activeChangeScale = () => {
+    this.props.onChangeActiveZoomStatus &&
+      this.props.onChangeActiveZoomStatus({ zoomStatus: this.state.currentScaleStatus });
   };
 
   dpChange = (data: any) => {
@@ -404,6 +445,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       showLoading: true,
       loadText: Strings.getLang('tyIpc_re_connect_stream'),
     });
+    this.resetMulScaleWithBefore();
     this.onLivePage = true;
     const {
       isWirless,
@@ -467,6 +509,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.prevP2PConnect = p2pContent;
   };
 
+  changeZoomInTimes = (scaleStatues: number) => {
+    this.props.onChangeActiveZoomStatus({ zoomStatus: scaleStatues });
+  };
+
   handleAppStateChange = nextAppState => {
     // 表示手机应用滑到后台,统一断开disconenct, 安卓和ios差异限制, 安卓立即断开,ios5秒后断开
     const { enterBackDisConP2P } = this.props;
@@ -494,6 +540,11 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     const sendData = Boolean(isFullScreen);
     if (isIOS) {
       sendData ? TYNative.disablePopGesture() : TYNative.enablePopGesture();
+    }
+    if (sendData) {
+      this.resetMulScaleWithBefore(1);
+    } else {
+      this.resetMulScaleWithBefore(0);
     }
     this.props.onChangeScreenOrientation(sendData);
   };
@@ -607,6 +658,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       isRecording,
       zoomVideoStatus,
       videoStatus,
+      currentVideoScale,
     } = this.state;
     const {
       isFullScreen,
@@ -637,6 +689,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       audioLoadText,
       clarityStatus,
       playerProps,
+      zoomInTimesStyle,
     } = this.props;
     const realWidth = isFullScreen ? fullPlayerWidth : playerWidth;
     const realHeight = isFullScreen ? fullPlayerHeight : playerHeight;
@@ -648,7 +701,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               setAvailableRockerDirections={rockerDirections}
               onChangePreview={this.onChangePreview}
               action={cameraAction}
-              scaleMultiple={isFullScreen ? -2 : zoomVideoStatus}
+              // scaleMultiple={isFullScreen ? -2 : zoomVideoStatus}
+              scaleMultiple={this.getRealPlayerScale(isFullScreen, zoomVideoStatus, playerProps)}
               style={{
                 width: realWidth,
                 height: realHeight,
@@ -708,6 +762,15 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             twoMicStyle={twoMicStyle}
           />
         )}
+        {/* {playerProps.showZoomInTimes && (
+          <ZoomInTimes
+            onPress={this.changeZoomInTimes}
+            maxScaleMultiple={playerProps.maxScaleMultiple || 6}
+            isFullScreen={isFullScreen}
+            zoomInTimesStyle={zoomInTimesStyle}
+            currentVideoScale={currentVideoScale}
+          />
+        )} */}
         {/* 全屏自定义 */}
         {renderFullComArr &&
           isFullScreen &&
