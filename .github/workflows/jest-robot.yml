@@ -10,7 +10,7 @@ jobs:
       - name: build
         run: yarn run build
       - name: Run Test
-        run: npx lerna run test:robot -- --silent --forceExit --passWithNoTests
+        run: cd packages/tuya-panel-robot-sdk && yarn test --silent --forceExit
       - name: Upload robot coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
