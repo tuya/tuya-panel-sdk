@@ -10,7 +10,7 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
-    "start": "tsc -w",
+    "dev": "tsc -w",
     "build": "tsc -d",
     "prebuild": "../../node_modules/del-cli/cli.js lib/"
   },
