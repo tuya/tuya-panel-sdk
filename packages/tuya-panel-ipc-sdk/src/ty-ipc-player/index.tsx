@@ -203,7 +203,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // 监听视频播放展示为按宽还是按高
     this.zoomFreeListener = DeviceEventEmitter.addListener('zoomFree', (value: any) => {
       const { zoomStatus, scaleStatus, currentVideoScale } = value;
-      console.log('dsdsd', currentVideoScale);
       const { scaleMultiple } = this.props;
       // if (isFullScreen) {
       //   return false;
@@ -213,7 +212,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         scaleMultiple === undefined &&
         this.props.onChangeZoomStatus(sendStatus);
       if (this.props.onChangeZoomStatus && scaleMultiple !== undefined) {
-        console.log('dsdsd', currentVideoScale);
         this.setState({
           currentScaleStatus: scaleStatus,
           currentVideoScale,
@@ -335,8 +333,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       });
     }
     if (!_.isEqual(scaleMultiple, nextProps.scaleMultiple)) {
-      console.log('sddsds');
-      console.log(nextProps.scaleMultiple);
       this.setState({
         zoomVideoStatus: nextProps.scaleMultiple,
       });
@@ -384,12 +380,19 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   // 还原设置视频缩放比例值
   resetMulScaleWithBefore = (value?: number) => {
     let sendStatus = this.state.currentScaleStatus;
+    const { currentVideoScale } = this.state;
     // 等于0表示还原为按宽
     // 等于1表示按高传-2
     if (value === 0) {
       sendStatus = -1;
     } else if (value === 1) {
       sendStatus = -2;
+    } else if (sendStatus === -1) {
+      sendStatus = -1;
+    } else if (sendStatus === -2) {
+      sendStatus = -2;
+    } else {
+      sendStatus = currentVideoScale + Math.random() / 100;
     }
     this.props.onChangeActiveZoomStatus &&
       this.props.onChangeActiveZoomStatus({ zoomStatus: sendStatus });
