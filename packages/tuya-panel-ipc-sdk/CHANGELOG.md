@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.1...@tuya/tuya-panel-ipc-sdk@1.1.2) (2021-04-14)
+
+
+### Bug Fixes
+
+* Modify the method of entering the background ([8507bd8](https://github.com/tuya/tuya-panel-sdk/commit/8507bd84ca286ce7799ae379a822d0406612cde6))
+
+
+
+
+
 ## [1.1.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.0...@tuya/tuya-panel-ipc-sdk@1.1.1) (2021-04-13)
 
 
