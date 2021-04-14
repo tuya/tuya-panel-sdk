@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://registry.code.tuya-inc.top/TuyaRN/panel-rn-sdk/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.0.2...@tuya/tuya-panel-robot-sdk@1.0.3) (2021-04-14)
+
+**Note:** Version bump only for package @tuya/tuya-panel-robot-sdk
+
+
+
+
+
 ## [1.0.2](https://registry.code.tuya-inc.top/TuyaRN/panel-rn-sdk/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.0.1...@tuya/tuya-panel-robot-sdk@1.0.2) (2021-04-13)
 
 **Note:** Version bump only for package @tuya/tuya-panel-robot-sdk

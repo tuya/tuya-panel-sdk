@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-api",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "tuya-panel-api, is a general cloud interface collection library",
   "keywords": [
     "tuya",
