@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.0...@tuya/tuya-panel-ipc-sdk@1.1.1) (2021-04-13)
+
+
+### Bug Fixes
+
+* video scale for android ([333b22b](https://github.com/tuya/tuya-panel-sdk/commit/333b22b87ee8c3cc3cc0c0dc99577ee84be49957))
+* video scale method ([51d3d56](https://github.com/tuya/tuya-panel-sdk/commit/51d3d561ad876d9467bc78ebbfd2429a0acd22f2))
+
+
+### Features
+
+* debugger player ([96dfc1c](https://github.com/tuya/tuya-panel-sdk/commit/96dfc1c8c10cede4460c4befcb22e881ac6d0aa7))
+
+
+
+
+
 # [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.0.3...@tuya/tuya-panel-ipc-sdk@1.1.0) (2021-03-30)
 
 
