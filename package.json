@@ -58,6 +58,7 @@
     "test:lamp": "cd packages/tuya-panel-lamp-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
+    "dev": "lerna run dev --parallel",
     "build": "lerna run build",
     "build:ipc": "lerna run build --parallel --scope @tuya/tuya-panel-ipc-sdk",
     "build:robot": "lerna run build --scope @tuya/tuya-panel-robot-sdk",
