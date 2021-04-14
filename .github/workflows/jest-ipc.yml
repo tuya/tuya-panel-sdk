@@ -10,9 +10,9 @@ jobs:
       - name: build
         run: yarn run build
       - name: Run Test
-        run: npx lerna run test:ipc -- --silent --forceExit --passWithNoTests
+        run: cd packages/tuya-panel-ipc-sdk && yarn test --silent --forceExit --passWithNoTests
       - name: Upload ipc coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
           override_branch: ipc
-          directory: ./packages/tuya-panel-ipc-sdk/coverage/
+          working-directory: ./packages/tuya-panel-ipc-sdk
