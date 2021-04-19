@@ -18,7 +18,9 @@ import ScheduleListElectricianScene from './ScheduleList';
 import ShuffingListElectricianScene from './ShuffingList';
 import SlideLayoutElectricianScene from './SlideLayout';
 import SocketListItemElectricianScene from './SocketListItem';
+
 export default class AnimatedScene extends Component {
+  static Countdown = CountdownElectricianScene;
   static Countdown = CountdownElectricianScene;
   static Socket = SocketElectricianScene;
   static CountdownList = CountdownListElectricianScene;
