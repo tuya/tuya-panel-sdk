@@ -13,12 +13,14 @@ import AnimationCategory from '../scenes/Animation';
 // import Remote from '../scenes/Remote';
 import Ipc from '../scenes/Ipc';
 import Electrician from '../scenes/Electrician';
+import ApiScene from '../scenes/ApiScene';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
 // import BasicInfo from '../../../packages/tuya-panel-sdk/package.json';
 import LampInfo from '../../../packages/tuya-panel-lamp-sdk/package.json';
 import RobotInfo from '../../../packages/tuya-panel-robot-sdk/package.json';
+import ApiSceneInfo from '../../../packages/tuya-panel-api/package.json';
 // import StandardInfo from '../../../packages/tuya-panel-standard-sdk/package.json';
 // // import OSInfo from '../../../packages/tuya-panel-os-sdk/package.json';
 // import SensorInfo from '../../../packages/tuya-panel-sensor-sdk/package.json';
@@ -137,6 +139,12 @@ export const elementsRouters = _.sortBy(
       title: ElectricianInfo.name,
       subTitle: ElectricianInfo.version,
       Scene: Electrician,
+    },
+    {
+      id: 'ApiScene',
+      title: ApiSceneInfo.name,
+      subTitle: ApiSceneInfo.version,
+      Scene: ApiScene,
     },
   ],
   'id'
