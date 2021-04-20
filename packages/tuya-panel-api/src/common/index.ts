@@ -4,6 +4,7 @@ import currencyApi from './currency';
 import alarmApi from './alarm';
 import statApi from './statistic';
 import deviceApi from './device';
+import linkageApi from './linkage';
 
 export default {
   sceneApi,
@@ -12,4 +13,5 @@ export default {
   alarmApi,
   statApi,
   deviceApi,
+  linkageApi,
 };

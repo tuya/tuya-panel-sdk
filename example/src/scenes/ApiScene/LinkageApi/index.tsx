@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import { View, Text } from 'react-native';
-import { electricianApi } from '@tuya/tuya-panel-api';
+import { commonApi } from '@tuya/tuya-panel-api';
 
-const { linkageApi } = electricianApi;
+const { linkageApi } = commonApi;
 const DEVID = 'vdevo161527932465103';
 const RULEID = 'y2zAjojrpeZx9Dtu';
 const BIZDOMIAN = 'wirelessSwitchBindScene';
