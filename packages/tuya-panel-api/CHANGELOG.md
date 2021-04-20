@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.1.2...@tuya/tuya-panel-api@1.2.0) (2021-04-20)
+
+**Note:** Version bump only for package @tuya/tuya-panel-api
+
+
+
+
+
 ## [1.1.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.1.1...@tuya/tuya-panel-api@1.1.2) (2021-04-14)
 
 **Note:** Version bump only for package @tuya/tuya-panel-api
