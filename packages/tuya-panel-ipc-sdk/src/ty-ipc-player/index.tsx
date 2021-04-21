@@ -374,7 +374,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.p2pListener.remove();
     this.sessionDidDisconnectedListener.remove();
     // 退出视频预览界面
-    TYIpcPlayerManager.backPlayPreview();
+    const { backIsNeedDisConnectP2P } = this.props;
+    TYIpcPlayerManager.backPlayPreview(backIsNeedDisConnectP2P);
   }
 
   // 还原设置视频缩放比例值
