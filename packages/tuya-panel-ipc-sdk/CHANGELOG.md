@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.2...@tuya/tuya-panel-ipc-sdk@1.1.3) (2021-04-21)
+
+
+### Features
+
+* 添加是否退出组件需要断开P2P ([d000fab](https://github.com/tuya/tuya-panel-sdk/commit/d000fab459289bf179796f39cfdbee6659b1cd0c))
+
+
+
+
+
 ## [1.1.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.1...@tuya/tuya-panel-ipc-sdk@1.1.2) (2021-04-14)
 
 
