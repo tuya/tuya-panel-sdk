@@ -172,6 +172,7 @@ export interface TYIpcPlayerProps {
   audioLoadText: string;
   enterBackDisConP2P: boolean;
   playerProps: PlayerProps;
+  backIsNeedDisConnectP2P: boolean;
   zoomInTimesStyle: any;
 }
 
@@ -219,5 +220,6 @@ export const _defaultProps = {
     showZoomInTimes: false,
     maxScaleMultiple: 6,
   },
+  backIsNeedDisConnectP2P: true,
   zoomInTimesStyle: _defaultZoomInTimesStyle,
 };
