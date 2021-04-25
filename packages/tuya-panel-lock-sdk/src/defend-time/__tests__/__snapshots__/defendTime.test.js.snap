@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defendTime components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "marginHorizontal": 20,
+        "tintColor": "#59A4F8",
+      }
+    }
+  />
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 24,
+        },
+        Object {
+          "color": "#000",
+        },
+        undefined,
+      ]
+    }
+  >
+    已安全守护
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 24,
+        },
+        Object {
+          "color": "pink",
+          "marginHorizontal": 5,
+        },
+        undefined,
+      ]
+    }
+  >
+    0
+  </Text>
+  <Text
+    style={
+      Array [
+        Object {
+          "color": "#fff",
+          "fontSize": 24,
+        },
+        Object {
+          "color": "#000",
+        },
+        undefined,
+      ]
+    }
+  >
+    天
+  </Text>
+</View>
+`;

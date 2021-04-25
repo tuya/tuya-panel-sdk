@@ -1,0 +1,859 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getPassword components click render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 30,
+            "width": 686,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 32,
+                "maxWidth": 200,
+              },
+              undefined,
+            ]
+          }
+        >
+          clickTitle这个是个超级哦啊就哦啊煎熬煎熬煎熬煎熬的长的为宝宝宝宝宝宝
+        </Text>
+        <Text
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#999999",
+                "fontSize": 24,
+                "marginTop": 12,
+                "maxWidth": 540,
+              },
+              undefined,
+            ]
+          }
+        >
+          clickTip
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+      >
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+              "color": "#333",
+              "fontSize": 28,
+              "lineHeight": 48,
+              "maxWidth": 100,
+            }
+          }
+        />
+        <Component
+          color="#999999"
+          d="M642.174 504.594c7.99 7.241 7.897 17.58-0.334 24.782L332.62 799.945c-8.867 7.759-9.766 21.236-2.007 30.103 7.758 8.867 21.236 9.766 30.103 2.007l309.221-270.569c27.429-24 27.792-64.127 0.89-88.507L360.992 192.192c-8.73-7.912-22.221-7.248-30.133 1.482-7.912 8.73-7.248 22.222 1.482 30.134l309.833 280.786z"
+          size={24}
+        />
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "backgroundColor": "transparent",
+            "height": 100,
+            "position": "absolute",
+            "width": 686,
+          }
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`getPassword components customLinkList render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "justifyContent": "center",
+            "width": 750,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 30,
+              "width": 686,
+            },
+            Object {
+              "borderBottomWidth": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            我是祖先
+          </Text>
+          <Text
+            numberOfLines={2}
+            style={
+              Array [
+                Object {
+                  "color": "#999999",
+                  "fontSize": 24,
+                  "marginTop": 12,
+                  "maxWidth": 540,
+                },
+                undefined,
+              ]
+            }
+          >
+            当我为true时我的后代显示
+          </Text>
+        </View>
+        <ThemedSwitchButton
+          onTintColor="#0076FF"
+          onValueChange={[Function]}
+          theme={null}
+          value={true}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "justifyContent": "center",
+            "width": 750,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 30,
+              "width": 686,
+            },
+            Object {
+              "borderBottomWidth": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            我是大儿子5_1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#999999",
+                  "fontSize": 24,
+                  "marginTop": 12,
+                  "maxWidth": 540,
+                },
+                undefined,
+              ]
+            }
+          >
+            当我为true时我的孩子出现
+          </Text>
+        </View>
+        <ThemedSwitchButton
+          onTintColor="#0076FF"
+          onValueChange={[Function]}
+          theme={null}
+          value={true}
+        />
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`getPassword components customLinkList render 2`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "justifyContent": "center",
+            "width": 750,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 30,
+              "width": 686,
+            },
+            Object {
+              "borderBottomWidth": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            我是祖先
+          </Text>
+          <Text
+            numberOfLines={2}
+            style={
+              Array [
+                Object {
+                  "color": "#999999",
+                  "fontSize": 24,
+                  "marginTop": 12,
+                  "maxWidth": 540,
+                },
+                undefined,
+              ]
+            }
+          >
+            当我为true时我的后代显示
+          </Text>
+        </View>
+        <ThemedSwitchButton
+          onTintColor="#0076FF"
+          onValueChange={[Function]}
+          theme={null}
+          value={true}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "justifyContent": "center",
+            "width": 750,
+          },
+          Object {},
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingVertical": 30,
+              "width": 686,
+            },
+            Object {
+              "borderBottomWidth": 0,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            我是大儿子5_1
+          </Text>
+          <Text
+            style={
+              Array [
+                Object {
+                  "color": "#999999",
+                  "fontSize": 24,
+                  "marginTop": 12,
+                  "maxWidth": 540,
+                },
+                undefined,
+              ]
+            }
+          >
+            当我为true时我的孩子出现
+          </Text>
+        </View>
+        <ThemedSwitchButton
+          onTintColor="#0076FF"
+          onValueChange={[Function]}
+          theme={null}
+          value={true}
+        />
+      </View>
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "justifyContent": "center",
+            "width": 750,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "justifyContent": "center",
+              "width": 750,
+            },
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingVertical": 30,
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 32,
+                    "maxWidth": 200,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              我是二儿子5_2
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#999999",
+                    "fontSize": 24,
+                    "marginTop": 12,
+                    "maxWidth": 540,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              当我的值为2时我的孩子出现
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text
+              numberOfLines={1}
+              style={
+                Object {
+                  "color": "#333",
+                  "fontSize": 28,
+                  "lineHeight": 48,
+                  "maxWidth": 100,
+                }
+              }
+            >
+              222
+            </Text>
+            <Component
+              color="#999999"
+              d="M642.174 504.594c7.99 7.241 7.897 17.58-0.334 24.782L332.62 799.945c-8.867 7.759-9.766 21.236-2.007 30.103 7.758 8.867 21.236 9.766 30.103 2.007l309.221-270.569c27.429-24 27.792-64.127 0.89-88.507L360.992 192.192c-8.73-7.912-22.221-7.248-30.133 1.482-7.912 8.73-7.248 22.222 1.482 30.134l309.833 280.786z"
+              size={24}
+            />
+          </View>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "backgroundColor": "transparent",
+                "height": 100,
+                "position": "absolute",
+                "width": 686,
+              }
+            }
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "justifyContent": "center",
+              "width": 750,
+            },
+            Object {},
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingVertical": 30,
+                "width": 686,
+              },
+              Object {
+                "borderBottomWidth": 0,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#333",
+                    "fontSize": 32,
+                    "maxWidth": 200,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              我是5_2的儿子5_2_1
+            </Text>
+            <Text
+              style={
+                Array [
+                  Object {
+                    "color": "#999999",
+                    "fontSize": 24,
+                    "marginTop": 12,
+                    "maxWidth": 540,
+                  },
+                  undefined,
+                ]
+              }
+            >
+              我还小，也没有孩子
+            </Text>
+          </View>
+          <ThemedSwitchButton
+            onTintColor="#0076FF"
+            onValueChange={[Function]}
+            theme={null}
+            value={false}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`getPassword components switch render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 30,
+            "width": 686,
+          },
+          Object {
+            "borderBottomWidth": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <Text
+          numberOfLines={1}
+          style={
+            Array [
+              Object {
+                "color": "#333",
+                "fontSize": 32,
+                "maxWidth": 200,
+              },
+              undefined,
+            ]
+          }
+        >
+          switch
+        </Text>
+      </View>
+      <ThemedSwitchButton
+        onTintColor="#0076FF"
+        onValueChange={[Function]}
+        theme={null}
+        value={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`getPassword components switchInfo render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 30,
+            "width": 686,
+          },
+          Object {
+            "borderBottomWidth": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            switchInfoTitle
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#999999",
+                "fontSize": 24,
+                "marginTop": 12,
+                "maxWidth": 540,
+              },
+              undefined,
+            ]
+          }
+        >
+          switchInfoTip
+        </Text>
+      </View>
+      <ThemedSwitchButton
+        onTintColor="#0076FF"
+        onValueChange={[Function]}
+        theme={null}
+        value={true}
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`getPassword components switchInfo render 2`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "justifyContent": "center",
+          "width": 750,
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "paddingVertical": 30,
+            "width": 686,
+          },
+          Object {
+            "borderBottomWidth": 0,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Text
+            numberOfLines={1}
+            style={
+              Array [
+                Object {
+                  "color": "#333",
+                  "fontSize": 32,
+                  "maxWidth": 200,
+                },
+                undefined,
+              ]
+            }
+          >
+            switchInfoTitle
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+          >
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+        </View>
+        <Text
+          numberOfLines={2}
+          style={
+            Array [
+              Object {
+                "color": "#999999",
+                "fontSize": 24,
+                "marginTop": 12,
+                "maxWidth": 540,
+              },
+              undefined,
+            ]
+          }
+        >
+          switchInfoTip
+        </Text>
+      </View>
+      <ThemedSwitchButton
+        onTintColor="#0076FF"
+        onValueChange={[Function]}
+        theme={null}
+        value={true}
+      />
+    </View>
+  </View>
+</View>
+`;
