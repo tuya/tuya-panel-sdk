@@ -2376,6 +2376,14 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-native@^0.57.65":
+  version "0.57.65"
+  resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.57.65.tgz#9da4773aaa95924bce42a54a5c19cfd8ffd5022b"
+  integrity sha512-7P5ulTb+/cnwbABWaAjzKmSYkRWeK7UCTfUwHhDpnwxdiL2X/KbdN1sPgo0B2E4zxfYE3MEoHv7FhB8Acfvf8A==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/react" "*"
+
 "@types/react-native@^0.60.21", "@types/react-native@^0.60.26":
   version "0.60.31"
   resolved "https://registry.yarnpkg.com/@types/react-native/-/react-native-0.60.31.tgz#a7af12197f884ad8dd22cda2df9862ed72973ded"
@@ -2419,6 +2427,17 @@
     "@types/react-native" "*"
     react-native-gesture-handler "^1.8.0"
     react-native-safe-area-context "^3.1.8"
+    react-native-svg "5.5.1"
+
+"@types/tuya-panel-kit@^4.0.5":
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/@types/tuya-panel-kit/-/tuya-panel-kit-4.0.5.tgz#1a165da4bf746d610409c1b74c6a8e5e6105c3de"
+  integrity sha512-EHv9xQ/JZBXZxnUo3DSLBLrVxTtQwRFjlU2D0mdlFL/Scu9O6la/vkfmXUJJbRCDpIWT/vOJRy8uaGcbjycWvg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    react-native-gesture-handler "1.8.0"
+    react-native-safe-area-context "3.1.7"
     react-native-svg "5.5.1"
 
 "@types/yargs-parser@*":
@@ -8390,7 +8409,7 @@ junk@^3.1.0:
   resolved "https://registry.yarnpkg.com/junk/-/junk-3.1.0.tgz#31499098d902b7e98c5d9b9c80f43457a88abfa1"
   integrity sha512-pBxcB3LFc8QVgdggvZWyeys+hnrNWg4OcZIU/1X59k5jQdLBlCsYGRQaz234SqoRLTCgMH00fY0xRJH+F9METQ==
 
-keymirror@^0.1.1:
+keymirror@0.1.1, keymirror@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/keymirror/-/keymirror-0.1.1.tgz#918889ea13f8d0a42e7c557250eee713adc95c35"
   integrity sha1-kYiJ6hP40KQufFVyUO7nE63JXDU=
@@ -10876,6 +10895,14 @@ react-native-svg@5.5.1:
   dependencies:
     color "^0.11.1"
     lodash "^4.16.6"
+
+react-native-video@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/react-native-video/-/react-native-video-3.2.1.tgz#7ba3cbdfc5c747b5b00452811e98193824b16ce3"
+  integrity sha512-Xansfoo/to80FwhM1HKlf7pCxDZ5RtV+kG3piCVvsNAhPY4GGwiOGUH9y3Y+mFQIDEWcY8I9j16lsFYAbnue3g==
+  dependencies:
+    keymirror "0.1.1"
+    prop-types "^15.5.10"
 
 react-native@0.59.10:
   version "0.59.10"
