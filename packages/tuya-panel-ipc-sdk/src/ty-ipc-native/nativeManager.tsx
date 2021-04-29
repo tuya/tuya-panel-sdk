@@ -253,7 +253,10 @@ export const exitPlayPreviewByAudioOrOther = () => {
   });
 };
 
-export const judgeP2pISConnectedOperate = (isWirles: boolean) => {
+export const judgeP2pISConnectedOperate = (isWirles: boolean, deviceOnline: boolean) => {
+  if (!deviceOnline) {
+    return false;
+  }
   CameraManager.isConnected(msg => {
     // 如果是低功耗先对其进行唤醒
     if (!msg) {
