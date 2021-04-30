@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.3...@tuya/tuya-panel-ipc-sdk@1.1.4) (2021-04-30)
+
+
+### Bug Fixes
+
+* 修改ios进入后台会去连接P2p的问题 ([08f46d1](https://github.com/tuya/tuya-panel-sdk/commit/08f46d1d5f518cadfb4e688ee717668c1eda4149))
+* 修改ios进入后台会去连接P2p的问题 ([330d9cb](https://github.com/tuya/tuya-panel-sdk/commit/330d9cb5551d5eb862424ac35d53fda9f517a03b))
+
+
+
+
+
 ## [1.1.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.2...@tuya/tuya-panel-ipc-sdk@1.1.3) (2021-04-21)
 
 
