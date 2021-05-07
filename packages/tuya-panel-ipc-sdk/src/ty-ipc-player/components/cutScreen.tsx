@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, TouchableOpacity, StyleSheet, Image } from 'react-native';
 import { TYSdk, TYText, IconFont } from 'tuya-panel-kit';
-import TYIpcPlayerManager from '../../ty-ipc-native';
 import Config from '../config';
 import Strings from '../i18n';
 import Icon from '../res/iconfont.json';
@@ -40,14 +39,17 @@ class CutScreen extends React.PureComponent<CutScreenProps, CutScreenState> {
 
   componentDidMount() {
     TYEvent.on('cutScreenListen', this.cutScreenListen);
+    TYEvent.on('hideScreenListen', this.hideCutScreen);
   }
 
   componentWillUnmount() {
     TYEvent.off('cutScreenListen', this.cutScreenListen);
+    TYEvent.off('hideScreenListen', this.hideCutScreen);
     this.startShowCutTimeout = null;
   }
 
   hideCutScreen = () => {
+    clearTimeout(this.startShowCutTimeout);
     this.setState({
       showCutScreen: false,
     });
@@ -64,10 +66,6 @@ class CutScreen extends React.PureComponent<CutScreenProps, CutScreenState> {
         showCutScreen: false,
       });
     }, 5000);
-  };
-
-  enterAlbum = () => {
-    TYIpcPlayerManager.enterAlbum();
   };
 
   startShowCutTimeout: any;
@@ -101,10 +99,7 @@ class CutScreen extends React.PureComponent<CutScreenProps, CutScreenState> {
                 />
               )}
             </View>
-            <TYText
-              style={[styles.cutTip, cutStyle.descTxtStyle && { ...cutStyle.descTxtStyle }]}
-              numberOfLines={1}
-            >
+            <TYText style={[styles.cutTip, cutStyle.descTxtStyle && { ...cutStyle.descTxtStyle }]}>
               {isVideoCut
                 ? Strings.getLang('tyIpc_record_save')
                 : Strings.getLang('tyIpc_screen_shot_save')}
