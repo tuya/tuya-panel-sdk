@@ -25,7 +25,7 @@ import TwoWayMic from './components/twoWayMic';
 import TimeInterval from './components/timeInterval';
 import AudioOnlyMode from './components/audioOnlyMode';
 import ZoomInTimes from './components/zoomInTimes';
-import { TYIpcPlayerProps, _defaultProps } from './interFace';
+import { TYIpcPlayerProps, _defaultProps } from './interface';
 import { videoLoadText } from '../ty-ipc-native/cameraData';
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
