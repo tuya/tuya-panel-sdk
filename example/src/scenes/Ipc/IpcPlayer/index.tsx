@@ -53,6 +53,14 @@ const IpcPLayer: React.FC = () => {
     TYIpcNative.enterParamAlbum();
   };
 
+  const snapWithParam = () => {
+    TYIpcNative.snapShootWithParams({ rotateMode: 2 });
+  };
+
+  const enableRecordWithParam = () => {
+    TYIpcNative.endRecordWithParams({ rotateMode: 2 });
+  };
+
   const adjustSize = () => {
     let sendScaleStatus = -1;
     if (currentZoomStatus === -1 || currentZoomStatus === 1 || currentZoomStatus === 1.0) {
@@ -106,6 +114,12 @@ const IpcPLayer: React.FC = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.feature} onPress={enterAlubum}>
             <TYText style={styles.featureTxt} text="进入相册" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.feature} onPress={snapWithParam}>
+            <TYText style={styles.featureTxt} text="参数截屏" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.feature} onPress={enableRecordWithParam}>
+            <TYText style={styles.featureTxt} text="参数录制" />
           </TouchableOpacity>
         </View>
       </View>
