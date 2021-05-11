@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { TouchableOpacity, StyleSheet, ScrollView, View, Dimensions } from 'react-native';
+import { TouchableOpacity, StyleSheet, View, Dimensions } from 'react-native';
 import { TYText } from 'tuya-panel-kit';
-import { TYIpcPlayer, TYIpcNative } from '@tuya/tuya-panel-ipc-sdk';
+import { TYIpcPlayer, TYIpcNative, TYIpcVideoBit } from '@tuya/tuya-panel-ipc-sdk';
 
 const { width: winWidth, height: winHeight } = Dimensions.get('screen');
 
@@ -42,7 +42,7 @@ const IpcPLayer: React.FC = () => {
   };
 
   const enterRn = () => {
-    TYIpcNative.enterRnPage('Ipc.IpcPlayerRnPageTest');
+    TYIpcNative.enterRnPage('Ipc.IpcPlayerRnPageTest','');
   };
 
   const enterNativePage = () => {
@@ -65,9 +65,13 @@ const IpcPLayer: React.FC = () => {
     setFullPlayerHeight(Math.ceil(height));
   };
 
+  const NormalTopRight = () => {
+    return <TYIpcVideoBit containerStyle={{ position: 'absolute', right: 0, top: 30 }} />;
+  };
+
   return (
     <View onLayout={_onLayout} style={styles.TYIpcPlayerPage}>
-      <TYText style={styles.descTxt} text="Description: 视频播放" />
+      <TYText style={styles.descTxt} text="Description: 视频播放" /> 
       <View style={styles.playerContainer}>
         <TYIpcPlayer
           onChangeZoomStatus={onChangeZoomStatus}
@@ -83,6 +87,8 @@ const IpcPLayer: React.FC = () => {
             showZoomInTimes: true,
             maxScaleMultiple: 8,
           }}
+          renderNormalComArr={[{ component: NormalTopRight, propData: {}}]}
+          renderFullComArr={[{ component: NormalTopRight, propData: {} }]}
         />
         <View style={styles.featureContain}>
           <TouchableOpacity style={styles.feature} onPress={enterFullScreen}>

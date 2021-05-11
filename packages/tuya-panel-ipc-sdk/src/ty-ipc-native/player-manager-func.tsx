@@ -562,6 +562,19 @@ class PlayerManagerFun {
       );
     });
   };
+
+  // 获取码率接口
+  getVideoBitRateKBPS = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        CameraManager.getVideoBitRateKBPS(data => {
+          resolve(data);
+        });
+      } catch (err) {
+        reject(err);
+      }
+    });
+  };
 }
 
 export default new PlayerManagerFun();

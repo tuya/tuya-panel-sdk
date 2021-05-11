@@ -740,7 +740,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             {...playerProps}
           />
         )}
-
         {renderNormalComArr &&
           !isFullScreen &&
           renderNormalComArr.map((item, index) => {
