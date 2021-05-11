@@ -5,3 +5,4 @@ export { default as TYIpcPir } from './ty-ipc-pir';
 export { default as TYIpcLayoutAuto } from './ty-ipc-layout-auto';
 export { default as TYIpcGrid } from './ty-ipc-grid';
 export { default as TYIpcCrossDevice } from './ty-ipc-cross-device';
+export { default as TYIpcVideoBit } from './ty-ipc-videoBit';

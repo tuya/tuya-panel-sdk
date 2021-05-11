@@ -701,6 +701,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     const realHeight = isFullScreen ? fullPlayerHeight : playerHeight;
     return (
       <View style={styles.tyIpcPlayerPage} onLayout={e => this._onLayout(e)}>
+        {/* <TYIpcRealBit/> */}
+
         {this.props.onChangeZoomStatus ? (
           scaleMultiple !== undefined ? (
             <NativePlayer
@@ -740,11 +742,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             {...playerProps}
           />
         )}
-
         {renderNormalComArr &&
           !isFullScreen &&
           renderNormalComArr.map((item, index) => {
-            return <item.component key={`${index + 1}`} />;
+            return <item.component key={`${index + 1}`} />
           })}
 
         {showTimeInterval && isRecording && (
