@@ -743,7 +743,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         {renderNormalComArr &&
           !isFullScreen &&
           renderNormalComArr.map((item, index) => {
-            return <item.component key={`${index + 1}`} />
+            return <item.component key={`${index + 1}`} />;
           })}
 
         {showTimeInterval && isRecording && (
