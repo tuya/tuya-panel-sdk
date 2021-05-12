@@ -1,0 +1,44 @@
+{
+  "name": "@tuya/tuya-panel-lock-sdk",
+  "version": "1.0.0",
+  "description": "涂鸦门锁业务组件库",
+  "main": "./lib/index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "build": "../../node_modules/.bin/tsc -d",
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "url": "tuya/tuya-panel-sdk",
+    "directory": "packages/tuya-panel-lock-sdk"
+  },
+  "dependencies": {
+    "color": "0.11.4",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react-addons-shallow-compare": "^15.6.2",
+    "react-native-video": "3.2.1",
+    "style-equal": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/color": "0.12.1",
+    "@types/lodash": "^4.14.149",
+    "@types/tuya-panel-kit":"^4.0.5",
+    "@types/react-native": "^0.57.65"
+  },
+  "peerDependencies": {
+    "@tuya-rn/tuya-native-components": "^4.0.0",
+    "react": "^16.0.0",
+    "react-native": "^0.51.0",
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.1.0"
+  },
+  "license": "ISC",
+  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+}
