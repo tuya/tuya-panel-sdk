@@ -25,7 +25,7 @@ import TwoWayMic from './components/twoWayMic';
 import TimeInterval from './components/timeInterval';
 import AudioOnlyMode from './components/audioOnlyMode';
 import ZoomInTimes from './components/zoomInTimes';
-import { TYIpcPlayerProps, _defaultProps } from './interFace';
+import { TYIpcPlayerProps, _defaultProps } from './interface';
 import { videoLoadText } from '../ty-ipc-native/cameraData';
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
@@ -173,9 +173,13 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.backgroundListener = DeviceEventEmitter.addListener('enterBackgroundEvent', () => {
       this.goToBack = true;
       this.onLivePage = false;
+      const { enterBackDisConP2P, showCutScreen } = this.props;
       // 先不将此事件开放出去
       // this.props.addListenerEnterBackgroundEvent();
-      const { enterBackDisConP2P } = this.props;
+      if (showCutScreen) {
+        TYEvent.emit('hideScreenListen', {});
+      }
+
       if (!enterBackDisConP2P) {
         TYIpcPlayerManager.exitPlayPreviewSpecial();
       } else {

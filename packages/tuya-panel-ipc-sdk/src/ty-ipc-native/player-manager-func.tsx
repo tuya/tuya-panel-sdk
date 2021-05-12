@@ -19,6 +19,10 @@ const TYEvent = TYSdk.event;
 
 type clarityDic = 'SS' | 'SD' | 'HD' | 'UD' | 'SSP' | 'AUDIO';
 
+type RandomObj = {
+  [propname: string]: any;
+};
+
 class PlayerManagerFun {
   /*
     播放视频
@@ -412,7 +416,7 @@ class PlayerManagerFun {
 
   /*
     进入native消息中心预览界面
-    3.17及以上        
+    3.17及以上
     devId: 设备id
     msgId: 消息id
     msgTitle: 消息标题
@@ -470,6 +474,7 @@ class PlayerManagerFun {
   enterRnPage = (id, data) => {
     const TYNavigator = TYSdk.Navigator;
     TYEvent.emit('activeChangeScale', {});
+    TYEvent.emit('hideScreenListen', {});
     exitPlayPreview();
     TYNavigator.push({
       id,
@@ -573,6 +578,95 @@ class PlayerManagerFun {
       } catch (err) {
         reject(err);
       }
+    });
+  };
+
+  // 带参数传入截屏，如旋转角度
+  snapShootWithParams = (params?: RandomObj) => {
+    return new Promise((resolve, reject) => {
+      CameraManager.snapShootV1(
+        params || { rotateMode: 0 },
+        msg => {
+          TYEvent.emit('cutScreenListen', {
+            showCutScreen: true,
+            isVideoCut: false,
+            imageSrc: msg.data,
+            localPath: msg.path,
+          });
+          resolve({
+            success: true,
+            imageSrc: msg.data,
+            localPath: msg.path,
+          });
+        },
+        err => {
+          resolve({
+            success: false,
+            errMsg: JSON.stringify(err),
+          });
+        }
+      );
+    });
+  };
+
+  // 带参数开始录制及结束录制, 如旋转角度
+  endRecordWithParams = (params?: RandomObj) => {
+    return new Promise((resolve, reject) => {
+      CameraManager.isRecording(msg => {
+        if (msg) {
+          CameraManager.stopRecordAndFetchPath(
+            imgSource => {
+              TYEvent.emit('cutScreenListen', {
+                showCutScreen: true,
+                isVideoCut: true,
+                imageSrc: imgSource.data,
+                localPath: imgSource.path,
+              });
+              resolve({
+                success: true,
+                imageSrc: imgSource.data,
+                localPath: imgSource.path,
+              });
+              TYEvent.emit('isRecordingListen', {
+                isRecording: false,
+              });
+            },
+            err => {
+              resolve({
+                success: false,
+                isSaveErr: true,
+                errMsg: JSON.stringify(err),
+              });
+              TYEvent.emit('isRecordingListen', {
+                isRecording: false,
+              });
+            }
+          );
+        } else {
+          CameraManager.startRecordV1(
+            params || { rotateMode: 0 },
+            () => {
+              resolve({
+                success: true,
+                isRecording: true,
+              });
+              TYEvent.emit('isRecordingListen', {
+                isRecording: true,
+              });
+            },
+            err => {
+              resolve({
+                success: false,
+                isSaveErr: false,
+                errMsg: JSON.stringify(err),
+              });
+              TYEvent.emit('isRecordingListen', {
+                isRecording: false,
+              });
+            }
+          );
+        }
+      });
     });
   };
 }
