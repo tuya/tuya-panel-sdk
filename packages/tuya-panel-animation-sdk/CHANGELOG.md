@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.2.1...@tuya/tuya-panel-animation-sdk@1.3.0) (2021-05-12)
+
+
+### Features
+
+* add battery component ([#30](https://github.com/tuya/tuya-panel-sdk/issues/30)) ([1c3f259](https://github.com/tuya/tuya-panel-sdk/commit/1c3f259b5b4c916343f7f3ae099d715413cef688))
+* add videoBit components ([85f414b](https://github.com/tuya/tuya-panel-sdk/commit/85f414b2a357d62e78a38ba397e9f64e52f5b925))
+
+
+
+
+
 ## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.2.0...@tuya/tuya-panel-animation-sdk@1.2.1) (2021-04-14)
 
 **Note:** Version bump only for package @tuya/tuya-panel-animation-sdk
