@@ -6,7 +6,7 @@ import LampCategory from '../scenes/Lamp';
 // import SensorCategory from '../scenes/Sensor';
 import SweepRobotCategory from '../scenes/SweepRobot';
 // import Health from '../scenes/Health';
-// import LockCategory from '../scenes/Lock';
+import LockCategory from '../scenes/Lock';
 // import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
 import AnimationCategory from '../scenes/Animation';
@@ -32,7 +32,7 @@ import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.js
 // import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
 import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
 import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
-// import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
+import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
 import { traverseRouters } from '../utils';
 
 const mainRouter = [
@@ -50,18 +50,18 @@ export const elementsRouters = _.sortBy(
     //   subTitle: BasicInfo.version,
     //   Scene: BasicCategory,
     // },
-    // {
-    //   id: 'Lock',
-    //   title: LockInfo.name,
-    //   subTitle: LockInfo.version,
-    //   Scene: LockCategory,
-    // },
     {
-      id: 'Lamp',
-      title: LampInfo.name,
-      subTitle: LampInfo.version,
-      Scene: LampCategory,
+      id: 'Lock',
+      title: LockInfo.name,
+      subTitle: LockInfo.version,
+      Scene: LockCategory,
     },
+    // {
+    //   id: 'Lamp',
+    //   title: LampInfo.name,
+    //   subTitle: LampInfo.version,
+    //   Scene: LampCategory,
+    // },
     // {
     //   id: 'Standard',
     //   title: StandardInfo.name,
