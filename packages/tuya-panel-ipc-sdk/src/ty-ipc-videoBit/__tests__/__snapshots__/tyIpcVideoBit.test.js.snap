@@ -1,0 +1,147 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcVideoBit components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 30,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`TYIpcVideoBit components bit data 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      30
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        kb/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcVideoBit components bitTxtBox render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`TYIpcVideoBit components container render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`TYIpcVideoBit components unit data 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {},
+    ]
+  }
+/>
+`;
+
+exports[`TYIpcVideoBit components unit render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "position": "absolute",
+        "right": 0,
+        "top": 20,
+      },
+      Object {},
+    ]
+  }
+/>
+`;

@@ -33,6 +33,7 @@ class TYIpcPlayerManager extends React.Component {
   static enterMediaPlayerPreview = PlayerManagerFun.enterMediaPlayerPreview;
   static enterDeviceParamAlbum = PlayerManagerFun.enterDeviceParamAlbum;
   static changeClarityAndAudio = PlayerManagerFun.changeClarityAndAudio;
+  static getVideoBitRateKBPS = PlayerManagerFun.getVideoBitRateKBPS;
   static snapShootWithParams = PlayerManagerFun.snapShootWithParams;
   static endRecordWithParams = PlayerManagerFun.endRecordWithParams;
 

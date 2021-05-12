@@ -416,7 +416,7 @@ class PlayerManagerFun {
 
   /*
     进入native消息中心预览界面
-    3.17及以上        
+    3.17及以上
     devId: 设备id
     msgId: 消息id
     msgTitle: 消息标题
@@ -565,6 +565,19 @@ class PlayerManagerFun {
           });
         }
       );
+    });
+  };
+
+  // 获取码率接口
+  getVideoBitRateKBPS = () => {
+    return new Promise((resolve, reject) => {
+      try {
+        CameraManager.getVideoBitRateKBPS(data => {
+          resolve(data);
+        });
+      } catch (err) {
+        reject(err);
+      }
     });
   };
 
