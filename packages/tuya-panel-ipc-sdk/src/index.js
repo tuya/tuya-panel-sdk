@@ -4,4 +4,5 @@ export { default as TYIpcNative } from './ty-ipc-native';
 export { default as TYIpcPir } from './ty-ipc-pir';
 export { default as TYIpcLayoutAuto } from './ty-ipc-layout-auto';
 export { default as TYIpcGrid } from './ty-ipc-grid';
+export { default as TYIpcBattery } from './ty-ipc-battery';
 export { default as TYIpcCrossDevice } from './ty-ipc-cross-device';

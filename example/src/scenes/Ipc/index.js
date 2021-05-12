@@ -7,6 +7,7 @@ import IpcLayoutAutoScene from './IpcLayoutAuto';
 import IpcGrid from './IpcGrid';
 import IpcCrossDevice from './IpcCrossDevice';
 import IpcPlayer from './IpcPlayer';
+import IpcBatteryScene from './IpcBattery';
 import IpcPlayerRnPageTest from './IpcPlayerRnPageTest';
 export default class AnimatedScene extends Component {
   get data() {
@@ -18,6 +19,7 @@ export default class AnimatedScene extends Component {
   static IpcGrid = IpcGrid;
   static IpcCrossDevice = IpcCrossDevice;
   static IpcPlayer = IpcPlayer;
+  static IpcBattery = IpcBatteryScene;
   static IpcPlayerRnPageTest = IpcPlayerRnPageTest;
 
   render() {
