@@ -11,6 +11,13 @@
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "url": "tuya/tuya-panel-sdk",
+    "directory": "packages/tuya-panel-lock-sdk"
+  },
   "dependencies": {
     "color": "0.11.4",
     "lodash": "^4.17.11",
