@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.1.0 (2021-05-12)
+
+**Note:** Version bump only for package @tuya/tuya-panel-lock-sdk
+
+
+
+
+
 ## [1.0.2](https://registry.code.tuya-inc.top/TuyaRN/tuya-native-elements/compare/@tuya-rn/tuya-native-lock-elements@1.0.1...@tuya-rn/tuya-native-lock-elements@1.0.2) (2021-03-01)
 
 **Note:** Version bump only for package @tuya-rn/tuya-native-lock-elements
