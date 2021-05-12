@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-lock-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "涂鸦门锁业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -29,8 +29,8 @@
   "devDependencies": {
     "@types/color": "0.12.1",
     "@types/lodash": "^4.14.149",
-    "@types/tuya-panel-kit":"^4.0.5",
-    "@types/react-native": "^0.57.65"
+    "@types/react-native": "^0.57.65",
+    "@types/tuya-panel-kit": "^4.0.5"
   },
   "peerDependencies": {
     "@tuya-rn/tuya-native-components": "^4.0.0",
