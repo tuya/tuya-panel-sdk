@@ -52,6 +52,7 @@
     "release:nextmajor": "yarn build && lerna publish premajor --pre-dist-tag=next --preid=next",
     "commit": "git cz",
     "test": "lerna run test --parallel",
+    "test:lock": "cd packages/tuya-panel-lock-sdk && yarn test",
     "test:animation": "cd packages/tuya-panel-animation-sdk && yarn test",
     "test:ipc": "cd packages/tuya-panel-ipc-sdk && yarn test",
     "test:elec": "cd packages/tuya-panel-electrician-sdk && yarn test",
