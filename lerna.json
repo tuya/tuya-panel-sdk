@@ -6,9 +6,9 @@
   "command": {
     "publish": {
       "access": "public",
-      "ignoreChanges": ["ignored-file", "**/docs/**", "*.md"],
       "registry": "https://registry.npmjs.org"
     },
+    "ignoreChanges": ["ignored-file", "**/docs/**", "**/*.md"],
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): publish"
