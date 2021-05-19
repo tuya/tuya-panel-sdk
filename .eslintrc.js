@@ -1,5 +1,3 @@
-import LockConfig from './packages/tuya-panel-lock-sdk/src/apiConfig'
-
 module.exports = {
   extends: ['tuya-panel'],
   plugins: ['literal-check'],
@@ -59,7 +57,7 @@ module.exports = {
         'tuya.m.linkage.rule.trigger',
         'tuya.m.linkage.rule.enable',
         'tuya.m.linkage.rule.disable',
-        ...LockConfig,
+        'tuya.m.device.lock.active.period'
       ],
     ],
     'react/forbid-prop-types': 0,
