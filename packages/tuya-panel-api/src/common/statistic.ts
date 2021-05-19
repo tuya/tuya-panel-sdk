@@ -48,8 +48,8 @@ const getDpReportLog = (params: IGetDpReportLog): Promise<any> => {
  * @param {number} limit 最大值, 最大值上限为 1000,
  * @param {string} sortType 'DESC' 倒序 或 'ASC' 顺序, 默认为 'DESC'
  */
-const getLogUserAction = (params: IGetDpReportLog): Promise<any> => {
-  return TYSdk.apiRequest('m.smart.operate.publish.log', { ...params }, '2.0');
+const getLogUserAction = (params: IGetDpReportLog, version = '1.0'): Promise<any> => {
+  return TYSdk.apiRequest('m.smart.operate.publish.log', { ...params }, version);
 };
 
 /**
