@@ -11,6 +11,7 @@ const TYLaserManager = NativeModules.TYRCTLaserManager;
  * @export
  * @param {BitmapToImageOpt} opts
  * @returns
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/api?id=Ka8gm2vulph5r#title-0-%E7%94%9F%E6%88%90%E6%BF%80%E5%85%89%E4%BD%8D%E5%9B%BE%E7%9A%84%2064%20%E4%BD%8D%E5%9B%BE
  */
 export function laserBitmapToImageBase64(opts: IBitmapToImageOpt): Promise<string> {
   const { width, height, points, pointLength, colorsMaps, scale, orientation } = opts;
