@@ -1,3 +1,4 @@
+import { IGetCustomizePositionResponse } from './interface';
 // 设备接口
 import { TYSdk } from 'tuya-panel-kit';
 import {
@@ -8,6 +9,10 @@ import {
   IGetWeathers,
   ISaveCustomizePosition,
   IGetCustomizePosition,
+  IGetDpsInfosResponse,
+  IGetGroupDpsInfosResponse,
+  IGetWeatherQualityResponse,
+  IGetWeathersResponse,
 } from './interface';
 
 /**
@@ -15,7 +20,7 @@ import {
  * @param {string} gwId 设备Id
  * @param {string} devId 设备Id
  */
-const getDpsInfos = (params: IGetDpsInfos): Promise<any> => {
+const getDpsInfos = (params: IGetDpsInfos): Promise<IGetDpsInfosResponse> => {
   return TYSdk.apiRequest('s.m.dev.dp.get', { ...params }, '2.0');
 };
 
@@ -26,7 +31,7 @@ const getDpsInfos = (params: IGetDpsInfos): Promise<any> => {
  * @param {string} dpId dpId
  * @param {string} name dp自定义名称
  */
-const updateDpName = (params: IUpdateDpName): Promise<any> => {
+const updateDpName = (params: IUpdateDpName): Promise<boolean> => {
   return TYSdk.apiRequest('s.m.dev.dp.name.update', { ...params });
 };
 
@@ -34,7 +39,7 @@ const updateDpName = (params: IUpdateDpName): Promise<any> => {
  * 获取群组设备所有 DP 信息
  * @param {string} groupId 群组id
  */
-const getGroupDpsInfos = (groupId: string): Promise<any> => {
+const getGroupDpsInfos = (groupId: string): Promise<IGetGroupDpsInfosResponse> => {
   return TYSdk.apiRequest('s.m.dev.group.dp.get', { groupId }, '2.0');
 };
 
@@ -44,7 +49,7 @@ const getGroupDpsInfos = (groupId: string): Promise<any> => {
  * @param {string} dpId dpId
  * @param {string} name dp自定义名称
  */
-const updateGroupDpName = (params: IUpdateGroupDpName): Promise<any> => {
+const updateGroupDpName = (params: IUpdateGroupDpName): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.group.dpname.update', { ...params });
 };
 
@@ -53,7 +58,7 @@ const updateGroupDpName = (params: IUpdateGroupDpName): Promise<any> => {
  * @param {string} devId 设备Id
  * @param {boolean} isLocal 要查询的信息
  */
-const getWeatherQuality = (params: IGetWeatherQuality): Promise<any> => {
+const getWeatherQuality = (params: IGetWeatherQuality): Promise<IGetWeatherQualityResponse> => {
   return TYSdk.apiRequest('tuya.m.public.weather.get', { ...params });
 };
 
@@ -62,7 +67,7 @@ const getWeatherQuality = (params: IGetWeatherQuality): Promise<any> => {
  * @param {string} devId 设备Id
  * @param {number} dataRange 预报天数（默认值为 7，最大可预报天数为 7）
  */
-const getWeathers = (params: IGetWeathers): Promise<any> => {
+const getWeathers = (params: IGetWeathers): Promise<IGetWeathersResponse> => {
   return TYSdk.apiRequest('tuya.m.public.weathers.get', { ...params });
 };
 
@@ -73,7 +78,7 @@ const getWeathers = (params: IGetWeathers): Promise<any> => {
  * @param {string} lat 纬度
  * @param {string} locationName 位置名称（目前没用，不影响天气返回结果）
  */
-const saveCustomizePosition = (params: ISaveCustomizePosition): Promise<any> => {
+const saveCustomizePosition = (params: ISaveCustomizePosition): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.device.customize.position.save', { ...params });
 };
 
@@ -81,7 +86,9 @@ const saveCustomizePosition = (params: ISaveCustomizePosition): Promise<any> => 
  * 设备自定义位置信息获取
  * @param {string} devId 设备Id
  */
-const getCustomizePosition = (params: IGetCustomizePosition): Promise<any> => {
+const getCustomizePosition = (
+  params: IGetCustomizePosition
+): Promise<IGetCustomizePositionResponse> => {
   return TYSdk.apiRequest('tuya.m.device.customize.position.get', { ...params });
 };
 

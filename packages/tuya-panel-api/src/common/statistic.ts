@@ -10,6 +10,15 @@ import {
   IGetWeekWithSpecified,
   IGetMonthWithSpecified,
   IGetMultiDpsAllResult,
+  IGetLogInSpecifiedTimeResponse,
+  IGetDpReportLogResponse,
+  IGetDpLogDaysResponse,
+  IGetDpResultByMonthResponse,
+  IGetDpResultByHourResponse,
+  IGetDataWithSpecifiedResponse,
+  IGetWeekWithSpecifiedResponse,
+  IGetMonthWithSpecifiedResponse,
+  IGetMultiDpsAllResultResponse,
 } from './interface';
 
 /**
@@ -22,7 +31,9 @@ import {
  * @param {string} endTime 设备上报的时间，查询结束时间，单位为毫秒
  * @param {string} sortType DESC 倒序 或 ASC 顺序, 默认为 DESC
  */
-const getLogInSpecifiedTime = (params: IGetLogInSpecifiedTime): Promise<any> => {
+const getLogInSpecifiedTime = (
+  params: IGetLogInSpecifiedTime
+): Promise<IGetLogInSpecifiedTimeResponse> => {
   return TYSdk.apiRequest('tuya.m.smart.operate.all.log', {
     ...params,
   });
@@ -36,7 +47,7 @@ const getLogInSpecifiedTime = (params: IGetLogInSpecifiedTime): Promise<any> => 
  * @param {number} limit 最大值, 最大值上限为 1000,
  * @param {string} sortType 'DESC' 倒序 或 'ASC' 顺序, 默认为 'DESC'
  */
-const getDpReportLog = (params: IGetDpReportLog): Promise<any> => {
+const getDpReportLog = (params: IGetDpReportLog): Promise<IGetDpReportLogResponse> => {
   return TYSdk.apiRequest('m.smart.operate.log', { ...params }, '2.0');
 };
 
@@ -48,7 +59,10 @@ const getDpReportLog = (params: IGetDpReportLog): Promise<any> => {
  * @param {number} limit 最大值, 最大值上限为 1000,
  * @param {string} sortType 'DESC' 倒序 或 'ASC' 顺序, 默认为 'DESC'
  */
-const getLogUserAction = (params: IGetDpReportLog, version = '1.0'): Promise<any> => {
+const getLogUserAction = (
+  params: IGetDpReportLog,
+  version = '1.0'
+): Promise<IGetDpReportLogResponse> => {
   return TYSdk.apiRequest('m.smart.operate.publish.log', { ...params }, version);
 };
 
@@ -60,7 +74,7 @@ const getLogUserAction = (params: IGetDpReportLog, version = '1.0'): Promise<any
  * @param {string} endDay 结束日期，例如20180531
  * @param {string} type 统计的类型，sum、minux 或 max
  */
-const getDpLogDays = (params: IGetDpLogDays): Promise<any> => {
+const getDpLogDays = (params: IGetDpLogDays): Promise<IGetDpLogDaysResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.stat.days.list', { ...params });
 };
 
@@ -70,7 +84,7 @@ const getDpLogDays = (params: IGetDpLogDays): Promise<any> => {
  * @param {string} dpId dpId
  * @param {string} type 统计的类型，sum、minux 或 max
  */
-const getDpResultByMonth = (params: IGetDpResultByMonth): Promise<any> => {
+const getDpResultByMonth = (params: IGetDpResultByMonth): Promise<IGetDpResultByMonthResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.stat.month.list', { ...params });
 };
 
@@ -83,7 +97,7 @@ const getDpResultByMonth = (params: IGetDpResultByMonth): Promise<any> => {
  * @param {string} uid 用户id
  * @param {number} auto auto=1 ：中间数据缺失时，使用上一时段的数据补充。auto=2 ：中间数据缺失时，使用#补充
  */
-const getDpResultByHour = (params: IGetDpResultByHour): Promise<any> => {
+const getDpResultByHour = (params: IGetDpResultByHour): Promise<IGetDpResultByHourResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.rang.stat.hour.list', { ...params });
 };
 
@@ -97,7 +111,9 @@ const getDpResultByHour = (params: IGetDpResultByHour): Promise<any> => {
  * @param {string} uid 用户id
  * @param {number} auto auto=1 ：中间数据缺失时，使用上一时段的数据补充。auto=2 ：中间数据缺失时，使用#补充
  */
-const getDataWithSpecified = (params: IGetDataWithSpecified): Promise<any> => {
+const getDataWithSpecified = (
+  params: IGetDataWithSpecified
+): Promise<IGetDataWithSpecifiedResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.rang.stat.day.list', { ...params }, '2.0');
 };
 
@@ -109,7 +125,9 @@ const getDataWithSpecified = (params: IGetDataWithSpecified): Promise<any> => {
  * @param {string} endWeek 结束周
  * @param {string} type 统计的类型，sum、minux 或 avg
  */
-const getWeekWithSpecified = (params: IGetWeekWithSpecified): Promise<any> => {
+const getWeekWithSpecified = (
+  params: IGetWeekWithSpecified
+): Promise<IGetWeekWithSpecifiedResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.rang.stat.week.list', {
     ...params,
   });
@@ -125,7 +143,9 @@ const getWeekWithSpecified = (params: IGetWeekWithSpecified): Promise<any> => {
  * @param {string} uid 用户id
  * @param {number} auto auto=1 ：中间数据缺失时，使用上一时段的数据补充。auto=2 ：中间数据缺失时，使用#补充
  */
-const getMonthWithSpecified = (params: IGetMonthWithSpecified): Promise<any> => {
+const getMonthWithSpecified = (
+  params: IGetMonthWithSpecified
+): Promise<IGetMonthWithSpecifiedResponse> => {
   return TYSdk.apiRequest('tuya.m.dp.rang.stat.month.list', { ...params }, '2.0');
 };
 
@@ -153,7 +173,9 @@ const getDpAllStatistResult = (
  * @param {string} startRowKey 开始页索引
  * @param {string} endRowKey: 结束页索引
  */
-const getMultiDpsAllResult = (params: IGetMultiDpsAllResult): Promise<any> => {
+const getMultiDpsAllResult = (
+  params: IGetMultiDpsAllResult
+): Promise<IGetMultiDpsAllResultResponse> => {
   return TYSdk.apiRequest('tuya.m.device.query.device.log', {
     ...params,
   });

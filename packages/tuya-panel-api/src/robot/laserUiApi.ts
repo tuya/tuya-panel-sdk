@@ -12,7 +12,7 @@ const TYLaserManager = NativeModules.TYRCTLaserManager;
  * @param {BitmapToImageOpt} opts
  * @returns
  */
-export function laserBitmapToImageBase64(opts: IBitmapToImageOpt) {
+export function laserBitmapToImageBase64(opts: IBitmapToImageOpt): Promise<string> {
   const { width, height, points, pointLength, colorsMaps, scale, orientation } = opts;
   return new Promise((resolve, reject) => {
     if (!TYLaserManager.laserBitmapToImageBase64)

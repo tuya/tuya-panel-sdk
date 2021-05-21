@@ -1,12 +1,23 @@
 import { TYSdk } from 'tuya-panel-kit';
-import { IGetLinkageDeviceList, IBindRule, IGetBindRuleList, IRemoveRule } from './interface';
+import {
+  IGetLinkageDeviceList,
+  IBindRule,
+  IGetBindRuleList,
+  IRemoveRule,
+  IGetLinkageDeviceListResponse,
+  IGetSceneListResponse,
+  IGetBindRuleListResponse,
+  IBindRuleResponse,
+} from './interface';
 
 /**
  * 获取家庭下支持联动的设备列表
  * @param {number} gid 家庭id
  * @param {string} sourceType 业务范围
  */
-const getLinkageDeviceList = (params: IGetLinkageDeviceList): Promise<any> => {
+const getLinkageDeviceList = (
+  params: IGetLinkageDeviceList
+): Promise<IGetLinkageDeviceListResponse> => {
   return TYSdk.apiRequest(
     'tuya.m.linkage.dev.list',
     {
@@ -20,7 +31,7 @@ const getLinkageDeviceList = (params: IGetLinkageDeviceList): Promise<any> => {
  * 查询一键执行场景列表
  * @param {number} devId 设备id
  */
-const getSceneList = ({ devId }: { devId: string }): Promise<any> => {
+const getSceneList = ({ devId }: { devId: string }): Promise<IGetSceneListResponse> => {
   return TYSdk.apiRequest('tuya.m.linkage.rule.brief.query', { devId });
 };
 
@@ -31,7 +42,7 @@ const getSceneList = ({ devId }: { devId: string }): Promise<any> => {
  * @param {number} entityType 实体类型
  */
 
-const getBindRuleList = (params: IGetBindRuleList): Promise<any> => {
+const getBindRuleList = (params: IGetBindRuleList): Promise<IGetBindRuleListResponse> => {
   return TYSdk.apiRequest('tuya.m.linkage.associative.entity.id.category.query', {
     ...params,
   });
@@ -51,7 +62,7 @@ const bindRule = ({
   entitySubIds,
   expr,
   bizDomain,
-}: IBindRule): Promise<any> => {
+}: IBindRule): Promise<IBindRuleResponse> => {
   const { devId } = TYSdk.devInfo;
   return TYSdk.apiRequest('tuya.m.linkage.associative.entity.bind', {
     relationExpr: {
@@ -89,7 +100,7 @@ const bindRule = ({
  * @param {string} associativeEntityId 关联dp组合
  * @param {string} associativeEntityValue 规则id
  */
-const removeRule = (params: IRemoveRule): Promise<any> => {
+const removeRule = (params: IRemoveRule): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.linkage.associative.entity.remove', {
     ...params,
   });
@@ -99,7 +110,7 @@ const removeRule = (params: IRemoveRule): Promise<any> => {
  * 触发联动
  * @param {string} ruleId 规则id
  */
-const triggerRule = ({ ruleId }: { ruleId: string }): Promise<any> => {
+const triggerRule = ({ ruleId }: { ruleId: string }): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.linkage.rule.trigger', {
     ruleId,
   });
@@ -109,7 +120,7 @@ const triggerRule = ({ ruleId }: { ruleId: string }): Promise<any> => {
  *  启用联动
  * @param {string} ruleId 规则id
  */
-const enableRule = ({ ruleId }: { ruleId: string }): Promise<any> => {
+const enableRule = ({ ruleId }: { ruleId: string }): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.linkage.rule.enable', {
     ruleId,
   });
@@ -119,7 +130,7 @@ const enableRule = ({ ruleId }: { ruleId: string }): Promise<any> => {
  * 停用联动
  * @param {string} ruleId 规则id
  */
-const disableRule = ({ ruleId }: { ruleId: string }): Promise<any> => {
+const disableRule = ({ ruleId }: { ruleId: string }): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.linkage.rule.disable', {
     ruleId,
   });

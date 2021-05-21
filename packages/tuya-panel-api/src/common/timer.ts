@@ -13,6 +13,10 @@ import {
   IGetAstronomicalList,
   IAstronomical,
   IUpdateAstronomicalStatus,
+  IQueryTimerTasksResponse,
+  IGetDpLastTimerResponse,
+  IGetLastTimerPeriodResponse,
+  IGetAstronomicalListResponse,
 } from './interface';
 
 /**
@@ -26,7 +30,7 @@ import {
  * @param {boolean} isAppPush 是否发送执行通知
  * @param {string} aliasName 定时备注
  */
-const addSingleTimer = (params: IAndSingleTime): Promise<any> => {
+const addSingleTimer = (params: IAndSingleTime): Promise<number> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.add', {
     ...params,
   });
@@ -38,7 +42,7 @@ const addSingleTimer = (params: IAndSingleTime): Promise<any> => {
  * @param {number} bizType 资源类型。0：单设备；1：群组设备。
  * @param {string} category 定时分类
  */
-const queryTimerTasks = (params: IQueryTimerTasks): Promise<any> => {
+const queryTimerTasks = (params: IQueryTimerTasks): Promise<IQueryTimerTasksResponse> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.list', {
     ...params,
   });
@@ -55,7 +59,7 @@ const queryTimerTasks = (params: IQueryTimerTasks): Promise<any> => {
  * @param {boolean} isAppPush 是否发送执行通知
  * @param {string} aliasName 定时备注
  */
-const modifySingleTimer = (params: IModifySingleTimer): Promise<any> => {
+const modifySingleTimer = (params: IModifySingleTimer): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.update', {
     ...params,
   });
@@ -72,7 +76,7 @@ const modifySingleTimer = (params: IModifySingleTimer): Promise<any> => {
  * @param {boolean} isAppPush 是否发送执行通知
  * @param {string} aliasName 定时备注
  */
-const addGroupTimer = (params: IAndGroupTimer): Promise<any> => {
+const addGroupTimer = (params: IAndGroupTimer): Promise<number> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.group.add', {
     ...params,
   });
@@ -84,7 +88,7 @@ const addGroupTimer = (params: IAndGroupTimer): Promise<any> => {
  * @param {number} bizType 资源类型。0：单设备；1：群组设备。
  * @param {string} category 定时分类
  */
-const queryGroupTimerTasks = (params: IQueryTimerTasks): Promise<any> => {
+const queryGroupTimerTasks = (params: IQueryTimerTasks): Promise<IQueryTimerTasksResponse> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.group.list', {
     ...params,
   });
@@ -100,7 +104,7 @@ const queryGroupTimerTasks = (params: IQueryTimerTasks): Promise<any> => {
  * @param {boolean} isAppPush 是否发送执行通知
  * @param {string} aliasName 定时备注
  */
-const modifyGroupTimer = (params: IModifyGroupTimer): Promise<any> => {
+const modifyGroupTimer = (params: IModifyGroupTimer): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.clock.dps.group.update', {
     ...params,
   });
@@ -113,7 +117,7 @@ const modifyGroupTimer = (params: IModifyGroupTimer): Promise<any> => {
  * @param {string} ids 定时任务的 ID。提交多任务时使用逗号（,）分隔。例如"1,2,3,4"。单次提交任务数量不得超过 168。
  * @param {number} status 初始化状态，0：关闭；1：开启；2：删除。
  */
-const modDeleteTaskByIds = (params: IModDeleteTaskByIds): Promise<any> => {
+const modDeleteTaskByIds = (params: IModDeleteTaskByIds): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.clock.batch.status.update', {
     ...params,
   });
@@ -126,7 +130,7 @@ const modDeleteTaskByIds = (params: IModDeleteTaskByIds): Promise<any> => {
  * @param {string} category 定时分类
  * @param {number} status 初始化状态，0：关闭；1：开启；2：删除。
  */
-const modDeleteTaskByCategory = (params: IModDeleteTaskByCategory): Promise<any> => {
+const modDeleteTaskByCategory = (params: IModDeleteTaskByCategory): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.clock.category.status.update', {
     ...params,
   });
@@ -138,7 +142,7 @@ const modDeleteTaskByCategory = (params: IModDeleteTaskByCategory): Promise<any>
  * @param {string} type device_group 或者 device。
  * @param {string} instruct 格式为'{devId:"xxx",dpId:"1"}'。
  */
-const getDpLastTimer = (params: IGetDpLastTimer): Promise<any> => {
+const getDpLastTimer = (params: IGetDpLastTimer): Promise<IGetDpLastTimerResponse> => {
   return TYSdk.apiRequest('s.m.linkage.timer.nearest.get', {
     ...params,
   });
@@ -150,7 +154,7 @@ const getDpLastTimer = (params: IGetDpLastTimer): Promise<any> => {
  * @param {string} type device_group 或者 device。
  * @param {string} instruct 格式为'{devId:"xxx",dpId:"1"}'。
  */
-const getDpsLastTimer = (params: IGetDpLastTimer): Promise<any> => {
+const getDpsLastTimer = (params: IGetDpLastTimer): Promise<IGetDpLastTimerResponse> => {
   return TYSdk.apiRequest('s.m.linkage.timer.nearest.bat.get', {
     ...params,
   });
@@ -161,7 +165,7 @@ const getDpsLastTimer = (params: IGetDpLastTimer): Promise<any> => {
  * @param {string} devId 设备 ID。
  * @param {string} instruct 格式为'{devId:"xxx",dpId:"1"}'。
  */
-const getLastTimerPeriod = (params: IGetLastTimerPeriod): Promise<any> => {
+const getLastTimerPeriod = (params: IGetLastTimerPeriod): Promise<IGetLastTimerPeriodResponse> => {
   return TYSdk.apiRequest('tuya.m.timer.nearest.get', {
     ...params,
   });
@@ -170,7 +174,9 @@ const getLastTimerPeriod = (params: IGetLastTimerPeriod): Promise<any> => {
 /**
  * 获取天文定时列表
  */
-const getAstronomicalList = (params: IGetAstronomicalList): Promise<any> => {
+const getAstronomicalList = (
+  params: IGetAstronomicalList
+): Promise<IGetAstronomicalListResponse> => {
   return TYSdk.apiRequest('tuya.m.timer.astronomical.list', {
     ...params,
   });
@@ -190,7 +196,7 @@ const getAstronomicalList = (params: IGetAstronomicalList): Promise<any> => {
  * @param {number} lat 纬度
  * @param {number} lon 经度
  */
-const addAstronomical = (params: IAstronomical): Promise<any> => {
+const addAstronomical = (params: IAstronomical): Promise<number> => {
   return TYSdk.apiRequest('tuya.m.timer.astronomical.add', {
     ...params,
   });
@@ -210,7 +216,7 @@ const addAstronomical = (params: IAstronomical): Promise<any> => {
  * @param {number} lat 纬度
  * @param {number} lon 经度
  */
-const updateAstronomical = (params: IAstronomical): Promise<any> => {
+const updateAstronomical = (params: IAstronomical): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.timer.astronomical.update', {
     ...params,
   });
@@ -221,7 +227,7 @@ const updateAstronomical = (params: IAstronomical): Promise<any> => {
  * @param {string} id 定时任务id
  * @param {number} status 0:关闭；1开启
  */
-const updateAstronomicalStatus = (params: IUpdateAstronomicalStatus): Promise<any> => {
+const updateAstronomicalStatus = (params: IUpdateAstronomicalStatus): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.timer.astronomical.status.update', {
     ...params,
   });
@@ -231,7 +237,7 @@ const updateAstronomicalStatus = (params: IUpdateAstronomicalStatus): Promise<an
  * 删除天文定时
  * @param {string} id 定时任务 id
  */
-const removeAstronomical = (params: { id: string }): Promise<any> => {
+const removeAstronomical = (params: { id: string }): Promise<boolean> => {
   return TYSdk.apiRequest('tuya.m.timer.astronomical.remove', {
     ...params,
   });
