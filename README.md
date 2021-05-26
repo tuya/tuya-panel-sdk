@@ -16,6 +16,8 @@ Technical Ticket: https://service.console.tuya.com/
 
 ## Package List
 
+[![https://codecov.io/gh/tuya/tuya-panel-sdk/graph/badge.svg]](https://app.codecov.io/gh/tuya/tuya-panel-sdk)
+
 | Pacage Name                        | Description                       | Version                                                      | Author |
 | ---------------------------------- | --------------------------------- | ------------------------------------------------------------ | ------ |
 | `@tuya/tuya-panel-animation-sdk`   | Tuya Panel Animation SDK Package | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-animation-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-animation-sdk) | @多肉  |
