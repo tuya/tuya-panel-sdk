@@ -1,5 +1,5 @@
 /**
- * @description 将十进制的 hsv 转换成十六进制的 hhsssvvv
+ * @description 将十进制的 hsv 转换成十六进制的 hhhhssssvvvv
  * 范围为 h: [0, 360], s: [0， 1000], v: [0， 1000]
  * @param h 色相（Hue）
  * @param s 饱和度 (Saturation)
@@ -7,7 +7,7 @@
  * @returns {String} result
  */
 
-const encodeColorData = (h: number, s: number, v: number) => {
+const encodeColorData = (h: number, s: number, v: number): string => {
   let hue = h % 360;
   hue = hue > 0 ? hue : h;
   hue = hue < 0 ? 360 + hue : hue;
@@ -24,13 +24,13 @@ const encodeColorData = (h: number, s: number, v: number) => {
 };
 
 /**
- * @description 将十六进制的 hhsssvvv 转换成十进制的 hsv
+ * @description 将十六进制的 hhhhssssvvvv 转换成十进制的 hsv
  * 范围为 h: [0, 360], s: [0, 1000], v: [0, 1000]
- * @param hsvStr hhsssvvv
+ * @param hsvStr hhhhssssvvvv
  * @returns {Array} [h, s, v]
  */
 
-const decodeColorData = (byte: string) => {
+const decodeColorData = (byte: string): number[] => {
   if (!byte || byte.length !== 12) {
     return [0, 1000, 1000];
   }
