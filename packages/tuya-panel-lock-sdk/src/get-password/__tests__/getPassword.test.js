@@ -21,7 +21,6 @@ describe('getPassword components', () => {
         inputItemText="请输入"
         randomTextColor="#0076FF"
         passwordColor="#0076FF"
-        passwordColor={'pink'}
         onValueChange={jest.fn()}
       ></GetPassword>
     );
@@ -36,7 +35,6 @@ describe('getPassword components', () => {
           inputItemText="请输入"
           randomTextColor="#0076FF"
           passwordColor="#0076FF"
-          passwordColor={'pink'}
           onValueChange={jest.fn()}
         ></GetPassword>
       );
@@ -48,8 +46,6 @@ describe('getPassword components', () => {
       node => node.name() === 'TouchableOpacity' && !!node.prop('onPress') === true
     );
     targetNode.at(0).simulate('press');
-    targetNode.at(1).simulate('press');
-    targetNode.at(2).simulate('press');
     expect(wrapper).toMatchSnapshot();
   });
 });
