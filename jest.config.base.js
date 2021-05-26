@@ -11,6 +11,7 @@ module.exports = {
     '<rootDir>/example',
     '<rootDir>/example/node_modules',
     '<rootDir>/packages/*/lib',
+    '<rootDir>/packages/tuya-panel-api',
   ],
   testEnvironment: 'node',
   globals: {
