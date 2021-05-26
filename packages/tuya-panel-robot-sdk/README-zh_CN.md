@@ -5,7 +5,6 @@
 [English](./README.md) | 简体中文
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-robot-sdk)
-[![](https://codecov.io/gh/tuya/tuya-panel-sdk/branch/robot/graph/badge.svg)](https://codecov.io/gh/tuya/tuya-panel-sdk/branches/robot)
 
 ## 安装
 

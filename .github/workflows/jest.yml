@@ -1,4 +1,4 @@
-name: Upload ipc coverage to Codecov
+name: jest
 on: push
 jobs:
   Codecov:
@@ -10,9 +10,8 @@ jobs:
       - name: build
         run: yarn run build
       - name: Run Test
-        run: cd packages/tuya-panel-ipc-sdk && yarn test --silent --forceExit --passWithNoTests
-      - name: Upload ipc coverage to Codecov
+        run: yarn test --silent --forceExit --passWithNoTests
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v1
         with:
-          override_branch: ipc
-          working-directory: ./packages/tuya-panel-ipc-sdk
+          directory: ./coverage/
