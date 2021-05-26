@@ -16,7 +16,58 @@ exports[`TYIpcVideoBit components basic render 1`] = `
       },
     ]
   }
-/>
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        kb/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
 `;
 
 exports[`TYIpcVideoBit components bit data 1`] = `
@@ -98,7 +149,61 @@ exports[`TYIpcVideoBit components bitTxtBox render 1`] = `
       Object {},
     ]
   }
-/>
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {
+          "height": 30,
+          "width": 100,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        kb/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
 `;
 
 exports[`TYIpcVideoBit components container render 1`] = `
@@ -113,7 +218,61 @@ exports[`TYIpcVideoBit components container render 1`] = `
       Object {},
     ]
   }
-/>
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {
+            "color": "red",
+            "fontSize": 24,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        kb/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
 `;
 
 exports[`TYIpcVideoBit components unit data 1`] = `
@@ -128,7 +287,58 @@ exports[`TYIpcVideoBit components unit data 1`] = `
       Object {},
     ]
   }
-/>
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        m/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
 `;
 
 exports[`TYIpcVideoBit components unit render 1`] = `
@@ -143,5 +353,58 @@ exports[`TYIpcVideoBit components unit render 1`] = `
       Object {},
     ]
   }
-/>
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.3)",
+          "borderRadius": 30,
+          "height": 48,
+          "justifyContent": "center",
+          "width": 85,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+       
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#fff",
+            },
+            Object {
+              "color": "black",
+            },
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        kb/s
+      </TYText>
+    </TYText>
+  </View>
+</View>
 `;
