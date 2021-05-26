@@ -3,12 +3,12 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/docs/**", "**/*.md", "**/__tests__/**"],
   "command": {
     "publish": {
       "access": "public",
       "registry": "https://registry.npmjs.org"
     },
-    "ignoreChanges": ["ignored-file", "**/docs/**", "**/*.md"],
     "version": {
       "conventionalCommits": true,
       "message": "chore(release): publish"
