@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-protocols",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "tuya-panel-protocols, is a business protocol collection library.",
   "keywords": [
     "tuya",
