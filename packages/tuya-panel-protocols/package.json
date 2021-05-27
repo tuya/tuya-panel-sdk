@@ -19,6 +19,7 @@
     "react-native": "0.59.10"
   },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/tuya/tuya-panel-sdk/tree/main/packages/tuya-panel-api#readme",
