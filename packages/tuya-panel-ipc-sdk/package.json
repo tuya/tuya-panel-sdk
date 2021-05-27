@@ -1,10 +1,10 @@
 {
   "name": "@tuya/tuya-panel-ipc-sdk",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "涂鸦Ipc业务组件库",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest -u",
     "tscw": "tsc -w",
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
