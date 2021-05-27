@@ -405,3 +405,4 @@ DerivedData/
 lib
 packages/tuya-native-*
 scripts
+.npmrc
