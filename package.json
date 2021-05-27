@@ -42,7 +42,6 @@
     "version:prepatch": "yarn build && lerna version --canary patch --yes --pre-dist-tag=rc --preid=rc",
     "version:preminor": "yarn build && lerna version --canary --yes --pre-dist-tag=rc --preid=rc",
     "version:premajor": "yarn build && lerna version --canary --yes --pre-dist-tag=rc --preid=rc",
-    "version": "yarn build && lerna version",
     "version:patch": "yarn build && lerna version patch",
     "version:minor": "yarn build && lerna version minor",
     "version:major": "yarn build && lerna version major",
