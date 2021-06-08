@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components basic render 1`] = `
+<Styled(View)>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "opacity": 0,
+        "position": "absolute",
+      }
+    }
+  />
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "rgb(104,104,104)",
+          "fontSize": 30,
+        },
+        null,
+      ]
+    }
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "rgb(104,104,104)",
+            "fontSize": 30,
+          },
+          null,
+        ]
+      }
+      type={null}
+      weight={null}
+    />
+    <Styled(View)
+      outBgColor="#F6F6F6"
+      padding={8}
+      radius={200}
+    >
+      <Styled(View)
+        padding={8}
+        radius={200}
+        style={null}
+      >
+        <Styled(View)
+          padding={8}
+          radius={200}
+          style={
+            Array [
+              null,
+              Object {
+                "overflow": "hidden",
+                "transform": Array [
+                  Object {
+                    "rotate": "45deg",
+                  },
+                ],
+              },
+            ]
+          }
+        >
+          <Styled(View)
+            padding={8}
+            radius={200}
+          />
+        </Styled(View)>
+      </Styled(View)>
+      <Styled(View)
+        padding={8}
+        radius={200}
+      />
+      <Styled(View)
+        centerBgColor="#FFFFFF"
+        centerRadius={80}
+      />
+      <Styled(TouchableHighlight)
+        centerBgColor="#FFFFFF"
+        centerDisabledBgColor="#FAFAFA"
+        centerRadius={80}
+        centerStatus={false}
+        onLongPress={[Function]}
+        onPress={null}
+        onPressOut={[Function]}
+        radius={200}
+        style={null}
+        underlayColor="#FAFAFA"
+      >
+        <View />
+      </Styled(TouchableHighlight)>
+      <View
+        pointerEvents="none"
+        style={
+          Object {
+            "position": "absolute",
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "rgba(39,197,153,0.7)",
+                "fontSize": 50,
+                "fontWeight": "400",
+              },
+              null,
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          OK
+        </TYText>
+      </View>
+    </Styled(View)>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "color": "rgb(104,104,104)",
+            "fontSize": 30,
+          },
+          null,
+        ]
+      }
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "rgb(104,104,104)",
+          "fontSize": 30,
+        },
+        null,
+      ]
+    }
+    type={null}
+    weight={null}
+  />
+</Styled(View)>
+`;

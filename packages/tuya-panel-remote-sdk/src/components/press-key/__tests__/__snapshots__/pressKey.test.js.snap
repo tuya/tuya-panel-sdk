@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components basic render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={false}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={false}
+        style={null}
+      />
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components basic render 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
