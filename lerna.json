@@ -3,10 +3,10 @@
   "version": "independent",
   "npmClient": "yarn",
   "useWorkspaces": true,
+  "ignoreChanges": ["ignored-file", "**/docs/**", "**/*.md", "**/__tests__/**"],
   "command": {
     "publish": {
       "access": "public",
-      "ignoreChanges": ["ignored-file", "**/docs/**", "*.md"],
       "registry": "https://registry.npmjs.org"
     },
     "version": {

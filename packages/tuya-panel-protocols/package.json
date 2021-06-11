@@ -1,12 +1,12 @@
 {
-  "name": "@tuya/tuya-panel-api",
-  "version": "1.2.1",
-  "description": "tuya-panel-api, is a general cloud interface collection library",
+  "name": "@tuya/tuya-panel-protocols",
+  "version": "1.0.0",
+  "description": "tuya-panel-protocols, is a business protocol collection library.",
   "keywords": [
     "tuya",
-    "api"
+    "protocols"
   ],
-  "author": "youngjuning <youngjuning@aliyun.com>",
+  "author": "ZengBeauty<2497752603@qq.com>",
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
@@ -14,13 +14,8 @@
     "build": "tsc -d",
     "prebuild": "../../node_modules/del-cli/cli.js lib/"
   },
-  "peerDependencies": {
-    "react": "16.8.3",
-    "react-native": "0.59.10",
-    "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "^4.3.4"
-  },
   "publishConfig": {
+    "access": "public",
     "registry": "https://registry.npmjs.org"
   },
   "homepage": "https://github.com/tuya/tuya-panel-sdk/tree/main/packages/tuya-panel-api#readme",
