@@ -11,7 +11,7 @@ const { cx } = publicConfig;
 
 const TYIpcProgressBar: React.FC<TYIpcProgressBarProps> & {
   defaultProps: Partial<TYIpcProgressBarProps>;
-} = props => {
+} =(props: TYIpcProgressBarProps) => {
   const {
     barData,
     sliderProperty,
@@ -55,7 +55,7 @@ const TYIpcProgressBar: React.FC<TYIpcProgressBarProps> & {
               {barData.iconImage && (
                  <Image
                  source={barData.iconImage}
-                 style={[Styles.iconImage, { tintColor: barData.disabled ? '#aeaeae' : undefined }, iconImageStyle ]}
+                 style={[Styles.iconImage,  { tintColor: barData.disabled ? '#aeaeae' : undefined }, iconImageStyle ]}
                />
               )
               }
@@ -73,7 +73,6 @@ const TYIpcProgressBar: React.FC<TYIpcProgressBarProps> & {
        }
         <Slider
           style={[Styles.slider, sliderStyle]}
-          canTouchTrack={true}
           maximumValue={barData.max}
           minimumValue={barData.min}
           disabled={barData.disabled}

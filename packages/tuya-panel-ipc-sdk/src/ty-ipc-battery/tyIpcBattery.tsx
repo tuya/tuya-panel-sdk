@@ -13,7 +13,7 @@ const wrapBatteryD =
 
 const TYIpcBattery: React.FC<TYIpcBtteryProps> & {
   defaultProps: Partial<TYIpcBtteryProps>;
-} = props => {
+} = (props: TYIpcBtteryProps) => {
   const {
     value,
     size,

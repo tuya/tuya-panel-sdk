@@ -6,7 +6,7 @@ import Styles from './style';
 
 const TYIpcTimeInterval: React.FC<TYIpcTimeIntervalProps> & {
   defaultProps: Partial<TYIpcTimeIntervalProps>;
-} = props => {
+} = (props: TYIpcTimeIntervalProps) => {
   const { startValue } = props;
   let recordTime:number = startValue;
   let timer = null;

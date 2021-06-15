@@ -1,6 +1,7 @@
+import _ from 'lodash';
 // 根据缩放系数转换实际数值
 export const showMathPowValue = (value, scale) => {
-  const realvalue = undefined ? 0 : value;
+  const realvalue = _.isUndefined(value) ? 0 : value;
   if (Number(realvalue) === 0) {
     return 0;
   }
@@ -13,7 +14,7 @@ export const showMathPowValue = (value, scale) => {
 
 // 将具体数值，转换为对应区间百分比
 export const numberToPecent = (v: undefined | number, min: number, max: number) => {
-  if (v === undefined) {
+  if (_.isUndefined(v)) {
     v = max;
   }
   if (v === 1 && min === 1) {

@@ -14,7 +14,7 @@ const { cx } = publicConfig;
 
 const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
   defaultProps: Partial<TYIpcTempHumiProps>;
-} = props => {
+} = (props: TYIpcTempHumiProps) => {
 
   const {standardDpMode, sensor_temperature, sensor_humidity, temp_report_f, humiIconImgStyle, tempIconTextStyle, humiIconTextStyle, containerStyle, iconBoxStyle, tempIcon, humiIcon, tempIconImgStyle, symbolTextStyle  } = props;
 
@@ -28,7 +28,6 @@ const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
     const { sensor_temperature, temp_report_f, temp_unit_select } = nextProps;
     let sendStr = '';
     let schema: TempHuiSchema = {};
-    
     if (standardDpMode) {
       schema = TYSdk.device.getDpSchema();
     }
@@ -38,10 +37,12 @@ const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
         !_.isUndefined(sensor_temperature) && _.isUndefined(temp_report_f) && _.isUndefined(temp_unit_select)
       ) {
         // 如果为标准dp模式
-        if (standardDpMode) {
+        if (standardDpMode && schema.sensor_temperature) {
           const { scale } = schema.sensor_temperature;
-          const tempValue = showMathPowValue(sensor_temperature, scale);
-          sendStr = `${tempValue}℃`;
+          if (!_.isUndefined(scale)) {
+            const tempValue = showMathPowValue(sensor_temperature, scale);
+            sendStr = `${tempValue}℃`;
+          } 
         } else {
           sendStr = `${sensor_temperature}℃`;
         }
@@ -49,10 +50,12 @@ const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
         // 如果只有华氏度
         _.isUndefined(sensor_temperature) && !_.isUndefined(temp_report_f) && _.isUndefined(temp_unit_select)
       ) {
-        if (standardDpMode) {
+        if (standardDpMode && schema.temp_report_f ) {
           const { scale } = schema.temp_report_f;
-          const tempfValue = showMathPowValue(temp_report_f, scale);
-          sendStr = `${tempfValue}℉`;
+          if (!_.isUndefined(scale)) {
+            const tempfValue = showMathPowValue(temp_report_f, scale);
+            sendStr = `${tempfValue}℉`;
+          } 
         } else {
           sendStr = `${temp_report_f}℉`;
         }
@@ -62,19 +65,23 @@ const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
       ) {
         if (temp_unit_select === '0') {
           // 为0时表示单位为摄氏度
-          if (standardDpMode) {
+          if (standardDpMode && schema.sensor_temperature ) {
             const { scale } = schema.sensor_temperature;
-            const tempValue = showMathPowValue(sensor_temperature, scale);
-            sendStr = `${tempValue}℃`;
+            if (!_.isUndefined(scale)) {
+              const tempValue = showMathPowValue(sensor_temperature, scale);
+              sendStr = `${tempValue}℃`;
+            } 
           } else {
             sendStr = `${sensor_temperature}℃`;
           }
         } else {
           // 为1时表示单位为华氏度
-          if (standardDpMode) {
+          if (standardDpMode &&  schema.temp_report_f ) {
             const { scale } = schema.temp_report_f;
-            const tempfValue = showMathPowValue(temp_report_f, scale);
-            sendStr = `${tempfValue}℉`;
+            if (!_.isUndefined(scale)) {
+              const tempfValue = showMathPowValue(temp_report_f, scale);
+              sendStr = `${tempfValue}℉`;
+            } 
           } else {
             sendStr = `${temp_report_f}℉`
           }
@@ -89,11 +96,13 @@ const TYIpcTempHumi: React.FC<TYIpcTempHumiProps> & {
     let schema: TempHuiSchema = {};
     let sendStr = '';
     
-    if (standardDpMode) {
+    if (standardDpMode && schema.sensor_humidity) {
       schema = TYSdk.device.getDpSchema();
       const { scale } = schema.sensor_humidity;
-      const humidityValue = showMathPowValue(sensor_humidity, scale);
-      sendStr = `${humidityValue}%`;
+      if (!_.isUndefined(scale)) {
+        const humidityValue = showMathPowValue(sensor_humidity, scale);
+        sendStr = `${humidityValue}%`;
+      } 
     } else {
       sendStr = `${sensor_humidity}%`;
     }
