@@ -40,5 +40,5 @@ export default {
   normalPlayerWidth,
   normalPlayerHeight,
   isIOS,
-  is7Plus
+  is7Plus,
 };
