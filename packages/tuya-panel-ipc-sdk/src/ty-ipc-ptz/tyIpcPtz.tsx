@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { View, TouchableOpacity, Image, ImageBackground, } from 'react-native';
-import Res from './res';
-import Styles from './style';
-import { TYIpcPtzProps } from './interface'
+import { View, TouchableOpacity, Image, ImageBackground } from 'react-native';
 import _ from 'lodash';
 import { TYSdk } from 'tuya-panel-kit';
+import Res from './res';
+import Styles from './style';
+import { TYIpcPtzProps } from './interface';
 import Config from './config';
 import CameraManager from '../ty-ipc-native/nativeApi';
 
@@ -12,47 +12,35 @@ const { smallScreen, middlleScreen, is7Plus } = Config;
 
 const TYIpcPtz: React.FC<TYIpcPtzProps> & {
   defaultProps: Partial<TYIpcPtzProps>;
-} = props => {
-  const { 
+} = (props: TYIpcPtzProps) => {
+  const {
     pieWidth,
     pieHeight,
     panelItemActiveColor,
     containerStyle,
     rotateDegree,
     themeType,
-    disabled 
+    disabled,
   } = props;
   const [ptzData, setptzData] = useState([
     {
       key: 'up',
-      imageSource:
-        themeType === 'dark'
-          ? Res.circleHoverUpDark
-          : Res.circleHoverUp,
+      imageSource: themeType === 'dark' ? Res.circleHoverUpDark : Res.circleHoverUp,
       hasPtz: true,
     },
     {
       key: 'right',
-      imageSource:
-        themeType === 'dark'
-          ? Res.circleHoverRightDark
-          : Res.circleHoverRight,
+      imageSource: themeType === 'dark' ? Res.circleHoverRightDark : Res.circleHoverRight,
       hasPtz: true,
     },
     {
       key: 'left',
-      imageSource:
-        themeType === 'dark'
-          ? Res.circleHoverLeftDark
-          : Res.circleHoverLeft,
+      imageSource: themeType === 'dark' ? Res.circleHoverLeftDark : Res.circleHoverLeft,
       hasPtz: true,
     },
     {
       key: 'down',
-      imageSource:
-        themeType === 'dark'
-          ? Res.circleHoverDownDark
-          : Res.circleHoverDown,
+      imageSource: themeType === 'dark' ? Res.circleHoverDownDark : Res.circleHoverDown,
       hasPtz: true,
     },
   ]);
@@ -83,7 +71,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     }
   }, []);
 
-  const pressIn = index => {
+  const pressIn = (index: number) => {
     sethoverKey(index);
     props.pressIn(index);
   };
@@ -92,14 +80,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     props.pressOut(index);
   };
 
-  const pieItemRender = (
-    ptzData,
-    pieItemWidth,
-    pieItemHeight,
-    containerBgImg,
-    hoverKey,
-    disabled
-  ) => {
+  const pieItemRender = (pieItemWidth, pieItemHeight, containerBgImg) => {
     return ptzData.map((item, index) => (
       <TouchableOpacity
         activeOpacity={0.7}
@@ -117,7 +98,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
         ]}
       >
         {item.imageSource && hoverKey === index && (
-          <View style={[Styles.hoverImage]}>
+          <View style={Styles.hoverImage}>
             <Image
               source={item.imageSource}
               style={{
@@ -129,11 +110,8 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
           </View>
         )}
         {item.hasPtz && (
-          <View style={[Styles.ptzDotImage]}>
-            <Image
-              source={Res.ptzDot}
-              style={{ width: 10, height: 10, tintColor: '#fc2f07'}}
-            />
+          <View style={Styles.ptzDotImage}>
+            <Image source={Res.ptzDot} style={{ width: 10, height: 10, tintColor: '#fc2f07' }} />
           </View>
         )}
       </TouchableOpacity>
@@ -181,7 +159,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
               },
             ]}
           >
-            {pieItemRender(ptzData,pieItemWidth,pieItemHeight,themeType,hoverKey,disabled)}
+            {pieItemRender(pieItemWidth, pieItemHeight, themeType)}
           </ImageBackground>
         ) : (
           <View
@@ -194,7 +172,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
               },
             ]}
           >
-            {pieItemRender(ptzData, pieItemWidth, pieItemHeight, themeType, hoverKey, disabled)}
+            {pieItemRender(pieItemWidth, pieItemHeight, themeType)}
           </View>
         )}
       </View>
@@ -210,17 +188,20 @@ TYIpcPtz.defaultProps = {
   pieNumber: 4,
   themeType: 'light',
   rotateDegree: '45deg',
-  pressIn : (index) => {
+  pressIn: index => {
     if (index === 0) {
-    CameraManager.startPtzUp();
-  } else if (index === 1) {
-    CameraManager.startPtzRight();
-  } else if (index === 2) {
-    CameraManager.startPtzLeft();
-  } else if (index === 3) {
-    CameraManager.startPtzDown();
-  }},
-  pressOut : () => {CameraManager.stopPtz();},
+      CameraManager.startPtzUp();
+    } else if (index === 1) {
+      CameraManager.startPtzRight();
+    } else if (index === 2) {
+      CameraManager.startPtzLeft();
+    } else if (index === 3) {
+      CameraManager.startPtzDown();
+    }
+  },
+  pressOut: () => {
+    CameraManager.stopPtz();
+  },
 };
 
 export default TYIpcPtz;
