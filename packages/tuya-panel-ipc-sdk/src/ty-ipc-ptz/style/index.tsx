@@ -2,9 +2,22 @@ import { StyleSheet } from 'react-native';
 
 const Styles = StyleSheet.create({
   PtzCommonPage: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
+  },
+  circleImage: {
+    height: 50,
+    width: 50,
+  },
+  hoverImage: {
     alignItems: 'center',
+    bottom: 0,
+    justifyContent: 'center',
+    left: 0,
+    position: 'absolute',
+    right: 0,
+    top: 0,
   },
   pieBox: {
     flexDirection: 'row',
@@ -13,27 +26,14 @@ const Styles = StyleSheet.create({
   pieCommon: {
     backgroundColor: 'transparent',
   },
-  hoverImage: {
-    position: 'absolute',
-    left: 0,
-    right: 0,
-    top: 0,
-    bottom: 0,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  circleImage: {
-    width: 50,
-    height: 50,
-  },
   ptzDotImage: {
-    width: 10,
     height: 10,
+    left: '50%',
+    marginLeft: -5,
+    marginTop: -5,
     position: 'absolute',
     top: '50%',
-    left: '50%',
-    marginTop: -5,
-    marginLeft: -5,
+    width: 10,
   },
 });
 

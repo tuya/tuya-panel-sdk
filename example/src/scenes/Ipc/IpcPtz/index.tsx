@@ -5,20 +5,10 @@ import { TYIpcPtz } from '@tuya/tuya-panel-ipc-sdk';
 
 const IpcPtz: React.FC = () => {
   const NormalTopRight = () => {
-    return (
-      <TYIpcPtz
-        themeType ='light'
-        containerStyle={{position: 'absolute', top: 50 }}
-      />
-    );
+    return <TYIpcPtz themeType="light" containerStyle={{ position: 'absolute', top: 50 }} />;
   };
   const NormalTopRight1 = () => {
-    return (
-      <TYIpcPtz
-        themeType ='dark'
-        containerStyle={{position: 'absolute', top: 60 }}
-      />
-    );
+    return <TYIpcPtz themeType="dark" containerStyle={{ position: 'absolute', top: 60 }} />;
   };
 
   return (
@@ -35,12 +25,12 @@ const styles = StyleSheet.create({
   TYIpcPlayerPage: {
     flex: 1,
   },
-  descLight: {
+  descDark: {
     color: 'red',
     marginVertical: 10,
     paddingLeft: 15,
   },
-  descDark: {
+  descLight: {
     color: 'red',
     marginVertical: 10,
     paddingLeft: 15,
