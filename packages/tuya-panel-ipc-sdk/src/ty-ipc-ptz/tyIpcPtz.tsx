@@ -13,35 +13,27 @@ const { smallScreen, middlleScreen, is7Plus } = Config;
 const TYIpcPtz: React.FC<TYIpcPtzProps> & {
   defaultProps: Partial<TYIpcPtzProps>;
 } = (props: TYIpcPtzProps) => {
-  const {
-    pieWidth,
-    pieHeight,
-    panelItemActiveColor,
-    containerStyle,
-    rotateDegree,
-    themeType,
-    disabled,
-  } = props;
+  const { pieWidth, pieHeight, activeColor, containerStyle, themeType, disabled, hasPtz } = props;
   const [ptzData, setptzData] = useState([
     {
       key: 'up',
       imageSource: themeType === 'dark' ? Res.circleHoverUpDark : Res.circleHoverUp,
-      hasPtz: true,
+      hasPtz,
     },
     {
       key: 'right',
       imageSource: themeType === 'dark' ? Res.circleHoverRightDark : Res.circleHoverRight,
-      hasPtz: true,
+      hasPtz,
     },
     {
       key: 'left',
       imageSource: themeType === 'dark' ? Res.circleHoverLeftDark : Res.circleHoverLeft,
-      hasPtz: true,
+      hasPtz,
     },
     {
       key: 'down',
       imageSource: themeType === 'dark' ? Res.circleHoverDownDark : Res.circleHoverDown,
-      hasPtz: true,
+      hasPtz,
     },
   ]);
   const [hoverKey, sethoverKey] = useState(-1);
@@ -84,7 +76,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     return ptzData.map((item, index) => (
       <TouchableOpacity
         activeOpacity={0.7}
-        disabled={(item.hasPtz !== undefined && !item.hasPtz) || disabled}
+        disabled={!item.hasPtz || disabled}
         onPressIn={() => pressIn(index)}
         onPressOut={() => pressOut(index)}
         key={item.key}
@@ -104,7 +96,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
               style={{
                 width: pieItemWidth,
                 height: pieItemWidth,
-                tintColor: panelItemActiveColor === '#fc2f07' ? undefined : panelItemActiveColor,
+                tintColor: activeColor === '#fc2f07' ? undefined : activeColor,
               }}
             />
           </View>
@@ -130,8 +122,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     }
   }
 
-  const pieNumber = ptzData.length;
-  const pieItemWidth = pieWidth / (pieNumber / 2);
+  const pieItemWidth = pieWidth / 2;
   const pieItemHeight = pieHeight / 2;
 
   return (
@@ -155,7 +146,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
               {
                 width: pieWidth,
                 height: pieHeight,
-                transform: [{ rotate: rotateDegree }],
+                transform: [{ rotate: '45deg' }],
               },
             ]}
           >
@@ -168,7 +159,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
               {
                 width: pieWidth,
                 height: pieHeight,
-                transform: [{ rotate: rotateDegree }],
+                transform: [{ rotate: '45deg' }],
               },
             ]}
           >
@@ -185,9 +176,8 @@ TYIpcPtz.defaultProps = {
   disabled: false,
   pieWidth: 200,
   pieHeight: 200,
-  pieNumber: 4,
   themeType: 'light',
-  rotateDegree: '45deg',
+  hasPtz: true,
   pressIn: index => {
     if (index === 0) {
       CameraManager.startPtzUp();

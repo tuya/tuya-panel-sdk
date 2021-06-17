@@ -7,18 +7,16 @@ export interface TYIpcPtzProps {
   pieWidth: number;
   // ptz高度
   pieHeight: number;
-  // ptz数值
-  pieNumber: number;
   // 主题色
-  themeType: string;
+  themeType: 'light' | 'dark';
   // 容器样式
   containerStyle: ViewStyle;
-  // 旋转角度
-  rotateDegree: string;
   // 点击函数
   pressIn?: (index: number) => void;
   // 离开函数
   pressOut?: (index) => void;
   // 激活键颜色
-  panelItemActiveColor: string;
+  activeColor: string;
+  // 是否有方向点
+  hasPtz: boolean;
 }

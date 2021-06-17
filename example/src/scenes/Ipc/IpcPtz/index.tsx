@@ -5,10 +5,24 @@ import { TYIpcPtz } from '@tuya/tuya-panel-ipc-sdk';
 
 const IpcPtz: React.FC = () => {
   const NormalTopRight = () => {
-    return <TYIpcPtz themeType="light" containerStyle={{ position: 'absolute', top: 50 }} />;
+    return (
+      <TYIpcPtz
+        themeType="light"
+        pieWidth={150}
+        pieHeight={150}
+        containerStyle={{ position: 'absolute', top: 50 }}
+      />
+    );
   };
   const NormalTopRight1 = () => {
-    return <TYIpcPtz themeType="dark" containerStyle={{ position: 'absolute', top: 60 }} />;
+    return (
+      <TYIpcPtz
+        themeType="dark"
+        pieWidth={180}
+        pieHeight={180}
+        containerStyle={{ position: 'absolute', top: 60 }}
+      />
+    );
   };
 
   return (
