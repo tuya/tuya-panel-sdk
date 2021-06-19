@@ -7,7 +7,7 @@ import LampCategory from '../scenes/Lamp';
 import SweepRobotCategory from '../scenes/SweepRobot';
 // import Health from '../scenes/Health';
 import LockCategory from '../scenes/Lock';
-// import GateWayCategory from '../scenes/Gateway';
+import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
 import AnimationCategory from '../scenes/Animation';
 // import Remote from '../scenes/Remote';
@@ -26,7 +26,7 @@ import ApiSceneInfo from '../../../packages/tuya-panel-api/package.json';
 // import SensorInfo from '../../../packages/tuya-panel-sensor-sdk/package.json';
 // import HealthInfo from '../../../packages/tuya-panel-health-sdk/package.json';
 // import FullRoomInfo from '../../../packages/tuya-panel-fullroom-sdk/package.json';
-// import GatewayInfo from '../../../packages/tuya-panel-gateway-sdk/package.json';
+import GatewayInfo from '../../../packages/tuya-panel-gateway-sdk/package.json';
 // import CbtInfo from '../../../packages/tuya-panel-cbt-sdk/package.json';
 import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.json';
 // import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
@@ -104,12 +104,12 @@ export const elementsRouters = _.sortBy(
     //   subTitle: FullRoomInfo.version,
     //   Scene: FullRoomCategory,
     // },
-    // {
-    //   id: 'Gateway',
-    //   title: GatewayInfo.name,
-    //   subTitle: GatewayInfo.version,
-    //   Scene: GateWayCategory,
-    // },
+    {
+      id: 'Gateway',
+      title: GatewayInfo.name,
+      subTitle: GatewayInfo.version,
+      Scene: GateWayCategory,
+    },
     // {
     //   id: 'Cbt',
     //   title: CbtInfo.name,
