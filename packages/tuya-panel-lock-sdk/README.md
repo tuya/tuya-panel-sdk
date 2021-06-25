@@ -9,15 +9,15 @@ Tuya Animation business component library
 ## Install
 
 ```sh
-$ npm install @tuya/tuya-panel-animation-sdk
+$ npm install @tuya/tuya-panel-lock-sdk
 // or
-$ yarn add @tuya/tuya-panel-animation-sdk
+$ yarn add @tuya/tuya-panel-lock-sdk
 ```
 
 ## Usage
 
 ```sh
-import { Diffusion } from '@tuya/tuya-panel-animation-sdk'
+import { Diffusion } from '@tuya/tuya-panel-lock-sdk'
 ```
 
 ## Doc
