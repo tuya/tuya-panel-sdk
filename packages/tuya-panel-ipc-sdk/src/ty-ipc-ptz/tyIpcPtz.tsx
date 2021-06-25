@@ -18,6 +18,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     pieHeight,
     activeColor,
     containerStyle,
+    dotStyle,
     themeType,
     disabled,
     hasPtzUp,
@@ -115,7 +116,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
         )}
         {item.hasPtz && (
           <View style={Styles.ptzDotImage}>
-            <Image source={Res.ptzDot} style={{ width: 10, height: 10, tintColor: '#fc2f07' }} />
+            <Image source={Res.ptzDot} style={[Styles.dotImage, dotStyle]} />
           </View>
         )}
       </TouchableOpacity>
@@ -185,6 +186,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
 
 TYIpcPtz.defaultProps = {
   containerStyle: {},
+  dotStyle: {},
   disabled: false,
   pieWidth: 200,
   pieHeight: 200,

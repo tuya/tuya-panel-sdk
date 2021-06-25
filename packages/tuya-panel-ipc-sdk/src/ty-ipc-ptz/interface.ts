@@ -1,4 +1,4 @@
-import { ViewStyle } from 'react-native';
+import { ViewStyle, ImageStyle } from 'react-native';
 
 export interface TYIpcPtzProps {
   // 是否禁用
@@ -11,6 +11,8 @@ export interface TYIpcPtzProps {
   themeType: 'light' | 'dark';
   // 容器样式
   containerStyle: ViewStyle;
+  // 方向点样式
+  dotStyle: ImageStyle;
   // 点击函数
   pressIn?: (index: number) => void;
   // 离开函数

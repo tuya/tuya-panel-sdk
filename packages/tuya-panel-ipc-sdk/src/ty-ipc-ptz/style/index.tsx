@@ -10,6 +10,11 @@ const Styles = StyleSheet.create({
     height: 50,
     width: 50,
   },
+  dotImage: {
+    height: 10,
+    tintColor: '#fc2f07',
+    width: 10,
+  },
   hoverImage: {
     alignItems: 'center',
     bottom: 0,
