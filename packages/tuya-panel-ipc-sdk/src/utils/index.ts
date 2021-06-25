@@ -13,7 +13,7 @@ export const showMathPowValue = (value, scale) => {
 
 
 // 将具体数值，转换为对应区间百分比
-export const numberToPecent = (v: undefined | number, min: number, max: number) => {
+export const numberToPercent = (v: undefined | number, min: number, max: number) => {
   if (_.isUndefined(v)) {
     v = max;
   }

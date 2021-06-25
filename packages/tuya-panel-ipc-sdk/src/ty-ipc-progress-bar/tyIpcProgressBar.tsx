@@ -5,7 +5,7 @@ import { TYText, Slider } from 'tuya-panel-kit';
 import Styles from './style';
 import { TYIpcProgressBarProps } from './interface';
 import publicConfig from '../publicConfig';
-import { numberToPecent } from '../utils';
+import { numberToPercent } from '../utils';
 
 const { cx } = publicConfig;
 
