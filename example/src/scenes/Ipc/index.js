@@ -24,7 +24,7 @@ export default class AnimatedScene extends Component {
   static IpcBattery = IpcBatteryScene;
   static IpcPlayerRnPageTest = IpcPlayerRnPageTest;
   static IpcVideoBit = IpcVideoBit;
-  static IpcPtz = IpcPtz
+  static IpcPtz = IpcPtz;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
