@@ -10,7 +10,7 @@ import IpcPlayer from './IpcPlayer';
 import IpcBatteryScene from './IpcBattery';
 import IpcPlayerRnPageTest from './IpcPlayerRnPageTest';
 import IpcVideoBit from './IpcVideoBit';
-import IpcPtz from './IpcPtz'
+import IpcPtz from './IpcPtz';
 export default class AnimatedScene extends Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Ipc.+\w*$/.test(r.id)));
