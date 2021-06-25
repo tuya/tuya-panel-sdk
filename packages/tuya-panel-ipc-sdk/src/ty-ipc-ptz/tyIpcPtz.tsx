@@ -29,22 +29,22 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     {
       key: 'up',
       imageSource: themeType === 'dark' ? Res.circleHoverUpDark : Res.circleHoverUp,
-      hasPtz: hasPtzUp === true,
+      hasPtz: hasPtzUp,
     },
     {
       key: 'right',
       imageSource: themeType === 'dark' ? Res.circleHoverRightDark : Res.circleHoverRight,
-      hasPtz: hasPtzRight === true,
+      hasPtz: hasPtzRight,
     },
     {
       key: 'left',
       imageSource: themeType === 'dark' ? Res.circleHoverLeftDark : Res.circleHoverLeft,
-      hasPtz: hasPtzLeft === true,
+      hasPtz: hasPtzLeft,
     },
     {
       key: 'down',
       imageSource: themeType === 'dark' ? Res.circleHoverDownDark : Res.circleHoverDown,
-      hasPtz: hasPtzDown === true,
+      hasPtz: hasPtzDown,
     },
   ];
   const [ptzData, setptzData] = useState(ptzdata);
