@@ -29,22 +29,22 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     {
       key: 'up',
       imageSource: themeType === 'dark' ? Res.circleHoverUpDark : Res.circleHoverUp,
-      hasPtzUp,
+      hasPtz: hasPtzUp === true,
     },
     {
       key: 'right',
       imageSource: themeType === 'dark' ? Res.circleHoverRightDark : Res.circleHoverRight,
-      hasPtzRight,
+      hasPtz: hasPtzRight === true,
     },
     {
       key: 'left',
       imageSource: themeType === 'dark' ? Res.circleHoverLeftDark : Res.circleHoverLeft,
-      hasPtzLeft,
+      hasPtz: hasPtzLeft === true,
     },
     {
       key: 'down',
       imageSource: themeType === 'dark' ? Res.circleHoverDownDark : Res.circleHoverDown,
-      hasPtzDown,
+      hasPtz: hasPtzDown === true,
     },
   ];
   const [ptzData, setptzData] = useState(ptzdata);
@@ -60,16 +60,16 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
       const hasLeft = _.indexOf(ptz, '6');
       const hasRight = _.indexOf(ptz, '2');
       if (hasTop !== -1) {
-        oldPtzData[0].hasPtzUp = true;
+        oldPtzData[0].hasPtz = true;
       }
       if (hasRight !== -1) {
-        oldPtzData[1].hasPtzRight = true;
+        oldPtzData[1].hasPtz = true;
       }
       if (hasLeft !== -1) {
-        oldPtzData[2].hasPtzLeft = true;
+        oldPtzData[2].hasPtz = true;
       }
       if (hasBottom !== -1) {
-        oldPtzData[3].hasPtzDown = true;
+        oldPtzData[3].hasPtz = true;
       }
       setptzData(oldPtzData);
     }
@@ -88,9 +88,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     return ptzData.map((item, index) => (
       <TouchableOpacity
         activeOpacity={0.7}
-        disabled={
-          !(item.hasPtzUp || item.hasPtzDown || item.hasPtzLeft || item.hasPtzRight) || disabled
-        }
+        disabled={!item.hasPtz || disabled}
         onPressIn={() => pressIn(index)}
         onPressOut={() => pressOut(index)}
         key={item.key}
@@ -115,7 +113,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
             />
           </View>
         )}
-        {(item.hasPtzUp || item.hasPtzDown || item.hasPtzLeft || item.hasPtzRight) && (
+        {item.hasPtz && (
           <View style={Styles.ptzDotImage}>
             <Image source={Res.ptzDot} style={{ width: 10, height: 10, tintColor: '#fc2f07' }} />
           </View>

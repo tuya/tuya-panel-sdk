@@ -17,12 +17,12 @@ export interface TYIpcPtzProps {
   pressOut?: (index) => void;
   // 激活键颜色
   activeColor: string;
-  // 是否有方向点
+  // 是否有上方向点
   hasPtzUp: boolean;
-  // 是否有方向点
+  // 是否有下方向点
   hasPtzDown: boolean;
-  // 是否有方向点
+  // 是否有左方向点
   hasPtzLeft: boolean;
-  // 是否有方向点
+  // 是否有右方向点
   hasPtzRight: boolean;
 }
