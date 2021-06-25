@@ -37,7 +37,7 @@ const TYIpcProgressBar: React.FC<TYIpcProgressBarProps> & {
   };
 
   const getPercent = (value, min, max) => {
-    return `${numberToPecent(value, min, max)}%`;
+    return `${numberToPercent(value, min, max)}%`;
   };
 
   return (
