@@ -35,7 +35,7 @@ exports[`defendTime components basic render 1`] = `
       ]
     }
   >
-    已安全守护
+    Safe Guarding for
   </Text>
   <Text
     style={
@@ -68,7 +68,7 @@ exports[`defendTime components basic render 1`] = `
       ]
     }
   >
-    天
+    days
   </Text>
 </View>
 `;

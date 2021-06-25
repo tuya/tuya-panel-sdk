@@ -8,7 +8,7 @@ export default {
   zh: {
     safeTip: '已安全守护',
     day: '天',
-    random: 'random',
-    passwordInput: 'enter password',
+    random: '随机生成',
+    passwordInput: '请输入',
   },
 };
