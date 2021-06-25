@@ -18,5 +18,11 @@ export interface TYIpcPtzProps {
   // 激活键颜色
   activeColor: string;
   // 是否有方向点
-  hasPtz: boolean;
+  hasPtzUp: boolean;
+  // 是否有方向点
+  hasPtzDown: boolean;
+  // 是否有方向点
+  hasPtzLeft: boolean;
+  // 是否有方向点
+  hasPtzRight: boolean;
 }

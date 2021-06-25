@@ -13,29 +13,41 @@ const { smallScreen, middlleScreen, is7Plus } = Config;
 const TYIpcPtz: React.FC<TYIpcPtzProps> & {
   defaultProps: Partial<TYIpcPtzProps>;
 } = (props: TYIpcPtzProps) => {
-  const { pieWidth, pieHeight, activeColor, containerStyle, themeType, disabled, hasPtz } = props;
-  const [ptzData, setptzData] = useState([
+  const {
+    pieWidth,
+    pieHeight,
+    activeColor,
+    containerStyle,
+    themeType,
+    disabled,
+    hasPtzUp,
+    hasPtzDown,
+    hasPtzLeft,
+    hasPtzRight,
+  } = props;
+  const ptzdata = [
     {
       key: 'up',
       imageSource: themeType === 'dark' ? Res.circleHoverUpDark : Res.circleHoverUp,
-      hasPtz,
+      hasPtzUp,
     },
     {
       key: 'right',
       imageSource: themeType === 'dark' ? Res.circleHoverRightDark : Res.circleHoverRight,
-      hasPtz,
+      hasPtzRight,
     },
     {
       key: 'left',
       imageSource: themeType === 'dark' ? Res.circleHoverLeftDark : Res.circleHoverLeft,
-      hasPtz,
+      hasPtzLeft,
     },
     {
       key: 'down',
       imageSource: themeType === 'dark' ? Res.circleHoverDownDark : Res.circleHoverDown,
-      hasPtz,
+      hasPtzDown,
     },
-  ]);
+  ];
+  const [ptzData, setptzData] = useState(ptzdata);
   const [hoverKey, sethoverKey] = useState(-1);
 
   useEffect(() => {
@@ -48,16 +60,16 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
       const hasLeft = _.indexOf(ptz, '6');
       const hasRight = _.indexOf(ptz, '2');
       if (hasTop !== -1) {
-        oldPtzData[0].hasPtz = true;
+        oldPtzData[0].hasPtzUp = true;
       }
       if (hasRight !== -1) {
-        oldPtzData[1].hasPtz = true;
+        oldPtzData[1].hasPtzRight = true;
       }
       if (hasLeft !== -1) {
-        oldPtzData[2].hasPtz = true;
+        oldPtzData[2].hasPtzLeft = true;
       }
       if (hasBottom !== -1) {
-        oldPtzData[3].hasPtz = true;
+        oldPtzData[3].hasPtzDown = true;
       }
       setptzData(oldPtzData);
     }
@@ -76,7 +88,9 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
     return ptzData.map((item, index) => (
       <TouchableOpacity
         activeOpacity={0.7}
-        disabled={!item.hasPtz || disabled}
+        disabled={
+          !(item.hasPtzUp || item.hasPtzDown || item.hasPtzLeft || item.hasPtzRight) || disabled
+        }
         onPressIn={() => pressIn(index)}
         onPressOut={() => pressOut(index)}
         key={item.key}
@@ -101,7 +115,7 @@ const TYIpcPtz: React.FC<TYIpcPtzProps> & {
             />
           </View>
         )}
-        {item.hasPtz && (
+        {(item.hasPtzUp || item.hasPtzDown || item.hasPtzLeft || item.hasPtzRight) && (
           <View style={Styles.ptzDotImage}>
             <Image source={Res.ptzDot} style={{ width: 10, height: 10, tintColor: '#fc2f07' }} />
           </View>
@@ -177,7 +191,10 @@ TYIpcPtz.defaultProps = {
   pieWidth: 200,
   pieHeight: 200,
   themeType: 'light',
-  hasPtz: true,
+  hasPtzUp: true,
+  hasPtzDown: true,
+  hasPtzLeft: true,
+  hasPtzRight: true,
   pressIn: index => {
     if (index === 0) {
       CameraManager.startPtzUp();
