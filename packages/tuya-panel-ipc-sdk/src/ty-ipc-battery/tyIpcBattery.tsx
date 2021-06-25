@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { View } from 'react-native';
 import { Svg, Path, Polygon } from 'react-native-svg';
 import Styles from './style';
-import { TYIpcBtteryProps } from './interface';
+import { TYIpcBatteryProps } from './interface';
 import publicConfig from '../publicConfig';
 
 const { cx } = publicConfig;
@@ -11,9 +11,9 @@ const { cx } = publicConfig;
 const wrapBatteryD =
   'M6.5,0 C6.77614237,-5.07265313e-17 7,0.223857625 7,0.5 L7,1 L9.5,1 C10.3284271,1 11,1.67157288 11,2.5 L11,17.5 C11,18.3284271 10.3284271,19 9.5,19 L1.5,19 C0.671572875,19 0,18.3284271 0,17.5 L0,2.5 C0,1.67157288 0.671572875,1 1.5,1 L4,1 L4,0.5 C4,0.223857625 4.22385763,5.07265313e-17 4.5,0 L6.5,0 Z M9.5,2 L1.5,2 C1.22385763,2 1,2.22385763 1,2.5 L1,17.5 C1,17.7761424 1.22385763,18 1.5,18 L9.5,18 C9.77614237,18 10,17.7761424 10,17.5 L10,2.5 C10,2.22385763 9.77614237,2 9.5,2 Z';
 
-const TYIpcBattery: React.FC<TYIpcBtteryProps> & {
-  defaultProps: Partial<TYIpcBtteryProps>;
-} = (props: TYIpcBtteryProps) => {
+const TYIpcBattery: React.FC<TYIpcBatteryProps> & {
+  defaultProps: Partial<TYIpcBatteryProps>;
+} = (props: TYIpcBatteryProps) => {
   const {
     value,
     size,
