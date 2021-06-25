@@ -22,6 +22,7 @@ function resolveErr(e: IMessage): Promise<Error> {
  *
  * @param {IGetGyroHistoryListOpts} opt
  * @returns
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/api?id=Ka4r3ewg0h7j3#title-2-%E6%9F%A5%E8%AF%A2%E6%B8%85%E6%89%AB%E8%AE%B0%E5%BD%95
  */
 export function getGyroMapHistoryList(
   opt: IGetGyroHistoryListOpts
@@ -81,6 +82,7 @@ export function getGyroMapHistoryList(
  * @export
  * @param {string[]} ids
  * @returns
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/api?id=Ka4r3ewg0h7j3#title-3-%E5%88%A0%E9%99%A4%E6%B8%85%E6%89%AB%E8%AE%B0%E5%BD%95
  */
 export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Error> {
   const a = 'tuya.m.sweeper.cleaning.history.delete';
@@ -108,6 +110,7 @@ export function deleteGyroMapHistoryByIds(ids: string[]): Promise<boolean | Erro
  *
  * @param {IGetGyroMapLatestMediaOpts} opt
  * @returns
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/api?id=Ka4r3ewg0h7j3#title-0-%E6%9F%A5%E8%AF%A2%E6%B5%81%E6%9C%8D%E5%8A%A1%E6%9C%80%E6%96%B0%E8%AE%B0%E5%BD%95
  */
 export function getGyroMapLatestMedia(
   opt: IGetGyroMapLatestMediaOpts = {}
