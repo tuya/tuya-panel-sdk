@@ -7,3 +7,4 @@ export { default as TYIpcGrid } from './ty-ipc-grid';
 export { default as TYIpcBattery } from './ty-ipc-battery';
 export { default as TYIpcCrossDevice } from './ty-ipc-cross-device';
 export { default as TYIpcVideoBit } from './ty-ipc-videoBit';
+export { default as TYIpcPtz } from './ty-ipc-ptz';

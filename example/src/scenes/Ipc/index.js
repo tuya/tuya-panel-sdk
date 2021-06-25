@@ -9,7 +9,8 @@ import IpcCrossDevice from './IpcCrossDevice';
 import IpcPlayer from './IpcPlayer';
 import IpcBatteryScene from './IpcBattery';
 import IpcPlayerRnPageTest from './IpcPlayerRnPageTest';
-import IpcVideoBit from './IpcVideoBit'
+import IpcVideoBit from './IpcVideoBit';
+import IpcPtz from './IpcPtz';
 export default class AnimatedScene extends Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Ipc.+\w*$/.test(r.id)));
@@ -23,6 +24,7 @@ export default class AnimatedScene extends Component {
   static IpcBattery = IpcBatteryScene;
   static IpcPlayerRnPageTest = IpcPlayerRnPageTest;
   static IpcVideoBit = IpcVideoBit;
+  static IpcPtz = IpcPtz;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
