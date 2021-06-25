@@ -91,7 +91,7 @@ const TYIpcProgressBar: React.FC<TYIpcProgressBarProps> & {
             >
               {barData.customUnitText
                 ? barData.customUnitText
-                : numberToPecent(barData.value, barData.min, barData.max)}
+                : numberToPercent(barData.value, barData.min, barData.max)}
             </TYText>
           </View>
         )}
