@@ -23,4 +23,4 @@ import { commonApi, robotApi } from '@tuya/tuya-panel-api';
 
 ## Doc
 
-see [link](https://developer.tuya.com/en/docs/iot/panel-development/panel-sdk-development/common-sdk-development/open-apis?categoryId=960329) for detail docs
+see [link](https://developer.tuya.com/en/docs/iot/open-apis?id=Kaiuyvvxud2le) for detail docs
