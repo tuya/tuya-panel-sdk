@@ -7,7 +7,7 @@ import { TYIpcVideoBitProps } from './interface'
 
 const TYIpcVideoBit: React.FC<TYIpcVideoBitProps> & {
   defaultProps: Partial<TYIpcVideoBitProps>;
-} = props => {
+} = (props: TYIpcVideoBitProps) => {
   const [bitRateValue, setBitRateValue] = useState('');
   const { containerStyle, bitTxtBoxStyle, valueStyle, unitStyle, bitValue, unit } = props;
   let timer = null;
