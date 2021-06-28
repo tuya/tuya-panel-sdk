@@ -1,7 +1,7 @@
 /* eslint-disable camelcase */
 import { ViewStyle } from 'react-native';
 
-export interface TYIpcBtteryProps {
+export interface TYIpcBatteryProps {
   // 是否使用电量标准Dp模式
   standardDpMode: boolean;
   // 电量数值

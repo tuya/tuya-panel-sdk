@@ -1,5 +1,11 @@
 name: jest
-on: push
+on:
+  push:
+    branches:
+      - main # Change this to your default branch
+  pull_request:
+    branches:
+      - main # Change this to your default branch
 jobs:
   Codecov:
     runs-on: ubuntu-latest
