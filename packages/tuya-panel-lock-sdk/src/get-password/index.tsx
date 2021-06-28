@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { GetPasswordProps, GetPasswordState } from './interface';
+
 const { width } = Dimensions.get('window');
 
 export default class GetPassword extends Component<GetPasswordProps, GetPasswordState> {
@@ -20,6 +21,7 @@ export default class GetPassword extends Component<GetPasswordProps, GetPassword
     randomTextColor: '#0076FF',
     passwordColor: '#0076FF',
   };
+
   constructor(props) {
     super(props);
     this.state = {
@@ -74,11 +76,11 @@ export default class GetPassword extends Component<GetPasswordProps, GetPassword
                 this.passwordRef = ref;
               }}
               style={styles.textInputStyle}
-              autoFocus={true}
+              autoFocus
               keyboardType="numeric"
               maxLength={passwordNumber}
               underlineColorAndroid="transparent"
-              caretHidden={true}
+              caretHidden
               onChangeText={text => {
                 this.onEndEditing(text);
               }}
@@ -94,7 +96,7 @@ export default class GetPassword extends Component<GetPasswordProps, GetPassword
             </TouchableWithoutFeedback>
           </View>
           <View style={{ position: 'absolute', right: 10 }}>
-            <TouchableOpacity onPress={this.getRandom} style={[styles.randomView]}>
+            <TouchableOpacity onPress={this.getRandom} style={styles.randomView}>
               <Text style={[styles.randomText, { color: randomTextColor }]}>{randomText}</Text>
             </TouchableOpacity>
           </View>
@@ -102,64 +104,65 @@ export default class GetPassword extends Component<GetPasswordProps, GetPassword
       </View>
     );
   };
+
   render() {
     return <View style={{ backgroundColor: '#fff' }}>{this.renderPsw()}</View>;
   }
 }
 
 const styles = StyleSheet.create({
-  pswWarp: {
-    width,
-    backgroundColor: '#fff',
-    alignItems: 'center',
+  TipText: {
+    color: 'rgba(51,51,51,0.13)',
+    fontSize: 20,
   },
 
-  pwdRandom: {
-    width: width - 32,
+  inputText: {
     height: 60,
-    flexDirection: 'row',
-    backgroundColor: '#F8F8F8',
-    borderRadius: 8,
-    borderColor: 'rgba(0,0,0,0.08)',
-    borderWidth: 1,
-    alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingHorizontal: 16,
-    marginVertical: 8,
+    justifyContent: 'center',
+    marginLeft: 20,
+    position: 'absolute',
+    width: width - 82,
+    zIndex: 20,
   },
-  textInputStyle: {
-    width: 230,
+  pswWarp: {
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    width,
+  },
+  pwdRandom: {
+    alignItems: 'center',
+    backgroundColor: '#F8F8F8',
+    borderColor: 'rgba(0,0,0,0.08)',
+    borderRadius: 8,
+    borderWidth: 1,
+    flexDirection: 'row',
     height: 60,
-    opacity: 0,
-    zIndex: 0,
+    justifyContent: 'space-between',
+    marginVertical: 8,
+    paddingHorizontal: 16,
+    width: width - 32,
   },
   pwdText: {
-    color: '#0076FF',
-    fontWeight: 'bold',
-    fontSize: 24,
     backgroundColor: 'transparent',
+    color: '#0076FF',
+    fontSize: 24,
+    fontWeight: 'bold',
     letterSpacing: 8,
   },
+
   randomText: {
     color: '#0076FF',
     fontSize: 12,
     fontWeight: 'bold',
   },
-
-  inputText: {
-    position: 'absolute',
-    justifyContent: 'center',
-    height: 60,
-    marginLeft: 20,
-    width: width - 82,
-    zIndex: 20,
-  },
-  TipText: {
-    color: 'rgba(51,51,51,0.13)',
-    fontSize: 20,
-  },
   randomView: {
     height: 50,
     justifyContent: 'center',
+  },
+  textInputStyle: {
+    height: 60,
+    opacity: 0,
+    width: 230,
+    zIndex: 0,
   },
 });
