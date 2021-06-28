@@ -14,7 +14,7 @@ const { cx } = publicConfig;
 const pirWidth = cx(327);
 const pirHeight = cx(130);
 
-const TYIpcPir: React.FC<TYIpcPirProps> & { defaultProps: Partial<TYIpcPirProps> } = props => {
+const TYIpcPir: React.FC<TYIpcPirProps> & { defaultProps: Partial<TYIpcPirProps> } = (props: TYIpcPirProps) => {
   const {
     title,
     activeColor,
