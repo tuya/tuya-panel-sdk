@@ -10,7 +10,11 @@ import IpcPlayer from './IpcPlayer';
 import IpcBatteryScene from './IpcBattery';
 import IpcPlayerRnPageTest from './IpcPlayerRnPageTest';
 import IpcVideoBit from './IpcVideoBit';
+import IpcTempHumi from './IpcTempHumi';
+import IpcProgressBar from './IpcProgressBar';
+import IpcTimerInterval from './IpcTimerInterval';
 import IpcPtz from './IpcPtz';
+
 export default class AnimatedScene extends Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Ipc.+\w*$/.test(r.id)));
@@ -24,6 +28,9 @@ export default class AnimatedScene extends Component {
   static IpcBattery = IpcBatteryScene;
   static IpcPlayerRnPageTest = IpcPlayerRnPageTest;
   static IpcVideoBit = IpcVideoBit;
+  static IpcTempHumi = IpcTempHumi;
+  static IpcProgressBar = IpcProgressBar;
+  static IpcTimerInterval = IpcTimerInterval;
   static IpcPtz = IpcPtz;
 
   render() {
