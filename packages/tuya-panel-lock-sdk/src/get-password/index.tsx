@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 import { GetPasswordProps, GetPasswordState } from './interface';
-import Strings from '../defend-time/i18n';
 
 const { width } = Dimensions.get('window');
 
@@ -92,17 +91,13 @@ export default class GetPassword extends Component<GetPasswordProps, GetPassword
                 {password.trim().length !== 0 && (
                   <Text style={[styles.pwdText, { color: passwordColor }]}>{password}</Text>
                 )}
-                {!password && (
-                  <Text style={styles.TipText}>{Strings.getLang('passwordInput')}</Text>
-                )}
+                {!password && <Text style={styles.TipText}>{inputItemText}</Text>}
               </View>
             </TouchableWithoutFeedback>
           </View>
           <View style={{ position: 'absolute', right: 10 }}>
             <TouchableOpacity onPress={this.getRandom} style={styles.randomView}>
-              <Text style={[styles.randomText, { color: randomTextColor }]}>
-                {Strings.getLang('random')}
-              </Text>
+              <Text style={[styles.randomText, { color: randomTextColor }]}>{randomText}</Text>
             </TouchableOpacity>
           </View>
         </View>
