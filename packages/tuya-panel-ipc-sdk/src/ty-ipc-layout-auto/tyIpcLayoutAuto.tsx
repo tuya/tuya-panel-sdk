@@ -5,7 +5,7 @@ import { TYIpcLayoutAutoProps } from './interface';
 
 const TYIpcLayoutAuto: React.FC<TYIpcLayoutAutoProps> & {
   defaultProps: Partial<TYIpcLayoutAutoProps>;
-} = props => {
+} = (props: TYIpcLayoutAutoProps) => {
   const [scrollHeight, setScrollHeight] = useState(0);
   const [scrollEnabled, setScrollEnabled] = useState(false);
   const { containerStyle, mainContentStyle, containerHeight, scrollProps, children } = props;
