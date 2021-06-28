@@ -13,6 +13,8 @@ import IpcVideoBit from './IpcVideoBit';
 import IpcTempHumi from './IpcTempHumi';
 import IpcProgressBar from './IpcProgressBar';
 import IpcTimerInterval from './IpcTimerInterval';
+import IpcPtz from './IpcPtz';
+
 export default class AnimatedScene extends Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Ipc.+\w*$/.test(r.id)));
@@ -29,6 +31,7 @@ export default class AnimatedScene extends Component {
   static IpcTempHumi = IpcTempHumi;
   static IpcProgressBar = IpcProgressBar;
   static IpcTimerInterval = IpcTimerInterval;
+  static IpcPtz = IpcPtz;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;

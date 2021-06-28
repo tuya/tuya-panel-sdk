@@ -1,0 +1,29 @@
+{
+  "name": "@tuya/tuya-panel-protocols",
+  "version": "1.0.0",
+  "description": "tuya-panel-protocols, is a business protocol collection library.",
+  "keywords": [
+    "tuya",
+    "protocols"
+  ],
+  "author": "ZengBeauty<2497752603@qq.com>",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "build": "tsc -d",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  },
+  "homepage": "https://github.com/tuya/tuya-panel-sdk/tree/main/packages/tuya-panel-api#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-sdk/issues"
+  }
+}

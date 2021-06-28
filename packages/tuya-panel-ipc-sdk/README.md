@@ -5,7 +5,6 @@ Tuya Ipc business component library
 English | [简体中文](./README-zh_CN.md)
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-ipc-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-ipc-sdk)
-[![](https://codecov.io/gh/tuya/tuya-panel-sdk/branch/ipc/graph/badge.svg)](https://codecov.io/gh/tuya/tuya-panel-sdk/branches/ipc)
 
 ## Install
 
