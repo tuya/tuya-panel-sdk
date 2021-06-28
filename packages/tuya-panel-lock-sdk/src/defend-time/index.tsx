@@ -3,7 +3,6 @@ import { Text, View, StyleSheet, Image, Dimensions } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import { DefendTimeProps, DefendTimeState } from './interface';
 import TYNative from './api';
-import Strings from './i18n';
 
 const Res = {
   safeImage: require('../res/safe.png'),
@@ -15,6 +14,8 @@ export default class SafeTip extends PureComponent<DefendTimeProps, DefendTimeSt
     textColor: '#666666',
     tipColor: '#59A4F8',
     logoImage: Res.safeImage,
+    textA: '已安全守护',
+    textB: '天',
   };
 
   constructor(props: any) {
@@ -35,7 +36,7 @@ export default class SafeTip extends PureComponent<DefendTimeProps, DefendTimeSt
   }
 
   render() {
-    const { tipColor, textColor, textStyle, tipTextStyle, logoImage } = this.props;
+    const { tipColor, textColor, textA, textB, textStyle, tipTextStyle, logoImage } = this.props;
 
     const textColorStyle = {
       color: textColor,
@@ -47,11 +48,9 @@ export default class SafeTip extends PureComponent<DefendTimeProps, DefendTimeSt
     return (
       <View style={styles.safe}>
         <Image source={logoImage} style={styles.safeImage} />
-        <Text style={[styles.safeText, textColorStyle, textStyle]}>
-          {Strings.getLang('safeTip')}
-        </Text>
+        <Text style={[styles.safeText, textColorStyle, textStyle]}>{textA}</Text>
         <Text style={[styles.safeText, tipColorStyle, tipTextStyle]}>{this.state.time}</Text>
-        <Text style={[styles.safeText, textColorStyle, textStyle]}>{Strings.getLang('day')}</Text>
+        <Text style={[styles.safeText, textColorStyle, textStyle]}>{textB}</Text>
       </View>
     );
   }
