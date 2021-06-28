@@ -72,6 +72,7 @@ interface DatePickerprops {
   defaultDate?: any;
   date?: any;
   PickerProps?: any;
+  // isEndDate: boolean;
 }
 class DatePicker extends React.Component<DatePickerprops, any> {
   static propTypes = {
@@ -139,6 +140,10 @@ class DatePicker extends React.Component<DatePickerprops, any> {
      * `年` `月` `日` 排序规则，若不提供则默认为年月日
      */
     dateSortKeys: PropTypes.array,
+    /**
+     *是否为失效时间
+     */
+    // isEndDate: PropTypes.bool,
   };
 
   static defaultProps = {
@@ -172,7 +177,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
 
   componentDidMount() {
     this.setState({
-      indexAndCols: this.getIndexAndCols(this.props.date),
+      indexAndCols: this.getIndexAndCols(),
     });
   }
 
@@ -185,11 +190,11 @@ class DatePicker extends React.Component<DatePickerprops, any> {
 
   onValueChange = (currentValue, index, key) => {
     const newValue = this.getNewDate(currentValue, index, key);
-    // console.log('currentValue, index, key', currentValue, index, key, newValue);
 
     if (!('date' in this.props)) {
       this.setState({ date: newValue });
     }
+
     this.setState({
       newDate: newValue,
     });
@@ -292,7 +297,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     let maxMinute = 59;
     let minHour = 0;
     let maxHour = 23;
-    const { mode, use12Hours, isPlusZero, isAmpmFirst, minDate, maxDate } = this.props;
+    const { mode, use12Hours, isPlusZero, minDate, maxDate } = this.props;
     const minDateMinute = minDate.getMinutes();
     const maxDateMinute = maxDate.getMinutes();
     const minDateHour = minDate.getHours();
@@ -333,23 +338,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
         maxMinute = maxDateMinute;
       }
     }
-    let ampmCols = [];
     // todo: minDate and maxDate
-    if (use12Hours) {
-      //   let ampm = [];
-      //   if (minHour > 12 && maxHour > 12) {
-      //     ampm.push({ value: '1', label: locale.pm })
-      //   } else if (minHour <= 12 && maxHour <= 12) {
-      //     ampm.push({ value: '0', label: locale.am })
-      //   } else {
-      //     ampm = [{ value: '0', label: locale.am }, { value: '1', label: locale.pm }];
-      //   }
-      const ampm = [
-        { value: '0', label: 'am' },
-        { value: '1', label: 'pm' },
-      ];
-      ampmCols = [{ key: 'ampm', values: ampm }];
-    }
     let hour = [];
     if ((minHour === 0 && maxHour === 0) || (minHour !== 0 && maxHour !== 0)) {
       minHour = this.getRealHour(minHour);
@@ -366,9 +355,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     const minute = formatColArray(maxMinute - minMinute + 1, minMinute, '', isPlusZero);
     const minuteCols = { key: 'minute', values: minute };
 
-    const cols = !isAmpmFirst
-      ? [hourCols, minuteCols].concat(ampmCols)
-      : ampmCols.concat([hourCols, minuteCols]);
+    const cols = [hourCols, minuteCols];
 
     return { cols, nowMinute, nowHour };
   };
@@ -413,11 +400,9 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     return date;
   };
 
-  changeDateColsData = () => {};
-
   // get col data
   getDateColsData = () => {
-    const { mode, maxDate, minDate, isPlusZero } = this.props;
+    const { maxDate, minDate, isPlusZero } = this.props;
     const date = this.getDate();
     const nowYear = date.getFullYear();
     const nowMonth = date.getMonth();
@@ -455,6 +440,71 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     return [yearCol, monthCol, dayCol];
   };
 
+  // get picker selectItems and currentValue
+  getIndexAndCols = () => {
+    const { mode, dateSortKeys } = this.props;
+    const date = this.getDate();
+    const cols = [];
+    const value = [];
+
+    if (mode === DATE) {
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
+    }
+
+    if (mode === DATEHOUR) {
+      const time = this.getTimeColsData(date);
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
+        dateSortKeys,
+        unSortDateCols,
+        unSortDateValue
+      );
+
+      const realhour = date.getHours();
+      const timeValue = [`${realhour}`];
+      return {
+        cols: [...sortDateCols, ...time.cols.splice(0, 1)],
+        value: [...sortDateValue, ...timeValue],
+      };
+    }
+    const time = this.getTimeColsData(date);
+    const realhour = time.nowHour;
+    const timeValue = [`${realhour}`, `${time.nowMinute}`];
+    if (mode === DATETIME) {
+      const unSortDateCols = this.getDateColsData();
+      const unSortDateValue = [
+        `${date.getFullYear()}`,
+        `${date.getMonth() + 1}`,
+        `${date.getDate()}`,
+      ];
+      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
+        dateSortKeys,
+        unSortDateCols,
+        unSortDateValue
+      );
+      return {
+        cols: [...sortDateCols, ...time.cols],
+        value: [...sortDateValue, ...timeValue],
+      };
+    }
+
+    return {
+      cols,
+      value,
+    };
+  };
+
   changeIndexAndCols = newDate => {
     const date = this.getDate();
 
@@ -467,17 +517,33 @@ class DatePicker extends React.Component<DatePickerprops, any> {
       use12Hours,
       isPlusZero,
       dateSortKeys,
-      isAmpmFirst,
       minDate,
       maxDate,
       isTimeFirst,
     } = this.props;
-    const minDateMinute = minDate.getMinutes();
-    const maxDateMinute = maxDate.getMinutes();
-    const minDateHour = minDate.getHours();
-    const maxDateHour = maxDate.getHours();
     const changeMode = this.compareDate(this.getDate(), newDate);
-    console.log('changeMode', changeMode);
+    const nowYear = date.getFullYear();
+    // const nowMonth = date.getMonth();
+    const maxDateYear = maxDate.getFullYear();
+    const minDateYear = minDate.getFullYear();
+    const minDateMonth = minDate.getMonth();
+    const maxDateMonth = maxDate.getMonth();
+    const minDateDay = minDate.getDate();
+    const minDateHours = minDate.getHours();
+    const minDateMinute = minDate.getMinutes();
+    const year = formatColArray(maxDateYear - minDateYear + 1, minDateYear, '', isPlusZero);
+    const yearCol = { key: 'year', values: year };
+
+    let minMonth = 0;
+    let maxMonth = 11;
+    if (minDateYear === nowYear) {
+      minMonth = minDateMonth;
+    }
+    if (maxDateYear === nowYear) {
+      maxMonth = maxDateMonth;
+    }
+    let minDay = minDateDay;
+    const maxDay = getDaysInMonth(date);
 
     let hour = [];
     if ((minHour === 0 && maxHour === 0) || (minHour !== 0 && maxHour !== 0)) {
@@ -486,22 +552,41 @@ class DatePicker extends React.Component<DatePickerprops, any> {
       minHour = 1;
       hour.push({ value: '0', label: 'hour' ? `12${hour}` : '12' });
     }
+    if (changeMode === 'YEAR') {
+      minMonth = 0;
+      minDay = 1;
+      minHour = 0;
+      minMinute = 0;
+    }
+    if (changeMode === 'MONTH') {
+      minMonth = minDate.getMonth();
+      minDay = 1;
+      minHour = 0;
+      minMinute = 0;
+    }
     if (changeMode === 'DAY') {
       minHour = 0;
       minMinute = 0;
     }
     if (changeMode === 'HOUR') {
-      minHour = this.getDate().getHours();
+      minHour = minDateHours;
       minMinute = 0;
     }
     if (changeMode === 'MINUTE') {
-      minHour = date.getHours();
-      minMinute = date.getMinutes();
+      minHour = minDateHours;
+      minMinute = minDateMinute;
     }
     if (changeMode === 'SAME') {
       minHour = date.getHours();
       minMinute = date.getMinutes();
     }
+
+    const month = formatColArray(maxMonth - minMonth + 1, minMonth + 1, '', isPlusZero);
+    const monthCol = { key: 'month', values: month };
+
+    const day = formatColArray(maxDay - minDay + 1, minDay, '', isPlusZero);
+    const dayCol = { key: 'day', values: day };
+
     maxHour = this.getRealHour(maxHour);
     const hours = formatColArray(maxHour - minHour + 1, minHour, '', isPlusZero);
 
@@ -516,7 +601,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
 
     const realhour = nowHour;
     const timeValue = [`${realhour}`, `${nowMinute}`];
-    const unSortDateCols = this.getDateColsData();
+    const unSortDateCols = [yearCol, monthCol, dayCol];
     const unSortDateValue = [
       `${date.getFullYear()}`,
       `${date.getMonth() + 1}`,
@@ -543,95 +628,20 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     };
   };
 
-  // get picker selectItems and currentValue
-  getIndexAndCols = newDate => {
-    const { mode, use12Hours, isAmpmFirst, isTimeFirst, dateSortKeys } = this.props;
-    const date = this.getDate();
-    const cols = [];
-    const value = [];
-
-    if (mode === DATE) {
-      const unSortDateCols = this.getDateColsData();
-      const unSortDateValue = [
-        `${date.getFullYear()}`,
-        `${date.getMonth() + 1}`,
-        `${date.getDate()}`,
-      ];
-      return sortColumnsAndValue(dateSortKeys, unSortDateCols, unSortDateValue);
-    }
-    if (mode === DATEHOUR) {
-      const unSortDateCols = this.getDateColsData();
-      const unSortDateValue = [
-        `${date.getFullYear()}`,
-        `${date.getMonth() + 1}`,
-        `${date.getDate()}`,
-      ];
-      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
-        dateSortKeys,
-        unSortDateCols,
-        unSortDateValue
-      );
-      const time = this.getTimeColsData(date);
-      const realhour = time.nowHour;
-      const timeValue = [`${realhour}`];
-      return {
-        cols: isTimeFirst
-          ? [...time.cols.splice(0, 1), ...sortDateCols]
-          : [...sortDateCols, ...time.cols.splice(0, 1)],
-        value: isTimeFirst ? [...timeValue, ...sortDateValue] : [...sortDateValue, ...timeValue],
-      };
-    }
-    const time = this.getTimeColsData(date);
-    let realhour = time.nowHour;
-    const timeValue = [`${realhour}`, `${time.nowMinute}`];
-    if (use12Hours) {
-      realhour = time.nowHour === 0 ? 12 : time.nowHour > 12 ? time.nowHour - 12 : time.nowHour;
-      timeValue[0] = `${realhour}`;
-      const ampmStr = `${time.nowHour >= 12 ? 1 : 0}`;
-      if (isAmpmFirst) {
-        timeValue.splice(0, 0, ampmStr);
-      } else {
-        timeValue.push(ampmStr);
-      }
-    }
-    if (mode === DATETIME) {
-      const unSortDateCols = this.getDateColsData();
-      const unSortDateValue = [
-        `${date.getFullYear()}`,
-        `${date.getMonth() + 1}`,
-        `${date.getDate()}`,
-      ];
-      const { cols: sortDateCols, value: sortDateValue } = sortColumnsAndValue(
-        dateSortKeys,
-        unSortDateCols,
-        unSortDateValue
-      );
-      return {
-        cols: isTimeFirst ? [...time.cols, ...sortDateCols] : [...sortDateCols, ...time.cols],
-        value: isTimeFirst ? [...timeValue, ...sortDateValue] : [...sortDateValue, ...timeValue],
-      };
-    }
-    return {
-      cols,
-      value,
-    };
-  };
-
   compareDate(date, newDate) {
-    const { mode, minDate, maxDate } = this.props;
+    const { minDate } = this.props;
     const minDateYear = minDate.getFullYear();
     const minDateMonth = minDate.getMonth();
     const minDateDay = minDate.getDate();
     const minDateHour = minDate.getHours();
     const minDateMinute = minDate.getMinutes();
-    console.log(minDateYear, minDateMonth, minDateDay, minDateHour, minDateMinute);
 
     const newDateYear = newDate.getFullYear();
     const newDateMonth = newDate.getMonth();
     const newDateDay = newDate.getDate();
     const newDateHour = newDate.getHours();
     const newDateMinute = newDate.getMinutes();
-    console.log(newDateYear, newDateMonth, newDateDay, newDateHour, newDateMinute);
+
     if (newDateYear > minDateYear) return 'YEAR';
     if (newDateMonth > minDateMonth) return 'MONTH';
     if (newDateDay > minDateDay) return 'DAY';
@@ -651,22 +661,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     } else {
       pickerFontSize = cx(24);
     }
-    const {
-      mode,
-      use12Hours,
-      minDate,
-      maxDate,
-      onDateChange,
-      onValueChange,
-      isAmpmFirst,
-      date,
-      defaultDate,
-      style,
-      loop,
-      pickerFontColor,
-      accessibilityLabel,
-      ...PickerProps
-    } = this.props;
+    const { style, loop, pickerFontColor, accessibilityLabel, ...PickerProps } = this.props;
     const multiStyle = {
       flexDirection: 'row',
       alignItems: 'center',
@@ -675,7 +670,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
       backgroundColor: '#fff',
       height: 216,
     };
-    console.log('col', cols);
+    // console.log('cols', cols);
 
     return (
       <View style={[multiStyle, style]}>

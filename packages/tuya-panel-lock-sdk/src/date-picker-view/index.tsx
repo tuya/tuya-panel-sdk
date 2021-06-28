@@ -84,7 +84,7 @@ export default class DatePickerView extends PureComponent<
   }
 
   compareTwoDate(startDate, endDate) {
-    return new Date(endDate) >= new Date(startDate);
+    return new Date(endDate) > new Date(startDate);
   }
 
   confirmModal() {
@@ -122,21 +122,17 @@ export default class DatePickerView extends PureComponent<
         });
         return;
       }
-      if (!dateRange[1]) {
-        this.props.onDateChange({
-          startDate,
-          endDate: new Date().getTime(),
-        });
-        return;
-      }
-      if (dateRange[1] && !this.compareTwoDate(startDate, dateRange[1])) {
+      const endDateView = dateRange[1]
+        ? new Date(dateRange[1]).getTime()
+        : new Date(startDate).getTime();
+
+      if (!this.compareTwoDate(startDate, endDateView)) {
         GlobalToast.show({
           text: this.props.dateLimitTip || '生效时间必须早于失效时间',
           showIcon: false,
         });
         return;
       }
-      const endDateView = dateRange[1] ? new Date(dateRange[1]).getTime() : '';
       this.props.onDateChange({
         startDate,
         endDate: endDateView,
@@ -173,17 +169,22 @@ export default class DatePickerView extends PureComponent<
   render() {
     const { visible, startDate, currentOperationIndex, endDate } = this.state;
     const { cancelText, confirmText } = this.props;
-    const viewDate = currentOperationIndex ? endDate : startDate;
+    const _startDate = startDate ? new Date(startDate) : new Date();
+    const _endDate = endDate ? new Date(endDate) : new Date();
+    const viewDate = !currentOperationIndex ? _startDate : _endDate;
+    const minDate = !currentOperationIndex ? new Date() : new Date(_startDate);
+    const maxDate = new Date(new Date().setFullYear(new Date().getFullYear() + 9));
     return (
       <View>
         {this.renderItem()}
         <Modal visible={visible} onMaskPress={() => this.closeModal()}>
           <DatePicker
             mode={this.props.mode || DATETIME}
-            date={viewDate ? new Date(viewDate) : new Date()}
+            date={viewDate}
             onDateChange={date => this.setDate(date)}
-            minDate={new Date()}
-            maxDate={new Date(new Date().setFullYear(new Date().getFullYear() + 10))}
+            minDate={minDate}
+            maxDate={maxDate}
+            // isEndDate={!!currentOperationIndex}
           />
           <View style={styles.footer}>
             <StyledCancelButton onPress={() => this.closeModal()}>
