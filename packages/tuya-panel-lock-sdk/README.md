@@ -17,7 +17,7 @@ $ yarn add @tuya/tuya-panel-lock-sdk
 ## Usage
 
 ```js
-import { DefendTime, GetPassword } from '@tuya/tuya-lock-lock-sdk'
+import { DefendTime, GetPassword } from '@tuya/tuya-panel-lock-sdk'
 ```
 
 ## Doc

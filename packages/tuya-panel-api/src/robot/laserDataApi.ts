@@ -17,6 +17,7 @@ function resolveErr(e: IMessage): Promise<Error> {
  * @export
  * @param {IGetLaserHistoryListOpts} opt
  * @return {*}  {(Promise<ILaserRecordExportList | Error>)}
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/laser-sweeper-data-api?id=Kacloflhzfi1p#title-0-%E6%9F%A5%E8%AF%A2%E5%8E%86%E5%8F%B2%E6%B8%85%E6%89%AB%E8%AE%B0%E5%BD%95
  */
 export async function getLaserMapHistoryList(
   opt?: IGetLaserHistoryListOpts
@@ -72,6 +73,7 @@ export async function getLaserMapHistoryList(
  * @export
  * @param {IGetLaserHistoryListOpts} opt
  * @return {*}  {(Promise<ILaserMultiFloorExportList | Error>)}
+ * @docs https://developer.tuya.com/cn/docs/control-panel-sdk/laser-sweeper-data-api?id=Kacloflhzfi1p#title-1-%E6%9F%A5%E8%AF%A2%E5%9C%B0%E5%9B%BE%E5%88%97%E8%A1%A8
  */
 export async function getLaserMultiFloorMapList(
   opt?: IGetLaserHistoryListOpts
