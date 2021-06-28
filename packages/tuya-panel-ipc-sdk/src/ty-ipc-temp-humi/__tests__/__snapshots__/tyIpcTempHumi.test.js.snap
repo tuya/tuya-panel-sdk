@@ -1,0 +1,626 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcTempHumi components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 360,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      20℃
+    </TYText>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 28,
+          "marginHorizontal": 10,
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    /
+  </TYText>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      10%
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcTempHumi components basic render expect F 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 360,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      20℃
+    </TYText>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 28,
+          "marginHorizontal": 10,
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    /
+  </TYText>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      10%
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcTempHumi components basic render no temp 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 200,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      10%
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcTempHumi components basic render only F temp 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 360,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      100℉
+    </TYText>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      10%
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcTempHumi components basic render only temp 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 200,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      20℃
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`TYIpcTempHumi components basic render with F 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "rgba(0,0,0,0.3)",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+      },
+      Object {
+        "width": 360,
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      100℉
+    </TYText>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#ffffff",
+          "fontSize": 28,
+          "marginHorizontal": 10,
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    /
+  </TYText>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 4,
+            "resizeMode": "contain",
+            "width": 32,
+          },
+          Object {},
+        ]
+      }
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#ffffff",
+            "fontSize": 28,
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      10%
+    </TYText>
+  </View>
+</View>
+`;

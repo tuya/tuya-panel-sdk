@@ -8,7 +8,7 @@ import { TYIpcGridProps } from './interface';
 
 const TYIpcGrid: React.FC<TYIpcGridProps> & {
   defaultProps: Partial<TYIpcGridProps>;
-} = props => {
+} = (props: TYIpcGridProps) => {
   const [hoverMenu, setHoverMenu] = useState('none');
 
   const onPressIn = (key: string, itemData: any) => {
