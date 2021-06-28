@@ -1,0 +1,309 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcProgressBar components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 112,
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "flex-end",
+            "width": 80,
+          },
+          Object {},
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#333",
+              "fontSize": 24,
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0
+      </TYText>
+    </View>
+    <ThemedSlider
+      disabled={false}
+      maximumTrackTintColor="#eee"
+      maximumValue={100}
+      minimumTrackTintColor="#eee"
+      minimumValue={0}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "marginLeft": 16,
+            "marginRight": 10,
+          },
+          Object {},
+        ]
+      }
+      theme={null}
+      value={0}
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "minWidth": 40,
+          },
+          Object {},
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        numberOfLines={1}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+            },
+            Object {
+              "color": "#333",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0
+      </TYText>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcProgressBar components basic render disabled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 112,
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "flex-end",
+            "width": 80,
+          },
+          Object {},
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#aeaeae",
+              "fontSize": 24,
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0%
+      </TYText>
+    </View>
+    <ThemedSlider
+      disabled={true}
+      maximumTrackTintColor="#eee"
+      maximumValue={100}
+      minimumTrackTintColor="#eee"
+      minimumValue={0}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "marginLeft": 16,
+            "marginRight": 10,
+          },
+          Object {},
+        ]
+      }
+      theme={null}
+      value={0}
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "minWidth": 80,
+          },
+          Object {},
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        numberOfLines={1}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+            },
+            Object {
+              "color": "#aeaeae",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        0%
+      </TYText>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`TYIpcProgressBar components basic render disabled with image 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 112,
+        "justifyContent": "center",
+      },
+      Object {},
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "flexDirection": "row",
+          "justifyContent": "center",
+        },
+        Object {},
+      ]
+    }
+  >
+    <ThemedSlider
+      disabled={true}
+      maximumTrackTintColor="#eee"
+      maximumValue={100}
+      minimumTrackTintColor="#eee"
+      minimumValue={0}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+            "marginLeft": 16,
+            "marginRight": 10,
+          },
+          Object {},
+        ]
+      }
+      theme={null}
+      value={0}
+    />
+    <View
+      style={
+        Array [
+          Object {
+            "minWidth": 80,
+          },
+          Object {},
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        numberOfLines={1}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 24,
+            },
+            Object {
+              "color": "#aeaeae",
+            },
+            Object {},
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        unit
+      </TYText>
+    </View>
+  </View>
+</View>
+`;
