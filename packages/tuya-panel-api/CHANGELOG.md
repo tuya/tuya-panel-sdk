@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.2.1...@tuya/tuya-panel-api@1.3.0) (2021-06-29)
+
+
+### Features
+
+* **interface:** 添加返回值类型 ([#34](https://github.com/tuya/tuya-panel-sdk/issues/34)) ([76282df](https://github.com/tuya/tuya-panel-sdk/commit/76282df7d05b8418faf4772a8fa19f73c3ed635d))
+
+
+
+
+
 ## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.2.0...@tuya/tuya-panel-api@1.2.1) (2021-05-19)
 
 

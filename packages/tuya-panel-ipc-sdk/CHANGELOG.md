@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.2.1...@tuya/tuya-panel-ipc-sdk@1.3.0) (2021-06-29)
+
+
+### Features
+
+* add progressBar, tempHumi, ptz and timeInterval omponent ([#37](https://github.com/tuya/tuya-panel-sdk/issues/37)) ([0ae53e7](https://github.com/tuya/tuya-panel-sdk/commit/0ae53e78824fadd647920e16fea3a07dabf2fe0a))
+* **ipc:** add ty-ipc-ptz component ([d34a90a](https://github.com/tuya/tuya-panel-sdk/commit/d34a90a29632375613a3430653f78ddba8cb9604))
+
+
+
+
+
 ## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.2.0...@tuya/tuya-panel-ipc-sdk@1.2.1) (2021-05-27)
 
 **Note:** Version bump only for package @tuya/tuya-panel-ipc-sdk
