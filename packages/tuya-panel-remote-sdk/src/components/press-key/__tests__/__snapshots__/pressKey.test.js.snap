@@ -1,0 +1,370 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components componentWillReceiveProps0 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={false}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={false}
+        style={null}
+      >
+        <AnimatedComponent
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "1deg",
+                },
+              ],
+            }
+          }
+        >
+          <Image
+            source={1}
+          />
+        </AnimatedComponent>
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components componentWillReceiveProps1 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={false}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={false}
+        style={null}
+      >
+        <AnimatedComponent
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "1deg",
+                },
+              ],
+            }
+          }
+        >
+          <Component
+            color="rgba(122,123,136,0.5)"
+            d="M0 960c0-35.328 28.48-64 64-64h896c35.328 0 64 28.416 64 64 0 35.328-28.48 64-64 64H64c-35.328 0-64-28.416-64-64zM640 128l128 128-512 512H160.32A31.808 31.808 0 0 1 128 735.68V640l512-512z m165.952-128c14.912 0 34.176 8.128 44.16 18.176l27.712 27.648c10.304 10.304 18.176 29.824 18.176 44.16v11.968c0 14.912-8.32 34.304-18.56 44.544L800 224l-128-128L749.44 18.56c10.368-10.368 30.208-18.56 44.608-18.56z"
+            size={32}
+            useART={false}
+          />
+        </AnimatedComponent>
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components content render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={true}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={true}
+        style={
+          Object {
+            "height": 40,
+          }
+        }
+      >
+        <View />
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components customize render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={100}
+    outBgColor="rgba(249,206,94,0.2)"
+    radius={68}
+    style={
+      Object {
+        "marginTop": 40,
+      }
+    }
+    width={200}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(249,206,94)"
+      disabledBgColor="rgba(249,206,94,0.5)"
+      height={100}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={4}
+      radius={68}
+      status={true}
+      style={
+        Object {
+          "borderWidth": 1,
+        }
+      }
+      underlayColor="rgba(249,206,94,0.5)"
+      width={200}
+    >
+      <Styled(View)
+        status={true}
+        style={null}
+      />
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components icon render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={true}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={true}
+        style={null}
+      >
+        <Component
+          color="rgba(122,123,136,1)"
+          d="M0 960c0-35.328 28.48-64 64-64h896c35.328 0 64 28.416 64 64 0 35.328-28.48 64-64 64H64c-35.328 0-64-28.416-64-64zM640 128l128 128-512 512H160.32A31.808 31.808 0 0 1 128 735.68V640l512-512z m165.952-128c14.912 0 34.176 8.128 44.16 18.176l27.712 27.648c10.304 10.304 18.176 29.824 18.176 44.16v11.968c0 14.912-8.32 34.304-18.56 44.544L800 224l-128-128L749.44 18.56c10.368-10.368 30.208-18.56 44.608-18.56z"
+          size={32}
+          useART={false}
+        />
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components image render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={true}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={true}
+        style={null}
+      >
+        <Image
+          resizeMode="contain"
+          source={1}
+          style={
+            Array [
+              Object {
+                "tintColor": "rgba(122,123,136,1)",
+              },
+              Object {
+                "width": 40,
+              },
+            ]
+          }
+        />
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components onPress render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={[Function]}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={true}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={true}
+        style={null}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(122,123,136,1)",
+                "fontSize": 28,
+                "textAlign": "center",
+              },
+              null,
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          onPress
+        </TYText>
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components tip render 1`] = `
+<Styled(View)>
+  <Styled(View)
+    height={136}
+    outBgColor="rgb(246, 246, 246)"
+    radius={68}
+    style={null}
+    width={136}
+  >
+    <Styled(TouchableHighlight)
+      bgColor="rgb(255,255,255)"
+      disabledBgColor="rgb(250,250,250)"
+      height={136}
+      onLongPress={[Function]}
+      onPress={null}
+      onPressOut={[Function]}
+      padding={8}
+      radius={68}
+      status={false}
+      style={null}
+      underlayColor="rgb(250,250,250)"
+      width={136}
+    >
+      <Styled(View)
+        status={false}
+        style={null}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(122,123,136,0.5)",
+                "fontSize": 28,
+                "textAlign": "center",
+              },
+              null,
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          Tip
+        </TYText>
+      </Styled(View)>
+    </Styled(TouchableHighlight)>
+  </Styled(View)>
+</Styled(View)>
+`;
