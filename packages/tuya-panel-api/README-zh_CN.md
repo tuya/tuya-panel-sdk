@@ -23,4 +23,4 @@ import { commonApi, robotApi } from '@tuya/tuya-panel-api';
 
 ## Doc
 
-查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/common-sdk-development/open-apis?categoryId=960329)获取详细文档
+查看[链接](https://developer.tuya.com/cn/docs/iot/open-apis?id=Kaiuyvvxud2le)获取详细文档
