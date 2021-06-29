@@ -82,7 +82,11 @@ class MainLayout extends NavigatorLayout {
         <StatusBar barStyle={type === 'light' ? 'default' : 'light-content'} />
       ),
       renderTopBar: () => {
-        if (route.id === 'Ipc.IpcPlayer') {
+        if (
+          route.id === 'Ipc.IpcPlayer' ||
+          route.id === 'Gateway.TopBarWithArc' ||
+          route.id === 'Gateway.TempHumWithBlur'
+        ) {
           return null;
         }
         return (
