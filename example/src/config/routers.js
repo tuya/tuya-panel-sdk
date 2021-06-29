@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import Home from '../scenes/Home';
 // import BasicCategory from '../scenes/Basic';
-import LampCategory from '../scenes/Lamp';
+// import LampCategory from '../scenes/Lamp';
 // import StandardCategory from '../scenes/Standard';
 // import SensorCategory from '../scenes/Sensor';
 import SweepRobotCategory from '../scenes/SweepRobot';
@@ -14,11 +14,12 @@ import Remote from '../scenes/Remote';
 import Ipc from '../scenes/Ipc';
 import Electrician from '../scenes/Electrician';
 import ApiScene from '../scenes/ApiScene';
+import Outdoor from '../scenes/Outdoor';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
 // import BasicInfo from '../../../packages/tuya-panel-sdk/package.json';
-import LampInfo from '../../../packages/tuya-panel-lamp-sdk/package.json';
+// import LampInfo from '../../../packages/tuya-panel-lamp-sdk/package.json';
 import RobotInfo from '../../../packages/tuya-panel-robot-sdk/package.json';
 import ApiSceneInfo from '../../../packages/tuya-panel-api/package.json';
 // import StandardInfo from '../../../packages/tuya-panel-standard-sdk/package.json';
@@ -33,6 +34,8 @@ import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
 import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
 import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
 import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
+import OutdoorInfo from '../../../packages/tuya-panel-outdoor-sdk/package.json';
+
 import { traverseRouters } from '../utils';
 
 const mainRouter = [
@@ -145,6 +148,12 @@ export const elementsRouters = _.sortBy(
       title: ApiSceneInfo.name,
       subTitle: ApiSceneInfo.version,
       Scene: ApiScene,
+    },
+    {
+      id: 'Outdoor',
+      title: OutdoorInfo.name,
+      subTitle: OutdoorInfo.version,
+      Scene: Outdoor,
     },
   ],
   'id'
