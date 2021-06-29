@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-lock-sdk",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "涂鸦门锁业务组件库",
   "main": "./lib/index.js",
   "scripts": {
