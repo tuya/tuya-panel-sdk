@@ -21,6 +21,7 @@
 | `@tuya/tuya-panel-electrician-sdk` | 电工业务组件库                    | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-electrician-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-electrician-sdk) | @七月  |
 | `@tuya/tuya-panel-ipc-sdk`         | 涂鸦 Ipc 业务组件                 | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-ipc-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-ipc-sdk) | @萧瑟  |
 | `@tuya/tuya-panel-robot-sdk`       | 涂鸦面板扫地机器人 sdk 开发工具包 | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-robot-sdk) | @玄同  |
+| `@tuya/tuya-panel-gateway-sdk`     | 涂鸦网关业务组件                   | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-gateway-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-gateway-sdk) | @钟离  |
 
 ## License
 
