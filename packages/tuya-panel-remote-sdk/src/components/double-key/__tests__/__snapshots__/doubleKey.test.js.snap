@@ -1,0 +1,685 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components componentWillReceiveProps0 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <AnimatedComponent
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "1deg",
+                },
+              ],
+            }
+          }
+        >
+          <Image
+            source={1}
+          />
+        </AnimatedComponent>
+      </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components componentWillReceiveProps1 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Component
+          color="rgba(122,123,136,0.5)"
+          d="M85.333333 469.333333m42.666667 0l768 0q42.666667 0 42.666667 42.666667l0 0q0 42.666667-42.666667 42.666667l-768 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z"
+          size={32}
+          useART={false}
+        />
+      </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <AnimatedComponent
+          style={
+            Object {
+              "transform": Array [
+                Object {
+                  "rotate": "1deg",
+                },
+              ],
+            }
+          }
+        >
+          <Component
+            color="rgba(122,123,136,0.5)"
+            d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v341.333333h341.333333a42.666667 42.666667 0 0 1 0 85.333334h-341.376L554.666667 896a42.666667 42.666667 0 0 1-85.333334 0l-0.042666-341.333333H128a42.666667 42.666667 0 0 1 0-85.333334h341.333333V128a42.666667 42.666667 0 0 1 42.666667-42.666667z"
+            size={32}
+            useART={false}
+          />
+        </AnimatedComponent>
+      </View>
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components customize render 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgba(249,206,94,0.2)"
+  radius={68}
+  style={
+    Object {
+      "marginTop": 40,
+    }
+  }
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={4}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(249,206,94)",
+          },
+        ]
+      }
+      underlayColor="rgba(249,206,94,0.5)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgba(249,206,94,0.5)",
+          },
+        ]
+      }
+      underlayColor="rgba(249,206,94,0.5)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components icon render 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Component
+          color="rgba(122,123,136,1)"
+          d="M85.333333 469.333333m42.666667 0l768 0q42.666667 0 42.666667 42.666667l0 0q0 42.666667-42.666667 42.666667l-768 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z"
+          size={32}
+          useART={false}
+        />
+      </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(250,250,250)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Component
+          color="rgba(122,123,136,0.5)"
+          d="M512 85.333333a42.666667 42.666667 0 0 1 42.666667 42.666667v341.333333h341.333333a42.666667 42.666667 0 0 1 0 85.333334h-341.376L554.666667 896a42.666667 42.666667 0 0 1-85.333334 0l-0.042666-341.333333H128a42.666667 42.666667 0 0 1 0-85.333334h341.333333V128a42.666667 42.666667 0 0 1 42.666667-42.666667z"
+          size={32}
+          useART={false}
+        />
+      </View>
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    >
+      volume
+    </Styled(TYText)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components image render 1`] = `
+<Styled(View)
+  height={136}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={300}
+>
+  <Styled(View)
+    height={136}
+    padding={8}
+    radius={68}
+    type="horizontal"
+    width={300}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "tintColor": "rgba(122,123,136,1)",
+              },
+              Object {
+                "width": 40,
+              },
+            ]
+          }
+        />
+      </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Image
+          source={1}
+          style={
+            Array [
+              Object {
+                "tintColor": "rgba(122,123,136,1)",
+              },
+              Object {
+                "width": 40,
+              },
+            ]
+          }
+        />
+      </View>
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components onPress render 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      />
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    >
+      channel
+    </Styled(TYText)>
+  </Styled(View)>
+</Styled(View)>
+`;
+
+exports[`PressKey components text render 1`] = `
+<Styled(View)
+  height={300}
+  outBgColor="rgb(246, 246, 246)"
+  radius={68}
+  style={null}
+  width={136}
+>
+  <Styled(View)
+    height={300}
+    padding={8}
+    radius={68}
+    type="vertical"
+    width={136}
+  >
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(122,123,136,1)",
+                "fontSize": 28,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          add
+        </TYText>
+      </View>
+    </TouchableHighlight>
+    <TouchableHighlight
+      activeOpacity={0.85}
+      delayPressOut={100}
+      onPressOut={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgb(255,255,255)",
+          },
+        ]
+      }
+      underlayColor="rgb(250,250,250)"
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "backgroundColor": "transparent",
+                "color": "rgba(122,123,136,1)",
+                "fontSize": 28,
+                "textAlign": "center",
+              },
+              Object {
+                "fontSize": 24,
+              },
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          minus
+        </TYText>
+      </View>
+    </TouchableHighlight>
+    <Styled(TYText)
+      style={null}
+    />
+  </Styled(View)>
+</Styled(View)>
+`;
