@@ -1,0 +1,39 @@
+{
+  "name": "@tuya/tuya-panel-remote-sdk",
+  "version": "0.0.1",
+  "description": "涂鸦万能遥控器业务与组件库",
+  "main": "./lib/index.js",
+  "types": "./@types/index.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "tsc -w",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "build": "tsc -d",
+    "prepublishOnly": "yarn build",
+    "test": "jest -u"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "style-equal": "^1.0.0",
+    "styled-components": "^3.4.10"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-native": "^0.51.0",
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tuya/tuya-panel-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tuya/tuya-panel-sdk/issues"
+  },
+  "license": "ISC",
+  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+}
