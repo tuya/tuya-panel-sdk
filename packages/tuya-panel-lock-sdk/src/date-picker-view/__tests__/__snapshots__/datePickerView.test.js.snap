@@ -1,0 +1,1481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`defendTime components basic render 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#333",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        2021-06-29 10:17
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#333",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        2021-06-29 10:17
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:17:37.800Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:17:37.798Z}
+      minDate={2021-06-29T02:17:37.800Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(TouchableOpacity)
+        onPress={[Function]}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </Styled(TouchableOpacity)>
+      <Styled(TouchableOpacity)
+        onPress={[Function]}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </Styled(TouchableOpacity)>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`defendTime components cancel TouchableOpacity event 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:33:08.004Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:33:08.004Z}
+      minDate={2021-06-29T02:33:08.004Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`defendTime components confirm TouchableOpacity event 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:33:08.013Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:33:08.013Z}
+      minDate={2021-06-29T02:33:08.013Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`defendTime components default value render 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:17:37.883Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:17:37.883Z}
+      minDate={2021-06-29T02:17:37.883Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Styled(TouchableOpacity)
+        onPress={[Function]}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </Styled(TouchableOpacity)>
+      <Styled(TouchableOpacity)
+        onPress={[Function]}
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </Styled(TouchableOpacity)>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`detePickerView components basic render 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#333",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        2021-06-29 10:37
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#333",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        2021-06-29 10:37
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:37:50.887Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:37:50.886Z}
+      minDate={2021-06-29T02:37:50.887Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`detePickerView components cancel TouchableOpacity event 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:37:50.993Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:37:50.993Z}
+      minDate={2021-06-29T02:37:50.993Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`detePickerView components confirm TouchableOpacity event 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:37:51.000Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:37:51.000Z}
+      minDate={2021-06-29T02:37:51.000Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`detePickerView components default value render 1`] = `
+<View>
+  <View
+    key="生效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      生效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <View
+    key="失效时间"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "flexDirection": "row",
+        "height": 58,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      type={null}
+      weight={null}
+    >
+      失效时间
+    </TYText>
+    <TouchableOpacity
+      activeOpacity={0.2}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-around",
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "#d6d9dc",
+            "marginRight": 5,
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        请选择时间
+      </TYText>
+      <Component
+        name="arrow"
+      />
+    </TouchableOpacity>
+  </View>
+  <Portal
+    onMaskPress={[Function]}
+    visible={false}
+  >
+    <DatePicker
+      accessibilityLabel="DatePicker"
+      date={2021-06-29T02:37:50.975Z}
+      dateSortKeys={null}
+      isAmpmFirst={false}
+      isPlusZero={true}
+      isTimeFirst={false}
+      loop={false}
+      maxDate={2030-06-29T02:37:50.974Z}
+      minDate={2021-06-29T02:37:50.975Z}
+      mode="datetime"
+      onDateChange={[Function]}
+      onValueChange={[Function]}
+      pickerFontColor="#333"
+      use12Hours={false}
+    />
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          取消
+        </TYText>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#fff",
+            "borderRightColor": "#f8f8f1",
+            "borderRightWidth": 0.5,
+            "flex": 1,
+            "justifyContent": "center",
+            "paddingVertical": 12,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          确定
+        </TYText>
+      </TouchableOpacity>
+    </View>
+  </Portal>
+</View>
+`;
