@@ -1,12 +1,14 @@
 import React, { PureComponent } from 'react';
-import { Modal, IconFont, GlobalToast } from 'tuya-panel-kit';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
-import { StyledConfirmButton, StyledCancelButton } from './component';
+import { Modal, IconFont, GlobalToast, TYText } from 'tuya-panel-kit';
+import { View, TouchableOpacity, StyleSheet } from 'react-native';
+import _isEqual from 'lodash/isEqual';
+import _padStart from 'lodash/padStart';
 import DatePicker from './datePicker';
+import { DatePickerViewProps, DatePickerViewState, NextProps, dateString } from './interfance';
 
 const DATETIME = 'datetime';
 const DATE = 'date';
-const DATEHOUR = 'datehour';
+const HOUR = 'hour';
 export default class DatePickerView extends PureComponent<
   DatePickerViewProps,
   DatePickerViewState
@@ -16,31 +18,33 @@ export default class DatePickerView extends PureComponent<
     this.state = {
       visible: false,
       dateRange: [this.props.startDate, this.props.endDate],
-      // defautlStartDate: new Date(), // 默认开始时间
       placeholder: this.props.placeholder || '请选择时间',
       currentOperationIndex: 0,
       startDate: this.props.startDate || '',
       endDate: this.props.endDate || '',
+      maxDate: new Date(new Date().setFullYear(new Date().getFullYear() + 9)),
+      minDate: new Date(),
+      currentDate: new Date(),
     };
   }
 
   // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: NextProps) {
-    this.setState({
-      startDate: nextProps.startDate,
-      endDate: nextProps.endDate,
-      dateRange: [nextProps.startDate, nextProps.endDate],
-    });
+    const { startDate, endDate } = this.props;
+    if (!_isEqual(startDate, nextProps.startDate) || !_isEqual(endDate, nextProps.endDate))
+      this.setState({
+        startDate: nextProps.startDate,
+        endDate: nextProps.endDate,
+        dateRange: [nextProps.startDate, nextProps.endDate],
+      });
   }
 
   setDate(date) {
     const { currentOperationIndex, dateRange } = this.state;
 
-    const dateRangeValue = dateRange;
-
-    dateRangeValue[currentOperationIndex] = date;
+    dateRange[currentOperationIndex] = date;
     this.setState({
-      dateRange: dateRangeValue,
+      dateRange,
     });
   }
 
@@ -53,27 +57,35 @@ export default class DatePickerView extends PureComponent<
     if (typeof date === 'string') return date;
     const dateValue = new Date(date);
     const y = dateValue.getFullYear();
-    let m: dateString = dateValue.getMonth() + 1;
-    m = m < 10 ? `0${m}` : `${m}`;
-    let d: dateString = dateValue.getDate();
-    d = d < 10 ? `0${d}` : `${d}`;
-    let h: dateString = dateValue.getHours();
-    h = h < 10 ? `0${h}` : h;
-    let mm: dateString = dateValue.getMinutes();
-    mm = mm < 10 ? `0${mm}` : mm;
+    let m: dateString = `${dateValue.getMonth() + 1}`;
+    m = _padStart(m, 2, '0');
+    let d: dateString = `${dateValue.getDate()}`;
+    d = _padStart(d, 2, '0');
+    let h: dateString = `${dateValue.getHours()}`;
+    h = _padStart(h, 2, '0');
+    let mm: dateString = `${dateValue.getMinutes()}`;
+    mm = _padStart(mm, 2, '0');
     if (this.props.mode === DATE) {
       return `${y}-${m}-${d}`;
     }
-    if (this.props.mode === DATEHOUR) {
+    if (this.props.mode === HOUR) {
       return `${y}-${m}-${d} ${h}:00`;
     }
     return `${y}-${m}-${d} ${h}:${mm}`;
   }
 
-  openModal(index: number) {
+  openModal(index) {
+    const { startDate, endDate } = this.state;
+    const _startDate = startDate ? new Date(startDate) : new Date();
+    const _endDate = endDate ? new Date(endDate) : new Date();
+
+    const currentDate = !index ? _startDate : _endDate;
+
     this.setState({
       visible: true,
       currentOperationIndex: index,
+      currentDate,
+      minDate: !index ? new Date() : new Date(_startDate),
     });
   }
 
@@ -150,16 +162,14 @@ export default class DatePickerView extends PureComponent<
     return data.map((item, index) => {
       return (
         <View style={styles.container} key={item.label}>
-          <Text>{item.label}</Text>
-          <TouchableOpacity onPress={() => this.openModal(index)}>
-            <View style={styles.value}>
-              <Text
-                style={{ marginRight: 5, color: item.value === placeholder ? '#d6d9dc' : '#333' }}
-              >
-                {this.formatDate(item.value)}
-              </Text>
-              <IconFont name="arrow" />
-            </View>
+          <TYText>{item.label}</TYText>
+          <TouchableOpacity style={styles.pickerItem} onPress={() => this.openModal(index)}>
+            <TYText
+              style={{ marginRight: 5, color: item.value === placeholder ? '#d6d9dc' : '#333' }}
+            >
+              {this.formatDate(item.value)}
+            </TYText>
+            <IconFont name="arrow" />
           </TouchableOpacity>
         </View>
       );
@@ -167,32 +177,45 @@ export default class DatePickerView extends PureComponent<
   }
 
   render() {
-    const { visible, startDate, currentOperationIndex, endDate } = this.state;
-    const { cancelText, confirmText } = this.props;
-    const _startDate = startDate ? new Date(startDate) : new Date();
-    const _endDate = endDate ? new Date(endDate) : new Date();
-    const viewDate = !currentOperationIndex ? _startDate : _endDate;
-    const minDate = !currentOperationIndex ? new Date() : new Date(_startDate);
-    const maxDate = new Date(new Date().setFullYear(new Date().getFullYear() + 9));
+    const {
+      mode,
+      cancelText,
+      confirmText,
+      animationType,
+      alignContainer,
+      style,
+      modalChildStyle,
+      mask,
+      maskStyle,
+    } = this.props;
+    const { visible, currentDate, maxDate, minDate } = this.state;
+
     return (
-      <View>
+      <View style={style}>
         {this.renderItem()}
-        <Modal visible={visible} onMaskPress={() => this.closeModal()}>
+        <Modal
+          visible={visible}
+          onMaskPress={() => this.closeModal()}
+          animationType={animationType}
+          alignContainer={alignContainer}
+          modalChildStyle={modalChildStyle}
+          mask={mask}
+          maskStyle={maskStyle}
+        >
           <DatePicker
-            mode={this.props.mode || DATETIME}
-            date={viewDate}
+            mode={mode || DATETIME}
+            date={currentDate}
             onDateChange={date => this.setDate(date)}
             minDate={minDate}
             maxDate={maxDate}
-            // isEndDate={!!currentOperationIndex}
           />
           <View style={styles.footer}>
-            <StyledCancelButton onPress={() => this.closeModal()}>
-              <Text>{cancelText || '取消'}</Text>
-            </StyledCancelButton>
-            <StyledConfirmButton onPress={() => this.confirmModal()}>
-              <Text>{confirmText || '确定'}</Text>
-            </StyledConfirmButton>
+            <TouchableOpacity style={styles.button} onPress={() => this.closeModal()}>
+              <TYText>{cancelText || '取消'}</TYText>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.button} onPress={() => this.confirmModal()}>
+              <TYText>{confirmText || '确定'}</TYText>
+            </TouchableOpacity>
           </View>
         </Modal>
       </View>
@@ -201,6 +224,15 @@ export default class DatePickerView extends PureComponent<
 }
 
 const styles = StyleSheet.create({
+  button: {
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRightColor: '#f8f8f1',
+    borderRightWidth: StyleSheet.hairlineWidth,
+    flex: 1,
+    justifyContent: 'center',
+    paddingVertical: 12,
+  },
   container: {
     alignItems: 'center',
     backgroundColor: '#fff',
@@ -213,7 +245,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
   },
-  value: {
+  pickerItem: {
     alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-around',

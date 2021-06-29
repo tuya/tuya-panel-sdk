@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
-import { View, StyleSheet, Dimensions } from 'react-native';
-import { Utils } from 'tuya-panel-kit';
+import { View } from 'react-native';
 import { DatePickerView } from '@tuya/tuya-panel-lock-sdk';
-
-const { convertX } = Utils.RatioUtils;
-const { width } = Dimensions.get('window');
 
 export default class Password extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      startDate: new Date(),
+      startDate: '',
       endDate: '',
       startDateTime: '',
       endDateTime: '',
@@ -19,7 +15,7 @@ export default class Password extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
   onDateChange(params) {
     this.setState({
       startDate: params.startDate,
@@ -64,7 +60,7 @@ export default class Password extends Component {
         </View>
         <View style={{ paddingVertical: 10 }}>
           <DatePickerView
-            mode="datehour"
+            mode="hour"
             startDate={startDateHour}
             endDate={endDateHour}
             onDateChange={params => {
