@@ -19,6 +19,8 @@ module.exports = {
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
-  transformIgnorePatterns: ['node_modules/(?!react-native|react-native-svg/)'],
+  transformIgnorePatterns: [
+    'node_modules/(?!react-native|react-native-svg/|@react-native-community/blur/)',
+  ],
   testPathIgnorePatterns: ['node_modules'],
 };

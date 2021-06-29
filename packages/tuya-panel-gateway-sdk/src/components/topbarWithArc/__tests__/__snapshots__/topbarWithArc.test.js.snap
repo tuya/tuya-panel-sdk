@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TopBarWithArc components basic render 1`] = `
+<Fragment>
+  <StatusBar
+    animated={true}
+    backgroundColor="#27b6ff"
+    barStyle="light-content"
+    showHideTransition="fade"
+  />
+  <ThemedTopBar
+    color="#FFF"
+    onBack={[Function]}
+    style={
+      Object {
+        "backgroundColor": "#27b6ff",
+      }
+    }
+    theme={null}
+    title="TopBarWithArc"
+  />
+  <Svg
+    height={80}
+    preserveAspectRatio="xMidYMid meet"
+    width={750}
+  >
+    <Ellipse
+      cx={375}
+      cy="0"
+      fill="#27b6ff"
+      rx={535.7142857142858}
+      ry={80}
+    />
+  </Svg>
+</Fragment>
+`;

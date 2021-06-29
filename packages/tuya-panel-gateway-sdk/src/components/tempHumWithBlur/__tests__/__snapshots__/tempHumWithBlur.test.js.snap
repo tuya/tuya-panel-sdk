@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TempHumWithBlur components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "#FFF",
+        "borderRadius": 32,
+        "borderWidth": 1,
+        "flexDirection": "row",
+        "height": 184,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "position": "relative",
+        "width": 672,
+      },
+      Object {},
+    ]
+  }
+>
+  <BlurView
+    blurAmount={10}
+    blurType="xlight"
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "right": 0,
+          "top": 0,
+        },
+        Object {},
+      ]
+    }
+  />
+  <Image
+    source={1}
+    style={
+      Object {
+        "height": 76,
+        "position": "absolute",
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "height": 104,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Array [
+            Object {
+              "marginRight": 16,
+              "width": 48,
+            },
+            Object {},
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "baseline",
+            "flexDirection": "row",
+            "position": "relative",
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.85)",
+                "fontSize": 28,
+                "fontWeight": "500",
+                "marginRight": 6,
+              },
+              Object {},
+            ]
+          }
+          text={20}
+          type={null}
+          weight={null}
+        />
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.45)",
+                "fontSize": 14,
+              },
+              Object {},
+            ]
+          }
+          text="℃"
+          type={null}
+          weight={null}
+        />
+      </View>
+    </View>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(0, 0, 0, 0.65)",
+            "fontSize": 14,
+            "lineHeight": 40,
+          },
+          Object {},
+        ]
+      }
+      text="Temperature"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "height": 104,
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Array [
+            Object {
+              "marginRight": 16,
+              "width": 48,
+            },
+            Object {},
+          ]
+        }
+      />
+      <View
+        style={
+          Object {
+            "alignItems": "baseline",
+            "flexDirection": "row",
+            "position": "relative",
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.85)",
+                "fontSize": 28,
+                "fontWeight": "500",
+                "marginRight": 6,
+              },
+              Object {},
+            ]
+          }
+          text={32}
+          type={null}
+          weight={null}
+        />
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "rgba(0, 0, 0, 0.45)",
+                "fontSize": 14,
+              },
+              Object {},
+            ]
+          }
+          text="%"
+          type={null}
+          weight={null}
+        />
+      </View>
+    </View>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(0, 0, 0, 0.65)",
+            "fontSize": 14,
+            "lineHeight": 40,
+          },
+          Object {},
+        ]
+      }
+      text="Humidity"
+      type={null}
+      weight={null}
+    />
+  </View>
+</View>
+`;
