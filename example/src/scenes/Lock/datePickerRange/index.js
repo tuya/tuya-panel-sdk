@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
-import { DatePickerView } from '@tuya/tuya-panel-lock-sdk';
+import { View, StyleSheet } from 'react-native';
+import { DatePickerRange } from '@tuya/tuya-panel-lock-sdk';
+import { TYText } from 'tuya-panel-kit';
 
 export default class Password extends Component {
   constructor(props) {
@@ -49,7 +50,10 @@ export default class Password extends Component {
     return (
       <View style={{ flex: 1, backgroundColor: '#f8f8f8' }}>
         <View style={{ paddingVertical: 10 }}>
-          <DatePickerView
+          <View style={styles.title}>
+            <TYText text={'年月日时分'} size={20}></TYText>
+          </View>
+          <DatePickerRange
             mode="datetime"
             startDate={startDateTime}
             endDate={endDateTime}
@@ -59,7 +63,10 @@ export default class Password extends Component {
           />
         </View>
         <View style={{ paddingVertical: 10 }}>
-          <DatePickerView
+          <View style={styles.title}>
+            <TYText text={'年月日时'} size={20}></TYText>
+          </View>
+          <DatePickerRange
             mode="hour"
             startDate={startDateHour}
             endDate={endDateHour}
@@ -69,7 +76,10 @@ export default class Password extends Component {
           />
         </View>
         <View style={{ paddingVertical: 10 }}>
-          <DatePickerView
+          <View style={styles.title}>
+            <TYText text={'年月日'} size={20}></TYText>
+          </View>
+          <DatePickerRange
             mode="date"
             startDate={startDate}
             endDate={endDate}
@@ -82,3 +92,15 @@ export default class Password extends Component {
     );
   }
 }
+const styles = StyleSheet.create({
+  title: {
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderBottomColor: '#f8f8f8',
+    borderBottomWidth: 1,
+    borderTopEndRadius: 5,
+    borderTopStartRadius: 5,
+    justifyContent: 'center',
+    paddingVertical: 10,
+  },
+});

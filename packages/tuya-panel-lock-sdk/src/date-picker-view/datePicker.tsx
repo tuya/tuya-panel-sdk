@@ -205,7 +205,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
 
   // get now date
   getDate() {
-    return this.getRealDate(this.state.date || this.props.minDate);
+    return this.getRealDate(this.props.minDate || this.state.date);
   }
 
   getRealHour(hour) {
@@ -571,11 +571,11 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     const { value, cols } = this.state.indexAndCols;
     let pickerFontSize = cx(30);
     if (cols.length < 3) {
-      pickerFontSize = cx(30);
-    } else if (cols.length === 3) {
       pickerFontSize = cx(27);
-    } else {
+    } else if (cols.length === 3) {
       pickerFontSize = cx(24);
+    } else {
+      pickerFontSize = cx(20);
     }
     const { style, loop, pickerFontColor, accessibilityLabel, ...PickerProps } = this.props;
     const multiStyle = {
