@@ -8,7 +8,8 @@
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "../../node_modules/.bin/tsc -d",
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "test": "jest"
   },
   "dependencies": {
     "@types/color": "0.12.1",

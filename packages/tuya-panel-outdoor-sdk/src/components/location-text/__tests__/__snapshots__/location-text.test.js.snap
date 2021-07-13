@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationText components basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  numberOfLines={2}
+  size={null}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "color": "#000",
+        "fontSize": 28,
+        "fontWeight": "bold",
+        "maxWidth": 486,
+      },
+      null,
+    ]
+  }
+  type={null}
+  weight={null}
+>
+  Unknown Location
+</TYText>
+`;
