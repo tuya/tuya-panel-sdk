@@ -1,12 +1,12 @@
 ## @tuya/tuya-panel-outdoor-sdk
 
-English | [简体中文](./README-zh_CN.md)
+[English](./README.md) | 简体中文
 
-Outdoor business component library
+户外业务组件库
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-outdoor-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-outdoor-sdk)
 
-## Install
+## 安装
 
 ```sh
 $ npm install @tuya/tuya-panel-outdoor-sdk
@@ -14,7 +14,7 @@ $ npm install @tuya/tuya-panel-outdoor-sdk
 $ yarn add @tuya/tuya-panel-outdoor-sdk
 ```
 
-## Usage
+## 使用
 
 ```js
 import { LocationText } from '@tuya/tuya-panel-outdoor-sdk';
@@ -22,4 +22,4 @@ import { LocationText } from '@tuya/tuya-panel-outdoor-sdk';
 ...
 ```
 
-## Doc
+## 文档
