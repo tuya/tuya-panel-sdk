@@ -18,7 +18,7 @@ export default class DatePickerRange extends PureComponent<
     super(props);
     this.state = {
       dateRange: [this.props.startDate, this.props.endDate],
-      placeholder: this.props.placeholder || Strings.getLang('lock_placeholder'),
+      placeholder: this.props.placeholder || Strings.getLang('TYLock_placeholder'),
       currentOperationIndex: 0,
       startDate: this.props.startDate || '',
       endDate: this.props.endDate || '',
@@ -117,9 +117,9 @@ export default class DatePickerRange extends PureComponent<
       motionType,
       motionConfig,
       isAlign,
-      title: title || Strings.getLang('lock_title'),
-      cancelText: cancelText || Strings.getLang('lock_cancelText'),
-      confirmText: confirmText || Strings.getLang('lock_confirmText'),
+      title: title || Strings.getLang('TYLock_title'),
+      cancelText: cancelText || Strings.getLang('TYLock_cancelText'),
+      confirmText: confirmText || Strings.getLang('TYLock_confirmText'),
       onMaskPress: ({ close }) => close(),
       onCancel: () => {
         Popup.close();
@@ -144,7 +144,7 @@ export default class DatePickerRange extends PureComponent<
     if (!currentOperationIndex) {
       if (endDate && !this.compareTwoDate(dateRange[0], endDate)) {
         GlobalToast.show({
-          text: this.props.dateLimitTip || Strings.getLang('lock_dateLimitTip'),
+          text: this.props.dateLimitTip || Strings.getLang('TYLock_dateLimitTip'),
           showIcon: false,
         });
         return;
@@ -164,7 +164,7 @@ export default class DatePickerRange extends PureComponent<
       // confirm second datepicker
       if (!startDate) {
         GlobalToast.show({
-          text: this.props.startDateTip || Strings.getLang('lock_startDateTip'),
+          text: this.props.startDateTip || Strings.getLang('TYLock_startDateTip'),
           showIcon: false,
         });
         return;
@@ -175,7 +175,7 @@ export default class DatePickerRange extends PureComponent<
 
       if (!this.compareTwoDate(startDate, endDateView)) {
         GlobalToast.show({
-          text: this.props.dateLimitTip || Strings.getLang('lock_dateLimitTip'),
+          text: this.props.dateLimitTip || Strings.getLang('TYLock_dateLimitTip'),
           showIcon: false,
         });
         return;
@@ -192,11 +192,11 @@ export default class DatePickerRange extends PureComponent<
     const { placeholder, startDate, endDate } = this.state;
     const data = [
       {
-        label: startLabel || Strings.getLang('lock_startLabel'),
+        label: startLabel || Strings.getLang('TYLock_startLabel'),
         value: startDate === '' ? placeholder : startDate,
       },
       {
-        label: endLabel || Strings.getLang('lock_endLabel'),
+        label: endLabel || Strings.getLang('TYLock_endLabel'),
         value: endDate === '' ? placeholder : endDate,
       },
     ];
