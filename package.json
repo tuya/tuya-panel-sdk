@@ -58,6 +58,7 @@
     "test:lamp": "cd packages/tuya-panel-lamp-sdk && yarn test",
     "test:gateway": "cd packages/tuya-panel-gateway-sdk && yarn test",
     "test:remote": "cd packages/tuya-panel-remote-sdk && yarn test",
+    "test:health": "cd packages/tuya-panel-health-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "dev": "lerna run dev --parallel",
@@ -69,7 +70,8 @@
     "build:api": "lerna run build --scope @tuya/tuya-panel-api",
     "build:lamp": "lerna run build --scope @tuya/tuya-panel-lamp-sdk",
     "build:gateway": "lerna run build --scope @tuya/tuya-panel-gateway-sdk",
-    "build:remote": "lerna run build --scope @tuya/tuya-panel-remote-sdk"
+    "build:remote": "lerna run build --scope @tuya/tuya-panel-remote-sdk",
+    "build:health": "lerna run build --scope @tuya/tuya-panel-health-sdk"
   },
   "config": {
     "commitizen": {
