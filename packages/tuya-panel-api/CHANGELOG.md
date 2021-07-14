@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.1.2...@tuya/tuya-panel-api@1.4.0) (2021-07-14)
+
+
+### Bug Fixes
+
+* use 1.0 for  m.smart.operate.publish.log ([e406854](https://github.com/tuya/tuya-panel-sdk/commit/e406854653878287b8855bc1bf61e5083794f52e))
+
+
+### Features
+
+* **interface:** add return type ([#34](https://github.com/tuya/tuya-panel-sdk/issues/34)) ([81872b9](https://github.com/tuya/tuya-panel-sdk/commit/81872b95ecad9db7781241241a88415fe2f6c9e9))
+
+
+
+
+
 # [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.2.1...@tuya/tuya-panel-api@1.3.0) (2021-06-29)
 
 
