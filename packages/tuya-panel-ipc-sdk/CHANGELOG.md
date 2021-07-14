@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.2...@tuya/tuya-panel-ipc-sdk@1.4.0) (2021-07-14)
+
+
+### Bug Fixes
+
+* modify ios into the background will go to connect to the P2p problem ([a09d85d](https://github.com/tuya/tuya-panel-sdk/commit/a09d85d983ac47393e0551ead4754a6fcddb6536))
+
+
+### Features
+
+* add progressBar, tempHumi, ptz and timeInterval omponent ([#37](https://github.com/tuya/tuya-panel-sdk/issues/37)) ([33c9537](https://github.com/tuya/tuya-panel-sdk/commit/33c953782335ebe0558bb8c43250d2e1c5f24363))
+* **ipc:** add ty-ipc-ptz component ([d7aa470](https://github.com/tuya/tuya-panel-sdk/commit/d7aa4708ba0c6728d09013fe48c96009882ef7f4))
+* add battery component ([#30](https://github.com/tuya/tuya-panel-sdk/issues/30)) ([f3a2c2c](https://github.com/tuya/tuya-panel-sdk/commit/f3a2c2cfa4f7c2523863ae3615147d57f8aaa1e8))
+* add videoBit components ([69ee637](https://github.com/tuya/tuya-panel-sdk/commit/69ee637877295c0452b904de71c5b9f497a0e163))
+* add whether the exit component needs to be disconnected from P2P ([d8543f8](https://github.com/tuya/tuya-panel-sdk/commit/d8543f88f8c863cf99a417ad9fd2e29fb0c0559d))
+
+
+
+
+
 # [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.2.1...@tuya/tuya-panel-ipc-sdk@1.3.0) (2021-06-29)
 
 
