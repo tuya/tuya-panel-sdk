@@ -30,7 +30,7 @@ interface IProps {
   /**
    * 圆盘中心显示的数值
    */
-  title: string;
+  title: string | number;
   /**
    * 圆盘中心的单位
    */
@@ -67,7 +67,6 @@ const CircleProgress = ({
 }: IProps) => {
   const renderCenterView = () => {
     const width = cx(circleWidth - scaleHeight * 3);
-
     const styleCircle = {
       width,
       height: width,
@@ -77,7 +76,6 @@ const CircleProgress = ({
       marginTop: -(width / 2),
       marginLeft: -(width / 2 + cx(shadowWidth)),
     };
-
     return (
       <ImageBackground
         source={{ uri: Res.progressY }}
@@ -101,7 +99,6 @@ const CircleProgress = ({
       </ImageBackground>
     );
   };
-
   return (
     <ImageBackground
       source={{ uri: Res.progressYY }}
