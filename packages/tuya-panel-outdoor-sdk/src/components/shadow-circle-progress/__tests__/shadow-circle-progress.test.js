@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LocationText from '../index';
+import ShadowCircleProgress from '../index';
 
-describe('LocationText components', () => {
+describe('ShadowCircleProgress components', () => {
   it('basic render', () => {
     const wrapper = shallow(
-      <LocationText lonlat={{ longitude: 118.18396600000001, latitude: 28.19469100000005 }} />
+      <ShadowCircleProgress themeColor="#FB7319" unit="steps" title={1111} />
     );
     expect(wrapper).toMatchSnapshot();
   });

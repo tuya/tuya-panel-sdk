@@ -7,16 +7,49 @@ const { convertX: cx } = Utils.RatioUtils;
 const { color } = Utils.ColorUtils;
 
 interface IProps {
+  /**
+   * 主题色
+   */
   themeColor: string;
+  /**
+   * 宽度
+   */
   circleWidth: number;
-  // 进度条渲染高度
+  /**
+   * 进度条渲染高度
+   */
   scaleHeight: number;
+  /**
+   * 具体值
+   */
   progressValue: number;
+  /**
+   * 阴影宽度
+   */
   shadowWidth: number;
+  /**
+   * 圆盘中心显示的数值
+   */
   title: string;
+  /**
+   * 圆盘中心的单位
+   */
   unit: string;
+  /**
+   * title字号
+   */
   titleSize: number;
+  /**
+   * 是否禁止滑动
+   */
+  disabled: boolean;
+  /** *
+   * 值改变的回调
+   */
   onValueChange: () => void;
+  /** *
+   * 滑动结束回调
+   */
   onSlidingComplete: () => void;
 }
 const CircleProgress = ({
@@ -28,6 +61,7 @@ const CircleProgress = ({
   shadowWidth = 7,
   unit = '',
   titleSize = cx(36),
+  disabled = true,
   onValueChange,
   onSlidingComplete,
 }: IProps) => {
@@ -90,7 +124,7 @@ const CircleProgress = ({
         y2="100%"
         style={{ width: cx(circleWidth), height: cx(circleWidth), marginTop: -cx(15) }}
         backColor="#fff"
-        disabled
+        disabled={disabled}
         renderCenterView={renderCenterView()}
         onValueChange={onValueChange}
         onSlidingComplete={onSlidingComplete}

@@ -8,7 +8,8 @@ const CircleProgress = () => {
       <ShadowCircleProgress
         themeColor="#FB7319"
         unit="steps"
-        title={1111}
+        title={1000}
+        disabled={false}
         progressValue={Math.random() * 100}
       />
     </View>

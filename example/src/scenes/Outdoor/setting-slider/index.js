@@ -11,7 +11,7 @@ const SettingSliderView = () => {
         value="stop"
         type="enum"
         step={1}
-        themeColor="#934234"
+        themeColor="#57BCFB"
         onValueConfrim={() => {}}
       />
     </View>

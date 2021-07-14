@@ -43,7 +43,7 @@ interface SettingSliderProps {
 }
 
 const SettingSlider = ({
-  themeColor = '#173712',
+  themeColor = '#57BCFB',
   onValueConfrim,
   onValueChange,
   code = null,

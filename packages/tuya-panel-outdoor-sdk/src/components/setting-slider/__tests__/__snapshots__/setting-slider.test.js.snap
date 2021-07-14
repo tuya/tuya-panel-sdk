@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LocationText components basic render 1`] = `
+exports[`SettingSlider components basic render 1`] = `
 <View
   style={
     Object {
@@ -59,7 +59,7 @@ exports[`LocationText components basic render 1`] = `
               "width": 64,
             },
             Object {
-              "backgroundColor": "#934234",
+              "backgroundColor": "#57BCFB",
             },
           ]
         }
@@ -84,7 +84,7 @@ exports[`LocationText components basic render 1`] = `
               "position": "absolute",
             },
             Object {
-              "borderTopColor": "#934234",
+              "borderTopColor": "#57BCFB",
             },
           ]
         }
@@ -94,7 +94,7 @@ exports[`LocationText components basic render 1`] = `
       canTouchTrack={true}
       maximumTrackTintColor="#eee"
       maximumValue={2}
-      minimumTrackTintColor="#934234"
+      minimumTrackTintColor="#57BCFB"
       minimumValue={0}
       onSlidingComplete={[Function]}
       onValueChange={[Function]}
