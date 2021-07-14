@@ -142,6 +142,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         hightScaleMode,
         channelNum,
       } = this.props;
+      this.initStatus();
       this.resetMulScaleWithBefore();
       if (this.goToBack && !this.otherRnPage) {
         this.onLivePage = true;
@@ -651,6 +652,14 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         channelNum
       );
     }
+  };
+
+  // 静音状态、录制状态、对讲状态、是否高清四个状态在每一次进入前台时将状态暴露出去
+  initStatus = () => {
+    this.props.initStatus &&
+      TYIpcPlayerManager.initStatus().then((data: any) => {
+        this.props.initStatus(data);
+      });
   };
 
   render() {

@@ -36,6 +36,11 @@ class TYIpcPlayerManager extends React.Component {
   static getVideoBitRateKBPS = PlayerManagerFun.getVideoBitRateKBPS;
   static snapShootWithParams = PlayerManagerFun.snapShootWithParams;
   static endRecordWithParams = PlayerManagerFun.endRecordWithParams;
+  static initStatus = PlayerManagerFun.initStatus;
+  static isMuting = PlayerManagerFun.isMuting;
+  static isRecording = PlayerManagerFun.isRecording;
+  static isTalkBacking = PlayerManagerFun.isTalkBacking;
+  static isHDOn = PlayerManagerFun.isHDOn;
 
   static render() {
     return null;
