@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, TextProps } from 'react-native';
 import _isArray from 'lodash/isArray';
 import { Utils, TYText, TYSdk } from 'tuya-panel-kit';
-import Strings from './i18n';
 
 const { convertX: cx } = Utils.RatioUtils;
-const defaultText = Strings.getLang('unknownLocation');
 interface LocationTextProps {
   /**
    * 字体样式
@@ -22,6 +20,10 @@ interface LocationTextProps {
    * Text接受参数
    */
   textProps: TextProps;
+  /**
+   * 默认展示地点
+   */
+  defaultText: string;
 }
 const LocationText = ({
   localTextStyle = null,
@@ -32,6 +34,7 @@ const LocationText = ({
   textProps = {
     numberOfLines: 2,
   },
+  defaultText = null,
 }: LocationTextProps) => {
   const [name, setName] = useState(defaultText);
   useEffect(() => {

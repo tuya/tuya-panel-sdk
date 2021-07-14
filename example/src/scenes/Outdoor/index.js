@@ -6,7 +6,7 @@ import LocationText from './location-text';
 import SettingSlider from './setting-slider';
 import CircleProgress from './shadow-circle-progress';
 
-export default class OoutdoorScene extends Component {
+export default class OutdoorScene extends Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Outdoor\.((?!\.)\w)+$/.test(r.id)));
   }

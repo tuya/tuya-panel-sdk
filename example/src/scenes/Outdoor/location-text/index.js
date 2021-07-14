@@ -9,7 +9,7 @@ const LocationTextView = () => {
   };
   return (
     <View>
-      <LocationText lonlat={lonlat} />
+      <LocationText lonlat={lonlat} defaultText="未知地点" />
     </View>
   );
 };

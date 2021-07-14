@@ -1,6 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 import { SettingSlider } from '@tuya/tuya-panel-outdoor-sdk';
+import Strings from './i18n';
 
 const SettingSliderView = () => {
   return (
@@ -12,7 +13,8 @@ const SettingSliderView = () => {
         type="enum"
         step={1}
         themeColor="#57BCFB"
-        onValueConfrim={() => {}}
+        onValueConfirm={() => {}}
+        strings={Strings}
       />
     </View>
   );

@@ -2,11 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TYText, Utils, Slider } from 'tuya-panel-kit';
-import Strings from './i18n';
 
 const { convertX: cx } = Utils.RatioUtils;
 const sliderWidth = 207;
-
 interface SettingSliderProps {
   /**
    * 主题色
@@ -19,7 +17,7 @@ interface SettingSliderProps {
   /**
    * 滑动结束回调
    */
-  onValueConfrim: (backValue: string | number) => void;
+  onValueConfirm: (backValue: string | number) => void;
   /**
    * dp code
    */
@@ -40,17 +38,22 @@ interface SettingSliderProps {
    * dp类型，只支持 value | enum
    */
   type: string;
+  /**
+   * 多语言
+   */
+  strings: any;
 }
 
 const SettingSlider = ({
   themeColor = '#57BCFB',
-  onValueConfrim,
+  onValueConfirm,
   onValueChange,
   code = null,
   value,
   step = 1,
   range = [],
   type = 'value',
+  strings = null,
 }: SettingSliderProps) => {
   const [percent, setPercent] = useState(range.indexOf(value) || 0);
   const [titles, setTitles] = useState({ startTxt: '', endTxt: '', valueTxt: '' });
@@ -59,26 +62,26 @@ const SettingSlider = ({
       case 'value':
         setTitles({
           // @ts-ignore
-          startTxt: Strings.formatValue('valueTxt', range[0], Strings.getDpLang(code, 'unit')),
+          startTxt: strings.formatValue('valueTxt', range[0], strings.getDpLang(code, 'unit')),
           // @ts-ignore
-          endTxt: Strings.formatValue(
+          endTxt: strings.formatValue(
             'valueTxt',
             range[range.length - 1],
-            Strings.getDpLang(code, 'unit')
+            strings.getDpLang(code, 'unit')
           ),
           // @ts-ignore
-          valueTxt: Strings.formatValue(
+          valueTxt: strings.formatValue(
             'valueTxt',
             range[percent],
-            Strings.getDpLang(code, 'unit')
+            strings.getDpLang(code, 'unit')
           ),
         });
         break;
       case 'enum':
         setTitles({
-          startTxt: Strings.getDpLang(code, range[0]),
-          endTxt: Strings.getDpLang(code, range[range.length - 1]),
-          valueTxt: Strings.getDpLang(code, range[percent]),
+          startTxt: strings.getDpLang(code, range[0]),
+          endTxt: strings.getDpLang(code, range[range.length - 1]),
+          valueTxt: strings.getDpLang(code, range[percent]),
         });
         break;
       default:
@@ -116,7 +119,7 @@ const SettingSlider = ({
           trackStyle={{ height: 12, borderRadius: 6, margin: 4 }}
           maximumValue={range.length - 1}
           minimumValue={0}
-          value={1}
+          value={percent}
           stepValue={step}
           maximumTrackTintColor="#eee"
           minimumTrackTintColor={themeColor}
@@ -126,7 +129,7 @@ const SettingSlider = ({
           }}
           onSlidingComplete={v => {
             setPercent(Math.round(v));
-            onValueConfrim && onValueConfrim(range[+v]);
+            onValueConfirm && onValueConfirm(range[+v]);
           }}
           canTouchTrack
         />
