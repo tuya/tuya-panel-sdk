@@ -1,0 +1,33 @@
+{
+  "name": "@tuya/tuya-panel-outdoor-sdk",
+  "version": "0.0.1",
+  "description": "涂鸦户外业务组件库",
+  "main": "./lib/index.js",
+  "scripts": {
+    "dev": "tsc -w",
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "build": "../../node_modules/.bin/tsc -d",
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "prepublishOnly": "yarn build",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/color": "0.12.1",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
+    "color": "0.11.4",
+    "lodash": "^4.17.11",
+    "prop-types": "^15.6.2",
+    "react-addons-shallow-compare": "^15.6.2",
+    "style-equal": "^1.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-native": "^0.51.0",
+    "react-native-svg": "5.5.1",
+    "tuya-panel-kit": "^4.4.0"
+  },
+  "license": "ISC",
+  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+}

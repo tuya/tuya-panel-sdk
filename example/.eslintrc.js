@@ -15,6 +15,7 @@ module.exports = {
       '@tuya/tuya-panel-animation-sdk',
       '@tuya/tuya-panel-ipc-sdk',
       '@tuya/tuya-panel-electrician-sdk',
+      '@tuya/tuya-panel-outdoor-sdk',
     ],
     'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
   },

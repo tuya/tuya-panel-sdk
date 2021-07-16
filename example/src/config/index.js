@@ -15,6 +15,7 @@ export const SCOPE_MAP = {
   // '@tuya/tuya-panel-sensor-sdk': 'Sensor',
   // '@tuya/tuya-panel-standard-sdk': 'Standard',
   '@tuya/tuya-panel-lock-sdk': 'Lock',
+  '@tuya/tuya-panel-outdoor-sdk': 'Outdoor',
 };
 
 export { default as routers } from './routers';
