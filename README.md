@@ -19,7 +19,7 @@ Technical Ticket: https://service.console.tuya.com/
 | Pacage Name                        | Description                       | Version                                                      | Author |
 | ---------------------------------- | --------------------------------- | ------------------------------------------------------------ | ------ |
 | `@tuya/tuya-panel-animation-sdk`   | Tuya Panel Animation SDK Package | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-animation-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-animation-sdk) | @多肉  |
-| `@tuya/tuya-panel-api`             | Tuya Panel API Package | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-api/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-api) | @洛竹  |
+| `@tuya/tuya-panel-api`             | Tuya Panel API Package | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-api/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-api) | @洛竹 @钟离 |
 | `@tuya/tuya-panel-electrician-sdk` | The SDK is used to develop the panels of `Power by Tuya` electrical devices. | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-electrician-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-electrician-sdk) | @七月  |
 | `@tuya/tuya-panel-gateway-sdk` | Tuya Gateway business component library | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-gateway-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-gateway-sdk) | @钟离 |
 | `@tuya/tuya-panel-ipc-sdk`         | The SDK is used to develop the panels of `Power by Tuya` IP cameras (IPCs). | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-ipc-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-ipc-sdk) | @萧瑟  |
