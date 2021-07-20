@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderColor": "rgba(255,255,255,0.2)",
+        "borderRadius": 44,
+        "borderWidth": 4,
+        "height": 88,
+        "justifyContent": "center",
+        "width": 88,
+      },
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 40,
+          "height": 80,
+          "justifyContent": "center",
+          "width": 80,
+        },
+        Object {
+          "backgroundColor": "#333",
+        },
+      ]
+    }
+  />
+</View>
+`;
