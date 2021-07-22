@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.4.0...@tuya/tuya-panel-ipc-sdk@1.5.0) (2021-07-22)
+
+
+### Features
+
+* add initStatus, isMuting, isRecording, isTalkBacking, isHDOn methods ([331f493](https://github.com/tuya/tuya-panel-sdk/commit/331f4938018f10a6aea37c00cf76ae231047c2f9))
+
+
+
+
+
 # [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.1.2...@tuya/tuya-panel-ipc-sdk@1.4.0) (2021-07-14)
 
 
