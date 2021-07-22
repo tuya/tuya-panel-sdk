@@ -63,6 +63,13 @@ interface TwoMicStyle {
   textTip: any;
 }
 
+interface initStatus {
+  isMuting: boolean;
+  isRecording: boolean;
+  isTalkBacking: boolean;
+  isHDOn: boolean;
+}
+
 const _defaultPlayerLoad = {
   playerLoadContainer: {},
   fullBackIconContainer: {},
@@ -129,6 +136,7 @@ export interface TYIpcPlayerProps {
   // 如进入前台, 从Rn页面返回才会主动触发, 横竖屏转换, 必传
   onChangeActiveZoomStatus: (zoomStatus: number) => any;
   onChangeRecording: (isRecording: boolean) => any;
+  initStatus: (initStatusObj: initStatus) => any;
   zoomStatus: number;
   isFullScreen: boolean;
   fullPlayerWidth: number;
