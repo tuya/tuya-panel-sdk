@@ -669,6 +669,55 @@ class PlayerManagerFun {
       });
     });
   };
+
+  // 静音状态
+  isMuting = (): Promise<{ isMuting: boolean }> => {
+    return new Promise(resolve => {
+      CameraManager.isMuting((status: boolean) => {
+        resolve({ isMuting: status });
+      });
+    });
+  };
+
+  // 录像状态
+  isRecording = (): Promise<{ isRecording: boolean }> => {
+    return new Promise(resolve => {
+      CameraManager.isRecording((status: boolean) => {
+        resolve({ isRecording: status });
+      });
+    });
+  };
+
+  // 对讲状态
+  isTalkBacking = (): Promise<{ isTalkBacking: boolean }> => {
+    return new Promise(resolve => {
+      CameraManager.isTalkBacking((status: boolean) => {
+        resolve({ isTalkBacking: status });
+      });
+    });
+  };
+
+  // 是否高清
+  isHDOn = (): Promise<{ isHDOn: boolean }> => {
+    return new Promise(resolve => {
+      CameraManager.isHDOn((status: boolean) => {
+        resolve({ isHDOn: status });
+      });
+    });
+  };
+
+  // 静音状态、对讲状态、录制状态、是否高清（只在每一次进入前台时推送该信息）
+  initStatus = async () => {
+    try {
+      const muting = await this.isMuting();
+      const recording = await this.isRecording();
+      const talking = await this.isTalkBacking();
+      const hd = await this.isHDOn();
+      return { ...muting, ...recording, ...talking, ...hd };
+    } catch (err) {
+      console.log(err);
+    }
+  };
 }
 
 export default new PlayerManagerFun();
