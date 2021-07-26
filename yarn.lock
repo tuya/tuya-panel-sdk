@@ -2219,6 +2219,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@tuya-rn/react-native-image-picker@^0.28.0":
+  version "0.28.0"
+  resolved "https://registry-npm.tuya-inc.top/@tuya-rn/react-native-image-picker/download/@tuya-rn/react-native-image-picker-0.28.0.tgz#e95293664d90d53084b1ec0c7862932ad2b58ba0"
+  integrity sha1-6VKTZk2Q1TCEsewMeGKTKtK1i6A=
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.12.tgz#4d8e9e51eb265552a7e4f1ff2219ab6133bdfb2d"

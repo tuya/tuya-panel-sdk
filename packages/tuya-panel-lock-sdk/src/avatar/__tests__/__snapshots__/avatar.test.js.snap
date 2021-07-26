@@ -1,0 +1,928 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar component render large size 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 75,
+      "position": "relative",
+      "width": 75,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 37.5,
+        "height": 75,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 75,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render medium size 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render number of size 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 100,
+      "position": "relative",
+      "width": 100,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 50,
+        "height": 100,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 100,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render small size 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 34,
+      "position": "relative",
+      "width": 34,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 17,
+        "height": 34,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 34,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render touchable if it has onPress 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={
+    [MockFunction] {
+      "calls": Array [
+        Array [],
+      ],
+      "results": Array [
+        Object {
+          "type": "return",
+          "value": undefined,
+        },
+      ],
+    }
+  }
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Avatar component render touchable if it has showPicker 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    style={
+      Object {
+        "borderRadius": 8.333333333333334,
+        "bottom": 0,
+        "height": 16.666666666666668,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "width": 16.666666666666668,
+      }
+    }
+    testID="TYLock_Avatar_AccessaryIcon"
+    underlayColor="black"
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </TouchableHighlight>
+</TouchableOpacity>
+`;
+
+exports[`Avatar component render with Component 1`] = `
+<Warpper
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</Warpper>
+`;
+
+exports[`Avatar component render with accessarySource 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render with accessaryStyle 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    style={
+      Object {
+        "borderRadius": 8.333333333333334,
+        "bottom": 0,
+        "height": 16.666666666666668,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_AccessaryIcon"
+    underlayColor="black"
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </TouchableHighlight>
+</TouchableOpacity>
+`;
+
+exports[`Avatar component render with avatarStyle 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          Object {
+            "width": 50,
+          },
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render with camera showPicker 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    style={
+      Object {
+        "borderRadius": 8.333333333333334,
+        "bottom": 0,
+        "height": 16.666666666666668,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "width": 16.666666666666668,
+      }
+    }
+    testID="TYLock_Avatar_AccessaryIcon"
+    underlayColor="black"
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </TouchableHighlight>
+</TouchableOpacity>
+`;
+
+exports[`Avatar component render with library showPicker 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+  <TouchableHighlight
+    activeOpacity={0.85}
+    delayPressOut={100}
+    style={
+      Object {
+        "borderRadius": 8.333333333333334,
+        "bottom": 0,
+        "height": 16.666666666666668,
+        "overflow": "hidden",
+        "position": "absolute",
+        "right": 0,
+        "width": 16.666666666666668,
+      }
+    }
+    testID="TYLock_Avatar_AccessaryIcon"
+    underlayColor="black"
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": "100%",
+          "width": "100%",
+        }
+      }
+    />
+  </TouchableHighlight>
+</TouchableOpacity>
+`;
+
+exports[`Avatar component render with pickerProps 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component render xlarge size 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 150,
+      "position": "relative",
+      "width": 150,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 75,
+        "height": 150,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 150,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component should render circle type 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component should render square type 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "height": 50,
+        "overflow": "hidden",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component should render with children 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+  <Image
+    source={1}
+    testID="testImage"
+  />
+</View>
+`;
+
+exports[`Avatar component should render without issues 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;
+
+exports[`Avatar component should render without source 1`] = `
+<View
+  onPress={[Function]}
+  style={
+    Object {
+      "height": 50,
+      "position": "relative",
+      "width": 50,
+    }
+  }
+  testID="TYLock_Avatar_Container"
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "transparent",
+        "borderRadius": 25,
+        "height": 50,
+        "overflow": "hidden",
+        "resizeMode": "contain",
+        "width": 50,
+      }
+    }
+    testID="TYLock_Avatar_ImageContainer"
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+      testID="TYLock_Avatar_Image"
+    />
+  </View>
+</View>
+`;

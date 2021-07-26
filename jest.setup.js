@@ -10,5 +10,10 @@ NativeModules.TYRCTPublicModule = {};
 NativeModules.TYRCTDeviceModule = {};
 NativeModules.TYRCTPublicManager = {};
 NativeModules.TYRCTPanelManager = {};
+NativeModules.ImagePickerManager = {
+  showImagePicker: () => {},
+  launchCamera: () => {},
+  launchImageLibrary: () => {},
+};
 
 Enzyme.configure({ adapter: new Adapter() });

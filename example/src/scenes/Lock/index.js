@@ -7,6 +7,7 @@ import DefendTime from './defendTime';
 // import Gesture from './gesture';
 import Finger from './finger';
 import DatePickerRange from './datePickerRange';
+import Avatar from './avatar';
 import { produceRouterDatas } from '../../utils';
 
 export default class LampCategoryScene extends Component {
@@ -15,6 +16,7 @@ export default class LampCategoryScene extends Component {
   static DefendTime = DefendTime;
   static Finger = Finger;
   static DatePickerRange = DatePickerRange;
+  static Avatar = Avatar;
   // static Gesture = Gesture;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lock\.((?!\.)\w)+$/.test(r.id)));

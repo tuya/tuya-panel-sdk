@@ -24,7 +24,8 @@
     "prop-types": "^15.6.2",
     "react-addons-shallow-compare": "^15.6.2",
     "react-native-video": "3.2.1",
-    "style-equal": "^1.0.0"
+    "style-equal": "^1.0.0",
+    "@tuya-rn/react-native-image-picker": "^0.28.0"
   },
   "devDependencies": {
     "@types/color": "0.12.1",
