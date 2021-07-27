@@ -184,7 +184,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       if (!enterBackDisConP2P) {
         TYIpcPlayerManager.exitPlayPreviewSpecial();
       } else {
-        TYIpcPlayerManager.backPlayPreview();
+        TYIpcPlayerManager.backPlayPreview(enterBackDisConP2P);
       }
     });
     // Android 返回键退出全屏
