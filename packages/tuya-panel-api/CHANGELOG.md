@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.5.0...@tuya/tuya-panel-api@1.5.1) (2021-07-23)
+
+**Note:** Version bump only for package @tuya/tuya-panel-api
+
+
+
+
+
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.4.0...@tuya/tuya-panel-api@1.5.0) (2021-07-22)
+
+
+### Features
+
+* add gateway relation api ([3d83d4c](https://github.com/tuya/tuya-panel-sdk/commit/3d83d4c615e1f3f2e307d52e36e7a9963d1a1b19))
+
+
+
+
+
 # [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.1.2...@tuya/tuya-panel-api@1.4.0) (2021-07-14)
 
 

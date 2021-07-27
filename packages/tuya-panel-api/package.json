@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-api",
-  "version": "1.4.0",
+  "version": "1.5.1",
   "description": "tuya-panel-api, is a general cloud interface collection library",
   "keywords": [
     "tuya",
@@ -10,9 +10,10 @@
   "license": "MIT",
   "main": "./lib/index.js",
   "scripts": {
-    "dev": "tsc -w",
+    "dev": "yarn build -w",
     "build": "tsc -d",
-    "prebuild": "../../node_modules/del-cli/cli.js lib/"
+    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "react": "16.8.3",
