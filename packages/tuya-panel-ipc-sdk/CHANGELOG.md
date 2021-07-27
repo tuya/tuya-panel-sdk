@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.5.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.5.0...@tuya/tuya-panel-ipc-sdk@1.5.1) (2021-07-27)
+
+
+### Bug Fixes
+
+* enter the background to disconnect the P2P connection ([#64](https://github.com/tuya/tuya-panel-sdk/issues/64)) ([f6c6257](https://github.com/tuya/tuya-panel-sdk/commit/f6c6257a26a86bbceaed9d035dc240ad5f02009f))
+
+
+
+
+
 # [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.4.0...@tuya/tuya-panel-ipc-sdk@1.5.0) (2021-07-22)
 
 
