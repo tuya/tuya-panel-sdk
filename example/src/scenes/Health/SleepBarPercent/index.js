@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, ScrollView, Image } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import { SleepBarPercent } from '@tuya/tuya-panel-health-sdk';
+import { BarPercent } from '@tuya/tuya-panel-health-sdk';
 import Section from '../Section';
 
 const { convertX: cx } = Utils.RatioUtils;
@@ -18,41 +18,50 @@ const lang = {
     dsc_custom_style: '自定义样式',
   },
 };
+
+export const WAKE_COLOR = '#FFCF3A';
+export const LIGHT_COLOR = '#E5C7F2';
+export const DEEP_COLOR = '#BF73DE';
+export const REM_COLOR = '#F8F1FB';
+
 const getLang = key => {
   return lang.en[key];
 };
 const sleepDuration = [
   {
-    type: 'Wake',
+    key: 'Wake',
     value: 60,
   },
   {
-    type: 'Light',
+    key: 'Light',
     value: 200,
   },
   {
-    type: 'Deep',
+    key: 'Deep',
     value: 400,
   },
   {
-    type: 'REM',
+    key: 'REM',
     value: 100,
   },
 ];
 
 const sleepDuration2 = [
   {
-    type: 'Wake',
-    value: 60,
+    label: '醒来',
+    key: 'Wake',
+    value: 200,
     color: 'pink',
   },
   {
-    type: 'Light',
+    label: '浅睡',
+    key: 'Light',
     value: 200,
     color: '#BF73DE',
   },
   {
-    type: 'Deep',
+    label: '深睡',
+    key: 'Deep',
     value: 600,
     color: '#C00AFF',
   },
@@ -63,22 +72,24 @@ export default class Index extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1}}>
+      <View style={{ flex: 1 }}>
         <Section title={getLang('dsc_default')}>
-          <SleepBarPercent dataSource={sleepDuration} />
+          <BarPercent data={sleepDuration} />
         </Section>
         <Section title={getLang('dsc_custom')}>
-          <SleepBarPercent dataSource={sleepDuration2} />
+          <BarPercent data={sleepDuration2} />
         </Section>
         <Section title={getLang('dsc_custom_style')}>
-          <SleepBarPercent
-            dataSource={sleepDuration}
-            style={{
-              height: 18,
-              borderRadius: 12,
-              overflow: 'hidden',
-            }}
-          />
+          <View>
+            <BarPercent
+              data={sleepDuration}
+              style={{
+                height: 18,
+                borderRadius: 12,
+                overflow: 'hidden',
+              }}
+            />
+          </View>
         </Section>
       </View>
     );

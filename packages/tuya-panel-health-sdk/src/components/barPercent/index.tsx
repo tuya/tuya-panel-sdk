@@ -1,16 +1,16 @@
-import React, { ReactNode, Component, SFC } from 'react';
+import React, { ReactNode, Component, SFC, useMemo } from 'react';
 import { View, StyleSheet, ViewStyle, StyleProp } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-export interface BarPercentProps<T> {
+export interface BarListProps<T> {
   dataSource: T[];
   renderItem: (item: T, index: number) => ReactNode;
   style?: StyleProp<ViewStyle>;
 }
 
-export interface BarPercentItemProps {
+export interface ItemProps {
   flexPercent: number;
   backgroundColor?: string;
 }
@@ -20,11 +20,12 @@ export const sum = (arr: number[]) => {
   return [...arr].reduce((acc, val) => acc + val, 0);
 };
 
-const Item: SFC<BarPercentItemProps> = (props: BarPercentItemProps) => {
+export const Item: SFC<ItemProps> = (props: ItemProps) => {
   const { flexPercent = 1, backgroundColor = '#BF73DE' } = props;
   return <View style={[styles.item, { backgroundColor, flex: flexPercent }]} />;
 };
-export class BarPercent<T> extends Component<BarPercentProps<T>> {
+
+export class BarList<T> extends Component<BarListProps<T>> {
   static Item = Item;
   render() {
     const { dataSource, renderItem, style } = this.props;
@@ -33,10 +34,10 @@ export class BarPercent<T> extends Component<BarPercentProps<T>> {
   }
 }
 
-const WAKE_COLOR = '#FFCF3A';
-const LIGHT_COLOR = '#E5C7F2';
-const DEEP_COLOR = '#BF73DE';
-const REM_COLOR = '#F8F1FB';
+export const WAKE_COLOR = '#FFCF3A';
+export const LIGHT_COLOR = '#E5C7F2';
+export const DEEP_COLOR = '#BF73DE';
+export const REM_COLOR = '#F8F1FB';
 
 export const DEFAULT_COLORS = {
   Wake: WAKE_COLOR,
@@ -53,35 +54,34 @@ export enum SleepStatus {
   'Light' = 'Light',
   'REM' = 'REM',
 }
-export interface SleepBarPercentProps {
-  dataSource: { value: number; type: SleepStatus; color?: string }[];
+
+export interface Data {
+  value: number;
+  label: string;
+  key?: string;
+  color?: string;
+}
+export interface BarPercentProps {
+  data: Data[];
   style?: StyleProp<ViewStyle>;
 }
 
-// Sleep distribution
-export class SleepBarPercent extends Component<SleepBarPercentProps> {
-  render() {
-    const { dataSource, style } = this.props;
-    const total = sum(dataSource.map(d => +d.value)) as number;
-    const { length } = dataSource;
+const BarPercent: SFC<BarPercentProps> = (props: BarPercentProps) => {
+  const { data, style } = props;
+  const total = useMemo(() => sum(data.map(d => +d.value)) as number, [JSON.stringify(data)]);
+  const { length } = data;
+  const renderItem = (item, index) => {
+    const flexPercent = (item.value / total) * length;
     return (
-      <BarPercent
-        dataSource={dataSource}
-        style={style}
-        renderItem={(item, index) => {
-          const flexPercent = (item.value / total) * length;
-          return (
-            <BarPercent.Item
-              key={index}
-              flexPercent={flexPercent}
-              backgroundColor={item?.color ?? DEFAULT_COLORS[`${item.type}`]}
-            />
-          );
-        }}
+      <BarList.Item
+        key={item?.key || index}
+        flexPercent={flexPercent}
+        backgroundColor={item.color || DEFAULT_COLORS[item.key]}
       />
     );
-  }
-}
+  };
+  return <BarList dataSource={data} style={style} renderItem={renderItem} />;
+};
 
 const styles = StyleSheet.create({
   container: {
@@ -94,4 +94,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SleepBarPercent;
+export default BarPercent;

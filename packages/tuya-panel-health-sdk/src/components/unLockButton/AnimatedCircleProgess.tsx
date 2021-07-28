@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable react/prop-types */
 import React, { useRef, useCallback, RefForwardingComponent, useImperativeHandle } from 'react';
 import { View, StyleSheet, Animated, ViewStyle } from 'react-native';
 import Svg, { Circle } from 'react-native-svg';
@@ -24,7 +22,6 @@ export interface AnimatedCircleProgessProps {
    * 进度环颜色
    */
   color?: string;
-
   style?: ViewStyle;
 }
 
@@ -37,7 +34,7 @@ export interface AnimatedCircleProgessHandles {
 const AnimatedCircleProgess: RefForwardingComponent<
   AnimatedCircleProgessHandles,
   AnimatedCircleProgessProps
-> = ({ size = 100, duration = 2000, color = 'pink', style }, ref) => {
+> = ({ size = 100, duration = 2000, color = 'pink', style }: AnimatedCircleProgessProps, ref) => {
   const progAnim = useRef(new Animated.Value(0)).current;
   const radius = HALF_VIEWBOX_WIDTH - DEFAULT_STROKE_WIDTH / 2;
 

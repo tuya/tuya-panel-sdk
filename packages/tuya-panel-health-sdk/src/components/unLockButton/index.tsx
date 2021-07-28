@@ -1,5 +1,4 @@
-/* eslint-disable react/prop-types */
-import React, { useRef, useCallback, FC } from 'react';
+import React, { useRef, useCallback, FC, PropsWithChildren } from 'react';
 import { View, StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
 import AnimatedCircleProgess from './AnimatedCircleProgess';
 
@@ -43,7 +42,7 @@ const UnLockButton: FC<Props> = ({
   color,
   children,
   style,
-}) => {
+}: PropsWithChildren<Props>) => {
   const acpRef = useRef(null);
   const start = useCallback(() => {
     acpRef.current.start();
