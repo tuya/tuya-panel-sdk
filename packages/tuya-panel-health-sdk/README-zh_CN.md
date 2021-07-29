@@ -2,24 +2,24 @@
 
 [English](./README.md) | 简体中文
 
-涂鸦动画组件库
+涂鸦健康业务组件库
 
-[![](https://img.shields.io/npm/v/@tuya/tuya-panel-animation-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-animation-sdk)
+[![](https://img.shields.io/npm/v/@tuya/tuya-panel-health-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-health-sdk)
 
 ## 安装
 
 ```sh
-$ npm install @tuya/tuya-panel-animation-sdk
+$ npm install @tuya/tuya-panel-health-sdk
 // or
-$ yarn add @tuya/tuya-panel-animation-sdk
+$ yarn add @tuya/tuya-panel-health-sdk
 ```
 
 ## 使用
 
 ```sh
-import { Diffusion } from '@tuya/tuya-panel-animation-sdk'
+import { UnLockButton } from '@tuya/tuya-panel-health-sdk'
 ```
 
 ## 文档
 
-动画组件更多文档请参考 [Tuya Design](https://panel-docs.tuyacn.com/tuya-panel-animation-sdk/Diffusion)
+查看[链接](https://developer.tuya.com/cn/docs/control-panel-sdk/health)获取详细文档

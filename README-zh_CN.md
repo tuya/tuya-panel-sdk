@@ -27,6 +27,7 @@
 | `@tuya/tuya-panel-remote-sdk` | 涂鸦万能遥控器业务与组件库 | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-remote-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-remote-sdk) | @丁典 |
 | `@tuya/tuya-panel-robot-sdk`       | 涂鸦面板扫地机器人 sdk 开发工具包 | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-robot-sdk) | @玄同  |
 | `@tuya/tuya-panel-gateway-sdk`     | 涂鸦网关业务组件                   | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-gateway-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-gateway-sdk) | @钟离  |
+| `@tuya/tuya-panel-health-sdk`     | 涂鸦健康业务组件                   | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-health-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-health-sdk) | @折木  |
 
 ## License
 

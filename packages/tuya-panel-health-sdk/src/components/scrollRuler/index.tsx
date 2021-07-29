@@ -14,8 +14,7 @@ const DEFAULT_SCALE_LONG_HEIGHT = cy(46);
 export interface SliderRulerProps {
   min: number;
   max: number;
-  // 两个刻度之间的值
-  step: number;
+  // step: number;
   value: number;
   title?: ReactNode;
   scaleShortHeight?: number;
@@ -26,7 +25,7 @@ export interface SliderRulerProps {
   valueStyle?: ViewStyle;
   pointerStyle?: ViewStyle;
   formatValue?: (v: number) => number | string;
-  onChange?: (v: number) => void;
+  onChange?: (v: number | string) => void;
 }
 
 const ScrollRuler: FC<SliderRulerProps> = (props: SliderRulerProps) => {
@@ -46,7 +45,7 @@ const ScrollRuler: FC<SliderRulerProps> = (props: SliderRulerProps) => {
     onChange,
   } = props;
   // current value
-  const cvRef = useRef(value);
+  const cvRef = useRef<number | string>(value);
   const ref = useRef(null);
   const textRef = useRef(null);
 
