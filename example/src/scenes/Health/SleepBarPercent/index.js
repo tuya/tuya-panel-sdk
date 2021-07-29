@@ -67,31 +67,29 @@ const sleepDuration2 = [
   },
 ];
 
-export default class Index extends Component {
-  state = {};
+const BarPercentExample = () => {
+  return (
+    <View style={{ flex: 1 }}>
+      <Section title={getLang('dsc_default')}>
+        <BarPercent data={sleepDuration} />
+      </Section>
+      <Section title={getLang('dsc_custom')}>
+        <BarPercent data={sleepDuration2} />
+      </Section>
+      <Section title={getLang('dsc_custom_style')}>
+        <View>
+          <BarPercent
+            data={sleepDuration}
+            style={{
+              height: 18,
+              borderRadius: 12,
+              overflow: 'hidden',
+            }}
+          />
+        </View>
+      </Section>
+    </View>
+  );
+};
 
-  render() {
-    return (
-      <View style={{ flex: 1 }}>
-        <Section title={getLang('dsc_default')}>
-          <BarPercent data={sleepDuration} />
-        </Section>
-        <Section title={getLang('dsc_custom')}>
-          <BarPercent data={sleepDuration2} />
-        </Section>
-        <Section title={getLang('dsc_custom_style')}>
-          <View>
-            <BarPercent
-              data={sleepDuration}
-              style={{
-                height: 18,
-                borderRadius: 12,
-                overflow: 'hidden',
-              }}
-            />
-          </View>
-        </Section>
-      </View>
-    );
-  }
-}
+export default BarPercentExample;

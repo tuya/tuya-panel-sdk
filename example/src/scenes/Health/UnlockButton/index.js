@@ -20,37 +20,35 @@ const getLang = key => {
   return lang.en[key];
 };
 
-export default class Index extends Component {
-  state = {};
+const UnlockButtonExample = () => {
+  const handleStop = () => {};
 
-  handleStop = () => {};
-
-  render() {
-    return (
-      <View style={{ flex: 1, padding: cx(20) }}>
-        <Section title={getLang('dsc_default')}>
-          <UnLockButton onEnd={this.handleStop} backgroundColor="#DF2E2E">
-            <View style={styles.stop} />
+  return (
+    <View style={{ flex: 1, padding: cx(20) }}>
+      <Section title={getLang('dsc_default')}>
+        <UnLockButton onEnd={handleStop} backgroundColor="#DF2E2E">
+          <View style={styles.stop} />
+        </UnLockButton>
+      </Section>
+      <Section title={getLang('dsc_custom')}>
+        <View style={{ backgroundColor: '#333', padding: 30 }}>
+          <UnLockButton
+            onEnd={handleStop}
+            backgroundColor="#fff"
+            delayLongPress={1000}
+            size={90}
+            progressRingSize={100}
+            color="#fff"
+          >
+            <View style={[styles.stop, { backgroundColor: '#333' }]} />
           </UnLockButton>
-        </Section>
-        <Section title={getLang('dsc_custom')}>
-          <View style={{ backgroundColor: '#333', padding: 30 }}>
-            <UnLockButton
-              onEnd={this.handleStop}
-              backgroundColor="#fff"
-              delayLongPress={1000}
-              size={90}
-              progressRingSize={100}
-              color="#fff"
-            >
-              <View style={[styles.stop, { backgroundColor: '#333' }]} />
-            </UnLockButton>
-          </View>
-        </Section>
-      </View>
-    );
-  }
-}
+        </View>
+      </Section>
+    </View>
+  );
+};
+
+export default UnlockButtonExample;
 
 const styles = StyleSheet.create({
   stop: {

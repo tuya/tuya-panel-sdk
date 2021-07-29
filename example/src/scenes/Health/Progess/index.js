@@ -22,34 +22,30 @@ const getLang = key => {
   return lang.en[key];
 };
 
-export default class Index extends Component {
-  state = {};
+const ProgessExample = () => {
+  return (
+    <View style={{ flex: 1, padding: cx(20) }}>
+      <Section title={getLang('dsc_default')}>
+        <Progess percent={12} />
+      </Section>
+      <Section title={getLang('dsc_custom')}>
+        <Progess percent={18} size={160} color="#FFC204" backgroundColor="#4E4532" />
+      </Section>
+      <Section title={getLang('dsc_custom2')}>
+        <Progess
+          percent={18}
+          textRender={percent => (
+            <View>
+              <TYText>{percent}</TYText>
+              <TYText>步数</TYText>
+            </View>
+          )}
+        />
+      </Section>
+    </View>
+  );
+};
 
-  handleStop = () => {};
-
-  render() {
-    return (
-      <View style={{ flex: 1, padding: cx(20) }}>
-        <Section title={getLang('dsc_default')}>
-          <Progess percent={12} />
-        </Section>
-        <Section title={getLang('dsc_custom')}>
-          <Progess percent={18} size={160} color="#FFC204" backgroundColor="#4E4532" />
-        </Section>
-        <Section title={getLang('dsc_custom2')}>
-          <Progess
-            percent={18}
-            textRender={percent => (
-              <View>
-                <TYText>{percent}</TYText>
-                <TYText>步数</TYText>
-              </View>
-            )}
-          />
-        </Section>
-      </View>
-    );
-  }
-}
+export default ProgessExample;
 
 const styles = StyleSheet.create({});
