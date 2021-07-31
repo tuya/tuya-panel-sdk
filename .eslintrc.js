@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['tuya-panel',"plugin:react/recommended"],
+  extends: ['tuya-panel'],
   plugins: ['literal-check'],
   rules: {
     'literal-check/literal-check': [
@@ -61,7 +61,6 @@ module.exports = {
         'tuya.m.device.relation.update.for.ble',
         'tuya.m.device.relation.update'
       ],
-    ],
-    'react/forbid-prop-types': 0,
+    ]
   },
 };
