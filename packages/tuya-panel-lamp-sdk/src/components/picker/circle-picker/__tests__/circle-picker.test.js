@@ -35,6 +35,7 @@ describe('CirclePicker components', () => {
     wrapper.setProps({ hideThumb });
 
     wrapper.setProps({
+      // eslint-disable-next-line react/display-name
       renderThumb: () => {
         return <View />;
       },
