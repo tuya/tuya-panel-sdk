@@ -23,7 +23,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint-config-tuya-panel": "^0.2.4",
+    "eslint-config-tuya-panel": "^0.2.6",
     "eslint-plugin-literal-check": "^0.1.2",
     "husky": "^4.3.0",
     "jest": "24.9.0",
