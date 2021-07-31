@@ -5233,10 +5233,10 @@ eslint-config-prettier@^6.11.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-tuya-panel@^0.2.4:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/eslint-config-tuya-panel/-/eslint-config-tuya-panel-0.2.4.tgz#3763a9e2a803a6d23604c35d25179178361912ac"
-  integrity sha512-Gy2s1eo897nnU5Qz+aDpVXmULtPvLd4wTpo3m0ibXXdPWfTeLj0jRdXv2xP4Ey8eZGGrDrYDMZx19JzJvaMlJA==
+eslint-config-tuya-panel@^0.2.6:
+  version "0.2.6"
+  resolved "https://registry.yarnpkg.com/eslint-config-tuya-panel/-/eslint-config-tuya-panel-0.2.6.tgz#57b2059add7496344bafa1b949dadd3d7f477c26"
+  integrity sha512-JCeDG9nadXdsOk2B73QTWBpmyopL0uyrOVR+76yFH4NEXN8Gd2nf1xfkgbhP/KKvuAzpb8puw4Kl11Vd/Ooklg==
   dependencies:
     "@typescript-eslint/eslint-plugin" "4.8.2"
     "@typescript-eslint/parser" "4.8.2"
