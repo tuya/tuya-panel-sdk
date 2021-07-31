@@ -1,3 +1,7 @@
+## Owner
+
+- [ ] Nickname(Tuya): 
+
 ## Description
 
 Please provide a brief summary of the changes. If it is related to an issue, please bring the issue number, like `fixes #${number}`.
@@ -11,6 +15,7 @@ Please provide a brief summary of the changes. If it is related to an issue, ple
 - [ ] tuya-panel-lamp-sdk
 - [ ] tuya-panel-lock-sdk
 - [ ] tuya-panel-robot-sdk
+- [ ] tuya-panel-outdoor-sdk
 
 ## Type of change
 
