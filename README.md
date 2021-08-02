@@ -28,6 +28,7 @@ Technical Ticket: https://service.console.tuya.com/
 | `@tuya/tuya-panel-protocols`       | A business protocol collection library                       | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-protocols/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-protocols) | @多肉  |
 | `@tuya/tuya-panel-remote-sdk`      | Tuya universal remote control business component library     | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-remote-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-remote-sdk) | @丁典  |
 | `@tuya/tuya-panel-robot-sdk`       | The SDK is used to develop the panels of `Power by Tuya` robot vacuums. | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-robot-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-robot-sdk) | @玄同  |
+| `@tuya/tuya-panel-health-sdk`     | The SDK is used to develop the panels of `Power by Tuya` health  | [![](https://img.shields.io/npm/v/@tuya/tuya-panel-health-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-health-sdk) | @折木  |
 
 ## License
 
