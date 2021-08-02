@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import BarPercent, { BarList, Item } from '../index';
+import BarPercent from '../index';
+import { BarList, Item } from '../BarList';
 
 describe('SleepBarPercent', () => {
   it('render SleepBarPercent Component', () => {
