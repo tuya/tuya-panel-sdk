@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import { View, TouchableOpacity, StyleSheet, ViewStyle, StyleProp } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 
@@ -12,9 +12,10 @@ export interface IProps {
   activeStyle?: StyleProp<ViewStyle>;
   onPress?: () => void;
   onLongPress?: () => void;
+  children?: React.ReactNode;
 }
 
-const Button: SFC<IProps> = ({
+const Button: React.FunctionComponent<IProps> = ({
   style,
   onPress,
   onLongPress,
@@ -23,7 +24,7 @@ const Button: SFC<IProps> = ({
   children,
   activeColor,
   activeStyle,
-}) => (
+}: IProps) => (
   <View style={[styles.btn, style, active && { borderColor: activeColor }, active && activeStyle]}>
     <TouchableOpacity
       style={[styles.inner, { backgroundColor: color }]}

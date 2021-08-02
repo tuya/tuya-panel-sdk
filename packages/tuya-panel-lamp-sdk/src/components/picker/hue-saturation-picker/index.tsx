@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { Component } from 'react';
 import {
@@ -12,6 +13,7 @@ import {
 } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import ColorUtils from '../../../utils/color';
+import Res from '../../../res';
 
 interface HsvColor {
   hue: number;
@@ -43,7 +45,7 @@ const defaultProps = {
    * 轨道的图
    */
   // eslint-disable-next-line import/no-unresolved
-  bgImg: require('./res/color-picker.png'),
+  bgImg: Res.colorPicker,
   /**
    * 轨道外圈半径
    */
@@ -151,6 +153,7 @@ export default class HuePicker extends Component<IProps, IState> {
     });
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: IProps) {
     if (!this.locked) {
       if (nextProps.hideThumb !== this.props.hideThumb) {

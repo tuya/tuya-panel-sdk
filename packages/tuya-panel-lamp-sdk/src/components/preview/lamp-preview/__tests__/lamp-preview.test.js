@@ -1,17 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import LampPreview from '../index';
 
 describe('LampPreview components', () => {
-  const origConsole = console.error;
-  beforeEach(() => {
-    console.error = () => {};
-  });
-  afterEach(() => {
-    console.error = origConsole;
-  });
-
   it('basic render', () => {
     const wrapper = shallow(<LampPreview workMode="white" bright={800} temperature={0} />);
     expect(wrapper).toMatchSnapshot();

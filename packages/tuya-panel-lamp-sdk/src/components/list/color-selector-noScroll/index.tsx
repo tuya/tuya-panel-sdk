@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { Component } from 'react';
 import { View, StyleSheet, ViewStyle, StyleProp } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
@@ -75,7 +76,7 @@ interface IState {
   scrollEnabled: boolean;
 }
 
-export default class extends Component<IProps, IState> {
+export default class ColorSelectorNoScroll extends Component<IProps, IState> {
   static defaultProps: DefaultProps = defaultProps;
   renderItem = (item: Color, index: number) => {
     const { selectIndex, onSelect, onLongPress, btnStyle, activeStyle } = this.props;

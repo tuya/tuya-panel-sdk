@@ -5,6 +5,7 @@ import Color from 'color';
 import { View, StyleSheet, Image, StyleProp, ViewStyle } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import ColorUtils from '../../../utils/color';
+import Res from '../../../res';
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -44,11 +45,11 @@ const defaultProps = {
   /**
    * 光晕图片
    */
-  lightPic: require('./res/light.png'),
+  lightPic: Res.light,
   /**
    * 灯具图片
    */
-  lampPic: require('./res/lamp.png'),
+  lampPic: Res.lamp,
 };
 
 type IProps = {

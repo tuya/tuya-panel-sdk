@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { Component } from 'react';
 import {
@@ -12,6 +13,7 @@ import {
 } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import ColorUtils from '../../../utils/color';
+import Res from '../../../res';
 
 const { convertX } = Utils.RatioUtils;
 
@@ -36,7 +38,7 @@ const defaultProps = {
   /**
    * 轨道的图
    */
-  bgImg: require('./res/color-bg.png'),
+  bgImg: Res.colorBg,
   /**
    * 轨道外圈半径
    */
@@ -126,6 +128,7 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
     });
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: HuePickerProps) {
     if (!this.locked) {
       if (nextProps.hideThumb !== this.props.hideThumb) {
