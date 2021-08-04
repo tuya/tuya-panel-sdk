@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.6.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.6.0...@tuya/tuya-panel-api@1.6.1) (2021-08-04)
+
+
+### Bug Fixes
+
+* sunRise、SunSet & conditionNum type definition ([681e8b7](https://github.com/tuya/tuya-panel-sdk/commit/681e8b7040549df4953aee1d821f53a623391742))
+
+
+
+
+
 # [1.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.5.1...@tuya/tuya-panel-api@1.6.0) (2021-08-04)
 
 
