@@ -551,15 +551,15 @@ export interface IGetWeatherQualityResponse {
     /**
      * 天气文本编号
      */
-    conditionNum: number;
+    conditionNum: string;
     /**
      * 日出时间文本
      */
-    sunRise: number;
+    sunRise: string;
     /**
      * 日落时间文本
      */
-    sunSet: number;
+    sunSet: string;
     /**
      * 日落时间戳
      */
@@ -619,7 +619,7 @@ export interface IGetWeathersResponse {
     /**
      * 天气文本编号
      */
-    conditionNum: number;
+    conditionNum: string;
     /**
      * 风速，国内外都是 m/s
      */
@@ -639,11 +639,11 @@ export interface IGetWeathersResponse {
     /**
      * 日出时间文本
      */
-    sunRise: number;
+    sunRise: string;
     /**
      * 日落时间文本
      */
-    sunSet: number;
+    sunSet: string;
     /**
      * 日落时间戳
      */
