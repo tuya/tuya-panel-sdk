@@ -489,10 +489,6 @@ export interface IGetWeatherQualityResponse {
      */
     no2: number;
     /**
-     * 日落时间戳
-     */
-    sunSet: number;
-    /**
      * 二氧化硫
      */
     so2: number;
@@ -557,9 +553,13 @@ export interface IGetWeatherQualityResponse {
      */
     conditionNum: number;
     /**
-     * 日出
+     * 日出时间文本
      */
     sunRise: number;
+    /**
+     * 日落时间文本
+     */
+    sunSet: number;
     /**
      * 日落时间戳
      */
@@ -637,11 +637,11 @@ export interface IGetWeathersResponse {
      */
     zoneId: string;
     /**
-     * 日出时间戳
+     * 日出时间文本
      */
     sunRise: number;
     /**
-     * 日落时间戳
+     * 日落时间文本
      */
     sunSet: number;
     /**
