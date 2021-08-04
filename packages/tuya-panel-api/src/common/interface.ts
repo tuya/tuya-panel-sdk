@@ -477,10 +477,6 @@ export interface IGetWeatherQualityResponse {
      */
     windDir: string;
     /**
-     * 日落文本
-     */
-    sunSetFormat: string;
-    /**
      * 概述
      */
     tips: string;
@@ -520,10 +516,6 @@ export interface IGetWeatherQualityResponse {
      * 臭氧
      */
     o3: number;
-    /**
-     * 日出文本
-     */
-    sunRiseFormat: string;
     /**
      * PM10
      */
@@ -568,6 +560,14 @@ export interface IGetWeatherQualityResponse {
      * 日出
      */
     sunRise: number;
+    /**
+     * 日落时间戳
+     */
+    sunSetTimestamp: number;
+    /**
+     * 日出时间戳
+     */
+    sunRiseTimestamp: number;
   }>;
 }
 
@@ -645,13 +645,13 @@ export interface IGetWeathersResponse {
      */
     sunSet: number;
     /**
-     * 日落文本
+     * 日落时间戳
      */
-    sunSetFormat: string;
+    sunSetTimestamp: number;
     /**
-     * 日出文本
+     * 日出时间戳
      */
-    sunRiseFormat: string;
+    sunRiseTimestamp: number;
   }>;
 }
 
