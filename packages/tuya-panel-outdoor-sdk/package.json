@@ -11,6 +11,9 @@
     "prepublishOnly": "yarn build",
     "test": "jest"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@types/color": "0.12.1",
     "@types/lodash": "^4.14.149",
