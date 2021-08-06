@@ -477,10 +477,6 @@ export interface IGetWeatherQualityResponse {
      */
     windDir: string;
     /**
-     * 日落文本
-     */
-    sunSetFormat: string;
-    /**
      * 概述
      */
     tips: string;
@@ -492,10 +488,6 @@ export interface IGetWeatherQualityResponse {
      * 二氧化氮
      */
     no2: number;
-    /**
-     * 日落时间戳
-     */
-    sunSet: number;
     /**
      * 二氧化硫
      */
@@ -520,10 +512,6 @@ export interface IGetWeatherQualityResponse {
      * 臭氧
      */
     o3: number;
-    /**
-     * 日出文本
-     */
-    sunRiseFormat: string;
     /**
      * PM10
      */
@@ -563,11 +551,23 @@ export interface IGetWeatherQualityResponse {
     /**
      * 天气文本编号
      */
-    conditionNum: number;
+    conditionNum: string;
     /**
-     * 日出
+     * 日出时间文本
      */
-    sunRise: number;
+    sunRise: string;
+    /**
+     * 日落时间文本
+     */
+    sunSet: string;
+    /**
+     * 日落时间戳
+     */
+    sunSetTimestamp: number;
+    /**
+     * 日出时间戳
+     */
+    sunRiseTimestamp: number;
   }>;
 }
 
@@ -619,7 +619,7 @@ export interface IGetWeathersResponse {
     /**
      * 天气文本编号
      */
-    conditionNum: number;
+    conditionNum: string;
     /**
      * 风速，国内外都是 m/s
      */
@@ -637,21 +637,21 @@ export interface IGetWeathersResponse {
      */
     zoneId: string;
     /**
-     * 日出时间戳
+     * 日出时间文本
      */
-    sunRise: number;
+    sunRise: string;
+    /**
+     * 日落时间文本
+     */
+    sunSet: string;
     /**
      * 日落时间戳
      */
-    sunSet: number;
+    sunSetTimestamp: number;
     /**
-     * 日落文本
+     * 日出时间戳
      */
-    sunSetFormat: string;
-    /**
-     * 日出文本
-     */
-    sunRiseFormat: string;
+    sunRiseTimestamp: number;
   }>;
 }
 
