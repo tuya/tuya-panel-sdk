@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddBtn components basic render 1`] = `
+<Button
+  color="#333"
+>
+  <Component
+    name="plus"
+    size={18}
+  />
+</Button>
+`;
