@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorSelectorNoScroll components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "flex-start",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "flex-start",
+        "paddingHorizontal": 16,
+        "width": "100%",
+      },
+      null,
+    ]
+  }
+>
+  <Button
+    active={false}
+    activeColor="rgba(255,255,255,0.8)"
+    activeStyle={null}
+    color="rgb(255, 119, 51)"
+    key="0"
+    onLongPress={[Function]}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "marginBottom": 12,
+          "marginRight": 30,
+        },
+        null,
+        false,
+      ]
+    }
+  />
+  <Button
+    active={false}
+    activeColor="rgba(255,255,255,0.8)"
+    activeStyle={null}
+    color="rgb(255, 208, 163)"
+    key="1"
+    onLongPress={[Function]}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "marginBottom": 12,
+          "marginRight": 30,
+        },
+        null,
+        false,
+      ]
+    }
+  />
+  <Button
+    active={false}
+    activeColor="rgba(255,255,255,0.8)"
+    activeStyle={null}
+    color="rgb(0, 85, 255)"
+    key="2"
+    onLongPress={[Function]}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "marginBottom": 12,
+          "marginRight": 30,
+        },
+        null,
+        false,
+      ]
+    }
+  />
+  <AddBtn
+    btnColor="rgba(255,255,255,0.2)"
+    iconColor="#fff"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "marginBottom": 12,
+        },
+        null,
+        false,
+      ]
+    }
+  />
+</View>
+`;
