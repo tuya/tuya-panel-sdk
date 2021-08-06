@@ -7,11 +7,11 @@ module.exports = {
   displayName: pkg.name,
   rootDir: '../..',
   testMatch: [
-    '<rootDir>/packages/tuya-panel-lamp-sdk/src/components/picker/**/__tests__/?(*.)+(test).[jt]s?(x)',
+    '<rootDir>/packages/tuya-panel-lamp-sdk/src/components/**/**/__tests__/?(*.)+(test).[jt]s?(x)',
   ],
   coverageDirectory: '<rootDir>/packages/tuya-panel-lamp-sdk/coverage/',
   collectCoverageFrom: [
-    '<rootDir>/packages/tuya-panel-lamp-sdk/src/components/picker/**/*.[jt]s?(x)',
+    '<rootDir>/packages/tuya-panel-lamp-sdk/src/components/**/**/*.[jt]s?(x)',
     '!<rootDir>/packages/tuya-panel-lamp-sdk/src/components/picker/rect-color-and-bright-picker/icons/index.ts',
   ],
 };
