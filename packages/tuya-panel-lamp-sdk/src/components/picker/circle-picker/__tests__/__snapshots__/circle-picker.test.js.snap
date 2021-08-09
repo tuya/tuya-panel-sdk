@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CirclePicker components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+      },
+      null,
+    ]
+  }
+>
+  <Svg
+    height={441.7056274847714}
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 480 441.7056274847714"
+    width={480}
+  >
+    <Defs>
+      <LinearGradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        <Stop
+          key="0"
+          offset="0%"
+          stopColor="#FEECAB"
+          stopOpacity={1}
+        />
+        <Stop
+          key="1"
+          offset="100%"
+          stopColor="#C0E8FF"
+          stopOpacity={1}
+        />
+      </LinearGradient>
+    </Defs>
+    <Path
+      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+      fill="url(#linear)"
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 28,
+          "height": 56,
+          "left": -28,
+          "opacity": 1,
+          "top": -28,
+          "width": 56,
+        },
+        null,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 387.07821048680194,
+            },
+            Object {
+              "translateY": 387.0782104868018,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 441.7056274847714,
+          "width": 480,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`CirclePicker components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+      },
+      null,
+    ]
+  }
+>
+  <Svg
+    height={441.7056274847714}
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 480 441.7056274847714"
+    width={480}
+  >
+    <Defs>
+      <LinearGradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        <Stop
+          key="0"
+          offset="0%"
+          stopColor="#FEECAB"
+          stopOpacity={1}
+        />
+        <Stop
+          key="1"
+          offset="100%"
+          stopColor="#C0E8FF"
+          stopOpacity={1}
+        />
+      </LinearGradient>
+    </Defs>
+    <Path
+      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+      fill="url(#linear)"
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 28,
+          "height": 56,
+          "left": -28,
+          "opacity": 1,
+          "top": -28,
+          "width": 56,
+        },
+        null,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 92.92178951319812,
+            },
+            Object {
+              "translateY": 387.07821048680194,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 441.7056274847714,
+          "width": 480,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`CirclePicker components render touch 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+      },
+      null,
+    ]
+  }
+>
+  <Svg
+    height={529.7056274847714}
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 480 529.7056274847714"
+    width={480}
+  >
+    <Defs>
+      <LinearGradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        <Stop
+          key="0"
+          offset="0%"
+          stopColor="#FEECAB"
+          stopOpacity={1}
+        />
+        <Stop
+          key="1"
+          offset="100%"
+          stopColor="#C0E8FF"
+          stopOpacity={1}
+        />
+      </LinearGradient>
+    </Defs>
+    <Path
+      d="M240 240 A120 120 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A120 120 0 0 1 240 240 A0 0 0 1 0 240 240 Z"
+      fill="url(#linear)"
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 28,
+          "height": 56,
+          "left": -28,
+          "opacity": 1,
+          "top": -28,
+          "width": 56,
+        },
+        null,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 324.8528137423857,
+            },
+            Object {
+              "translateY": 324.8528137423857,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 529.7056274847714,
+          "width": 480,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`CirclePicker components render touch disabled 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+      },
+      null,
+    ]
+  }
+>
+  <Svg
+    height={441.7056274847714}
+    preserveAspectRatio="xMidYMid meet"
+    viewBox="0 0 480 441.7056274847714"
+    width={480}
+  >
+    <Defs>
+      <LinearGradient
+        id="linear"
+        x1="0%"
+        x2="100%"
+        y1="0%"
+        y2="0%"
+      >
+        <Stop
+          key="0"
+          offset="0%"
+          stopColor="#FEECAB"
+          stopOpacity={1}
+        />
+        <Stop
+          key="1"
+          offset="100%"
+          stopColor="#C0E8FF"
+          stopOpacity={1}
+        />
+      </LinearGradient>
+    </Defs>
+    <Path
+      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+      fill="url(#linear)"
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+        },
+        Object {
+          "borderRadius": 28,
+          "height": 56,
+          "left": -28,
+          "opacity": 0.2,
+          "top": -28,
+          "width": 56,
+        },
+        null,
+        Object {
+          "transform": Array [
+            Object {
+              "translateX": 387.07821048680194,
+            },
+            Object {
+              "translateY": 387.0782104868018,
+            },
+          ],
+        },
+      ]
+    }
+  />
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 441.7056274847714,
+          "width": 480,
+        },
+      ]
+    }
+  />
+</View>
+`;

@@ -1,0 +1,25 @@
+# This is a comment.
+# Each line is a file pattern followed by one or more owners.
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @youngjuning will be requested for review when someone opens a pull request.
+*       @youngjuning @ShinyLeee
+
+# In this example, @doctocat owns any files in the build/logs
+# directory at the root of the repository and any of its
+# subdirectories.
+
+# youngjuning@洛竹、Saber2pr@睦海、ZengBeauty@多肉、Oliverzzq@钟离、XiaooSe@萧瑟、paruki-gin@金晓、zegezs@浮丘
+# qinglizhang@清离、yuanlllshuai@袁帅、shashabetter@紫菱、tongjinfeng@洛霖
+/packages/tuya-panel-api/ @youngjuning @Saber2pr
+/packages/tuya-panel-animation-sdk/ @ZengBeauty
+/packages/tuya-panel-electrician-sdk/ @shashabetter
+/packages/tuya-panel-gateway-sdk/ @Oliverzzq
+/packages/tuya-panel-ipc-sdk/ @XiaooSe
+/packages/tuya-panel-lamp-sdk/ @paruki-gin
+/packages/tuya-panel-lock-sdk/ @zegezs
+/packages/tuya-panel-outdoor-sdk/ @qinglizhang
+/packages/tuya-panel-protocols/ @ZengBeauty
+/packages/tuya-panel-remote-sdk/ @yuanlllshuai
+/packages/tuya-panel-robot-sdk/ @tongjinfeng

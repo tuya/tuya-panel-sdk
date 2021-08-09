@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShadowCircleProgress components basic render 1`] = `
+<ImageBackground
+  source={
+    Object {
+      "uri": "https://images.tuyacn.com/rms-static/1bafedb0-d98e-11eb-815d-e39234ce96ff-1625048993803.png?tyName=progress-y%403x.png",
+    }
+  }
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "flex-start",
+        "position": "relative",
+      },
+      Object {
+        "height": 412,
+        "width": 412,
+      },
+    ]
+  }
+>
+  <Progress
+    andDegree={360}
+    backColor="#fff"
+    backStrokeOpacity={1}
+    disabled={true}
+    endColor={null}
+    foreColor={
+      Object {
+        "0%": "rgba(251, 115, 25, 0.1)",
+        "100%": "rgba(251, 115, 25, 1)",
+        "50%": "rgba(251, 115, 25, 0.5)",
+      }
+    }
+    foreStrokeOpacity={1}
+    gradientId="Progress"
+    max={100}
+    min={0}
+    needMaxCircle={true}
+    needMinCircle={false}
+    onSlidingComplete={[Function]}
+    onValueChange={[Function]}
+    pointerEvents="box-only"
+    renderCenterView={
+      <ImageBackground
+        source={
+          Object {
+            "uri": "https://images.tuyacn.com/rms-static/1bab0bb0-d98e-11eb-bb1c-dd1a7461f245-1625048993771.png?tyName=progress-yy%403x.png",
+          }
+        }
+        style={
+          Array [
+            Object {
+              "left": "50%",
+              "position": "absolute",
+              "top": "50%",
+            },
+            Object {
+              "marginLeft": -145,
+              "marginTop": -131,
+            },
+            Object {
+              "alignItems": "center",
+              "height": 290,
+              "justifyContent": "flex-start",
+              "width": 290,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "borderRadius": 131,
+                "height": 262,
+                "width": 262,
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+              Object {
+                "backgroundColor": "#FFF",
+              },
+            ]
+          }
+        >
+          <TYText
+            align={null}
+            color="#000"
+            size={72}
+            type={null}
+            weight={null}
+          >
+            1111
+          </TYText>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "rgba(0, 0, 0, 0.4)",
+                "fontSize": 28,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            steps
+          </TYText>
+        </View>
+      </ImageBackground>
+    }
+    scaleHeight={50}
+    startColor={null}
+    startDegree={270}
+    stepValue={0}
+    style={
+      Object {
+        "height": 412,
+        "marginTop": -30,
+        "width": 412,
+      }
+    }
+    thumbFill="#fff"
+    thumbRadius={0}
+    thumbStroke="#fff"
+    thumbStrokeWidth={2}
+    value={0}
+    x1="50%"
+    x2="50%"
+    y1="0%"
+    y2="100%"
+  />
+</ImageBackground>
+`;

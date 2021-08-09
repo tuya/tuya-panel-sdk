@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.1.1...@tuya/tuya-panel-lamp-sdk@1.2.0) (2021-08-06)
+
+
+### Features
+
+* **lamp:** add list, preview and white picker ([#61](https://github.com/tuya/tuya-panel-sdk/issues/61)) ([fbb362a](https://github.com/tuya/tuya-panel-sdk/commit/fbb362aba5c2204ca055d488e09e18035c0b2fc1))
+
+
+
+
+
 ## [1.1.1](https://registry.code.tuya-inc.top/TuyaRN/panel-rn-sdk/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.1.0...@tuya/tuya-panel-lamp-sdk@1.1.1) (2021-04-14)
 
 **Note:** Version bump only for package @tuya/tuya-panel-lamp-sdk

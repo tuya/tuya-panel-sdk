@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable react/no-array-index-key */
 import React, { Component } from 'react';
 import {
@@ -11,6 +12,7 @@ import {
 import _ from 'lodash';
 import { Svg, Rect, Defs, LinearGradient, Stop } from 'react-native-svg';
 import Thumb from './Thumb';
+import Res from '../../../res';
 
 export interface Point {
   x: number;
@@ -52,7 +54,7 @@ export const defaultProps = {
   lossShow: false, // 数据未在设备生效处理，若为true，则loassColor 启效，并thumb及亮度调节会变成指定颜色
   lossColor: 'rgba(0,0,0,0.2)',
   // eslint-disable-next-line import/no-unresolved
-  thumbImg: require('./res/thumb-mask.png'),
+  thumbImg: Res.thumbMask,
   onGrant(v: any) {},
   onMove(v: any) {},
   onRelease(v: any) {},
@@ -93,6 +95,7 @@ export default class RectPicker extends Component<IProps, IState> {
     });
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: IProps) {
     if (!_.isEqual(nextProps.value, this.props.value)) {
       this.setState({ value: nextProps.value });

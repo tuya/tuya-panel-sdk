@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LampLightPreview components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 640,
+        "justifyContent": "flex-start",
+        "width": 640,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 640,
+          "width": 640,
+        }
+      }
+    />
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 286,
+            "position": "absolute",
+            "width": 420,
+          },
+          Object {
+            "bottom": 0,
+            "left": 110,
+            "tintColor": "rgba(255, 162, 71, 0.9)",
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
