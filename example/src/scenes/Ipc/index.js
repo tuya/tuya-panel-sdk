@@ -14,6 +14,8 @@ import IpcTempHumi from './IpcTempHumi';
 import IpcProgressBar from './IpcProgressBar';
 import IpcTimerInterval from './IpcTimerInterval';
 import IpcPtz from './IpcPtz';
+import IpcMessagePlayer from './IpcMessagePlayer';
+import IpcGpsSignal from './IpcGpsSignal';
 
 export default class AnimatedScene extends Component {
   get data() {
@@ -32,6 +34,8 @@ export default class AnimatedScene extends Component {
   static IpcProgressBar = IpcProgressBar;
   static IpcTimerInterval = IpcTimerInterval;
   static IpcPtz = IpcPtz;
+  static IpcMessagePlayer = IpcMessagePlayer;
+  static IpcGpsSignal = IpcGpsSignal;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;

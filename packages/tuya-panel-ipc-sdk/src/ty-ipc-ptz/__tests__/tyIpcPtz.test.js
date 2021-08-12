@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import TYIpcPtz from '../index';
 
-describe('TYIpcHumidity components', () => {
+describe('TYIpcPtz components', () => {
   it('basic render', () => {
     const wrapper = shallow(
       <TYIpcPtz
