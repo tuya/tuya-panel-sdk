@@ -1,0 +1,155 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progess components basic render 1`] = `
+<View
+  style={
+    Object {
+      "height": 100,
+      "width": 100,
+    }
+  }
+>
+  <Svg
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "height": "100%",
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+    viewBox="0 0 100 100"
+  >
+    <Path
+      d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+      fillOpacity="0"
+      stroke="#EEF8FF"
+      strokeLinecap="round"
+      strokeWidth={8}
+    />
+    <Path
+      d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+      fillOpacity="0"
+      stroke="#56C0FF"
+      strokeDasharray={
+        Array [
+          289.02652413026095,
+          289.02652413026095,
+        ]
+      }
+      strokeDashoffset={254.34334123462963}
+      strokeLinecap="round"
+      strokeWidth={8}
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Object {
+          "fontSize": 28,
+          "fontWeight": "bold",
+        }
+      }
+      type={null}
+      weight={null}
+    >
+      12
+      %
+    </TYText>
+  </View>
+</View>
+`;
+
+exports[`Progess components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "height": 60,
+      "width": 60,
+    }
+  }
+>
+  <Svg
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "height": "100%",
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+    viewBox="0 0 100 100"
+  >
+    <Path
+      d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+      fillOpacity="0"
+      stroke="#EEF8FF"
+      strokeLinecap="round"
+      strokeWidth={8}
+    />
+    <Path
+      d="M 50,50 m 0,-46 a 46,46 0 1 1 0,92 a 46,46 0 1 1 0,-92"
+      fillOpacity="0"
+      stroke="#56C0FF"
+      strokeDasharray={
+        Array [
+          289.02652413026095,
+          289.02652413026095,
+        ]
+      }
+      strokeDashoffset={254.34334123462963}
+      strokeLinecap="round"
+      strokeWidth={8}
+    />
+  </Svg>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Object {
+          "fontSize": 28,
+          "fontWeight": "bold",
+        }
+      }
+      type={null}
+      weight={null}
+    >
+      12
+      %
+    </TYText>
+  </View>
+</View>
+`;
