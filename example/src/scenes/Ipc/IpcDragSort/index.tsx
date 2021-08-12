@@ -6,7 +6,7 @@ import { TYIpcDragSort } from '@tuya/tuya-panel-ipc-sdk';
 
 const itemHeight = 60;
 
-const IpcDragSort: React.FC = () => {
+const IpcDragSort: React.FunctionComponent = () => {
   const arr = [];
   for (let i = 1; i < 20; i++) {
     arr.push({
