@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ImageBackground } from 'react-native';
 import { Progress, TYText, Utils } from 'tuya-panel-kit';
-import Res from './res';
 
 const { convertX: cx } = Utils.RatioUtils;
 const { color } = Utils.ColorUtils;
@@ -51,6 +50,14 @@ interface IProps {
    * 滑动结束回调
    */
   onSlidingComplete: () => void;
+  /**
+   * 小阴影图片
+   */
+  progressY: string;
+  /**
+   * 大阴影图片
+   */
+  progressYY: string;
 }
 const CircleProgress = ({
   themeColor = '#FB7319',
@@ -64,6 +71,8 @@ const CircleProgress = ({
   disabled = true,
   onValueChange,
   onSlidingComplete,
+  progressY = '',
+  progressYY = '',
 }: IProps) => {
   const renderCenterView = () => {
     const width = cx(circleWidth - scaleHeight * 3);
@@ -78,7 +87,7 @@ const CircleProgress = ({
     };
     return (
       <ImageBackground
-        source={{ uri: Res.progressY }}
+        source={{ uri: progressY }}
         style={[
           styles.content,
           styleContent,
@@ -101,7 +110,7 @@ const CircleProgress = ({
   };
   return (
     <ImageBackground
-      source={{ uri: Res.progressYY }}
+      source={{ uri: progressYY }}
       style={[styles.container, { width: cx(circleWidth), height: cx(circleWidth) }]}
     >
       <Progress
