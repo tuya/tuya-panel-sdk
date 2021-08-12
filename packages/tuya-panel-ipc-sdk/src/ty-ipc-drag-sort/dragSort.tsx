@@ -15,9 +15,7 @@ import Res from './res';
 import styles from './style';
 import { TYIpcDragSortProps, orderItemInterface } from './interface';
 
-const DragSort: React.FC<TYIpcDragSortProps> & {
-  defaultProps: Partial<TYIpcDragSortProps>;
-} = (props: TYIpcDragSortProps) => {
+const DragSort: React.FunctionComponent<TYIpcDragSortProps> = props => {
   const { data: dataSource, touchPosition, itemHeight } = props;
 
   const [onPanResponderMoveTime, setOnPanResponderMoveTime] = useState(0);
