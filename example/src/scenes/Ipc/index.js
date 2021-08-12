@@ -14,6 +14,7 @@ import IpcTempHumi from './IpcTempHumi';
 import IpcProgressBar from './IpcProgressBar';
 import IpcTimerInterval from './IpcTimerInterval';
 import IpcPtz from './IpcPtz';
+import IpcDragSort from './IpcDragSort';
 
 export default class AnimatedScene extends Component {
   get data() {
@@ -32,6 +33,7 @@ export default class AnimatedScene extends Component {
   static IpcProgressBar = IpcProgressBar;
   static IpcTimerInterval = IpcTimerInterval;
   static IpcPtz = IpcPtz;
+  static IpcDragSort = IpcDragSort;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
