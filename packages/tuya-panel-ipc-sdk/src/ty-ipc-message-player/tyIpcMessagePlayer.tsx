@@ -23,7 +23,7 @@ const MediaPlayer = isIOS
   ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
   : requireNativeComponent('TYRCTCameraMessageMediaPlayerManager');
 
-const TYIpcMessagePlayer: React.FC<TYIpcMessagePlayerProps> & {
+const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
   defaultProps: Partial<TYIpcMessagePlayerProps>;
 } = (props: TYIpcMessagePlayerProps) => {
   const [mediaPlayer, setMediaPlayer] = useState(false);

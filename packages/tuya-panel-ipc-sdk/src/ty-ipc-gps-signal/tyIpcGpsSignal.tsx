@@ -10,7 +10,7 @@ import { TYIpcGpsSignalProps } from './interface';
 const gpsIcon = ['gpsSignalNone', 'gpsSignalWeak', 'gpsSignalMiddle', 'gpsSignalStrong'];
 const lteIcon = ['lteSignalNone', 'lteSignalWeak', 'lteSignalMiddle', 'lteSignalStrong'];
 
-const TYIpcGpsSignal: React.FC<TYIpcGpsSignalProps> & {
+const TYIpcGpsSignal: React.FunctionComponent<TYIpcGpsSignalProps> & {
   defaultProps: Partial<TYIpcGpsSignalProps>;
 } = (props: TYIpcGpsSignalProps) => {
   const [gpsLevel, setGpsLevel] = useState(0);
