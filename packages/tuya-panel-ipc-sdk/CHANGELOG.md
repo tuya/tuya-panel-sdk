@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.5.1...@tuya/tuya-panel-ipc-sdk@1.6.0) (2021-08-12)
+
+
+### Features
+
+* add TYIpcDragSort component ([#69](https://github.com/tuya/tuya-panel-sdk/issues/69)) ([046e403](https://github.com/tuya/tuya-panel-sdk/commit/046e4035b10e9dabfbb10f77caca3309d62bb8bd))
+
+
+
+
+
 ## [1.5.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.5.0...@tuya/tuya-panel-ipc-sdk@1.5.1) (2021-07-27)
 
 
