@@ -1,4 +1,4 @@
-import React, { ReactNode, Component, SFC, useMemo } from 'react';
+import React, { ReactNode, Component } from 'react';
 import { View, StyleSheet, ViewStyle, StyleProp } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 
@@ -14,7 +14,7 @@ export interface BarListProps<T> {
   style?: StyleProp<ViewStyle>;
 }
 
-export const Item: SFC<ItemProps> = (props: ItemProps) => {
+export const Item = (props: ItemProps) => {
   const { flexPercent = 1, backgroundColor = '#BF73DE' } = props;
   return <View style={[styles.item, { backgroundColor, flex: flexPercent }]} />;
 };

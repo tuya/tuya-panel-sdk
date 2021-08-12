@@ -1,4 +1,4 @@
-import React, { SFC, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { ViewStyle, StyleProp } from 'react-native';
 import { BarList } from './BarList';
 
@@ -39,7 +39,7 @@ export interface BarPercentProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const BarPercent: SFC<BarPercentProps> = (props: BarPercentProps) => {
+const BarPercent = (props: BarPercentProps) => {
   const { data, style } = props;
   const total = useMemo(() => sum(data.map(d => +d.value)) as number, [JSON.stringify(data)]);
   const { length } = data;
