@@ -5,7 +5,7 @@ import Home from '../scenes/Home';
 // import StandardCategory from '../scenes/Standard';
 // import SensorCategory from '../scenes/Sensor';
 import SweepRobotCategory from '../scenes/SweepRobot';
-// import Health from '../scenes/Health';
+import Health from '../scenes/Health';
 import LockCategory from '../scenes/Lock';
 import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
@@ -25,7 +25,7 @@ import ApiSceneInfo from '../../../packages/tuya-panel-api/package.json';
 // import StandardInfo from '../../../packages/tuya-panel-standard-sdk/package.json';
 // // import OSInfo from '../../../packages/tuya-panel-os-sdk/package.json';
 // import SensorInfo from '../../../packages/tuya-panel-sensor-sdk/package.json';
-// import HealthInfo from '../../../packages/tuya-panel-health-sdk/package.json';
+import HealthInfo from '../../../packages/tuya-panel-health-sdk/package.json';
 // import FullRoomInfo from '../../../packages/tuya-panel-fullroom-sdk/package.json';
 import GatewayInfo from '../../../packages/tuya-panel-gateway-sdk/package.json';
 // import CbtInfo from '../../../packages/tuya-panel-cbt-sdk/package.json';
@@ -95,12 +95,12 @@ export const elementsRouters = _.sortBy(
     //   value: '前往配置主题变量',
     //   Scene: ThemeSetting,
     // },
-    // {
-    //   id: 'Health',
-    //   title: HealthInfo.name,
-    //   subTitle: HealthInfo.version,
-    //   Scene: Health,
-    // },
+    {
+      id: 'Health',
+      title: HealthInfo.name,
+      subTitle: HealthInfo.version,
+      Scene: Health,
+    },
     // {
     //   id: 'FullRoom',
     //   title: FullRoomInfo.name,

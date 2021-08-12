@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UnLockButton UnLockButton Component should be render 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.9}
+    delayLongPress={1000}
+    onLongPress={[Function]}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "borderRadius": 45,
+          "height": 90,
+          "justifyContent": "center",
+          "width": 90,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 4,
+          "height": 22,
+          "position": "absolute",
+          "width": 22,
+        }
+      }
+    />
+    <ForwardRef(AnimatedCircleProgess)
+      color="#fff"
+      duration={1000}
+      size={100}
+    />
+  </TouchableOpacity>
+</View>
+`;
