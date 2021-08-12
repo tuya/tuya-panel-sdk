@@ -11,3 +11,4 @@ export { default as TYIpcTempHumi } from './ty-ipc-temp-humi';
 export { default as TYIpcProgressBar } from './ty-ipc-progress-bar';
 export { default as TYIpcTimeInterval } from './ty-ipc-timer-interval';
 export { default as TYIpcPtz } from './ty-ipc-ptz';
+export { default as TYIpcDragSort } from './ty-ipc-drag-sort';
