@@ -67,7 +67,10 @@ const AddDeviceTip: FC<AddDeviceTipProps> = ({
     return (
       <TouchableOpacity activeOpacity={1}>
         <View style={[styles.rowLine, styles.item]}>
-          <Image style={styles.itemImg} source={{ uri: item.icon }} />
+          <Image
+            style={styles.itemImg}
+            source={typeof item.icon === 'string' ? { uri: item.icon } : item.icon}
+          />
           <View style={styles.itemContent}>
             <TYText style={styles.itemDesc} numberOfLines={itemNumberOfLines}>
               <TYText text={`${item.name} `} style={styles.itemTitle} />
