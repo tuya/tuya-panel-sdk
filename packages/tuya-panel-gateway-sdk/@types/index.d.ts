@@ -1,5 +1,11 @@
 import { FC } from 'react';
-import { StyleProp, ViewStyle, ImageStyle, StatusBarStyle } from 'react-native';
+import {
+  StyleProp,
+  ViewStyle,
+  ImageStyle,
+  StatusBarStyle,
+  ImageSourcePropType,
+} from 'react-native';
 
 // TipItem
 export interface TipItem {
@@ -13,7 +19,7 @@ export interface TipItem {
    * @description image
    * @defaultValue
    */
-  icon: string;
+  icon: string | ImageSourcePropType;
   /**
    * @language zh-CN
    * @description 设备名称

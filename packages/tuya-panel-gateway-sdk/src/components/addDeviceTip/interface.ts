@@ -1,7 +1,7 @@
-import { ViewStyle, StyleProp, TextStyle } from 'react-native';
+import { ViewStyle, StyleProp, TextStyle, ImageSourcePropType } from 'react-native';
 
 interface TipItem {
-  icon: string;
+  icon: string | ImageSourcePropType;
   name: string;
   content: string;
 }

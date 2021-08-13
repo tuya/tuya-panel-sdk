@@ -2,20 +2,22 @@ import React from 'react';
 import { Divider, TYSdk } from 'tuya-panel-kit';
 import { shallow } from 'enzyme';
 import { AddDeviceTip, AddDeviceTipModal } from '../index';
+import Res from '../../../res';
+
 const dataSource = [
   {
     name: 'Sensor',
-    icon: 'https://images.tuyacn.com/smart/program_category_icon/zig_afcg.png',
+    icon: Res.iconSensor,
     content: 'Power on, then hold the RESET button for 5 sec',
   },
   {
     name: 'Socket',
-    icon: 'https://images.tuyacn.com/smart/product_icon2/cz_1.png',
+    icon: Res.iconSocket,
     content: 'Power on, then hold the RESET button for 5 sec秒',
   },
   {
     name: 'Light Source',
-    icon: 'https://images.tuyacn.com/smart/product_icon2/dj_1.png',
+    icon: Res.iconLight,
     content: 'Power On, then Turn OFF-ON-OFF-ON',
   },
 ];
