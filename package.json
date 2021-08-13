@@ -23,7 +23,7 @@
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
-    "eslint-config-tuya-panel": "^0.2.4",
+    "eslint-config-tuya-panel": "^0.2.6",
     "eslint-plugin-literal-check": "^0.1.2",
     "husky": "^4.3.0",
     "jest": "24.9.0",
@@ -58,6 +58,8 @@
     "test:lamp": "cd packages/tuya-panel-lamp-sdk && yarn test",
     "test:gateway": "cd packages/tuya-panel-gateway-sdk && yarn test",
     "test:remote": "cd packages/tuya-panel-remote-sdk && yarn test",
+    "test:health": "cd packages/tuya-panel-health-sdk && yarn test",
+    "test:outdoor": "cd packages/tuya-panel-outdoor-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "dev": "lerna run dev --parallel",
@@ -69,7 +71,9 @@
     "build:api": "lerna run build --scope @tuya/tuya-panel-api",
     "build:lamp": "lerna run build --scope @tuya/tuya-panel-lamp-sdk",
     "build:gateway": "lerna run build --scope @tuya/tuya-panel-gateway-sdk",
-    "build:remote": "lerna run build --scope @tuya/tuya-panel-remote-sdk"
+    "build:remote": "lerna run build --scope @tuya/tuya-panel-remote-sdk",
+    "build:health": "lerna run build --scope @tuya/tuya-panel-health-sdk",
+    "build:outdoor": "lerna run build --scope @tuya/tuya-panel-outdoor-sdk"
   },
   "config": {
     "commitizen": {
