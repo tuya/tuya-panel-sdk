@@ -79,17 +79,17 @@ exports[`AddDeviceTip components basic render 1`] = `
         Array [
           Object {
             "content": "Power on, then hold the RESET button for 5 sec",
-            "icon": "https://images.tuyacn.com/smart/program_category_icon/zig_afcg.png",
+            "icon": 1,
             "name": "Sensor",
           },
           Object {
             "content": "Power on, then hold the RESET button for 5 sec秒",
-            "icon": "https://images.tuyacn.com/smart/product_icon2/cz_1.png",
+            "icon": 1,
             "name": "Socket",
           },
           Object {
             "content": "Power On, then Turn OFF-ON-OFF-ON",
-            "icon": "https://images.tuyacn.com/smart/product_icon2/dj_1.png",
+            "icon": 1,
             "name": "Light Source",
           },
         ]
