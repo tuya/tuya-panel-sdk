@@ -3,22 +3,23 @@ import { StyleSheet, View, ScrollView } from 'react-native';
 import { Button, TYText } from 'tuya-panel-kit';
 import { AddDeviceTipModal } from '@tuya/tuya-panel-gateway-sdk';
 import Strings from './i18n';
+import Res from './res';
 
 const AddDeviceTipScene: FC = () => {
   const dataSource = [
     {
       name: Strings.getLang('tipName1'),
-      icon: 'https://images.tuyacn.com/smart/program_category_icon/zig_afcg.png',
+      icon: Res.iconSensor,
       content: Strings.getLang('tipContent1'),
     },
     {
       name: Strings.getLang('tipName2'),
-      icon: 'https://images.tuyacn.com/smart/product_icon2/cz_1.png',
+      icon: Res.iconSocket,
       content: Strings.getLang('tipContent2'),
     },
     {
       name: Strings.getLang('tipName3'),
-      icon: 'https://images.tuyacn.com/smart/product_icon2/dj_1.png',
+      icon: Res.iconLight,
       content: Strings.getLang('tipContent3'),
     },
   ];
