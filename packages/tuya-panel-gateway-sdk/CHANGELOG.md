@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.2.1...@tuya/tuya-panel-gateway-sdk@1.2.2) (2021-08-13)
+
+
+### Bug Fixes
+
+* unit test and example use local images instead of network images with "tuyacn" ([#74](https://github.com/tuya/tuya-panel-sdk/issues/74)) ([3dcd602](https://github.com/tuya/tuya-panel-sdk/commit/3dcd60275b375719fc5905b2dd6b26111cf8f57d))
+
+
+
+
+
 ## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.2.0...@tuya/tuya-panel-gateway-sdk@1.2.1) (2021-07-16)
 
 
