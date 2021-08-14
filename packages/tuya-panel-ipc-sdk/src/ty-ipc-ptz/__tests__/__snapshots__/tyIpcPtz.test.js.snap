@@ -1,0 +1,476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcHumidity components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 50,
+          "height": 100,
+          "overflow": "hidden",
+          "width": 100,
+        },
+        Object {
+          "position": "absolute",
+          "top": 50,
+        },
+      ]
+    }
+  >
+    <ImageBackground
+      source={1}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          },
+          Object {
+            "height": 100,
+            "transform": Array [
+              Object {
+                "rotate": "45deg",
+              },
+            ],
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="up"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="right"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="left"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="down"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 50,
+              "width": 50,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+    </ImageBackground>
+  </View>
+</View>
+`;
+
+exports[`TYIpcHumidity components color render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "overflow": "hidden",
+          "width": 200,
+        },
+        Object {},
+      ]
+    }
+  >
+    <ImageBackground
+      source={1}
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+            "flexWrap": "wrap",
+          },
+          Object {
+            "height": 200,
+            "transform": Array [
+              Object {
+                "rotate": "45deg",
+              },
+            ],
+            "width": 200,
+          },
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="up"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="right"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="left"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.7}
+        disabled={false}
+        key="down"
+        onPressIn={[Function]}
+        onPressOut={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            Object {
+              "backgroundColor": "transparent",
+              "height": 100,
+              "width": 100,
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 10,
+              "left": "50%",
+              "marginLeft": -5,
+              "marginTop": -5,
+              "position": "absolute",
+              "top": "50%",
+              "width": 10,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Array [
+                Object {
+                  "height": 10,
+                  "tintColor": "#fc2f07",
+                  "width": 10,
+                },
+                Object {},
+              ]
+            }
+          />
+        </View>
+      </TouchableOpacity>
+    </ImageBackground>
+  </View>
+</View>
+`;
