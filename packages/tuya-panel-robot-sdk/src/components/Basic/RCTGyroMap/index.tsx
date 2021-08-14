@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { requireNativeComponent, NativeModules } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
+import PropTypes from 'prop-types';
 
 const TYRCTPointMap = requireNativeComponent('TYRCTPointMap');
 export const TYRCTGyroMapManager = NativeModules.TYRCTTransferManager;
@@ -36,9 +37,9 @@ interface IProps {
   /** 中心点缩放比例 */
   scale?: IMap;
   /** 当前点图标url */
-  markerIcon?: string;
+  markerIcon: string;
   /** 充电桩图标url */
-  pileIcon?: string;
+  pileIcon: string;
   /** 充电桩坐标 */
   pilePosition?: { x?: number; y?: number };
   /** 背景颜色 */
@@ -61,11 +62,21 @@ interface IProps {
  * 原生陀螺仪扫地机地图，Plain封装
  */
 export default class RCTGyroMap extends Component<IProps> {
+  /**
+   * PropTypes Validation
+   */
+  static propTypes = {
+    pileIcon: PropTypes.string.isRequired,
+    markerIcon: PropTypes.string.isRequired,
+  };
+
   static defaultProps = {
     width: viewWidth,
     height: viewHeight,
-    pileIcon: 'https://images.tuyacn.com/app/android/dot-bak@2x.png',
-    markerIcon: 'https://images.tuyacn.com/misc/marker1.png',
+    // 不设置兜底图片，请务必传入对应的Uri地址
+    // 数据格式为远程资源路径地址 eg: https://domain/images/xxx.png
+    pileIcon: '',
+    markerIcon: '',
     radius: 1,
     clearData: false,
     pointType: 'square',
