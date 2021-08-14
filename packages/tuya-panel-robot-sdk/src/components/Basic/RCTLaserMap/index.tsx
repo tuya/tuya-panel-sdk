@@ -141,9 +141,11 @@ export default class RCTLaserMap extends PureComponent<IRCTLaserMapProps, IRCTLa
     virtualAreaColor: hexAlpha('#F53D23', 0.5),
     virtualWallColor: hexAlpha('#F5A623'),
 
-    appointIcon: 'https://images.tuyacn.com/smart/Group6@2x.png',
-    markerIcon: 'https://images.tuyacn.com/app/android/dian.png',
-    pileIcon: 'https://images.tuyacn.com/smart/chongdian2x.png',
+    // 不设置兜底图片，请务必传入对应的Uri地址
+    // 数据格式为远程资源路径地址 eg: https://domain/images/xxx.png
+    appointIcon: '',
+    markerIcon: '',
+    pileIcon: '',
     edit: false,
 
     minAreaWidth: 20,

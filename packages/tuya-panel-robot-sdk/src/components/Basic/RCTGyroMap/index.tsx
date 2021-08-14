@@ -64,8 +64,10 @@ export default class RCTGyroMap extends Component<IProps> {
   static defaultProps = {
     width: viewWidth,
     height: viewHeight,
-    pileIcon: 'https://images.tuyacn.com/app/android/dot-bak@2x.png',
-    markerIcon: 'https://images.tuyacn.com/misc/marker1.png',
+    // 不设置兜底图片，请务必传入对应的Uri地址
+    // 数据格式为远程资源路径地址 eg: https://domain/images/xxx.png
+    pileIcon: '',
+    markerIcon: '',
     radius: 1,
     clearData: false,
     pointType: 'square',
