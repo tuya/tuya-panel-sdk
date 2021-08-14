@@ -10,15 +10,11 @@ import {
 
 class SocketProps {
   socketWrapperStyle: StyleProp<ViewStyle>;
-  socketBackgroundImage: string | number =
-    'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png';
-
   socketBackgroundImageSize: { [key: string]: number } = { width: 240, height: 240 };
-  socketImage: string | number =
-    'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png';
-
   socketImageSize: { [key: string]: number } = { width: 140, height: 140 };
   socketImageTintColor: string;
+  socketBackgroundImage: string;
+  socketImage: string;
   onPress: () => void;
 }
 

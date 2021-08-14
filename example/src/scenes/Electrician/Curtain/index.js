@@ -36,6 +36,8 @@ class CurtainBase extends PureComponent {
           curtainType={this.state.curtainType}
           control={this.state.control}
           value={this.state.value}
+          // 真实项目中请勿写死
+          staticPrefix="https://images.tuyacn.com"
         />
         <View style={{ flexDirection: 'row' }}>
           {['open', 'stop', 'close'].map(st => (
