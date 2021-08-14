@@ -22,14 +22,14 @@ exports[`RCTLaserMap components renders correctly 1`] = `
 >
   <_class
     appointData={Array []}
-    appointIcon="https://images.tuyacn.com/smart/Group6@2x.png"
+    appointIcon=""
     currentPos={Object {}}
     edit={false}
     factorInfo={Object {}}
     hasTypeMap={false}
     height={100}
     isRotate={false}
-    markerIcon="https://images.tuyacn.com/app/android/dian.png"
+    markerIcon=""
     maxZoomScale={4}
     minAreaWidth={20}
     minZoomScale={1}
@@ -41,7 +41,7 @@ exports[`RCTLaserMap components renders correctly 1`] = `
     pathColor="#ffffff"
     pathData=""
     pathWidth={0.8}
-    pileIcon="https://images.tuyacn.com/smart/chongdian2x.png"
+    pileIcon="/smart/chongdian2x.png"
     pilePosition={Object {}}
     planPathColor="#FFD700"
     planPathData=""
