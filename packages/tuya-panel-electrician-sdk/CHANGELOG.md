@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-electrician-sdk@1.2.7...@tuya/tuya-panel-electrician-sdk@1.3.0) (2021-08-14)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([d78a174](https://github.com/tuya/tuya-panel-sdk/commit/d78a1749966e7e7348fcc8614a7c15ff4954e76f))
+
+
+
+
+
 ## [1.2.7](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-electrician-sdk@1.2.6...@tuya/tuya-panel-electrician-sdk@1.2.7) (2021-08-04)
 
 **Note:** Version bump only for package @tuya/tuya-panel-electrician-sdk
