@@ -2,6 +2,8 @@
 import React, { Component } from 'react';
 import _get from 'lodash/get';
 import { View, Animated, StyleSheet, Image, Easing, StyleProp } from 'react-native';
+import { TYSdk } from 'tuya-panel-kit';
+
 import {
   getOptionsByType,
   getCurtainGestureByType,
@@ -39,6 +41,7 @@ export default class CurtainGesture extends Component<IProps, IState> {
     this.state.curtainCeilAnimate.addListener(({ value }) => {
       this.statusDisplayRef && this.statusDisplayRef.setAccVal(value);
     });
+    this.getOssUrl();
   }
 
   onValueChangeFromProps = value => {
@@ -96,8 +99,9 @@ export default class CurtainGesture extends Component<IProps, IState> {
   }
 
   get options() {
-    const { curtainType, styleType, min, max } = this.props;
-    return getOptionsByType(curtainType, styleType, { min, max });
+    const { curtainType, styleType, min, max, staticPrefix } = this.props;
+
+    return getOptionsByType(curtainType, styleType, { min, max, staticPrefix });
   }
 
   getValueDiffToAbsPercent = (val, diff): number => Math.abs(val - diff) / 100;

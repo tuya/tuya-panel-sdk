@@ -20,7 +20,5 @@ exports[`LocationText components basic render 1`] = `
   }
   type={null}
   weight={null}
->
-  Unknown Location
-</TYText>
+/>
 `;
