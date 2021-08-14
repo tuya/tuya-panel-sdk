@@ -2,7 +2,6 @@
 import React, { Component } from 'react';
 import _get from 'lodash/get';
 import { View, Animated, StyleSheet, Image, Easing, StyleProp } from 'react-native';
-import { TYSdk } from 'tuya-panel-kit';
 
 import {
   getOptionsByType,
@@ -41,7 +40,6 @@ export default class CurtainGesture extends Component<IProps, IState> {
     this.state.curtainCeilAnimate.addListener(({ value }) => {
       this.statusDisplayRef && this.statusDisplayRef.setAccVal(value);
     });
-    this.getOssUrl();
   }
 
   onValueChangeFromProps = value => {
