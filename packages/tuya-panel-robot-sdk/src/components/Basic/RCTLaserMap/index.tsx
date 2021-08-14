@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { requireNativeComponent, NativeModules, View, StyleSheet, StyleProp } from 'react-native';
+import PropTypes from 'prop-types';
 
 function toFixed16(v: string, length = 2) {
   let d = parseInt(v, 10).toString(16);
@@ -49,7 +50,7 @@ export interface IRCTLaserMapProps {
     x: number;
     y: number;
   } /** 当前点位置(即扫地机所在位置: 废弃) */;
-  markerIcon?: string /** 扫地机的图片 (当前点的 marker) */;
+  markerIcon: string /** 扫地机的图片 (当前点的 marker) */;
 
   pilePosition?: {
     x?: number;
@@ -59,9 +60,9 @@ export interface IRCTLaserMapProps {
     borderColor?: number; // 预警圈边框颜色（虚线颜色）
     bgColor?: number; // 预警圈颜色
   } /** 充电桩的坐标 */;
-  pileIcon?: string /** 充电桩图标地址 */;
+  pileIcon: string /** 充电桩图标地址 */;
 
-  appointIcon?: string /** 指哪扫哪 图标url */;
+  appointIcon: string /** 指哪扫哪 图标url */;
   sweepRegionColor?: string /** 区域颜色  */;
   virtualAreaColor?: string /** 禁区颜色 */;
   virtualWallColor?: string /** 虚拟墙颜色 */;
@@ -120,6 +121,15 @@ interface IRCTLaserMapState {
  */
 
 export default class RCTLaserMap extends PureComponent<IRCTLaserMapProps, IRCTLaserMapState> {
+  /**
+   * PropTypes Validation
+   */
+  static propTypes =  {
+    markerIcon: PropTypes.string.isRequired,
+    pileIcon: PropTypes.string.isRequired,
+    appointIcon: PropTypes.string.isRequired,
+  };
+
   static defaultProps = {
     pathData: '',
     planPathData: '',
