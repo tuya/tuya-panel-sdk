@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 import { IGetCustomizePositionResponse } from './interface';
 // 设备接口
 import { TYSdk } from 'tuya-panel-kit';
@@ -5,13 +6,15 @@ import {
   IGetDpsInfos,
   IUpdateDpName,
   IUpdateGroupDpName,
-  IGetWeatherQuality,
+  IGetWeatherQuality_1,
+  IGetWeatherQuality_2,
   IGetWeathers,
   ISaveCustomizePosition,
   IGetCustomizePosition,
   IGetDpsInfosResponse,
   IGetGroupDpsInfosResponse,
-  IGetWeatherQualityResponse,
+  IGetWeatherQualityResponse_1,
+  IGetWeatherQualityResponse_2,
   IGetWeathersResponse,
 } from './interface';
 
@@ -63,8 +66,19 @@ const updateGroupDpName = (params: IUpdateGroupDpName): Promise<boolean> => {
  * @param {boolean} isLocal 要查询的信息
  * @docs https://developer.tuya.com/cn/docs/iot/equipment-related-interface?id=K9m1dlii6zkf7#title-4-%E8%8E%B7%E5%8F%96%E5%BD%93%E5%A4%A9%E5%A4%A9%E6%B0%94
  */
-const getWeatherQuality = (params: IGetWeatherQuality): Promise<IGetWeatherQualityResponse> => {
-  return TYSdk.apiRequest('tuya.m.public.weather.get', { ...params });
+const getWeatherQuality = (params: IGetWeatherQuality_2): Promise<IGetWeatherQualityResponse_2> => {
+  return TYSdk.apiRequest('tuya.m.public.weather.get', { ...params }, '2.0');
+};
+
+/**
+ * 客户端或面板获取天气
+ * @param {string} devId 设备Id
+ * @param {string} codes 示例：["city.id", "city.name", "weather.air.qualityLevel", "weather.air.pm25", "weather.air.quality", "weather.now.temperature", "weather.now.hum", "weather.now.condIconUrl", "weather.now.condTxt"]
+ */
+const getWeatherQuality_1 = (
+  params: IGetWeatherQuality_1
+): Promise<IGetWeatherQualityResponse_1> => {
+  return TYSdk.apiRequest('tuya.m.public.weather.get', { ...params }, '1.0');
 };
 
 /**
@@ -106,6 +120,7 @@ export default {
   getGroupDpsInfos,
   updateGroupDpName,
   getWeatherQuality,
+  getWeatherQuality_1,
   getWeathers,
   saveCustomizePosition,
   getCustomizePosition,
