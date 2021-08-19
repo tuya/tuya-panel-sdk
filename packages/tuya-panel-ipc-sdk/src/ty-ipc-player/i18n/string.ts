@@ -22,6 +22,8 @@ export default {
       'The version is too low, this method is temporarily not supported',
     tyIpc_audio_only: 'AUDIO ONLY',
     tyIpc_audio_stream_getting: 'Audio syncing...',
+    tyIpc_video_channel_pause: 'In pause',
+    tyIpc_video_stream_retry_play: 'Click the play',
   },
   zh: {
     tyIpc_voice_failure: '声音切换失败',
@@ -46,5 +48,7 @@ export default {
     tyIpc_method_not_supported_version: '版本过低,暂不支持此方法',
     tyIpc_audio_only: '音频模式',
     tyIpc_audio_stream_getting: '音频同步中...',
+    tyIpc_video_channel_pause: '播放暂停中',
+    tyIpc_video_stream_retry_play: '点击播放',
   },
 };

@@ -68,8 +68,25 @@ class PlayerManagerFun {
     停止预览
     @param
   */
-  pausePlay = () => {
+  pausePlay = (): Promise<{ success: boolean }> => {
     console.log('停止播放');
+    return new Promise((resolve, reject) => {
+      CameraManager.stopPreview(
+        () => {
+          // 停止预览
+          TYEvent.emit('streamStatus', { status: 8 });
+          resolve({
+            success: true,
+          });
+        },
+        err => {
+          reject({
+            success: false,
+            errMsg: JSON.stringify(err),
+          });
+        }
+      );
+    });
   };
 
   /*
