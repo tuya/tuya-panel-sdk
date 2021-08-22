@@ -9,6 +9,8 @@ module.exports = {
     dp_switch_1: '开关1',
     dp_switch_1_on: '开',
     dp_switch_1_off: '关',
+    am: '上午',
+    pm: '下午',
   },
 
   en: {
@@ -17,5 +19,7 @@ module.exports = {
     Standard: '公版(Standard)',
     SweepRobot: '扫地机(SweepRobot)',
     Sensor: '传感器(Sensor)',
+    am: 'AM',
+    pm: 'PM',
   },
 };
