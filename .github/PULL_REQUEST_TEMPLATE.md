@@ -28,7 +28,7 @@ Please select the relevant option.
 
 ## CheckList
 
-Don't Edit this section
+Don't edit this section
 
 - [ ] ESLint lint
 - [ ] Example Run
