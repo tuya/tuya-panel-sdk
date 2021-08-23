@@ -253,6 +253,7 @@ class PlayerManagerFun {
                 imageSrc: imgSource,
               });
               resolve({
+                imageSrc: imgSource,
                 success: true,
               });
               TYEvent.emit('isRecordingListen', {
@@ -734,6 +735,31 @@ class PlayerManagerFun {
     } catch (err) {
       console.log(err);
     }
+  };
+
+  // ios截图保存到手机相册
+  iosSnapShootToPhoneAlbums = async () => {
+    return new Promise(resolve => {
+      CameraManager.snapShoot(
+        msg => {
+          TYEvent.emit('cutScreenListen', {
+            showCutScreen: true,
+            isVideoCut: false,
+            imageSrc: msg,
+          });
+          resolve({
+            success: true,
+            imageSrc: msg,
+          });
+        },
+        err => {
+          resolve({
+            success: false,
+            errMsg: JSON.stringify(err),
+          });
+        }
+      );
+    });
   };
 }
 

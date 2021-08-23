@@ -48,7 +48,7 @@ export default {
     tyIpc_method_not_supported_version: '版本过低,暂不支持此方法',
     tyIpc_audio_only: '音频模式',
     tyIpc_audio_stream_getting: '音频同步中...',
-    tyIpc_video_channel_pause: '播放暂停中',
-    tyIpc_video_stream_retry_play: '点击播放',
+    tyIpc_video_channel_pause: '播放已暂停',
+    tyIpc_video_stream_retry_play: '点击恢复',
   },
 };
