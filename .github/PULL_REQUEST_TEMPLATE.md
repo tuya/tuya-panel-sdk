@@ -25,3 +25,12 @@ Please select the relevant option.
 - [ ] New feature (non-breaking change which adds functionality)
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
+
+## CheckList
+
+Don't edit this section
+
+- [ ] ESLint lint
+- [ ] Example Run
+- [ ] No Grammer Error
+- [ ] No Spell Error
