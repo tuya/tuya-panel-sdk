@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import { TYFlatList } from 'tuya-panel-kit';
+import { Component } from 'react';
 import { produceRouterDatas } from '../../utils';
 import { subRouters } from '../../config/routers';
 import IpcPirScene from './IpcPir';
@@ -15,6 +14,8 @@ import IpcProgressBar from './IpcProgressBar';
 import IpcTimerInterval from './IpcTimerInterval';
 import IpcPtz from './IpcPtz';
 import IpcDragSort from './IpcDragSort';
+import IpcMessagePlayer from './IpcMessagePlayer';
+import IpcGpsSignal from './IpcGpsSignal';
 
 export default class AnimatedScene extends Component {
   get data() {
@@ -34,6 +35,8 @@ export default class AnimatedScene extends Component {
   static IpcTimerInterval = IpcTimerInterval;
   static IpcPtz = IpcPtz;
   static IpcDragSort = IpcDragSort;
+  static IpcMessagePlayer = IpcMessagePlayer;
+  static IpcGpsSignal = IpcGpsSignal;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
