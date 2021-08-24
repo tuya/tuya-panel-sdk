@@ -12,3 +12,5 @@ export { default as TYIpcProgressBar } from './ty-ipc-progress-bar';
 export { default as TYIpcTimeInterval } from './ty-ipc-timer-interval';
 export { default as TYIpcPtz } from './ty-ipc-ptz';
 export { default as TYIpcDragSort } from './ty-ipc-drag-sort';
+export { default as TYIpcMessagePlayer } from './ty-ipc-message-player';
+export { default as TYIpcGpsSignal } from './ty-ipc-gps-signal';
