@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.6.0...@tuya/tuya-panel-ipc-sdk@1.7.0) (2021-08-24)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([d78a174](https://github.com/tuya/tuya-panel-sdk/commit/d78a1749966e7e7348fcc8614a7c15ff4954e76f))
+
+
+### Features
+
+* **ipc:** add gps signal and message player component ([#76](https://github.com/tuya/tuya-panel-sdk/issues/76)) ([0dedf2b](https://github.com/tuya/tuya-panel-sdk/commit/0dedf2bb1ff326bfac92257331995ad453827d52))
+
+
+
+
+
 # [1.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.5.1...@tuya/tuya-panel-ipc-sdk@1.6.0) (2021-08-12)
 
 
