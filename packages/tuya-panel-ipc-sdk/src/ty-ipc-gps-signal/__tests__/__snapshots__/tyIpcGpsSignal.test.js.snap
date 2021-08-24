@@ -1,0 +1,142 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcGpsSignal components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+        "width": "20%",
+      },
+      Object {
+        "marginLeft": 50,
+      },
+    ]
+  }
+>
+  <View>
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 2,
+            "resizeMode": "contain",
+            "width": 16,
+          },
+          Object {},
+        ]
+      }
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Object {
+        "color": "#ffffff",
+        "fontSize": 28,
+        "marginHorizontal": 10,
+      }
+    }
+    text="/"
+    type={null}
+    weight={null}
+  />
+  <View>
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 2,
+            "resizeMode": "contain",
+            "width": 16,
+          },
+          Object {},
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`TYIpcGpsSignal components gps render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+        "width": "20%",
+      },
+      Object {
+        "marginLeft": 50,
+      },
+    ]
+  }
+>
+  <View>
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 2,
+            "resizeMode": "contain",
+            "width": 16,
+          },
+          Object {},
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`TYIpcGpsSignal components lte render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 24,
+        "flexDirection": "row",
+        "height": 48,
+        "justifyContent": "center",
+        "paddingHorizontal": 30,
+        "width": "20%",
+      },
+      Object {
+        "marginLeft": 50,
+      },
+    ]
+  }
+>
+  <View>
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "marginRight": 2,
+            "resizeMode": "contain",
+            "width": 16,
+          },
+          Object {},
+        ]
+      }
+    />
+  </View>
+</View>
+`;
