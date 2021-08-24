@@ -2,6 +2,7 @@ module.exports = {
   extends: ['tuya-panel'],
   plugins: ['literal-check'],
   rules: {
+    'react/display-name': 1,
     'literal-check/literal-check': [
       2,
       ['tuya.'],

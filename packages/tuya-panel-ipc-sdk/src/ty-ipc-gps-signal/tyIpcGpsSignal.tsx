@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import _ from 'lodash';
 import React, { useEffect, useState } from 'react';
 import { View, Image } from 'react-native';

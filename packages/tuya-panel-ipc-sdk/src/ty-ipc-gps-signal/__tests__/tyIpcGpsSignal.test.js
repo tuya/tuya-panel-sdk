@@ -1,6 +1,5 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import TYIpcGpsSignal from '../index';
 
 describe('TYIpcGpsSignal components', () => {
   it('basic render', () => {
