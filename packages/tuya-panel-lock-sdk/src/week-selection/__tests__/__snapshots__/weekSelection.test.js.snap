@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeekSelection components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`WeekSelection components basicd render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`WeekSelection components onPress render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
