@@ -2205,6 +2205,11 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
+"@rushstack/eslint-patch@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@rushstack/eslint-patch/-/eslint-patch-1.0.6.tgz#023d72a5c4531b4ce204528971700a78a85a0c50"
+  integrity sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==
+
 "@sinonjs/commons@^1.7.0":
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/@sinonjs/commons/-/commons-1.8.1.tgz#e7df00f98a203324f6dc7cc606cad9d4a8ab2217"
@@ -5275,11 +5280,12 @@ eslint-config-prettier@^6.11.0:
   dependencies:
     get-stdin "^6.0.0"
 
-eslint-config-tuya-panel@^0.2.6:
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/eslint-config-tuya-panel/-/eslint-config-tuya-panel-0.2.6.tgz#57b2059add7496344bafa1b949dadd3d7f477c26"
-  integrity sha512-JCeDG9nadXdsOk2B73QTWBpmyopL0uyrOVR+76yFH4NEXN8Gd2nf1xfkgbhP/KKvuAzpb8puw4Kl11Vd/Ooklg==
+eslint-config-tuya-panel@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-tuya-panel/-/eslint-config-tuya-panel-0.4.1.tgz#ae833e68413585c424ab259d24bc3d19a1abe8d1"
+  integrity sha512-us5rgcyaakZXq/QZySVMrmkQXBr/ADKe3v+N1q5U+TsaVw6dRMEhcjnmtAlc0lnJV76vABBAB61/z7+Tv0OAZQ==
   dependencies:
+    "@rushstack/eslint-patch" "^1.0.6"
     "@typescript-eslint/eslint-plugin" "4.8.2"
     "@typescript-eslint/parser" "4.8.2"
     babel-eslint "10.1.0"
