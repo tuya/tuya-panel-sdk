@@ -590,6 +590,11 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       showRetry = true;
     }
 
+    if (status === 8) {
+      retryText = Strings.getLang('tyIpc_video_stream_retry_play');
+      showRetry = true;
+    }
+
     this.setState({
       showLoading,
       loadText,

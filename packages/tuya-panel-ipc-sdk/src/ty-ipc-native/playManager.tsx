@@ -1,3 +1,4 @@
+/* eslint-disable react/sort-comp */
 import React from 'react';
 import PlayerManagerFun from './player-manager-func';
 
@@ -5,7 +6,7 @@ class TYIpcPlayerManager extends React.Component {
   static getWifiSignal = PlayerManagerFun.getWifiSignal;
   static setScreenOrientation = PlayerManagerFun.setScreenOrientation;
   static startPlay = PlayerManagerFun.startPlay;
-  // static pausePlay = PlayerManagerFun.pausePlay;
+  static pausePlay = PlayerManagerFun.pausePlay;
   static enableHd = PlayerManagerFun.enableHd;
   static enableMute = PlayerManagerFun.enableMute;
   static snapShoot = PlayerManagerFun.snapShoot;
@@ -41,6 +42,7 @@ class TYIpcPlayerManager extends React.Component {
   static isRecording = PlayerManagerFun.isRecording;
   static isTalkBacking = PlayerManagerFun.isTalkBacking;
   static isHDOn = PlayerManagerFun.isHDOn;
+  static iosSnapShootToPhoneAlbums = PlayerManagerFun.iosSnapShootToPhoneAlbums;
 
   static render() {
     return null;
