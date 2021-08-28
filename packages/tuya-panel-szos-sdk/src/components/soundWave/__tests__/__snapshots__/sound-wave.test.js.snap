@@ -1,0 +1,2199 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SoundWave components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      undefined,
+      Object {
+        "height": 424,
+        "width": 620,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="2"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="3"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="4"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="5"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="6"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="7"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="8"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="9"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="10"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="11"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="12"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="13"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="14"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="15"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="16"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="17"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="18"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="19"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="20"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="21"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="22"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="23"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="24"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="25"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="26"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="27"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="28"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="29"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="30"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="31"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="32"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="33"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="34"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="35"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="36"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="37"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="38"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="39"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="40"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="41"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="42"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="43"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="44"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="45"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="46"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="47"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="48"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="49"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="50"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="51"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="52"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="53"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="54"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="55"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="56"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="57"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="58"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="59"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="60"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="61"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`SoundWave components render with data 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 212,
+        "width": 310,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="2"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="3"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="4"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="5"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="6"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="7"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="8"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="9"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="10"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="11"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="12"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="13"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="14"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="15"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="16"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="17"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="18"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="19"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="20"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="21"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="22"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="23"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="24"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="25"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="26"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="27"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="28"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="29"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="30"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="31"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="32"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="33"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="34"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="35"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="36"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="37"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="38"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="39"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="40"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="41"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="42"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="43"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="44"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="45"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="46"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="47"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="48"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="49"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="50"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="51"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="52"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="53"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="54"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="55"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="56"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="57"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="58"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="59"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="60"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="61"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="62"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="63"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="64"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="65"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`SoundWave components render with data 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 212,
+        "width": 310,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="1"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="2"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="3"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="4"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="5"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="6"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="7"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="8"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="9"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="10"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="11"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="12"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="13"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="14"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="15"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="16"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="17"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="18"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="19"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="20"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="21"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="22"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="23"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="24"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="25"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="26"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="27"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="28"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="29"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="30"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="31"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="32"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="33"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="34"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="35"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="36"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="37"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="38"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="39"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="40"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="41"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="42"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="43"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="44"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="45"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="46"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="47"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="48"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="49"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="50"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="51"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="52"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="53"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="54"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="55"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="56"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="57"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="58"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="59"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="60"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="61"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="62"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="63"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="64"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+  <AnimatedComponent
+    key="65"
+    style={
+      Object {
+        "backgroundColor": "#534B72",
+        "borderRadius": 1,
+        "height": 16,
+        "width": 2,
+      }
+    }
+  />
+</View>
+`;
