@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['tuya-panel'],
+  extends: ['tuya-panel','plugin:react/recommended'],
   plugins: ['literal-check'],
   rules: {
     'react/display-name': 1,

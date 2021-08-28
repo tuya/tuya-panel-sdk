@@ -25,6 +25,7 @@
     "enzyme-to-json": "^3.6.1",
     "eslint-config-tuya-panel": "^0.2.6",
     "eslint-plugin-literal-check": "^0.1.2",
+    "eslint-plugin-react": "^7.24.0",
     "husky": "^4.3.0",
     "jest": "24.9.0",
     "lerna": "^3.22.1",
