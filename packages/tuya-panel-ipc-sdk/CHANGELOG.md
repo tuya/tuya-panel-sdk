@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.7.0...@tuya/tuya-panel-ipc-sdk@1.8.0) (2021-08-28)
+
+
+### Bug Fixes
+
+* add import TYIpcGpsSignal from '../index'; ([770b7c2](https://github.com/tuya/tuya-panel-sdk/commit/770b7c257ce31e3f08878c6d305d69d658a340ea))
+
+
+### Features
+
+* add iosSnapShootToPhoneAlbums, pausePlay method ([#81](https://github.com/tuya/tuya-panel-sdk/issues/81)) ([fe6fc6e](https://github.com/tuya/tuya-panel-sdk/commit/fe6fc6e9b4c7123e33c5ca2f549d19bd79020a1c))
+
+
+
+
+
 # [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.6.0...@tuya/tuya-panel-ipc-sdk@1.7.0) (2021-08-24)
 
 
