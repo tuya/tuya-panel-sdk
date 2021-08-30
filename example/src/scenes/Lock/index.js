@@ -4,6 +4,7 @@ import { subRouters } from '../../config/routers';
 import LinkSelect from './linkSelect';
 import GetPassword from './getPassword';
 import DefendTime from './defendTime';
+import WeekSelection from './weekSelection';
 // import Gesture from './gesture';
 import Finger from './finger';
 import DatePickerRange from './datePickerRange';
@@ -15,6 +16,7 @@ export default class LampCategoryScene extends Component {
   static DefendTime = DefendTime;
   static Finger = Finger;
   static DatePickerRange = DatePickerRange;
+  static WeekSelection = WeekSelection;
   // static Gesture = Gesture;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lock\.((?!\.)\w)+$/.test(r.id)));
