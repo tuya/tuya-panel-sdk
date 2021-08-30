@@ -12,15 +12,19 @@
     "test": "jest"
   },
   "dependencies": {
-    "@types/color": "0.12.1",
-    "@types/lodash": "^4.14.149",
-    "@types/react": "^16.9.17",
-    "@types/react-native": "^0.60.26",
     "color": "0.11.4",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
     "react-addons-shallow-compare": "^15.6.2",
     "style-equal": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/color": "0.12.1",
+    "@types/lodash": "^4.14.149",
+    "@types/react": "^16.9.17",
+    "@types/react-native": "^0.60.26",
+    "@types/tuya-panel-kit": "^4.7.0",
+    "tuya-panel-kit": "^4.7.6"
   },
   "peerDependencies": {
     "react": "^16.0.0",
