@@ -1080,3 +1080,233 @@ export interface DoubleKeyProps {
   loadingContent?: JSX.Element | Element;
 }
 export const DoubleKey: React.ComponentClass<DoubleKeyProps>;
+
+export interface CurtainsAnimate {
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Component style?
+   * @defaultValue null
+   */
+  style: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗帘宽度
+   * @defaultValue 280
+   */
+  /**
+   * @language en-US
+   * @description Curtains width?
+   * @defaultValue 280
+   */
+  width: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘高度
+   * @defaultValue 280
+   */
+  /**
+   * @language en-US
+   * @description Curtains height?
+   * @defaultValue 280
+   */
+  height: number;
+  /**
+   * @language zh-CN
+   * @description 初始开合百分比，值0~1
+   * @defaultValue 0.3
+   */
+  /**
+   * @language en-US
+   * @description Initial opening and closing percentage, value 0 ~ 1
+   * @defaultValue 0.3
+   */
+  initPercent: number;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮宽度
+   * @defaultValue 40
+   */
+  /**
+   * @language en-US
+   * @description Slide button width
+   * @defaultValue 40
+   */
+  buttonWidth: number;
+  /**
+   * @language zh-CN
+   * @description 动画总时间，以秒为单位
+   * @defaultValue 8
+   */
+  /**
+   * @language en-US
+   * @description Total animation time in seconds
+   * @defaultValue 8
+   */
+  animateTime: number;
+  /**
+   * @language zh-CN
+   * @description 动画状态，共三种：'close'，'open'，'pause'
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description There are three animation states: 'close', 'open', 'pause'
+   * @defaultValue null
+   */
+  type: AnimateType | null;
+  /**
+   * @language zh-CN
+   * @description 窗帘位置
+   * @defaultValue {
+      top: cx(15),
+      left: cx(8),
+    },
+   */
+  /**
+   * @language en-US
+   * @description Curtain position
+   * @defaultValue {
+      top: cx(15),
+      left: cx(8),
+    },
+   */
+  curtainsPosition: CurtainsPosition;
+  /**
+   * @language zh-CN
+   * @description 手势滑动释放执行回调
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Gesture sliding release execution callback
+   * @defaultValue null
+   */
+  onChange: (type: AnimateType) => void;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain scroll picture
+   * @defaultValue null
+   */
+  rollerImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴View样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain scroll style
+   * @defaultValue null
+   */
+  rollerStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴Image样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain scroll image style
+   * @defaultValue null
+   */
+  rollerImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button picture
+   * @defaultValue null
+   */
+  buttonImage: number;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮View样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button style
+   * @defaultValue null
+   */
+  buttonStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮Image样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button image style
+   * @defaultValue null
+   */
+  buttonImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮位置误差
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description Position error of sliding button
+   * @defaultValue 0
+   */
+  buttonPositionErrorValue: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘左帘图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain left curtain picture
+   * @defaultValue null
+   */
+  curtainsLeftImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘右帘图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain right curtain picture
+   * @defaultValue null
+   */
+  curtainsRightImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘View样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain view style
+   * @defaultValue null
+   */
+  curtainsStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗帘Image样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain image style
+   * @defaultValue null
+   */
+  curtainsImageStyle: StyleProp<ImageStyle>;
+}
+export const Curtains: React.ComponentClass<CurtainsAnimate>;
