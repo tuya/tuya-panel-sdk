@@ -1,5 +1,5 @@
 module.exports = {
-  extends: ['tuya-panel','plugin:react/recommended'],
+  extends: ['tuya-panel'],
   plugins: ['literal-check'],
   rules: {
     'react/display-name': 1,
@@ -64,4 +64,33 @@ module.exports = {
       ],
     ]
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
+      parser: 'babel-eslint',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        }
+      },
+      rules: {
+        ...require('eslint-config-tuya-panel/overrides/rules/javascript'),
+        ...require('eslint-config-tuya-panel/overrides/rules/react'),
+        'react/jsx-filename-extension': [
+          2,
+          {
+            extensions: ['.js', '.jsx', '.tsx'],
+          },
+        ],
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      },
+    }
+  ],
 };
