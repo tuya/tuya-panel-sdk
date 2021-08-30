@@ -2452,6 +2452,17 @@
     react-native-safe-area-context "3.1.7"
     react-native-svg "5.5.1"
 
+"@types/tuya-panel-kit@^4.7.0":
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/@types/tuya-panel-kit/-/tuya-panel-kit-4.7.0.tgz#62bea49962cb573ef84f25c33979d7a7ffdb1658"
+  integrity sha512-99rQO3wxdB48koHSkmGYB1tfugx7twliazNoiCSwIwPc1RrSD5VYlHU7PZYCygBvfRTXG+oUWZVlOpEgGBHEUg==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "*"
+    react-native-gesture-handler "1.8.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-svg "5.5.1"
+
 "@types/yargs-parser@*":
   version "20.2.0"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-20.2.0.tgz#dd3e6699ba3237f0348cd085e4698780204842f9"
@@ -12951,6 +12962,43 @@ tuya-panel-kit@^4.2.1:
     react-native-svg "5.5.1"
     style-equal "^1.0.0"
     styled-components "^3.4.10"
+
+tuya-panel-kit@^4.7.6:
+  version "4.7.6"
+  resolved "https://registry.yarnpkg.com/tuya-panel-kit/-/tuya-panel-kit-4.7.6.tgz#8a014bbcf8ebaec95745a6fc4a98ad0b736c2cb8"
+  integrity sha512-sNhXQkDlkrE6X0chOhad6+4tbRlDpAZbGr2cw1crjiTRLEVbu7oh26RtVG64CA62NQxp/tq0S7hSKeLGY2T5dg==
+  dependencies:
+    "@react-native-community/masked-view" "0.1.10"
+    "@react-navigation/native" "5.7.3"
+    "@react-navigation/stack" "5.9.0"
+    babel-cli "^6.26.0"
+    color "^0.11.1"
+    events "^1.1.1"
+    hoist-non-react-statics "^3.3.0"
+    prop-types "^15.6.1"
+    react-addons-shallow-compare "^15.6.2"
+    react-native-deprecated-custom-components "0.1.2"
+    react-native-gesture-handler "1.8.0"
+    react-native-reanimated "1.13.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-screens "2.10.1"
+    react-native-svg "5.5.1"
+    style-equal "^1.0.0"
+    styled-components "^3.4.10"
+    tuya-panel-theme "^0.0.4"
+    tuya-panel-utils "^0.1.0"
+
+tuya-panel-theme@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/tuya-panel-theme/-/tuya-panel-theme-0.0.4.tgz#6e6ecfe54adfb6168c76022669a2e604947e344d"
+  integrity sha512-I27uJ8qgovkbD5GhW443iFJ7HKYAd/YgFiLmwbwJzL/he3uTYzk47fojEy05PGZtu1C/2BvGunUidS1xiLb38g==
+  dependencies:
+    tuya-panel-utils "^0.1.0"
+
+tuya-panel-utils@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/tuya-panel-utils/-/tuya-panel-utils-0.1.0.tgz#9d8b36dc449581695fdaf2c165e0acd61bcfa837"
+  integrity sha512-S+HUbISzgYg06C78HEAcPGngg5gOitzUqJQTiNophuqxWtPQmZWOCtaUJ1Ao2VH2j7rKQFAfx+SwrgQTX10mHA==
 
 tweetnacl@^0.14.3, tweetnacl@~0.14.0:
   version "0.14.5"
