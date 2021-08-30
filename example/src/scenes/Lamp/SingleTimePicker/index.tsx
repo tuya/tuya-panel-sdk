@@ -29,8 +29,8 @@ const SingleTimePickerScene: React.FC = () => {
         visibleItemCount={7}
         itemStyle={{ fontSize: 30, color: '#000' }}
         onChange={handleTimeChange}
-        amText={Strings.getLang('am')}
-        pmText={Strings.getLang('pm')}
+        amText={Strings.getLang('TYLamp_am')}
+        pmText={Strings.getLang('TYLamp_pm')}
         prefixPosition="right"
         textSize={30}
       />
