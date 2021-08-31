@@ -12,6 +12,8 @@ import TemperaturePolarPickerScene from './TemperaturePolarPicker';
 import LampLightPreviewScene from './LampLightPreview';
 import LampPreviewScene from './LampPreview';
 import ColorSelectorNoScrollScene from './ColorSelectorNoScroll';
+import SingleTimePickerScene from './SingleTimePicker';
+
 export default class LampScene extends Component {
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
   static TemperaturePicker = TemperaturePickerScene;
@@ -23,6 +25,7 @@ export default class LampScene extends Component {
   static LampLightPreview = LampLightPreviewScene;
   static LampPreview = LampPreviewScene;
   static ColorSelectorNoScroll = ColorSelectorNoScrollScene;
+  static SingleTimePicker = SingleTimePickerScene;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
