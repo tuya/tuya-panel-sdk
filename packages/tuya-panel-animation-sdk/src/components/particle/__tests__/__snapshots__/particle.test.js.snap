@@ -8,7 +8,7 @@ exports[`Particle components SingleParticle render 1`] = `
       "borderRadius": 2,
       "height": 4,
       "left": NaN,
-      "opacity": 0.7044029759100202,
+      "opacity": 0.9247831382621274,
       "position": "absolute",
       "top": NaN,
       "width": 4,
@@ -30,7 +30,7 @@ exports[`Particle components SingleParticle render 2`] = `
       "borderRadius": 6,
       "height": 12,
       "left": NaN,
-      "opacity": 0.7049980456326351,
+      "opacity": 0.7420176832298797,
       "position": "absolute",
       "top": NaN,
       "width": 12,
@@ -57,7 +57,7 @@ exports[`Particle components basic render 1`] = `
 >
   <SingleParticle
     active={true}
-    color="#fff"
+    color="#ff0"
     dotRadius={
       Array [
         2,
@@ -75,7 +75,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#ff0"
+    color="#fff"
     dotRadius={
       Array [
         2,
@@ -147,7 +147,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#fff"
+    color="#ff0"
     dotRadius={
       Array [
         2,
@@ -201,7 +201,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#f0f"
+    color="#ff0"
     dotRadius={
       Array [
         2,
@@ -219,7 +219,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#f0f"
+    color="#00f"
     dotRadius={
       Array [
         2,
@@ -237,7 +237,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#00f"
+    color="#fff"
     dotRadius={
       Array [
         2,
@@ -255,7 +255,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#ff0"
+    color="#00f"
     dotRadius={
       Array [
         2,
@@ -327,7 +327,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#ff0"
+    color="#00f"
     dotRadius={
       Array [
         2,
@@ -363,7 +363,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#f0f"
+    color="#fff"
     dotRadius={
       Array [
         2,
@@ -381,7 +381,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#f0f"
+    color="#00f"
     dotRadius={
       Array [
         2,
@@ -435,7 +435,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#ff0"
+    color="#f0f"
     dotRadius={
       Array [
         2,
@@ -453,7 +453,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#f0f"
+    color="#00f"
     dotRadius={
       Array [
         2,
@@ -471,7 +471,7 @@ exports[`Particle components basic render 1`] = `
   />
   <SingleParticle
     active={true}
-    color="#fff"
+    color="#ff0"
     dotRadius={
       Array [
         2,
