@@ -40,6 +40,7 @@ exports[`IpcDragSort component basic render 1`] = `
   />
   <FlatList
     alwaysBounceVertical={false}
+    containerStyle={null}
     data={
       Array [
         Object {
@@ -123,8 +124,13 @@ exports[`IpcDragSort component basic render 1`] = `
     disableVirtualization={false}
     getListRef={[Function]}
     horizontal={false}
-    icon={1}
-    iconStyle={null}
+    icon={
+      <View>
+        <Text>
+          准
+        </Text>
+      </View>
+    }
     initialNumToRender={10}
     itemHeight={60}
     keyExtractor={[Function]}
@@ -134,7 +140,6 @@ exports[`IpcDragSort component basic render 1`] = `
     onOrder={[Function]}
     onScroll={[Function]}
     orderContain={Object {}}
-    orderStyle={null}
     orderWidth={60}
     removeClippedSubviews={false}
     renderFrameTime={20}
