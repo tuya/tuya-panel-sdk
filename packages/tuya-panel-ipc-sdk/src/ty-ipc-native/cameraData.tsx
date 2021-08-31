@@ -20,4 +20,5 @@ export const videoLoadText = {
   4: Strings.getLang('tyIpc_video_get_stream_ing'), // 正在获取视频流
   5: Strings.getLang('tyIpc_video_get_stream_failure'), // 获取视频流失败
   6: Strings.getLang('tyIpc_video_channel_connecting'), // 正常播放
+  8: Strings.getLang('tyIpc_video_channel_pause'), // 暂停播放 视频暂停中 点击开启
 };

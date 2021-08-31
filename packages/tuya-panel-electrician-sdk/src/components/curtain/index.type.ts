@@ -77,6 +77,8 @@ export interface IProps {
   textColor: string;
   openingText?: string;
   closingText?: string;
+  // 静态资源host
+  staticPrefix: string;
 }
 
 export interface IState {
