@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.2.0...@tuya/tuya-panel-lamp-sdk@1.2.1) (2021-09-01)
+
+
+### Features
+
+* add singleTimePicker component ([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([8b8fbf0](https://github.com/tuya/tuya-panel-sdk/commit/8b8fbf04aed68e1570bcd4b339ddfd726bf45ae5))
+
+
+
+
+
 # [1.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.1.1...@tuya/tuya-panel-lamp-sdk@1.2.0) (2021-08-06)
 
 
