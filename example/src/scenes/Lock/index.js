@@ -8,6 +8,7 @@ import WeekSelection from './weekSelection';
 // import Gesture from './gesture';
 import Finger from './finger';
 import DatePickerRange from './datePickerRange';
+import RandomPassword from './randomPassword';
 import { produceRouterDatas } from '../../utils';
 
 export default class LampCategoryScene extends Component {
@@ -17,6 +18,7 @@ export default class LampCategoryScene extends Component {
   static Finger = Finger;
   static DatePickerRange = DatePickerRange;
   static WeekSelection = WeekSelection;
+  static RandomPassword = RandomPassword;
   // static Gesture = Gesture;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lock\.((?!\.)\w)+$/.test(r.id)));

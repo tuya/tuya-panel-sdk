@@ -2441,17 +2441,6 @@
     react-native-safe-area-context "^3.1.8"
     react-native-svg "5.5.1"
 
-"@types/tuya-panel-kit@^4.0.5":
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/@types/tuya-panel-kit/-/tuya-panel-kit-4.0.5.tgz#1a165da4bf746d610409c1b74c6a8e5e6105c3de"
-  integrity sha512-EHv9xQ/JZBXZxnUo3DSLBLrVxTtQwRFjlU2D0mdlFL/Scu9O6la/vkfmXUJJbRCDpIWT/vOJRy8uaGcbjycWvg==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-native" "*"
-    react-native-gesture-handler "1.8.0"
-    react-native-safe-area-context "3.1.7"
-    react-native-svg "5.5.1"
-
 "@types/tuya-panel-kit@^4.7.0":
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/@types/tuya-panel-kit/-/tuya-panel-kit-4.7.0.tgz#62bea49962cb573ef84f25c33979d7a7ffdb1658"
