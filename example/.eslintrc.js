@@ -16,10 +16,11 @@ module.exports = {
       '@tuya/tuya-panel-ipc-sdk',
       '@tuya/tuya-panel-electrician-sdk',
       '@tuya/tuya-panel-outdoor-sdk',
-    ],
-    'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
+    ]
   },
   rules: {
     'import/no-extraneous-dependencies': 'off',
+    'import/no-cycle': 0,
+    'import/no-unresolved': [2, { ignore: ['.png$', '.webp$', '.jpg$'] }],
   },
 };
