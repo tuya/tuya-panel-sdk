@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.2.0...@tuya/tuya-panel-remote-sdk@0.2.1) (2021-09-01)
+
+
+### Features
+
+* create universal remote control curtain components ([#82](https://github.com/tuya/tuya-panel-sdk/issues/82)) ([4a05f7c](https://github.com/tuya/tuya-panel-sdk/commit/4a05f7cb07a02be31856a65d74dc5efa1b2105d2))
+
+
+
+
+
 # 0.2.0 (2021-07-14)
 
 
