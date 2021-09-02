@@ -7,7 +7,8 @@ export const IDefaultProps = {
   digitalBase: 10,
   isHideZero: false,
   themeColor: '#239C8E',
-  locale: 'en',
+  randomText: 'Random',
+  confirmText: 'Confirm',
 };
 
 export type IRandomPasswordProps = {
@@ -18,5 +19,4 @@ export type IRandomPasswordProps = {
   wrapperStyle?: StyleProp<ViewStyle>;
   style?: StyleProp<ViewStyle>;
   password?: string;
-  locale?: string | { random: string };
 } & Partial<typeof IDefaultProps>;

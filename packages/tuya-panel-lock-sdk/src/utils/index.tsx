@@ -45,15 +45,15 @@ let flag = true;
 
 /**
  * @language zh-CN
- * @description 检测是否拥有需要的能力并且没有不需要的能力
- * @param {number} hex 设备能力值
- * @return {boolean} 返回是否满足条件
+ * @description 获取密码最大长度
+ * @param {number} hex 数字范围为4-10
+ * @return {number} 返回密码最大长度
  */
 /**
  * @language en-US
- * @description Check whether 'capability' have the required abilities and whether 'capability' don’t have the abilities you don’t need
- * @param {number} capability device capability
- * @return {boolean} Return whether the condition is met
+ * @description Get the maximum password length
+ * @param {number} hex The number range is 4-10
+ * @return {number} Return the maximum length of the password
  */
 export const getPswMaxLen = (hex: number) => {
   const hexMap = { 4: 12, 5: 12, 6: 12, 7: 11, 8: 11, 9: 10, 10: 10 };
@@ -62,15 +62,15 @@ export const getPswMaxLen = (hex: number) => {
 
 /**
  * @language zh-CN
- * @description 检测是否拥有需要的能力并且没有不需要的能力
- * @param {number} capability 设备能力值
- * @return {boolean} 返回是否满足条件
+ * @description 获取默认随机密码长度
+ * @param {number} hex 数字范围为4-10
+ * @return {number} 返回密码长度
  */
 /**
  * @language en-US
- * @description Check whether 'capability' have the required abilities and whether 'capability' don’t have the abilities you don’t need
- * @param {number} capability device capability
- * @return {boolean} Return whether the condition is met
+ * @description Get the default random password length
+ * @param {number} hex The number range is 4-10
+ * @return {number} Return the length of the password
  */
 export const getDefaultRandomLen = (hex: number) => {
   const hexMap = { 4: 8, 5: 8, 6: 8, 7: 8, 8: 7, 9: 7, 10: 6 };

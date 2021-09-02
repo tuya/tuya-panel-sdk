@@ -1,9 +1,6 @@
-import React, { FC, useState, useEffect, useCallback } from 'react';
+import React, { FC, useState, useCallback } from 'react';
 import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Utils, Button, TYText } from 'tuya-panel-kit';
-
-import cnLocale from './locale/zh_CN';
-import defaultLocale from './locale/en_US';
 
 import CustomKeyboard from '../custom-keyboard';
 import { getPswMaxLen, getDefaultRandomLen } from '../utils';
@@ -18,16 +15,16 @@ function wrapPsd(psd: string) {
 const RandomPassword: FC<IRandomPasswordProps> = ({
   savePassword,
   passwordColor,
+  randomText,
   randomTextColor,
   themeColor,
   wrapperStyle,
   style,
   password,
   digitalBase,
-  locale,
+  confirmText,
   isHideZero,
 }) => {
-  let strings;
   const maxLen = getPswMaxLen(+digitalBase); // 密码最大长度
   const maxNum = isHideZero ? +digitalBase : +digitalBase - 1; // 支持的最大数字
   const defaultRandomLen = getDefaultRandomLen(+digitalBase); // 默认的随机生成密码长度
@@ -38,32 +35,18 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
   const [currPassword, setCurrPassword] = useState(password || '');
   const [showKeyBoard, setShowKeyBoard] = useState(false);
 
-  useEffect(() => {
-    i18n(locale);
-  }, [locale]);
-
-  // eslint-disable-next-line no-shadow
-  const i18n = (locale: string | { random: string }) => {
-    if (typeof locale === 'string') {
-      strings = locale === 'cn' ? cnLocale : defaultLocale;
-    } else if (typeof locale === 'object') {
-      strings = { ...defaultLocale, ...locale };
-    } else {
-      strings = defaultLocale;
-    }
-  };
-
   const onValueChange = item => {
     const len = currPassword.length;
-    let result = '';
     if (len < maxLen && item >= 0 && item <= maxNum) {
-      result = wrapPsd(`${currPassword}${item}`);
+      setCurrPassword(wrapPsd(`${currPassword}${item}`));
+      if (typeof savePassword === 'function') {
+        savePassword(wrapPsd(`${currPassword}${item}`));
+      }
     } else if (item === -1) {
-      result = wrapPsd(currPassword.substring(0, len - 1));
-    }
-    setCurrPassword(result);
-    if (typeof savePassword === 'function') {
-      savePassword(result);
+      setCurrPassword(wrapPsd(currPassword.substring(0, len - 1)));
+      if (typeof savePassword === 'function') {
+        savePassword(wrapPsd(currPassword.substring(0, len - 1)));
+      }
     }
   };
 
@@ -102,7 +85,7 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
             style={{
               height: cx(60),
             }}
-            text={strings.random}
+            text={randomText || 'Random'}
             textStyle={[styles.randomText, { color: randomColor }]}
             onPress={getRandomPassword}
           />
@@ -112,6 +95,7 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
         visible={showKeyBoard}
         onMaskPress={() => setShowKeyBoard(false)}
         maxNum={maxNum}
+        confirmText={confirmText}
         isHasZero={!isHideZero}
         onConfirm={() => setShowKeyBoard(false)}
         onValueChange={item => onValueChange(item)}

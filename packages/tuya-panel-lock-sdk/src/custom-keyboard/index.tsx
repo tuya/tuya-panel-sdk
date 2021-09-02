@@ -1,11 +1,8 @@
 /* eslint-disable consistent-return */
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 import { View, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { Utils, Button, Modal, TYText } from 'tuya-panel-kit';
 import { ICustomKeyboardProps, IDefaultProps } from './interface';
-
-import cnLocale from './locale/zh_CN';
-import defaultLocale from './locale/en_US';
 
 const { convertX: cx, convertY: cy, width } = Utils.RatioUtils;
 
@@ -15,12 +12,12 @@ const Res = {
 };
 
 const CustomKeyboard: FC<ICustomKeyboardProps> = ({
-  locale,
   visible,
   maxNum,
   isHasZero,
   themeColor,
   confirmText,
+  confirmTextStyle,
   onConfirm,
   onMaskPress,
   onValueChange,
@@ -29,24 +26,8 @@ const CustomKeyboard: FC<ICustomKeyboardProps> = ({
   isHasZero && numDefaultArr.push(0);
   numDefaultArr.push(-1);
 
-  let strings;
   const len = numDefaultArr.length;
   const row = Math.ceil(len / 3);
-
-  useEffect(() => {
-    i18n(locale);
-  }, [locale]);
-
-  // eslint-disable-next-line no-shadow
-  const i18n = (locale: string | { random: string }) => {
-    if (typeof locale === 'string') {
-      strings = locale === 'cn' ? cnLocale : defaultLocale;
-    } else if (typeof locale === 'object') {
-      strings = { ...defaultLocale, ...locale };
-    } else {
-      strings = defaultLocale;
-    }
-  };
 
   const _confirm = () => {
     if (typeof onConfirm === 'function') {
@@ -80,10 +61,10 @@ const CustomKeyboard: FC<ICustomKeyboardProps> = ({
           ))}
         </View>
         <Button
-          text={strings.confirm}
+          text={confirmText || 'Confirm'}
           type="primary"
           style={[styles.confirm, { height: cy(row * 58 - 8), backgroundColor: themeColor }]}
-          textStyle={[styles.confirmText, confirmText]}
+          textStyle={[styles.confirmText, confirmTextStyle]}
           stretch
           onPress={_confirm}
         />
