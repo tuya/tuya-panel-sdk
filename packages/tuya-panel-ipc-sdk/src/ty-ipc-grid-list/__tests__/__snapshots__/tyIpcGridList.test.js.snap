@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TYIpcAutoButton components default 1`] = `
+exports[`TYIpcGridList components default 1`] = `
 <View
   style={
     Array [
@@ -20,7 +20,7 @@ exports[`TYIpcAutoButton components default 1`] = `
 >
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530090"
+    key="16310011557040"
     onPress={[Function]}
     style={
       Array [
@@ -46,7 +46,7 @@ exports[`TYIpcAutoButton components default 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530231"
+    key="16310011557141"
     onPress={[Function]}
     style={
       Array [
@@ -72,7 +72,7 @@ exports[`TYIpcAutoButton components default 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530232"
+    key="16310011557142"
     onPress={[Function]}
     style={
       Array [
@@ -98,7 +98,7 @@ exports[`TYIpcAutoButton components default 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530233"
+    key="16310011557153"
     onPress={[Function]}
     style={
       Array [
@@ -124,7 +124,7 @@ exports[`TYIpcAutoButton components default 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530234"
+    key="16310011557154"
     onPress={[Function]}
     style={
       Array [
@@ -151,7 +151,7 @@ exports[`TYIpcAutoButton components default 1`] = `
 </View>
 `;
 
-exports[`TYIpcAutoButton components other param 1`] = `
+exports[`TYIpcGridList components other param 1`] = `
 <View
   style={
     Array [
@@ -180,7 +180,7 @@ exports[`TYIpcAutoButton components other param 1`] = `
           "borderRadius": 5,
         },
         Object {
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginLeft": 0,
           "marginRight": 10,
           "marginTop": 0,
@@ -206,7 +206,7 @@ exports[`TYIpcAutoButton components other param 1`] = `
           "borderRadius": 5,
         },
         Object {
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginLeft": 10,
           "marginRight": 0,
           "marginTop": 0,
@@ -232,10 +232,10 @@ exports[`TYIpcAutoButton components other param 1`] = `
           "borderRadius": 5,
         },
         Object {
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginLeft": 0,
           "marginRight": 10,
-          "marginTop": 5,
+          "marginTop": 10,
           "width": 350,
         },
       ]
@@ -258,10 +258,10 @@ exports[`TYIpcAutoButton components other param 1`] = `
           "borderRadius": 5,
         },
         Object {
-          "marginBottom": 5,
+          "marginBottom": 10,
           "marginLeft": 10,
           "marginRight": 0,
-          "marginTop": 5,
+          "marginTop": 10,
           "width": 350,
         },
       ]
@@ -287,7 +287,7 @@ exports[`TYIpcAutoButton components other param 1`] = `
           "marginBottom": 0,
           "marginLeft": 0,
           "marginRight": 0,
-          "marginTop": 5,
+          "marginTop": 10,
           "width": 720,
         },
       ]
@@ -302,7 +302,7 @@ exports[`TYIpcAutoButton components other param 1`] = `
 </View>
 `;
 
-exports[`TYIpcAutoButton components press 1`] = `
+exports[`TYIpcGridList components press 1`] = `
 <View
   style={
     Array [
@@ -322,7 +322,7 @@ exports[`TYIpcAutoButton components press 1`] = `
 >
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530330"
+    key="16310011557180"
     onPress={[Function]}
     style={
       Array [
@@ -348,7 +348,7 @@ exports[`TYIpcAutoButton components press 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530331"
+    key="16310011557181"
     onPress={[Function]}
     style={
       Array [
@@ -374,7 +374,7 @@ exports[`TYIpcAutoButton components press 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530332"
+    key="16310011557182"
     onPress={[Function]}
     style={
       Array [
@@ -400,7 +400,7 @@ exports[`TYIpcAutoButton components press 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530333"
+    key="16310011557183"
     onPress={[Function]}
     style={
       Array [
@@ -426,7 +426,7 @@ exports[`TYIpcAutoButton components press 1`] = `
   </TouchableOpacity>
   <TouchableOpacity
     activeOpacity={0.6}
-    key="16305813530344"
+    key="16310011557184"
     onPress={[Function]}
     style={
       Array [

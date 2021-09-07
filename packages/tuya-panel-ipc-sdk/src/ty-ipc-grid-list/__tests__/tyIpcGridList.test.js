@@ -38,6 +38,7 @@ describe('TYIpcGridList components', () => {
     const targetNode = wrapper.findWhere(node => node.name() === 'TouchableOpacity');
     targetNode.at(0).simulate('press');
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
 
   it('other param', () => {
@@ -56,5 +57,6 @@ describe('TYIpcGridList components', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
 });

@@ -1,7 +1,9 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import TYIpcStepButton from '../index';
-// import 'jsdom-global/register';
 
 const onValueChange = value => {
   console.log(value);
@@ -28,6 +30,7 @@ describe('TYIpcStepButton', () => {
     );
 
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
 
   test('press', async () => {
@@ -63,8 +66,8 @@ describe('TYIpcStepButton', () => {
     }
     await fn();
 
-    wrapper.unmount();
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
 
   it('input', async () => {
@@ -75,7 +78,7 @@ describe('TYIpcStepButton', () => {
     targetNode.at(0).props().onChangeText(-1);
     targetNode.at(0).props().onChangeText(200);
 
-    wrapper.unmount();
     expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
   });
 });
