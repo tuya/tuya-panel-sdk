@@ -20,7 +20,7 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   transformIgnorePatterns: [
-    'node_modules/(?!react-native|react-native-svg/|@react-native-community/blur/)',
+    'node_modules/(?!react-native|react-native-svg/|@react-native-community/blur/|tuya-panel-theme)',
   ],
   testPathIgnorePatterns: ['node_modules'],
 };

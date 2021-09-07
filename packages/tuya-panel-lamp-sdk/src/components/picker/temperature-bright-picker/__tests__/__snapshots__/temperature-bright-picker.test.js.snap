@@ -93,6 +93,7 @@ exports[`TemperatureBrightPicker components basic render 1`] = `
       }
       textSize={42}
       theme={Object {}}
+      useTYRCTPicker={false}
       visibleItemCount={3}
     >
       <PickerIOSItem
@@ -711,6 +712,7 @@ exports[`TemperatureBrightPicker components componentWillReceiveProps render 1`]
       }
       textSize={42}
       theme={Object {}}
+      useTYRCTPicker={false}
       visibleItemCount={3}
     >
       <PickerIOSItem
@@ -1327,6 +1329,7 @@ exports[`TemperatureBrightPicker components method 1`] = `
       }
       textSize={42}
       theme={Object {}}
+      useTYRCTPicker={false}
       visibleItemCount={3}
     >
       <PickerIOSItem
