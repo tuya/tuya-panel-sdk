@@ -41,6 +41,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
@@ -82,6 +83,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
@@ -173,6 +175,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
@@ -520,6 +523,7 @@ exports[`SingleTimePicker components change time 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
@@ -561,6 +565,7 @@ exports[`SingleTimePicker components change time 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
@@ -652,6 +657,7 @@ exports[`SingleTimePicker components change time 1`] = `
     }
     textSize={20}
     theme={Object {}}
+    useTYRCTPicker={false}
     visibleItemCount={7}
   >
     <PickerIOSItem
