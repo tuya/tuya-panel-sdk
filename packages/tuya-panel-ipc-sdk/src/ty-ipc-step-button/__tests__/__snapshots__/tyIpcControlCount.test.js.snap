@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcControlCount default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 6,
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "space-between",
+        "width": 220,
+      },
+      Object {},
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressOut={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 44,
+          "justifyContent": "center",
+          "width": 44,
+        }
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+  </TouchableOpacity>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "color": "#333",
+            "fontSize": 20,
+            "fontWeight": "600",
+            "padding": 0,
+            "textAlign": "right",
+          },
+          Object {},
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="1"
+    />
+  </View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressOut={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 44,
+          "justifyContent": "center",
+          "width": 44,
+        }
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcControlCount input 1`] = `null`;
+
+exports[`TYIpcControlCount other param 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#fff",
+        "borderRadius": 6,
+        "flexDirection": "row",
+        "height": 44,
+        "justifyContent": "space-between",
+        "width": 220,
+      },
+      Object {
+        "width": 200,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressOut={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 44,
+          "justifyContent": "center",
+          "width": 44,
+        }
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+  </TouchableOpacity>
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      keyboardType="numeric"
+      onChangeText={[Function]}
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "color": "#333",
+            "fontSize": 20,
+            "fontWeight": "600",
+            "padding": 0,
+            "textAlign": "right",
+          },
+          Object {},
+        ]
+      }
+      underlineColorAndroid="transparent"
+      value="1"
+    />
+    <Text
+      style={
+        Array [
+          Object {
+            "color": "#666",
+            "fontSize": 14,
+            "marginLeft": 4,
+          },
+          Object {},
+        ]
+      }
+    >
+      m
+    </Text>
+  </View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressOut={[Function]}
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "height": 44,
+          "justifyContent": "center",
+          "width": 44,
+        }
+      }
+    >
+      <Image
+        source={1}
+      />
+    </View>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcControlCount press 1`] = `null`;
