@@ -33,5 +33,6 @@ Don't edit this section.
 - [ ] Intra-group review
 - [ ] ESLint lint
 - [ ] Example Run
+- [ ] Jest Run
 - [ ] No Grammer Error
 - [ ] No Spell Error
