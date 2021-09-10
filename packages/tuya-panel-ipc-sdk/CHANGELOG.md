@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.8.0...@tuya/tuya-panel-ipc-sdk@1.9.0) (2021-09-10)
+
+
+### Bug Fixes
+
+* **ipc:** fix the bug of ipc message player ([#88](https://github.com/tuya/tuya-panel-sdk/issues/88)) ([7f6cf98](https://github.com/tuya/tuya-panel-sdk/commit/7f6cf986dc3eb29a9e01295f0a4c83256a21a40c))
+
+
+### Features
+
+* add IpcGridList and IpcStepButton component ([#86](https://github.com/tuya/tuya-panel-sdk/issues/86)) ([a68a002](https://github.com/tuya/tuya-panel-sdk/commit/a68a00224b333a95cf64ddb63ca4bf859336ae5a))
+* add singleTimePicker component ([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([8b8fbf0](https://github.com/tuya/tuya-panel-sdk/commit/8b8fbf04aed68e1570bcd4b339ddfd726bf45ae5))
+
+
+
+
+
 # [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.7.0...@tuya/tuya-panel-ipc-sdk@1.8.0) (2021-08-28)
 
 
