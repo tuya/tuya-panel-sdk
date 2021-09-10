@@ -7,22 +7,23 @@ import {
   requireNativeComponent,
   NativeEventEmitter,
 } from 'react-native';
-import { TYText } from 'tuya-panel-kit';
+import { TYText, TYSdk } from 'tuya-panel-kit';
 import publicConfig from '../publicConfig';
 import Res from './res';
 import CameraManager from '../ty-ipc-native/nativeApi';
-import { getImageInfoUrl, getImageKey } from './utils';
+import { getImageInfoUrl, getImageKey, checkVersion } from './utils';
 import Strings from './i18n';
 import Styles from './style';
 import { TYIpcMessagePlayerProps } from './interface';
 
 const CameraMessageManager = NativeModules.TYRCTCameraMessageManager;
-const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
+
 const { isIOS } = publicConfig;
 const MediaPlayer = isIOS
   ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
   : requireNativeComponent('TYRCTCameraMessageMediaPlayerManager');
 
+const isNewApp = checkVersion(TYSdk.mobile.mobileInfo.appVersion, '3.28.0');
 const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
   defaultProps: Partial<TYIpcMessagePlayerProps>;
 } = (props: TYIpcMessagePlayerProps) => {
@@ -40,35 +41,14 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
 
   useEffect(() => {
     let timer = null;
-    creatPlayer();
-    videoPlay({
-      path: getImageInfoUrl(mediaUrl),
-      key: getImageKey(mediaUrl),
-    });
-    // 监听视频播放结束事件
-    TYRCTCameraMessageManagerEmitter.addListener('playMediaVideoFinished', () => {
-      timer = setTimeout(() => {
-        videoPlay({
-          path: getImageInfoUrl(mediaUrl),
-          key: getImageKey(mediaUrl),
-        });
-      }, 1000);
-    });
-    return () => {
-      stopVideoPlay();
-      TYRCTCameraMessageManagerEmitter.removeListener('playMediaVideoFinished', () => {});
-      clearTimeout(timer);
-    };
-  }, []);
-
-  useEffect(() => {
-    let timer = null;
-    if (!mediaUrl) {
+    if (isNewApp === 1) {
+      creatPlayer();
       videoPlay({
         path: getImageInfoUrl(mediaUrl),
         key: getImageKey(mediaUrl),
       });
       // 监听视频播放结束事件
+      const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
       TYRCTCameraMessageManagerEmitter.addListener('playMediaVideoFinished', () => {
         timer = setTimeout(() => {
           videoPlay({
@@ -80,14 +60,39 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
     }
     return () => {
       clearTimeout(timer);
-      TYRCTCameraMessageManagerEmitter.removeListener('playMediaVideoFinished', () => {});
-      stopVideoPlay();
+    };
+  }, []);
+
+  useEffect(() => {
+    let timer = null;
+    if (isNewApp === 1) {
+      if (!mediaUrl) {
+        videoPlay({
+          path: getImageInfoUrl(mediaUrl),
+          key: getImageKey(mediaUrl),
+        });
+        // 监听视频播放结束事件
+        const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
+        TYRCTCameraMessageManagerEmitter.addListener('playMediaVideoFinished', () => {
+          timer = setTimeout(() => {
+            videoPlay({
+              path: getImageInfoUrl(mediaUrl),
+              key: getImageKey(mediaUrl),
+            });
+          }, 1000);
+        });
+      }
+    }
+    return () => {
+      clearTimeout(timer);
     };
   }, [mediaUrl]);
 
   // 跳转分享页面
   const goShareMediaPage = Videos => {
-    CameraMessageManager.shareMedia({ mediaUrl: Videos[0], hexUrl: '', type: '3' });
+    if (isNewApp === 1) {
+      CameraMessageManager.shareMedia({ mediaUrl: Videos[0], hexUrl: '', type: '3' });
+    }
   };
 
   // 创建媒体设备
