@@ -11,7 +11,7 @@ import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
 import AnimationCategory from '../scenes/Animation';
 import Remote from '../scenes/Remote';
-// import Ipc from '../scenes/Ipc';
+import Ipc from '../scenes/Ipc';
 import Electrician from '../scenes/Electrician';
 import ApiScene from '../scenes/ApiScene';
 import Outdoor from '../scenes/Outdoor';
@@ -31,7 +31,7 @@ import GatewayInfo from '../../../packages/tuya-panel-gateway-sdk/package.json';
 // import CbtInfo from '../../../packages/tuya-panel-cbt-sdk/package.json';
 import AnimationInfo from '../../../packages/tuya-panel-animation-sdk/package.json';
 import RemoteInfo from '../../../packages/tuya-panel-remote-sdk/package.json';
-// import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
+import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
 import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
 import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
 import OutdoorInfo from '../../../packages/tuya-panel-outdoor-sdk/package.json';
@@ -131,12 +131,12 @@ export const elementsRouters = _.sortBy(
       subTitle: RemoteInfo.version,
       Scene: Remote,
     },
-    // {
-    //   id: 'Ipc',
-    //   title: IpcInfo.name,
-    //   subTitle: IpcInfo.version,
-    //   Scene: Ipc,
-    // },
+    {
+      id: 'Ipc',
+      title: IpcInfo.name,
+      subTitle: IpcInfo.version,
+      Scene: Ipc,
+    },
     {
       id: 'Electrician',
       title: ElectricianInfo.name,
