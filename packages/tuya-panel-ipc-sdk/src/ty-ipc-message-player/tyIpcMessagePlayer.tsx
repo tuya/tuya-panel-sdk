@@ -17,7 +17,7 @@ import Styles from './style';
 import { TYIpcMessagePlayerProps } from './interface';
 
 const CameraMessageManager = NativeModules.TYRCTCameraMessageManager;
-const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
+
 const { isIOS } = publicConfig;
 const MediaPlayer = isIOS
   ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
@@ -48,6 +48,7 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
         key: getImageKey(mediaUrl),
       });
       // 监听视频播放结束事件
+      const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
       TYRCTCameraMessageManagerEmitter.addListener('playMediaVideoFinished', () => {
         timer = setTimeout(() => {
           videoPlay({
@@ -58,8 +59,6 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
       });
     }
     return () => {
-      stopVideoPlay();
-      TYRCTCameraMessageManagerEmitter.removeListener('playMediaVideoFinished', () => {});
       clearTimeout(timer);
     };
   }, []);
@@ -73,6 +72,7 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
           key: getImageKey(mediaUrl),
         });
         // 监听视频播放结束事件
+        const TYRCTCameraMessageManagerEmitter = new NativeEventEmitter(CameraMessageManager); // 视频播放相关事件
         TYRCTCameraMessageManagerEmitter.addListener('playMediaVideoFinished', () => {
           timer = setTimeout(() => {
             videoPlay({
@@ -85,8 +85,6 @@ const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {
     }
     return () => {
       clearTimeout(timer);
-      TYRCTCameraMessageManagerEmitter.removeListener('playMediaVideoFinished', () => {});
-      stopVideoPlay();
     };
   }, [mediaUrl]);
 
