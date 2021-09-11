@@ -26,11 +26,13 @@ Please select the relevant option.
 - [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
 - [ ] This change requires a documentation update
 
-## CheckList
+## Review CheckList
 
-Don't edit this section
+Don't edit this section.
 
+- [ ] Intra-group review
 - [ ] ESLint lint
 - [ ] Example Run
+- [ ] Jest Run
 - [ ] No Grammer Error
 - [ ] No Spell Error
