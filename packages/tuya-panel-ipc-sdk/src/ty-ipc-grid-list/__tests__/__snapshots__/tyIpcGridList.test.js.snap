@@ -1,0 +1,454 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TYIpcGridList components default 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      },
+      Object {
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "width": 750,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557040"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 0,
+          "marginRight": 5,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button1
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557141"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 5,
+          "marginRight": 5,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button2
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557142"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 5,
+          "marginRight": 0,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button3
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557153"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 5,
+          "marginTop": 5,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button4
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557154"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 0,
+          "marginLeft": 5,
+          "marginRight": 0,
+          "marginTop": 5,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button5
+      </Text>
+    </View>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcGridList components other param 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      },
+      Object {
+        "paddingBottom": 15,
+        "paddingLeft": 15,
+        "paddingRight": 15,
+        "paddingTop": 15,
+        "width": 750,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="Button1"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 10,
+          "marginLeft": 0,
+          "marginRight": 10,
+          "marginTop": 0,
+          "width": 350,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button1
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="Button2"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "marginRight": 0,
+          "marginTop": 0,
+          "width": 350,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button2
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="Button3"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 10,
+          "marginLeft": 0,
+          "marginRight": 10,
+          "marginTop": 10,
+          "width": 350,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button3
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="Button4"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 10,
+          "marginLeft": 10,
+          "marginRight": 0,
+          "marginTop": 10,
+          "width": 350,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button4
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="Button5"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 0,
+          "marginTop": 10,
+          "width": 720,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button5
+      </Text>
+    </View>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`TYIpcGridList components press 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+      },
+      Object {
+        "paddingBottom": 10,
+        "paddingLeft": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+        "width": 750,
+      },
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557180"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 0,
+          "marginRight": 5,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button1
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557181"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 5,
+          "marginRight": 5,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button2
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557182"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 5,
+          "marginLeft": 5,
+          "marginRight": 0,
+          "marginTop": 0,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button3
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557183"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 0,
+          "marginLeft": 0,
+          "marginRight": 5,
+          "marginTop": 5,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button4
+      </Text>
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.6}
+    key="16310011557184"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "borderRadius": 5,
+        },
+        Object {
+          "marginBottom": 0,
+          "marginLeft": 5,
+          "marginRight": 0,
+          "marginTop": 5,
+          "width": 236.666667,
+        },
+      ]
+    }
+  >
+    <View>
+      <Text>
+        Button5
+      </Text>
+    </View>
+  </TouchableOpacity>
+</View>
+`;
