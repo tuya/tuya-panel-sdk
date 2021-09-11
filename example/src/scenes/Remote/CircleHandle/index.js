@@ -75,7 +75,12 @@ export default class Index extends Component {
             radius={cx(90)}
             centerRadius={cx(30)}
             offset={cx(20)}
-            pointColor="#FFF"
+            pointColor={{
+              top: 'rgba(87,140,238,1)',
+              right: 'rgba(85,158,101,1)',
+              bottom: 'rgba(246,206,95,1)',
+              left: 'rgba(206,89,75,1)',
+            }}
             pointRadius={cx(4)}
             centerTextStyle={{ fontSize: cx(16), color: 'white' }}
             bgColor={{
