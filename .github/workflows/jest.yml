@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: c-hive/gha-yarn-cache@v2
       - name: Install modules
-        run: yarn --frozen-lockfile --ignore-engines --ignore-optional --no-bin-links --non-interactive --silent --ignore-scripts --production=false
+        run: yarn install
       - name: build
         run: yarn run build
       - name: Run Test

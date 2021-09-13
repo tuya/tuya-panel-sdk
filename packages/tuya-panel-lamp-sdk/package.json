@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
-    "build": "../../node_modules/.bin/tsc -d",
+    "build": "tsc -d",
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
     "prepublishOnly": "yarn build",
     "test": "jest"
