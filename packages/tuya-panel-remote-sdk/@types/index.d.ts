@@ -730,7 +730,7 @@ export interface CircleHandleProps extends PositionInfo {
    * @description The color of the default dot in the key
    * @defaultValue 2
    */
-  pointColor?: string;
+  pointColor?: Position | string;
   /**
    * @language zh-CN
    * @description 是否展示loading效果
