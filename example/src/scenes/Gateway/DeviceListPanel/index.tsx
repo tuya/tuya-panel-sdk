@@ -4,7 +4,7 @@ import { DevInfo, TopBar } from 'tuya-panel-kit';
 import { DeviceListPanel, GatewayUtils } from '@tuya/tuya-panel-gateway-sdk';
 import Strings from './i18n';
 
-const { getAllDevice } = GatewayUtils;
+const { getAllSubDevList } = GatewayUtils;
 const DeviceListPanelScene: FC = () => {
   const tabConfig = [
     {
@@ -27,18 +27,13 @@ const DeviceListPanelScene: FC = () => {
   }, []);
 
   const getDeviceList = async () => {
-    const list = await getAllDevice();
+    const list = await getAllSubDevList();
     setDeviceList(list);
   };
 
   return (
     <View style={{ flex: 1 }}>
-      <DeviceListPanel
-        tabs={tabConfig}
-        dataSource={deviceList}
-        highestPosition={TopBar.height}
-        // customRenderList={() => <Text>zzq</Text>}
-      />
+      <DeviceListPanel tabs={tabConfig} dataSource={deviceList} highestPosition={TopBar.height} />
     </View>
   );
 };

@@ -334,7 +334,6 @@ DeviceListPanel.defaultProps = {
   initialPosition: screenHeight / 2,
   autoShrinkDistance: 50,
   isShowIconMore: true,
-  onIconMorePress: () => {},
 };
 
 export default DeviceListPanel;

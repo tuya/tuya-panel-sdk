@@ -6,8 +6,8 @@ export interface SelectDeviceProps {
   activeOpacity?: number;
   dataSource?: Array<DevInfo>;
   selectLimit?: number;
-  containerStyle: StyleProp<ViewStyle>;
-  tipContainerStyle: StyleProp<ViewStyle>;
+  containerStyle?: StyleProp<ViewStyle>;
+  tipContainerStyle?: StyleProp<ViewStyle>;
   tipText?: string;
   tipTextStyle?: StyleProp<TextStyle>;
   offlineText?: string;

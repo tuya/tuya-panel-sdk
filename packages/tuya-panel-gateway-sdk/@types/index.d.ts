@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { Component } from 'react';
 import {
   StyleProp,
   ViewStyle,
@@ -426,7 +426,7 @@ export interface AddDeviceTipModalProps extends AddDeviceTipProps {
   onMaskPress?: () => void;
 }
 
-export const AddDeviceTip: FC<AddDeviceTipProps> = () => {};
+export class AddDeviceTip extends Component<AddDeviceTipProps> {}
 
 export const AddDeviceTipModal: { show: (props: AddDeviceTipModalProps) => void };
 
@@ -623,7 +623,7 @@ export interface SetPasswordModalProps extends SetPasswordProps {
   dialogElseOption?: DialogElse;
 }
 
-export const SetPassword: FC<SetPasswordProps> = () => {};
+export class SetPassword extends Component<SetPasswordProps> {}
 
 export const SetPasswordModal: { show: (props: SetPasswordModalProps) => void };
 
@@ -872,7 +872,7 @@ export interface TempHumWithBlurProps {
   renderHumidity?: () => JSX.Element | null;
 }
 
-export const TempHumWithBlur: FC<TempHumWithBlurProps> = () => {};
+export class TempHumWithBlur extends Component<TempHumWithBlurProps> {}
 
 export interface TopBarWithArcProps {
   /**
@@ -998,7 +998,7 @@ export interface TopBarWithArcProps {
   renderArc?: () => JSX.Element | null;
 }
 
-export const TopBarWithArc: FC<TopBarWithArcProps> = () => {};
+export class TopBarWithArc extends Component<TopBarWithArcProps> {}
 
 /**
  * @language zh-CN
@@ -1309,12 +1309,12 @@ export interface AddProgressProps {
   /**
    * @language zh-CN
    * @description 进度圆环中间的文字的样式
-   * @defaultValue ""
+   * @defaultValue {}
    */
   /**
    * @language en-US
    * @description The style of the text in the middle of the circle
-   * @defaultValue ""
+   * @defaultValue {}
    */
   progressTextStyle?: StyleProp<TextStyle>;
   /**
@@ -1324,7 +1324,7 @@ export interface AddProgressProps {
    */
   /**
    * @language en-US
-   * @description Style of progress circle
+   * @description Style of progress component
    * @defaultValue {}
    */
   progressStyle?: StyleProp<ViewStyle>;
@@ -1346,7 +1346,7 @@ export interface AddProgressProps {
    */
   /**
    * @language en-US
-   * @description Style of title
+   * @description The style of the outermost container
    * @defaultValue {}
    */
   containerStyle?: StyleProp<ViewStyle>;
@@ -1385,51 +1385,51 @@ export interface AddProgressProps {
   timeoutSecond?: number;
   /**
    * @language zh-CN
-   * @description 自定义的进度最大值
+   * @description 自定义的进度最大值仅，当isCustomProgressChange为true时生效
    * @defaultValue 1
    */
   /**
    * @language en-US
-   * @description Customized maximum progress
+   * @description Customized maximum progress, only takes effect when isCustomProgressChange is true
    * @defaultValue 1
    */
   customTotal?: number;
   /**
    * @language zh-CN
-   * @description 自定义的当前进度
+   * @description 自定义的当前进度，仅当isCustomProgressChange为true时生效
    * @defaultValue 0
    */
   /**
    * @language en-US
-   * @description Customized current progress
+   * @description Customized current progress, only takes effect when isCustomProgressChange is true
    * @defaultValue 0
    */
   customProgress?: number;
   /**
    * @language zh-CN
    * @description 超时时触发的事件，入参为已添加成功的设备数量
-   * @defaultValue (prgress: number) => void
+   * @defaultValue 无
    */
   /**
    * @language en-US
-   * @description 超时时触发的事件
-   * @defaultValue (prgress: number) => void
+   * @description Event when adding device is time out
+   * @defaultValue none
    */
-  onTimeout?: () => void;
+  onTimeout?: (prgress: number) => void;
   /**
    * @language zh-CN
    * @description 添加设备完成时的事件
-   * @defaultValue () => void
+   * @defaultValue 无
    */
   /**
    * @language en-US
    * @description Event when adding device is complete
-   * @defaultValue () => void
+   * @defaultValue none
    */
   onFinish?: () => void;
 }
 
-export const AddProgress: FC<AddProgressProps> = () => {};
+export class AddProgress extends Component<AddProgressProps> {}
 
 export interface SelectDeviceProps {
   /**
@@ -1457,129 +1457,171 @@ export interface SelectDeviceProps {
   /**
    * @language zh-CN
    * @description 可勾选项数量上限
-   * @defaultValue 0.9
+   * @defaultValue 无
    */
   /**
    * @language en-US
-   * @description Opacity of the view when touched
-   * @defaultValue 0.9
+   * @description Maximum number of checkable options
+   * @defaultValue none
    */
   selectLimit?: number;
-  containerStyle: StyleProp<ViewStyle>;
-  tipContainerStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 最外层容器样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the outermost container
+   * @defaultValue {}
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 提示文字的容器样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The container style of the prompt text
+   * @defaultValue {}
+   */
+  tipContainerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 提示文字
+   * @defaultValue "请选择要添加的子设备"
+   */
+  /**
+   * @language en-US
+   * @description Prompt text
+   * @defaultValue 'Select the subdevice to add'
+   */
   tipText?: string;
+  /**
+   * @language zh-CN
+   * @description 提示文字样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of prompt text
+   * @defaultValue {}
+   */
   tipTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 离线文字
+   * @defaultValue "设备离线"
+   */
+  /**
+   * @language en-US
+   * @description Offline text
+   * @defaultValue 'Device offline'
+   */
   offlineText?: string;
+  /**
+   * @language zh-CN
+   * @description 离线文字样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of offline text
+   * @defaultValue {}
+   */
   offlineTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 全选按钮的文字
+   * @defaultValue 全选
+   */
+  /**
+   * @language en-US
+   * @description Text of select all button
+   * @defaultValue select all
+   */
   selectAllText?: string;
+  /**
+   * @language zh-CN
+   * @description 全选文字的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of select all text
+   * @defaultValue {}
+   */
   selectAllTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of list
+   * @defaultValue {}
+   */
   listStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 勾选框选中时的tintColor值
+   * @defaultValue '#3566FF'
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is selected
+   * @defaultValue '#3566FF'
+   */
   activedTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选框禁言时的tintColor值
+   * @defaultValue '#DBDBDB'
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is disabled
+   * @defaultValue '#DBDBDB'
+   */
   disabledTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选框未选中时的tintColor值
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is not checked
+   * @defaultValue none
+   */
   normalTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选项改变时触发的事件，入参为已勾选的设备devId列表
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The event that is triggered when the check option is changed, and the input parameter is the devId list of the checked device
+   * @defaultValue none
+   */
   onSelectChange?: (devIds: Array<string>) => void;
+  /**
+   * @language zh-CN
+   * @description 自定义离线状态的渲染
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Customize rendering in offline state
+   * @defaultValue none
+   */
   renderOfflineState?: () => React.ElementType;
 }
 
-export const SelectDevice: FC<SelectDeviceProps> = () => {};
-export interface ITabBar {
-  /**
-   * @language zh-CN
-   * @description Tab 内容样式
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Tab content style
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue undefined
-   */
-  style?: StyleProp<ViewStyle>;
-  /**
-   * @language zh-CN
-   * @description 激活的 Tab 样式
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Active tab style
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue undefined
-   */
-  activeStyle?: StyleProp<ViewStyle>;
-  /**
-   * @language zh-CN
-   * @description 文本样式
-   * @types <a target="_blank" href="https://reactnative.dev/docs/text-style-props">StyleProp<TextStyle></a>
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Text style
-   * @types <a target="_blank" href="https://reactnative.dev/docs/text-style-props">StyleProp<TextStyle></a>
-   * @defaultValue undefined
-   */
-  textStyle?: StyleProp<TextStyle>;
-  /**
-   * @language zh-CN
-   * @description 激活状态下的文本样式
-   * @types <a target="_blank" href="https://reactnative.dev/docs/text-style-props">StyleProp<TextStyle></a>
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Active text style
-   * @types <a target="_blank" href="https://reactnative.dev/docs/text-style-props">StyleProp<TextStyle></a>
-   * @defaultValue undefined
-   */
-  activeTextStyle?: StyleProp<TextStyle>;
-  /**
-   * @language zh-CN
-   * @description 索引值
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Key Value
-   * @defaultValue undefined
-   */
-  key: string;
-  /**
-   * @language zh-CN
-   * @description Tab 里文本
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description Text in tab
-   * @defaultValue undefined
-   */
-  title: string;
-  /**
-   * @language zh-CN
-   * @description 触发单个 Tab 点击回调
-   * @defaultValue () => {}
-   */
-  /**
-   * @language en-US
-   * @description Trigger a single tab click callback
-   * @defaultValue () => {}
-   */
-  onPress?: (index: string) => void;
-  /**
-   * @language zh-CN
-   * @description 当 type: 'radio' 时，触发单个 Tab 点击回调
-   * @defaultValue () => {}
-   */
-  /**
-   * @language en-US
-   * @description When type: 'radio', a single tab click callback is triggered
-   * @defaultValue () => {}
-   */
-  onItemPress?: () => void;
-}
+export class SelectDevice extends Component<SelectDeviceProps> {}
 export interface DeviceListPanelProps {
   /**
    * @language zh-CN
@@ -1655,7 +1697,7 @@ export interface DeviceListPanelProps {
   /**
    * @language en-US
    * @description Half the screen height
-   * @defaultValue 0
+   * @defaultValue Half the screen height
    */
   initialPosition?: number;
   /**
@@ -1716,12 +1758,12 @@ export interface DeviceListPanelProps {
   /**
    * @language zh-CN
    * @description 设备右上角的“更多”图标点击事件
-   * @defaultValue () => {}
+   * @defaultValue 无
    */
   /**
    * @language en-US
    * @description "More" icon click event in the upper right corner of the device item
-   * @defaultValue () => {}
+   * @defaultValue none
    */
   onIconMorePress?: (devInfo: DevInfo) => void;
   /**
@@ -1769,4 +1811,4 @@ export interface DeviceListPanelProps {
    */
   customRenderList?: () => JSX.Element;
 }
-export const DeviceListPanel: FC<DeviceListPanelProps> = () => {};
+export class DeviceListPanel extends Component<DeviceListPanelProps> {}

@@ -1,9 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { Utils } from 'tuya-panel-kit';
 import SelectDevice from '../index';
 
-const { convertX: cx } = Utils.RatioUtils;
 const deviceList = [
   {
     productId: 'kjnntrgi',
