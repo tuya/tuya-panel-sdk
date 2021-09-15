@@ -26,7 +26,8 @@
     "prop-types": "^15.6.2",
     "style-equal": "^1.0.0",
     "styled-components": "^3.4.10",
-    "typescript": "^3.6.4"
+    "typescript": "^3.6.4",
+    "react-native-shadow": "^1.2.2"
   },
   "peerDependencies": {
     "react": "^16.8.3",
