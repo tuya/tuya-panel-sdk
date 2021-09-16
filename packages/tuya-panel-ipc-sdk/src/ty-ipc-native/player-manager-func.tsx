@@ -338,8 +338,8 @@ class PlayerManagerFun {
       () => {
         TYEvent.emit('isTalkingListen', { isTalking: true });
       },
-      () => {
-        TYEvent.emit('isTalkingListen', { isTalking: false });
+      err => {
+        TYEvent.emit('isTalkingListen', { isTalking: false, err });
         CameraManager.showTip(Strings.getLang('operatorFailed'));
       }
     );
