@@ -1534,12 +1534,12 @@ export interface SelectDeviceProps {
   /**
    * @language zh-CN
    * @description 全选按钮的文字
-   * @defaultValue 全选
+   * @defaultValue '全选'
    */
   /**
    * @language en-US
    * @description Text of select all button
-   * @defaultValue select all
+   * @defaultValue 'select all'
    */
   selectAllText?: string;
   /**
@@ -1555,12 +1555,12 @@ export interface SelectDeviceProps {
   selectAllTextStyle?: StyleProp<TextStyle>;
   /**
    * @language zh-CN
-   * @description 列表的样式
+   * @description 设备列表的样式
    * @defaultValue {}
    */
   /**
    * @language en-US
-   * @description Style of list
+   * @description Style of device list
    * @defaultValue {}
    */
   listStyle?: StyleProp<ViewStyle>;
@@ -1577,7 +1577,7 @@ export interface SelectDeviceProps {
   activedTintColor?: string;
   /**
    * @language zh-CN
-   * @description 勾选框禁言时的tintColor值
+   * @description 勾选框禁选时的tintColor值
    * @defaultValue '#DBDBDB'
    */
   /**
@@ -1696,7 +1696,7 @@ export interface DeviceListPanelProps {
    */
   /**
    * @language en-US
-   * @description Half the screen height
+   * @description The initial position of the draggable panel
    * @defaultValue Half the screen height
    */
   initialPosition?: number;
@@ -1773,7 +1773,7 @@ export interface DeviceListPanelProps {
    */
   /**
    * @language en-US
-   * @description tab switching event
+   * @description Tab switching event
    * @defaultValue none
    */
   onTabChange?: (key: string) => void;
