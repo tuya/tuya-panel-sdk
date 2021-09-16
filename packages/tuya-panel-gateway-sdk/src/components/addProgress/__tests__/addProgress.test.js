@@ -43,7 +43,7 @@ describe('AddProgress components', () => {
   });
   it('change is custom progress change', () => {
     const wrapper = shallow(
-      <AddProgress isCustomProgressChange={true} customTotal={10} customProgress={4} />
+      <AddProgress isCustomProgressChange customTotal={10} customProgress={4} />
     );
     expect(wrapper).toMatchSnapshot();
   });
