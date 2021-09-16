@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.0...@tuya/tuya-panel-ipc-sdk@1.9.1) (2021-09-16)
+
+
+### Bug Fixes
+
+* Talkback method export error message. ([#95](https://github.com/tuya/tuya-panel-sdk/issues/95)) ([a7d1dda](https://github.com/tuya/tuya-panel-sdk/commit/a7d1dda8ce7287348ef1878d09766e06d956b491))
+
+
+
+
+
 # [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.8.0...@tuya/tuya-panel-ipc-sdk@1.9.0) (2021-09-10)
 
 
