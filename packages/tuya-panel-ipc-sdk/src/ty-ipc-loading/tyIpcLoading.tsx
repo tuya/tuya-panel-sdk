@@ -31,8 +31,8 @@ const TYIpcLoading: React.FunctionComponent<TYIpcLoadingProps> = props => {
 
   const [animatedValue, setAnimatedValue] = useState([]);
   const [complete, setComplete] = useState<boolean>(false);
-  const [value, setValue] = useState(show);
-  const [completeAnimate, setCompleteAnimate] = useState(new Animated.Value(0));
+  const [value, setValue] = useState<boolean>(show);
+  const [completeAnimate] = useState(new Animated.Value(0));
 
   useEffect(() => {
     startAnimate();

@@ -10,7 +10,7 @@ export interface TYIpcLoadingProps {
   // 动画速度
   loadSpeed: number;
   // 加载完成
-  onComplete: () => void;
+  onComplete?: () => void;
   // 顺序颜色
   sequenceColor: string;
   // 完成颜色
