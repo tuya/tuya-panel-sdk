@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.2.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.2.1...@tuya/tuya-panel-lamp-sdk@1.2.2) (2021-09-13)
+
+**Note:** Version bump only for package @tuya/tuya-panel-lamp-sdk
+
+
+
+
+
 ## [1.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.2.0...@tuya/tuya-panel-lamp-sdk@1.2.1) (2021-09-01)
 
 

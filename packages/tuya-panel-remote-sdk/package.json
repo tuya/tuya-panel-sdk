@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-remote-sdk",
-  "version": "0.2.1",
+  "version": "0.2.3",
   "description": "涂鸦万能遥控器业务与组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",

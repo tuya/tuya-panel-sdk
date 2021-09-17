@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.2.2...@tuya/tuya-panel-remote-sdk@0.2.3) (2021-09-15)
+
+
+### Bug Fixes
+
+* fix interface error of the circle-handle ([#92](https://github.com/tuya/tuya-panel-sdk/issues/92)) ([180bf3c](https://github.com/tuya/tuya-panel-sdk/commit/180bf3c41f090697f807c46d6e4279b5f88f7b13))
+
+
+
+
+
+## [0.2.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.2.1...@tuya/tuya-panel-remote-sdk@0.2.2) (2021-09-13)
+
+**Note:** Version bump only for package @tuya/tuya-panel-remote-sdk
+
+
+
+
+
 ## [0.2.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.2.0...@tuya/tuya-panel-remote-sdk@0.2.1) (2021-09-01)
 
 
