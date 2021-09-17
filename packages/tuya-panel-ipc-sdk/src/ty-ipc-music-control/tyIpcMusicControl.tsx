@@ -84,6 +84,7 @@ TYIpcMusicControl.defaultProps = {
   ipcMusicControl: '1',
   ipcMusicMode: '0',
   themeColor: 'red',
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   pressList: () => {},
   pressControl: () => {
     if (TYSdk.device.getDpSchema('ipc_lullaby_control')) {

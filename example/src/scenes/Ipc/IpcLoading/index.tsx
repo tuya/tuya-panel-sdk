@@ -10,19 +10,19 @@ const IpcLoading: React.FC = () => {
         itemNum={3}
         completeColor="green"
         sequenceColor="green"
-        dotSize={8}
+        dotSize={3}
       />
       <TYIpcLoading
         showComplete={false}
         itemNum={5}
         completeColor="#FA9601"
         sequenceColor="#FA9601"
-        dotSize={8}
+        dotSize={5}
         containerStyle={{ marginTop: 50 }}
       />
       <TYIpcLoading
         showComplete
-        itemNum={5}
+        itemNum={7}
         completeColor="#000000"
         sequenceColor="#000000"
         dotSize={8}
