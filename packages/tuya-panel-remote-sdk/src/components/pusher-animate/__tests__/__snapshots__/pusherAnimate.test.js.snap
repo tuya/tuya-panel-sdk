@@ -1,0 +1,481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 560,
+        "width": 500,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 560,
+          "width": 500,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "height": 514,
+          "width": 460,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "transform": Array [
+              Object {
+                "matrix": Array [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9659258262890683,
+                  -0.25881904510252074,
+                  0.0001437883583902893,
+                  0,
+                  0.25881904510252074,
+                  0.9659258262890683,
+                  -0.0005366254590494824,
+                  0,
+                  -19.0815372781218,
+                  -144.93866525741163,
+                  1.080521480698562,
+                ],
+              },
+            ],
+          },
+          Object {
+            "height": 1028,
+            "width": 460,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 514,
+              "width": 460,
+            },
+            Object {
+              "borderWidth": 1,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "position": "absolute",
+            },
+            Object {
+              "top": 514,
+            },
+            Object {
+              "borderWidth": 1,
+              "height": 1028,
+              "width": 60,
+            },
+          ]
+        }
+      />
+    </AnimatedComponent>
+  </View>
+</View>
+`;
+
+exports[`PressKey components close render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 560,
+        "width": 500,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 560,
+          "width": 500,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "height": 514,
+          "width": 460,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "transform": Array [
+              Object {
+                "matrix": Array [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9659258262890683,
+                  -0.25881904510252074,
+                  0.0001437883583902893,
+                  0,
+                  0.25881904510252074,
+                  0.9659258262890683,
+                  -0.0005366254590494824,
+                  0,
+                  -19.0815372781218,
+                  -144.93866525741163,
+                  1.080521480698562,
+                ],
+              },
+            ],
+          },
+          Object {
+            "height": 1028,
+            "width": 460,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 514,
+              "width": 460,
+            },
+            Object {
+              "borderWidth": 1,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "position": "absolute",
+            },
+            Object {
+              "top": 514,
+            },
+            Object {
+              "borderWidth": 1,
+              "height": 1028,
+              "width": 60,
+            },
+          ]
+        }
+      />
+    </AnimatedComponent>
+  </View>
+</View>
+`;
+
+exports[`PressKey components open render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 560,
+        "width": 500,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 560,
+          "width": 500,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "height": 514,
+          "width": 460,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "transform": Array [
+              Object {
+                "matrix": Array [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9659258262890683,
+                  -0.25881904510252074,
+                  0.0001437883583902893,
+                  0,
+                  0.25881904510252074,
+                  0.9659258262890683,
+                  -0.0005366254590494824,
+                  0,
+                  -19.0815372781218,
+                  -144.93866525741163,
+                  1.080521480698562,
+                ],
+              },
+            ],
+          },
+          Object {
+            "height": 1028,
+            "width": 460,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 514,
+              "width": 460,
+            },
+            Object {
+              "borderWidth": 1,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "position": "absolute",
+            },
+            Object {
+              "top": 514,
+            },
+            Object {
+              "borderWidth": 1,
+              "height": 1028,
+              "width": 60,
+            },
+          ]
+        }
+      />
+    </AnimatedComponent>
+  </View>
+</View>
+`;
+
+exports[`PressKey components pause render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 560,
+        "width": 500,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 560,
+          "width": 500,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "overflow": "hidden",
+          "position": "absolute",
+        },
+        Object {
+          "height": 514,
+          "width": 460,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "transform": Array [
+              Object {
+                "matrix": Array [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0,
+                  0.9659258262890683,
+                  -0.25881904510252074,
+                  0.0001437883583902893,
+                  0,
+                  0.25881904510252074,
+                  0.9659258262890683,
+                  -0.0005366254590494824,
+                  0,
+                  -19.0815372781218,
+                  -144.93866525741163,
+                  1.080521480698562,
+                ],
+              },
+            ],
+          },
+          Object {
+            "height": 1028,
+            "width": 460,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "height": 514,
+              "width": 460,
+            },
+            Object {
+              "borderWidth": 1,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "position": "absolute",
+            },
+            Object {
+              "top": 514,
+            },
+            Object {
+              "borderWidth": 1,
+              "height": 1028,
+              "width": 60,
+            },
+          ]
+        }
+      />
+    </AnimatedComponent>
+  </View>
+</View>
+`;
