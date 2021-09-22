@@ -1,4 +1,4 @@
-import { TYSdk, Utils, DevInfo } from 'tuya-panel-kit';
+import { TYSdk, Utils, DevInfo, StringType } from 'tuya-panel-kit';
 import { unsupportedBluetoothPidList } from '../config';
 
 const { getBitValue } = Utils.NumberUtils;
@@ -283,6 +283,49 @@ const isAddableDevice = ({
   );
 };
 
+/**
+ * @language zh-CN
+ * @description 返回带上前缀的多语言对象
+ * @param {object} originI18n 原始多语言配置对象
+ * @param {string} prefix 前缀
+ * @return {object} 带上前缀的多语言对象
+ */
+/**
+ * @language en-US
+ * @description Returns the prefixed multilingual object
+ * @param {object} originI18n Original multilingual configuration object
+ * @param {string} prefix prefix
+ * @return {object} The prefixed multilingual object
+ */
+const addPrefixToI18n = (
+  originI18n: { [key: string]: StringType },
+  prefix: string
+): { [key: string]: StringType } => {
+  const languageTypeList = Object.keys(originI18n);
+  const copiedOriginI18n = originI18n;
+  const newI18n = {};
+  languageTypeList.forEach(l => {
+    const singleLanguageObj = copiedOriginI18n[l];
+    const list = Object.keys(singleLanguageObj);
+    newI18n[l] = {};
+    list.forEach(item => {
+      newI18n[l][`${prefix}${item}`] = singleLanguageObj[item];
+    });
+  });
+  return newI18n;
+};
+// 获取子设备在线状态
+export const getOnlineState = (pcc = ''): boolean => {
+  // pcc: mesh category
+  if (pcc === '') return false;
+  if (pcc.length > 1) {
+    const _head = pcc[0];
+    const _footer = pcc[pcc.length - 1];
+    return ['05', '50'].includes(`${_head}${_footer}`);
+  }
+  return false;
+};
+
 export default {
   checkCapability,
   getAllDevice,
@@ -294,4 +337,6 @@ export default {
   isBeaconSub,
   isAddableMesh,
   isAddableDevice,
+  addPrefixToI18n,
+  getOnlineState,
 };
