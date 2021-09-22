@@ -359,6 +359,7 @@ export interface PressKeyProps {
 export const PressKey: React.ComponentClass<PressKeyProps>;
 
 type PositionName = 'top' | 'right' | 'bottom' | 'left';
+type AnimateType = 'close' | 'open' | 'pause';
 interface Position {
   top?: any;
   right?: any;
@@ -385,7 +386,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键激活时的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FFFFFF',
       bottom: '#FFFFFF',
@@ -397,7 +398,7 @@ interface PositionInfo {
   /**
    * @language en-US
    * @description The background color when the key is active
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FFFFFF',
       bottom: '#FFFFFF',
@@ -410,7 +411,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键按下后的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -422,7 +423,7 @@ interface PositionInfo {
   /**
    * @language en-US
    * @description The background color after the key is pressed
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -435,7 +436,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键未激活时的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -627,7 +628,7 @@ export interface CircleHandleProps extends PositionInfo {
   /**
    * @language zh-CN
    * @description 按键长按时，是否连续重复触发
-   * @defaultValue 
+   * @defaultValue
    * {
       top: false,
       bottom: false,
@@ -1310,3 +1311,350 @@ export interface CurtainsAnimate {
   curtainsImageStyle: StyleProp<ImageStyle>;
 }
 export const Curtains: React.ComponentClass<CurtainsAnimate>;
+export interface RollerAnimate {
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Component style
+   * @defaultValue null
+   */
+  style: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 卷帘宽度
+   * @defaultValue 250
+   */
+  /**
+   * @language en-US
+   * @description Roller blind width
+   * @defaultValue 250
+   */
+  width: number;
+  /**
+   * @language zh-CN
+   * @description 卷帘高度
+   * @defaultValue 280
+   */
+  /**
+   * @language en-US
+   * @description Roller blind height
+   * @defaultValue 280
+   */
+  height: number;
+  /**
+   * @language zh-CN
+   * @description 初始位置百分比，值0~1
+   * @defaultValue 0.5
+   */
+  /**
+   * @language en-US
+   * @description Percentage of initial position, value 0~1
+   * @defaultValue 0.5
+   */
+  initPercent: number;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮宽度
+   * @defaultValue 40
+   */
+  /**
+   * @language en-US
+   * @description Slide button width
+   * @defaultValue 40
+   */
+  buttonWidth: number;
+  /**
+   * @language zh-CN
+   * @description 动画状态，共三种：'close'，'open'，'pause'
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description There are three animation states: 'close', 'open', 'pause'
+   * @defaultValue null
+   */
+  type: AnimateType;
+  /**
+   * @language zh-CN
+   * @description 卷帘位置
+   * @defaultValue {top: cx(26),left: cx(20)}
+   */
+  /**
+   * @language en-US
+   * @description Roller blind position
+   * @defaultValue {top: cx(26),left: cx(20)}
+   */
+  rollerPosition: RollerPosition;
+  /**
+   * @language zh-CN
+   * @description 动画总时间，以秒为单位
+   * @defaultValue 8
+   */
+  /**
+   * @language en-US
+   * @description Total animation time in seconds
+   * @defaultValue 8
+   */
+  animateTime: number;
+  /**
+   * @language zh-CN
+   * @description 卷帘背景图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Shutter background image
+   * @defaultValue null
+   */
+  bgImage: number;
+  /**
+   * @language zh-CN
+   * @description 卷帘背景图片样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Shutter background picture style
+   * @defaultValue null
+   */
+  bgImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain reel pictures
+   * @defaultValue null
+   */
+  rollerImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴View样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain reel view style
+   * @defaultValue null
+   */
+  rollerStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗帘卷轴Image样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Curtain reel Image style
+   * @defaultValue null
+   */
+  rollerImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button image
+   * @defaultValue null
+   */
+  buttonImage: number;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮View样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button view style
+   * @defaultValue null
+   */
+  buttonStyle: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 滑动按钮Image样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Slide button Image style
+   * @defaultValue null
+   */
+  buttonImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 动画状态执行回调
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Animation state execution callback
+   * @defaultValue null
+   */
+  onChange: (type: AnimateType) => void;
+}
+export const Roller: React.ComponentClass<RollerAnimate>;
+export interface PusherAnimate {
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Component style
+   * @defaultValue null
+   */
+  style: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 推窗器边框宽度
+   * @defaultValue 250
+   */
+  /**
+   * @language en-US
+   * @description Push window frame width
+   * @defaultValue 250
+   */
+  width: number;
+  /**
+   * @language zh-CN
+   * @description 推窗器边框高度
+   * @defaultValue 280
+   */
+  /**
+   * @language en-US
+   * @description Push window frame heigt
+   * @defaultValue 280
+   */
+  height: number;
+  /**
+   * @language zh-CN
+   * @description 窗户宽度
+   * @defaultValue 230
+   */
+  /**
+   * @language en-US
+   * @description Window width
+   * @defaultValue 230
+   */
+  windowWidth: number;
+  /**
+   * @language zh-CN
+   * @description 窗户高度
+   * @defaultValue 257
+   */
+  /**
+   * @language en-US
+   * @description Window height
+   * @defaultValue 257
+   */
+  windowHeight: number;
+  /**
+   * @language zh-CN
+   * @description 支撑杆与窗户底部高度差
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description The height difference between the support rod and the bottom of the window
+   * @defaultValue 0
+   */
+  studdleOffset: number;
+  /**
+   * @language zh-CN
+   * @description 支撑杆主杆图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Support pole main pole picture
+   * @defaultValue null
+   */
+  rodBottom: number;
+  /**
+   * @language zh-CN
+   * @description 支撑杆顶部图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Picture of the top of the support rod
+   * @defaultValue null
+   */
+  rodTop: number;
+  /**
+   * @language zh-CN
+   * @description 窗户打开的最大最小角度,范围:0-90
+   * @defaultValue [0,30]
+   */
+  /**
+   * @language en-US
+   * @description The maximum and minimum angle of window opening, range: 0-90
+   * @defaultValue [0,30]
+   */
+  range: number[];
+  /**
+   * @language zh-CN
+   * @description 动画状态，共三种：'close'，'open'，'pause'
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description There are three animation states: 'close', 'open', 'pause'
+   * @defaultValue null
+   */
+  type: AnimateType;
+  /**
+   * @language zh-CN
+   * @description 窗户边框图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Window frame picture
+   * @defaultValue null
+   */
+  borderImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗户边框图片样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Window border picture style
+   * @defaultValue null
+   */
+  borderImageStyle: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 窗户图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Window picture
+   * @defaultValue null
+   */
+  windowImage: number;
+  /**
+   * @language zh-CN
+   * @description 窗户图片样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Window picture style
+   * @defaultValue null
+   */
+  windowImageStyle: StyleProp<ImageStyle>;
+}
+export const Pusher: React.ComponentClass<PusherAnimate>;
