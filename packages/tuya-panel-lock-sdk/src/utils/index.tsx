@@ -1,47 +1,5 @@
-import { Notification, GlobalToast, TYSdk } from 'tuya-panel-kit';
-import { NativeModules } from 'react-native';
-
-const bleManager = NativeModules.TYRCTBLEManager;
-let flag = true;
-
-// export const reconnectBle = (countdown: number) => {
-//   // 如果设备离线，则在面板内自动触发一次蓝牙连接
-//   const { devId, deviceOnline } = TYSdk.devInfo;
-//   if (!deviceOnline && flag) {
-//     let timer;
-//     let time = countdown;
-//     flag = false;
-//     timer = setInterval(() => {
-//       time--;
-//       Notification.show({
-//         theme: {
-//           warningIcon: 'black',
-//         },
-//         message: Strings.formatValue('connectBle', time),
-//         enableClose: false,
-//         autoCloseTime: time * 1000,
-//       });
-//       if (deviceOnline) {
-//         flag = true;
-//         clearInterval(timer);
-//         Notification.hide();
-//         GlobalToast.show({
-//           showIcon: false,
-//           text: Strings.getLang('bleConnectSuccess'),
-//         });
-//       }
-//       if (time === 1) {
-//         flag = true;
-//         clearInterval(timer);
-//         GlobalToast.show({
-//           showIcon: false,
-//           text: Strings.getLang('bleConnectFailed'),
-//         });
-//       }
-//     }, 1000);
-//     return bleManager.startConnectBleDevice(devId);
-//   }
-// };
+import _padEnd from 'lodash/padEnd';
+import _padStart from 'lodash/padStart';
 
 /**
  * @language zh-CN
@@ -75,4 +33,55 @@ export const getPswMaxLen = (hex: number) => {
 export const getDefaultRandomLen = (hex: number) => {
   const hexMap = { 4: 8, 5: 8, 6: 8, 7: 8, 8: 7, 9: 7, 10: 6 };
   return hexMap[hex] || 6;
+};
+
+/**
+ * @language zh-CN
+ * @description 获取随机密码
+ * @param {number} len 长度
+ * @param {number} maxNum 最大数字
+ * @param {boolean} isHideZero 是否隐藏0
+ * @return {string} 返回密码长度
+ */
+/**
+ * @language en-US
+ * @description Get random password
+ * @param {number} len length
+ * @param {number} maxNum maximum number
+ * @param {boolean} isHideZero whether to hide 0
+ * @return {string} Return the length of the password
+ */
+export const getRandomPassword = (len: number, maxNum: number, isHideZero: boolean): string => {
+  let result = '';
+  const arr = new Array(len).fill(0);
+  arr.forEach(_ => {
+    const _item = Math.round(Math.random() * maxNum);
+    const item = isHideZero && _item === 0 ? _item + 1 : _item;
+    result += item.toString();
+  });
+  return result;
+};
+
+/**
+ * @language zh-CN
+ * @description 包装密码
+ * @param {string} psd
+ * @return {string} 被包装密码
+ */
+/**
+ * @language en-US
+ * @description Package password
+ * @param {string} psd
+ * @return {string} Packed password
+ */
+export const wrapPsd = (psd: string) => {
+  return psd.indexOf('******') !== -1 ? psd.replace('******', '') : psd;
+};
+
+export const getWeekDayNumber = (weekValue: string) => {
+  return parseInt(_padEnd(weekValue, 8, '0'), 2);
+};
+
+export const getWeekDayString = (weekValue: number) => {
+  return _padStart(weekValue.toString(2), 8, '0').slice(0, 7);
 };

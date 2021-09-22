@@ -3,14 +3,10 @@ import { View, StyleSheet, TouchableOpacity } from 'react-native';
 import { Utils, Button, TYText } from 'tuya-panel-kit';
 
 import CustomKeyboard from '../custom-keyboard';
-import { getPswMaxLen, getDefaultRandomLen } from '../utils';
+import { getPswMaxLen, getDefaultRandomLen, wrapPsd, getRandomPassword } from '../utils';
 import { IRandomPasswordProps, IDefaultProps } from './interface';
 
 const { convertX: cx, width } = Utils.RatioUtils;
-
-function wrapPsd(psd: string) {
-  return psd.indexOf('******') !== -1 ? psd.replace('******', '') : psd;
-}
 
 const RandomPassword: FC<IRandomPasswordProps> = ({
   savePassword,
@@ -32,40 +28,39 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
   const pswColor = passwordColor || themeColor;
   const randomColor = randomTextColor || themeColor;
 
-  const [currPassword, setCurrPassword] = useState(password || '');
-  const [showKeyBoard, setShowKeyBoard] = useState(false);
+  const [currPassword, setCurrPassword] = useState<string>(password || '');
+  const [showKeyBoard, setShowKeyBoard] = useState<boolean>(false);
 
+  /**
+   * keyboard 键入值改变
+   * @param item
+   */
   const onValueChange = item => {
     const len = currPassword.length;
     if (len < maxLen && item >= 0 && item <= maxNum) {
       setCurrPassword(wrapPsd(`${currPassword}${item}`));
-      if (typeof savePassword === 'function') {
-        savePassword(wrapPsd(`${currPassword}${item}`));
-      }
+      savePassword && savePassword(wrapPsd(`${currPassword}${item}`));
     } else if (item === -1) {
       setCurrPassword(wrapPsd(currPassword.substring(0, len - 1)));
-      if (typeof savePassword === 'function') {
-        savePassword(wrapPsd(currPassword.substring(0, len - 1)));
-      }
+      savePassword && savePassword(wrapPsd(currPassword.substring(0, len - 1)));
     }
   };
 
-  // 获取随机密码
-  const getRandomPassword = () => {
-    let result = '';
-    const arr = new Array(defaultRandomLen).fill(0);
-    arr.forEach(_ => {
-      const _item = Math.round(Math.random() * maxNum);
-      const item = isHideZero && _item === 0 ? _item + 1 : _item;
-      result += item.toString();
-    });
+  /**
+   * 获取随机密码
+   * @private
+   */
+  const _getRandomPassword = () => {
+    const result = getRandomPassword(defaultRandomLen, maxNum, isHideZero);
     setCurrPassword(result);
-    if (typeof savePassword === 'function') {
-      savePassword(result);
-    }
+    savePassword && savePassword(result);
   };
 
-  const getFontsize = useCallback(() => {
+  /**
+   * 获取密码字体大小
+   * @private
+   */
+  const _getFontsize = useCallback(() => {
     return currPassword.length > 8 ? cx(20) : cx(24);
   }, [currPassword]);
 
@@ -73,7 +68,7 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
     <View style={[styles.container, wrapperStyle]}>
       <TouchableOpacity activeOpacity={1} onPress={() => setShowKeyBoard(true)}>
         <View style={[styles.pwdRandom, style]}>
-          <TYText style={[styles.pwdText, { color: pswColor, fontSize: getFontsize() }]}>
+          <TYText style={[styles.pwdText, { color: pswColor, fontSize: _getFontsize() }]}>
             {currPassword}
           </TYText>
           <Button
@@ -87,11 +82,12 @@ const RandomPassword: FC<IRandomPasswordProps> = ({
             }}
             text={randomText || 'Random'}
             textStyle={[styles.randomText, { color: randomColor }]}
-            onPress={getRandomPassword}
+            onPress={_getRandomPassword}
           />
         </View>
       </TouchableOpacity>
       <CustomKeyboard
+        testID="customKeyboard"
         visible={showKeyBoard}
         onMaskPress={() => setShowKeyBoard(false)}
         maxNum={maxNum}

@@ -1,6 +1,7 @@
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 export const IDefaultProps = {
+  testID: 'customKeyboard',
   maxNum: 9,
   isHasZero: true,
   themeColor: '#239C8E',

@@ -1,0 +1,1761 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SlideChoose component render with btnTextColor 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 26,
+          "borderTopLeftRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientLeft"
+      stops={
+        Object {
+          "0%": "#FF4040",
+          "100%": "rgba(254,72,71,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "black",
+            "left": 16,
+            "position": "absolute",
+          },
+        ]
+      }
+      testID="leftText"
+      type={null}
+      weight={null}
+    >
+      left
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomRightRadius": 26,
+          "borderTopRightRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientRight"
+      stops={
+        Object {
+          "0%": "#239C8E",
+          "100%": "rgba(35,156,142,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "black",
+            "position": "absolute",
+            "right": 16,
+          },
+        ]
+      }
+      testID="rightText"
+      type={null}
+      weight={null}
+    >
+      right
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": 80,
+          "left": 335,
+          "width": 80,
+        },
+      ]
+    }
+    testID="circleKey"
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
+`;
+
+exports[`SlideChoose component should render with custom colors 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 26,
+          "borderTopLeftRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientLeft"
+      stops={
+        Object {
+          "0%": "skyblue",
+          "100%": "blue",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "left": 16,
+            "position": "absolute",
+          },
+        ]
+      }
+      testID="leftText"
+      type={null}
+      weight={null}
+    >
+      left
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomRightRadius": 26,
+          "borderTopRightRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientRight"
+      stops={
+        Object {
+          "0%": "yellow",
+          "100%": "orange",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "position": "absolute",
+            "right": 16,
+          },
+        ]
+      }
+      testID="rightText"
+      type={null}
+      weight={null}
+    >
+      right
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": 80,
+          "left": 335,
+          "width": 80,
+        },
+      ]
+    }
+    testID="circleKey"
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
+`;
+
+exports[`SlideChoose component should render with custom text 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 26,
+          "borderTopLeftRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientLeft"
+      stops={
+        Object {
+          "0%": "#FF4040",
+          "100%": "rgba(254,72,71,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "left": 16,
+            "position": "absolute",
+          },
+        ]
+      }
+      testID="leftText"
+      type={null}
+      weight={null}
+    >
+      同意
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomRightRadius": 26,
+          "borderTopRightRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientRight"
+      stops={
+        Object {
+          "0%": "#239C8E",
+          "100%": "rgba(35,156,142,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "position": "absolute",
+            "right": 16,
+          },
+        ]
+      }
+      testID="rightText"
+      type={null}
+      weight={null}
+    >
+      拒绝
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": 80,
+          "left": 335,
+          "width": 80,
+        },
+      ]
+    }
+    testID="circleKey"
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
+`;
+
+exports[`SlideChoose component should render with tiggerDistance 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 26,
+          "borderTopLeftRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientLeft"
+      stops={
+        Object {
+          "0%": "#FF4040",
+          "100%": "rgba(254,72,71,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "left": 16,
+            "position": "absolute",
+          },
+        ]
+      }
+      testID="leftText"
+      type={null}
+      weight={null}
+    >
+      left
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomRightRadius": 26,
+          "borderTopRightRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientRight"
+      stops={
+        Object {
+          "0%": "#239C8E",
+          "100%": "rgba(35,156,142,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "#fff",
+            "position": "absolute",
+            "right": 16,
+          },
+        ]
+      }
+      testID="rightText"
+      type={null}
+      weight={null}
+    >
+      right
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": 80,
+          "left": 335,
+          "width": 80,
+        },
+      ]
+    }
+    testID="circleKey"
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
+`;
+
+exports[`SlideChoose component test drag 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "transparent",
+      "flexDirection": "row",
+      "justifyContent": "center",
+      "width": 750,
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomLeftRadius": 26,
+          "borderTopLeftRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientLeft"
+      stops={
+        Object {
+          "0%": "#FF4040",
+          "100%": "rgba(254,72,71,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "black",
+            "left": 16,
+            "position": "absolute",
+          },
+        ]
+      }
+      testID="leftText"
+      type={null}
+      weight={null}
+    >
+      left
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "45deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderBottomRightRadius": 26,
+          "borderTopRightRadius": 26,
+          "height": 52,
+          "justifyContent": "center",
+          "overflow": "hidden",
+        },
+        Object {
+          "width": 160,
+        },
+      ]
+    }
+  >
+    <LinearGradient
+      gradientId="GradientRight"
+      stops={
+        Object {
+          "0%": "#239C8E",
+          "100%": "rgba(35,156,142,0.5)",
+        }
+      }
+      style={
+        Object {
+          "height": 52,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="50%"
+      y2="50%"
+    >
+      <Rect
+        height={52}
+        rx={0}
+        ry={0}
+        width={160}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 14,
+            "fontWeight": "bold",
+          },
+          Object {
+            "color": "black",
+            "position": "absolute",
+            "right": 16,
+          },
+        ]
+      }
+      testID="rightText"
+      type={null}
+      weight={null}
+    >
+      right
+    </TYText>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": 16,
+            "justifyContent": "space-around",
+            "left": 54,
+            "position": "absolute",
+            "top": 19,
+            "width": 40,
+          },
+          undefined,
+        ]
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderBottomColor": "#FFF",
+              "borderBottomWidth": 2,
+              "borderLeftColor": "#FFF",
+              "borderLeftWidth": 2,
+              "height": 10,
+              "width": 10,
+            },
+            Object {
+              "opacity": 0.3,
+              "transform": Array [
+                Object {
+                  "rotate": "225deg",
+                },
+              ],
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "height": 80,
+          "left": 335,
+          "width": 80,
+        },
+      ]
+    }
+    testID="circleKey"
+  >
+    <Image
+      source={1}
+    />
+  </View>
+</View>
+`;

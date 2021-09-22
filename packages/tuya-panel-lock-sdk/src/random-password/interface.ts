@@ -1,7 +1,4 @@
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
-import { Utils } from 'tuya-panel-utils';
-
-const { convertX: cx } = Utils.RatioUtils;
+import { StyleProp, ViewStyle } from 'react-native';
 
 export const IDefaultProps = {
   digitalBase: 10,
