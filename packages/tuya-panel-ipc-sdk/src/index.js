@@ -14,5 +14,7 @@ export { default as TYIpcPtz } from './ty-ipc-ptz';
 export { default as TYIpcDragSort } from './ty-ipc-drag-sort';
 export { default as TYIpcMessagePlayer } from './ty-ipc-message-player';
 export { default as TYIpcGpsSignal } from './ty-ipc-gps-signal';
+export { default as TYIpcMusicControl } from './ty-ipc-music-control';
+export { default as TYIpcLoading } from './ty-ipc-loading';
 export { default as TYIpcGridList } from './ty-ipc-grid-list';
 export { default as TYIpcStepButton } from './ty-ipc-step-button';
