@@ -1,4 +1,4 @@
-import { ViewStyle, StyleProp } from 'react-native';
+import { ViewStyle, ImageStyle, StyleProp } from 'react-native';
 
 export interface TYIpcMusicControlProps {
   // The play control.
@@ -27,6 +27,16 @@ export interface TYIpcMusicControlProps {
   listShow: boolean;
   // The theme color.
   themeColor: string;
+  // The mode button style.
+  modeStyle: StyleProp<ImageStyle>;
+  // The pre button style.
+  preStyle: StyleProp<ImageStyle>;
+  // The control button style.
+  controlStyle: StyleProp<ImageStyle>;
+  // The next button style.
+  nextStyle: StyleProp<ImageStyle>;
+  // The list button style.
+  listStyle: StyleProp<ImageStyle>;
   // The container style.
   containerStyle: StyleProp<ViewStyle>;
 }

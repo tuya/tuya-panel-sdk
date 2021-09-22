@@ -31,19 +31,26 @@ const TYIpcMusicControl: React.FunctionComponent<TYIpcMusicControlProps> = props
     controlShow,
     nextShow,
     listShow,
+    modeStyle,
+    preStyle,
+    controlStyle,
+    nextStyle,
+    listStyle,
   } = props;
   const controlData = [
     {
       key: 'mode',
       imageSource: modeShow ? modeImgSource[ipcMusicMode] : '',
+      style: modeStyle,
     },
-    { key: 'prev', imageSource: preShow ? Res.lullaby.lullabyPrev : '' },
+    { key: 'prev', imageSource: preShow ? Res.lullaby.lullabyPrev : '', style: preStyle },
     {
       key: 'control',
       imageSource: controlShow ? controlImgSource[ipcMusicControl] : '',
+      style: controlStyle,
     },
-    { key: 'next', imageSource: nextShow ? Res.lullaby.lullabyNext : '' },
-    { key: 'list', imageSource: listShow ? Res.lullaby.lullabyList : '' },
+    { key: 'next', imageSource: nextShow ? Res.lullaby.lullabyNext : '', style: nextStyle },
+    { key: 'list', imageSource: listShow ? Res.lullaby.lullabyList : '', style: listStyle },
   ];
 
   const pressControlBtn = key => {
@@ -77,7 +84,7 @@ const TYIpcMusicControl: React.FunctionComponent<TYIpcMusicControlProps> = props
           key={item.key}
           onPress={() => pressControlBtn(item.key)}
         >
-          <Image source={item.imageSource} style={{ tintColor: themeColor }} />
+          <Image source={item.imageSource} style={[{ tintColor: themeColor }, item.style]} />
         </TouchableOpacity>
       ))}
     </View>
