@@ -386,7 +386,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键激活时的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FFFFFF',
       bottom: '#FFFFFF',
@@ -398,7 +398,7 @@ interface PositionInfo {
   /**
    * @language en-US
    * @description The background color when the key is active
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FFFFFF',
       bottom: '#FFFFFF',
@@ -411,7 +411,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键按下后的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -423,7 +423,7 @@ interface PositionInfo {
   /**
    * @language en-US
    * @description The background color after the key is pressed
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -436,7 +436,7 @@ interface PositionInfo {
   /**
    * @language zh-CN
    * @description 按键未激活时的背景色
-   * @defaultValue 
+   * @defaultValue
    * {
       top: '#FAFAFA',
       bottom: '#FAFAFA',
@@ -628,7 +628,7 @@ export interface CircleHandleProps extends PositionInfo {
   /**
    * @language zh-CN
    * @description 按键长按时，是否连续重复触发
-   * @defaultValue 
+   * @defaultValue
    * {
       top: false,
       bottom: false,
