@@ -121,9 +121,7 @@ TYIpcMusicControl.defaultProps = {
   nextShow: true,
   listShow: true,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  pressList: () => {
-    console.log(111);
-  },
+  pressList: () => {},
   pressControl: () => {
     if (TYSdk.device.getDpSchema('ipc_lullaby_control')) {
       const dpValue = TYSdk.device.getState('ipc_lullaby_control');

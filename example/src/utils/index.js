@@ -34,7 +34,6 @@ export const traverseRouters = (routers, level = 1, isFirst = true) => {
 export const produceRouterDatas = routers => {
   const sortedRouters = _.sortBy(routers, 'id');
   return sortedRouters.map(({ id, routeProps, ...rest }) => {
-    console.log(id, 'id');
     return {
       key: id,
       title: id === 'Ipc.IpcCrossDevice' ? `${id}(SDK 3.24.5 and above)` : Strings[id] || id,
