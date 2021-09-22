@@ -13,7 +13,7 @@ describe('AddProgress components', () => {
   });
   it('change title text and style', () => {
     const wrapper = shallow(
-      <AddProgress devIds={devIds} title="Adding deivce" titleStyle={{ color: 'yellow' }} />
+      <AddProgress devIds={devIds} title="Adding device" titleStyle={{ color: 'yellow' }} />
     );
     expect(wrapper).toMatchSnapshot();
   });

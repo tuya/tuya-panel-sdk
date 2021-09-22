@@ -5,7 +5,7 @@ exports[`DeviceListPanel components basic render 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "pink",
+        "backgroundColor": "lightblue",
         "flex": 1,
       },
       undefined,
@@ -206,7 +206,7 @@ exports[`DeviceListPanel components change postion 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "pink",
+        "backgroundColor": "lightblue",
         "flex": 1,
       },
       undefined,

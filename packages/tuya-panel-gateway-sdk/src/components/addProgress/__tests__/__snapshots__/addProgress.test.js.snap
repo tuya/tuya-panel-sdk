@@ -543,7 +543,7 @@ exports[`AddProgress components change title text and style 1`] = `
         },
       ]
     }
-    text="Adding deivce"
+    text="Adding device"
     type={null}
     weight={null}
   />
