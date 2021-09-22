@@ -1,22 +1,22 @@
 import { ViewStyle, StyleProp } from 'react-native';
 
 export interface TYIpcLoadingProps {
-  // 是否展示
+  // Specifies whether to show the component.
   show: boolean;
-  // 是否完成
+  // Specifies whether to show the completed status.
   showComplete: boolean;
-  // 加载点的个数
+  // The number of loading dots.
   itemNum: number;
-  // 动画速度
+  // The speed of the animation.
   loadSpeed: number;
-  // 加载完成
+  // Indicates whether the loading task is completed.
   onComplete?: () => void;
-  // 顺序颜色
+  // The sequenced colors.
   sequenceColor: string;
-  // 完成颜色
+  // The color in the completed status.
   completeColor: string;
-  // 加载点大小
+  // The size of loading dots.
   dotSize: number;
-  // 容器样式
+  // The container style.
   containerStyle: StyleProp<ViewStyle>;
 }

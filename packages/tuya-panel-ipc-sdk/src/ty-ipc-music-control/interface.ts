@@ -1,22 +1,32 @@
 import { ViewStyle, StyleProp } from 'react-native';
 
 export interface TYIpcMusicControlProps {
-  // 播放控制
+  // The play control.
   ipcMusicControl: string;
-  // 循环模式
+  // The repeat mode.
   ipcMusicMode: string;
-  // 列表按钮点击
+  // Taps the list.
   pressList?: () => void;
-  // 控制按钮点击
+  // Taps the control button.
   pressControl?: () => void;
-  // 模式按钮点击
+  // Taps the mode button.
   pressMode?: () => void;
-  // 前一曲按钮点击
+  // Taps the Previous button.
   pressPrev?: () => void;
-  // 后一曲按钮点击
+  // Taps the Next button.
   pressNext?: () => void;
-  // 主题色
+  // Specifies whether to show the button.
+  modeShow: boolean;
+  // Specifies whether to show the button.
+  preShow: boolean;
+  // Specifies whether to show the button.
+  controlShow: boolean;
+  // Specifies whether to show the button.
+  nextShow: boolean;
+  // Specifies whether to show the button.
+  listShow: boolean;
+  // The theme color.
   themeColor: string;
-  // 容器样式
+  // The container style.
   containerStyle: StyleProp<ViewStyle>;
 }

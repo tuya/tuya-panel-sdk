@@ -26,19 +26,24 @@ const TYIpcMusicControl: React.FunctionComponent<TYIpcMusicControlProps> = props
     pressPrev,
     pressNext,
     themeColor,
+    modeShow,
+    preShow,
+    controlShow,
+    nextShow,
+    listShow,
   } = props;
   const controlData = [
     {
       key: 'mode',
-      imageSource: modeImgSource[ipcMusicMode],
+      imageSource: modeShow ? modeImgSource[ipcMusicMode] : '',
     },
-    { key: 'prev', imageSource: Res.lullaby.lullabyPrev },
+    { key: 'prev', imageSource: preShow ? Res.lullaby.lullabyPrev : '' },
     {
       key: 'control',
-      imageSource: controlImgSource[ipcMusicControl],
+      imageSource: controlShow ? controlImgSource[ipcMusicControl] : '',
     },
-    { key: 'next', imageSource: Res.lullaby.lullabyNext },
-    { key: 'list', imageSource: Res.lullaby.lullabyList },
+    { key: 'next', imageSource: nextShow ? Res.lullaby.lullabyNext : '' },
+    { key: 'list', imageSource: listShow ? Res.lullaby.lullabyList : '' },
   ];
 
   const pressControlBtn = key => {
@@ -84,6 +89,11 @@ TYIpcMusicControl.defaultProps = {
   ipcMusicControl: '1',
   ipcMusicMode: '0',
   themeColor: 'red',
+  modeShow: true,
+  preShow: true,
+  controlShow: true,
+  nextShow: true,
+  listShow: true,
   // eslint-disable-next-line @typescript-eslint/no-empty-function
   pressList: () => {},
   pressControl: () => {
