@@ -1,4 +1,4 @@
-import { StyleProp, TextStyle, ViewStyle } from 'react-native';
+import { StyleProp, TextStyle } from 'react-native';
 
 export const IDefaultProps = {
   testID: 'customKeyboard',

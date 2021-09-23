@@ -1,5 +1,180 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`WeekSelection components basic ShareManager render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "backgroundColor": "white",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "height": 228,
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <ThemedButton
+    image={1}
+    key="Message"
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 46,
+        "height": 92,
+        "marginTop": 46,
+        "width": 92,
+      }
+    }
+    text="test"
+    textDirection="bottom"
+    textStyle={
+      Object {
+        "color": "#333",
+        "fontSize": 16,
+        "marginTop": 8,
+      }
+    }
+    theme={Object {}}
+    wrapperStyle={
+      Object {
+        "width": 250,
+      }
+    }
+  />
+  <ThemedButton
+    image={1}
+    key="Email"
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 46,
+        "height": 92,
+        "marginTop": 46,
+        "width": 92,
+      }
+    }
+    text="邮件"
+    textDirection="bottom"
+    textStyle={
+      Object {
+        "color": "#333",
+        "fontSize": 16,
+        "marginTop": 8,
+      }
+    }
+    theme={Object {}}
+    wrapperStyle={
+      Object {
+        "width": 250,
+      }
+    }
+  />
+  <ThemedButton
+    image={1}
+    key="WeChat"
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 46,
+        "height": 92,
+        "marginTop": 46,
+        "width": 92,
+      }
+    }
+    text="微信"
+    textDirection="bottom"
+    textStyle={
+      Object {
+        "color": "#333",
+        "fontSize": 16,
+        "marginTop": 8,
+      }
+    }
+    theme={Object {}}
+    wrapperStyle={
+      Object {
+        "width": 250,
+      }
+    }
+  />
+  <ThemedButton
+    image={1}
+    key="Copy"
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 46,
+        "height": 92,
+        "marginTop": 46,
+        "width": 92,
+      }
+    }
+    text="复制"
+    textDirection="bottom"
+    textStyle={
+      Object {
+        "color": "#333",
+        "fontSize": 16,
+        "marginTop": 8,
+      }
+    }
+    theme={Object {}}
+    wrapperStyle={
+      Object {
+        "width": 250,
+      }
+    }
+  />
+  <ThemedButton
+    image={1}
+    key="More"
+    onPress={[Function]}
+    style={
+      Object {
+        "borderRadius": 46,
+        "height": 92,
+        "marginTop": 46,
+        "width": 92,
+      }
+    }
+    text="更多"
+    textDirection="bottom"
+    textStyle={
+      Object {
+        "color": "#333",
+        "fontSize": 16,
+        "marginTop": 8,
+      }
+    }
+    theme={Object {}}
+    wrapperStyle={
+      Object {
+        "width": 250,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`WeekSelection components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.2}
+  onPress={[Function]}
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    text="分享"
+    type={null}
+    weight={null}
+  />
+</TouchableOpacity>
+`;
+
 exports[`WeekSelection components basicd ShareManager render 1`] = `
 <View
   style={

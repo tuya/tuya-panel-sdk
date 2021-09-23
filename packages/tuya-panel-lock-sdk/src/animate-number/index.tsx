@@ -47,7 +47,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
       duration,
       easing: Easing.linear,
     }).start(() => {
-      onLoop();
+      onLoop && onLoop();
       if (loop) {
         startAnimation('');
       }
