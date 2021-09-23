@@ -54,7 +54,7 @@ export const getDefaultRandomLen = (hex: number) => {
 export const getRandomPassword = (len: number, maxNum: number, isHideZero: boolean): string => {
   let result = '';
   const arr = new Array(len).fill(0);
-  arr.forEach(_ => {
+  arr.forEach(() => {
     const _item = Math.round(Math.random() * maxNum);
     const item = isHideZero && _item === 0 ? _item + 1 : _item;
     result += item.toString();

@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useImperativeHandle } from 'react';
+import React from 'react';
 import { TouchableWithoutFeedback, View, Text } from 'react-native';
 import { delayCall } from './utils';
 import { useCountDownTimer } from './hooks';

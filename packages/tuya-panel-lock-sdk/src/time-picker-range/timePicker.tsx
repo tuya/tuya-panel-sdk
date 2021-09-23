@@ -5,10 +5,10 @@ import { TimePickerProp } from './interface';
 
 const { convertX: cx, convertY: cy } = Utils.RatioUtils;
 const TimePicker: React.FC<TimePickerProp> = (props: TimePickerProp) => {
-  const { hour: customeHour, minutes: customeMinutes, second: customeSecond = 0 } = props;
-  const [hour, setHour] = useState(customeHour);
-  const [min, setMin] = useState(customeMinutes);
-  const [second, setSecond] = useState(customeSecond);
+  const { hour: customHour, minutes: customMinutes, second: customSecond = 0 } = props;
+  const [hour, setHour] = useState(customHour);
+  const [min, setMin] = useState(customMinutes);
+  const [second, setSecond] = useState(customSecond);
   const toFixed = (str: number, count: number) => {
     return `${'0'.repeat(count)}${str}`.slice(-1 * count);
   };

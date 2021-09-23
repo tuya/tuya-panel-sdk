@@ -57,7 +57,7 @@ describe('CountDownButton component', () => {
   });
 
   it('render with onCountChange', () => {
-    const component = shallow(<CountDownButton onCountChange={(t, timer) => {}} />);
+    const component = shallow(<CountDownButton onCountChange={() => {}} />);
 
     expect(component.length).toBe(1);
     expect(component).toMatchSnapshot();

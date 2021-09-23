@@ -2,8 +2,8 @@
  * @jest-environment jsdom
  */
 import React from 'react';
-import { TYListItem, Popup, Picker } from 'tuya-panel-kit';
-import { shallow, mount } from 'enzyme';
+import { TYListItem } from 'tuya-panel-kit';
+import { shallow } from 'enzyme';
 import TimePickerRange from '../index';
 import TimePicker from '../timePicker';
 
@@ -13,7 +13,7 @@ jest.mock('tuya-panel-kit', () => {
     ...RealModule,
     Popup: {
       ...RealModule.Popup,
-      custom: ({ content, onConfirm, onCancel }) => {
+      custom: ({ onConfirm, onCancel }) => {
         onConfirm();
         onCancel();
         return null;
@@ -24,13 +24,6 @@ jest.mock('tuya-panel-kit', () => {
 });
 
 describe('TimePickerRange components', () => {
-  const origConsole = console.error;
-  beforeEach(() => {
-    console.error = () => {};
-  });
-  afterEach(() => {
-    console.error = origConsole;
-  });
   // eslint-disable-next-line jest/expect-expect
   it('mount render', () => {
     const wrapper = shallow(

@@ -6,17 +6,11 @@ import { Button } from 'tuya-panel-kit';
 import Share from '../index';
 import ShareManager from '../shareManager';
 
+// eslint-disable-next-line import/no-unresolved
 const logo = require('../../res/safe.png');
 
 describe('WeekSelection components', () => {
-  // let useEffect;
-  // const mockUseEffect = () => {
-  //   useEffect.mockImplementationOnce(f => f());
-  // };
-  // useEffect = jest.spyOn(React, 'useEffect');
-  // mockUseEffect(); // 2 times
-  // mockUseEffect(); //
-  it('basicd render', () => {
+  it('basic render', () => {
     const wrapper = shallow(
       <Share
         shareMessage="浮丘测试"
@@ -27,7 +21,7 @@ describe('WeekSelection components', () => {
     wrapper.find(TouchableOpacity).at(0).simulate('press');
     expect(wrapper).toMatchSnapshot();
   });
-  it('basicd ShareManager render', () => {
+  it('basic ShareManager render', () => {
     const wrapper = shallow(
       <ShareManager
         shareData={{ title: '', message: 'test' }}

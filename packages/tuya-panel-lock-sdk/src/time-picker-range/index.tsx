@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TYListItem, Popup, GlobalToast } from 'tuya-panel-kit';
 import { TimePickerRangeProps, timeItem, ruleProps } from './interface';
@@ -74,7 +74,7 @@ const TimePickerRange: React.FC<TimePickerRangeProps> = (props: TimePickerRangeP
       onCancel: () => {
         Popup.close();
       },
-      onConfirm: date => {
+      onConfirm: () => {
         if (customOnClick) {
           customOnClickRule[key](currentSelectTime);
         } else {

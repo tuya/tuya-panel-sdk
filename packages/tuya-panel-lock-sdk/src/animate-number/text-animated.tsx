@@ -6,7 +6,7 @@ import { TextInputIProp } from './interface';
 export class TextInputForAnimated extends Component<TextInputIProp> {
   render() {
     const { index, displayValues, ...others } = this.props;
-    return <TYText {...others}>{displayValues[~~index]}</TYText>;
+    return <TYText {...others}>{displayValues[Math.floor(index)]}</TYText>;
   }
 }
 

@@ -1,10 +1,10 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { Animated, Easing } from 'react-native';
 import { AnimatedNumberProps } from './interface';
 import AnimatedText from './text-animated';
 
 const calculateValues = (end: number, values: number[], duration: number, speed: number) => {
-  const num = ~~(duration / speed);
+  const num = Math.floor(duration / speed);
   const len = values.length;
   const index = values.findIndex(x => x === end);
   return Array(num)
@@ -22,9 +22,9 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({
   duration = 1000,
   speed = 100,
   values = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-  onStart = () => {},
-  onEnd = () => {},
-  onLoop = () => {},
+  onStart,
+  onEnd,
+  onLoop,
   ...other
 }) => {
   let _canAnimation = useRef<boolean>(true).current;

@@ -35,7 +35,7 @@ describe('getPassword components', () => {
     };
     useEffect = jest.spyOn(React, 'useEffect');
     mockUseEffect();
-    const wrapper = shallow(React.createElement(AnimatedNumber, Object.assign({}, props)));
+    const wrapper = shallow(React.createElement(<AnimatedNumber {...props} />));
     expect(wrapper).toMatchSnapshot();
     wrapper.setProps({ loop: true });
     expect(wrapper).toMatchSnapshot();

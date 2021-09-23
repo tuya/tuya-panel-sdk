@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { CountDownTimerType, Timer } from './interface';
 
 export const useCountDownTimer: CountDownTimerType = (count = 3) => {
@@ -19,7 +19,7 @@ export const useCountDownTimer: CountDownTimerType = (count = 3) => {
     intervalRef.current = setInterval(coutDownFn, 1000);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     startCount();
     return () => clearInterval(intervalRef.current);
   }, []);

@@ -39,7 +39,6 @@ const Share: React.FC<ShareProps> = props => {
       title: <View />,
       footerType: 'singleCancel',
       cancelText,
-      onMaskPress: () => {},
       onCancel: Popup.close,
     });
   };

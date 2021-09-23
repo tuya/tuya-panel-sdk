@@ -35,7 +35,7 @@ const ShareManager: React.FC<ShareMessageProps> = props => {
       try {
         shareManger
           .share(item, shareData)
-          .then((res: any) => {
+          .then(() => {
             Dialog.alert({
               title: sendSuccess,
               subTitle: sendSuccessTip,
