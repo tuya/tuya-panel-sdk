@@ -12,5 +12,7 @@ jobs:
       - uses: c-hive/gha-yarn-cache@v2
       - uses: reviewdog/action-eslint@v1
         with:
+          github_token: ${{ github.token }}
           reporter: github-pr-review
-          eslint_flags: 'packages'
+          eslint_flags: '-c .eslintrc.js packages'
+          level: 'error'
