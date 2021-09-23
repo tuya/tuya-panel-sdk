@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { Component } from 'react';
 import {
   StyleProp,
   ViewStyle,
@@ -6,7 +6,7 @@ import {
   StatusBarStyle,
   ImageSourcePropType,
 } from 'react-native';
-import { DevInfo } from 'tuya-panel-kit';
+import { DevInfo, ProgressProps, StringType } from 'tuya-panel-kit';
 import { unsupportedBluetoothPidList } from '../src/config';
 
 // TipItem
@@ -426,7 +426,7 @@ export interface AddDeviceTipModalProps extends AddDeviceTipProps {
   onMaskPress?: () => void;
 }
 
-export const AddDeviceTip: FC<AddDeviceTipProps> = () => {};
+export class AddDeviceTip extends Component<AddDeviceTipProps> {}
 
 export const AddDeviceTipModal: { show: (props: AddDeviceTipModalProps) => void };
 
@@ -623,7 +623,7 @@ export interface SetPasswordModalProps extends SetPasswordProps {
   dialogElseOption?: DialogElse;
 }
 
-export const SetPassword: FC<SetPasswordProps> = () => {};
+export class SetPassword extends Component<SetPasswordProps> {}
 
 export const SetPasswordModal: { show: (props: SetPasswordModalProps) => void };
 
@@ -872,7 +872,7 @@ export interface TempHumWithBlurProps {
   renderHumidity?: () => JSX.Element | null;
 }
 
-export const TempHumWithBlur: FC<TempHumWithBlurProps> = () => {};
+export class TempHumWithBlur extends Component<TempHumWithBlurProps> {}
 
 export interface TopBarWithArcProps {
   /**
@@ -998,7 +998,7 @@ export interface TopBarWithArcProps {
   renderArc?: () => JSX.Element | null;
 }
 
-export const TopBarWithArc: FC<TopBarWithArcProps> = () => {};
+export class TopBarWithArc extends Component<TopBarWithArcProps> {}
 
 /**
  * @language zh-CN
@@ -1194,4 +1194,621 @@ export const GatewayUtils: {
     bluetoothPidBlackList?: Array<string>;
     supportBeacon?: boolean;
   }) => boolean;
+  /**
+   * @language zh-CN
+   * @description 返回带上前缀的多语言对象
+   * @param {string} prefix 前缀
+   * @param {object} originI18n 原始多语言配置对象
+   * @return {object} 带上前缀的多语言对象
+   */
+  /**
+   * @language en-US
+   * @description Returns the prefixed multilingual object
+   * @param {string} prefix prefix
+   * @param {object} originI18n Original multilingual configuration object
+   * @return {object} The prefixed multilingual object
+   */
+  addPrefixToI18n: (
+    originI18n: { [key: string]: StringType },
+    prefix: string
+  ) => { [key: string]: StringType };
+  /**
+   * @language zh-CN
+   * @description 获取设备在线状态
+   * @param {string} pcc 设备的pcc字段
+   * @return {boolean} 是否在线
+   */
+  /**
+   * @language en-US
+   * @description Get device online status
+   * @param {string} pcc Pcc field of the device
+   * @return {boolean} device online status
+   */
+  getOnlineState: (pcc: string) => boolean;
 };
+
+export interface StopsProps {
+  offset: string;
+  stopColor: string;
+  stopOpacity: string;
+}
+export interface AddProgressProps {
+  /**
+   * @language zh-CN
+   * @description 是否自定义进度变化
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description Whether to customize the progress change
+   * @defaultValue false
+   */
+  isCustomProgressChange?: boolean;
+  /**
+   * @language zh-CN
+   * @description 要添加的设备id数组，数组长度将作为进度的最大值
+   * @defaultValue []
+   */
+  /**
+   * @language en-US
+   * @description Array of device ids to be added,the length of the array will be the maximum value of the progress
+   * @defaultValue []
+   */
+  devIds?: Array<string>;
+  /**
+   * @language zh-CN
+   * @description 进度条小于具体值的颜色
+   * @types string | <a target="_blank" href="https://github.com/tuya/DefinitelyTyped/blob/bcd9b9272bcbe9e172409f2b0b0b9fa280fdb976/types/tuya-panel-kit/theme.d.ts#L1">StopsProps</a>[] | { [key: string]: string }
+   * @defaultValue { '0%': '#1381FB', '100%': '#00C36C' }
+   */
+  /**
+   * @language en-US
+   * @description Color of progress bar less than specific value
+   * @types string | <a target="_blank" href="https://github.com/tuya/DefinitelyTyped/blob/bcd9b9272bcbe9e172409f2b0b0b9fa280fdb976/types/tuya-panel-kit/theme.d.ts#L1">StopsProps</a>[] | { [key: string]: string }
+   * @defaultValue { '0%': '#1381FB', '100%': '#00C36C' }
+   */
+  foreColor?:
+    | string
+    | StopsProps[]
+    | {
+        [key: string]: string;
+      };
+  /**
+   * @language zh-CN
+   * @description 标题
+   * @defaultValue "添加设备中"
+   */
+  /**
+   * @language en-US
+   * @description Title
+   * @defaultValue "Add device"
+   */
+  title?: string;
+  /**
+   * @language zh-CN
+   * @description 提示语
+   * @defaultValue "1、添加过程中，请保持设备处于连接状态;\n2、添加过程中，设备将不能再使用，请耐心等待。"
+   */
+  /**
+   * @language en-US
+   * @description Prompt
+   * @defaultValue "1. Please keep the device in the connected state during the process of adding; \n2, During the process of adding, the device will no longer be used, please be patient."
+   */
+  prompt?: string;
+  /**
+   * @language zh-CN
+   * @description 自定义进度圆环中间的文字
+   * @defaultValue ""
+   */
+  /**
+   * @language en-US
+   * @description Customize the text in the middle of the progress circle
+   * @defaultValue ""
+   */
+  progressText?: string;
+  /**
+   * @language zh-CN
+   * @description 进度圆环中间的文字的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the text in the middle of the circle
+   * @defaultValue {}
+   */
+  progressTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 进度圆环的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of progress component
+   * @defaultValue {}
+   */
+  progressStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 进度组件的属性
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Properties of the progress component
+   * @defaultValue {}
+   */
+  progressProps?: ProgressProps;
+  /**
+   * @language zh-CN
+   * @description 最外层样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the outermost container
+   * @defaultValue {}
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 标题样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of title
+   * @defaultValue {}
+   */
+  titleStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 提示语样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of prompt
+   * @defaultValue {}
+   */
+  promptStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 超时时间，以秒为单位，超过这个时间没有更新进度，将会触发onTimeout事件
+   * @defaultValue 30
+   */
+  /**
+   * @language en-US
+   * @description The timeout period, in seconds, if no progress is updated after this time, the onTimeout event will be triggered
+   * @defaultValue 30
+   */
+  timeoutSecond?: number;
+  /**
+   * @language zh-CN
+   * @description 自定义的进度最大值仅，当isCustomProgressChange为true时生效
+   * @defaultValue 1
+   */
+  /**
+   * @language en-US
+   * @description Customized maximum progress, only takes effect when isCustomProgressChange is true
+   * @defaultValue 1
+   */
+  customTotal?: number;
+  /**
+   * @language zh-CN
+   * @description 自定义的当前进度，仅当isCustomProgressChange为true时生效
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description Customized current progress, only takes effect when isCustomProgressChange is true
+   * @defaultValue 0
+   */
+  customProgress?: number;
+  /**
+   * @language zh-CN
+   * @description 超时时触发的事件，入参为已添加成功的设备数量
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Event when adding device is time out
+   * @defaultValue none
+   */
+  onTimeout?: (prgress: number) => void;
+  /**
+   * @language zh-CN
+   * @description 添加设备完成时的事件
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Event when adding device is complete
+   * @defaultValue none
+   */
+  onFinish?: () => void;
+}
+
+export class AddProgress extends Component<AddProgressProps> {}
+
+export interface SelectDeviceProps {
+  /**
+   * @language zh-CN
+   * @description 触摸时视图的不透明度
+   * @defaultValue 0.9
+   */
+  /**
+   * @language en-US
+   * @description Opacity of the view when touched
+   * @defaultValue 0.9
+   */
+  activeOpacity?: number;
+  /**
+   * @language zh-CN
+   * @description 数据列表
+   * @defaultValue []
+   */
+  /**
+   * @language en-US
+   * @description Data List
+   * @defaultValue []
+   */
+  dataSource?: Array<DevInfo>;
+  /**
+   * @language zh-CN
+   * @description 可勾选项数量上限
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Maximum number of checkable options
+   * @defaultValue none
+   */
+  selectLimit?: number;
+  /**
+   * @language zh-CN
+   * @description 最外层容器样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the outermost container
+   * @defaultValue {}
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 提示文字的容器样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The container style of the prompt text
+   * @defaultValue {}
+   */
+  tipContainerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 提示文字
+   * @defaultValue "请选择要添加的子设备"
+   */
+  /**
+   * @language en-US
+   * @description Prompt text
+   * @defaultValue 'Select the subdevice to add'
+   */
+  tipText?: string;
+  /**
+   * @language zh-CN
+   * @description 提示文字样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of prompt text
+   * @defaultValue {}
+   */
+  tipTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 离线文字
+   * @defaultValue "设备离线"
+   */
+  /**
+   * @language en-US
+   * @description Offline text
+   * @defaultValue 'Device offline'
+   */
+  offlineText?: string;
+  /**
+   * @language zh-CN
+   * @description 离线文字样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of offline text
+   * @defaultValue {}
+   */
+  offlineTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 全选按钮的文字
+   * @defaultValue '全选'
+   */
+  /**
+   * @language en-US
+   * @description Text of select all button
+   * @defaultValue 'select all'
+   */
+  selectAllText?: string;
+  /**
+   * @language zh-CN
+   * @description 全选文字的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of select all text
+   * @defaultValue {}
+   */
+  selectAllTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 设备列表的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Style of device list
+   * @defaultValue {}
+   */
+  listStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 勾选框选中时的tintColor值
+   * @defaultValue '#3566FF'
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is selected
+   * @defaultValue '#3566FF'
+   */
+  activedTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选框禁选时的tintColor值
+   * @defaultValue '#DBDBDB'
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is disabled
+   * @defaultValue '#DBDBDB'
+   */
+  disabledTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选框未选中时的tintColor值
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The tintColor value when the check box is not checked
+   * @defaultValue none
+   */
+  normalTintColor?: string;
+  /**
+   * @language zh-CN
+   * @description 勾选项改变时触发的事件，入参为已勾选的设备devId列表
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The event that is triggered when the check option is changed, and the input parameter is the devId list of the checked device
+   * @defaultValue none
+   */
+  onSelectChange?: (devIds: Array<string>) => void;
+  /**
+   * @language zh-CN
+   * @description 自定义离线状态的渲染
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Customize rendering in offline state
+   * @defaultValue none
+   */
+  renderOfflineState?: () => React.ElementType;
+}
+
+export class SelectDevice extends Component<SelectDeviceProps> {}
+export interface DeviceListPanelProps {
+  /**
+   * @language zh-CN
+   * @description 设备列表数据源
+   * @defaultValue []
+   */
+  /**
+   * @language en-US
+   * @description Data for device list
+   * @defaultValue []
+   */
+  dataSource?: Array<DevInfo>;
+  /**
+   * @language zh-CN
+   * @description 切换设备列表的tab配置
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The tab config of the device type list
+   * @defaultValue none
+   */
+  tabs: Array<TabBarArr>;
+  /**
+   * @language zh-CN
+   * @description 可拖拽面板的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description Draggable panel style
+   * @defaultValue {}
+   */
+  panelStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 组件最外层容器样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The outermost container style of the component
+   * @defaultValue {}
+   */
+  containerStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 组件tabBar的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the component tabBar
+   * @defaultValue {}
+   */
+  tabBarStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 可拖拽面板拖到顶时，距离顶部的距离
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description The distance from the top when the draggable panel is dragged to the top
+   * @defaultValue 0
+   */
+  highestPosition?: number;
+  /**
+   * @language zh-CN
+   * @description 可拖拽面板的初始位置
+   * @defaultValue 屏幕高度的一半
+   */
+  /**
+   * @language en-US
+   * @description The initial position of the draggable panel
+   * @defaultValue Half the screen height
+   */
+  initialPosition?: number;
+  /**
+   * @language zh-CN
+   * @description 自动吸顶或者吸底的距离
+   * @defaultValue 50
+   */
+  /**
+   * @language en-US
+   * @description Automatic top or bottom suction distance
+   * @defaultValue 50
+   */
+  autoShrinkDistance?: number;
+  /**
+   * @language zh-CN
+   * @description 设备是否显示右上角的更多图标
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether the device displays more icons in the upper right corner
+   * @defaultValue true
+   */
+  isShowIconMore?: boolean;
+  /**
+   * @language zh-CN
+   * @description 初始选中的tabBar的key
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description The key of the initially selected tabBar
+   * @defaultValue none
+   */
+  initialTab?: string;
+  /**
+   * @language zh-CN
+   * @description 子节点
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Child node
+   * @defaultValue none
+   */
+  children?: React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 列表为空时显示的组件
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Components displayed when the list is empty
+   * @defaultValue none
+   */
+  ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
+  /**
+   * @language zh-CN
+   * @description 设备右上角的“更多”图标点击事件
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description "More" icon click event in the upper right corner of the device item
+   * @defaultValue none
+   */
+  onIconMorePress?: (devInfo: DevInfo) => void;
+  /**
+   * @language zh-CN
+   * @description tab切换事件
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Tab switching event
+   * @defaultValue none
+   */
+  onTabChange?: (key: string) => void;
+  /**
+   * @language zh-CN
+   * @description 自定义设备项渲染函数
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Custom device item rendering function
+   * @defaultValue none
+   */
+  customRenderItem?: ListRenderItem<DevInfo>;
+  /**
+   * @language zh-CN
+   * @description 自定义TabBar渲染函数
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Custom TabBar rendering function
+   * @defaultValue none
+   */
+  customRenderTabBar?: () => JSX.Element;
+  /**
+   * @language zh-CN
+   * @description 自定义设备列表渲染函数
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Customize the device list rendering function
+   * @defaultValue none
+   */
+  customRenderList?: () => JSX.Element;
+}
+export class DeviceListPanel extends Component<DeviceListPanelProps> {}

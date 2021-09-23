@@ -83,6 +83,7 @@ module.exports = {
             extensions: ['.js', '.jsx', '.tsx'],
           },
         ],
+        'react/state-in-constructor': 0,
       },
       "settings": {
         "import/resolver": {

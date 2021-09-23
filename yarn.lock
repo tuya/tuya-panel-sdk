@@ -11138,6 +11138,11 @@ react-native-screens@2.10.1:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
   integrity sha512-Z2kKSk4AwWRQNCBmTjViuBQK0/Lx0jc25TZptn/2gKYUCOuVRvCekoA26u0Tsb3BIQ8tWDsZW14OwDlFUXW1aw==
 
+react-native-shadow@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.npm.taobao.org/react-native-shadow/download/react-native-shadow-1.2.2.tgz#08991cd14b71e32f2fc6363911c139d231949a66"
+  integrity sha1-CJkc0Utx4y8vxjY5EcE50jGUmmY=
+
 react-native-svg@5.5.1:
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/react-native-svg/-/react-native-svg-5.5.1.tgz#633d882077f048f05c721ebb793cd073e846ba1f"

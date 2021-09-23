@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.1...@tuya/tuya-panel-ipc-sdk@1.10.0) (2021-09-22)
+
+
+### Features
+
+* **ipc:** add music and loading component ([#97](https://github.com/tuya/tuya-panel-sdk/issues/97)) ([b24992b](https://github.com/tuya/tuya-panel-sdk/commit/b24992b88fad74d8137d499c3749d3dabca747cf))
+
+
+
+
+
 ## [1.9.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.0...@tuya/tuya-panel-ipc-sdk@1.9.1) (2021-09-16)
 
 
