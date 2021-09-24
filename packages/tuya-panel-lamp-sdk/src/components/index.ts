@@ -19,3 +19,5 @@ export { default as LampPreview } from './preview/lamp-preview';
 export { default as ColorSelectorNoScroll } from './list/color-selector-noScroll';
 
 export { default as SingleTimePicker } from './time/single-time-picker';
+
+export { default as CountdownPicker } from './picker/countdown-picker';

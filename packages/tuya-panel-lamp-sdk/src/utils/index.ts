@@ -89,3 +89,7 @@ export const getStrLengthByByte = (value: string): number => {
   // eslint-disable-next-line no-control-regex
   return value.replace(/[^\u0000-\u00ff]/g, '**').length;
 };
+
+export function formatTime(value: number): string {
+  return _.padStart(String(value), 2, '0');
+}
