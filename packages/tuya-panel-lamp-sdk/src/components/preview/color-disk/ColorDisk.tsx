@@ -25,7 +25,7 @@ const ColorDisk: FC<ColorDiskProps> = ({ style, radius = 0, startAngle = 0, colo
     <Svg style={style} height={radius * 2} width={radius * 2}>
       {colorDatas.map(({ color, center, startX, startY, endX, endY }, index) => (
         <Path
-          key={index}
+          key={String(index)}
           d={`M ${center[0]} ${center[1]} L ${startX} ${startY} A ${radius} ${radius} 0 0 1 ${endX} ${endY} Z`}
           stroke="none"
           strokeWidth={0}
