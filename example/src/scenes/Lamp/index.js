@@ -13,6 +13,11 @@ import LampLightPreviewScene from './LampLightPreview';
 import LampPreviewScene from './LampPreview';
 import ColorSelectorNoScrollScene from './ColorSelectorNoScroll';
 import SingleTimePickerScene from './SingleTimePicker';
+import BrightRectSliderScene from './BrightRectSlider';
+import HueBrightCrossSliderScene from './HueBrightCrossSlider';
+import NumberSliderScene from './NumberSlider';
+import ScaleSliderScene from './ScaleSlider';
+import WhiteCrossSliderScene from './WhiteCrossSlider';
 
 export default class LampScene extends Component {
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
@@ -26,6 +31,11 @@ export default class LampScene extends Component {
   static LampPreview = LampPreviewScene;
   static ColorSelectorNoScroll = ColorSelectorNoScrollScene;
   static SingleTimePicker = SingleTimePickerScene;
+  static BrightRectSlider = BrightRectSliderScene;
+  static HueBrightCrossSlider = HueBrightCrossSliderScene;
+  static NumberSlider = NumberSliderScene;
+  static ScaleSlider = ScaleSliderScene;
+  static WhiteCrossSlider = WhiteCrossSliderScene;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
