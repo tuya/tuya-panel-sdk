@@ -2,6 +2,7 @@ module.exports = {
   extends: ['tuya-panel'],
   plugins: ['literal-check'],
   rules: {
+    'react/display-name': 1,
     'literal-check/literal-check': [
       2,
       ['tuya.'],
@@ -63,4 +64,34 @@ module.exports = {
       ],
     ]
   },
+  overrides: [
+    {
+      files: ['*.js'],
+      extends: ['airbnb', 'airbnb/hooks', 'prettier', 'prettier/react'],
+      parser: 'babel-eslint',
+      parserOptions: {
+        ecmaFeatures: {
+          jsx: true,
+        }
+      },
+      rules: {
+        ...require('eslint-config-tuya-panel/overrides/rules/javascript'),
+        ...require('eslint-config-tuya-panel/overrides/rules/react'),
+        'react/jsx-filename-extension': [
+          2,
+          {
+            extensions: ['.js', '.jsx', '.tsx'],
+          },
+        ],
+        'react/state-in-constructor': 0,
+      },
+      "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          }
+        }
+      },
+    }
+  ],
 };

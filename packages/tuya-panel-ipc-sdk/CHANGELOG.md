@@ -3,6 +3,77 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.1...@tuya/tuya-panel-ipc-sdk@1.10.0) (2021-09-22)
+
+
+### Features
+
+* **ipc:** add music and loading component ([#97](https://github.com/tuya/tuya-panel-sdk/issues/97)) ([b24992b](https://github.com/tuya/tuya-panel-sdk/commit/b24992b88fad74d8137d499c3749d3dabca747cf))
+
+
+
+
+
+## [1.9.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.0...@tuya/tuya-panel-ipc-sdk@1.9.1) (2021-09-16)
+
+
+### Bug Fixes
+
+* Talkback method export error message. ([#95](https://github.com/tuya/tuya-panel-sdk/issues/95)) ([a7d1dda](https://github.com/tuya/tuya-panel-sdk/commit/a7d1dda8ce7287348ef1878d09766e06d956b491))
+
+
+
+
+
+# [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.8.0...@tuya/tuya-panel-ipc-sdk@1.9.0) (2021-09-10)
+
+
+### Bug Fixes
+
+* **ipc:** fix the bug of ipc message player ([#88](https://github.com/tuya/tuya-panel-sdk/issues/88)) ([7f6cf98](https://github.com/tuya/tuya-panel-sdk/commit/7f6cf986dc3eb29a9e01295f0a4c83256a21a40c))
+
+
+### Features
+
+* add IpcGridList and IpcStepButton component ([#86](https://github.com/tuya/tuya-panel-sdk/issues/86)) ([a68a002](https://github.com/tuya/tuya-panel-sdk/commit/a68a00224b333a95cf64ddb63ca4bf859336ae5a))
+* add singleTimePicker component ([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([8b8fbf0](https://github.com/tuya/tuya-panel-sdk/commit/8b8fbf04aed68e1570bcd4b339ddfd726bf45ae5))
+
+
+
+
+
+# [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.7.0...@tuya/tuya-panel-ipc-sdk@1.8.0) (2021-08-28)
+
+
+### Bug Fixes
+
+* add import TYIpcGpsSignal from '../index'; ([770b7c2](https://github.com/tuya/tuya-panel-sdk/commit/770b7c257ce31e3f08878c6d305d69d658a340ea))
+
+
+### Features
+
+* add iosSnapShootToPhoneAlbums, pausePlay method ([#81](https://github.com/tuya/tuya-panel-sdk/issues/81)) ([fe6fc6e](https://github.com/tuya/tuya-panel-sdk/commit/fe6fc6e9b4c7123e33c5ca2f549d19bd79020a1c))
+
+
+
+
+
+# [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.6.0...@tuya/tuya-panel-ipc-sdk@1.7.0) (2021-08-24)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([d78a174](https://github.com/tuya/tuya-panel-sdk/commit/d78a1749966e7e7348fcc8614a7c15ff4954e76f))
+
+
+### Features
+
+* **ipc:** add gps signal and message player component ([#76](https://github.com/tuya/tuya-panel-sdk/issues/76)) ([0dedf2b](https://github.com/tuya/tuya-panel-sdk/commit/0dedf2bb1ff326bfac92257331995ad453827d52))
+
+
+
+
+
 # [1.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.5.1...@tuya/tuya-panel-ipc-sdk@1.6.0) (2021-08-12)
 
 

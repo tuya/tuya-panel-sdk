@@ -1,0 +1,642 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddProgress components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingHorizontal": 52,
+        "paddingVertical": 60,
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "marginBottom": 40,
+        },
+        Object {},
+      ]
+    }
+    text="Add device"
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={360}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor={
+        Object {
+          "0%": "#1381FB",
+          "100%": "#00C36C",
+        }
+      }
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={6}
+      startColor="#1381FB"
+      startDegree={-90}
+      stepValue={0}
+      style={
+        Array [
+          Object {
+            "height": 260,
+            "width": 260,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={0}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 40,
+            "position": "absolute",
+          },
+          Object {},
+        ]
+      }
+      text="0 / 3"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999",
+          "fontSize": 24,
+          "lineHeight": 40,
+          "marginTop": 40,
+        },
+        Object {},
+      ]
+    }
+    text="1. Please keep the device in the connected state during the process of adding; 
+2, During the process of adding, the device will no longer be used, please be patient. "
+    type={null}
+    weight={null}
+  />
+</View>
+`;
+
+exports[`AddProgress components change is custom progress change 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingHorizontal": 52,
+        "paddingVertical": 60,
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "marginBottom": 40,
+        },
+        Object {},
+      ]
+    }
+    text="Add device"
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={360}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor={
+        Object {
+          "0%": "#1381FB",
+          "100%": "#00C36C",
+        }
+      }
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={6}
+      startColor="#1381FB"
+      startDegree={-90}
+      stepValue={0}
+      style={
+        Array [
+          Object {
+            "height": 260,
+            "width": 260,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={0}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 40,
+            "position": "absolute",
+          },
+          Object {},
+        ]
+      }
+      text="0 / 10"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999",
+          "fontSize": 24,
+          "lineHeight": 40,
+          "marginTop": 40,
+        },
+        Object {},
+      ]
+    }
+    text="1. Please keep the device in the connected state during the process of adding; 
+2, During the process of adding, the device will no longer be used, please be patient. "
+    type={null}
+    weight={null}
+  />
+</View>
+`;
+
+exports[`AddProgress components change progress text and style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingHorizontal": 52,
+        "paddingVertical": 60,
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "marginBottom": 40,
+        },
+        Object {},
+      ]
+    }
+    text="Add device"
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={360}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor={
+        Object {
+          "0%": "yellow",
+          "100%": "green",
+        }
+      }
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={6}
+      startColor="#1381FB"
+      startDegree={-90}
+      stepValue={0}
+      style={
+        Array [
+          Object {
+            "height": 260,
+            "width": 260,
+          },
+          Object {
+            "height": 200,
+            "with": 200,
+          },
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={0}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 40,
+            "position": "absolute",
+          },
+          Object {},
+        ]
+      }
+      text="4 / 8"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999",
+          "fontSize": 24,
+          "lineHeight": 40,
+          "marginTop": 40,
+        },
+        Object {},
+      ]
+    }
+    text="1. Please keep the device in the connected state during the process of adding; 
+2, During the process of adding, the device will no longer be used, please be patient. "
+    type={null}
+    weight={null}
+  />
+</View>
+`;
+
+exports[`AddProgress components change prompt text and style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingHorizontal": 52,
+        "paddingVertical": 60,
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "marginBottom": 40,
+        },
+        Object {},
+      ]
+    }
+    text="Add device"
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={360}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor={
+        Object {
+          "0%": "#1381FB",
+          "100%": "#00C36C",
+        }
+      }
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={6}
+      startColor="#1381FB"
+      startDegree={-90}
+      stepValue={0}
+      style={
+        Array [
+          Object {
+            "height": 260,
+            "width": 260,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={0}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 40,
+            "position": "absolute",
+          },
+          Object {},
+        ]
+      }
+      text="0 / 3"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999",
+          "fontSize": 24,
+          "lineHeight": 40,
+          "marginTop": 40,
+        },
+        Object {
+          "color": "lightblue",
+        },
+      ]
+    }
+    text="During the process of adding, the device will no longer be used, please be patient."
+    type={null}
+    weight={null}
+  />
+</View>
+`;
+
+exports[`AddProgress components change title text and style 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#FFF",
+        "borderRadius": 32,
+        "paddingHorizontal": 52,
+        "paddingVertical": 60,
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "fontSize": 32,
+          "fontWeight": "600",
+          "marginBottom": 40,
+        },
+        Object {
+          "color": "yellow",
+        },
+      ]
+    }
+    text="Adding device"
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={360}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor={
+        Object {
+          "0%": "#1381FB",
+          "100%": "#00C36C",
+        }
+      }
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={6}
+      startColor="#1381FB"
+      startDegree={-90}
+      stepValue={0}
+      style={
+        Array [
+          Object {
+            "height": 260,
+            "width": 260,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={0}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 40,
+            "position": "absolute",
+          },
+          Object {},
+        ]
+      }
+      text="0 / 3"
+      type={null}
+      weight={null}
+    />
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#999",
+          "fontSize": 24,
+          "lineHeight": 40,
+          "marginTop": 40,
+        },
+        Object {},
+      ]
+    }
+    text="1. Please keep the device in the connected state during the process of adding; 
+2, During the process of adding, the device will no longer be used, please be patient. "
+    type={null}
+    weight={null}
+  />
+</View>
+`;

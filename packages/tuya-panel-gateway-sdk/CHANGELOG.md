@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.3.0...@tuya/tuya-panel-gateway-sdk@1.4.0) (2021-09-22)
+
+
+### Features
+
+* add gateway compoents ([#94](https://github.com/tuya/tuya-panel-sdk/issues/94)) ([ca31a18](https://github.com/tuya/tuya-panel-sdk/commit/ca31a18f3ca18e3a5cbf5c93e2bbd7929c3443f0))
+
+
+
+
+
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.2.2...@tuya/tuya-panel-gateway-sdk@1.3.0) (2021-08-25)
+
+
+### Features
+
+* add gateway util library ([#77](https://github.com/tuya/tuya-panel-sdk/issues/77)) ([d27c0e0](https://github.com/tuya/tuya-panel-sdk/commit/d27c0e019ac4266985f37a910384a230b572fcef))
+
+
+
+
+
 ## [1.2.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.2.1...@tuya/tuya-panel-gateway-sdk@1.2.2) (2021-08-13)
 
 

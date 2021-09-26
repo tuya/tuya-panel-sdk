@@ -1,0 +1,1625 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PressKey components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components basic render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        Object {
+          "borderWidth": 1,
+          "height": 40,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components close render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components close render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        Object {
+          "borderWidth": 1,
+          "height": 40,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components open render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components open render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        Object {
+          "borderWidth": 1,
+          "height": 40,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components pause render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "stretch",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        null,
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        null,
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": "100%",
+            "resizeMode": "contain",
+            "width": "100%",
+          },
+          null,
+        ]
+      }
+    />
+  </AnimatedComponent>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`PressKey components pause render 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 560,
+        "width": 560,
+      },
+      Object {
+        "backgroundColor": "#fafafa",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "left": 16,
+          "top": 30,
+          "width": 196,
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "height": 530,
+          "right": 16,
+          "top": 30,
+          "width": 196,
+        },
+        null,
+        Object {
+          "borderWidth": 1,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 16,
+          "width": "100%",
+        },
+        Object {
+          "borderWidth": 1,
+          "height": 40,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "left": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "borderWidth": 1,
+        },
+        Object {
+          "borderRadius": 40,
+          "height": 80,
+          "right": 156,
+          "width": 80,
+        },
+        null,
+      ]
+    }
+  />
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+        "height": 80,
+        "width": 560,
+      }
+    }
+  >
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+    <View
+      onMoveShouldSetResponder={[Function]}
+      onMoveShouldSetResponderCapture={[Function]}
+      onResponderEnd={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderReject={[Function]}
+      onResponderRelease={[Function]}
+      onResponderStart={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      onStartShouldSetResponderCapture={[Function]}
+      style={
+        Array [
+          Object {
+            "borderColor": "transparent",
+            "height": 40,
+          },
+          Object {
+            "height": 80,
+            "width": 280,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;

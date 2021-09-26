@@ -1,6 +1,7 @@
-name: Lint Commit Messages
-on: [pull_request]
-
+name: Review CI
+on:
+  pull_request:
+    branches: [main]
 jobs:
   commitlint:
     runs-on: ubuntu-latest
@@ -8,14 +9,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: actions/setup-node@v1
+      - uses: c-hive/gha-yarn-cache@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: '10.x'
-      - run: yarn install
-      - name: Add dependencies for commitlint action
+          node-version: '14'
+      - run: yarn --frozen-lockfile --ignore-engines --ignore-optional --no-bin-links --non-interactive --silent --ignore-scripts --production=false
+      - uses: wagoid/commitlint-github-action@v4
         env:
-          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
-        # $GITHUB_WORKSPACE is the path to your repository
-        run: echo "::set-env name=NODE_PATH::$GITHUB_WORKSPACE/node_modules"
-      # Now the commitlint action will run considering its own dependencies and yours as well 🚀
-      - uses: wagoid/commitlint-github-action@v2
+          NODE_PATH: ${{ github.workspace }}/node_modules
