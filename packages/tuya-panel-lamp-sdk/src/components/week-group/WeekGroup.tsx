@@ -10,7 +10,7 @@ const { convertX: cx } = Utils.RatioUtils;
 const DefaultValue: number[] = Array(7).fill(0);
 const weekGroupData = _.times(7, v => ({
   key: v,
-  name: Strings.getLang(`WeekGroup_week${v}`),
+  name: Strings.getLang(`WeekGroup_week${v}` as any),
 }));
 
 const WeekGroup: React.FC<WeekGroupProps> = props => {
