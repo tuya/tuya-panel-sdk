@@ -1,6 +1,5 @@
 import Res from '../../../../../res';
 import Strings from '../i18n';
-import { AppMusicListItemType } from '../interface';
 
 const AppleMusicData: AppMusicListItemType[] = [
   {

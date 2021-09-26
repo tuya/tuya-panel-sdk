@@ -1,5 +1,5 @@
-import React, { useState, useMemo, useCallback } from 'react';
-import { View, StyleSheet, Animated, TouchableOpacity, Image, FlatList } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet, Animated, Image, FlatList } from 'react-native';
 import { TYText, Utils, Dialog, Button } from 'tuya-panel-kit';
 import { useUnmount, useCreation, usePersistFn } from 'ahooks';
 import color from 'color';
@@ -7,9 +7,9 @@ import Res from '../../../../res';
 import { ColorUtils } from '../../../../utils';
 import MusicBar from '../../music-bar';
 import AppMusicData from './config/appMusic';
-import * as MusicManager from './utils/MusicManager';
+import * as MusicManager from '../../../../utils/MusicManager';
 import Strings from './i18n';
-import { AppleMusicDataType, AppMusicCardProps, AppMusicListItemType } from './interface';
+import { AppMusicCardProps, AppMusicListItemType } from './interface';
 
 const { convertX: cx } = Utils.RatioUtils;
 

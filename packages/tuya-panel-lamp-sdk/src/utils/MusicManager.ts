@@ -4,8 +4,7 @@
 import { NativeModules } from 'react-native';
 import { TYSdk } from 'tuya-panel-kit';
 import _ from 'lodash';
-import { ColorUtils } from '../../../../../utils';
-import { AppleMusicDataType, AppMusicListItemType } from '../interface';
+import ColorUtils from './color';
 
 interface OpenMusicOptions {
   isColourExist?: boolean;
@@ -13,12 +12,13 @@ interface OpenMusicOptions {
 }
 type MusicCallback = (data: AppleMusicDataType, i: number) => void;
 type Type = 'checking' | 'failure' | 'success' | 'close';
+
 const { native: TYNative, DeviceEventEmitter: DeviceEvent } = TYSdk;
 const { TYRCTMusicManager: TYPublicNative } = NativeModules;
 let isListening = false;
-let isSendEanbled = true;
+let isSendEnabled = true;
 let timeOutTimer: number;
-const listenters: {
+const listeners: {
   checking?: Function[];
   failure?: Function[];
   success?: Function[];
@@ -42,7 +42,7 @@ const stopVoice = async () =>
   });
 
 const fireEvent = (type: Type) => {
-  listenters[type]?.forEach((cb: Function) => {
+  listeners[type]?.forEach((cb: Function) => {
     cb?.();
   });
 };
@@ -64,16 +64,16 @@ const handleSuccess = _.throttle(() => {
 }, 1000);
 
 export const addListener = (type: Type, cb: Function) => {
-  if (!listenters[type]) {
-    listenters[type] = [];
+  if (!listeners[type]) {
+    listeners[type] = [];
   }
-  listenters[type].push(cb);
+  listeners[type].push(cb);
 };
 export const removeListener = (type: Type, cb: Function) => {
-  if (listenters[type]) {
-    const index = listenters[type].indexOf(cb);
+  if (listeners[type]) {
+    const index = listeners[type].indexOf(cb);
     if (index >= 0) {
-      listenters[type].splice(index, 1);
+      listeners[type].splice(index, 1);
     }
   }
 };
@@ -133,7 +133,7 @@ export const handleAudioRgbChange = _.throttle(
 
     musicCallback(musicData, index || 5);
 
-    if (isListening && isSendEanbled) onMusicDataPut?.(musicData);
+    if (isListening && isSendEnabled) onMusicDataPut?.(musicData);
   },
   300
 );
@@ -149,7 +149,7 @@ export const open = async (
 ) => {
   if (isListening) return Promise.resolve();
 
-  if (!isSendEanbled) {
+  if (!isSendEnabled) {
     resume();
   } else {
     try {
@@ -159,7 +159,7 @@ export const open = async (
       // Turn on the microphone
       await startVoice();
       isListening = true;
-      isSendEanbled = true;
+      isSendEnabled = true;
     } catch (e) {
       return Promise.reject(e);
     }
@@ -176,7 +176,7 @@ export const close = async (needFire = true) => {
   clearTimeout(timeOutTimer);
   needFire && fireEvent('close');
   isListening = false;
-  isSendEanbled = true;
+  isSendEnabled = true;
   try {
     DeviceEvent.removeAllListeners('audioRgbChange');
 
@@ -194,12 +194,12 @@ export const close = async (needFire = true) => {
  */
 export const pause = () => {
   handleSuccess.cancel();
-  isSendEanbled = false;
+  isSendEnabled = false;
 };
 
 /**
  * Continue to send
  */
 export const resume = () => {
-  isSendEanbled = true;
+  isSendEnabled = true;
 };

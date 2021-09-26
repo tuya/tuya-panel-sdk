@@ -1,22 +1,6 @@
 import { ImageSourcePropType, StyleProp, ViewStyle } from 'react-native';
 
-export interface AppleMusicDataType {
-  mode: number;
-  hue: number;
-  saturation: number;
-  value: number;
-  brightness: number;
-  temperature: number;
-}
-
-interface AppleMusicColorAreaType {
-  area: number[];
-  hue: number;
-  saturation: number;
-  value: number;
-}
-
-export declare interface AppMusicListItemType {
+export interface AppMusicListItemType {
   id: number;
   mode: number;
   title: string;

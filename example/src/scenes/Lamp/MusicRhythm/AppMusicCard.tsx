@@ -15,7 +15,7 @@ const AppMusic = () => {
           marginBottom: 20,
         }}
       >
-        <TYText>isDrakTheme: </TYText>
+        <TYText>isDarkTheme: </TYText>
         <SwitchButton value={isDarkTheme} onValueChange={setIsDarkTheme} />
       </View>
       <AppMusicCard
