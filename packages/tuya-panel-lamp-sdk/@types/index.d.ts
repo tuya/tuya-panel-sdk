@@ -71,3 +71,27 @@ declare interface UploadResponser {
   uri: string;
   fileSize: number;
 }
+
+declare interface AppleMusicDataType {
+  mode: number;
+  hue: number;
+  saturation: number;
+  value: number;
+  brightness: number;
+  temperature: number;
+}
+
+declare interface AppleMusicColorAreaType {
+  area: number[];
+  hue: number;
+  saturation: number;
+  value: number;
+}
+
+declare interface AppMusicListItemType {
+  id: number;
+  mode: number;
+  title: string;
+  icon: ImageSourcePropType;
+  colorArea?: AppleMusicColorAreaType[];
+}
