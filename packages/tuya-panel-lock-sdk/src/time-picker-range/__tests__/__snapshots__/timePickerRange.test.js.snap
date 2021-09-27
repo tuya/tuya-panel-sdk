@@ -1486,7 +1486,7 @@ exports[`TimePickerRange components basicd isShowSecond false render 1`] = `
     styles={Object {}}
     subTitle={null}
     theme={Object {}}
-    title="开始时间"
+    title="Begin time"
     useART={false}
   />
   <TYListItem
@@ -1514,7 +1514,7 @@ exports[`TimePickerRange components basicd isShowSecond false render 1`] = `
     styles={Object {}}
     subTitle={null}
     theme={Object {}}
-    title="结束时间"
+    title="End time"
     useART={false}
   />
 </View>
@@ -1547,7 +1547,7 @@ exports[`TimePickerRange components basicd isShowSecond render 1`] = `
     styles={Object {}}
     subTitle={null}
     theme={Object {}}
-    title="开始时间"
+    title="Begin time"
     useART={false}
   />
   <TYListItem
@@ -1575,7 +1575,7 @@ exports[`TimePickerRange components basicd isShowSecond render 1`] = `
     styles={Object {}}
     subTitle={null}
     theme={Object {}}
-    title="结束时间"
+    title="End time"
     useART={false}
   />
 </View>

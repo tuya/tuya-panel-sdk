@@ -17,7 +17,7 @@ const Share: React.FC<ShareProps> = props => {
     onSuccess,
     opacity,
     children,
-    cancelText = '取消',
+    cancelText = 'Cancel',
     customShareList,
   } = props;
   const startShare = () => {

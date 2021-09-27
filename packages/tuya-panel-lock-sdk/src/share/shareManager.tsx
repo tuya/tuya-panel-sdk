@@ -16,10 +16,10 @@ const ShareManager: React.FC<ShareMessageProps> = props => {
     onClick,
     onFail,
     onSuccess,
-    confirmText = '确定',
-    pswCopySuccess = '复制成功',
-    sendSuccess = '分享成功',
-    sendSuccessTip = '当前信息分享成功',
+    confirmText = 'Confirm',
+    pswCopySuccess = 'Copy success',
+    sendSuccess = 'Send success',
+    sendSuccessTip = 'Current information sharing successfully',
     customShareList,
   } = props;
   const shareList = getShareList();

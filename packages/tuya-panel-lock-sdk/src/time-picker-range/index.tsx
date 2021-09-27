@@ -28,11 +28,11 @@ const TimePickerRange: React.FC<TimePickerRangeProps> = (props: TimePickerRangeP
     hourLabel = '',
     minutesLabel = '',
     secondLabel = '',
-    placeholder = '选择时间',
+    placeholder = 'select time',
     disable = false,
-    toastText = '开始时间必须早于结束时间',
-    cancelText = '取消',
-    confirmText = '确认',
+    toastText = 'The start time must be earlier than the end time',
+    cancelText = 'Cancel',
+    confirmText = 'Confirm',
     customOnClick,
   } = props;
   const [beginTime, setBeginTime] = useState<number>(480);
@@ -170,8 +170,8 @@ const styles = StyleSheet.create({
   },
 });
 TimePickerRange.defaultProps = {
-  beginTimeLabel: '开始时间',
-  endTimeLabel: '结束时间',
+  beginTimeLabel: 'Begin time',
+  endTimeLabel: 'End time',
   isShowSecond: true,
   hourLabel: '',
   minutesLabel: '',

@@ -6,7 +6,7 @@ export const useCountDownTimer: CountDownTimerType = (count = 3) => {
   const intervalRef = useRef<ReturnType<typeof setInterval>>();
 
   const startCount = () => {
-    const coutDownFn = () => {
+    const countDownFn = () => {
       setNumber(pre => {
         const n = pre;
         if (n === 1) {
@@ -16,7 +16,7 @@ export const useCountDownTimer: CountDownTimerType = (count = 3) => {
         return n - 1;
       });
     };
-    intervalRef.current = setInterval(coutDownFn, 1000);
+    intervalRef.current = setInterval(countDownFn, 1000);
   };
 
   React.useEffect(() => {

@@ -9,23 +9,23 @@ export const getShareList: any = () => {
   const shareDataList = {
     message: {
       img: message,
-      title: '短信',
+      title: 'message',
     },
     email: {
       img: email,
-      title: '邮件',
+      title: 'email',
     },
     wechat: {
       img: weChat,
-      title: '微信',
+      title: 'weChat',
     },
     copy: {
       img: copy,
-      title: '复制',
+      title: 'copy',
     },
     more: {
       img: more,
-      title: '更多',
+      title: 'more',
     },
   };
   return shareDataList;
