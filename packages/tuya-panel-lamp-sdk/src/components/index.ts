@@ -29,3 +29,7 @@ export { default as NumberSlider } from './slider/number-slider';
 export { default as ScaleSlider } from './slider/scale-slider';
 
 export { default as WhiteCrossSlider } from './slider/white-cross-slider';
+
+export { default as MusicBar } from './music/music-bar';
+
+export { default as AppMusicCard } from './music/music-card/app-music-card';

@@ -18,6 +18,7 @@ import HueBrightCrossSliderScene from './HueBrightCrossSlider';
 import NumberSliderScene from './NumberSlider';
 import ScaleSliderScene from './ScaleSlider';
 import WhiteCrossSliderScene from './WhiteCrossSlider';
+import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 
 export default class LampScene extends Component {
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
@@ -36,6 +37,7 @@ export default class LampScene extends Component {
   static NumberSlider = NumberSliderScene;
   static ScaleSlider = ScaleSliderScene;
   static WhiteCrossSlider = WhiteCrossSliderScene;
+  static AppMusicCard = AppMusicCardScene;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
