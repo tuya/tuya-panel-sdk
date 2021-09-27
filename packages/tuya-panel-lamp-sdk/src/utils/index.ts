@@ -90,6 +90,10 @@ export const getStrLengthByByte = (value: string): number => {
   return value.replace(/[^\u0000-\u00ff]/g, '**').length;
 };
 
+export function formatTime(value: number): string {
+  return _.padStart(String(value), 2, '0');
+}
+
 /**
  * Calculate the coordinates of a point on the circle
  * @param center center coordinates
