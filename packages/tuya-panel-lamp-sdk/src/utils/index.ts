@@ -89,3 +89,18 @@ export const getStrLengthByByte = (value: string): number => {
   // eslint-disable-next-line no-control-regex
   return value.replace(/[^\u0000-\u00ff]/g, '**').length;
 };
+
+/**
+ * Calculate the coordinates of a point on the circle
+ * @param center center coordinates
+ * @param radius radius
+ * @param angle deflection angle
+ */
+export function getCirclePointCoordinate(
+  center: number[],
+  radius: number,
+  angle: number
+): number[] {
+  const [x, y] = center;
+  return [x + radius * Math.sin(angle), y - radius * Math.cos(angle)];
+}

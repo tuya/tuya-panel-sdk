@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorDisk components basic render 1`] = `
+<Svg
+  height={200}
+  preserveAspectRatio="xMidYMid meet"
+  width={200}
+>
+  <Path
+    d="M 100 100 L 100.00000000000001 200 A 100 100 0 0 1 99.99999999999997 0 Z"
+    fill="#E292FE"
+    key="0"
+    stroke="none"
+    strokeWidth={0}
+  />
+  <Path
+    d="M 100 100 L 99.99999999999997 0 A 100 100 0 0 1 100.00000000000004 200 Z"
+    fill="#FFF76B"
+    key="1"
+    stroke="none"
+    strokeWidth={0}
+  />
+</Svg>
+`;
+
+exports[`ColorDisk components render with custome color percent 1`] = `
+<Svg
+  height={200}
+  preserveAspectRatio="xMidYMid meet"
+  width={200}
+>
+  <Path
+    d="M 100 100 L 100.00000000000001 200 A 100 100 0 0 1 99.99999999999997 0 Z"
+    fill="#E292FE"
+    key="0"
+    stroke="none"
+    strokeWidth={0}
+  />
+  <Path
+    d="M 100 100 L 99.99999999999997 0 A 100 100 0 0 1 195.10565162951536 130.9016994374947 Z"
+    fill="#E292FE"
+    key="1"
+    stroke="none"
+    strokeWidth={0}
+  />
+</Svg>
+`;
