@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`custom keyboard components basic render 1`] = `
+<Portal
+  maskStyle={
+    Object {
+      "backgroundColor": "transparent",
+    }
+  }
+  onMaskPress={[MockFunction]}
+  visible={true}
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "flexDirection": "row",
+          "height": 472,
+          "marginTop": 8,
+          "paddingHorizontal": 16,
+          "width": 750,
+        },
+        Object {
+          "height": 490,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "flex": 1,
+          "flexDirection": "row",
+          "flexWrap": "wrap",
+          "marginBottom": 4,
+          "marginTop": 22,
+        }
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="1"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            1
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="2"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            2
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="3"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            3
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="4"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            4
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="5"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            5
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="6"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            6
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="7"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            7
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="8"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            8
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="9"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            9
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="0"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "color": "#333",
+                "fontSize": 48,
+                "fontWeight": "bold",
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            0
+          </TYText>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.9}
+        key="-1"
+        onPress={[Function]}
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "borderRadius": 2,
+              "height": 100,
+              "justifyContent": "center",
+              "marginBottom": 16,
+              "marginRight": 16,
+              "width": 164,
+            }
+          }
+        >
+          <Image
+            source={1}
+          />
+        </View>
+      </TouchableOpacity>
+    </View>
+    <ThemedButton
+      onPress={[Function]}
+      stretch={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#239C8E",
+            "borderRadius": 2,
+            "height": 438,
+            "width": 178,
+          },
+          Object {
+            "backgroundColor": "#239C8E",
+            "height": 448,
+          },
+        ]
+      }
+      text="Confirm"
+      textStyle={
+        Array [
+          Object {
+            "color": "#fff",
+            "fontSize": 32,
+            "fontWeight": "bold",
+          },
+          undefined,
+        ]
+      }
+      theme={Object {}}
+      type="primary"
+    />
+  </View>
+</Portal>
+`;
