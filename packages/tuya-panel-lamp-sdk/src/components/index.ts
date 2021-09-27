@@ -29,6 +29,7 @@ export { default as NumberSlider } from './slider/number-slider';
 export { default as ScaleSlider } from './slider/scale-slider';
 
 export { default as WhiteCrossSlider } from './slider/white-cross-slider';
+export { default as WeekGroup } from './week-group';
 
 export { default as MusicBar } from './music/music-bar';
 

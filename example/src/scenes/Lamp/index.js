@@ -18,6 +18,7 @@ import HueBrightCrossSliderScene from './HueBrightCrossSlider';
 import NumberSliderScene from './NumberSlider';
 import ScaleSliderScene from './ScaleSlider';
 import WhiteCrossSliderScene from './WhiteCrossSlider';
+import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 
 export default class LampScene extends Component {
@@ -37,6 +38,7 @@ export default class LampScene extends Component {
   static NumberSlider = NumberSliderScene;
   static ScaleSlider = ScaleSliderScene;
   static WhiteCrossSlider = WhiteCrossSliderScene;
+  static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
 
   get data() {
