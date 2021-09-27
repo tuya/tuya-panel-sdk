@@ -12,9 +12,10 @@
     "test": "jest"
   },
   "dependencies": {
-    "ahooks": "^2.10.9",
+    "ahooks": "^2.10.11",
     "color": "0.11.4",
     "lodash": "^4.17.11",
+    "moment": "^2.29.1",
     "prop-types": "^15.6.2",
     "react-addons-shallow-compare": "^15.6.2",
     "style-equal": "^1.0.0"

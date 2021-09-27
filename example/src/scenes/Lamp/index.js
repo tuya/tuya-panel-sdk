@@ -18,6 +18,8 @@ import HueBrightCrossSliderScene from './HueBrightCrossSlider';
 import NumberSliderScene from './NumberSlider';
 import ScaleSliderScene from './ScaleSlider';
 import WhiteCrossSliderScene from './WhiteCrossSlider';
+import CountdownPickerScene from './CountdownPicker';
+import ColorDiskScene from './ColorDisk';
 import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 
@@ -32,12 +34,14 @@ export default class LampScene extends Component {
   static LampLightPreview = LampLightPreviewScene;
   static LampPreview = LampPreviewScene;
   static ColorSelectorNoScroll = ColorSelectorNoScrollScene;
+  static CountdownPicker = CountdownPickerScene;
   static SingleTimePicker = SingleTimePickerScene;
   static BrightRectSlider = BrightRectSliderScene;
   static HueBrightCrossSlider = HueBrightCrossSliderScene;
   static NumberSlider = NumberSliderScene;
   static ScaleSlider = ScaleSliderScene;
   static WhiteCrossSlider = WhiteCrossSliderScene;
+  static ColorDisk = ColorDiskScene;
   static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
 
