@@ -14,6 +14,8 @@ import LampPreviewScene from './LampPreview';
 import ColorSelectorNoScrollScene from './ColorSelectorNoScroll';
 import SingleTimePickerScene from './SingleTimePicker';
 import CountdownPickerScene from './CountdownPicker';
+import WeekGroupScene from './WeekGroup';
+import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 
 export default class LampScene extends Component {
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
@@ -27,6 +29,9 @@ export default class LampScene extends Component {
   static LampPreview = LampPreviewScene;
   static ColorSelectorNoScroll = ColorSelectorNoScrollScene;
   static CountdownPicker = CountdownPickerScene;
+  static SingleTimePicker = SingleTimePickerScene;
+  static WeekGroup = WeekGroupScene;
+  static AppMusicCard = AppMusicCardScene;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
