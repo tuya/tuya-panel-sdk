@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextInputForAnimated components basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  style={
+    Object {
+      "color": "#F00",
+    }
+  }
+  type={null}
+  weight={null}
+>
+  9
+</TYText>
+`;
