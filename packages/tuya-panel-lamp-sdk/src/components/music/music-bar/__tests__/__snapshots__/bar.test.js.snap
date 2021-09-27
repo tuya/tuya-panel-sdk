@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bar components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "overflow": "hidden",
+      },
+      Object {
+        "height": 40,
+        "width": 10,
+      },
+      undefined,
+    ]
+  }
+>
+  <LinearGradient
+    gradientId="Gradient1"
+    stops={
+      Object {
+        "0%": "rgb(255,255,0)",
+        "100%": "rgb(255,0,0)",
+      }
+    }
+    style={
+      Object {
+        "height": 186,
+        "width": 10,
+      }
+    }
+    x1="0%"
+    x2="0%"
+    y1="0%"
+    y2="100%"
+  >
+    <Rect
+      height={186}
+      rx={0}
+      ry={0}
+      width={10}
+      x={0}
+      y={0}
+    />
+  </LinearGradient>
+</View>
+`;

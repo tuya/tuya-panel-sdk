@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountDownButton component render with btnText 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+      hahh (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with customCountDownText 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       倒计时3s
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with onCountChange 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with onIdleEndCallBack 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       (-3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with onPress 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with style 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#fff",
+      }
+    }
+  >
+    <Text>
+       (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component render with textStyle 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text
+      style={
+        Object {
+          "color": "red",
+        }
+      }
+    >
+       (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component should render without countDownNumber 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       (5 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
+
+exports[`CountDownButton component should render without issues 1`] = `
+<TouchableWithoutFeedback
+  onPress={[Function]}
+>
+  <View>
+    <Text>
+       (3 s)
+    </Text>
+  </View>
+</TouchableWithoutFeedback>
+`;
