@@ -93,3 +93,18 @@ export const getStrLengthByByte = (value: string): number => {
 export function formatTime(value: number): string {
   return _.padStart(String(value), 2, '0');
 }
+
+/**
+ * Calculate the coordinates of a point on the circle
+ * @param center center coordinates
+ * @param radius radius
+ * @param angle deflection angle
+ */
+export function getCirclePointCoordinate(
+  center: number[],
+  radius: number,
+  angle: number
+): number[] {
+  const [x, y] = center;
+  return [x + radius * Math.sin(angle), y - radius * Math.cos(angle)];
+}

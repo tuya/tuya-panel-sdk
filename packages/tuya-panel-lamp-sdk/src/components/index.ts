@@ -22,6 +22,8 @@ export { default as SingleTimePicker } from './time/single-time-picker';
 
 export { default as CountdownPicker } from './picker/countdown-picker';
 
+export { default as ColorDisk } from './preview/color-disk';
+
 export { default as WeekGroup } from './week-group';
 
 export { default as MusicBar } from './music/music-bar';

@@ -14,6 +14,7 @@ import LampPreviewScene from './LampPreview';
 import ColorSelectorNoScrollScene from './ColorSelectorNoScroll';
 import SingleTimePickerScene from './SingleTimePicker';
 import CountdownPickerScene from './CountdownPicker';
+import ColorDiskScene from './ColorDisk';
 import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 
@@ -30,6 +31,7 @@ export default class LampScene extends Component {
   static ColorSelectorNoScroll = ColorSelectorNoScrollScene;
   static CountdownPicker = CountdownPickerScene;
   static SingleTimePicker = SingleTimePickerScene;
+  static ColorDisk = ColorDiskScene;
   static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
 
