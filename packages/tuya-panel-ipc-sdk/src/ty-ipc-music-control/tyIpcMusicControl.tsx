@@ -42,15 +42,32 @@ const TYIpcMusicControl: React.FunctionComponent<TYIpcMusicControlProps> = props
       key: 'mode',
       imageSource: modeShow ? modeImgSource[ipcMusicMode] : '',
       style: modeStyle,
+      show: modeShow,
     },
-    { key: 'prev', imageSource: preShow ? Res.lullaby.lullabyPrev : '', style: preStyle },
+    {
+      key: 'prev',
+      imageSource: preShow ? Res.lullaby.lullabyPrev : '',
+      style: preStyle,
+      show: preShow,
+    },
     {
       key: 'control',
       imageSource: controlShow ? controlImgSource[ipcMusicControl] : '',
       style: controlStyle,
+      show: controlShow,
     },
-    { key: 'next', imageSource: nextShow ? Res.lullaby.lullabyNext : '', style: nextStyle },
-    { key: 'list', imageSource: listShow ? Res.lullaby.lullabyList : '', style: listStyle },
+    {
+      key: 'next',
+      imageSource: nextShow ? Res.lullaby.lullabyNext : '',
+      style: nextStyle,
+      show: nextShow,
+    },
+    {
+      key: 'list',
+      imageSource: listShow ? Res.lullaby.lullabyList : '',
+      style: listStyle,
+      show: listShow,
+    },
   ];
 
   const pressControlBtn = key => {
@@ -77,16 +94,18 @@ const TYIpcMusicControl: React.FunctionComponent<TYIpcMusicControlProps> = props
   };
   return (
     <View style={[Styles.musicControlPage, containerStyle]}>
-      {controlData.map(item => (
-        <TouchableOpacity
-          activeOpacity={0.7}
-          style={Styles.controlItemBox}
-          key={item.key}
-          onPress={() => pressControlBtn(item.key)}
-        >
-          <Image source={item.imageSource} style={[{ tintColor: themeColor }, item.style]} />
-        </TouchableOpacity>
-      ))}
+      {controlData.map(item =>
+        item.show ? (
+          <TouchableOpacity
+            activeOpacity={0.7}
+            style={Styles.controlItemBox}
+            key={item.key}
+            onPress={() => pressControlBtn(item.key)}
+          >
+            <Image source={item.imageSource} style={[{ tintColor: themeColor }, item.style]} />
+          </TouchableOpacity>
+        ) : null
+      )}
     </View>
   );
 };
