@@ -19,3 +19,7 @@ export { default as LampPreview } from './preview/lamp-preview';
 export { default as ColorSelectorNoScroll } from './list/color-selector-noScroll';
 
 export { default as SingleTimePicker } from './time/single-time-picker';
+
+export { default as MusicBar } from './music/music-bar';
+
+export { default as AppMusicCard } from './music/music-card/app-music-card';

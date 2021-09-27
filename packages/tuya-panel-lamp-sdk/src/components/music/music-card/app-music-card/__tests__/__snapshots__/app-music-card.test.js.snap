@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppMusicCard components basic render 1`] = `
+<View>
+  <FlatList
+    data={
+      Array [
+        Object {
+          "icon": 1,
+          "id": 0,
+          "mode": 1,
+          "title": "Music",
+        },
+        Object {
+          "icon": 1,
+          "id": 1,
+          "mode": 0,
+          "title": "Ball game",
+        },
+        Object {
+          "colorArea": Array [
+            Object {
+              "area": Array [
+                0,
+                2,
+              ],
+              "hue": 350,
+              "saturation": 400,
+              "value": 1000,
+            },
+            Object {
+              "area": Array [
+                3,
+                5,
+              ],
+              "hue": 50,
+              "saturation": 600,
+              "value": 1000,
+            },
+            Object {
+              "area": Array [
+                6,
+                9,
+              ],
+              "hue": 160,
+              "saturation": 600,
+              "value": 1000,
+            },
+          ],
+          "icon": 1,
+          "id": 2,
+          "mode": 0,
+          "title": "Game",
+        },
+        Object {
+          "colorArea": Array [
+            Object {
+              "area": Array [
+                0,
+                2,
+              ],
+              "hue": 20,
+              "saturation": 100,
+              "value": 1000,
+            },
+            Object {
+              "area": Array [
+                3,
+                4,
+              ],
+              "hue": 0,
+              "saturation": 1000,
+              "value": 1000,
+            },
+            Object {
+              "area": Array [
+                5,
+                6,
+              ],
+              "hue": 350,
+              "saturation": 400,
+              "value": 1000,
+            },
+            Object {
+              "area": Array [
+                7,
+                9,
+              ],
+              "hue": 300,
+              "saturation": 1000,
+              "value": 1000,
+            },
+          ],
+          "icon": 1,
+          "id": 3,
+          "mode": 1,
+          "title": "Romantic",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    extraData={
+      Array [
+        Array [
+          Object {
+            "icon": 1,
+            "id": 0,
+            "mode": 1,
+            "title": "Music",
+          },
+          Object {
+            "icon": 1,
+            "id": 1,
+            "mode": 0,
+            "title": "Ball game",
+          },
+          Object {
+            "colorArea": Array [
+              Object {
+                "area": Array [
+                  0,
+                  2,
+                ],
+                "hue": 350,
+                "saturation": 400,
+                "value": 1000,
+              },
+              Object {
+                "area": Array [
+                  3,
+                  5,
+                ],
+                "hue": 50,
+                "saturation": 600,
+                "value": 1000,
+              },
+              Object {
+                "area": Array [
+                  6,
+                  9,
+                ],
+                "hue": 160,
+                "saturation": 600,
+                "value": 1000,
+              },
+            ],
+            "icon": 1,
+            "id": 2,
+            "mode": 0,
+            "title": "Game",
+          },
+          Object {
+            "colorArea": Array [
+              Object {
+                "area": Array [
+                  0,
+                  2,
+                ],
+                "hue": 20,
+                "saturation": 100,
+                "value": 1000,
+              },
+              Object {
+                "area": Array [
+                  3,
+                  4,
+                ],
+                "hue": 0,
+                "saturation": 1000,
+                "value": 1000,
+              },
+              Object {
+                "area": Array [
+                  5,
+                  6,
+                ],
+                "hue": 350,
+                "saturation": 400,
+                "value": 1000,
+              },
+              Object {
+                "area": Array [
+                  7,
+                  9,
+                ],
+                "hue": 300,
+                "saturation": 1000,
+                "value": 1000,
+              },
+            ],
+            "icon": 1,
+            "id": 3,
+            "mode": 1,
+            "title": "Romantic",
+          },
+        ],
+        -1,
+      ]
+    }
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;
