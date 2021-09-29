@@ -61,5 +61,8 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "resolutions": {
+    "react-native-gesture-handler": "1.8.0"
   }
 }

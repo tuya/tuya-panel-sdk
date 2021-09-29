@@ -118,5 +118,74 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      */
     data?: number[];
   }
+  export interface StreeringWheelProps {
+    /**
+     * @language zh-CN
+     * @description 旋转角度事件
+     * @defaultValue (rotate) => {}
+     */
+    /**
+     * @language en-US
+     * @description Rotate Function
+     * @defaultValue (rotate) => {}
+     */
+    changeRotate: (rotate: number) => void;
+    /**
+     * @language zh-CN
+     * @description PanGestureHandler的Ref
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description PanGestureHandler' Ref
+     * @defaultValue null
+     */
+    driveRef: MutableRefObject<null>;
+    /**
+     * @language zh-CN
+     * @description 最外层样式
+     * @defaultValue {width: cx(167), height: cx(167)}
+     */
+    /**
+     * @language en-US
+     * @description base style
+     * @defaultValue {width: cx(167), height: cx(167)}
+     */
+    wheelStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 左转最大角度
+     * @defaultValue 90
+     */
+    /**
+     * @language en-US
+     * @description left max angle
+     * @defaultValue 90
+     */
+    maxLeftAng?: number;
+    /**
+     * @language zh-CN
+     * @description 右转最大角度
+     * @defaultValue 90
+     */
+    /**
+     * @language en-US
+     * @description left max angle
+     * @defaultValue 90
+     */
+    maxRightAng?: number;
+    /**
+     * @language zh-CN
+     * @description 插入PanGestureHandler的旋转内部元素
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description inner node
+     * @defaultValue null
+     */
+    childrenProps?: React.ReactNode;
+  }
   export const SoundWave: React.ComponentClass<SoundWaveProps>;
+  export const StreeringWheel: React.ComponentClass<StreeringWheelProps>;
 }
