@@ -112,6 +112,7 @@ export interface DeviceListPanelProps {
   isShowIconMore?: boolean;
   initialTab?: string;
   children?: React.ReactNode;
+  panelChildren?: React.ReactNode;
   ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
   onIconMorePress?: (devInfo: DevInfo) => void;
   onTabChange?: (key: string) => void;

@@ -45,6 +45,7 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
   isShowIconMore,
   initialTab,
   children,
+  panelChildren,
   ListEmptyComponent,
   onIconMorePress,
   onTabChange,
@@ -291,7 +292,7 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
           )}
         </View>
         {typeof customRenderList === 'function' ? customRenderList() : renderDeviceList()}
-        {React.isValidElement(children) && children}
+        {React.isValidElement(panelChildren) && panelChildren}
       </Animated.View>
     );
   };
@@ -323,6 +324,7 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
 
   return (
     <View style={[styles.container, containerStyle]}>
+      {React.isValidElement(children) && children}
       {renderPullDown()}
       {renderPanResponder()}
     </View>

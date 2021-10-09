@@ -1,6 +1,6 @@
 import React, { FC, useState, useEffect } from 'react';
 import { View } from 'react-native';
-import { DevInfo, TopBar } from 'tuya-panel-kit';
+import { DevInfo, TopBar, TYText } from 'tuya-panel-kit';
 import { DeviceListPanel, GatewayUtils } from '@tuya/tuya-panel-gateway-sdk';
 import Strings from './i18n';
 
@@ -30,10 +30,19 @@ const DeviceListPanelScene: FC = () => {
     const list = await getAllSubDevList();
     setDeviceList(list);
   };
+  const renderCustomItem = () => {
+    return (
+      <View style={{ width: 100, height: 100, backgroundColor: 'pink' }}>
+        <TYText text="Custom item" />
+      </View>
+    );
+  };
 
   return (
     <View style={{ flex: 1 }}>
-      <DeviceListPanel tabs={tabConfig} dataSource={deviceList} highestPosition={TopBar.height} />
+      <DeviceListPanel tabs={tabConfig} dataSource={deviceList} highestPosition={TopBar.height}>
+        {renderCustomItem()}
+      </DeviceListPanel>
     </View>
   );
 };

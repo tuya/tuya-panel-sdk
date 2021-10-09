@@ -6,7 +6,7 @@ import {
   StatusBarStyle,
   ImageSourcePropType,
 } from 'react-native';
-import { DevInfo, ProgressProps, StringType } from 'tuya-panel-kit';
+import { DevInfo, ProgressProps, StringType, TabBarArr } from 'tuya-panel-kit';
 import { unsupportedBluetoothPidList } from '../src/config';
 
 // TipItem
@@ -426,7 +426,7 @@ export interface AddDeviceTipModalProps extends AddDeviceTipProps {
   onMaskPress?: () => void;
 }
 
-export class AddDeviceTip extends Component<AddDeviceTipProps> {}
+export class AddDeviceTip extends Component<AddDeviceTipProps> { }
 
 export const AddDeviceTipModal: { show: (props: AddDeviceTipModalProps) => void };
 
@@ -623,7 +623,7 @@ export interface SetPasswordModalProps extends SetPasswordProps {
   dialogElseOption?: DialogElse;
 }
 
-export class SetPassword extends Component<SetPasswordProps> {}
+export class SetPassword extends Component<SetPasswordProps> { }
 
 export const SetPasswordModal: { show: (props: SetPasswordModalProps) => void };
 
@@ -872,7 +872,7 @@ export interface TempHumWithBlurProps {
   renderHumidity?: () => JSX.Element | null;
 }
 
-export class TempHumWithBlur extends Component<TempHumWithBlurProps> {}
+export class TempHumWithBlur extends Component<TempHumWithBlurProps> { }
 
 export interface TopBarWithArcProps {
   /**
@@ -998,7 +998,7 @@ export interface TopBarWithArcProps {
   renderArc?: () => JSX.Element | null;
 }
 
-export class TopBarWithArc extends Component<TopBarWithArcProps> {}
+export class TopBarWithArc extends Component<TopBarWithArcProps> { }
 
 /**
  * @language zh-CN
@@ -1268,11 +1268,11 @@ export interface AddProgressProps {
    * @defaultValue { '0%': '#1381FB', '100%': '#00C36C' }
    */
   foreColor?:
-    | string
-    | StopsProps[]
-    | {
-        [key: string]: string;
-      };
+  | string
+  | StopsProps[]
+  | {
+    [key: string]: string;
+  };
   /**
    * @language zh-CN
    * @description 标题
@@ -1429,7 +1429,7 @@ export interface AddProgressProps {
   onFinish?: () => void;
 }
 
-export class AddProgress extends Component<AddProgressProps> {}
+export class AddProgress extends Component<AddProgressProps> { }
 
 export interface SelectDeviceProps {
   /**
@@ -1621,7 +1621,7 @@ export interface SelectDeviceProps {
   renderOfflineState?: () => React.ElementType;
 }
 
-export class SelectDevice extends Component<SelectDeviceProps> {}
+export class SelectDevice extends Component<SelectDeviceProps> { }
 export interface DeviceListPanelProps {
   /**
    * @language zh-CN
@@ -1746,6 +1746,17 @@ export interface DeviceListPanelProps {
   children?: React.ReactNode;
   /**
    * @language zh-CN
+   * @description 可拖动面板中的子节点
+   * @defaultValue 无
+   */
+  /**
+   * @language en-US
+   * @description Child node in the draggable panel
+   * @defaultValue none
+   */
+  panelChildren?: React.ReactNode;
+  /**
+   * @language zh-CN
    * @description 列表为空时显示的组件
    * @defaultValue 无
    */
@@ -1811,4 +1822,4 @@ export interface DeviceListPanelProps {
    */
   customRenderList?: () => JSX.Element;
 }
-export class DeviceListPanel extends Component<DeviceListPanelProps> {}
+export class DeviceListPanel extends Component<DeviceListPanelProps> { }
