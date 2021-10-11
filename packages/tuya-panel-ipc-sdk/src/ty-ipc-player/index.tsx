@@ -1,9 +1,17 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable consistent-return */
 /* eslint-disable react/sort-comp */
 /* eslint-disable react/no-deprecated */
 import React from 'react';
-import { View, BackHandler, AppState, UIManager, DeviceEventEmitter } from 'react-native';
+import {
+  View,
+  BackHandler,
+  AppState,
+  UIManager,
+  DeviceEventEmitter,
+  NativeEventEmitter,
+} from 'react-native';
 import _ from 'lodash';
 import { TYSdk } from 'tuya-panel-kit';
 import TYIpcPlayerManager from '../ty-ipc-native';
@@ -24,9 +32,12 @@ import OneWayMic from './components/oneWayMic';
 import TwoWayMic from './components/twoWayMic';
 import TimeInterval from './components/timeInterval';
 import AudioOnlyMode from './components/audioOnlyMode';
-import ZoomInTimes from './components/zoomInTimes';
 import { TYIpcPlayerProps, _defaultProps } from './interface';
 import { videoLoadText } from '../ty-ipc-native/cameraData';
+import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
+import TYRCTOrientationManager from '../ty-ipc-native/tyrctOrientationManager';
+
+const TYRCTLifecycleManagerEvent = new NativeEventEmitter(TYRCTLifecycleManager);
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
 if (!isIOS && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -130,63 +141,32 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.hightScaleMode,
       this.props.channelNum
     );
-    // 进入前台
-    // const listen = new NativeEventEmitter(NativeModules.TYRCTCameraManager);
-    this.foregroundListener = DeviceEventEmitter.addListener('enterForegroundEvent', () => {
-      const {
-        isWirless,
-        privateMode,
-        deviceOnline,
-        clarityStatus,
-        voiceStatus,
-        hightScaleMode,
-        channelNum,
-      } = this.props;
-      this.initStatus();
-      this.resetMulScaleWithBefore();
-      if (this.goToBack && !this.otherRnPage) {
-        this.onLivePage = true;
-        let sendNativePage = 0;
-        let sendCameraAction = 0;
-        const { nativePage } = this.state;
-        nativePage === 1 && ((sendNativePage = 0), (sendCameraAction = 2));
-        nativePage === 2 && ((sendNativePage = 0), (sendCameraAction = 0));
-        // 从设置页面返回到预览界面
+    // 进入前台、后台
+    // ipc品类与非ipc品类使用不同的方式监听
+    // 摄像头品类
+    if (TYSdk.devInfo.category === 'sp') {
+      this.foregroundListener = DeviceEventEmitter.addListener(
+        'enterForegroundEvent',
+        this.enterFront
+      );
+      this.backgroundListener = DeviceEventEmitter.addListener(
+        'enterBackgroundEvent',
+        this.enterBackground
+      );
+    } else {
+      // 因监听方法每次会推送两次事件，所以开启防抖来处理
+      // 非摄像头品类的产品，旋转屏幕使用方法需初始化
+      TYRCTOrientationManager.supportedOrientations(['portrait', 'landscape-right']);
+      this.foregroundListener = TYRCTLifecycleManagerEvent.addListener(
+        'onPageAppear',
+        _.debounce(this.enterFront, 100)
+      );
+      this.backgroundListener = TYRCTLifecycleManagerEvent.addListener(
+        'onPageDisappear',
+        _.debounce(this.enterBackground, 100)
+      );
+    }
 
-        nativePage === 4 && ((sendNativePage = 0), (sendCameraAction = 5), getAuduioType());
-        this.setState({
-          cameraAction: sendNativePage,
-          nativePage: sendCameraAction,
-        });
-        TYIpcPlayerManager.startPlay(
-          isWirless,
-          privateMode,
-          deviceOnline,
-          clarityStatus,
-          voiceStatus,
-          hightScaleMode,
-          channelNum
-        );
-      }
-      this.goToBack = false;
-    });
-
-    this.backgroundListener = DeviceEventEmitter.addListener('enterBackgroundEvent', () => {
-      this.goToBack = true;
-      this.onLivePage = false;
-      const { enterBackDisConP2P, showCutScreen } = this.props;
-      // 先不将此事件开放出去
-      // this.props.addListenerEnterBackgroundEvent();
-      if (showCutScreen) {
-        TYEvent.emit('hideScreenListen', {});
-      }
-
-      if (!enterBackDisConP2P) {
-        TYIpcPlayerManager.exitPlayPreviewSpecial();
-      } else {
-        TYIpcPlayerManager.backPlayPreview(enterBackDisConP2P);
-      }
-    });
     // Android 返回键退出全屏
     this.backPressListener = BackHandler.addEventListener('hardwareBackPress', () => {
       const { isFullScreen } = this.props;
@@ -254,7 +234,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     });
 
     // p2p流
-    this.p2pListener = DeviceEventEmitter.addListener('p2pConnect', value => {
+    this.p2pListener = DeviceEventEmitter.addListener('p2pConnect', () => {
       this.setState({
         showLoading: true,
         loadText: Strings.getLang('tyIpc_video_channel_connect_fail'),
@@ -310,8 +290,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // ios使用Rn本身提供的检测进入手机应用后台
     AppState.addEventListener('change', this.handleAppStateChange);
   }
-
-  componentDidMount() {}
 
   componentWillReceiveProps(nextProps: TYIpcPlayerProps) {
     // 隐私模式和设备在线变更监听 重新拉流
@@ -382,6 +360,65 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     const { backIsNeedDisConnectP2P } = this.props;
     TYIpcPlayerManager.backPlayPreview(backIsNeedDisConnectP2P);
   }
+
+  enterBackground = () => {
+    this.goToBack = true;
+    this.onLivePage = false;
+    const { enterBackDisConP2P, showCutScreen } = this.props;
+
+    if (showCutScreen) {
+      TYEvent.emit('hideScreenListen', {});
+    }
+
+    if (!enterBackDisConP2P) {
+      TYIpcPlayerManager.exitPlayPreviewSpecial();
+    } else {
+      TYIpcPlayerManager.backPlayPreview(enterBackDisConP2P);
+    }
+
+    this.props.enterBackgroundEvent && this.props.enterBackgroundEvent();
+  };
+
+  enterFront = () => {
+    const {
+      isWirless,
+      privateMode,
+      deviceOnline,
+      clarityStatus,
+      voiceStatus,
+      hightScaleMode,
+      channelNum,
+    } = this.props;
+    this.initStatus();
+    this.resetMulScaleWithBefore();
+    if (this.goToBack && !this.otherRnPage) {
+      this.onLivePage = true;
+      let sendNativePage = 0;
+      let sendCameraAction = 0;
+      const { nativePage } = this.state;
+      nativePage === 1 && ((sendNativePage = 0), (sendCameraAction = 2));
+      nativePage === 2 && ((sendNativePage = 0), (sendCameraAction = 0));
+      // 从设置页面返回到预览界面
+
+      nativePage === 4 && ((sendNativePage = 0), (sendCameraAction = 5), getAuduioType());
+      this.setState({
+        cameraAction: sendNativePage,
+        nativePage: sendCameraAction,
+      });
+      TYIpcPlayerManager.startPlay(
+        isWirless,
+        privateMode,
+        deviceOnline,
+        clarityStatus,
+        voiceStatus,
+        hightScaleMode,
+        channelNum
+      );
+    }
+    this.goToBack = false;
+
+    this.props.enterForegroundEvent && this.props.enterForegroundEvent();
+  };
 
   // 还原设置视频缩放比例值
   resetMulScaleWithBefore = (value?: number) => {
@@ -491,6 +528,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.props.onListenTalkingChangeMute(voiceStatus);
   };
 
+  onChangePreview = () => {};
+
   // 推送是否在录像
   listenIsRecording = (data: any) => {
     const { isRecording } = data;
@@ -536,6 +575,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       isIOS &&
       !this.onLivePage &&
       judgeP2pISConnectedOperate(isWirless, deviceOnline);
+
+    // TYEvent.emit('previewState', nextAppState);
   };
 
   // 获取cameraAction
@@ -605,8 +646,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     });
     this.props.onChangeStreamStatus(status, errMsg);
   };
-
-  onChangePreview = () => {};
 
   _onLayout = (e: any) => {
     const { width, height } = e.nativeEvent.layout;
