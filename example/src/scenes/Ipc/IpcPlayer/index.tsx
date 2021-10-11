@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, View, Dimensions } from 'react-native';
 import { TYText } from 'tuya-panel-kit';
@@ -91,6 +92,14 @@ const IpcPLayer: React.FC = () => {
       });
   };
 
+  const enterBackgroundEvent = () => {
+    console.log('进入后台');
+  };
+
+  const enterForegroundEvent = () => {
+    console.log('进入前台');
+  };
+
   return (
     <View onLayout={_onLayout} style={styles.TYIpcPlayerPage}>
       <TYText style={styles.descTxt} text="Description: 视频播放" />
@@ -111,6 +120,8 @@ const IpcPLayer: React.FC = () => {
           }}
           renderNormalComArr={[{ component: NormalTopRight, propData: {} }]}
           renderFullComArr={[{ component: NormalTopRight, propData: {} }]}
+          enterBackgroundEvent={enterBackgroundEvent}
+          enterForegroundEvent={enterForegroundEvent}
         />
         <View style={styles.featureContain}>
           <TouchableOpacity style={styles.feature} onPress={enterFullScreen}>
