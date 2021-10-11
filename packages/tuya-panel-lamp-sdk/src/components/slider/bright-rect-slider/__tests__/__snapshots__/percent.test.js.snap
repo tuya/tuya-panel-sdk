@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Percent base render 1`] = `
+<View
+  pointerEvents="none"
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "flex-start",
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 8,
+            "width": "100%",
+          },
+          Object {
+            "minWidth": NaN,
+          },
+        ]
+      }
+    >
+      <Component
+        d="M512 736a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m-158.4-65.6a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248z m362.048 0a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248zM512 352a160 160 0 1 1 0 320 160 160 0 0 1 0-320z m-256 128a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m512 0a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m-52.352-171.648a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248z m-362.048 0a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248zM512 224a32 32 0 1 1 0 64 32 32 0 0 1 0-64z"
+        style={Object {}}
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginLeft": 4,
+            },
+            undefined,
+            Object {
+              "color": undefined,
+            },
+          ]
+        }
+        text="1%"
+        type={null}
+        weight={null}
+      />
+    </View>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "opacity": 1,
+          "overflow": "hidden",
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "flex-start",
+        },
+        Object {
+          "backgroundColor": undefined,
+          "height": 0,
+          "top": 0,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "marginTop": 8,
+            "width": "100%",
+          },
+          Object {
+            "minWidth": NaN,
+          },
+        ]
+      }
+    >
+      <Component
+        d="M512 736a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m-158.4-65.6a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248z m362.048 0a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248zM512 352a160 160 0 1 1 0 320 160 160 0 0 1 0-320z m-256 128a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m512 0a32 32 0 1 1 0 64 32 32 0 0 1 0-64z m-52.352-171.648a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248z m-362.048 0a32 32 0 1 1-45.248 45.248 32 32 0 0 1 45.248-45.248zM512 224a32 32 0 1 1 0 64 32 32 0 0 1 0-64z"
+        style={Object {}}
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "fontSize": 14,
+              "marginLeft": 4,
+            },
+            undefined,
+          ]
+        }
+        text="1%"
+        type={null}
+        weight={null}
+      />
+    </View>
+  </View>
+</View>
+`;
