@@ -1,0 +1,255 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Temp components basic render 1`] = `
+<View
+  style={
+    Object {
+      "height": undefined,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": undefined,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="white-cross-temp"
+      stops={
+        Object {
+          "0%": "#CDECFE",
+          "100%": "#FFCA5C",
+          "50%": "#FFFFFF",
+        }
+      }
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
+      }
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Rect
+        height={0}
+        rx={0}
+        ry={0}
+        width={0}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "bottom": -9,
+          "height": 18,
+          "left": NaN,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+            Object {
+              "translateY": NaN,
+            },
+            Object {
+              "rotate": "-90deg",
+            },
+          ],
+          "width": undefined,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 12,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      : 
+      3
+      %
+    </TYText>
+  </View>
+  <AnimatedComponent
+    style={
+      Object {
+        "position": "absolute",
+        "right": NaN,
+        "top": NaN,
+      }
+    }
+  >
+    <Svg
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      width="22"
+    >
+      <Path
+        d="M2,2L17,2L20,8L17,14L2,14Z"
+        fill="rgb(255, 210, 168)"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Temp components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "height": 10,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": 10,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="white-cross-temp"
+      stops={
+        Object {
+          "0%": "#CDECFE",
+          "100%": "#FFCA5C",
+          "50%": "#FFFFFF",
+        }
+      }
+      style={
+        Object {
+          "height": 10,
+          "width": undefined,
+        }
+      }
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Rect
+        height={10}
+        rx={0}
+        ry={0}
+        width={0}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "bottom": -9,
+          "height": 18,
+          "left": NaN,
+          "transform": Array [
+            Object {
+              "translateX": -5,
+            },
+            Object {
+              "translateY": -5,
+            },
+            Object {
+              "rotate": "-90deg",
+            },
+          ],
+          "width": 10,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 12,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      : 
+      0
+      %
+    </TYText>
+  </View>
+  <AnimatedComponent
+    style={
+      Object {
+        "position": "absolute",
+        "right": NaN,
+        "top": 2,
+      }
+    }
+  >
+    <Svg
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      width="22"
+    >
+      <Path
+        d="M2,2L17,2L20,8L17,14L2,14Z"
+        fill="rgb(255, 208, 163)"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;
