@@ -1,0 +1,261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hue components basic render 1`] = `
+<View
+  style={
+    Object {
+      "height": undefined,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": undefined,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="hue-bright-cross"
+      stops={
+        Object {
+          "0%": "#FF0000",
+          "100%": "#FF0000",
+          "12%": "#F8CB0E",
+          "24%": "#80FE06",
+          "36%": "#08FB2B",
+          "49%": "#04FAFC",
+          "60%": "#0243FC",
+          "70%": "#8700F9",
+          "82%": "#FC00EF",
+          "92%": "#F00A5B",
+        }
+      }
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
+      }
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Rect
+        height={0}
+        rx={0}
+        ry={0}
+        width={0}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "bottom": -9,
+          "height": 18,
+          "left": NaN,
+          "transform": Array [
+            Object {
+              "translateX": NaN,
+            },
+            Object {
+              "translateY": NaN,
+            },
+            Object {
+              "rotate": "-90deg",
+            },
+          ],
+          "width": undefined,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 12,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Object {
+        "position": "absolute",
+        "right": NaN,
+        "top": NaN,
+      }
+    }
+  >
+    <Svg
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      width="22"
+    >
+      <Path
+        d="M2,2L17,2L20,8L17,14L2,14Z"
+        fill="rgb(255, 128, 0)"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Hue components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "height": 10,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": 10,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="hue-bright-cross"
+      stops={
+        Object {
+          "0%": "#FF0000",
+          "100%": "#FF0000",
+          "12%": "#F8CB0E",
+          "24%": "#80FE06",
+          "36%": "#08FB2B",
+          "49%": "#04FAFC",
+          "60%": "#0243FC",
+          "70%": "#8700F9",
+          "82%": "#FC00EF",
+          "92%": "#F00A5B",
+        }
+      }
+      style={
+        Object {
+          "height": 10,
+          "width": undefined,
+        }
+      }
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Rect
+        height={10}
+        rx={0}
+        ry={0}
+        width={0}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "flex-start",
+          "bottom": 0,
+          "justifyContent": "center",
+          "position": "absolute",
+        },
+        Object {
+          "bottom": -9,
+          "height": 18,
+          "left": NaN,
+          "transform": Array [
+            Object {
+              "translateX": -5,
+            },
+            Object {
+              "translateY": -5,
+            },
+            Object {
+              "rotate": "-90deg",
+            },
+          ],
+          "width": 10,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "fontSize": 12,
+          },
+          Object {
+            "fontSize": 12,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Object {
+        "position": "absolute",
+        "right": NaN,
+        "top": -8,
+      }
+    }
+  >
+    <Svg
+      height="16"
+      preserveAspectRatio="xMidYMid meet"
+      width="22"
+    >
+      <Path
+        d="M2,2L17,2L20,8L17,14L2,14Z"
+        fill="rgb(255, 0, 0)"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;
