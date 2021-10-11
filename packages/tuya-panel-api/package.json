@@ -12,8 +12,7 @@
   "scripts": {
     "dev": "yarn build -w",
     "build": "tsc -d",
-    "prebuild": "../../node_modules/del-cli/cli.js lib/",
-    "prepublishOnly": "yarn build"
+    "prebuild": "../../node_modules/del-cli/cli.js lib/"
   },
   "peerDependencies": {
     "react": "16.8.3",
