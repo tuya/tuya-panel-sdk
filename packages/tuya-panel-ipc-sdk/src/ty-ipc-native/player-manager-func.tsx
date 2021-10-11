@@ -12,6 +12,7 @@ import {
   exitPlayPreviewByAudioOrOther,
 } from './nativeManager';
 import { decodeClarityDic } from './cameraData';
+import TYRCTOrientationManager from './tyrctOrientationManager';
 
 const isIOS = Platform.OS === 'ios';
 
@@ -467,7 +468,11 @@ class PlayerManagerFun {
      横竖屏切换
   */
   setScreenOrientation = (dir: 0 | 1) => {
-    CameraManager.setScreenOrientation(dir);
+    if (TYSdk.devInfo.category === 'sp') {
+      CameraManager.setScreenOrientation(dir);
+    } else {
+      TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
+    }
     TYEvent.emit('screenOrientation', { isFullScreen: dir });
   };
 
