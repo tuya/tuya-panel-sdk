@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HueBrightCrossSlider components basic render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {
+        "height": 704,
+        "width": 704,
+      },
+    ]
+  }
+>
+  <HueBrightSlider
+    bright={1000}
+    label="Brightness"
+    maxBright={1000}
+    minBright={10}
+    size={688}
+    trackWidth={54}
+  />
+  <View
+    style={
+      Object {
+        "height": 704,
+        "justifyContent": "center",
+        "position": "absolute",
+      }
+    }
+  >
+    <HueBrightSlider
+      hue={0}
+      label="Hue"
+      size={688}
+      trackWidth={54}
+    />
+  </View>
+</View>
+`;
+
+exports[`HueBrightCrossSlider components componentWillReceiveProps render 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {
+        "height": 704,
+        "width": 704,
+      },
+    ]
+  }
+>
+  <HueBrightSlider
+    bright={1000}
+    label="Brightness"
+    maxBright={1000}
+    minBright={10}
+    size={688}
+    trackWidth={54}
+  />
+  <View
+    style={
+      Object {
+        "height": 704,
+        "justifyContent": "center",
+        "position": "absolute",
+      }
+    }
+  >
+    <HueBrightSlider
+      hue={0}
+      label="Hue"
+      size={688}
+      trackWidth={54}
+    />
+  </View>
+</View>
+`;
+
+exports[`HueBrightCrossSlider components render touch 1`] = `
+<View
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "justifyContent": "center",
+      },
+      Object {
+        "height": 704,
+        "width": 704,
+      },
+    ]
+  }
+>
+  <HueBrightSlider
+    bright={800}
+    label="Brightness"
+    maxBright={1000}
+    minBright={10}
+    size={688}
+    trackWidth={54}
+  />
+  <View
+    style={
+      Object {
+        "height": 704,
+        "justifyContent": "center",
+        "position": "absolute",
+      }
+    }
+  >
+    <HueBrightSlider
+      hue={30}
+      label="Hue"
+      size={688}
+      trackWidth={54}
+    />
+  </View>
+</View>
+`;
