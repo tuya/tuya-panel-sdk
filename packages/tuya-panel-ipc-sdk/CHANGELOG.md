@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.10.0...@tuya/tuya-panel-ipc-sdk@1.11.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* Compatible with non-camera products ([#106](https://github.com/tuya/tuya-panel-sdk/issues/106)) ([ee98241](https://github.com/tuya/tuya-panel-sdk/commit/ee98241238c2e931484f6dd554c650c4143f0e01))
+
+
+### Features
+
+* **ipc:** modify music control component ([#99](https://github.com/tuya/tuya-panel-sdk/issues/99)) ([0722b52](https://github.com/tuya/tuya-panel-sdk/commit/0722b5294d9e38a03da6dfe5b68cd8558147b53e))
+
+
+
+
+
 # [1.10.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.9.1...@tuya/tuya-panel-ipc-sdk@1.10.0) (2021-09-22)
 
 
