@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.3.1...@tuya/tuya-panel-lock-sdk@1.4.0) (2021-10-12)
+
+
+### Features
+
+* **lock:** add seven lock component ([#101](https://github.com/tuya/tuya-panel-sdk/issues/101)) ([40dd877](https://github.com/tuya/tuya-panel-sdk/commit/40dd877ea87ff092b577cc94369c6b7e61804e8d))
+
+
+
+
+
 ## [1.3.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.3.0...@tuya/tuya-panel-lock-sdk@1.3.1) (2021-09-01)
 
 
