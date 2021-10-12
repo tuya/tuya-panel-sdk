@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.3.0...@tuya/tuya-panel-remote-sdk@0.3.1) (2021-10-12)
+
+**Note:** Version bump only for package @tuya/tuya-panel-remote-sdk
+
+
+
+
+
 # [0.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.2.3...@tuya/tuya-panel-remote-sdk@0.3.0) (2021-09-22)
 
 

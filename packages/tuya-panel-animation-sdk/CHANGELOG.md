@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.4.0...@tuya/tuya-panel-animation-sdk@1.5.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([d78a174](https://github.com/tuya/tuya-panel-sdk/commit/d78a1749966e7e7348fcc8614a7c15ff4954e76f))
+
+
+### Features
+
+* add singleTimePicker component ([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([8b8fbf0](https://github.com/tuya/tuya-panel-sdk/commit/8b8fbf04aed68e1570bcd4b339ddfd726bf45ae5))
+
+
+
+
+
 # [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.2.1...@tuya/tuya-panel-animation-sdk@1.4.0) (2021-07-14)
 
 
