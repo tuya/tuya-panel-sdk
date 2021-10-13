@@ -24,4 +24,4 @@ import { TYIpcPlayer, TYIpcNative, TYIpcTopBar } from '@tuya/tuya-panel-ipc-sdk'
 
 ## Doc
 
-查看[链接](https://developer.tuya.com/cn/docs/iot/panel-development/panel-sdk-development/ipc-sdk/ipc-components?categoryId=827056)获取详细文档
+查看[链接](https://developer.tuya.com/cn/docs/control-panel-sdk/preface?id=K9pmf1pd23nmj)获取详细文档
