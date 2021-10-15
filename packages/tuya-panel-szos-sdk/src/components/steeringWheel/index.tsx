@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable react/prop-types */
 /*
  * 使用须知！！
@@ -55,6 +56,8 @@ const Wheel: FC<IOnlieProp> = props => {
   const wheelLeftRef = useRef(null);
   // 转动的角度
   const [ang, setAng] = useState<number>(0);
+  // dp=>左1右2正方向0
+  const [rotate, setRotate] = useState<number>(0);
 
   // 开始按下转动的初始角度
   const [angStart, setAngStart] = useState<number>(0);
@@ -64,6 +67,12 @@ const Wheel: FC<IOnlieProp> = props => {
   const [state, setState] = useState<string>('');
   // 中心点
   const [center, setCenter] = useState<any>({});
+  const [centerX, setCenterX] = useState<any>({});
+  const [centerY, setCenterY] = useState<any>({});
+
+  const beforeref = useRef(0);
+
+  const popFirst = useRef(false);
 
   // const onHandlerStateChange = ({ nativeEvent }) => {
   //   switch (nativeEvent.state) {
@@ -100,14 +109,16 @@ const Wheel: FC<IOnlieProp> = props => {
   const _onPanGestureEvent = ({ nativeEvent }) => {
     const { width, height } = center;
     const { x, y } = nativeEvent;
-    const centerx = width / 2;
-    const centery = height / 2;
-    const a = Math.abs(centerx - x);
-    const b = Math.abs(centery - y);
+    const cx = width / 2;
+    const cy = height / 2;
+    const a = Math.abs(cx - x);
+    const b = Math.abs(cy - y);
     const re = Math.sqrt(a * a + b * b);
     // 安卓的re > cx || re < cx / 2会为ture，所以去掉
+    // alert(state + (re > cx || re < cx / 2));
+
     // 超出画板范围禁止绘制
-    if (Platform.OS !== 'android' && (re > centerx || re < centerx / 2)) {
+    if (Platform.OS !== 'android' && (re > cx + 10 || re < cx / 2 + 5)) {
       return;
     }
     if (state === 'active') {
@@ -116,23 +127,11 @@ const Wheel: FC<IOnlieProp> = props => {
   };
 
   const getAngle = (xNow: number, yNow: number) => {
-    // 指定坐标点与正北方向的夹角
-    const { x, y, width, height } = center;
-
-    // 相对于手机视图的实际中心点位置
-    const cClientx = x + width / 2;
-    const cClienty = y + height / 2;
-
     // 圆周上任意2点之间的弧度公式：θ=arctan[(y2-y0)/(x2-x0)]-arctan[(y1-y0)/(x1-x0)]
-    const radian1 = Math.atan((yNow - cClienty) / (xNow - cClientx)); // 指定坐标点弧度
+    const radian1 = Math.atan2(yNow - centerY, xNow - centerX); // 指定坐标点弧度
     const radian0 = 0; // 正北方向弧度
-    let angle = ((radian1 - radian0) * 180) / Math.PI; // 弧度转角度
-
-    if (xNow < cClientx) {
-      // 指定坐标点落在第2、3象限，
-      angle += 180;
-    }
-    return angle;
+    const angle = (radian1 - radian0) / (Math.PI / 180); // 弧度转角度
+    return Number(angle.toFixed(2));
   };
 
   const roate = (x: number, y: number) => {
@@ -141,22 +140,44 @@ const Wheel: FC<IOnlieProp> = props => {
     return angle - angStart;
   };
 
-  const down = (x: number, y: number) => {
-    const angle0 = getAngle(x, y);
+  const down = (xNow: number, yNow: number) => {
+    const angle0 = getAngle(xNow, yNow);
+    // 指定坐标点与正北方向的夹角
     setAngStart(angle0);
+    // beforeref.current = angle0;
     setCtrl(true);
   };
 
-  const move = (x: number, y: number) => {
+  const move = (xNow: number, yNow: number) => {
     if (ctrl) {
-      const angs = roate(x, y);
-      if (Math.abs(angs) > 180) {
-        setAng(angs > 0 ? maxRight : -maxLeft);
-      } else if (angs >= maxRight) {
-        setAng(maxRight);
-      } else if (angs <= -maxLeft) {
-        setAng(-maxLeft);
+      const angs = roate(xNow, yNow);
+      if (!popFirst.current) {
+        // 去掉down的第一个点
+        beforeref.current = angs;
+        popFirst.current = true;
+        return;
+      }
+      if (beforeref.current === angs) {
+        // 过滤掉没有变化的
+        setAng(angs);
+        return;
+      }
+      if (beforeref.current === 0) {
+        // 正负值突变
+        setRotate(angs > 0 ? 2 : 1);
+        beforeref.current = angs;
+        setAng(angs);
+        return;
+      }
+
+      if (beforeref.current * angs > 0) {
+        // 角度变大
+        setRotate(beforeref.current > angs ? 1 : 2);
+        beforeref.current = angs;
+        setAng(angs);
       } else {
+        // 角度变小
+        beforeref.current = angs;
         setAng(angs);
       }
     }
@@ -166,13 +187,22 @@ const Wheel: FC<IOnlieProp> = props => {
     if (ctrl) {
       setCtrl(false);
       setAng(0);
+      changeRotate(0);
+      beforeref.current = 0;
     }
   };
 
-  // 基于手机视图
   const _onLayout = (e: {
     nativeEvent: { layout: { x: any; y: any; width: any; height: any } };
   }) => {
+    // 指定坐标点与正北方向的夹角
+    const { x, y, width, height } = e.nativeEvent.layout;
+
+    // 中心点
+    const cx = x + width / 2;
+    const cy = y + height / 2;
+    setCenterX(cx);
+    setCenterY(cy);
     setCenter(e.nativeEvent.layout);
   };
 
@@ -183,7 +213,6 @@ const Wheel: FC<IOnlieProp> = props => {
   return (
     <View style={wheelStyle} onLayout={e => _onLayout(e)}>
       {/* <PanGestureHandler
-        minDist={5}
         ref={driveRef}
         simultaneousHandlers={wheelLeftRef}
         onHandlerStateChange={e => onHandlerStateChange(e)}
