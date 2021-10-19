@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateText components basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  1 hour
+</TYText>
+`;
+
+exports[`DateText components basic render 2`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  2days8hourslater
+</TYText>
+`;
+
+exports[`DateText components basic render 2 1`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  now
+</TYText>
+`;
+
+exports[`DateText components basic render 2 2`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  3 小时 44 分 16 秒 之后
+</TYText>
+`;
