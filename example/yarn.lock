@@ -859,9 +859,9 @@
   integrity sha1-/PcgXCXf95Xuea8eMNosl5CAjxE=
 
 "@types/react-native@*":
-  version "0.64.12"
-  resolved "https://registry.nlark.com/@types/react-native/download/@types/react-native-0.64.12.tgz#1c6a3226c26d7a5949cdf8878e6cfe95fe0951d6"
-  integrity sha1-HGoyJsJtellJzfiHjmz+lf4JUdY=
+  version "0.65.1"
+  resolved "https://registry.nlark.com/@types/react-native/download/@types/react-native-0.65.1.tgz#7342158e10ea5088c225bb669dd4ef15aad0a2f7"
+  integrity sha1-c0IVjhDqUIjCJbtmndTvFarQovc=
   dependencies:
     "@types/react" "*"
 
@@ -901,9 +901,9 @@
   integrity sha1-CoUdO9lkmPolwzq3J47TvWXwbD4=
 
 "@types/tuya-panel-kit@^4.0.1":
-  version "4.0.7"
-  resolved "https://registry.nlark.com/@types/tuya-panel-kit/download/@types/tuya-panel-kit-4.0.7.tgz#9fdb5dd89f39a6f1d3a1f517473530c905545faf"
-  integrity sha1-n9td2J85pvHTofUXRzUwyQVUX68=
+  version "4.7.1"
+  resolved "https://registry.nlark.com/@types/tuya-panel-kit/download/@types/tuya-panel-kit-4.7.1.tgz#de0b2f6212afff479f606d66bafad3e2dd95e979"
+  integrity sha1-3gsvYhKv/0efYG1muvrT4t2V6Xk=
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
@@ -5791,19 +5791,19 @@ react-native-maps@0.27.1:
 
 react-native-reanimated@1.13.0:
   version "1.13.0"
-  resolved "https://registry.nlark.com/react-native-reanimated/download/react-native-reanimated-1.13.0.tgz#1ee5d27d34bd2cee7dfad4ae9a3673300872c917"
+  resolved "https://registry.npmmirror.com/react-native-reanimated/download/react-native-reanimated-1.13.0.tgz#1ee5d27d34bd2cee7dfad4ae9a3673300872c917"
   integrity sha1-HuXSfTS9LO59+tSumjZzMAhyyRc=
   dependencies:
     fbjs "^1.0.0"
 
 react-native-safe-area-context@3.1.7:
   version "3.1.7"
-  resolved "https://registry.npm.taobao.org/react-native-safe-area-context/download/react-native-safe-area-context-3.1.7.tgz#fc9e636dfb168f992a2172d363509ce0611a8403"
+  resolved "https://registry.nlark.com/react-native-safe-area-context/download/react-native-safe-area-context-3.1.7.tgz#fc9e636dfb168f992a2172d363509ce0611a8403"
   integrity sha1-/J5jbfsWj5kqIXLTY1Cc4GEahAM=
 
 react-native-screens@2.10.1:
   version "2.10.1"
-  resolved "https://registry.nlark.com/react-native-screens/download/react-native-screens-2.10.1.tgz?cache=0&sync_timestamp=1623936062333&other_urls=https%3A%2F%2Fregistry.nlark.com%2Freact-native-screens%2Fdownload%2Freact-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
+  resolved "https://registry.npmmirror.com/react-native-screens/download/react-native-screens-2.10.1.tgz?cache=0&sync_timestamp=1632830059491&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Freact-native-screens%2Fdownload%2Freact-native-screens-2.10.1.tgz#06d22fae87ef0ce51c616c34a199726db1403b95"
   integrity sha1-BtIvrofvDOUcYWw0oZlybbFAO5U=
 
 react-native-svg@5.5.1:
@@ -7027,7 +7027,7 @@ tunnel-agent@^0.6.0:
 
 tuya-panel-kit@4.6.2:
   version "4.6.2"
-  resolved "https://registry.nlark.com/tuya-panel-kit/download/tuya-panel-kit-4.6.2.tgz#8b7614cda7142e272c343d9cc519c80e6e10cf1d"
+  resolved "https://registry.npmmirror.com/tuya-panel-kit/download/tuya-panel-kit-4.6.2.tgz#8b7614cda7142e272c343d9cc519c80e6e10cf1d"
   integrity sha1-i3YUzacULicsND2cxRnIDm4Qzx0=
   dependencies:
     "@react-native-community/masked-view" "0.1.10"

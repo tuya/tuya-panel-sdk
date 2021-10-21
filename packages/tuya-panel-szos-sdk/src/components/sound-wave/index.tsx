@@ -1,6 +1,10 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable consistent-return */
+/* eslint-disable react/prop-types */
 import { StyleSheet, View, Animated, ViewStyle } from 'react-native';
 import React, { useEffect, useMemo, useRef, useCallback } from 'react';
 import { Utils } from 'tuya-panel-kit';
+
 const { convertX: cx } = Utils.RatioUtils;
 interface Props {
   /*
@@ -136,7 +140,7 @@ const SoundWave: React.FC<Props> = props => {
       {barsAnimated.map((ani, index) => {
         return (
           <Animated.View
-            key={index + '-'}
+            key={`${index}`}
             style={{
               width: barWidth,
               height: ani,
@@ -152,9 +156,9 @@ const SoundWave: React.FC<Props> = props => {
 
 const styles = StyleSheet.create({
   root: {
+    alignItems: 'center',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',
   },
 });
 
