@@ -118,7 +118,7 @@ const SoundWave: React.FC<Props> = props => {
           animate(i);
         });
     return () => {
-      animatedStartRef.current = false;
+      return (animatedStartRef.current = false);
     };
   }, [start, data]);
 
