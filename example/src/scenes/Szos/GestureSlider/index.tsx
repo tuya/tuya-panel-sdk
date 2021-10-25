@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   dataText: {
     color: 'rgba(111,112,240,0.9)',
     fontSize: 30,
-    marginRight: cx(4),
-    lineHeight: cy(36),
+    marginRight: 4,
+    lineHeight: 36,
   },
 });

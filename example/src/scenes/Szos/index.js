@@ -3,11 +3,11 @@ import { TYFlatList } from 'tuya-panel-kit';
 import { produceRouterDatas } from '../../utils';
 import { subRouters } from '../../config/routers';
 import SoundWave from './SoundWave';
-// import GestureSlider from './GestureSlider';
+import GestureSlider from './GestureSlider';
 import StreeringWheel from './SteeringWheel';
 export default class SzosScene extends Component {
     static SoundWave = SoundWave;
-    // static GestureSlider = GestureSlider;
+    static GestureSlider = GestureSlider;
     static StreeringWheel = StreeringWheel;
 
     get data() {
@@ -16,8 +16,7 @@ export default class SzosScene extends Component {
 
     render() {
         return <TYFlatList contentContainerStyle = {
-            { paddingTop: 16 }
-        }
+            { paddingTop: 16 } }
         data = { this.data }
         />;
     }
