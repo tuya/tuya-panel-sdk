@@ -5,7 +5,7 @@ import React, { FC } from 'react';
 import { TYText } from 'tuya-panel-kit';
 import { DateTextProps, IDate } from './interface';
 import { parseDate, parseSecondToDate, FORMATS, FORMATS_ARRAY } from './util';
-import I18N from './i18n';
+import localI18N from './i18n';
 
 const DateText: FC<DateTextProps> = ({
   lang = 'en',
@@ -13,12 +13,21 @@ const DateText: FC<DateTextProps> = ({
   time,
   date,
   from,
+  parseNow = true,
   tail = true,
   space = true,
+  i18nData = {},
   ...otherProps
 }: DateTextProps) => {
   let str = '';
   let _time = time;
+
+  let langs = localI18N[lang];
+
+  // merge i18n data
+  if (i18nData[lang]) {
+    langs = { ...langs, ...i18nData[lang] };
+  }
 
   // resolve the date use parameter or time
   if (date !== undefined) {
@@ -28,28 +37,35 @@ const DateText: FC<DateTextProps> = ({
     _time = Math.floor(diff / 1000);
   }
 
-  const langs = I18N[lang];
   const data: IDate = parseSecondToDate(_time);
 
   // add the date item and the unit
   const parseText = {
     d() {
-      str += `${data.day} ${data.day > 1 ? langs.days : langs.day} `;
+      str += `${data.day} ${data.day > 1 ? langs.TYOutdoor_days : langs.TYOutdoor_day} `;
     },
     h() {
-      str += `${data.hour} ${data.hour > 1 ? langs.hours : langs.hour} `;
+      str += `${data.hour} ${data.hour > 1 ? langs.TYOutdoor_hours : langs.TYOutdoor_hour} `;
     },
     m() {
-      str += `${data.minute} ${data.minute > 1 ? langs.minutes : langs.minute} `;
+      str += `${data.minute} ${
+        data.minute > 1 ? langs.TYOutdoor_minutes : langs.TYOutdoor_minute
+      } `;
     },
     s() {
-      str += `${data.second} ${data.second > 1 ? langs.seconds : langs.second} `;
+      str += `${data.second} ${
+        data.second > 1 ? langs.TYOutdoor_seconds : langs.TYOutdoor_second
+      } `;
     },
   };
 
   // if now just return
   if (data.status === 'now') {
-    str = langs.now;
+    if (parseNow) {
+      str = langs.TYOutdoor_now;
+    } else {
+      str = `0 ${langs.TYOutdoor_second}`;
+    }
   } else {
     if (format.includes('max')) {
       let i = 0;
@@ -61,8 +77,18 @@ const DateText: FC<DateTextProps> = ({
           break;
         }
       }
-      if (format !== 'max') {
-        parseText[FORMATS[++i]]();
+      if (format === 'max2') {
+        const tag = FORMATS[++i];
+        if (tag) {
+          parseText[tag]();
+        }
+      }
+    } else if (format === 'hasValue') {
+      for (let i = 0; i < FORMATS_ARRAY.length; i++) {
+        const type = FORMATS_ARRAY[i];
+        if (data[type]) {
+          parseText[FORMATS[i]]();
+        }
       }
     } else {
       for (let i = 0; i < format.length; i++) {
@@ -72,7 +98,7 @@ const DateText: FC<DateTextProps> = ({
 
     // if tail add the before or later
     if (tail) {
-      str += langs[data.status];
+      str += langs[`TYOutdoor_${data.status}`];
     } else {
       // remove the last space
       str = str.slice(0, str.length - 1);

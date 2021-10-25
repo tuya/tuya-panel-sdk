@@ -2,7 +2,7 @@ import { IDate } from './interface';
 
 export const FORMATS = 'dhms';
 
-export const FORMATS_ARRAY = ['day', 'hour', 'minute', ' second'];
+export const FORMATS_ARRAY = ['day', 'hour', 'minute', 'second'];
 
 // 每天，每小时，每分 有多少秒
 export const SECOND = 1;

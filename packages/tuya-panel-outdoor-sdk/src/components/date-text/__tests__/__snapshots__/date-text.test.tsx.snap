@@ -12,6 +12,30 @@ exports[`DateText components basic render 1`] = `
 </TYText>
 `;
 
+exports[`DateText components basic render 1 1`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  1 hour
+</TYText>
+`;
+
+exports[`DateText components basic render 1 2`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  2days8hourslater
+</TYText>
+`;
+
 exports[`DateText components basic render 2`] = `
 <TYText
   align={null}
@@ -32,7 +56,7 @@ exports[`DateText components basic render 2 1`] = `
   type={null}
   weight={null}
 >
-  now
+  0 second
 </TYText>
 `;
 
@@ -44,6 +68,18 @@ exports[`DateText components basic render 2 2`] = `
   type={null}
   weight={null}
 >
-  3 小时 44 分 16 秒 之后
+  3 小时 44 分 16 秒 后
+</TYText>
+`;
+
+exports[`DateText components basic render 2 3`] = `
+<TYText
+  align={null}
+  color={null}
+  size={null}
+  type={null}
+  weight={null}
+>
+  3 小时 44 分 16 秒 后
 </TYText>
 `;
