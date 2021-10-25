@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '../.eslintrc.js',
+  extends: ['../.eslintrc.js','plugin:react/recommended'],
   settings: {
     'import/core-modules': [
       '@tuya/tuya-panel-sdk',
