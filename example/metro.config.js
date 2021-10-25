@@ -1,7 +1,13 @@
 const path = require('path');
 const blacklist = require('metro-config/src/defaults/blacklist');
 
-const modules = ['tuya-panel-kit', 'react', 'react-native', 'react-native-svg'];
+const modules = [
+  'tuya-panel-kit',
+  'react',
+  'react-native',
+  'react-native-svg',
+  'react-native-gesture-handler',
+];
 
 const root = path.resolve(__dirname, '..');
 

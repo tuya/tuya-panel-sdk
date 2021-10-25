@@ -405,3 +405,4 @@ lib
 packages/tuya-native-*
 scripts
 .npmrc
+package-lock.json
