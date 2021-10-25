@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-outdoor-sdk",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "涂鸦户外业务组件库",
   "main": "./lib/index.js",
   "scripts": {
