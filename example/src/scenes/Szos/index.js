@@ -5,19 +5,18 @@ import { subRouters } from '../../config/routers';
 import SoundWave from './SoundWave';
 import GestureSlider from './GestureSlider';
 import StreeringWheel from './SteeringWheel';
+import SimpleVerticalSlider from './SimpleVerticalSlider';
 export default class SzosScene extends Component {
-    static SoundWave = SoundWave;
-    static GestureSlider = GestureSlider;
-    static StreeringWheel = StreeringWheel;
+  static SoundWave = SoundWave;
+  static GestureSlider = GestureSlider;
+  static StreeringWheel = StreeringWheel;
+  static SimpleVerticalSlider = SimpleVerticalSlider;
 
-    get data() {
-        return produceRouterDatas(subRouters.filter(r => /^Szos.+\w*$/.test(r.id)));
-    }
+  get data() {
+    return produceRouterDatas(subRouters.filter(r => /^Szos.+\w*$/.test(r.id)));
+  }
 
-    render() {
-        return <TYFlatList contentContainerStyle = {
-            { paddingTop: 16 } }
-        data = { this.data }
-        />;
-    }
+  render() {
+    return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
+  }
 }
