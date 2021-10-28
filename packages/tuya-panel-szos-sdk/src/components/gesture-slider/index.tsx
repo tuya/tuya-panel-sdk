@@ -5,8 +5,7 @@ import Res from '../../res';
 import { Utils } from 'tuya-panel-kit';
 const { color: UColor } = Utils.ColorUtils;
 
-import Ration from '../../utils/ration';
-const { convertY: cy, convertX: cx } = Ration;
+const { convertY: cy, convertX: cx } = Utils.RatioUtils;
 
 interface Date {
   step: number;
@@ -180,7 +179,7 @@ GestureSlider.defaultProps = {
   style: {},
   onChange: () => {},
   defaultValue: 0,
-  value: 0,
+  value: undefined,
   thumbStyle: {},
   minValue: 0,
   maxValue: 12 * 60,
