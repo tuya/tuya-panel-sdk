@@ -7,7 +7,7 @@
  */
 import React, { FC, useEffect, useState, MutableRefObject, useRef } from 'react';
 import { View, Image, StyleProp, ViewStyle, Animated, Platform } from 'react-native';
-// import { PanGestureHandler, State } from 'react-native-gesture-handler';
+import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import { Utils } from 'tuya-panel-kit';
 import res from './res';
 
@@ -39,6 +39,14 @@ interface IOnlieProp {
    * 插入PanGestureHandler的旋转内部元素
    */
   childrenProps?: React.ReactNode;
+  /*
+   * 父元素相对于屏幕左边的偏移量 !!!因为PanGestureHandler输出的是相对于屏幕的位置，所以必须要传调用组件父元素相对于屏幕的位置
+   */
+  leftPart?: number;
+  /*
+   * 父元素相对于屏幕顶部的偏移量
+   */
+  topPart?: number;
 }
 
 const Wheel: FC<IOnlieProp> = props => {
@@ -49,6 +57,8 @@ const Wheel: FC<IOnlieProp> = props => {
     childrenProps,
     maxLeftAng = 90,
     maxRightAng = 90,
+    leftPart = 0,
+    topPart = 0,
   } = props;
 
   const maxLeft = Math.abs(maxLeftAng);
@@ -74,37 +84,37 @@ const Wheel: FC<IOnlieProp> = props => {
 
   const popFirst = useRef(false);
 
-  // const onHandlerStateChange = ({ nativeEvent }) => {
-  //   switch (nativeEvent.state) {
-  //     case State.UNDETERMINED:
-  //       setState('pedding');
-  //       break;
-  //     case State.BEGAN:
-  //       down(nativeEvent.absoluteX, nativeEvent.absoluteY);
-  //       setState('start');
-  //       // 将单步数据记录
-  //       // 清空单步数据
-  //       break;
-  //     case State.CANCELLED:
-  //       stop();
-  //       setState('cancel');
-  //       break;
-  //     case State.ACTIVE:
-  //       setState('active');
-  //       break;
-  //     case State.END:
-  //       stop();
-  //       setState('end');
-  //       break;
-  //     case State.FAILED:
-  //       stop();
-  //       setState('fail');
-  //       break;
-  //     default:
-  //       setState('other');
-  //       break;
-  //   }
-  // };
+  const onHandlerStateChange = ({ nativeEvent }) => {
+    switch (nativeEvent.state) {
+      case State.UNDETERMINED:
+        setState('pedding');
+        break;
+      case State.BEGAN:
+        down(nativeEvent.absoluteX, nativeEvent.absoluteY);
+        setState('start');
+        // 将单步数据记录
+        // 清空单步数据
+        break;
+      case State.CANCELLED:
+        stop();
+        setState('cancel');
+        break;
+      case State.ACTIVE:
+        setState('active');
+        break;
+      case State.END:
+        stop();
+        setState('end');
+        break;
+      case State.FAILED:
+        stop();
+        setState('fail');
+        break;
+      default:
+        setState('other');
+        break;
+    }
+  };
 
   const _onPanGestureEvent = ({ nativeEvent }) => {
     const { width, height } = center;
@@ -118,7 +128,7 @@ const Wheel: FC<IOnlieProp> = props => {
     // alert(state + (re > cx || re < cx / 2));
 
     // 超出画板范围禁止绘制
-    if (Platform.OS !== 'android' && (re > cx + 10 || re < cx / 2 + 5)) {
+    if (re > cx + 10 || re < cx / 2 + 5) {
       return;
     }
     if (state === 'active') {
@@ -141,6 +151,8 @@ const Wheel: FC<IOnlieProp> = props => {
   };
 
   const down = (xNow: number, yNow: number) => {
+    console.log('xNow', xNow);
+    console.log('yNow', yNow);
     const angle0 = getAngle(xNow, yNow);
     // 指定坐标点与正北方向的夹角
     setAngStart(angle0);
@@ -187,7 +199,6 @@ const Wheel: FC<IOnlieProp> = props => {
     if (ctrl) {
       setCtrl(false);
       setAng(0);
-      changeRotate(0);
       beforeref.current = 0;
     }
   };
@@ -199,8 +210,8 @@ const Wheel: FC<IOnlieProp> = props => {
     const { x, y, width, height } = e.nativeEvent.layout;
 
     // 中心点
-    const cx = x + width / 2;
-    const cy = y + height / 2;
+    const cx = x + width / 2 + leftPart;
+    const cy = y + height / 2 + topPart;
     setCenterX(cx);
     setCenterY(cy);
     setCenter(e.nativeEvent.layout);
@@ -212,23 +223,23 @@ const Wheel: FC<IOnlieProp> = props => {
 
   return (
     <View style={wheelStyle} onLayout={e => _onLayout(e)}>
-      {/* <PanGestureHandler
+      <PanGestureHandler
         ref={driveRef}
         simultaneousHandlers={wheelLeftRef}
         onHandlerStateChange={e => onHandlerStateChange(e)}
         onGestureEvent={e => _onPanGestureEvent(e)}
       >
-      </PanGestureHandler> */}
-      <Animated.View
-        style={{
-          transform: [{ rotate: `${ang}deg` }],
-        }}
-      >
-        {!childrenProps && (
-          <Image source={res.driver_wheel} style={{ width: cx(167), height: cx(167) }} />
-        )}
-        {childrenProps}
-      </Animated.View>
+        <Animated.View
+          style={{
+            transform: [{ rotate: `${ang}deg` }],
+          }}
+        >
+          {!childrenProps && (
+            <Image source={res.driver_wheel} style={{ width: cx(167), height: cx(167) }} />
+          )}
+          {childrenProps}
+        </Animated.View>
+      </PanGestureHandler>
     </View>
   );
 };
