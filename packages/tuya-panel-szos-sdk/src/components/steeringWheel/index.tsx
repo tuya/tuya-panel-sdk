@@ -151,8 +151,6 @@ const Wheel: FC<IOnlieProp> = props => {
   };
 
   const down = (xNow: number, yNow: number) => {
-    console.log('xNow', xNow);
-    console.log('yNow', yNow);
     const angle0 = getAngle(xNow, yNow);
     // 指定坐标点与正北方向的夹角
     setAngStart(angle0);
