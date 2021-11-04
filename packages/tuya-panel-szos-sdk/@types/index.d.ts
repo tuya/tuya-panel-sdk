@@ -186,6 +186,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      */
     childrenProps?: React.ReactNode;
   }
+
   export const SoundWave: React.ComponentClass<SoundWaveProps>;
   export const StreeringWheel: React.ComponentClass<StreeringWheelProps>;
 }
