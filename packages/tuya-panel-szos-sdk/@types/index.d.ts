@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ViewStyle } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 
 declare module '@tuya/tuya-panel-szos-sdk' {
   export interface SoundWaveProps {
@@ -186,7 +186,82 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      */
     childrenProps?: React.ReactNode;
   }
+  export interface MultiSliderProps {
+    values?: number[];
+    onValuesChange?: (values: number[]) => void;
+    onValuesChangeStart?: () => void;
+    onValuesChangeFinish?: (values: number[]) => void;
+    sliderLength?: number;
+    touchDimensions?: {
+      height: number;
+      width: number;
+      borderRadius: number;
+      slipDisplacement: number;
+    };
+    customMarker?: React.ComponentType<MarkerProps>;
+    customMarkerLeft?: React.ComponentType<MarkerProps>;
+    customMarkerRight?: React.ComponentType<MarkerProps>;
+    customLabel?: React.ComponentType<LabelProps>;
+    isMarkersSeparated?: boolean;
+    min?: number;
+    max?: number;
+    step?: number;
+    optionsArray?: number[];
+    containerStyle?: ViewStyle;
+    trackStyle?: ViewStyle;
+    selectedStyle?: ViewStyle;
+    unselectedStyle?: ViewStyle;
+    markerContainerStyle?: ViewStyle;
+    markerStyle?: ViewStyle;
+    pressedMarkerStyle?: ViewStyle;
+    valuePrefix?: string;
+    valueSuffix?: string;
+    enabledOne?: boolean;
+    enabledTwo?: boolean;
+    onToggleOne?: () => void;
+    onToggleTwo?: () => void;
+    allowOverlap?: boolean;
+    snapped?: boolean;
+    markerOffsetX?: number;
+    markerOffsetY?: number;
+    minMarkerOverlapDistance?: number;
+    imageBackgroundSource?: string;
+    enableLabel?: boolean;
+    vertical?: boolean;
+    unit?: string;
+    onMarkersPosition?: (position: [number, number]) => void;
+    size?: number;
+    disabledMarkerStyle?: StyleProp<ViewStyle>,
+    sliderLabelStyle?: StyleProp<TextStyle>,
+  }
+  export interface MarkerProps {
+    pressed: boolean;
+    pressedMarkerStyle: ViewStyle;
+    markerStyle: ViewStyle;
+    enabled: boolean;
+    currentValue: number;
+    valuePrefix: string;
+    valueSuffix: string;
+    disabledMarkerStyle?: StyleProp<ViewStyle>;
+    size: number
+  }
+  export interface LabelProps {
+    oneMarkerValue: string | number;
+    twoMarkerValue: string | number;
+    oneMarkerLeftPosition: number;
+    twoMarkerLeftPosition: number;
+    oneMarkerPressed: boolean;
+    twoMarkerPressed: boolean;
+    unit: string
+  }
+
+  export interface IImageAnimateProps {
+    source?: any,
+    style?: StyleProp<ViewStyle>
+  }
 
   export const SoundWave: React.ComponentClass<SoundWaveProps>;
   export const StreeringWheel: React.ComponentClass<StreeringWheelProps>;
+  export const MultiSlider: React.ComponentClass<MultiSliderProps>;
+  export const ImageAnimate: React.ComponentClass<IImageAnimateProps>;
 }
