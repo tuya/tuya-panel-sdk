@@ -11,9 +11,10 @@ const lineBoxHeight = cx(72);
 const strokeWidth = cx(2);
 
 const LineBoxSvg = () => {
-  const data = [0, 1, 10, -10, 0, 0, 0, 2, 0, 20]; // x轴10个数据，y轴数据大小
+  const data = [0, 1, 10, -10, 0, 0, 0, 2, 0, 12]; // x轴10个数据，y轴数据大小
   return (
     <LineBoxSvgView
+      range={{ min: -12, max: 12 }}
       size={{ height: lineBoxHeight, width: lineBoxWidth }}
       data={data}
       strokeStyle={{ width: strokeWidth, color: 'rgba(45,167,58)' }}

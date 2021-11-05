@@ -17,11 +17,13 @@ export const getPath = (
   buttonLineY: number,
   lineBoxWdith: number,
   TopLineY: number,
+  min: number,
+  max: number,
   slope?: number
 ) => {
   const getPoint = (value: number, index: number, stepX: number) => {
     const x = stepX * index;
-    const y = ((buttonLineY - TopLineY) * (12 - value)) / 24 + TopLineY;
+    const y = ((buttonLineY - TopLineY) * (max - value)) / (max - min) + TopLineY;
     return { x, y };
   };
 

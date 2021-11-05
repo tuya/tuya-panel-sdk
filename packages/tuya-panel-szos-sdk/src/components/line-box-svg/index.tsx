@@ -21,9 +21,18 @@ interface linearStyleTypes {
   opacity?: number;
 }
 
+interface rangeTypes {
+  min?: number;
+  max?: number;
+}
+
 interface Props {
   /**
-   * 大小
+   * y轴大小范围
+   */
+  range: rangeTypes;
+  /**
+   * 样式宽高范围
    */
   size: sizePropTypes;
   /**
@@ -59,13 +68,20 @@ const defaultLinearStyle: linearStyleTypes = {
   opacity: 0,
 };
 
+const defaultRange: rangeTypes = {
+  min: -12,
+  max: 12,
+};
+
 const LineBoxSvg: FC<Props> = props => {
-  const { size, data, strokeStyle, bottomLinearStyle, topLinearStyle, slope } = props;
+  const { size, data, strokeStyle, bottomLinearStyle, topLinearStyle, slope, range } = props;
   const { height: lineBoxHeight, width: lineBoxWidth } = size;
   const { width: strokeWidth, color: strokeColor, opacity: strokeOpacity } =
     strokeStyle ?? defaultStrokeStyle;
   const { color: buttonLinearColor, opacity: buttonLinearOpacity } =
     bottomLinearStyle ?? defaultLinearStyle;
+
+  const { min, max } = range ?? defaultRange;
 
   const { color: topLinearColor, opacity: topLinearOpacity } = topLinearStyle ?? defaultLinearStyle;
   const buttonLineY = lineBoxHeight - strokeWidth * 2; // 高度要容纳曲线厚度和斜率造成的高度超出，最下方位置
@@ -73,7 +89,7 @@ const LineBoxSvg: FC<Props> = props => {
   const [line, setLine] = useState('');
 
   useLayoutEffect(() => {
-    data?.length && setLine(getPath(data, buttonLineY, lineBoxWidth, TopLineY, slope));
+    data?.length && setLine(getPath(data, buttonLineY, lineBoxWidth, TopLineY, slope, min, max));
   }, [data]);
 
   return (
