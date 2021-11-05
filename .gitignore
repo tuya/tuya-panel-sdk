@@ -406,3 +406,4 @@ packages/tuya-native-*
 scripts
 .npmrc
 package-lock.json
+/.idea/

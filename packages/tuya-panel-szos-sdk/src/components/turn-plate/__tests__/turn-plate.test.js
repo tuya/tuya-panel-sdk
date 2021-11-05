@@ -8,7 +8,7 @@ describe('TurnPlate components', () => {
     expect(wrapper).toMatchSnapshot();
   });
   it('dot render', () => {
-    const wrapper = shallow(
+    const component = shallow(
       <TurnPlate
         activeColor="#0ff"
         inactiveColor="#ffa"
@@ -16,8 +16,25 @@ describe('TurnPlate components', () => {
         value={50}
       />
     );
-    const wrapperHandle = wrapper.children().at(1);
-
-    expect(wrapper).toMatchSnapshot();
+    expect(component).toMatchSnapshot();
   });
+  // it('handleChangeTurnPlate render', () => {
+  //   const onChangeTurnPlate = jest.fn();
+  //   const component = render(
+  //     <TurnPlate
+  //       handleChangeTurnPlate={onChangeTurnPlate}
+  //       value={50}
+  //     />
+  //   );
+  //   // fireEvent
+  //   const {instance} = component.root;
+  //   instance.handleChangeTurnPlate = onChangeTurnPlate;
+  //   instance.handleChangeTurnPlate(20);
+  //   component.update(<TurnPlate
+  //     handleChangeTurnPlate={onChangeTurnPlate}
+  //     value={50}
+  //   />)
+  //   expect(instance.handleChangeTurnPlate).toHaveBeenCalled()
+  //   expect(component).toMatchSnapshot();
+  // });
 });
