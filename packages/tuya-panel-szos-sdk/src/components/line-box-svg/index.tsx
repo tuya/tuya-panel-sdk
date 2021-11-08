@@ -76,14 +76,22 @@ const defaultRange: rangeTypes = {
 const LineBoxSvg: FC<Props> = props => {
   const { size, data, strokeStyle, bottomLinearStyle, topLinearStyle, slope, range } = props;
   const { height: lineBoxHeight, width: lineBoxWidth } = size;
-  const { width: strokeWidth, color: strokeColor, opacity: strokeOpacity } =
-    strokeStyle ?? defaultStrokeStyle;
-  const { color: buttonLinearColor, opacity: buttonLinearOpacity } =
-    bottomLinearStyle ?? defaultLinearStyle;
+  const { width: strokeWidth, color: strokeColor, opacity: strokeOpacity } = {
+    ...defaultStrokeStyle,
+    ...strokeStyle,
+  };
 
-  const { min, max } = range ?? defaultRange;
+  const { color: buttonLinearColor, opacity: buttonLinearOpacity } = {
+    ...defaultLinearStyle,
+    ...bottomLinearStyle,
+  };
 
-  const { color: topLinearColor, opacity: topLinearOpacity } = topLinearStyle ?? defaultLinearStyle;
+  const { min, max } = { ...defaultRange, ...range };
+
+  const { color: topLinearColor, opacity: topLinearOpacity } = {
+    ...defaultLinearStyle,
+    ...topLinearStyle,
+  };
   const buttonLineY = lineBoxHeight - strokeWidth * 2;
   const TopLineY = strokeWidth * 2;
   const [line, setLine] = useState('');
