@@ -84,12 +84,12 @@ const LineBoxSvg: FC<Props> = props => {
   const { min, max } = range ?? defaultRange;
 
   const { color: topLinearColor, opacity: topLinearOpacity } = topLinearStyle ?? defaultLinearStyle;
-  const buttonLineY = lineBoxHeight - strokeWidth * 2; // 高度要容纳曲线厚度和斜率造成的高度超出，最下方位置
-  const TopLineY = strokeWidth * 2; // 最上方位置，要容纳曲线厚度和斜率造成的高度超出
+  const buttonLineY = lineBoxHeight - strokeWidth * 2;
+  const TopLineY = strokeWidth * 2;
   const [line, setLine] = useState('');
 
   useLayoutEffect(() => {
-    data?.length && setLine(getPath(data, buttonLineY, lineBoxWidth, TopLineY, slope, min, max));
+    data?.length && setLine(getPath(data, buttonLineY, lineBoxWidth, TopLineY, min, max, slope));
   }, [data]);
 
   return (
