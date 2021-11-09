@@ -9,6 +9,7 @@
         "build": "../../node_modules/.bin/tsc -d",
         "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
         "prepublishOnly": "yarn build",
+        "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix --ignore-path ../../.eslintignore",
         "test": "jest"
     },
     "publishConfig": {
