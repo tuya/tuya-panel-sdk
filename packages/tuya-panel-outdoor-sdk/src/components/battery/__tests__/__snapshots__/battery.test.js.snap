@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Battery components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "width": 120,
+    }
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#72E19A",
+          "fontSize": 28,
+          "fontWeight": "bold",
+          "lineHeight": 36,
+        },
+        false,
+        Object {
+          "marginBottom": 10,
+        },
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    80%
+  </TYText>
+  <Component
+    color="#57BCFB"
+    d="M574.6688 430.3872h234.0864L393.216 1010.9952l56.0128-430.3872H215.1424L630.784 0l-56.0128 430.3872z"
+    size={34}
+    style={
+      Object {
+        "marginBottom": 4,
+      }
+    }
+    viewBox="0 0 1024 1024"
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "flex-end",
+        "display": "flex",
+      }
+    }
+  >
+    <View
+      key="34"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#797A80",
+          },
+          false,
+          Object {
+            "width": 68,
+          },
+        ]
+      }
+    />
+    <View
+      key="32"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#797A80",
+          },
+          false,
+          Object {
+            "width": 64,
+          },
+        ]
+      }
+    />
+    <View
+      key="30"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 60,
+          },
+        ]
+      }
+    />
+    <View
+      key="28"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 56,
+          },
+        ]
+      }
+    />
+    <View
+      key="26"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 52,
+          },
+        ]
+      }
+    />
+    <View
+      key="24"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 48,
+          },
+        ]
+      }
+    />
+    <View
+      key="22"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 44,
+          },
+        ]
+      }
+    />
+    <View
+      key="20"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 40,
+          },
+        ]
+      }
+    />
+    <View
+      key="18"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 36,
+          },
+        ]
+      }
+    />
+    <View
+      key="16"
+      style={
+        Array [
+          Object {
+            "borderRadius": 5,
+            "height": 6,
+            "marginBottom": 22,
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#72E19A",
+          },
+          false,
+          Object {
+            "width": 32,
+          },
+        ]
+      }
+    />
+  </View>
+</View>
+`;
