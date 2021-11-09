@@ -3,6 +3,7 @@ import { View, Image, StyleSheet, ActivityIndicator, Animated } from 'react-nati
 import { Circle } from 'react-native-svg';
 import { Utils, TYText, LinearGradient } from 'tuya-panel-kit';
 import ArrowWave from './ArrowWave';
+import BoxShadow from './BoxShadow';
 import { useLinearGradient, useHandleResponder, useBtnText } from './hooks';
 import { getLinearGradientParams, getBarStyle, gethandleStyle, getArrowWaveNum } from './utils';
 import { SlideChooseProps } from './interface';
