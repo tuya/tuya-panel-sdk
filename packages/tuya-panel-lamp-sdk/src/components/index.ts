@@ -17,3 +17,25 @@ export { default as LampLightPreview } from './preview/lamp-light-preview';
 export { default as LampPreview } from './preview/lamp-preview';
 
 export { default as ColorSelectorNoScroll } from './list/color-selector-noScroll';
+
+export { default as SingleTimePicker } from './time/single-time-picker';
+
+export { default as BrightRectSlider } from './slider/bright-rect-slider';
+
+export { default as HueBrightCrossSlider } from './slider/hue-bright-cross-slider';
+
+export { default as NumberSlider } from './slider/number-slider';
+
+export { default as ScaleSlider } from './slider/scale-slider';
+
+export { default as WhiteCrossSlider } from './slider/white-cross-slider';
+
+export { default as CountdownPicker } from './picker/countdown-picker';
+
+export { default as ColorDisk } from './preview/color-disk';
+
+export { default as WeekGroup } from './week-group';
+
+export { default as MusicBar } from './music/music-bar';
+
+export { default as AppMusicCard } from './music/music-card/app-music-card';

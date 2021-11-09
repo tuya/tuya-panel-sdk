@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-robot-sdk",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "涂鸦面板扫地机器人 sdk 开发工具包",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,8 +9,7 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
-    "prepublishOnly": "yarn build"
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents"
   },
   "publishConfig": {
     "access": "public",

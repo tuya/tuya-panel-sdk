@@ -1,0 +1,197 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bright components basic render 1`] = `
+<View
+  style={
+    Object {
+      "height": undefined,
+      "width": undefined,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": undefined,
+        "overflow": "hidden",
+        "width": undefined,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="linear-gradient"
+      stops={
+        Object {
+          "0%": "#000",
+          "100%": "#fff",
+        }
+      }
+      style={
+        Object {
+          "height": undefined,
+          "width": undefined,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      <Rect
+        height={0}
+        rx={0}
+        ry={0}
+        width={0}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "fontSize": 12,
+          "top": NaN,
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    : 
+    3
+    %
+  </TYText>
+  <AnimatedComponent
+    style={
+      Object {
+        "bottom": NaN,
+        "left": NaN,
+        "position": "absolute",
+      }
+    }
+  >
+    <Svg
+      height="22"
+      preserveAspectRatio="xMidYMid meet"
+      width="16"
+    >
+      <Path
+        d="M2,2L2,17L8,20L14,17L14,2Z"
+        fill="#a5a5a5"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`Bright components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Object {
+      "height": undefined,
+      "width": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "borderRadius": NaN,
+        "height": undefined,
+        "overflow": "hidden",
+        "width": 10,
+      }
+    }
+  >
+    <LinearGradient
+      gradientId="linear-gradient"
+      stops={
+        Object {
+          "0%": "#000",
+          "100%": "#fff",
+        }
+      }
+      style={
+        Object {
+          "height": undefined,
+          "width": 10,
+        }
+      }
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    >
+      <Rect
+        height={0}
+        rx={0}
+        ry={0}
+        width={10}
+        x={0}
+        y={0}
+      />
+    </LinearGradient>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+        },
+        Object {
+          "fontSize": 12,
+          "top": NaN,
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    : 
+    0
+    %
+  </TYText>
+  <AnimatedComponent
+    style={
+      Object {
+        "bottom": NaN,
+        "left": -8.1010101010101,
+        "position": "absolute",
+      }
+    }
+  >
+    <Svg
+      height="22"
+      preserveAspectRatio="xMidYMid meet"
+      width="16"
+    >
+      <Path
+        d="M2,2L2,17L8,20L14,17L14,2Z"
+        fill="#a5a5a5"
+        stroke="#fff"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+      />
+    </Svg>
+  </AnimatedComponent>
+</View>
+`;

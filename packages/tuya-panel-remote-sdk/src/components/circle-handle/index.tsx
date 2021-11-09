@@ -261,7 +261,7 @@ const CircleHandle: React.FC<MainProps> = props => {
                     key={item.key}
                     pointRadius={pointRadius}
                     item={item}
-                    pointColor={pointColor}
+                    pointColor={typeof pointColor === 'string' ? pointColor : pointColor[item.key]}
                     status={status[item.key]}
                     pointerEvents="none"
                   />

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import Res from './res';
 import TYIpcPlayerManager from '../ty-ipc-native';
 import Strings from './i18n';
@@ -182,6 +183,8 @@ export interface TYIpcPlayerProps {
   playerProps: PlayerProps;
   backIsNeedDisConnectP2P: boolean;
   zoomInTimesStyle: any;
+  enterBackgroundEvent: () => any;
+  enterForegroundEvent: () => any;
 }
 
 export const _defaultProps = {
@@ -194,15 +197,15 @@ export const _defaultProps = {
   isFullScreen: false,
   hideFullMenu: false,
   stopFullAnim: false,
-  onChangeRecording: () => {},
-  onFullScreenTapView: (data: any) => {},
-  onNormalScreenTapView: () => {},
-  onChangeSupportedMicWay: (data: any) => {},
-  onListenTalkingChangeMute: (data: any) => {},
-  onListenIsTalking: (data: any) => {},
-  getCloudCameraConfig: (data: any) => {},
+  onChangeRecording: (): void => {},
+  onFullScreenTapView: (): void => {},
+  onNormalScreenTapView: (): void => {},
+  onChangeSupportedMicWay: (): void => {},
+  onListenTalkingChangeMute: (): void => {},
+  onListenIsTalking: (): void => {},
+  getCloudCameraConfig: (): void => {},
   showCutScreen: true,
-  pressEnterAlbum: () => {
+  pressEnterAlbum: (): void => {
     TYIpcPlayerManager.enterAlbum();
   },
   cutStyle: _defaultCutStyle,
@@ -230,4 +233,6 @@ export const _defaultProps = {
   },
   backIsNeedDisConnectP2P: true,
   zoomInTimesStyle: _defaultZoomInTimesStyle,
+  enterBackgroundEvent: (): void => {},
+  enterForegroundEvent: (): void => {},
 };

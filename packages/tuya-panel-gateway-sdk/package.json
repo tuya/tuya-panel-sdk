@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-gateway-sdk",
-  "version": "1.2.1",
+  "version": "1.4.1",
   "description": "涂鸦网关业务组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
@@ -14,8 +14,7 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
-    "prepublishOnly": "yarn build"
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents"
   },
   "dependencies": {
     "@react-native-community/blur": "^3.6.0",
@@ -24,6 +23,7 @@
     "@types/react-native": "^0.60.26",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
+    "react-native-shadow": "^1.2.2",
     "style-equal": "^1.0.0",
     "styled-components": "^3.4.10",
     "typescript": "^3.6.4"

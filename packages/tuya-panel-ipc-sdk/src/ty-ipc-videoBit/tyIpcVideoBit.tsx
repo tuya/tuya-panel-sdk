@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import { TYText } from 'tuya-panel-kit';
 import Styles from './style';
 import TYIpcPlayerManager from '../ty-ipc-native';
-import { TYIpcVideoBitProps } from './interface'
+import { TYIpcVideoBitProps } from './interface';
 
 const TYIpcVideoBit: React.FC<TYIpcVideoBitProps> & {
   defaultProps: Partial<TYIpcVideoBitProps>;
@@ -23,13 +23,15 @@ const TYIpcVideoBit: React.FC<TYIpcVideoBitProps> & {
       getBitValue();
     }, 3000);
   };
-  
+
   const getBitValue = () => {
     TYIpcPlayerManager.getVideoBitRateKBPS()
       .then(data => {
         if (data) {
           const realBit = (+data).toFixed(0);
           setBitRateValue(realBit);
+        } else {
+          setBitRateValue('0');
         }
       })
       .catch(err => {
@@ -39,10 +41,11 @@ const TYIpcVideoBit: React.FC<TYIpcVideoBitProps> & {
 
   return (
     <View style={[Styles.videoBitContainer, containerStyle]}>
-      {(bitRateValue !== undefined) || (bitValue !== undefined )  ? (
+      {bitRateValue !== undefined || bitValue !== undefined ? (
         <View style={[Styles.bitTxtBox, bitTxtBoxStyle]}>
           <TYText style={[Styles.fontContainer, valueStyle]}>
-            { bitValue !== undefined ? bitValue : bitRateValue}{` `}
+            {bitValue !== undefined ? bitValue : bitRateValue}
+            {` `}
             <TYText style={[Styles.fontContainer, unitStyle]}>{unit}</TYText>
           </TYText>
         </View>

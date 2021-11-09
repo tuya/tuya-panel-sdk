@@ -1,3 +1,4 @@
+/* eslint-disable camelcase */
 // 场景相关接口
 export interface Scene {
   dpId: number;
@@ -455,12 +456,29 @@ export interface IUpdateGroupDpName {
   name: string;
 }
 
-export interface IGetWeatherQuality {
+export interface IGetWeatherQuality_2 {
+  /**
+   * 设备 id
+   */
   devId: string;
+  /**
+   * 是否使用用户本地时区
+   */
   isLocal: boolean;
 }
 
-export interface IGetWeatherQualityResponse {
+export interface IGetWeatherQuality_1 {
+  /**
+   * 设备 id
+   */
+  devId: string;
+  /**
+   * 示例：["city.id", "city.name", "weather.air.qualityLevel", "weather.air.pm25", "weather.air.quality", "weather.now.temperature", "weather.now.hum", "weather.now.condIconUrl", "weather.now.condTxt"]
+   */
+  codes: string;
+}
+
+export interface IGetWeatherQualityResponse_2 {
   c: Array<{
     /**
      * 城市名称
@@ -569,6 +587,29 @@ export interface IGetWeatherQualityResponse {
      */
     sunRiseTimestamp: number;
   }>;
+}
+
+export interface IGetWeatherQualityResponse_1 {
+  /**
+   * 是否成功
+   */
+  success?: boolean;
+  /**
+   * 返回接口
+   */
+  result: {
+    'weather.now.hum': string;
+    'city.name': string;
+    'weather.air.qualityLevel': number;
+    'weather.air.quality': string;
+    'weather.air.pm25': string;
+    'weather.now.temperature': string;
+    'weather.now.condIconUrl': string;
+    'weather.now.condTxt': string;
+    'city.id': string;
+  };
+  t: number;
+  status: string;
 }
 
 export interface IGetWeathers {

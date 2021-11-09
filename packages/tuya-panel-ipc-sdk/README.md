@@ -24,4 +24,4 @@ import { TYIpcPlayer, TYIpcNative, TYIpcTopBar } from '@tuya/tuya-panel-ipc-sdk'
 
 ## Doc
 
-see [link](https://developer.tuya.com/en/docs/iot/panel-development/panel-sdk-development/ipc-sdk/ipc-components?categoryId=827056) for detail docs
+see [link](https://developer.tuya.com/en/docs/control-panel-sdk/preface?id=K9pmf1pd23nmj) for detail docs

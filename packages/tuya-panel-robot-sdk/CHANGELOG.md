@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.1.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.1.0...@tuya/tuya-panel-robot-sdk@1.1.1) (2021-10-12)
+
+**Note:** Version bump only for package @tuya/tuya-panel-robot-sdk
+
+
+
+
+
+# [1.1.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.0.3...@tuya/tuya-panel-robot-sdk@1.1.0) (2021-08-14)
+
+
+### Features
+
+* **staticResource:** remove the default static resource ([#79](https://github.com/tuya/tuya-panel-sdk/issues/79)) ([00b8f02](https://github.com/tuya/tuya-panel-sdk/commit/00b8f021631085df0c75d5898a09801d92143f57))
+
+
+
+
+
 ## [1.0.3](https://registry.code.tuya-inc.top/TuyaRN/panel-rn-sdk/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.0.2...@tuya/tuya-panel-robot-sdk@1.0.3) (2021-04-14)
 
 **Note:** Version bump only for package @tuya/tuya-panel-robot-sdk

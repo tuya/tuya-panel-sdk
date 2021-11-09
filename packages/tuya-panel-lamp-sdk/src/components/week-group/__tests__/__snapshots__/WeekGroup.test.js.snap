@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorDisk components basic render 1`] = `
+<View
+  accessibilityLabel="WeekGroup"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-between",
+      },
+      undefined,
+    ]
+  }
+>
+  <ThemedButton
+    background="#1082FE"
+    key="0"
+    onPress={[Function]}
+    size={80}
+    text="Sun"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#1082FE"
+    key="1"
+    onPress={[Function]}
+    size={80}
+    text="Mon"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#1082FE"
+    key="2"
+    onPress={[Function]}
+    size={80}
+    text="Tues"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#1082FE"
+    key="3"
+    onPress={[Function]}
+    size={80}
+    text="Wed"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#323131"
+    key="4"
+    onPress={[Function]}
+    size={80}
+    text="Thur"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#1082FE"
+    key="5"
+    onPress={[Function]}
+    size={80}
+    text="Fri"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+  <ThemedButton
+    background="#1082FE"
+    key="6"
+    onPress={[Function]}
+    size={80}
+    text="Sat"
+    theme={
+      Object {
+        "fontColor": "#fff",
+      }
+    }
+  />
+</View>
+`;

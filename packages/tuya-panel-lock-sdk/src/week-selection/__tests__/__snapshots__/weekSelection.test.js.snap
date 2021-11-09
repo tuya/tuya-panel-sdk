@@ -1,0 +1,317 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeekSelection components basicd render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "space-around",
+        "paddingHorizontal": 12,
+        "paddingVertical": 12,
+      },
+      undefined,
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Sun"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#338CE5",
+          "borderRadius": 44,
+          "height": 44,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Sun
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Mon"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Mon
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Tus"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Tus
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Wed"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Wed
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Thu"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Thu
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Fri"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Fri
+    </TYText>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    key="Sat"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "borderColor": "#D6D6D6",
+          "borderRadius": 44,
+          "borderWidth": 1,
+          "height": 44,
+          "opacity": 1,
+          "width": 44,
+        },
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "rgba(51,51,51,0.5)",
+            "fontSize": 14,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Sat
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;

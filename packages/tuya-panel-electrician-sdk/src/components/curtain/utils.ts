@@ -8,6 +8,7 @@ const { convertX: cx } = Utils.RatioUtils;
 export interface Option {
   min: number;
   max: number;
+  staticPrefix: string;
 }
 
 export interface InterpolateValue {
@@ -166,7 +167,7 @@ export const getOptionsByType = (
   styleType: StyleType,
   options: Option
 ): OptionResult => {
-  const { min, max } = options;
+  const { min, max, staticPrefix } = options;
   const style = {
     flat: {
       oneSide: {
@@ -267,8 +268,8 @@ export const getOptionsByType = (
           inputRange: [0, max - min],
           outputRange: [0, -ZOOSEMY_UN_ROLLER_CURTAIN_HEIGHT + ZOOSEMY_UN_ROLLER_CURTAIN_PREFIX],
         },
-        curtainImg: 'https://images.tuyacn.com/smart/uiconf/curtain-one-side-1@3x.png',
-        bgImg: 'https://images.tuyacn.com/smart/uiconf/curtain-bg-side-1.png',
+        curtainImg: `${staticPrefix}/smart/uiconf/curtain-one-side-1@3x.png`,
+        bgImg: `${staticPrefix}/smart/uiconf/curtain-bg-side-1.png`,
       },
       roller: {
         container: { alignItems: 'center' },
@@ -292,8 +293,8 @@ export const getOptionsByType = (
         circleType: 'arrow',
         bg: { width: cx(260), height: cx(302) },
         curtainWrap: { position: 'absolute', top: 0 },
-        curtainImg: 'https://images.tuyacn.com/smart/uiconf/curtain_roller.ceil.png',
-        bgImg: 'https://images.tuyacn.com/smart/uiconf/curtain_roller_bg.png',
+        curtainImg: `${staticPrefix}/smart/uiconf/curtain_roller.ceil.png`,
+        bgImg: `${staticPrefix}/smart/uiconf/curtain_roller_bg.png`,
       },
       trietex: {
         curtainInterpolate: {
@@ -312,8 +313,8 @@ export const getOptionsByType = (
             -ZOOSEMY_UN_ROLLER_CURTAIN_HEIGHT / 2 + ZOOSEMY_UN_ROLLER_CURTAIN_PREFIX,
           ],
         },
-        curtainImg: 'https://images.tuyacn.com/smart/uiconf/curtain-one-side-1@3x.png',
-        bgImg: 'https://images.tuyacn.com/smart/uiconf/curtain-bg-side-1.png',
+        curtainImg: `${staticPrefix}/smart/uiconf/curtain-one-side-1@3x.png`,
+        bgImg: `${staticPrefix}/smart/uiconf/curtain-bg-side-1.png`,
       },
     },
   };

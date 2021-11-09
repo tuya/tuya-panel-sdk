@@ -114,7 +114,7 @@ export interface MainProps extends PositionInfo {
   /**
    * 默认按键内容中圆点的颜色
    */
-  pointColor?: string;
+  pointColor?: Position | string;
   /**
    * 是否展示loading效果
    */

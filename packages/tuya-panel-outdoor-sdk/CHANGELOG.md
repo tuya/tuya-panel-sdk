@@ -3,6 +3,44 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.2.0...@tuya/tuya-panel-outdoor-sdk@0.3.0) (2021-10-25)
+
+
+### Features
+
+* add outdoor new component: DateText ([#111](https://github.com/tuya/tuya-panel-sdk/issues/111)) ([66f59d8](https://github.com/tuya/tuya-panel-sdk/commit/66f59d85e4958df562ff47c44dbe4d9dcc91a305))
+
+
+
+
+
+# [0.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.1.2...@tuya/tuya-panel-outdoor-sdk@0.2.0) (2021-10-12)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([d78a174](https://github.com/tuya/tuya-panel-sdk/commit/d78a1749966e7e7348fcc8614a7c15ff4954e76f))
+
+
+### Features
+
+* add singleTimePicker component ([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([8b8fbf0](https://github.com/tuya/tuya-panel-sdk/commit/8b8fbf04aed68e1570bcd4b339ddfd726bf45ae5))
+
+
+
+
+
+## [0.1.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.1.1...@tuya/tuya-panel-outdoor-sdk@0.1.2) (2021-08-12)
+
+
+### Bug Fixes
+
+* Remove fixed image paths ([#70](https://github.com/tuya/tuya-panel-sdk/issues/70)) ([0311680](https://github.com/tuya/tuya-panel-sdk/commit/0311680c25246b97e02a131ed3dbde0d36c9467f))
+
+
+
+
+
 ## [0.1.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.1.0...@tuya/tuya-panel-outdoor-sdk@0.1.1) (2021-08-04)
 
 **Note:** Version bump only for package @tuya/tuya-panel-outdoor-sdk

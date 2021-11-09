@@ -126,17 +126,15 @@ declare module '@tuya/tuya-panel-electrician-sdk' {
     socketWrapperStyle: StyleProp<ViewStyle>;
     /**
      * @language zh-CN
-     * @description 插座按钮图标
-     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png'
+     * @description 插座按钮图标,必传
+     * @defaultValue  null
      */
     /**
      * @language en-US
-     * @description Socket button icon
-     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png'
+     * @description Socket button icon , required
+     * @defaultValue null
      */
-    socketBackgroundImage:
-      | string
-      | number = 'http://images.tuyacn.com/smart/panelos/common/imgs/1588928982565_dc-bg@3x.png';
+    socketBackgroundImage: string | number;
     /**
      * @language zh-CN
      * @description 插座按钮图标大小
@@ -150,17 +148,15 @@ declare module '@tuya/tuya-panel-electrician-sdk' {
     socketBackgroundImageSize: { [key: string]: number } = { width: 240, height: 240 };
     /**
      * @language zh-CN
-     * @description 插座图标
-     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png'
+     * @description 插座图标,必传
+     * @defaultValue null
      */
     /**
      * @language en-US
-     * @description Socket button icon
-     * @defaultValue 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png'
+     * @description Socket button icon , required
+     * @defaultValue null
      */
-    socketImage:
-      | string
-      | number = 'http://images.tuyacn.com/smart/panelos/common/imgs/1588929002104_dc-ck-1@3x.png';
+    socketImage: string | number;
     /**
      * @language zh-CN
      * @description 插座图标大小
@@ -558,6 +554,17 @@ declare module '@tuya/tuya-panel-electrician-sdk' {
      * @defaultValue 100
      */
     closingText?: string;
+    /**
+     * @language zh-CN
+     * @description 静态资源前缀，必填
+     * @defaultValue null
+     */
+    /**
+     * @language en-US
+     * @description static resource prefix ,required
+     * @defaultValue null
+     */
+    staticPrefix: string;
   }
 
   export class Curtain extends React.Component<CurtainProps> {}
