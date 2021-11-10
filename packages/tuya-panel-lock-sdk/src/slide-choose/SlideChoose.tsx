@@ -3,7 +3,6 @@ import { View, Image, StyleSheet, ActivityIndicator, Animated } from 'react-nati
 import { Circle } from 'react-native-svg';
 import { Utils, TYText, LinearGradient } from 'tuya-panel-kit';
 import ArrowWave from './ArrowWave';
-import BoxShadow from './BoxShadow';
 import { useLinearGradient, useHandleResponder, useBtnText } from './hooks';
 import { getLinearGradientParams, getBarStyle, gethandleStyle, getArrowWaveNum } from './utils';
 import { SlideChooseProps } from './interface';
@@ -38,12 +37,11 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
   onTouchStart,
   openWaveAnimation = true,
   waveContainerStyle,
-  originPos,
 }) => {
   const screenWidth = width;
   const barHeight = 52; /** 滑动按钮高度 */
   const barWidth = singleSide ? sliderWidth * 2 : sliderWidth; /** 滑动按钮单边宽度 渐变色彩区域 */
-  const originCenterLeft = screenWidth * 0.5 - circleRadius; /** 计算中间按钮位置 */
+  const originCenterLeft = barWidth * 0.5 - circleRadius; /** 计算中间按钮位置 */
   const distanceOfArrowToSide = barWidth * 0.4; /** 箭头距离边界的距离，控制文字显示范围 */
 
   const arrowWaveLeftRef = useRef<any>();
@@ -58,10 +56,8 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
     triggerDistance,
     barWidth,
     async,
-    singleSide,
     onTouchStart,
     circleRadius,
-    originPosition: originPos,
     onMove: () => {
       arrowWaveLeftRef.current?.hide();
       arrowWaveRightRef.current?.hide();
@@ -71,7 +67,7 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
       if (status === 'right') onChooseRight && onChooseRight(done);
       if (status === 'left' || status === 'right') onChooseEnd && onChooseEnd(done);
 
-      if (status !== 'loading') {
+      if (status === 'done') {
         arrowWaveLeftRef.current?.show();
         arrowWaveRightRef.current?.show();
       }
@@ -100,88 +96,90 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
 
   return (
     <View style={[styles.container, { width: screenWidth }]}>
-      {showLeft && (
-        <View style={[styles.left, { ...leftStyle, width: barWidth }]}>
-          {leftLinearGradient}
-          {leftTextElement}
-          {singleSide && rightTextElement}
-          {showArrowWave && (
-            <ArrowWave
-              ref={arrowWaveLeftRef}
-              arrowColor={waveColor}
-              reverse
-              arrowNum={arrowNum}
-              openWaveAnimation={openWaveAnimation}
-              arrowStyle={{ transform: [{ rotate: singleSide ? '225deg' : '45deg' }] }}
-              containerStyle={{
-                position: 'absolute',
-                left: distanceOfArrowToSide,
-                width: singleSide ? 70 : 35,
-                ...(waveContainerStyle || {}),
-              }}
-            />
-          )}
-        </View>
-      )}
+      <View style={[styles.sliderWraper, { width: singleSide ? barWidth : barWidth * 2 }]}>
+        {showLeft && (
+          <View style={[styles.left, { ...leftStyle, width: barWidth }]}>
+            {leftLinearGradient}
+            {leftTextElement}
+            {singleSide && rightTextElement}
+            {showArrowWave && (
+              <ArrowWave
+                ref={arrowWaveLeftRef}
+                arrowColor={waveColor}
+                reverse
+                arrowNum={arrowNum}
+                openWaveAnimation={openWaveAnimation}
+                arrowStyle={{ transform: [{ rotate: singleSide ? '225deg' : '45deg' }] }}
+                containerStyle={{
+                  position: 'absolute',
+                  left: distanceOfArrowToSide,
+                  width: singleSide ? 70 : 35,
+                  ...(waveContainerStyle || {}),
+                }}
+              />
+            )}
+          </View>
+        )}
 
-      {showRight && (
-        <View style={[styles.right, { ...rightStyle, width: barWidth }]}>
-          {rightLinearGraient}
-          {rightTextElement}
-          {singleSide && leftTextElement}
-          {showArrowWave && (
-            <ArrowWave
-              ref={arrowWaveRightRef}
-              arrowColor={waveColor}
-              arrowNum={arrowNum}
-              openWaveAnimation={openWaveAnimation}
-              arrowStyle={{
-                transform: [{ rotate: singleSide ? '45deg' : '225deg' }],
-              }}
-              containerStyle={{
-                position: 'absolute',
-                right: distanceOfArrowToSide,
-                width: singleSide ? 70 : 35,
-              }}
-            />
-          )}
-        </View>
-      )}
+        {showRight && (
+          <View style={[styles.right, { ...rightStyle, width: barWidth, marginLeft: -1 }]}>
+            {rightLinearGraient}
+            {rightTextElement}
+            {singleSide && leftTextElement}
+            {showArrowWave && (
+              <ArrowWave
+                ref={arrowWaveRightRef}
+                arrowColor={waveColor}
+                arrowNum={arrowNum}
+                openWaveAnimation={openWaveAnimation}
+                arrowStyle={{
+                  transform: [{ rotate: singleSide ? '45deg' : '225deg' }],
+                }}
+                containerStyle={{
+                  position: 'absolute',
+                  right: distanceOfArrowToSide,
+                  width: singleSide ? 70 : 35,
+                }}
+              />
+            )}
+          </View>
+        )}
 
-      {waiting && loadingText && (
-        <View
-          style={{
-            position: 'absolute',
-            width: 2 * circleRadius,
-            left: originCenterLeft,
-            overflow: 'hidden',
-          }}
+        {waiting && loadingText && (
+          <View
+            style={{
+              position: 'absolute',
+              width: 2 * circleRadius,
+              // left: originCenterLeft,
+              overflow: 'hidden',
+            }}
+          >
+            <TYText style={{ color: loadingTextColor, textAlign: 'center' }}>{loadingText}</TYText>
+          </View>
+        )}
+
+        <Animated.View
+          testID="circleKey"
+          {...panResponder.panHandlers}
+          style={[
+            styles.circle,
+            {
+              width: circleRadius * 2,
+              height: circleRadius * 2,
+              borderRadius: circleRadius,
+              ...innerHandleStyle,
+              ...handleStyle,
+              transform: [{ translateX: centerPos }],
+            },
+          ]}
         >
-          <TYText style={{ color: loadingTextColor, textAlign: 'center' }}>{loadingText}</TYText>
-        </View>
-      )}
+          <LinearGradient gradientId="GradientCircle" {...linearProps} stops={stops}>
+            <Circle cx={circleRadius} cy={circleRadius} r={circleRadius} />
+          </LinearGradient>
 
-      <Animated.View
-        testID="circleKey"
-        {...panResponder.panHandlers}
-        style={[
-          styles.circle,
-          {
-            width: circleRadius * 2,
-            height: circleRadius * 2,
-            borderRadius: circleRadius,
-            ...innerHandleStyle,
-            ...handleStyle,
-            transform: [{ translateX: centerPos }],
-          },
-        ]}
-      >
-        <LinearGradient gradientId="GradientCircle" {...linearProps} stops={stops}>
-          <Circle cx={circleRadius} cy={circleRadius} r={circleRadius} />
-        </LinearGradient>
-
-        {waiting ? <ActivityIndicator color={indicatorColor} /> : <Image source={handleIcon} />}
-      </Animated.View>
+          {waiting ? <ActivityIndicator color={indicatorColor} /> : <Image source={handleIcon} />}
+        </Animated.View>
+      </View>
     </View>
   );
 };
@@ -203,11 +201,22 @@ const styles = StyleSheet.create({
     height: 52,
     justifyContent: 'center',
     overflow: 'hidden',
+    // borderWidth: 1,
+    // borderColor: 'red',
   },
   right: {
     height: 52,
     justifyContent: 'center',
     overflow: 'hidden',
+    // borderWidth: 1,
+    // borderColor: 'red',
+  },
+  sliderWraper: {
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    position: 'relative',
   },
 });
 

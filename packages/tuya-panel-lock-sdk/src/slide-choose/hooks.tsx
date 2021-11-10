@@ -96,7 +96,7 @@ export const useLinearGradient = (
 
   const rightElement = (
     <LinearGradient
-      gradientId="GradientLeft"
+      gradientId="GradientRight"
       style={{ height: cx(52) }}
       {...rightLinearProps}
       stops={rightStops}
@@ -116,15 +116,12 @@ export const useHandleResponder = ({
   async,
   onTouchStart,
   circleRadius,
-  originPosition = 0,
 }: {
   triggerDistance: number;
   barWidth: number;
   async: boolean;
-  singleSide?: boolean | string;
   circleRadius: number;
-  originPosition?: number;
-  onMoveEnd?: (toEnd: boolean | 'left' | 'right' | 'loading', done?: () => void) => void;
+  onMoveEnd?: (toEnd: boolean | 'left' | 'right' | 'done', done?: () => void) => void;
   onMove?: (pos: number) => void;
   onTouchStart?: () => void;
 }): {
@@ -133,7 +130,7 @@ export const useHandleResponder = ({
   waiting: boolean;
 } => {
   const limitDis = barWidth - circleRadius;
-  const originPos = originPosition || 0;
+  const originPos = 0;
   const centerPoint = useRef<Animated.Value>(new Animated.Value(originPos)).current;
   const [waiting, setWaiting] = useState<boolean>(false);
 
@@ -142,11 +139,8 @@ export const useHandleResponder = ({
   };
 
   const onPanResponderMove = (e: any, gestureState: { moveX: number; dx: number }) => {
-    // console.log('onPanResponderMove', e);
-    // console.log('gestureState', gestureState.dx);
     const prefix = gestureState.dx > 0 ? 1 : -1;
-    const rangeDx =
-      Math.abs(gestureState.dx) > limitDis ? prefix * limitDis : gestureState.dx + originPosition;
+    const rangeDx = Math.abs(gestureState.dx) > limitDis ? prefix * limitDis : gestureState.dx;
     Animated.event([null, { dx: centerPoint }])(e, {
       ...gestureState,
       dx: rangeDx,
@@ -164,13 +158,13 @@ export const useHandleResponder = ({
 
     if (isEnd) {
       setWaiting(true);
-      onMoveEnd && onMoveEnd('loading');
 
       if (async) {
         onMoveEnd &&
           onMoveEnd(isLeft ? 'left' : 'right', () => {
             setWaiting(false);
             goBackCenter();
+            onMoveEnd('done');
           });
       } else {
         setWaiting(false);

@@ -5,6 +5,7 @@ import Svg, { Rect, Defs, LinearGradient, Stop } from 'react-native-svg';
 interface IBoxShadow {
   side: 'bottom' | 'top';
   width?: number;
+  height: number;
   color?: string;
   border?: number;
   opacity?: number;

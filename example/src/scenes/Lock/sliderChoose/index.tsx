@@ -8,7 +8,7 @@ const unlockIcon = require('./res/unlock.png');
 
 const SlideChooseDemo = () => {
   return (
-    // <ScrollView>
+    <ScrollView>
     <View style={styles.container}>
       <Text style={styles.title}>default</Text>
       <View style={[styles.group, { height: 100 }]}>
@@ -45,6 +45,8 @@ const SlideChooseDemo = () => {
       <View style={[styles.group, { height: 200, flexDirection: 'column' }]}>
         <SlideChoose
           singleSide
+          async
+          loadingText='loading...'
           triggerDistance={100}
           leftColor={{ linearStops: { '100%': '#3DC0B1', '0%': '#239C8E' } }}
           rightColor={{ linearStops: { '0%': '#3DC0B1', '100%': '#239C8E' } }}
@@ -53,12 +55,17 @@ const SlideChooseDemo = () => {
           circleBgColor={{ linearStops: { '0%': '#1D9486', '100%': '#3EC1B2' } }}
           leftText={<Image source={lockIcon} />}
           rightText={<Image source={unlockIcon} />}
-          originPos={50}
           handleStyle={{
             shadowColor: '#000000',
             shadowOffset: { width: 4, height: 4 },
             shadowOpacity: 0.8,
             shadowRadius: 6,
+          }}
+          onChooseEnd={done => {
+            const delay = setTimeout(() => {
+              clearTimeout(delay);
+              done && done();
+            }, 2000);
           }}
         />
         <SlideChoose
@@ -70,7 +77,6 @@ const SlideChooseDemo = () => {
           rightColor={{ linearStops: { '0%': '#3DC0B1', '100%': '#239C8E' } }}
           handleIcon={lockIcon}
           indicatorColor="#fff"
-          originPos={-50}
           circleBgColor={{ linearStops: { '0%': '#1D9486', '100%': '#3EC1B2' } }}
           leftText={<Image source={lockIcon} />}
           rightText={<Image source={unlockIcon} />}
@@ -119,14 +125,14 @@ const SlideChooseDemo = () => {
           }}
           rightColor={{
             linearStops: {
-              '0%': '#239C8E',
-              '100%': 'rgba(35,156,142,0.5)',
+              '0%': 'rgba(35,156,142,0.5)',
+              '100%': '#239C8E',
             },
           }}
         />
       </View>
     </View>
-    // </ScrollView>
+    </ScrollView>
   );
 };
 

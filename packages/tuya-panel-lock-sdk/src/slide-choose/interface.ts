@@ -11,17 +11,6 @@ export type LinearGradientColorType =
 export interface SlideChooseProps {
   /**
    * @language zh-CN
-   * @description 中间手柄的初始位置
-   * @defaultValue #fff
-   */
-  /**
-   * @language en-US
-   * @description the handle origin position
-   * @defaultValue #fff
-   */
-  originPos?: number;
-  /**
-   * @language zh-CN
    * @description 按钮文案颜色
    * @defaultValue #fff
    */
@@ -99,28 +88,6 @@ export interface SlideChooseProps {
   rightText?: string | ReactElement;
   /**
    * @language zh-CN
-   * @description 滑动左边回调时间
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description choose left callback
-   * @defaultValue undefined
-   */
-  onChooseLeft?: (done?: () => void) => void;
-  /**
-   * @language zh-CN
-   * @description 滑动右边回调事件
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description choose right callback
-   * @defaultValue undefined
-   */
-  onChooseRight?: (done?: () => void) => void;
-  /**
-   * @language zh-CN
    * @description 拖动手柄图标
    * @defaultValue undefined
    */
@@ -130,6 +97,39 @@ export interface SlideChooseProps {
    * @defaultValue undefined
    */
   handleIcon?: ImageProps['source'];
+  /**
+   * @language zh-CN
+   * @description 手柄样式
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description circle bgcolor
+   * @defaultValue undefined
+   */
+  handleStyle?: ViewStyle;
+  /**
+   * @language zh-CN
+   * @description 是否显示箭头波浪
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description circle bgcolor
+   * @defaultValue undefined
+   */
+  showArrowWave?: boolean | number;
+  /**
+   * @language zh-CN
+   * @description 箭头波浪容器样式
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description arrow wave container's style
+   * @defaultValue undefined
+   */
+  waveContainerStyle?: ViewStyle;
   /**
    * @language zh-CN
    * @description 波浪颜色
@@ -209,28 +209,6 @@ export interface SlideChooseProps {
   indicatorColor?: string;
   /**
    * @language zh-CN
-   * @description 手柄样式
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description circle bgcolor
-   * @defaultValue undefined
-   */
-  handleStyle?: ViewStyle;
-  /**
-   * @language zh-CN
-   * @description 箭头波浪容器样式
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description arrow wave container's style
-   * @defaultValue undefined
-   */
-  waveContainerStyle?: ViewStyle;
-  /**
-   * @language zh-CN
    * @description loading 文案颜色
    * @defaultValue undefined
    */
@@ -253,17 +231,6 @@ export interface SlideChooseProps {
   singleSide?: boolean | 'left' | 'right';
   /**
    * @language zh-CN
-   * @description 是否显示箭头波浪
-   * @defaultValue undefined
-   */
-  /**
-   * @language en-US
-   * @description circle bgcolor
-   * @defaultValue undefined
-   */
-  showArrowWave?: boolean | number;
-  /**
-   * @language zh-CN
    * @description 滑动选择触发回调事件，滑倒左边或者右边都会触发
    * @defaultValue undefined
    */
@@ -273,6 +240,28 @@ export interface SlideChooseProps {
    * @defaultValue undefined
    */
   onChooseEnd?: (done?: () => void) => void;
+  /**
+   * @language zh-CN
+   * @description 滑动左边回调时间
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description choose left callback
+   * @defaultValue undefined
+   */
+  onChooseLeft?: (done?: () => void) => void;
+  /**
+   * @language zh-CN
+   * @description 滑动右边回调事件
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description choose right callback
+   * @defaultValue undefined
+   */
+  onChooseRight?: (done?: () => void) => void;
   /**
    * @language zh-CN
    * @description 触摸开始回调事件
