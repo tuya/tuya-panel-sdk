@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-animation-sdk",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "涂鸦动画组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
@@ -12,7 +12,6 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "prepublishOnly": "yarn build",
     "test": "jest -u"
   },
   "dependencies": {

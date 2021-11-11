@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IpcDragSort component basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      null,
+    ]
+  }
+>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "position": "absolute",
+          "zIndex": 2,
+        },
+        Object {
+          "right": 0,
+          "width": 60,
+        },
+      ]
+    }
+  />
+  <FlatList
+    alwaysBounceVertical={false}
+    containerStyle={null}
+    data={
+      Array [
+        Object {
+          "id": 1,
+          "name": "lock1",
+        },
+        Object {
+          "id": 2,
+          "name": "lock2",
+        },
+        Object {
+          "id": 3,
+          "name": "lock3",
+        },
+        Object {
+          "id": 4,
+          "name": "lock4",
+        },
+        Object {
+          "id": 5,
+          "name": "lock5",
+        },
+        Object {
+          "id": 6,
+          "name": "lock6",
+        },
+        Object {
+          "id": 7,
+          "name": "lock7",
+        },
+        Object {
+          "id": 8,
+          "name": "lock8",
+        },
+        Object {
+          "id": 9,
+          "name": "lock9",
+        },
+        Object {
+          "id": 10,
+          "name": "lock10",
+        },
+        Object {
+          "id": 11,
+          "name": "lock11",
+        },
+        Object {
+          "id": 12,
+          "name": "lock12",
+        },
+        Object {
+          "id": 13,
+          "name": "lock13",
+        },
+        Object {
+          "id": 14,
+          "name": "lock14",
+        },
+        Object {
+          "id": 15,
+          "name": "lock15",
+        },
+        Object {
+          "id": 16,
+          "name": "lock16",
+        },
+        Object {
+          "id": 17,
+          "name": "lock17",
+        },
+        Object {
+          "id": 18,
+          "name": "lock18",
+        },
+        Object {
+          "id": 19,
+          "name": "lock19",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getListRef={[Function]}
+    horizontal={false}
+    icon={
+      <View>
+        <Text>
+          准
+        </Text>
+      </View>
+    }
+    initialNumToRender={10}
+    itemHeight={60}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReachedThreshold={2}
+    onOrder={[Function]}
+    onScroll={[Function]}
+    orderContain={Object {}}
+    orderWidth={60}
+    removeClippedSubviews={false}
+    renderFrameTime={20}
+    renderItem={[Function]}
+    scrollEnabled={true}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    style={Object {}}
+    touchPosition="right"
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;

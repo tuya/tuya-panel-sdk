@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedCircleProgess AnimatedCircleProgess Component should be render 1`] = `
+<View
+  style={
+    Object {
+      "height": 100,
+      "width": 100,
+    }
+  }
+>
+  <Svg
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "position": "relative",
+          "width": "100%",
+        },
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "-90deg",
+            },
+          ],
+        },
+        undefined,
+      ]
+    }
+    viewBox="0 0 100 100"
+  >
+    <AnimatedComponent
+      cx={50}
+      cy={50}
+      fill="none"
+      r={49}
+      stroke="#fff"
+      strokeDasharray={
+        Array [
+          307.8760800517997,
+          307.8760800517997,
+        ]
+      }
+      strokeDashoffset={307.8760800517997}
+      strokeWidth={2}
+    />
+  </Svg>
+</View>
+`;

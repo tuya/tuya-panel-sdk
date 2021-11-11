@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, View, Dimensions } from 'react-native';
 import { TYText } from 'tuya-panel-kit';
@@ -42,7 +43,7 @@ const IpcPLayer: React.FC = () => {
   };
 
   const enterRn = () => {
-    TYIpcNative.enterRnPage('Ipc.IpcPlayerRnPageTest','');
+    TYIpcNative.enterRnPage('Ipc.IpcPlayerRnPageTest', '');
   };
 
   const enterNativePage = () => {
@@ -81,9 +82,27 @@ const IpcPLayer: React.FC = () => {
     return <TYIpcVideoBit containerStyle={{ position: 'absolute', right: 0, top: 30 }} />;
   };
 
+  const pausePlay = () => {
+    TYIpcNative.pausePlay()
+      .then((res: { success: boolean }) => {
+        console.log(res);
+      })
+      .catch((err: { success: boolean; errMsg: string }) => {
+        console.log(err);
+      });
+  };
+
+  const enterBackgroundEvent = () => {
+    console.log('进入后台');
+  };
+
+  const enterForegroundEvent = () => {
+    console.log('进入前台');
+  };
+
   return (
     <View onLayout={_onLayout} style={styles.TYIpcPlayerPage}>
-      <TYText style={styles.descTxt} text="Description: 视频播放" /> 
+      <TYText style={styles.descTxt} text="Description: 视频播放" />
       <View style={styles.playerContainer}>
         <TYIpcPlayer
           onChangeZoomStatus={onChangeZoomStatus}
@@ -99,8 +118,10 @@ const IpcPLayer: React.FC = () => {
             showZoomInTimes: true,
             maxScaleMultiple: 8,
           }}
-          renderNormalComArr={[{ component: NormalTopRight, propData: {}}]}
+          renderNormalComArr={[{ component: NormalTopRight, propData: {} }]}
           renderFullComArr={[{ component: NormalTopRight, propData: {} }]}
+          enterBackgroundEvent={enterBackgroundEvent}
+          enterForegroundEvent={enterForegroundEvent}
         />
         <View style={styles.featureContain}>
           <TouchableOpacity style={styles.feature} onPress={enterFullScreen}>
@@ -126,6 +147,9 @@ const IpcPLayer: React.FC = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.feature} onPress={enableRecordWithParam}>
             <TYText style={styles.featureTxt} text="参数录制" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.feature} onPress={pausePlay}>
+            <TYText style={styles.featureTxt} text="暂停播放" />
           </TouchableOpacity>
         </View>
       </View>

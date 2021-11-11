@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-outdoor-sdk",
-  "version": "0.1.1",
+  "version": "0.3.0",
   "description": "涂鸦户外业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -8,7 +8,6 @@
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "../../node_modules/.bin/tsc -d",
     "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
-    "prepublishOnly": "yarn build",
     "test": "jest"
   },
   "publishConfig": {

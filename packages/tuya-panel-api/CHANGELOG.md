@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.7.0...@tuya/tuya-panel-api@1.7.1) (2021-10-12)
+
+**Note:** Version bump only for package @tuya/tuya-panel-api
+
+
+
+
+
+# [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.6.1...@tuya/tuya-panel-api@1.7.0) (2021-08-18)
+
+
+### Features
+
+* add IGetWeatherQuality_1 ([#80](https://github.com/tuya/tuya-panel-sdk/issues/80)) ([034f895](https://github.com/tuya/tuya-panel-sdk/commit/034f895549f3f548a409726783d6bf52c810ba3c))
+
+
+
+
+
 ## [1.6.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.6.0...@tuya/tuya-panel-api@1.6.1) (2021-08-04)
 
 

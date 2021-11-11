@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SleepBarPercent render BarPercent Component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "height": 48,
+        "overflow": "hidden",
+      },
+      undefined,
+    ]
+  }
+>
+  <Item
+    backgroundColor="#656666"
+    flexPercent={1}
+    key="0"
+  />
+  <Item
+    backgroundColor="#222222"
+    flexPercent={2}
+    key="1"
+  />
+</View>
+`;
+
+exports[`SleepBarPercent render SleepBarPercent Component 1`] = `
+<BarList
+  dataSource={
+    Array [
+      Object {
+        "type": "Wake",
+        "value": 60,
+      },
+      Object {
+        "type": "Light",
+        "value": 200,
+      },
+      Object {
+        "type": "Deep",
+        "value": 400,
+      },
+      Object {
+        "type": "REM",
+        "value": 100,
+      },
+    ]
+  }
+  renderItem={[Function]}
+/>
+`;

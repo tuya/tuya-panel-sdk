@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScaleSlider components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 36,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <NumberSlider
+    accessibilityLabel="numberSlider"
+    clickEnabled={true}
+    direction="horizontal"
+    disabled={false}
+    invalidSwipeDistance={7}
+    max={1000}
+    min={0}
+    onChange={[Function]}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    onThumbChange={[Function]}
+    onTrackLayout={[Function]}
+    renderTrack={[Function]}
+    reverse={false}
+    showAnimation={true}
+    showTint={false}
+    step={1}
+    style={
+      Array [
+        Object {
+          "height": 36,
+        },
+        undefined,
+      ]
+    }
+    thumbLimitType="inner"
+    thumbStyle={
+      Array [
+        Object {
+          "height": 22,
+          "width": 2,
+        },
+        undefined,
+      ]
+    }
+    thumbTouchSize={
+      Object {
+        "height": 40,
+        "width": 40,
+      }
+    }
+    tintColor="#fff"
+    trackColor="transparent"
+    trackSlideEnabled={true}
+    trackStyle={
+      Array [
+        Object {
+          "borderRadius": 0,
+          "height": 11,
+        },
+        undefined,
+      ]
+    }
+    value={0}
+  />
+</View>
+`;
+
+exports[`ScaleSlider components componentWillReceiveProps render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "height": 36,
+        "justifyContent": "center",
+      },
+      undefined,
+    ]
+  }
+>
+  <NumberSlider
+    accessibilityLabel="numberSlider"
+    clickEnabled={true}
+    direction="horizontal"
+    disabled={false}
+    formatPercent={[Function]}
+    invalidSwipeDistance={7}
+    max={1000}
+    min={0}
+    onChange={[Function]}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    onThumbChange={[Function]}
+    onTrackLayout={[Function]}
+    renderTrack={[Function]}
+    reverse={false}
+    showAnimation={true}
+    showTint={false}
+    step={1}
+    style={
+      Array [
+        Object {
+          "height": 36,
+        },
+        undefined,
+      ]
+    }
+    thumbLimitType="inner"
+    thumbStyle={
+      Array [
+        Object {
+          "height": 22,
+          "width": 2,
+        },
+        undefined,
+      ]
+    }
+    thumbTouchSize={
+      Object {
+        "height": 40,
+        "width": 40,
+      }
+    }
+    tintColor="#fff"
+    trackColor="transparent"
+    trackSlideEnabled={true}
+    trackStyle={
+      Array [
+        Object {
+          "borderRadius": 0,
+          "height": 11,
+        },
+        undefined,
+      ]
+    }
+    value={0}
+  />
+</View>
+`;

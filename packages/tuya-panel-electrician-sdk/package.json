@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-electrician-sdk",
-  "version": "1.2.7",
+  "version": "1.3.2",
   "description": "涂鸦电工业务组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
@@ -8,14 +8,13 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "prepublishOnly": "yarn build",
     "test": "jest"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@tuya/tuya-panel-api": "^1.6.1",
+    "@tuya/tuya-panel-api": "^1.7.1",
     "@types/color": "0.12.1",
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.17",

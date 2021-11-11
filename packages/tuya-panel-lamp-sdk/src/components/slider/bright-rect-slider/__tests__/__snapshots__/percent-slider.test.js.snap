@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PercentSlider components basic render 1`] = `
+<NumberSlider
+  accessibilityLabel="numberSlider"
+  clickEnabled={true}
+  direction="horizontal"
+  disabled={false}
+  formatPercent={[Function]}
+  invalidSwipeDistance={7}
+  max={1000}
+  min={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  onThumbChange={[Function]}
+  reverse={false}
+  showAnimation={true}
+  showTint={true}
+  step={1}
+  style={
+    Array [
+      Object {
+        "height": 104,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+  thumbLimitType="outer"
+  thumbStyle={
+    Array [
+      Object {
+        "opacity": 0,
+      },
+      undefined,
+    ]
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  tintColor="#fff"
+  tintStyle={
+    Array [
+      Object {
+        "borderRadius": 0,
+      },
+      undefined,
+    ]
+  }
+  trackColor="rgba(0,0,0,.4)"
+  trackSlideEnabled={true}
+  trackStyle={
+    Array [
+      Object {
+        "borderRadius": 0,
+        "height": 104,
+      },
+      undefined,
+    ]
+  }
+  value={0}
+>
+  <Percent
+    colorOver="#fff"
+    iconColor="#000"
+    iconSize={24}
+    layout="left"
+    length={0}
+    outColor="#fff"
+    percent={0}
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  />
+</NumberSlider>
+`;
+
+exports[`PercentSlider components componentWillReceiveProps render 1`] = `
+<NumberSlider
+  accessibilityLabel="numberSlider"
+  clickEnabled={true}
+  direction="horizontal"
+  disabled={false}
+  invalidSwipeDistance={7}
+  max={1000}
+  min={0}
+  onChange={[Function]}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  onThumbChange={[Function]}
+  reverse={false}
+  showAnimation={true}
+  showTint={true}
+  step={1}
+  style={
+    Array [
+      Object {
+        "height": 104,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+  thumbLimitType="outer"
+  thumbStyle={
+    Array [
+      Object {
+        "opacity": 0,
+      },
+      undefined,
+    ]
+  }
+  thumbTouchSize={
+    Object {
+      "height": 40,
+      "width": 40,
+    }
+  }
+  tintColor="#fff"
+  tintStyle={
+    Array [
+      Object {
+        "borderRadius": 0,
+      },
+      undefined,
+    ]
+  }
+  trackColor="rgba(0,0,0,.4)"
+  trackSlideEnabled={true}
+  trackStyle={
+    Array [
+      Object {
+        "borderRadius": 0,
+        "height": 104,
+      },
+      undefined,
+    ]
+  }
+  value={0}
+>
+  <Percent
+    colorOver="#fff"
+    iconColor="#000"
+    iconSize={24}
+    layout="left"
+    length={0}
+    outColor="#fff"
+    percent={0}
+    style={
+      Array [
+        Object {
+          "color": "#000",
+          "fontSize": 14,
+        },
+        undefined,
+      ]
+    }
+  />
+</NumberSlider>
+`;
