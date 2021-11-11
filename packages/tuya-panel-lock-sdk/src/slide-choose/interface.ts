@@ -1,5 +1,5 @@
 import { ReactElement } from 'react';
-import { ImageProps, ViewStyle } from 'react-native';
+import { ImageProps, View, ViewStyle } from 'react-native';
 
 export type LinearGradientColorType =
   | string
@@ -108,6 +108,28 @@ export interface SlideChooseProps {
    * @defaultValue undefined
    */
   handleStyle?: ViewStyle;
+  /**
+   * @language zh-CN
+   * @description 手柄背景图片
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description handle's background image
+   * @defaultValue undefined
+   */
+  handleBgImage?: ImageProps['source'];
+  /**
+   * @language zh-CN
+   * @description 手柄背景图片
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description handle's background image
+   * @defaultValue undefined
+   */
+  handleBgImageStyle?: ImageProps['style'];
   /**
    * @language zh-CN
    * @description 是否显示箭头波浪

@@ -60,6 +60,7 @@ const SlideChooseDemo = () => {
             shadowOffset: { width: 4, height: 4 },
             shadowOpacity: 0.8,
             shadowRadius: 6,
+            elevation: 20,
           }}
           onChooseEnd={done => {
             const delay = setTimeout(() => {
@@ -85,6 +86,7 @@ const SlideChooseDemo = () => {
             shadowOffset: { width: 4, height: 4 },
             shadowOpacity: 0.8,
             shadowRadius: 6,
+            elevation: 20,
           }}
         />
       </View>
@@ -108,6 +110,28 @@ const SlideChooseDemo = () => {
             }, 2000);
           }}
           btnTextColor="black"
+        />
+      </View>
+
+      <Text style={styles.title}>handle background image</Text>
+      <View style={[styles.group, { height: 100 }]}>
+        <SlideChoose
+          async
+          loadingText="loading...."
+          leftColor={{ linearStops: { '100%': '#3DC0B1', '0%': '#239C8E' } }}
+          rightColor={{ linearStops: { '0%': '#3DC0B1', '100%': '#239C8E' } }}
+          handleIcon={lockIcon}
+          indicatorColor="#fff"
+          handleBgImage={require('./res/btnBg.png')}
+          handleBgImageStyle={{ top: 13, width: 125, height: 125 }}
+          leftText={<Image source={lockIcon} />}
+          rightText={<Image source={unlockIcon} />}
+          onChooseEnd={done => {
+            const delay = setTimeout(() => {
+              clearTimeout(delay);
+              done && done();
+            }, 2000);
+          }}
         />
       </View>
 

@@ -37,11 +37,12 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
   onTouchStart,
   openWaveAnimation = true,
   waveContainerStyle,
+  handleBgImage,
+  handleBgImageStyle,
 }) => {
   const screenWidth = width;
   const barHeight = 52; /** 滑动按钮高度 */
   const barWidth = singleSide ? sliderWidth * 2 : sliderWidth; /** 滑动按钮单边宽度 渐变色彩区域 */
-  const originCenterLeft = barWidth * 0.5 - circleRadius; /** 计算中间按钮位置 */
   const distanceOfArrowToSide = barWidth * 0.4; /** 箭头距离边界的距离，控制文字显示范围 */
 
   const arrowWaveLeftRef = useRef<any>();
@@ -67,7 +68,7 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
       if (status === 'right') onChooseRight && onChooseRight(done);
       if (status === 'left' || status === 'right') onChooseEnd && onChooseEnd(done);
 
-      if (status === 'done') {
+      if (status === 'done' || !status) {
         arrowWaveLeftRef.current?.show();
         arrowWaveRightRef.current?.show();
       }
@@ -173,11 +174,32 @@ const SlideChoose: React.FC<SlideChooseProps> = ({
             },
           ]}
         >
-          <LinearGradient gradientId="GradientCircle" {...linearProps} stops={stops}>
-            <Circle cx={circleRadius} cy={circleRadius} r={circleRadius} />
-          </LinearGradient>
+          {handleBgImage ? (
+            <View
+              style={{
+                width: circleRadius * 2,
+                height: circleRadius * 2,
+                borderRadius: circleRadius,
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Image style={handleBgImageStyle} source={handleBgImage} resizeMode="contain" />
+            </View>
+          ) : (
+            <LinearGradient gradientId="GradientCircle" {...linearProps} stops={stops}>
+              <Circle cx={circleRadius} cy={circleRadius} r={circleRadius} />
+            </LinearGradient>
+          )}
 
-          {waiting ? <ActivityIndicator color={indicatorColor} /> : <Image source={handleIcon} />}
+          <View style={{ position: 'absolute' }}>
+            {waiting ? (
+              <ActivityIndicator color={indicatorColor} />
+            ) : (
+              <Image resizeMode="contain" source={handleIcon} />
+            )}
+          </View>
         </Animated.View>
       </View>
     </View>
@@ -201,15 +223,11 @@ const styles = StyleSheet.create({
     height: 52,
     justifyContent: 'center',
     overflow: 'hidden',
-    // borderWidth: 1,
-    // borderColor: 'red',
   },
   right: {
     height: 52,
     justifyContent: 'center',
     overflow: 'hidden',
-    // borderWidth: 1,
-    // borderColor: 'red',
   },
   sliderWraper: {
     alignItems: 'center',
