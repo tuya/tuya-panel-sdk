@@ -7,6 +7,7 @@ import DateText from './date-text';
 import CalendarList from './calendar-list';
 import SettingSlider from './setting-slider';
 import CircleProgress from './shadow-circle-progress';
+import Battery from './battery';
 
 export default class OutdoorScene extends React.Component {
   get data() {
@@ -17,6 +18,7 @@ export default class OutdoorScene extends React.Component {
   static LocationText = LocationText;
   static SettingSlider = SettingSlider;
   static shadowCircleProgress = CircleProgress;
+  static Battery = Battery;
   static CalendarList = CalendarList;
 
   render() {
