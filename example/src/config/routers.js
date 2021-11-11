@@ -11,7 +11,7 @@ import GateWayCategory from '../scenes/Gateway';
 // import CbtCategory from '../scenes/Cbt';
 import AnimationCategory from '../scenes/Animation';
 import Remote from '../scenes/Remote';
-import Ipc from '../scenes/Ipc';
+// import Ipc from '../scenes/Ipc';
 import Electrician from '../scenes/Electrician';
 import ApiScene from '../scenes/ApiScene';
 import Outdoor from '../scenes/Outdoor';
@@ -131,12 +131,12 @@ export const elementsRouters = _.sortBy(
       subTitle: RemoteInfo.version,
       Scene: Remote,
     },
-    {
-      id: 'Ipc',
-      title: IpcInfo.name,
-      subTitle: IpcInfo.version,
-      Scene: Ipc,
-    },
+    // {
+    //   id: 'Ipc',
+    //   title: IpcInfo.name,
+    //   subTitle: IpcInfo.version,
+    //   Scene: Ipc,
+    // },
     {
       id: 'Electrician',
       title: ElectricianInfo.name,
