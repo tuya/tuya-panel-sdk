@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineBoxSvg components content render 1`] = `
+<Svg
+  height={144}
+  preserveAspectRatio="xMidYMid meet"
+  width={532}
+>
+  <Defs>
+    <LinearGradient
+      id="grad"
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Stop
+        offset="0"
+        stopColor="transparent"
+        stopOpacity={0}
+      />
+      <Stop
+        offset="1"
+        stopColor="transparent"
+        stopOpacity={0}
+      />
+    </LinearGradient>
+  </Defs>
+  <Path
+    d=""
+    fill="url(#grad)"
+    stroke="black"
+    strokeOpacity={1}
+    strokeWidth={1}
+  />
+</Svg>
+`;
+
+exports[`LineBoxSvg components customize render 1`] = `
+<Svg
+  height={144}
+  preserveAspectRatio="xMidYMid meet"
+  width={532}
+>
+  <Defs>
+    <LinearGradient
+      id="grad"
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Stop
+        offset="0"
+        stopColor="rgba(45,167,58)"
+        stopOpacity={0.3}
+      />
+      <Stop
+        offset="1"
+        stopColor="rgba(45,167,58)"
+        stopOpacity={0}
+      />
+    </LinearGradient>
+  </Defs>
+  <Path
+    d=""
+    fill="url(#grad)"
+    stroke="rgba(45,167,58)"
+    strokeOpacity={1}
+    strokeWidth={4}
+  />
+</Svg>
+`;
+
+exports[`LineBoxSvg components diff range render 1`] = `
+<Svg
+  height={144}
+  preserveAspectRatio="xMidYMid meet"
+  width={532}
+>
+  <Defs>
+    <LinearGradient
+      id="grad"
+      x1="0%"
+      x2="0%"
+      y1="0%"
+      y2="100%"
+    >
+      <Stop
+        offset="0"
+        stopColor="rgba(45,167,58)"
+        stopOpacity={0.3}
+      />
+      <Stop
+        offset="1"
+        stopColor="rgba(45,167,58)"
+        stopOpacity={0}
+      />
+    </LinearGradient>
+  </Defs>
+  <Path
+    d=""
+    fill="url(#grad)"
+    stroke="rgba(45,167,58)"
+    strokeOpacity={1}
+    strokeWidth={4}
+  />
+</Svg>
+`;
