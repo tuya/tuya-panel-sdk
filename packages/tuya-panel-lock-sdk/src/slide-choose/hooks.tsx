@@ -149,7 +149,7 @@ export const useHandleResponder = ({
   };
 
   const goBackCenter = () => {
-    Animated.spring(centerPoint, { toValue: originPos }).start();
+    Animated.spring(centerPoint, { toValue: originPos, useNativeDriver: true }).start();
   };
 
   const onPanResponderEnd = (e: any, gestureState: { dx: number }) => {
