@@ -1,0 +1,1193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TurnPlate components basic render 1`] = `
+<ImageBackground
+  source={1}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "height": 600,
+        "justifyContent": "center",
+        "marginVertical": 80,
+        "position": "relative",
+        "width": 600,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    key="3.9269908169872414"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#6161EF",
+          "height": 12,
+          "left": 124.29437251522862,
+          "top": 463.7056274847714,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.162610266006475"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 89.36636055501796,
+          "top": 419.3996555318279,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.39822971502571"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 65.74643608916315,
+          "top": 368.1640786499874,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.633849164044945"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 54.73983990404929,
+          "top": 312.8301829746827,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.869468613064179"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 56.95479825716694,
+          "top": 256.45572839034463,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.105088062083414"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 72.2689121972912,
+          "top": 202.1559762323784,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.340707511102648"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 99.8359213500126,
+          "top": 152.9315394498065,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.576326960121882"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 138.1324684007558,
+          "top": 111.50256825599268,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.811946409141117"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 185.04228006250872,
+          "top": 80.15843419479174,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.047565858160352"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 237.97311267458275,
+          "top": 60.6312191045576,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.283185307179586"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 293.99999999999994,
+          "top": 54,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.518804756198821"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 350.02688732541736,
+          "top": 60.63121910455763,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.754424205218055"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 402.95771993749116,
+          "top": 80.15843419479168,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.99004365423729"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 449.8675315992441,
+          "top": 111.5025682559926,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.225663103256523"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 488.16407864998723,
+          "top": 152.93153944980622,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.461282552275758"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 515.7310878027088,
+          "top": 202.1559762323783,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.696902001294994"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 531.0452017428331,
+          "top": 256.45572839034475,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.932521450314227"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 533.2601600959507,
+          "top": 312.8301829746826,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.168140899333462"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 522.2535639108369,
+          "top": 368.1640786499873,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.403760348352696"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 498.63363944498224,
+          "top": 419.3996555318276,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.63937979737193"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#D9D9E0",
+          "height": 12,
+          "left": 463.70562748477164,
+          "top": 463.7056274847712,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "height": 370,
+          "width": 370,
+        },
+        Object {},
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+            ],
+          },
+          Object {
+            "height": 370,
+            "width": 370,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 10,
+              "height": 20,
+              "left": 68.93398282201788,
+              "position": "absolute",
+              "top": 281.06601717798213,
+              "width": 20,
+            },
+            Object {
+              "backgroundColor": "#6161EF",
+            },
+            Object {},
+          ]
+        }
+      />
+    </AnimatedComponent>
+    <Progress
+      andDegree={290}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={false}
+      endColor={null}
+      foreColor="#FF4800"
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={30}
+      startColor={null}
+      startDegree={125}
+      stepValue={5}
+      style={
+        Array [
+          Object {
+            "opacity": 0,
+            "position": "absolute",
+          },
+          Object {
+            "height": 370,
+            "width": 370,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={2}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={0}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+  </View>
+</ImageBackground>
+`;
+
+exports[`TurnPlate components dot render 1`] = `
+<ImageBackground
+  source={1}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "height": 600,
+        "justifyContent": "center",
+        "marginVertical": 80,
+        "position": "relative",
+        "width": 600,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    key="3.9269908169872414"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 124.29437251522862,
+          "top": 463.7056274847714,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.162610266006475"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 89.36636055501796,
+          "top": 419.3996555318279,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.39822971502571"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 65.74643608916315,
+          "top": 368.1640786499874,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.633849164044945"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 54.73983990404929,
+          "top": 312.8301829746827,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="4.869468613064179"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 56.95479825716694,
+          "top": 256.45572839034463,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.105088062083414"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 72.2689121972912,
+          "top": 202.1559762323784,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.340707511102648"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 99.8359213500126,
+          "top": 152.9315394498065,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.576326960121882"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 138.1324684007558,
+          "top": 111.50256825599268,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="5.811946409141117"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 185.04228006250872,
+          "top": 80.15843419479174,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.047565858160352"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 237.97311267458275,
+          "top": 60.6312191045576,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.283185307179586"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#0ff",
+          "height": 12,
+          "left": 293.99999999999994,
+          "top": 54,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.518804756198821"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 350.02688732541736,
+          "top": 60.63121910455763,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.754424205218055"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 402.95771993749116,
+          "top": 80.15843419479168,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="6.99004365423729"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 449.8675315992441,
+          "top": 111.5025682559926,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.225663103256523"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 488.16407864998723,
+          "top": 152.93153944980622,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.461282552275758"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 515.7310878027088,
+          "top": 202.1559762323783,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.696902001294994"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 531.0452017428331,
+          "top": 256.45572839034475,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="7.932521450314227"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 533.2601600959507,
+          "top": 312.8301829746826,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.168140899333462"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 522.2535639108369,
+          "top": 368.1640786499873,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.403760348352696"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 498.63363944498224,
+          "top": 419.3996555318276,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="8.63937979737193"
+    style={
+      Array [
+        Object {
+          "borderRadius": 10,
+          "height": 20,
+          "left": 68.93398282201788,
+          "position": "absolute",
+          "top": 281.06601717798213,
+          "width": 20,
+        },
+        Object {
+          "backgroundColor": "#ffa",
+          "height": 12,
+          "left": 463.70562748477164,
+          "top": 463.7056274847712,
+          "width": 12,
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "height": 370,
+          "width": 370,
+        },
+        Object {},
+      ]
+    }
+  >
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "transform": Array [
+              Object {
+                "rotate": "135deg",
+              },
+            ],
+          },
+          Object {
+            "height": 370,
+            "width": 370,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 10,
+              "height": 20,
+              "left": 68.93398282201788,
+              "position": "absolute",
+              "top": 281.06601717798213,
+              "width": 20,
+            },
+            Object {
+              "backgroundColor": "#0ff",
+            },
+            Object {},
+          ]
+        }
+      />
+    </AnimatedComponent>
+    <Progress
+      andDegree={290}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={false}
+      endColor={null}
+      foreColor="#FF4800"
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={100}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={30}
+      startColor={null}
+      startDegree={125}
+      stepValue={5}
+      style={
+        Array [
+          Object {
+            "opacity": 0,
+            "position": "absolute",
+          },
+          Object {
+            "height": 370,
+            "width": 370,
+          },
+          Object {},
+        ]
+      }
+      thumbFill="#fff"
+      thumbRadius={2}
+      thumbStroke="#fff"
+      thumbStrokeWidth={2}
+      value={50}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+  </View>
+</ImageBackground>
+`;

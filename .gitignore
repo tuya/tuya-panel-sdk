@@ -407,6 +407,5 @@ scripts
 .npmrc
 package-lock.json
 
-
 # IntelliJ
 .idea/*
