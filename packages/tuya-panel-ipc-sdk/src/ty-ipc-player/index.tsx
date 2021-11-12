@@ -37,7 +37,9 @@ import { videoLoadText } from '../ty-ipc-native/cameraData';
 import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
 import TYRCTOrientationManager from '../ty-ipc-native/tyrctOrientationManager';
 
-const TYRCTLifecycleManagerEvent = new NativeEventEmitter(TYRCTLifecycleManager);
+const TYRCTLifecycleManagerEvent = TYRCTLifecycleManager
+  ? new NativeEventEmitter(TYRCTLifecycleManager)
+  : null;
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
 if (!isIOS && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -141,22 +143,15 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.hightScaleMode,
       this.props.channelNum
     );
-    // 进入前台、后台
-    // ipc品类与非ipc品类使用不同的方式监听
-    // 摄像头品类
-    if (TYSdk.devInfo.category === 'sp') {
-      this.foregroundListener = DeviceEventEmitter.addListener(
-        'enterForegroundEvent',
-        this.enterFront
-      );
-      this.backgroundListener = DeviceEventEmitter.addListener(
-        'enterBackgroundEvent',
-        this.enterBackground
-      );
-    } else {
-      // 因监听方法每次会推送两次事件，所以开启防抖来处理
+
+    if (TYSdk.devInfo.category !== 'sp' && TYRCTOrientationManager) {
       // 非摄像头品类的产品，旋转屏幕使用方法需初始化
       TYRCTOrientationManager.supportedOrientations(['portrait', 'landscape-right']);
+    }
+
+    // 进入前台、后台
+    if (TYSdk.devInfo.category !== 'sp' && TYRCTLifecycleManagerEvent) {
+      // 因监听方法每次会推送两次事件，所以开启防抖来处理
       this.foregroundListener = TYRCTLifecycleManagerEvent.addListener(
         'onPageAppear',
         _.debounce(this.enterFront, 100)
@@ -164,6 +159,17 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.backgroundListener = TYRCTLifecycleManagerEvent.addListener(
         'onPageDisappear',
         _.debounce(this.enterBackground, 100)
+      );
+    } else {
+      // ipc品类与非ipc品类使用不同的方式监听
+      // 摄像头品类
+      this.foregroundListener = DeviceEventEmitter.addListener(
+        'enterForegroundEvent',
+        this.enterFront
+      );
+      this.backgroundListener = DeviceEventEmitter.addListener(
+        'enterBackgroundEvent',
+        this.enterBackground
       );
     }
 

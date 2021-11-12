@@ -471,7 +471,8 @@ class PlayerManagerFun {
     if (TYSdk.devInfo.category === 'sp') {
       CameraManager.setScreenOrientation(dir);
     } else {
-      TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
+      TYRCTOrientationManager &&
+        TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
     }
     TYEvent.emit('screenOrientation', { isFullScreen: dir });
   };

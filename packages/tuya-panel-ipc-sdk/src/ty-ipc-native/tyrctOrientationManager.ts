@@ -1,3 +1,10 @@
+/* eslint-disable no-empty */
 import { NativeModules } from 'react-native';
 
-export default NativeModules.TYRCTOrientationManager;
+let module = null;
+
+try {
+  module = NativeModules.TYRCTOrientationManager;
+} catch (err) {}
+
+export default module;
