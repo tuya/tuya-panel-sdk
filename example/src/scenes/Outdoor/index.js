@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { TYFlatList } from 'tuya-panel-kit';
 import { subRouters } from '../../config/routers';
 import { produceRouterDatas } from '../../utils';
 import LocationText from './location-text';
 import DateText from './date-text';
+import CalendarList from './calendar-list';
 import SettingSlider from './setting-slider';
 import CircleProgress from './shadow-circle-progress';
+import Battery from './battery';
 
-export default class OutdoorScene extends Component {
+export default class OutdoorScene extends React.Component {
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Outdoor\.((?!\.)\w)+$/.test(r.id)));
   }
@@ -16,6 +18,8 @@ export default class OutdoorScene extends Component {
   static LocationText = LocationText;
   static SettingSlider = SettingSlider;
   static shadowCircleProgress = CircleProgress;
+  static Battery = Battery;
+  static CalendarList = CalendarList;
 
   render() {
     return <TYFlatList data={this.data} />;
