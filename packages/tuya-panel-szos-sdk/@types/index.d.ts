@@ -122,14 +122,14 @@ declare module '@tuya/tuya-panel-szos-sdk' {
     /**
      * @language zh-CN
      * @description 旋转角度事件
-     * @defaultValue (rotate) => {}
+     * @defaultValue (rotate, direction) => {}
      */
     /**
      * @language en-US
      * @description Rotate Function
-     * @defaultValue (rotate) => {}
+     * @defaultValue (rotate, direction) => {}
      */
-    changeRotate: (rotate: number) => void;
+    changeRotate: (rotate: number, direction: string) => void;
     /**
      * @language zh-CN
      * @description PanGestureHandler的Ref
@@ -154,37 +154,37 @@ declare module '@tuya/tuya-panel-szos-sdk' {
     wheelStyle?: StyleProp<ViewStyle>;
     /**
      * @language zh-CN
-     * @description 左转最大角度
-     * @defaultValue 90
-     */
-    /**
-     * @language en-US
-     * @description left max angle
-     * @defaultValue 90
-     */
-    maxLeftAng?: number;
-    /**
-     * @language zh-CN
-     * @description 右转最大角度
-     * @defaultValue 90
-     */
-    /**
-     * @language en-US
-     * @description left max angle
-     * @defaultValue 90
-     */
-    maxRightAng?: number;
-    /**
-     * @language zh-CN
      * @description 插入PanGestureHandler的旋转内部元素
      * @defaultValue null
      */
     /**
      * @language en-US
-     * @description inner node
+     * @description rotate view inner node
      * @defaultValue null
      */
     childrenProps?: React.ReactNode;
+    /**
+     * @language zh-CN
+     * @description 父元素相对于屏幕左边的偏移量
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description The offset of the parent element from the left side of the screen
+     * @defaultValue null
+     */
+    leftPart?: number;
+    /**
+     * @language zh-CN
+     * @description 父元素相对于屏幕顶部的偏移量
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description The offset of the parent element from the top of the screen
+     * @defaultValue null
+     */
+    topPart?: number;
   }
   export const SoundWave: React.ComponentClass<SoundWaveProps>;
   export const StreeringWheel: React.ComponentClass<StreeringWheelProps>;

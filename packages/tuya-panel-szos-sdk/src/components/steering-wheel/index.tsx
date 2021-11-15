@@ -1,24 +1,25 @@
 /* eslint-disable no-shadow */
-/* eslint-disable react/prop-types */
 /*
  * 使用须知！！
  * 目前是以正北方向为基准，后续有时间再扩展任意角度基准
  * 父元素必须是RN面板最根视图，后续有时间再扩展
  */
+import PropTypes from 'prop-types';
 import React, { FC, useEffect, useState, MutableRefObject, useRef } from 'react';
-import { View, Image, StyleProp, ViewStyle, Animated, Platform } from 'react-native';
+import { View, Image, StyleProp, ViewStyle, Animated, ViewPropTypes } from 'react-native';
 import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import { Utils } from 'tuya-panel-kit';
 import res from './res';
 
 const { convertX: cx } = Utils.RatioUtils;
-
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 interface IOnlieProp {
   /*
-   * 旋转角度
+   * 旋转正北方向角度rotate
+   * 旋转相对方向direction
+   * 当前X坐标xNow
+   * 当前Y坐标yNow
    */
-  changeRotate?: (rotate: number) => void;
+  changeRotate?: (rotate: number, direction: string, xNow: number, yNow: number) => void;
   /*
    * PanGestureHandler的Ref
    */
@@ -27,14 +28,6 @@ interface IOnlieProp {
    * 旋转最外层样式
    */
   wheelStyle?: StyleProp<ViewStyle>;
-  /*
-   * 左转最大角度
-   */
-  maxLeftAng?: number;
-  /*
-   * 右转最大角度
-   */
-  maxRightAng?: number;
   /*
    * 插入PanGestureHandler的旋转内部元素
    */
@@ -47,27 +40,26 @@ interface IOnlieProp {
    * 父元素相对于屏幕顶部的偏移量
    */
   topPart?: number;
+  /*
+   * 手指抬起是否回到正北方向默认为true
+   */
+  isReset?: boolean;
 }
 
-const Wheel: FC<IOnlieProp> = props => {
-  const {
-    wheelStyle = { width: cx(167), height: cx(167) },
-    changeRotate,
-    driveRef,
-    childrenProps,
-    maxLeftAng = 90,
-    maxRightAng = 90,
-    leftPart = 0,
-    topPart = 0,
-  } = props;
-
-  const maxLeft = Math.abs(maxLeftAng);
-  const maxRight = Math.abs(maxRightAng);
+const Wheel: FC<IOnlieProp> = ({
+  wheelStyle,
+  changeRotate,
+  driveRef,
+  childrenProps,
+  leftPart,
+  topPart,
+  isReset = true,
+}) => {
   const wheelLeftRef = useRef(null);
   // 转动的角度
   const [ang, setAng] = useState<number>(0);
   // dp=>左1右2正方向0
-  const [rotate, setRotate] = useState<number>(0);
+  const [rotate, setRotate] = useState<string>('on');
 
   // 开始按下转动的初始角度
   const [angStart, setAngStart] = useState<number>(0);
@@ -79,6 +71,9 @@ const Wheel: FC<IOnlieProp> = props => {
   const [center, setCenter] = useState<any>({});
   const [centerX, setCenterX] = useState<any>({});
   const [centerY, setCenterY] = useState<any>({});
+
+  const [positionX, setPositionX] = useState<number>(0);
+  const [positionY, setPositionY] = useState<number>(0);
 
   const beforeref = useRef(0);
 
@@ -119,16 +114,16 @@ const Wheel: FC<IOnlieProp> = props => {
   const _onPanGestureEvent = ({ nativeEvent }) => {
     const { width, height } = center;
     const { x, y } = nativeEvent;
-    const cx = width / 2;
+    const cnx = width / 2;
     const cy = height / 2;
-    const a = Math.abs(cx - x);
+    const a = Math.abs(cnx - x);
     const b = Math.abs(cy - y);
     const re = Math.sqrt(a * a + b * b);
     // 安卓的re > cx || re < cx / 2会为ture，所以去掉
     // alert(state + (re > cx || re < cx / 2));
 
     // 超出画板范围禁止绘制
-    if (re > cx + 10 || re < cx / 2 + 5) {
+    if (re > cnx + 10 || re < cnx / 2 + 5) {
       return;
     }
     if (state === 'active') {
@@ -139,7 +134,11 @@ const Wheel: FC<IOnlieProp> = props => {
   const getAngle = (xNow: number, yNow: number) => {
     // 圆周上任意2点之间的弧度公式：θ=arctan[(y2-y0)/(x2-x0)]-arctan[(y1-y0)/(x1-x0)]
     const radian1 = Math.atan2(yNow - centerY, xNow - centerX); // 指定坐标点弧度
-    const radian0 = 0; // 正北方向弧度
+    const radian0 = 0; // 默认为正北方向弧度
+    // if (!isReset) {
+    //   radian0 = Math.atan2(positionY - centerY, positionX - centerX);
+    // }
+
     const angle = (radian1 - radian0) / (Math.PI / 180); // 弧度转角度
     return Number(angle.toFixed(2));
   };
@@ -151,7 +150,12 @@ const Wheel: FC<IOnlieProp> = props => {
   };
 
   const down = (xNow: number, yNow: number) => {
-    const angle0 = getAngle(xNow, yNow);
+    let angle0 = 0;
+    if (!isReset) {
+      angle0 = getAngle(positionX, positionY);
+    } else {
+      angle0 = getAngle(xNow, yNow);
+    }
     // 指定坐标点与正北方向的夹角
     setAngStart(angle0);
     // beforeref.current = angle0;
@@ -159,6 +163,8 @@ const Wheel: FC<IOnlieProp> = props => {
   };
 
   const move = (xNow: number, yNow: number) => {
+    setPositionX(xNow);
+    setPositionY(yNow);
     if (ctrl) {
       const angs = roate(xNow, yNow);
       if (!popFirst.current) {
@@ -174,7 +180,7 @@ const Wheel: FC<IOnlieProp> = props => {
       }
       if (beforeref.current === 0) {
         // 正负值突变
-        setRotate(angs > 0 ? 2 : 1);
+        setRotate(angs > 0 ? 'right' : 'left');
         beforeref.current = angs;
         setAng(angs);
         return;
@@ -182,7 +188,7 @@ const Wheel: FC<IOnlieProp> = props => {
 
       if (beforeref.current * angs > 0) {
         // 角度变大
-        setRotate(beforeref.current > angs ? 1 : 2);
+        setRotate(beforeref.current > angs ? 'left' : 'right');
         beforeref.current = angs;
         setAng(angs);
       } else {
@@ -195,9 +201,14 @@ const Wheel: FC<IOnlieProp> = props => {
 
   const stop = () => {
     if (ctrl) {
+      if (isReset) {
+        setAng(0);
+        beforeref.current = 0;
+        setRotate('on');
+        setPositionX(0);
+        setPositionY(0);
+      }
       setCtrl(false);
-      setAng(0);
-      beforeref.current = 0;
     }
   };
 
@@ -208,15 +219,15 @@ const Wheel: FC<IOnlieProp> = props => {
     const { x, y, width, height } = e.nativeEvent.layout;
 
     // 中心点
-    const cx = x + width / 2 + leftPart;
+    const centerx = x + width / 2 + leftPart;
     const cy = y + height / 2 + topPart;
-    setCenterX(cx);
+    setCenterX(centerx);
     setCenterY(cy);
     setCenter(e.nativeEvent.layout);
   };
 
   useEffect(() => {
-    changeRotate && changeRotate(ang);
+    changeRotate && changeRotate(ang, rotate, positionX, positionY);
   }, [ang]);
 
   return (
@@ -240,6 +251,26 @@ const Wheel: FC<IOnlieProp> = props => {
       </PanGestureHandler>
     </View>
   );
+};
+
+Wheel.propTypes = {
+  wheelStyle: ViewPropTypes.style,
+  changeRotate: PropTypes.func,
+  driveRef: PropTypes.any,
+  childrenProps: PropTypes.node,
+  leftPart: PropTypes.number,
+  topPart: PropTypes.number,
+  isReset: PropTypes.bool,
+};
+
+Wheel.defaultProps = {
+  wheelStyle: { width: cx(167), height: cx(167) },
+  changeRotate: () => {},
+  driveRef: null,
+  childrenProps: undefined,
+  leftPart: 0,
+  topPart: 0,
+  isReset: true,
 };
 
 export default Wheel;
