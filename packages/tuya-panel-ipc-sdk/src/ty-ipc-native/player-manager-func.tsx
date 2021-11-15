@@ -218,7 +218,7 @@ class PlayerManagerFun {
     theme: 1: 黑色 2：白色
     默认是白色
   */
-  enterParamAlbum = (param: { theme: number; [propName: string]: any }) => {
+  enterParamAlbum = (param: { theme: number;[propName: string]: any }) => {
     CameraManager.gotoCameraAlbumPanelWithParams(param);
   };
 
@@ -385,7 +385,7 @@ class PlayerManagerFun {
     time:  播放的时间戳, 单位秒
     @param
   */
-  enterParamPlayBack = (param: { theme?: 1 | 2; time?: number; [propName: string]: any }) => {
+  enterParamPlayBack = (param: { theme?: 1 | 2; time?: number;[propName: string]: any }) => {
     TYEvent.emit('changeCameraAction', { action: 1, nativePage: 1 });
     CameraManager.gotoCameraNewPlaybackPanelWithParams(param);
   };
@@ -409,7 +409,7 @@ class PlayerManagerFun {
     time:  播放的时间戳, 单位秒
     @param
   */
-  enterParamCloudBack = (param: { theme?: 1 | 2; time?: number; [propName: string]: any }) => {
+  enterParamCloudBack = (param: { theme?: 1 | 2; time?: number;[propName: string]: any }) => {
     TYEvent.emit('changeCameraAction', { action: 0, nativePage: 2 });
     CameraManager.gotoCloudStoragePanelWithParams(param);
   };
@@ -429,7 +429,7 @@ class PlayerManagerFun {
     theme: 主题色 黑色为1 白色为2
     @param
   */
-  enterParamMessageAll = (param: { theme?: 1 | 2; [propName: string]: any }) => {
+  enterParamMessageAll = (param: { theme?: 1 | 2;[propName: string]: any }) => {
     CameraManager.gotoCameraMessageCenterPanelWithParams(param);
   };
 
@@ -471,7 +471,9 @@ class PlayerManagerFun {
     if (TYSdk.devInfo.category === 'sp') {
       CameraManager.setScreenOrientation(dir);
     } else {
-      TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
+      TYRCTOrientationManager &&
+        TYRCTOrientationManager.lockOrientation &&
+        TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
     }
     TYEvent.emit('screenOrientation', { isFullScreen: dir });
   };
