@@ -34,12 +34,12 @@ import TimeInterval from './components/timeInterval';
 import AudioOnlyMode from './components/audioOnlyMode';
 import { TYIpcPlayerProps, _defaultProps } from './interface';
 import { videoLoadText } from '../ty-ipc-native/cameraData';
-import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
+// import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
 import TYRCTOrientationManager from '../ty-ipc-native/tyrctOrientationManager';
 
-const TYRCTLifecycleManagerEvent = TYRCTLifecycleManager
-  ? new NativeEventEmitter(TYRCTLifecycleManager)
-  : null;
+// const TYRCTLifecycleManagerEvent = TYRCTLifecycleManager
+//   ? new NativeEventEmitter(TYRCTLifecycleManager)
+//   : null;
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
 if (!isIOS && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -149,29 +149,29 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       TYRCTOrientationManager.supportedOrientations(['portrait', 'landscape-right']);
     }
 
-    // 进入前台、后台
-    if (TYSdk.devInfo.category !== 'sp' && TYRCTLifecycleManagerEvent) {
-      // 因监听方法每次会推送两次事件，所以开启防抖来处理
-      this.foregroundListener = TYRCTLifecycleManagerEvent.addListener(
-        'onPageAppear',
-        _.debounce(this.enterFront, 100)
-      );
-      this.backgroundListener = TYRCTLifecycleManagerEvent.addListener(
-        'onPageDisappear',
-        _.debounce(this.enterBackground, 100)
-      );
-    } else {
-      // ipc品类与非ipc品类使用不同的方式监听
-      // 摄像头品类
-      this.foregroundListener = DeviceEventEmitter.addListener(
-        'enterForegroundEvent',
-        this.enterFront
-      );
-      this.backgroundListener = DeviceEventEmitter.addListener(
-        'enterBackgroundEvent',
-        this.enterBackground
-      );
-    }
+    // // 进入前台、后台
+    // if (TYSdk.devInfo.category !== 'sp' && TYRCTLifecycleManagerEvent) {
+    //   // 因监听方法每次会推送两次事件，所以开启防抖来处理
+    //   this.foregroundListener = TYRCTLifecycleManagerEvent.addListener(
+    //     'onPageAppear',
+    //     _.debounce(this.enterFront, 100)
+    //   );
+    //   this.backgroundListener = TYRCTLifecycleManagerEvent.addListener(
+    //     'onPageDisappear',
+    //     _.debounce(this.enterBackground, 100)
+    //   );
+    // } else {
+    // ipc品类与非ipc品类使用不同的方式监听
+    // 摄像头品类
+    this.foregroundListener = DeviceEventEmitter.addListener(
+      'enterForegroundEvent',
+      this.enterFront
+    );
+    this.backgroundListener = DeviceEventEmitter.addListener(
+      'enterBackgroundEvent',
+      this.enterBackground
+    );
+    // }
 
     // Android 返回键退出全屏
     this.backPressListener = BackHandler.addEventListener('hardwareBackPress', () => {
@@ -534,7 +534,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.props.onListenTalkingChangeMute(voiceStatus);
   };
 
-  onChangePreview = () => {};
+  onChangePreview = () => { };
 
   // 推送是否在录像
   listenIsRecording = (data: any) => {
@@ -847,7 +847,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               <item.component
                 key={`${index + 1}`}
                 {...(item.propData,
-                { hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight })}
+                  { hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight })}
                 resetFullScreenBtn={value => {
                   this.props.onFullScreenTapView(value);
                 }}
