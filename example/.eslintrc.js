@@ -1,5 +1,5 @@
 module.exports = {
-  extends: '../.eslintrc.js',
+  extends: ['../.eslintrc.js'],
   settings: {
     'import/core-modules': [
       '@tuya/tuya-panel-sdk',

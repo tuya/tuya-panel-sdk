@@ -4,7 +4,7 @@ import { NativeModules } from 'react-native';
 let module = null;
 
 try {
-  module = NativeModules.TYRCTLifecycleManager;
+  module = NativeModules.TYRCTOrientationManager;
 } catch (err) {}
 
 export default module;

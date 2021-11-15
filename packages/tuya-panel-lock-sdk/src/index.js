@@ -13,3 +13,4 @@ export { default as TimePickerRange } from './time-picker-range';
 export { default as CustomKeyboard } from './custom-keyboard';
 export { default as TouchableView } from './touchable-view';
 export { default as LockUtils } from './utils';
+export { default as SlideChoose } from './slide-choose';

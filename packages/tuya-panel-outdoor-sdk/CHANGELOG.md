@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.3.0...@tuya/tuya-panel-outdoor-sdk@0.4.0) (2021-11-15)
+
+
+### Features
+
+* add outdoor new component: DateText ([#118](https://github.com/tuya/tuya-panel-sdk/issues/118)) ([a33004b](https://github.com/tuya/tuya-panel-sdk/commit/a33004b9cd8b4aae2de768e8aa917c4c6a084e7e)), closes [#110](https://github.com/tuya/tuya-panel-sdk/issues/110) [#113](https://github.com/tuya/tuya-panel-sdk/issues/113)
+
+
+
+
+
+# [0.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.2.0...@tuya/tuya-panel-outdoor-sdk@0.3.0) (2021-10-25)
+
+
+### Features
+
+* add outdoor new component: DateText ([#111](https://github.com/tuya/tuya-panel-sdk/issues/111)) ([66f59d8](https://github.com/tuya/tuya-panel-sdk/commit/66f59d85e4958df562ff47c44dbe4d9dcc91a305))
+
+
+
+
+
 # [0.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.1.2...@tuya/tuya-panel-outdoor-sdk@0.2.0) (2021-10-12)
 
 
