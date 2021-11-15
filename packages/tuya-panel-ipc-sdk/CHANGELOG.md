@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.11.0...@tuya/tuya-panel-ipc-sdk@1.11.1) (2021-11-15)
+
+
+### Bug Fixes
+
+* native module can not found ([#121](https://github.com/tuya/tuya-panel-sdk/issues/121)) ([2c94526](https://github.com/tuya/tuya-panel-sdk/commit/2c945268d54680345da55fedb41e185cba89443d))
+
+
+
+
+
 # [1.11.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.10.0...@tuya/tuya-panel-ipc-sdk@1.11.0) (2021-10-12)
 
 
