@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.4.0...@tuya/tuya-panel-lock-sdk@1.5.0) (2021-11-15)
+
+
+### Features
+
+* **tuya-panel-lock-sdk:** 新增slide-choose滑动按钮组件 ([#112](https://github.com/tuya/tuya-panel-sdk/issues/112)) ([92a350c](https://github.com/tuya/tuya-panel-sdk/commit/92a350cb54dd0d5195e207350812dfd13811099a))
+
+
+
+
+
 # [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.3.1...@tuya/tuya-panel-lock-sdk@1.4.0) (2021-10-12)
 
 
