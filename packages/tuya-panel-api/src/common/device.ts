@@ -24,7 +24,7 @@ import {
  * @param {string} devId 设备Id
  * @docs https://developer.tuya.com/cn/docs/iot/equipment-related-interface?id=K9m1dlii6zkf7#title-0-%E8%8E%B7%E5%8F%96%E8%AE%BE%E5%A4%87%E6%89%80%E6%9C%89%20DP%20%E4%BF%A1%E6%81%AF
  */
-const getDpsInfos = (params: IGetDpsInfos): Promise<IGetDpsInfosResponse> => {
+const getDpsInfos = (params: IGetDpsInfos): Promise<IGetDpsInfosResponse[]> => {
   return TYSdk.apiRequest('s.m.dev.dp.get', { ...params }, '2.0');
 };
 
