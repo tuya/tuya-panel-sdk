@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.7.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.7.1...@tuya/tuya-panel-api@1.7.2) (2021-11-17)
+
+
+### Bug Fixes
+
+* **tuya-panel-api:** modify response type ([a9908a2](https://github.com/tuya/tuya-panel-sdk/commit/a9908a2837849131d323384125b5d122c6ae13c6))
+
+
+
+
+
 ## [1.7.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.7.0...@tuya/tuya-panel-api@1.7.1) (2021-10-12)
 
 **Note:** Version bump only for package @tuya/tuya-panel-api
