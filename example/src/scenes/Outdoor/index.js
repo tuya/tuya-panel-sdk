@@ -6,6 +6,8 @@ import LocationText from './location-text';
 import DateText from './date-text';
 import SettingSlider from './setting-slider';
 import CircleProgress from './shadow-circle-progress';
+import SportNoTarget from './sport-no-target';
+import SportTarget from './sport-target';
 
 export default class OutdoorScene extends Component {
   get data() {
@@ -16,6 +18,8 @@ export default class OutdoorScene extends Component {
   static LocationText = LocationText;
   static SettingSlider = SettingSlider;
   static shadowCircleProgress = CircleProgress;
+  static SportNoTarget = SportNoTarget
+  static SportTarget = SportTarget
 
   render() {
     return <TYFlatList data={this.data} />;

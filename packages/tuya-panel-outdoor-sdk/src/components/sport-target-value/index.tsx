@@ -1,14 +1,31 @@
-import React, { FC, useState, useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { FC } from 'react';
+import { Text } from 'react-native';
 import { Utils, IconFont } from 'tuya-panel-kit';
-import PropTypes from 'prop-types';
 
 interface IProps {
+  /**
+   * 步数
+   */
   step: number;
+  /**
+   * 图标icon：字符串
+   */
   targetIcon: string;
+  /**
+   * 图标颜色
+   */
   targetIconColor: string;
-  stepValue: string;
+  /**
+   * 步数单位
+   */
+  stepValue?: string;
+  /**
+   * 单位颜色
+   */
   stepColor: string;
+  /**
+   * 单位透明度
+   */
   stepOpacity: number;
 }
 
@@ -34,10 +51,7 @@ const SportTargetContent: FC<IProps> = (props: IProps) => {
   );
 };
 
-// SportTargetContent.propTypes = {
-//   stepValue: prop
-// }
-// SportTargetContent.defaultProps = {
-//   stepValue: '步'
-// };
+SportTargetContent.defaultProps = {
+  stepValue: '步',
+};
 export default SportTargetContent;
