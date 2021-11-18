@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sport-no-target components basic render 1`] = `
+<Fragment>
+  <Component
+    color="blue"
+    d=" "
+    size={29}
+  />
+  <Text
+    style={
+      Object {
+        "fontSize": 72,
+        "fontWeight": "bold",
+        "marginTop": 16,
+      }
+    }
+  >
+    100
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "blue",
+        "fontSize": 28,
+        "fontWeight": "300",
+        "marginTop": 16,
+        "opacity": 0.5,
+      }
+    }
+  >
+    步
+  </Text>
+</Fragment>
+`;
