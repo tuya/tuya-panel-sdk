@@ -5,3 +5,6 @@ export { default as DateText } from './components/date-text';
 export { default as Battery } from './components/battery';
 export { default as CalendarList } from './components/calendar-list';
 export { parseSecondToDate } from './components/date-text/util';
+export { default as SportTargetContent } from './components/sport-target-value';
+export { default as SportNoTarget } from './components/sport-no-target';
+export { default as SportTarget } from './components/sport-target';
