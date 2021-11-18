@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sport-no-target components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#0376FF",
+      },
+    ]
+  }
+>
+  <ImageBackground
+    source={0}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 540,
+        "justifyContent": "center",
+        "width": 540,
+      }
+    }
+  >
+    <ImageBackground
+      source={0}
+      style={
+        Object {
+          "alignItems": "center",
+          "borderColor": "#FFFFFF",
+          "height": 448,
+          "justifyContent": "center",
+          "width": 448,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFFFFF",
+            "borderRadius": 190,
+            "height": 380,
+            "justifyContent": "center",
+            "width": 380,
+          }
+        }
+      >
+        <LinearGradient
+          gradientId="linear-gradient"
+          stops={
+            Object {
+              "0%": "#FEFFFF",
+              "100%": "#E4EDFE",
+            }
+          }
+          style={
+            Object {
+              "height": 380,
+              "width": 380,
+            }
+          }
+          x1="0%"
+          x2="0%"
+          y1="0%"
+          y2="100%"
+        >
+          <Circle
+            cx={190}
+            cy={190}
+            r={190}
+          />
+        </LinearGradient>
+        <ImageBackground
+          source={0}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 440,
+              "justifyContent": "center",
+              "width": 440,
+            }
+          }
+        >
+          <Text>
+            123
+          </Text>
+        </ImageBackground>
+      </View>
+    </ImageBackground>
+    <AnimatedComponent
+      source={0}
+      style={
+        Array [
+          Object {
+            "height": 40,
+            "position": "absolute",
+            "width": 40,
+          },
+          Object {
+            "transform": Array [
+              Object {
+                "rotate": "0deg",
+              },
+              Object {
+                "translateX": 224,
+              },
+            ],
+          },
+        ]
+      }
+    />
+  </ImageBackground>
+  <AnimatedComponent
+    source={0}
+    style={
+      Array [
+        Object {
+          "height": 28,
+          "position": "absolute",
+          "width": 28,
+        },
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+            Object {
+              "translateX": 270,
+            },
+          ],
+        },
+      ]
+    }
+  />
+</View>
+`;
