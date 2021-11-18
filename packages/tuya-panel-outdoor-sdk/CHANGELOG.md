@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.4.0...@tuya/tuya-panel-outdoor-sdk@0.5.0) (2021-11-18)
+
+
+### Features
+
+* sport page, target and no target component ([#123](https://github.com/tuya/tuya-panel-sdk/issues/123)) ([1448cd0](https://github.com/tuya/tuya-panel-sdk/commit/1448cd05da0567afd6a6cb54c7a4fe7f2a78630a))
+
+
+
+
+
 # [0.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.3.0...@tuya/tuya-panel-outdoor-sdk@0.4.0) (2021-11-15)
 
 
