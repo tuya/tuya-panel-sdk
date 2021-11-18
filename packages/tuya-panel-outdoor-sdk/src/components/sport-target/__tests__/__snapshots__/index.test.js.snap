@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sport-no-target components basic render 1`] = `
+<View
+  style={
+    Object {
+      "height": 700,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 240,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 24,
+            "height": 60,
+            "lineHeight": 60,
+            "marginBottom": 8,
+            "marginTop": 40,
+            "textAlign": "center",
+            "width": 540,
+          },
+          Object {
+            "color": "blue",
+          },
+        ]
+      }
+    >
+      Today's goal ｜ 100step
+    </Text>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "fontSize": 48,
+            "textAlign": "center",
+            "width": 400,
+          }
+        }
+      >
+        You have achieved your goal
+        <Text
+          style={
+            Object {
+              "color": "blue",
+            }
+          }
+        >
+          50%
+        </Text>
+      </Text>
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 460,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Progress
+      andDegree={270}
+      backColor="#E5E5E5"
+      backStrokeOpacity={1}
+      disabled={true}
+      endColor={null}
+      foreColor="blue"
+      foreStrokeOpacity={1}
+      gradientId="Progress"
+      max={200}
+      min={0}
+      needMaxCircle={true}
+      needMinCircle={false}
+      onSlidingComplete={[Function]}
+      onValueChange={[Function]}
+      pointerEvents="box-only"
+      renderCenterView={null}
+      scaleHeight={32}
+      startColor={null}
+      startDegree={135}
+      stepValue={10}
+      style={
+        Object {
+          "height": 432,
+          "width": 432,
+        }
+      }
+      thumbFill="blue"
+      thumbRadius={14}
+      thumbStroke="blue"
+      thumbStrokeWidth={0}
+      value={100}
+      x1="0%"
+      x2="100%"
+      y1="0%"
+      y2="0%"
+    />
+    <CenterView />
+  </View>
+</View>
+`;

@@ -8,6 +8,8 @@ import CalendarList from './calendar-list';
 import SettingSlider from './setting-slider';
 import CircleProgress from './shadow-circle-progress';
 import Battery from './battery';
+import SportNoTarget from './sport-no-target';
+import SportTarget from './sport-target';
 
 export default class OutdoorScene extends React.Component {
   get data() {
@@ -20,6 +22,8 @@ export default class OutdoorScene extends React.Component {
   static shadowCircleProgress = CircleProgress;
   static Battery = Battery;
   static CalendarList = CalendarList;
+  static SportNoTarget = SportNoTarget;
+  static SportTarget = SportTarget;
 
   render() {
     return <TYFlatList data={this.data} />;
