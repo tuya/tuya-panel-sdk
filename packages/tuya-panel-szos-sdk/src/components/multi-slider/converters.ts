@@ -1,12 +1,11 @@
 /*
  * @Author: your name
  * @Date: 2021-10-22 11:22:44
- * @LastEditTime: 2021-11-04 16:29:29
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-11-23 16:59:16
+ * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description: In User Settings Edit
- * @FilePath: /000001afpy/src/components/MultiSlider/converters.js
+ * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/multi-slider/converters.ts
  */
-// Find closest index for a given value
 
 const closest = (array: any[], n: number) => {
   let minI = 0;
@@ -49,28 +48,38 @@ const closest = (array: any[], n: number) => {
   return -1;
 };
 
-export function valueToPosition(value: number, valuesArray: number[], sliderLength: number, offset: number) {
+export const valueToPosition = (
+  value: number,
+  valuesArray: number[],
+  sliderLength: number,
+  offset: number
+): number => {
   const index = closest(valuesArray, value);
 
   const arrLength = valuesArray.length - 1;
   const validIndex = index === -1 ? arrLength : index;
 
-  return ((sliderLength * validIndex) / arrLength) + offset;
-}
+  return (sliderLength * validIndex) / arrLength + offset;
+};
 
-export function positionToValue(position: number, valuesArray: number[], sliderLength: number) {
-
+export const positionToValue = (
+  position: number,
+  valuesArray: number[],
+  sliderLength: number
+): number => {
   if (position < 0 || sliderLength < position) {
     return null;
   }
   const arrLength = valuesArray.length - 1;
   const index = (arrLength * position) / sliderLength;
   return valuesArray[Math.round(index)];
-}
+};
 
-const roundFun = (value: number, n: number) => Math.round(value * Math.pow(10, n)) / Math.pow(10, n);
+const roundFun = (value: number, n: number) => {
+  return Math.round(value * Math.pow(10, n)) / Math.pow(10, n);
+};
 
-export function createArray(start: number, end: number, step: number) {
+export const createArray = (start: number, end: number, step: number): any[] => {
   const direction = start - end > 0 ? -1 : 1;
   const result: any[] = [];
   if (!step) {
@@ -78,7 +87,12 @@ export function createArray(start: number, end: number, step: number) {
   }
   const length = Math.abs((start - end) / step) + 1;
   for (let i = 0; i < length; i++) {
-    result.push(roundFun(start + i * Math.abs(step) * direction, step < 1 ? 1 : 0));
+    result.push(
+      roundFun(
+        start + i * Math.abs(step) * direction,
+        step >= 1 ? 0 : step?.toString()?.split('.')[1]?.length
+      )
+    );
   }
   return result;
-}
+};

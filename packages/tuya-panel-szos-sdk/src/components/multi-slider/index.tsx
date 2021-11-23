@@ -369,7 +369,6 @@ export default class MultiSlider extends React.Component<MultiSliderProps, Multi
   };
 
   endOne = (gestureState: PanResponderGestureState) => {
-    console.log('endOne', this.endOne);
     const { positionOne, onePressed, valueOne, valueTwo } = this.state;
     const { onToggleOne, onValuesChangeFinish } = this.props;
     if (gestureState.moveX === 0 && onToggleOne) {
@@ -393,7 +392,6 @@ export default class MultiSlider extends React.Component<MultiSliderProps, Multi
   };
 
   endTwo = (gestureState: PanResponderGestureState) => {
-    console.log('endTwo', this.endTwo);
     const { positionTwo, twoPressed, valueOne, valueTwo } = this.state;
     const { onToggleTwo, onValuesChangeFinish } = this.props;
     if (gestureState.moveX === 0 && onToggleTwo) {
