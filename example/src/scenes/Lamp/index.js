@@ -22,8 +22,13 @@ import CountdownPickerScene from './CountdownPicker';
 import ColorDiskScene from './ColorDisk';
 import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
+import ConicalGradientScene from './ConicalGradient';
 
 export default class LampScene extends Component {
+  get data() {
+    return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
+  }
+
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
   static TemperaturePicker = TemperaturePickerScene;
   static HueSaturationPicker = HueSaturationPickerScene;
@@ -44,10 +49,7 @@ export default class LampScene extends Component {
   static ColorDisk = ColorDiskScene;
   static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
-
-  get data() {
-    return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
-  }
+  static ConicalGradient = ConicalGradientScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
