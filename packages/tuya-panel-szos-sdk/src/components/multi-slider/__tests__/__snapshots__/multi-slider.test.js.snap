@@ -1,0 +1,1572 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BoxShow components default render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "#095FFF",
+            },
+            Object {
+              "width": 0,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 280,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": -24,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={0}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BoxShow components ll componentDidUpdate 1`] = `
+<View>
+  <DefaultLabel
+    oneMarkerLeftPosition={28}
+    oneMarkerValue={10}
+    twoMarkerLeftPosition={224}
+    twoMarkerValue={80}
+  />
+  <ImageBackground
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+        Array [
+          Object {
+            "height": 50,
+            "justifyContent": "center",
+            "position": "relative",
+          },
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "#095FFF",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </ImageBackground>
+</View>
+`;
+
+exports[`BoxShow components no bg 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "#095FFF",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BoxShow components 双向滑动-marker 1`] = `
+<View>
+  <DefaultLabel
+    oneMarkerLeftPosition={28}
+    oneMarkerValue={10}
+    twoMarkerLeftPosition={224}
+    twoMarkerValue={80}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "#FF8E00",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BoxShow components 双向滑动-marker带单位 1`] = `
+<View>
+  <DefaultLabel
+    oneMarkerLeftPosition={28}
+    oneMarkerValue={10}
+    twoMarkerLeftPosition={224}
+    twoMarkerValue={80}
+    unit="%"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "green",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`BoxShow components 双向滑动-step步长 1`] = `
+<View>
+  <DefaultLabel
+    oneMarkerLeftPosition={14.736842105263158}
+    oneMarkerValue={0.1}
+    sliderLabelStyle={
+      Object {
+        "color": "#000000",
+      }
+    }
+    twoMarkerLeftPosition={88.42105263157895}
+    twoMarkerValue={0.6}
+    unit="%"
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 14.736842105263158,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "green",
+            },
+            Object {
+              "width": 73.68421052631578,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 191.57894736842104,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": -9.263157894736842,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={0.1}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 167.57894736842104,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={0.6}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`multi slider default render 1`] = `
+<View>
+  <DefaultLabel
+    oneMarkerLeftPosition={28}
+    oneMarkerValue={10}
+    sliderLabelStyle={Object {}}
+    twoMarkerLeftPosition={224}
+    twoMarkerValue={80}
+  />
+  <ImageBackground
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": "100%",
+          "width": "100%",
+        },
+        Array [
+          Object {
+            "height": 50,
+            "justifyContent": "center",
+            "position": "relative",
+          },
+          undefined,
+        ],
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "#095FFF",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </ImageBackground>
+</View>
+`;
+
+exports[`multi slider no bg 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "height": 50,
+          "justifyContent": "center",
+          "position": "relative",
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "flexDirection": "row",
+          },
+          Object {
+            "width": 280,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 28,
+            },
+          ]
+        }
+      />
+      <View
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            Object {
+              "backgroundColor": "red",
+            },
+            Object {
+              "width": 196,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#3D3E43",
+              "borderRadius": 6,
+              "height": 6,
+            },
+            undefined,
+            undefined,
+            Object {
+              "width": 56,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "left": 4,
+              "top": -24,
+            },
+            undefined,
+            false,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={10}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "transparent",
+              "height": 48,
+              "justifyContent": "center",
+              "position": "absolute",
+              "width": 48,
+            },
+            Object {
+              "right": 32,
+              "top": -24,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "alignSelf": "stretch",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              Object {
+                "borderRadius": 15,
+              },
+            ]
+          }
+        >
+          <DefaultMarker
+            currentValue={80}
+            enabled={true}
+            size={12}
+          />
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
