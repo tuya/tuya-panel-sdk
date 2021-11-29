@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/color": "0.12.1",
+    "@types/d3-interpolate": "^1.4.0",
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.17",
     "@types/react-native": "^0.60.26",

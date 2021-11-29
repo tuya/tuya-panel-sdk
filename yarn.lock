@@ -2277,6 +2277,18 @@
   resolved "https://registry.npmjs.org/@types/color/-/color-0.12.1.tgz#00b7c2e468dffcbc6eeeb7d1412eb5e5d454f229"
   integrity sha1-ALfC5Gjf/Lxu7rfRQS615dRU8ik=
 
+"@types/d3-color@^1":
+  version "1.4.2"
+  resolved "https://mirrors.huaweicloud.com/repository/npm/@types/d3-color/-/d3-color-1.4.2.tgz#944f281d04a0f06e134ea96adbb68303515b2784"
+  integrity sha512-fYtiVLBYy7VQX+Kx7wU/uOIkGQn8aAEY8oWMoyja3N4dLd8Yf6XgSIR/4yWvMuveNOH5VShnqCgRqqh/UNanBA==
+
+"@types/d3-interpolate@^1.4.0":
+  version "1.4.2"
+  resolved "https://mirrors.huaweicloud.com/repository/npm/@types/d3-interpolate/-/d3-interpolate-1.4.2.tgz#88902a205f682773a517612299a44699285eed7b"
+  integrity sha512-ylycts6llFf8yAEs1tXzx2loxxzDZHseuhPokrqKprTQSTcD3JbJI1omZP1rphsELZO3Q+of3ff0ZS7+O6yVzg==
+  dependencies:
+    "@types/d3-color" "^1"
+
 "@types/enzyme@^3.10.8":
   version "3.10.8"
   resolved "https://registry.yarnpkg.com/@types/enzyme/-/enzyme-3.10.8.tgz#ad7ac9d3af3de6fd0673773123fafbc63db50d42"
