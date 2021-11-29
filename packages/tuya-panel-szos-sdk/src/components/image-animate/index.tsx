@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2021-10-19 16:51:15
- * @LastEditTime: 2021-11-16 17:05:27
+ * @LastEditTime: 2021-11-29 19:32:02
  * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description: In User Settings Edit
  * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/image-animate/index.tsx
  */
-import React, { useEffect, useState, FC } from 'react';
+import React, { useEffect, useState, FC, useLayoutEffect } from 'react';
 import { StyleSheet, View, Animated, Easing, StyleProp, ViewStyle } from 'react-native';
 import { reload } from '../../res';
 
@@ -29,7 +29,7 @@ const ImageAnimate: FC<IImageAnimateProps> = (props: IImageAnimateProps & { chil
     }).start(spin);
   };
 
-  useEffect(() => {
+  React.useEffect(() => {
     spin();
   }, []);
 

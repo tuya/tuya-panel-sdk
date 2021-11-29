@@ -1,7 +1,7 @@
 /*
  * @Author: 豆芽(douya.ye@tuya.com)
  * @Date: 2021-11-16 15:34:18
- * @LastEditTime: 2021-11-16 16:06:29
+ * @LastEditTime: 2021-11-29 20:31:47
  * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description: 双向欢动单元测试
  * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/multi-slider/__tests__/multi-slider.test.js
@@ -13,7 +13,24 @@ import { shallow, mount } from 'enzyme';
 import MultiSlider from '../index';
 import { reload } from '../../../res';
 
-describe('BoxShow components', () => {
+describe('multi slider', () => {
+  let MultiSliderCom = null;
+  beforeAll(() => {
+    console.log('BeforeAll');
+  });
+
+  beforeEach(() => {
+    console.log('BeforeEach');
+    MultiSliderCom = new MultiSlider();
+  });
+  afterEach(() => {
+    console.log('AfterEach');
+  });
+
+  afterAll(() => {
+    console.log('AfterAll');
+  });
+
   it('default render', () => {
     const wrapper = shallow(
       <MultiSlider
@@ -21,6 +38,7 @@ describe('BoxShow components', () => {
         min={0}
         max={100}
         step={1}
+        sliderLength={280}
         isMarkersSeparated={true}
         enableLabel={true}
         onValuesChangeStart={() => undefined}
@@ -48,6 +66,11 @@ describe('BoxShow components', () => {
         onValuesChange={() => undefined}
         onValuesChangeFinish={() => undefined}
         onMarkersPosition={() => undefined}
+        onToggleOne={() => undefined}
+        onToggleTwo={() => undefined}
+        allowOverlap={false}
+        snapped={true}
+        unit="%"
       />
     );
     expect(wrapper).toMatchSnapshot();

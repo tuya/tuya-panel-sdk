@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2021-10-22 11:22:44
- * @LastEditTime: 2021-11-23 16:59:16
+ * @LastEditTime: 2021-11-29 19:47:02
  * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description: In User Settings Edit
  * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/multi-slider/converters.ts
  */
 
-const closest = (array: any[], n: number) => {
+export const closest = (array: any[], n: number): number => {
   let minI = 0;
   let maxI = array.length - 1;
 
@@ -55,10 +55,8 @@ export const valueToPosition = (
   offset: number
 ): number => {
   const index = closest(valuesArray, value);
-
   const arrLength = valuesArray.length - 1;
   const validIndex = index === -1 ? arrLength : index;
-
   return (sliderLength * validIndex) / arrLength + offset;
 };
 
@@ -75,7 +73,7 @@ export const positionToValue = (
   return valuesArray[Math.round(index)];
 };
 
-const roundFun = (value: number, n: number) => {
+export const roundFun = (value: number, n: number): number => {
   return Math.round(value * Math.pow(10, n)) / Math.pow(10, n);
 };
 

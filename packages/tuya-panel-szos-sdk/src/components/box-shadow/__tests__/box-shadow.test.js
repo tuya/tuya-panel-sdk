@@ -1,7 +1,7 @@
 /*
  * @Author: 豆芽(douya.ye@tuya.com)
  * @Date: 2021-11-16 10:51:16
- * @LastEditTime: 2021-11-16 14:34:35
+ * @LastEditTime: 2021-11-29 20:18:10
  * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description: 测试
  * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/box-shadow/__tests__/box-shadow.test.js
@@ -9,7 +9,7 @@
 
 import React from 'react';
 import { View } from 'react-native';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import BoxShow from '../index';
 
 describe('BoxShow components', () => {

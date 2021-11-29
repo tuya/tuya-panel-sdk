@@ -67,6 +67,42 @@ exports[`BoxShow components kj 1`] = `
 </View>
 `;
 
+exports[`BoxShow components render width children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
 exports[`BoxShow components render widthAll 1`] = `
 <View
   style={
@@ -201,5 +237,271 @@ exports[`BoxShow components render widthStyle 1`] = `
   <Text>
     我是children
   </Text>
+</View>
+`;
+
+exports[`ImageAnimate default render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ImageAnimate render width children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthAll 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthChildren 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthSource 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ImageAnimate render widthStyle 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate use effect 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`hooks should render RecipeItem components if recipes.length > 0 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "marginRight": 3,
+        },
+      ]
+    }
+  />
 </View>
 `;
