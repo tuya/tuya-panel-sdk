@@ -41,11 +41,12 @@ export default class PercentSlider extends Component<Props> {
   private thumbPosition = 0;
 
   formatPercent(value: number) {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const { formatPercent, min = 10, max = 1000, showMin = min, showMax = max } = this.props;
     if (typeof formatPercent === 'function') {
       return formatPercent(value);
     }
-    return Math.round(((value - showMin) * 100) / (showMax - showMin));
+    return Math.round(((100 - showMin) * (value - min)) / (max - min) + showMin);
   }
 
   handleThumbChange = (x: number, value: number) => {

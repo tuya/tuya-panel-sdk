@@ -13,6 +13,7 @@
   "dependencies": {
     "ahooks": "^2.10.11",
     "color": "0.11.4",
+    "d3-interpolate": "^1.4.0",
     "lodash": "^4.17.11",
     "moment": "^2.29.1",
     "prop-types": "^15.6.2",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@types/color": "0.12.1",
+    "@types/d3-interpolate": "^1.4.0",
     "@types/lodash": "^4.14.149",
     "@types/react": "^16.9.17",
     "@types/react-native": "^0.60.26",
