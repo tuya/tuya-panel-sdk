@@ -1325,7 +1325,7 @@ export interface CurtainsAnimateProps {
   curtainsImageStyle?: StyleProp<ImageStyle>;
 }
 export const CurtainsAnimate: React.ComponentClass<CurtainsAnimateProps>;
-export interface RollerAnimate {
+export interface RollerAnimateProps {
   /**
    * @language zh-CN
    * @description 组件样式
@@ -1336,7 +1336,7 @@ export interface RollerAnimate {
    * @description Component style
    * @defaultValue null
    */
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 卷帘宽度
@@ -1347,7 +1347,7 @@ export interface RollerAnimate {
    * @description Roller blind width
    * @defaultValue 250
    */
-  width: number;
+  width?: number;
   /**
    * @language zh-CN
    * @description 卷帘高度
@@ -1358,7 +1358,7 @@ export interface RollerAnimate {
    * @description Roller blind height
    * @defaultValue 280
    */
-  height: number;
+  height?: number;
   /**
    * @language zh-CN
    * @description 初始位置百分比，值0~1
@@ -1369,7 +1369,7 @@ export interface RollerAnimate {
    * @description Percentage of initial position, value 0~1
    * @defaultValue 0.5
    */
-  initPercent: number;
+  initPercent?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮宽度
@@ -1380,7 +1380,7 @@ export interface RollerAnimate {
    * @description Slide button width
    * @defaultValue 40
    */
-  buttonWidth: number;
+  buttonWidth?: number;
   /**
    * @language zh-CN
    * @description 动画状态，共三种：'close'，'open'，'pause'
@@ -1391,7 +1391,7 @@ export interface RollerAnimate {
    * @description There are three animation states: 'close', 'open', 'pause'
    * @defaultValue null
    */
-  type: AnimateType;
+  type?: AnimateType;
   /**
    * @language zh-CN
    * @description 卷帘位置
@@ -1402,7 +1402,7 @@ export interface RollerAnimate {
    * @description Roller blind position
    * @defaultValue {top: cx(26),left: cx(20)}
    */
-  rollerPosition: RollerPosition;
+  rollerPosition?: RollerPosition;
   /**
    * @language zh-CN
    * @description 动画总时间，以秒为单位
@@ -1413,7 +1413,7 @@ export interface RollerAnimate {
    * @description Total animation time in seconds
    * @defaultValue 8
    */
-  animateTime: number;
+  animateTime?: number;
   /**
    * @language zh-CN
    * @description 卷帘背景图片
@@ -1424,7 +1424,7 @@ export interface RollerAnimate {
    * @description Shutter background image
    * @defaultValue null
    */
-  bgImage: number;
+  bgImage?: number;
   /**
    * @language zh-CN
    * @description 卷帘背景图片样式
@@ -1435,7 +1435,7 @@ export interface RollerAnimate {
    * @description Shutter background picture style
    * @defaultValue null
    */
-  bgImageStyle: StyleProp<ImageStyle>;
+  bgImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 窗帘卷轴图片
@@ -1446,7 +1446,7 @@ export interface RollerAnimate {
    * @description Curtain reel pictures
    * @defaultValue null
    */
-  rollerImage: number;
+  rollerImage?: number;
   /**
    * @language zh-CN
    * @description 窗帘卷轴View样式
@@ -1457,7 +1457,7 @@ export interface RollerAnimate {
    * @description Curtain reel view style
    * @defaultValue null
    */
-  rollerStyle: StyleProp<ViewStyle>;
+  rollerStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 窗帘卷轴Image样式
@@ -1468,7 +1468,7 @@ export interface RollerAnimate {
    * @description Curtain reel Image style
    * @defaultValue null
    */
-  rollerImageStyle: StyleProp<ImageStyle>;
+  rollerImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮图片
@@ -1479,7 +1479,7 @@ export interface RollerAnimate {
    * @description Slide button image
    * @defaultValue null
    */
-  buttonImage: number;
+  buttonImage?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮View样式
@@ -1490,7 +1490,7 @@ export interface RollerAnimate {
    * @description Slide button view style
    * @defaultValue null
    */
-  buttonStyle: StyleProp<ViewStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮Image样式
@@ -1501,7 +1501,7 @@ export interface RollerAnimate {
    * @description Slide button Image style
    * @defaultValue null
    */
-  buttonImageStyle: StyleProp<ImageStyle>;
+  buttonImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 动画状态执行回调
@@ -1512,9 +1512,20 @@ export interface RollerAnimate {
    * @description Animation state execution callback
    * @defaultValue null
    */
-  onChange: (type: AnimateType) => void;
+  onChange?: (type: AnimateType, percent: number) => void;
+  /**
+   * @language zh-CN
+   * @description 动画状态执行回调
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Animation state execution callback
+   * @defaultValue null
+   */
+  onMove?: (percent: number) => void;
 }
-export const Roller: React.ComponentClass<RollerAnimate>;
+export const RollerAnimate: React.ComponentClass<RollerAnimateProps>;
 export interface PusherAnimate {
   /**
    * @language zh-CN
