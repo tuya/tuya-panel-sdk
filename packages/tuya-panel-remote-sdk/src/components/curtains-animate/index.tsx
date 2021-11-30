@@ -17,7 +17,6 @@ import { MainProps, MainState, PositionType } from './interface';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-/* eslint-disable react/prefer-stateless-function */
 class Index extends React.Component<MainProps, MainState> {
   static defaultProps = {
     style: null,
@@ -27,6 +26,7 @@ class Index extends React.Component<MainProps, MainState> {
     buttonWidth: cx(40),
     type: null,
     onChange: null,
+    onMove: null,
     animateTime: 8,
     rollerImage: null,
     rollerStyle: null,
@@ -135,9 +135,9 @@ class Index extends React.Component<MainProps, MainState> {
           percent,
         });
         if (percent > this.state.percent) {
-          onChange && onChange('close');
+          onChange && onChange('close', percent);
         } else if (percent < this.state.percent) {
-          onChange && onChange('open');
+          onChange && onChange('open', percent);
         }
       },
       // 另一个组件已经成为了新的响应者，所以当前手势将被取消
@@ -176,9 +176,9 @@ class Index extends React.Component<MainProps, MainState> {
           percent,
         });
         if (percent > this.state.percent) {
-          onChange && onChange('close');
+          onChange && onChange('close', percent);
         } else if (percent < this.state.percent) {
-          onChange && onChange('open');
+          onChange && onChange('open', percent);
         }
       },
       // eslint-disable-next-line @typescript-eslint/no-empty-function
@@ -273,8 +273,10 @@ class Index extends React.Component<MainProps, MainState> {
   };
 
   move = (gestureState: PanResponderGestureState, type: PositionType) => {
+    const { onMove } = this.props;
     const percent = this.getPercent(gestureState, type);
     this.setButtonPosition(percent);
+    onMove && onMove(percent);
   };
 
   animate = (percent: number, diff: number) => {

@@ -45,7 +45,12 @@ export interface MainProps {
   /**
    * 手势滑动释放执行回调
    */
-  onChange: (type: AnimateType) => void;
+  onChange: (type: AnimateType, percent: number) => void;
+  /**
+   * 手势滑动执行回调
+   */
+  onMove: (percent: number) => void;
+  /**
   /**
    * 窗帘卷轴图片
    */
