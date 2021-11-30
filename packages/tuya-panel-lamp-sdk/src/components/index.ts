@@ -39,3 +39,5 @@ export { default as WeekGroup } from './week-group';
 export { default as MusicBar } from './music/music-bar';
 
 export { default as AppMusicCard } from './music/music-card/app-music-card';
+
+export { default as ConicalGradient } from './gradient/conical-gradient';

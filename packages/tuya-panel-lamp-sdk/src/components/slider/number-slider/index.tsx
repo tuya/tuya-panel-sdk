@@ -270,14 +270,16 @@ export default class NumberSlider extends React.Component<NumberSliderProps, Num
 
   setAnimationValue(value: number, isSliding = false, noAnimation = false) {
     if (!noAnimation && this.props.showAnimation) {
-      this.animate.stopAnimation();
-      Animated.timing(this.animate, {
-        toValue: value,
-        duration: isSliding
-          ? 32
-          : Math.round((300 * Math.abs(value - this.valueLength)) / this.maxLength),
-        easing: Easing.linear,
-      }).start();
+      if (value !== this.valueLength) {
+        this.animate.stopAnimation();
+        Animated.timing(this.animate, {
+          toValue: value,
+          duration: isSliding
+            ? 32
+            : Math.round((300 * Math.abs(value - this.valueLength)) / this.maxLength),
+          easing: Easing.linear,
+        }).start();
+      }
     } else {
       this.animate.setValue(value);
     }
@@ -335,7 +337,7 @@ export default class NumberSlider extends React.Component<NumberSliderProps, Num
 
     const value = this.coorToValue(currentLength);
     currentLength = this.valueToCoor(value);
-    this.setAnimationValue(currentLength, !isEnd);
+    this.setAnimationValue(currentLength, !isEnd, !isEnd);
 
     // value 可以浮点数，此处使用差来判断是否不相等
     if (Math.abs(value - this.tempValue) >= 0.000001) {
@@ -459,7 +461,7 @@ export default class NumberSlider extends React.Component<NumberSliderProps, Num
     this.handleLength(this.props);
     if (!this.locked && (trackLength !== this.trackLength || trackWidth !== this.trackWidth)) {
       const valueLength = this.valueToCoor(this.state.value);
-      this.setAnimationValue(valueLength);
+      this.setAnimationValue(valueLength, false, true);
       this.valueLength = valueLength;
     }
 

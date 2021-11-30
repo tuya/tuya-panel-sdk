@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import { Svg, Path, Defs, LinearGradient, Stop } from 'react-native-svg';
 import {
@@ -106,6 +108,10 @@ const defaultProps = {
    * 自定义滑块
    */
   renderThumb: null,
+  /**
+   * 自定义轨道
+   */
+  renderTrack: null,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -123,6 +129,10 @@ type IProps = {
    * 渲染thumb
    */
   renderThumb?: () => React.ReactNode;
+  /**
+   * 渲染自定义轨道
+   */
+  renderTrack?: () => React.ReactNode;
 } & DefaultProps;
 
 export default class CirclePicker extends React.Component<IProps> {
@@ -415,21 +425,26 @@ export default class CirclePicker extends React.Component<IProps> {
       disabled,
       showThumb,
       renderThumb,
+      renderTrack,
     } = this.props;
     const { startDeg, endDeg, width, height, thumbX, thumbY } = this;
     return (
       <View style={[styles.box, wrapperStyle]}>
-        <Svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-          <Defs>
-            <LinearGradient id="linear" x1="0%" x2="100%" y1="0%" y2="0%">
-              {stopColors.map((item, index) => (
-                // eslint-disable-next-line react/no-array-index-key
-                <Stop key={index} {...item} />
-              ))}
-            </LinearGradient>
-          </Defs>
-          <Path d={this.getPath(startDeg, endDeg)} fill="url(#linear)" />
-        </Svg>
+        {typeof renderTrack === 'function' ? (
+          renderTrack()
+        ) : (
+          <Svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+            <Defs>
+              <LinearGradient id="linear" x1="0%" x2="100%" y1="0%" y2="0%">
+                {stopColors.map((item, index) => (
+                  // eslint-disable-next-line react/no-array-index-key
+                  <Stop key={index} {...item} />
+                ))}
+              </LinearGradient>
+            </Defs>
+            <Path d={this.getPath(startDeg, endDeg)} fill="url(#linear)" />
+          </Svg>
+        )}
         {showThumb && (
           <View
             ref={ref => {
