@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { StyleProp, ViewStyle, ImageStyle } from 'react-native';
 
+export interface LooseObj {
+  [key: string]: string;
+}
 export interface PressKeyProps {
   /**
    * @language zh-CN
@@ -1658,3 +1661,107 @@ export interface PusherAnimate {
   windowImageStyle: StyleProp<ImageStyle>;
 }
 export const Pusher: React.ComponentClass<PusherAnimate>;
+
+export const LightAnimate: React.ComponentClass<LightAnimateProps>;
+
+export interface LightAnimateProps {
+  /**
+   * @language zh-CN
+   * @description 灯光类型
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description light type
+   * @defaultValue null
+   */
+  type?: string;
+  /**
+   * @language zh-CN
+   * @description 灯图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description light picture
+   * @defaultValue null
+   */
+  lightImg?: number;
+  /**
+   * @language zh-CN
+   * @description 渐变背景高度
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description gradient height
+   * @defaultValue null
+   */
+  gradientHeight?: number;
+  /**
+   * @language zh-CN
+   * @description 渐变背景宽度
+   * @defaultValue cx(240)
+   */
+  /**
+   * @language en-US
+   * @description gradient width
+   * @defaultValue cx(240)
+   */
+  gradientWidth?: number;
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue screenWidth
+   */
+  /**
+   * @language en-US
+   * @description Component style
+   * @defaultValue screenWidth
+   */
+  style?: ViewProps;
+  /**
+   * @language zh-CN
+   * @description 灯图片样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Light picture style
+   * @defaultValue null
+   */
+  lightImgStyle?: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 动画持续时间
+   * @defaultValue 1200
+   */
+  /**
+   * @language en-US
+   * @description animate duration
+   * @defaultValue 1200
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 颜色配置
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description color config
+   * @defaultValue null
+   */
+  config?: LooseObj;
+  /**
+   * @language zh-CN
+   * @description 动画结束回掉
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description animate ending callback
+   * @defaultValue null
+   */
+  onRelease?: () => any;
+}
