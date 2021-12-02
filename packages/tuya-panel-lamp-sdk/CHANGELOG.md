@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.3.0...@tuya/tuya-panel-lamp-sdk@1.4.0) (2021-12-02)
+
+
+### Features
+
+* add ConicalGradient and fix slider ([#124](https://github.com/tuya/tuya-panel-sdk/issues/124)) ([48e0f9d](https://github.com/tuya/tuya-panel-sdk/commit/48e0f9d0ab9b2a9d2c8b7629bb13637cea339ac6))
+
+
+
+
+
 # [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.2.2...@tuya/tuya-panel-lamp-sdk@1.3.0) (2021-10-12)
 
 
