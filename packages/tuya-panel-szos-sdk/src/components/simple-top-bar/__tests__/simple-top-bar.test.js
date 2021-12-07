@@ -29,12 +29,7 @@ describe('SimpleTopBar components', () => {
   });
 
   it('render touch', () => {
-    const props = {
-      rightActionFunc: mockCallBack,
-      leftActionFunc: mockCallBack,
-    };
-    const mockCallBack = jest.fn();
-    const wrapper = shallow(<SimpleTopBar {...props} />);
+    const wrapper = shallow(<SimpleTopBar />);
     const wrapperHandle = wrapper.children().at(0);
     const wrapperHandle2 = wrapper.children().at(2);
     wrapperHandle.simulate('press');

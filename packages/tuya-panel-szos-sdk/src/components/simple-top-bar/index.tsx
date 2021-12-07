@@ -3,11 +3,10 @@
 import PropTypes from 'prop-types';
 import React, { FC } from 'react';
 import { StyleSheet, StyleProp, ViewStyle, ViewPropTypes, TextStyle } from 'react-native';
-import { TopBar, Utils, IconFont } from 'tuya-panel-kit';
+import { TYSdk, TopBar, Utils, IconFont } from 'tuya-panel-kit';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-// const TYNative = TYSdk.native;
 type IProps = {
   /*
    * topbar中间名字
@@ -58,24 +57,17 @@ const MyTopBar: FC<IProps> = ({
   titleStyle,
   wrapStyle,
 }) => {
-  const leftAct = () => {
-    leftActionFunc ? leftActionFunc() : '';
-  };
-  const rightAct = () => {
-    rightActionFunc ? rightActionFunc() : '';
-  };
-
   return (
     <TopBar.Container style={styles.topbar} contentStyle={wrapStyle}>
       <TopBar.Action
         style={leftStyle}
-        onPress={leftAct}
+        onPress={leftActionFunc}
         children={leftNode || <IconFont name="backIos" />}
       />
       <TopBar.Content title={title} titleStyle={titleStyle} />
       <TopBar.Action
         style={rightStyle}
-        onPress={rightAct}
+        onPress={rightActionFunc}
         children={rightNode || <IconFont name="pen" />}
       />
     </TopBar.Container>
@@ -95,8 +87,8 @@ MyTopBar.propTypes = {
 };
 
 MyTopBar.defaultProps = {
-  leftActionFunc: undefined,
-  rightActionFunc: undefined,
+  leftActionFunc: () => {},
+  rightActionFunc: () => {},
   rightNode: undefined,
   leftNode: undefined,
   title: '',
