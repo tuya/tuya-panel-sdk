@@ -4,9 +4,33 @@ import { Utils } from 'tuya-panel-kit';
 const { convertX: cx } = Utils.RatioUtils;
 
 const styles = StyleSheet.create({
+  btn: {
+    alignItems: 'center',
+    borderColor: '#E5E5E5',
+    borderTopWidth: StyleSheet.hairlineWidth,
+    height: cx(60),
+    justifyContent: 'center',
+    width: '100%',
+  },
+  btnContainer: {
+    justifyContent: 'flex-end',
+    width: '100%',
+  },
+  btnText: {
+    color: '#22242C',
+    fontSize: 16,
+    fontWeight: 'bold',
+    lineHeight: cx(22),
+    textAlign: 'center',
+  },
   centerText: {
     fontSize: cx(20),
     position: 'absolute',
+  },
+  content: {
+    alignItems: 'center',
+    paddingHorizontal: cx(26),
+    paddingTop: cx(30),
   },
   desc: {
     color: '#999',
@@ -18,8 +42,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#FFF',
     borderRadius: cx(16),
-    paddingHorizontal: cx(26),
-    paddingVertical: cx(30),
+    justifyContent: 'space-between',
+    overflow: 'hidden',
   },
   progressBar: {
     height: cx(130),

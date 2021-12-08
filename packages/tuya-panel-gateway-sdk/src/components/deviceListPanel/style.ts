@@ -5,7 +5,6 @@ const { convertX: cx } = Utils.RatioUtils;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'lightblue',
     flex: 1,
   },
   iconContainer: {
