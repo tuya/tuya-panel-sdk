@@ -8,18 +8,21 @@ import DoubleKey from './DoubleKey';
 import CurtainsAnimate from './CurtainsAnimate';
 import PusherAnimate from './PusherAnimate';
 import RollerAnimate from './RollerAnimate';
+import LightAnimate from './LightAnimate';
 
 export default class SweepRobotCategoryScene extends Component {
+  get data() {
+    return produceRouterDatas(subRouters.filter(r => /^Remote\.[^.]+$/.test(r.id)));
+  }
+
   static CircleHandle = CircleHandle;
   static PressKey = PressKey;
   static DoubleKey = DoubleKey;
   static CurtainsAnimate = CurtainsAnimate;
   static PusherAnimate = PusherAnimate;
   static RollerAnimate = RollerAnimate;
-
-  get data() {
-    return produceRouterDatas(subRouters.filter(r => /^Remote\.[^.]+$/.test(r.id)));
-  }
+  static RollerAnimate = RollerAnimate;
+  static LightAnimate = LightAnimate;
 
   render() {
     return (

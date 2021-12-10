@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { StyleProp, ViewStyle, ImageStyle } from 'react-native';
 
+export interface LooseObj {
+  [key: string]: string;
+}
 export interface PressKeyProps {
   /**
    * @language zh-CN
@@ -1082,7 +1085,7 @@ export interface DoubleKeyProps {
 }
 export const DoubleKey: React.ComponentClass<DoubleKeyProps>;
 
-export interface CurtainsAnimate {
+export interface CurtainsAnimateProps {
   /**
    * @language zh-CN
    * @description 组件样式
@@ -1093,7 +1096,7 @@ export interface CurtainsAnimate {
    * @description Component style?
    * @defaultValue null
    */
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 窗帘宽度
@@ -1104,7 +1107,7 @@ export interface CurtainsAnimate {
    * @description Curtains width?
    * @defaultValue 280
    */
-  width: number;
+  width?: number;
   /**
    * @language zh-CN
    * @description 窗帘高度
@@ -1115,7 +1118,7 @@ export interface CurtainsAnimate {
    * @description Curtains height?
    * @defaultValue 280
    */
-  height: number;
+  height?: number;
   /**
    * @language zh-CN
    * @description 初始开合百分比，值0~1
@@ -1126,7 +1129,7 @@ export interface CurtainsAnimate {
    * @description Initial opening and closing percentage, value 0 ~ 1
    * @defaultValue 0.3
    */
-  initPercent: number;
+  initPercent?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮宽度
@@ -1137,7 +1140,7 @@ export interface CurtainsAnimate {
    * @description Slide button width
    * @defaultValue 40
    */
-  buttonWidth: number;
+  buttonWidth?: number;
   /**
    * @language zh-CN
    * @description 动画总时间，以秒为单位
@@ -1148,7 +1151,7 @@ export interface CurtainsAnimate {
    * @description Total animation time in seconds
    * @defaultValue 8
    */
-  animateTime: number;
+  animateTime?: number;
   /**
    * @language zh-CN
    * @description 动画状态，共三种：'close'，'open'，'pause'
@@ -1159,7 +1162,7 @@ export interface CurtainsAnimate {
    * @description There are three animation states: 'close', 'open', 'pause'
    * @defaultValue null
    */
-  type: AnimateType | null;
+  type?: AnimateType | null;
   /**
    * @language zh-CN
    * @description 窗帘位置
@@ -1176,7 +1179,7 @@ export interface CurtainsAnimate {
       left: cx(8),
     },
    */
-  curtainsPosition: CurtainsPosition;
+  curtainsPosition?: CurtainsPosition;
   /**
    * @language zh-CN
    * @description 手势滑动释放执行回调
@@ -1187,7 +1190,18 @@ export interface CurtainsAnimate {
    * @description Gesture sliding release execution callback
    * @defaultValue null
    */
-  onChange: (type: AnimateType) => void;
+  onChange?: (type: AnimateType, percent: number) => void;
+  /**
+   * @language zh-CN
+   * @description 手势滑动执行回调
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Gesture sliding execution callback
+   * @defaultValue null
+   */
+  onMove?: (percent: number) => void;
   /**
    * @language zh-CN
    * @description 窗帘卷轴图片
@@ -1198,7 +1212,7 @@ export interface CurtainsAnimate {
    * @description Curtain scroll picture
    * @defaultValue null
    */
-  rollerImage: number;
+  rollerImage?: number;
   /**
    * @language zh-CN
    * @description 窗帘卷轴View样式
@@ -1209,7 +1223,7 @@ export interface CurtainsAnimate {
    * @description Curtain scroll style
    * @defaultValue null
    */
-  rollerStyle: StyleProp<ViewStyle>;
+  rollerStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 窗帘卷轴Image样式
@@ -1220,7 +1234,7 @@ export interface CurtainsAnimate {
    * @description Curtain scroll image style
    * @defaultValue null
    */
-  rollerImageStyle: StyleProp<ImageStyle>;
+  rollerImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮图片
@@ -1231,7 +1245,7 @@ export interface CurtainsAnimate {
    * @description Slide button picture
    * @defaultValue null
    */
-  buttonImage: number;
+  buttonImage?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮View样式
@@ -1242,7 +1256,7 @@ export interface CurtainsAnimate {
    * @description Slide button style
    * @defaultValue null
    */
-  buttonStyle: StyleProp<ViewStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮Image样式
@@ -1253,7 +1267,7 @@ export interface CurtainsAnimate {
    * @description Slide button image style
    * @defaultValue null
    */
-  buttonImageStyle: StyleProp<ImageStyle>;
+  buttonImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮位置误差
@@ -1264,7 +1278,7 @@ export interface CurtainsAnimate {
    * @description Position error of sliding button
    * @defaultValue 0
    */
-  buttonPositionErrorValue: number;
+  buttonPositionErrorValue?: number;
   /**
    * @language zh-CN
    * @description 窗帘左帘图片
@@ -1275,7 +1289,7 @@ export interface CurtainsAnimate {
    * @description Curtain left curtain picture
    * @defaultValue null
    */
-  curtainsLeftImage: number;
+  curtainsLeftImage?: number;
   /**
    * @language zh-CN
    * @description 窗帘右帘图片
@@ -1286,7 +1300,7 @@ export interface CurtainsAnimate {
    * @description Curtain right curtain picture
    * @defaultValue null
    */
-  curtainsRightImage: number;
+  curtainsRightImage?: number;
   /**
    * @language zh-CN
    * @description 窗帘View样式
@@ -1297,7 +1311,7 @@ export interface CurtainsAnimate {
    * @description Curtain view style
    * @defaultValue null
    */
-  curtainsStyle: StyleProp<ViewStyle>;
+  curtainsStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 窗帘Image样式
@@ -1308,10 +1322,10 @@ export interface CurtainsAnimate {
    * @description Curtain image style
    * @defaultValue null
    */
-  curtainsImageStyle: StyleProp<ImageStyle>;
+  curtainsImageStyle?: StyleProp<ImageStyle>;
 }
-export const Curtains: React.ComponentClass<CurtainsAnimate>;
-export interface RollerAnimate {
+export const CurtainsAnimate: React.ComponentClass<CurtainsAnimateProps>;
+export interface RollerAnimateProps {
   /**
    * @language zh-CN
    * @description 组件样式
@@ -1322,7 +1336,7 @@ export interface RollerAnimate {
    * @description Component style
    * @defaultValue null
    */
-  style: StyleProp<ViewStyle>;
+  style?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 卷帘宽度
@@ -1333,7 +1347,7 @@ export interface RollerAnimate {
    * @description Roller blind width
    * @defaultValue 250
    */
-  width: number;
+  width?: number;
   /**
    * @language zh-CN
    * @description 卷帘高度
@@ -1344,7 +1358,7 @@ export interface RollerAnimate {
    * @description Roller blind height
    * @defaultValue 280
    */
-  height: number;
+  height?: number;
   /**
    * @language zh-CN
    * @description 初始位置百分比，值0~1
@@ -1355,7 +1369,7 @@ export interface RollerAnimate {
    * @description Percentage of initial position, value 0~1
    * @defaultValue 0.5
    */
-  initPercent: number;
+  initPercent?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮宽度
@@ -1366,7 +1380,7 @@ export interface RollerAnimate {
    * @description Slide button width
    * @defaultValue 40
    */
-  buttonWidth: number;
+  buttonWidth?: number;
   /**
    * @language zh-CN
    * @description 动画状态，共三种：'close'，'open'，'pause'
@@ -1377,7 +1391,7 @@ export interface RollerAnimate {
    * @description There are three animation states: 'close', 'open', 'pause'
    * @defaultValue null
    */
-  type: AnimateType;
+  type?: AnimateType;
   /**
    * @language zh-CN
    * @description 卷帘位置
@@ -1388,7 +1402,7 @@ export interface RollerAnimate {
    * @description Roller blind position
    * @defaultValue {top: cx(26),left: cx(20)}
    */
-  rollerPosition: RollerPosition;
+  rollerPosition?: RollerPosition;
   /**
    * @language zh-CN
    * @description 动画总时间，以秒为单位
@@ -1399,7 +1413,7 @@ export interface RollerAnimate {
    * @description Total animation time in seconds
    * @defaultValue 8
    */
-  animateTime: number;
+  animateTime?: number;
   /**
    * @language zh-CN
    * @description 卷帘背景图片
@@ -1410,7 +1424,7 @@ export interface RollerAnimate {
    * @description Shutter background image
    * @defaultValue null
    */
-  bgImage: number;
+  bgImage?: number;
   /**
    * @language zh-CN
    * @description 卷帘背景图片样式
@@ -1421,7 +1435,7 @@ export interface RollerAnimate {
    * @description Shutter background picture style
    * @defaultValue null
    */
-  bgImageStyle: StyleProp<ImageStyle>;
+  bgImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 窗帘卷轴图片
@@ -1432,7 +1446,7 @@ export interface RollerAnimate {
    * @description Curtain reel pictures
    * @defaultValue null
    */
-  rollerImage: number;
+  rollerImage?: number;
   /**
    * @language zh-CN
    * @description 窗帘卷轴View样式
@@ -1443,7 +1457,7 @@ export interface RollerAnimate {
    * @description Curtain reel view style
    * @defaultValue null
    */
-  rollerStyle: StyleProp<ViewStyle>;
+  rollerStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 窗帘卷轴Image样式
@@ -1454,7 +1468,7 @@ export interface RollerAnimate {
    * @description Curtain reel Image style
    * @defaultValue null
    */
-  rollerImageStyle: StyleProp<ImageStyle>;
+  rollerImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮图片
@@ -1465,7 +1479,7 @@ export interface RollerAnimate {
    * @description Slide button image
    * @defaultValue null
    */
-  buttonImage: number;
+  buttonImage?: number;
   /**
    * @language zh-CN
    * @description 滑动按钮View样式
@@ -1476,7 +1490,7 @@ export interface RollerAnimate {
    * @description Slide button view style
    * @defaultValue null
    */
-  buttonStyle: StyleProp<ViewStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
   /**
    * @language zh-CN
    * @description 滑动按钮Image样式
@@ -1487,7 +1501,7 @@ export interface RollerAnimate {
    * @description Slide button Image style
    * @defaultValue null
    */
-  buttonImageStyle: StyleProp<ImageStyle>;
+  buttonImageStyle?: StyleProp<ImageStyle>;
   /**
    * @language zh-CN
    * @description 动画状态执行回调
@@ -1498,9 +1512,20 @@ export interface RollerAnimate {
    * @description Animation state execution callback
    * @defaultValue null
    */
-  onChange: (type: AnimateType) => void;
+  onChange?: (type: AnimateType, percent: number) => void;
+  /**
+   * @language zh-CN
+   * @description 动画状态执行回调
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Animation state execution callback
+   * @defaultValue null
+   */
+  onMove?: (percent: number) => void;
 }
-export const Roller: React.ComponentClass<RollerAnimate>;
+export const RollerAnimate: React.ComponentClass<RollerAnimateProps>;
 export interface PusherAnimate {
   /**
    * @language zh-CN
@@ -1658,3 +1683,107 @@ export interface PusherAnimate {
   windowImageStyle: StyleProp<ImageStyle>;
 }
 export const Pusher: React.ComponentClass<PusherAnimate>;
+
+export const LightAnimate: React.ComponentClass<LightAnimateProps>;
+
+export interface LightAnimateProps {
+  /**
+   * @language zh-CN
+   * @description 灯光类型
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description light type
+   * @defaultValue null
+   */
+  type?: string;
+  /**
+   * @language zh-CN
+   * @description 灯图片
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description light picture
+   * @defaultValue null
+   */
+  lightImg?: number;
+  /**
+   * @language zh-CN
+   * @description 渐变背景高度
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description gradient height
+   * @defaultValue null
+   */
+  gradientHeight?: number;
+  /**
+   * @language zh-CN
+   * @description 渐变背景宽度
+   * @defaultValue cx(240)
+   */
+  /**
+   * @language en-US
+   * @description gradient width
+   * @defaultValue cx(240)
+   */
+  gradientWidth?: number;
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue screenWidth
+   */
+  /**
+   * @language en-US
+   * @description Component style
+   * @defaultValue screenWidth
+   */
+  style?: ViewProps;
+  /**
+   * @language zh-CN
+   * @description 灯图片样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Light picture style
+   * @defaultValue null
+   */
+  lightImgStyle?: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 动画持续时间
+   * @defaultValue 1200
+   */
+  /**
+   * @language en-US
+   * @description animate duration
+   * @defaultValue 1200
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 颜色配置
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description color config
+   * @defaultValue null
+   */
+  config?: LooseObj;
+  /**
+   * @language zh-CN
+   * @description 动画结束回掉
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description animate ending callback
+   * @defaultValue null
+   */
+  onRelease?: () => any;
+}
