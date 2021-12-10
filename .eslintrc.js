@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['literal-check'],
   rules: {
     'react/display-name': 1,
+    '@typescript-eslint/no-empty-function': 0,
     'literal-check/literal-check': [
       2,
       ['tuya.'],

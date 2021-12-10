@@ -1,7 +1,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import React, { Component } from 'react';
 import { View, ScrollView } from 'react-native';
-import { Utils } from 'tuya-panel-kit';
+import { TYText, Utils } from 'tuya-panel-kit';
 import { PressKey, RollerAnimate } from '@tuya/tuya-panel-remote-sdk';
 import { SectionTitle, SectionMain } from './styled';
 import Res from './res';
@@ -13,6 +13,7 @@ const { convertX: cx } = Utils.RatioUtils;
 export default class Index extends Component {
   state = {
     type: null,
+    percent: 0,
   };
 
   changeType = type => {
@@ -39,8 +40,13 @@ export default class Index extends Component {
               rollerImage={roller}
               buttonImage={button}
               bgImage={background}
+              onMove={percent => this.setState({ percent })}
               type={type}
             />
+          </SectionMain>
+          <SectionTitle>onMove事件</SectionTitle>
+          <SectionMain>
+            <TYText text={`百分比:${this.state.percent}`} />
           </SectionMain>
         </View>
       </ScrollView>
