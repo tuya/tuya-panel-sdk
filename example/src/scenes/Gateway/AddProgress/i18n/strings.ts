@@ -9,7 +9,9 @@ export default {
     changePromptAndStyle: 'Change prompt and style',
     changeProgressView: 'Change progress view color',
     changeIsCustomProgressChange: 'Change to custom progress change',
+    changeShowButton: 'Show button',
     backInitialState: 'Back to the initial state',
+    progressFailNum: 'Another 4 device addition failed',
   },
   zh: {
     title: '添加设备',
@@ -20,6 +22,8 @@ export default {
     changePromptAndStyle: '修改描述文字和样式',
     changeProgressView: '修改进度圆环颜色',
     changeIsCustomProgressChange: '改为自定义进度变化',
+    changeShowButton: '显示底部按钮',
     backInitialState: '回到初始状态',
+    progressFailNum: '另有4个设备可能添加失败',
   },
 };
