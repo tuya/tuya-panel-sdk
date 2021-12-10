@@ -1,33 +1,25 @@
-import React, { FC, useState, useRef } from 'react';
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+import React, { FC, useState, useRef, useMemo, useCallback } from 'react';
 import {
   View,
   FlatList,
   TouchableOpacity,
   Image,
   Animated,
-  Dimensions,
   PanResponderInstance,
   PanResponder,
+  LayoutChangeEvent,
 } from 'react-native';
-import { TYText, Utils, DevInfo, IconFont, TYSdk, TopBar, TabBar } from 'tuya-panel-kit';
+import { TYText, Utils, IconFont, TYSdk, TopBar, TabBar, Carousel } from 'tuya-panel-kit';
 import styles from './style';
 import { DeviceListPanelProps } from './interface';
 import { getOnlineState } from '../../utils';
 import Shadow from '../shadowBox';
 
-interface ListRef {
-  [key: string]: any;
-}
-
-const { convertX: cx } = Utils.RatioUtils;
-const { height: screenHeight } = Dimensions.get('window');
+const { convertX: cx, winHeight } = Utils.RatioUtils;
 
 // 子设备项的高度
 const deviceItemHeight = Math.floor(cx(120));
-// const highestPosition = TopBar.height;
-// 屏幕中线 下cy(30)处为 默认最大上边距
-// 中线为临界点 超过中线 则为上拉触发 否则弹回
-// 零点以下 cy(50)范围内为下拉边界区 超过则为下拉触发 否则弹回
 
 const pullDownHeight = TopBar.height; // 顶部下拉view取TopBar高度
 const minSpeed = 0.5; // 滑动时自动吸底和吸顶的临界速度
@@ -45,15 +37,22 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
   isShowIconMore,
   initialTab,
   children,
+  panelChildren,
+  panelChildrenHeight,
   ListEmptyComponent,
+  swipeable,
+  isShowPullDown,
+  flatListProps,
+  tabBarProps,
   onIconMorePress,
   onTabChange,
   customRenderItem,
   customRenderTabBar,
   customRenderList,
+  customRenderPullDown,
 }) => {
-  const [tab, setChosenTab] = useState(initialTab || '0');
-  // const [tab, setChosenTab] = useState(initialTab || (tabs && tabs.length) ? tabs[0].key : '0');
+  const [chosenTab, setChosenTab] = useState(initialTab || '0');
+  // const [chosenTab, setChosenTab] = useState(initialTab || (tabs && tabs.length) ? tabs[0].key : '0');
   // 滑块的borderRadius值
   const [radius, setRadius] = useState(borderRadius);
   // 滑块当前顶部位置
@@ -61,8 +60,17 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
   const animatedTop = useRef(new Animated.Value(initialPosition)).current;
   const pullDownTop = useRef(new Animated.Value(-pullDownHeight)).current;
   const releaseTopRef = useRef(initialPosition);
-  const flaListRef = useRef({} as ListRef);
   const contentOffset = useRef(0);
+
+  const [listHeight, setListHeight] = useState(300);
+
+  const panelHeight = useRef(0);
+  const tabsHeight = useRef(0);
+
+  const selectedIndex = useMemo(() => {
+    // @ts-ignore
+    return tabs.findIndex(d => d.key === chosenTab);
+  }, [chosenTab, tabs]);
 
   const listPaddingHorizontal = cx(24);
   // 子设备项的宽度
@@ -88,22 +96,27 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
     toValue: 0,
     duration: 200,
   });
-  // 隐藏topmask
+
+  // 隐藏顶部pull down
   const hidePullDown = Animated.timing(pullDownTop, {
     toValue: -pullDownHeight,
     duration: 150,
   });
+
   const enterItem = (item: any) => {
     TYSdk.native.pushToNextPageWithDeviceId(item.devId);
   };
+
   const onScroll = (event: any) => {
     const { y } = event.nativeEvent.contentOffset;
     contentOffset.current = y;
   };
+
   const pullDown = () => {
     animatedToTop(initialPosition);
     setTimeout(() => hidePullDown.start(), 200);
   };
+
   /**
    * 吸顶和吸底动画
    */
@@ -113,10 +126,10 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
       setReleaseTop(top);
       releaseTopRef.current = top;
 
-      // 滑块到底部后，强制列表滚动到顶部
-      if (contentOffset.current > 0 && top === initialPosition) {
-        flaListRef.current.scrollToOffset(0);
-      }
+      // // 滑块到底部后，强制列表滚动到顶部
+      // if (contentOffset.current > 0 && top === initialPosition) {
+      //   flaListRef.current.scrollToOffset(0);
+      // }
       // 顶部下拉按钮展示逻辑
       if (top === highestPosition) {
         showPullDown.start();
@@ -200,6 +213,7 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
 
     // 吸顶和吸底动画
     animatedToTop(finalTop);
+    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
   };
 
   panResponder = useRef(
@@ -251,8 +265,9 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
       onPanResponderTerminate: onPanResponderRelease,
     })
   ).current;
+
   // 顶部的pull down
-  const renderPullDown = () => {
+  const renderPullDown = useCallback(() => {
     return (
       <Animated.View style={[styles.pullDown, { top: pullDownTop, height: pullDownHeight }]}>
         <TouchableOpacity onPress={pullDown} style={styles.pullDownButton}>
@@ -260,15 +275,20 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
         </TouchableOpacity>
       </Animated.View>
     );
-  };
+  }, [pullDownTop, pullDownHeight]);
+
   // 手势区域
   const renderPanResponder = () => {
     return (
       <Animated.View
         style={[styles.scrollMain, panelStyle, { top: animatedTop, borderRadius: radius }]}
         {...(panResponder && panResponder.panHandlers ? panResponder.panHandlers : {})}
+        onLayout={panResponderOnLayout}
       >
-        <View style={[styles.tabMain, { paddingHorizontal: listPaddingHorizontal }]}>
+        <View
+          style={[styles.tabMain, { paddingHorizontal: listPaddingHorizontal }]}
+          onLayout={tabsOnLayout}
+        >
           <TouchableOpacity
             style={[
               styles.tabMainIcon,
@@ -283,31 +303,70 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
           ) : (
             <TabBar
               tabs={tabs}
-              activeKey={tab}
+              activeKey={chosenTab}
               onChange={handleTabChange}
               type="radio"
               style={[styles.tabBar, tabBarStyle]}
+              {...tabBarProps}
             />
           )}
         </View>
         {typeof customRenderList === 'function' ? customRenderList() : renderDeviceList()}
-        {React.isValidElement(children) && children}
+        {React.isValidElement(panelChildren) && panelChildren}
       </Animated.View>
     );
   };
+
   const handleTabChange = (value: string) => {
     setChosenTab(value);
     typeof onTabChange === 'function' && onTabChange(value);
   };
+
+  const panResponderOnLayout = (e: LayoutChangeEvent) => {
+    const { height } = e.nativeEvent.layout;
+    panelHeight.current = height;
+    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
+  };
+
+  const tabsOnLayout = (e: LayoutChangeEvent) => {
+    const { height } = e.nativeEvent.layout;
+    tabsHeight.current = height;
+    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
+  };
+
+  const handleCarouselChange = (val: number) => {
+    // @ts-ignore
+    handleTabChange(tabs[val].key);
+  };
+
   // 设备列表
   const renderDeviceList = () => {
+    if (!swipeable) {
+      return renderList(1);
+    }
+    return (
+      <Carousel
+        style={{ height: listHeight }}
+        hasDots={false}
+        selectedIndex={selectedIndex}
+        useViewPagerOnAndroid={false}
+        carouselChange={handleCarouselChange}
+      >
+        {tabs.map(d => {
+          // @ts-ignore
+          return renderList(d.key);
+        })}
+      </Carousel>
+    );
+  };
+
+  const renderList = key => {
     return (
       <FlatList
-        ref={(el: FlatList<DevInfo>) => {
-          flaListRef.current = el;
-        }}
+        key={key}
         style={styles.list}
         showsVerticalScrollIndicator={false}
+        initialNumToRender={20}
         numColumns={2}
         contentContainerStyle={styles.listContent}
         columnWrapperStyle={styles.listColumnWrapper}
@@ -317,13 +376,16 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
         renderItem={typeof customRenderItem === 'function' ? customRenderItem : renderItem}
         ListEmptyComponent={ListEmptyComponent}
         scrollEnabled={releaseTop === highestPosition}
+        {...flatListProps}
       />
     );
   };
 
   return (
     <View style={[styles.container, containerStyle]}>
-      {renderPullDown()}
+      {React.isValidElement(children) && children}
+      {isShowPullDown &&
+        (typeof customRenderPullDown === 'function' ? customRenderPullDown() : renderPullDown())}
       {renderPanResponder()}
     </View>
   );
@@ -331,9 +393,12 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
 DeviceListPanel.defaultProps = {
   dataSource: [],
   highestPosition: 0,
-  initialPosition: screenHeight / 2,
+  initialPosition: winHeight / 2,
   autoShrinkDistance: 50,
   isShowIconMore: true,
+  swipeable: false,
+  isShowPullDown: true,
+  panelChildrenHeight: 0,
 };
 
 export default DeviceListPanel;
