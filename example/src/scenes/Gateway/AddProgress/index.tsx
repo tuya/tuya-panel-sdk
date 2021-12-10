@@ -1,6 +1,6 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import { StyleSheet, View, ScrollView } from 'react-native';
-import { Button, Dialog } from 'tuya-panel-kit';
+import { Button, IconFont } from 'tuya-panel-kit';
 import { AddProgress } from '@tuya/tuya-panel-gateway-sdk';
 import Strings from './i18n';
 
@@ -20,6 +20,12 @@ const AddProgressScene: FC = () => {
   const defaultCustomTotal = 10;
   const defaultCustomProgress = 0;
 
+  const defaultShowButton = false;
+
+  const defaultIsFinished = false;
+
+  const [isFinished, setIsFinished] = useState(defaultIsFinished);
+
   const [title, setTitle] = useState(defaultTitle);
   const [titleStyle, setTitleStyle] = useState(defaultTitleStyle);
 
@@ -36,6 +42,15 @@ const AddProgressScene: FC = () => {
   const [customTotal, setCustomTotal] = useState(defaultCustomTotal);
   const [customProgress, setCustomProgress] = useState(defaultCustomProgress);
 
+  const [showButton, setShowButton] = useState(defaultShowButton);
+
+  useEffect(() => {
+    if (isFinished) {
+      setPrompt(Strings.getLang('progressFailNum'));
+      setPromptStyle({ alignItems: 'center' });
+      setShowButton(true);
+    }
+  }, [isFinished]);
   // 修改标题及样式
   const changeTitleAndStyle = () => {
     setTitle(Strings.getLang('titleChanged'));
@@ -67,6 +82,11 @@ const AddProgressScene: FC = () => {
       }
     }, 1000);
   };
+  const changeShowButton = () => {
+    setPrompt(Strings.getLang('progressFailNum'));
+    setPromptStyle({ alignItems: 'center' });
+    setShowButton(true);
+  };
   // 回到初始状态
   const backInitialState = () => {
     clearInterval(interval);
@@ -83,20 +103,25 @@ const AddProgressScene: FC = () => {
 
     setCustomProgress(defaultCustomProgress);
     setCustomTotal(defaultCustomTotal);
+
+    setShowButton(defaultShowButton);
+
+    setIsFinished(defaultIsFinished);
+
     setTimeout(() => {
       setIsCustomProgressChange(defaultIsCustomProgressChange);
     }, 100);
   };
 
   const onFinish = () => {
-    Dialog.alert({
-      title: 'Tips',
-      subTitle: 'Add devices finished',
-      confirmText: 'confirm',
-      onConfirm: (_data, { close }) => {
-        close();
-      },
-    });
+    setIsFinished(true);
+  };
+  const renderProgressCenterView = () => {
+    return (
+      <View style={{ position: 'absolute', alignItems: 'center', justifyContent: 'center' }}>
+        <IconFont name="selectedUnBordered" size={30} color={defaultForeColor} />
+      </View>
+    );
   };
 
   const exampleConfigList = [
@@ -117,6 +142,10 @@ const AddProgressScene: FC = () => {
       onPress: changeProgressView,
     },
     {
+      text: Strings.getLang('changeShowButton'),
+      onPress: changeShowButton,
+    },
+    {
       text: Strings.getLang('backInitialState'),
       onPress: backInitialState,
     },
@@ -124,6 +153,7 @@ const AddProgressScene: FC = () => {
   return (
     <View style={{ flex: 1 }}>
       <AddProgress
+        containerStyle={{ height: 330 }}
         title={title}
         titleStyle={titleStyle}
         prompt={prompt}
@@ -135,6 +165,8 @@ const AddProgressScene: FC = () => {
         isCustomProgressChange={isCustomProgressChange}
         customTotal={customTotal}
         customProgress={customProgress}
+        showButton={showButton}
+        renderProgressCenterView={isFinished ? renderProgressCenterView : undefined}
         onFinish={onFinish}
       />
       <ScrollView>

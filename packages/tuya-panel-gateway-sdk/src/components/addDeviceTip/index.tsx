@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import React, { FC } from 'react';
 import { View, Image, FlatList, TouchableOpacity, Dimensions } from 'react-native';
 import { TYText, Button, Divider, TYSdk, Popup } from 'tuya-panel-kit';
@@ -15,10 +16,11 @@ const AddDeviceTipModal = {
   }: AddDeviceTipModalProps) =>
     Popup.custom(
       {
-        title: <View />,
-        // content: <View style={{ width: 300, borderWidth: 0 }} />,
+        // @ts-ignore
+        showTitleDivider: false,
+        titleWrapperStyle: { display: 'none' },
+        footerWrapperStyle: { display: 'none' },
         content: <AddDeviceTip {...rest} />,
-        footer: <View />,
         wrapperStyle: { alignSelf: 'center', backgroundColor: 'transparent' },
       },
       {
