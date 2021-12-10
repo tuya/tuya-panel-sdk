@@ -40,6 +40,7 @@ class RollerAnimate extends React.Component<MainProps, MainState> {
     buttonImageStyle: null,
     buttonImage: null,
     onChange: null,
+    onMove: null,
     animateTime: 8,
   };
 
@@ -125,9 +126,9 @@ class RollerAnimate extends React.Component<MainProps, MainState> {
         this.animate(percent, percentDiff);
         this.setState({ percent });
         if (percent > this.state.percent) {
-          onChange && onChange('open');
+          onChange && onChange('open', percent);
         } else if (percent < this.state.percent) {
-          onChange && onChange('close');
+          onChange && onChange('close', percent);
         }
       },
       onPanResponderTerminate: () => {},
@@ -215,8 +216,10 @@ class RollerAnimate extends React.Component<MainProps, MainState> {
   };
 
   move = (gestureState: PanResponderGestureState) => {
+    const { onMove } = this.props;
     const percent = this.getPercent(gestureState);
     this.setButtonPosition(percent);
+    onMove && onMove(percent);
   };
 
   _renderBg = () => {
