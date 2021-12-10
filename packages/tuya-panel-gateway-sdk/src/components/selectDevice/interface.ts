@@ -18,6 +18,7 @@ export interface SelectDeviceProps {
   activedTintColor?: string;
   disabledTintColor?: string;
   normalTintColor?: string;
+  ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
   onSelectChange?: (devIds: Array<string>) => void;
   renderOfflineState?: () => React.ElementType;
 }
