@@ -25,6 +25,7 @@ const SelectDevice: FC<SelectDeviceProps> = ({
   activedTintColor,
   disabledTintColor,
   normalTintColor,
+  ListEmptyComponent,
   onSelectChange,
   renderOfflineState: customRenderOfflineState,
 }) => {
@@ -137,6 +138,7 @@ const SelectDevice: FC<SelectDeviceProps> = ({
         keyExtractor={item => item.devId}
         extraData={deviceList}
         renderItem={renderItem}
+        ListEmptyComponent={ListEmptyComponent}
       />
     );
   };

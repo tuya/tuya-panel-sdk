@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import { View } from 'react-native';
+import { View, TouchableOpacity } from 'react-native';
 import { TYText, Progress, TYSdk } from 'tuya-panel-kit';
 import { AddProgressProps } from './interface';
 import Strings from './i18n';
@@ -25,8 +25,16 @@ const AddProgress: FC<AddProgressProps> = ({
   timeoutSecond,
   customTotal,
   customProgress,
+  showButton,
+  buttonText,
+  buttonTextStyle,
+  buttonStyle,
+  activeOpacity,
+  renderProgressCenterView,
+  renderButton: customRenderButton,
   onTimeout,
   onFinish,
+  onPress,
 }) => {
   const total = isCustomProgressChange ? customTotal : devIds.length;
   const [progress, setProgress] = useState(0);
@@ -56,7 +64,7 @@ const AddProgress: FC<AddProgressProps> = ({
     }
   }, [progress]);
 
-  // 监听进度，如果已添加数和待添加总数相同，则触发完成事件，否则刷新倒计时。
+  // 监听自定义进度变化，实时更新数据
   useEffect(() => {
     if (isCustomProgressChange) {
       setProgress(customProgress);
@@ -82,6 +90,19 @@ const AddProgress: FC<AddProgressProps> = ({
     }, timeoutSecond * 1000);
   };
 
+  const renderContent = () => {
+    return (
+      <View style={styles.content}>
+        {renderTitle()}
+        {renderProgressView()}
+        {renderPrompt()}
+      </View>
+    );
+  };
+  const renderTitle = () => {
+    return <TYText text={title} style={[styles.tip, titleStyle]} />;
+  };
+
   // 渲染进度
   const renderProgressView = () => {
     return (
@@ -98,18 +119,42 @@ const AddProgress: FC<AddProgressProps> = ({
           scaleHeight={6}
           {...progressProps}
         />
-        <TYText
-          text={progressText || `${progress} / ${total}`}
-          style={[styles.centerText, progressTextStyle]}
-        />
+        {typeof renderProgressCenterView === 'function' ? (
+          renderProgressCenterView()
+        ) : (
+          <TYText
+            text={progressText || `${progress} / ${total}`}
+            style={[styles.centerText, progressTextStyle]}
+          />
+        )}
       </View>
     );
   };
+
+  const renderPrompt = () => {
+    return <TYText text={prompt} style={[styles.desc, promptStyle]} />;
+  };
+
+  const renderButton = () => {
+    return (
+      <TouchableOpacity
+        onPress={handleOnPress}
+        style={[styles.btn, buttonStyle]}
+        activeOpacity={activeOpacity}
+      >
+        <TYText text={buttonText} style={[styles.btnText, buttonTextStyle]} />
+      </TouchableOpacity>
+    );
+  };
+
+  const handleOnPress = () => {
+    typeof onPress === 'function' && onPress();
+  };
   return (
     <View style={[styles.main, containerStyle]}>
-      <TYText text={title} style={[styles.tip, titleStyle]} />
-      {renderProgressView()}
-      <TYText text={prompt} style={[styles.desc, promptStyle]} />
+      {renderContent()}
+      {showButton &&
+        (typeof customRenderButton === 'function' ? customRenderButton() : renderButton())}
     </View>
   );
 };
@@ -133,6 +178,11 @@ AddProgress.defaultProps = {
   timeoutSecond: 30,
   customTotal: 1,
   customProgress: 0,
+  showButton: false,
+  buttonText: Strings.getLang('addFinish'),
+  buttonTextStyle: {},
+  buttonStyle: {},
+  activeOpacity: 0.7,
 };
 
 export default AddProgress;

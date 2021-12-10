@@ -28,6 +28,14 @@ export interface AddProgressProps {
   timeoutSecond?: number;
   customTotal?: number;
   customProgress?: number;
+  showButton?: boolean;
+  buttonText?: string;
+  buttonTextStyle?: StyleProp<TextStyle>;
+  buttonStyle?: StyleProp<ViewStyle>;
+  activeOpacity?: number;
+  renderProgressCenterView?: () => JSX.Element;
+  renderButton?: () => JSX.Element;
   onTimeout?: (progress: number) => void;
   onFinish?: () => void;
+  onPress?: () => void;
 }

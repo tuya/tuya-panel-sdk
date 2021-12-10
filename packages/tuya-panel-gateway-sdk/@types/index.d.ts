@@ -5,8 +5,9 @@ import {
   ImageStyle,
   StatusBarStyle,
   ImageSourcePropType,
+  FlatListProps,
 } from 'react-native';
-import { DevInfo, ProgressProps, StringType } from 'tuya-panel-kit';
+import { DevInfo, ProgressProps, StringType, TabBarArr } from 'tuya-panel-kit';
 import { unsupportedBluetoothPidList } from '../src/config';
 
 // TipItem
@@ -426,7 +427,7 @@ export interface AddDeviceTipModalProps extends AddDeviceTipProps {
   onMaskPress?: () => void;
 }
 
-export class AddDeviceTip extends Component<AddDeviceTipProps> {}
+export class AddDeviceTip extends Component<AddDeviceTipProps> { }
 
 export const AddDeviceTipModal: { show: (props: AddDeviceTipModalProps) => void };
 
@@ -623,7 +624,7 @@ export interface SetPasswordModalProps extends SetPasswordProps {
   dialogElseOption?: DialogElse;
 }
 
-export class SetPassword extends Component<SetPasswordProps> {}
+export class SetPassword extends Component<SetPasswordProps> { }
 
 export const SetPasswordModal: { show: (props: SetPasswordModalProps) => void };
 
@@ -872,7 +873,7 @@ export interface TempHumWithBlurProps {
   renderHumidity?: () => JSX.Element | null;
 }
 
-export class TempHumWithBlur extends Component<TempHumWithBlurProps> {}
+export class TempHumWithBlur extends Component<TempHumWithBlurProps> { }
 
 export interface TopBarWithArcProps {
   /**
@@ -998,7 +999,7 @@ export interface TopBarWithArcProps {
   renderArc?: () => JSX.Element | null;
 }
 
-export class TopBarWithArc extends Component<TopBarWithArcProps> {}
+export class TopBarWithArc extends Component<TopBarWithArcProps> { }
 
 /**
  * @language zh-CN
@@ -1268,11 +1269,11 @@ export interface AddProgressProps {
    * @defaultValue { '0%': '#1381FB', '100%': '#00C36C' }
    */
   foreColor?:
-    | string
-    | StopsProps[]
-    | {
-        [key: string]: string;
-      };
+  | string
+  | StopsProps[]
+  | {
+    [key: string]: string;
+  };
   /**
    * @language zh-CN
    * @description 标题
@@ -1407,29 +1408,117 @@ export interface AddProgressProps {
   customProgress?: number;
   /**
    * @language zh-CN
+   * @description 是否显示底部按钮
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description Whether to show the bottom button
+   * @defaultValue false
+   */
+  showButton?: boolean;
+  /**
+   * @language zh-CN
+   * @description 底部按钮的文字
+   * @defaultValue 完成
+   */
+  /**
+   * @language en-US
+   * @description The text of the bottom button
+   * @defaultValue Finish
+   */
+  buttonText?: string;
+  /**
+   * @language zh-CN
+   * @description 底部按钮文字的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the bottom button text
+   * @defaultValue {}
+   */
+  buttonTextStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 底部按钮的样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description The style of the bottom button
+   * @defaultValue {}
+   */
+  buttonStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 触摸时按钮的不透明度
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description Opacity of the button when touched
+   * @defaultValue 0.7
+   */
+  activeOpacity?: number;
+  /**
+   * @language zh-CN
+   * @description 自定义渲染进度圆环中间的内容
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Customize the content in the middle of the rendering progress circle
+   * @defaultValue undefined
+   */
+  renderProgressCenterView?: () => JSX.Element;
+  /**
+   * @language zh-CN
+   * @description 自定义渲染底部按钮内容
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Custom rendering of the bottom button content
+   * @defaultValue undefined
+   */
+  renderButton?: () => JSX.Element;
+  /**
+   * @language zh-CN
    * @description 超时时触发的事件，入参为已添加成功的设备数量
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Event when adding device is time out
-   * @defaultValue none
+   * @defaultValue undefined
    */
-  onTimeout?: (prgress: number) => void;
+  onTimeout?: (progress: number) => void;
   /**
    * @language zh-CN
    * @description 添加设备完成时的事件
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Event when adding device is complete
-   * @defaultValue none
+   * @defaultValue undefined
    */
   onFinish?: () => void;
+  /**
+   * @language zh-CN
+   * @description 底部按钮的点击事件
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description The press event of the bottom button
+   * @defaultValue undefined
+   */
+  onPress?: () => void;
 }
 
-export class AddProgress extends Component<AddProgressProps> {}
+export class AddProgress extends Component<AddProgressProps> { }
 
 export interface SelectDeviceProps {
   /**
@@ -1457,12 +1546,12 @@ export interface SelectDeviceProps {
   /**
    * @language zh-CN
    * @description 可勾选项数量上限
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Maximum number of checkable options
-   * @defaultValue none
+   * @defaultValue undefined
    */
   selectLimit?: number;
   /**
@@ -1589,39 +1678,50 @@ export interface SelectDeviceProps {
   /**
    * @language zh-CN
    * @description 勾选框未选中时的tintColor值
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description The tintColor value when the check box is not checked
-   * @defaultValue none
+   * @defaultValue undefined
    */
   normalTintColor?: string;
   /**
    * @language zh-CN
+   * @description 列表为空时显示的组件
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Components displayed when the list is empty
+   * @defaultValue undefined
+   */
+   ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
+  /**
+   * @language zh-CN
    * @description 勾选项改变时触发的事件，入参为已勾选的设备devId列表
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description The event that is triggered when the check option is changed, and the input parameter is the devId list of the checked device
-   * @defaultValue none
+   * @defaultValue undefined
    */
   onSelectChange?: (devIds: Array<string>) => void;
   /**
    * @language zh-CN
    * @description 自定义离线状态的渲染
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Customize rendering in offline state
-   * @defaultValue none
+   * @defaultValue undefined
    */
   renderOfflineState?: () => React.ElementType;
 }
 
-export class SelectDevice extends Component<SelectDeviceProps> {}
+export class SelectDevice extends Component<SelectDeviceProps> { }
 export interface DeviceListPanelProps {
   /**
    * @language zh-CN
@@ -1637,12 +1737,12 @@ export interface DeviceListPanelProps {
   /**
    * @language zh-CN
    * @description 切换设备列表的tab配置
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description The tab config of the device type list
-   * @defaultValue none
+   * @defaultValue undefined
    */
   tabs: Array<TabBarArr>;
   /**
@@ -1725,90 +1825,167 @@ export interface DeviceListPanelProps {
   /**
    * @language zh-CN
    * @description 初始选中的tabBar的key
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description The key of the initially selected tabBar
-   * @defaultValue none
+   * @defaultValue undefined
    */
   initialTab?: string;
   /**
    * @language zh-CN
    * @description 子节点
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Child node
-   * @defaultValue none
+   * @defaultValue undefined
    */
   children?: React.ReactNode;
   /**
    * @language zh-CN
+   * @description 可拖动面板中的子元素
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Child node in the draggable panel
+   * @defaultValue undefined
+   */
+  panelChildren?: React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 可拖动面板中的子元素的高度
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description The height of the child node in the draggable panel
+   * @defaultValue 0
+   */
+  panelChildrenHeight?: number;
+  /**
+   * @language zh-CN
    * @description 列表为空时显示的组件
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Components displayed when the list is empty
-   * @defaultValue none
+   * @defaultValue undefined
    */
   ListEmptyComponent?: React.ComponentType<any> | React.ReactElement | null;
   /**
    * @language zh-CN
+   * @description 列表是否支持左右滑动切换
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description whether the list is swipeable
+   * @defaultValue false
+   */
+  swipeable?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否显示顶部下拉组件
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether to display the top drop-down component
+   * @defaultValue true
+   */
+  isShowPullDown?: boolean;
+  /**
+   * @language zh-CN
+   * @description 列表组件'FlatList'的属性
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Properties of the list component 'FlatList'
+   * @defaultValue undefined
+   */
+  flatListProps?: FlatListProps<DevInfo>;
+  /**
+   * @language zh-CN
+   * @description 组件'TabBar'的属性
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Properties of the component 'TabBar'
+   * @defaultValue undefined
+   */
+  tabBarProps?: TabBarProps;
+  /**
+   * @language zh-CN
    * @description 设备右上角的“更多”图标点击事件
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description "More" icon click event in the upper right corner of the device item
-   * @defaultValue none
+   * @defaultValue undefined
    */
   onIconMorePress?: (devInfo: DevInfo) => void;
   /**
    * @language zh-CN
    * @description tab切换事件
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Tab switching event
-   * @defaultValue none
+   * @defaultValue undefined
    */
   onTabChange?: (key: string) => void;
   /**
    * @language zh-CN
    * @description 自定义设备项渲染函数
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Custom device item rendering function
-   * @defaultValue none
+   * @defaultValue undefined
    */
   customRenderItem?: ListRenderItem<DevInfo>;
   /**
    * @language zh-CN
    * @description 自定义TabBar渲染函数
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Custom TabBar rendering function
-   * @defaultValue none
+   * @defaultValue undefined
    */
   customRenderTabBar?: () => JSX.Element;
   /**
    * @language zh-CN
    * @description 自定义设备列表渲染函数
-   * @defaultValue 无
+   * @defaultValue undefined
    */
   /**
    * @language en-US
    * @description Customize the device list rendering function
-   * @defaultValue none
+   * @defaultValue undefined
    */
   customRenderList?: () => JSX.Element;
+  /**
+   * @language zh-CN
+   * @description 自定义渲染顶部下拉组件
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description Custom rendering of the top drop-down component
+   * @defaultValue undefined
+   */
+  customRenderPullDown?: () => JSX.Element;
 }
-export class DeviceListPanel extends Component<DeviceListPanelProps> {}
+export class DeviceListPanel extends Component<DeviceListPanelProps> { }
