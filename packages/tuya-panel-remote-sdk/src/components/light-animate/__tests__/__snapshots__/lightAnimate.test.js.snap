@@ -1,0 +1,269 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LightAnimate components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "width": "100%",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "height": 480,
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+  >
+    <RadialGradient
+      cx="50%"
+      cy="50%"
+      fx="50%"
+      fy="50%"
+      gradientId="Gradient"
+      rx="50%"
+      ry="50%"
+      stops={
+        Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#FFFFFF",
+            "stopOpacity": "1",
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#FFFFFF",
+            "stopOpacity": "0",
+          },
+        ]
+      }
+      style={
+        Object {
+          "height": 480,
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <Image
+    source={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 60,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`LightAnimate components lightBrightAdd render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "width": "100%",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "height": 480,
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+  >
+    <RadialGradient
+      cx="50%"
+      cy="50%"
+      fx="50%"
+      fy="50%"
+      gradientId="Gradient"
+      rx="50%"
+      ry="50%"
+      stops={
+        Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#FFFFFF",
+            "stopOpacity": "1",
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#FFFFFF",
+            "stopOpacity": "0",
+          },
+        ]
+      }
+      style={
+        Object {
+          "height": 480,
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <Image
+    source={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 60,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`LightAnimate components lightTempAdd render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "width": "100%",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "height": 480,
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+  >
+    <RadialGradient
+      cx="50%"
+      cy="50%"
+      fx="50%"
+      fy="50%"
+      gradientId="Gradient"
+      rx="50%"
+      ry="50%"
+      stops={
+        Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#F3E7A6",
+            "stopOpacity": "1",
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#F3E7A6",
+            "stopOpacity": "0",
+          },
+        ]
+      }
+      style={
+        Object {
+          "height": 480,
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <Image
+    source={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 60,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`LightAnimate components lightTempMinus render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "width": "100%",
+      },
+      null,
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Object {
+        "height": 480,
+        "opacity": 0,
+        "width": 750,
+      }
+    }
+  >
+    <RadialGradient
+      cx="50%"
+      cy="50%"
+      fx="50%"
+      fy="50%"
+      gradientId="Gradient"
+      rx="50%"
+      ry="50%"
+      stops={
+        Array [
+          Object {
+            "offset": "0%",
+            "stopColor": "#9BCCFF",
+            "stopOpacity": "1",
+          },
+          Object {
+            "offset": "100%",
+            "stopColor": "#9BCCFF",
+            "stopOpacity": "0",
+          },
+        ]
+      }
+      style={
+        Object {
+          "height": 480,
+          "width": 750,
+        }
+      }
+    />
+  </AnimatedComponent>
+  <Image
+    source={null}
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "top": 60,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;

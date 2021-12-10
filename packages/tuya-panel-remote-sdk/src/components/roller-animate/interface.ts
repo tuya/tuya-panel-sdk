@@ -80,9 +80,13 @@ export interface MainProps {
    */
   buttonImageStyle: StyleProp<ImageStyle>;
   /**
-   * 动画状态执行回调
+   * 手指释放执行回调
    */
-  onChange: (type: AnimateType) => void;
+  onChange: (type: AnimateType, percent: number) => void;
+  /**
+   * 手指滑动执行回调
+   */
+  onMove: (percent: number) => void;
 }
 
 export interface MainState {
