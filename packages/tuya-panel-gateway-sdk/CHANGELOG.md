@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.4.1...@tuya/tuya-panel-gateway-sdk@1.5.0) (2021-12-11)
+
+
+### Features
+
+* add some props in gateway components named "AddProgress" and "DeviceListPanel" ([#127](https://github.com/tuya/tuya-panel-sdk/issues/127)) ([9063ec2](https://github.com/tuya/tuya-panel-sdk/commit/9063ec2285a34d674db3e90b2f1a2b91fcbbd9c3))
+
+
+
+
+
 ## [1.4.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.4.0...@tuya/tuya-panel-gateway-sdk@1.4.1) (2021-10-12)
 
 **Note:** Version bump only for package @tuya/tuya-panel-gateway-sdk
