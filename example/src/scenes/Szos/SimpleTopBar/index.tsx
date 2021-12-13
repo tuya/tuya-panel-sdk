@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { SimpleTopBar as TopBar } from '@tuya/tuya-panel-szos-sdk/src/components';
-import { IconFont, GlobalToast, Utils } from 'tuya-panel-kit';
+import { IconFont, GlobalToast, Utils, TYText } from 'tuya-panel-kit';
 
 const { convertY: cy } = Utils.RatioUtils;
 
@@ -20,6 +20,7 @@ const SimpleTopBar: React.FC = () => {
 
   return (
     <>
+      <TYText style={styles.text} text="自定义左右图标，标题" />
       <TopBar />
       <TopBar
         title="标题"
@@ -37,6 +38,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#fff',
     height: cy(44),
+  },
+  text: {
+    alignSelf: 'flex-start',
+    padding: 10,
   },
 });
 
