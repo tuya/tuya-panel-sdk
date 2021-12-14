@@ -1,142 +1,166 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/display-name */
-/* eslint-disable no-unused-expressions */
+/* eslint-disable no-cond-assign */
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/no-children-prop */
 import PropTypes from 'prop-types';
-import React, { FC, useRef, useState, forwardRef, useImperativeHandle } from 'react';
-import { StyleSheet, TextInput, StyleProp, TextStyle, ViewPropTypes } from 'react-native';
+import React, { FC, useState, forwardRef, useImperativeHandle, useEffect, useRef } from 'react';
+import { StyleSheet, View } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
+import MyIpt from '../number-area-input';
 
-const { convertX: cx, convertY: cy } = Utils.RatioUtils;
-
+const { convertX, convertY } = Utils.RatioUtils;
 interface IPutProps {
   /*
    * 必须有一个唯一的name
    */
   name: string;
   /*
-   * placeholder站位
-   */
-  placeholder?: string;
-  /*
    * 改变placeholder颜色
    */
   changeColor?: boolean;
   /*
-   * 是否可编辑
+   * 输入框ref
    */
-  editable?: boolean;
-  iptStyle?: StyleProp<TextStyle>;
-  focusFuc?: any;
   ref?: any;
-  changeText?: any;
-  minVal?: number; // 最小值
-  maxVal?: number; // 最大值
+  /*
+   * 输入框聚焦时触发
+   */
+  focusFuc?: any;
+  /*
+   * 默认的值
+   */
+  placeHolder?: string;
 }
 
-const MyIpt: FC<IPutProps> = forwardRef(
-  (
-    {
-      name,
-      placeholder,
-      changeColor = false,
-      iptStyle,
-      focusFuc,
-      changeText,
-      minVal = 0,
-      maxVal = 255,
-      editable = true,
-    },
-    ref
-  ) => {
-    const [fus, setFus] = useState<boolean>(false);
-    const [value, setVal] = useState<string>('');
-    const osg = useRef(null);
-    useImperativeHandle(ref, () => ({
-      // 定义modal ref 的属性
-      value,
-      setFocus: () => {
-        // osg?.current.focus();
-      },
-    }));
+const MyInput: FC<IPutProps> = forwardRef(({ name, changeColor, focusFuc, placeHolder }, ref) => {
+  const [ipAdd, setIpA] = useState<any[]>([]);
+  const [ipAddRess, setIpAddRes] = useState<string>('');
+  const refMap = useRef({ current: null });
 
-    const onF = () => {
-      setFus(true);
-      focusFuc();
-    };
-
-    const onChangeText = (val: any) => {
-      const inputVal = parseInt(val, 10);
-      if (inputVal > maxVal || (val !== '' && inputVal < minVal)) {
-        setVal('');
-        return;
+  useEffect(() => {
+    if (placeHolder.indexOf('.') === -1) {
+      return;
+    }
+    const arr = placeHolder.split('.');
+    const reg = /^[0-9]*$/;
+    let validateRes = true;
+    arr.map(it => {
+      if (!reg.test(it)) {
+        validateRes = false;
+        return false;
       }
-      setVal(inputVal === 0 ? '0' : val);
-      changeText(val);
-    };
+      validateRes = true;
+      return true;
+    });
+    if (validateRes) {
+      setIpA(arr);
+    }
+  }, [placeHolder]);
 
-    return (
-      <TextInput
-        ref={osg}
-        key={`${name}`}
-        style={[styles.inputIp, iptStyle]}
-        placeholderTextColor={changeColor ? 'rgba(103, 112, 123, 1)' : 'rgba(103, 112, 123, 0.5)'}
-        underlineColorAndroid="transparent"
-        placeholder={fus ? '' : placeholder}
-        maxLength={3}
-        multiline
-        numberOfLines={1}
-        keyboardType="numeric"
-        onFocus={onF}
-        clearTextOnFocus
-        onChangeText={e => onChangeText(e)}
-        selectionColor="rgba(152, 165, 198, 1)"
-        value={value}
-        editable={editable}
-      />
-    );
-  }
-);
+  const changeText = (idx: number, val: any) => {
+    const ipAddRes = ipAdd;
 
-MyIpt.propTypes = {
-  changeColor: PropTypes.bool,
-  editable: PropTypes.bool,
-  focusFuc: PropTypes.func,
-  changeText: PropTypes.func,
+    ipAddRes.splice(idx, 1, val);
+    const testVal = ipAddRes.join('.');
+    // 输入完成跳转下一个input
+    const inputVal = parseInt(val, 10);
+    if (inputVal === 0 || val.length === 3) {
+      refMap?.current[idx + 1]?.setFocus();
+    }
+    setIpAddRes(testVal);
+  };
+
+  useImperativeHandle(ref, () => ({
+    value: ipAdd,
+    ipAddRess,
+  }));
+
+  return (
+    <View style={styles.ip}>
+      <View style={styles.ipCon}>
+        {ipAdd &&
+          ipAdd.map((ip, index) => {
+            return (
+              <>
+                <MyIpt
+                  ref={(f: any) => {
+                    refMap.current[index] = f;
+                  }}
+                  key={`${name}-${index}`}
+                  name={`${name}-${index}`}
+                  placeholder={ip}
+                  focusFuc={focusFuc}
+                  minVal={index === 0 && name === 'ip' ? 1 : 0}
+                  changeColor={changeColor}
+                  changeText={(e: any) => changeText(index, e)}
+                />
+                {ipAdd.length - 1 !== index && (
+                  <View style={styles.pointWpt}>
+                    <View style={styles.poit} />
+                  </View>
+                )}
+              </>
+            );
+          })}
+      </View>
+    </View>
+  );
+});
+
+MyInput.propTypes = {
   name: PropTypes.string,
-  placeholder: PropTypes.string,
-  minVal: PropTypes.number,
-  maxVal: PropTypes.number,
-  iptStyle: ViewPropTypes.style,
+  changeColor: PropTypes.bool,
+  // eslint-disable-next-line react/no-unused-prop-types
+  ref: PropTypes.any,
+  focusFuc: PropTypes.func,
+  placeHolder: PropTypes.string,
 };
 
-MyIpt.defaultProps = {
-  focusFuc: () => {},
-  changeText: () => {},
-  changeColor: false,
-  editable: true,
+MyInput.defaultProps = {
   name: '',
-  placeholder: '',
-  minVal: 255,
-  maxVal: 255,
-  iptStyle: null,
+  changeColor: false,
+  ref: { current: null },
+  focusFuc: () => {},
+  placeHolder: '192.168.2.2',
 };
 
 const styles = StyleSheet.create({
-  inputIp: {
+  ip: {
+    height: convertY(56),
+    marginBottom: convertY(20),
+    paddingHorizontal: convertY(10),
+    position: 'relative',
+    width: '100%',
+  },
+  ipCon: {
     alignItems: 'center',
-    color: 'rgba(103, 112, 123, 1)',
-    fontSize: cx(15),
-    height: cy(18),
+    flexDirection: 'row',
+    height: '100%',
+    justifyContent: 'flex-start',
+    width: '100%',
+  },
+  ipInputBg: {
+    height: convertY(56),
+    left: convertX(10),
+    position: 'absolute',
+    top: 0,
+    width: '100%',
+  },
+  pointWpt: {
+    alignItems: 'center',
+    height: convertX(15),
     justifyContent: 'center',
-    lineHeight: cy(18),
-    paddingBottom: 0,
-    paddingLeft: 0,
-    paddingRight: 0,
-    paddingTop: 0,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    width: cx(30),
+    position: 'relative',
+    width: convertX(12),
+  },
+  poit: {
+    backgroundColor: '#67707B',
+    bottom: convertY(3),
+    height: convertX(2),
+    position: 'absolute',
+    width: convertX(2),
   },
 });
 
-export default MyIpt;
+export default MyInput;

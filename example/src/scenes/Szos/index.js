@@ -7,12 +7,16 @@ import GestureSlider from './GestureSlider';
 import StreeringWheel from './SteeringWheel';
 import SimpleVerticalSlider from './SimpleVerticalSlider';
 import SimpleTopBar from './SimpleTopBar';
+import BreakPointInput from './BreakPointInput';
+import NumAreaInput from './NumAreaInput';
 export default class SzosScene extends Component {
   static SoundWave = SoundWave;
   static GestureSlider = GestureSlider;
   static StreeringWheel = StreeringWheel;
   static SimpleVerticalSlider = SimpleVerticalSlider;
   static SimpleTopBar = SimpleTopBar;
+  static BreakPointInput = BreakPointInput;
+  static NumAreaInput = NumAreaInput;
 
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Szos.+\w*$/.test(r.id)));
