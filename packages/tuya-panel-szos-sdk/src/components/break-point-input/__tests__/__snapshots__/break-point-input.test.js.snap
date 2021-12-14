@@ -1,0 +1,830 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreakPointInput components basic placeHolder 1`] = `
+<View
+  style={
+    Object {
+      "height": 112,
+      "marginBottom": 40,
+      "paddingHorizontal": 20,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;
+
+exports[`BreakPointInput components basic render 1`] = `
+<ForwardRef
+  changeColor={false}
+  focusFuc={[Function]}
+  name="test"
+  placeHolder="12"
+>
+  <View
+    style={
+      Object {
+        "height": 112,
+        "marginBottom": 40,
+        "paddingHorizontal": 20,
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 112,
+          "marginBottom": 40,
+          "paddingHorizontal": 20,
+          "position": "relative",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": "100%",
+            "justifyContent": "flex-start",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "flex-start",
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+    </View>
+  </View>
+</ForwardRef>
+`;
+
+exports[`BreakPointInput components render change 1`] = `
+<ForwardRef
+  changeColor={false}
+  focusFuc={[Function]}
+  name="test"
+  placeHolder="192.168.hu.177"
+  ref={
+    Object {
+      "current": null,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 112,
+        "marginBottom": 40,
+        "paddingHorizontal": 20,
+        "position": "relative",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "height": 112,
+          "marginBottom": 40,
+          "paddingHorizontal": 20,
+          "position": "relative",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": "100%",
+            "justifyContent": "flex-start",
+            "width": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "flex-start",
+              "width": "100%",
+            }
+          }
+        >
+          <ForwardRef
+            changeColor={false}
+            changeText={[Function]}
+            editable={true}
+            focusFuc={[Function]}
+            iptStyle={null}
+            key="test-0"
+            maxVal={255}
+            minVal={0}
+            name="test-0"
+            placeholder="192"
+            viewStyle={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "height": 60,
+                    "justifyContent": "center",
+                    "lineHeight": 60,
+                    "width": 100,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "gray",
+                      "borderWidth": 1,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "height": 60,
+                      "justifyContent": "center",
+                      "lineHeight": 60,
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  clearTextOnFocus={true}
+                  editable={true}
+                  key="test-0"
+                  keyboardType="numeric"
+                  maxLength={3}
+                  multiline={true}
+                  numberOfLines={1}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholder="192"
+                  placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                  rejectResponderTermination={true}
+                  selectionColor="rgba(152, 165, 198, 1)"
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "color": "rgba(103, 112, 123, 1)",
+                        "fontSize": 30,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "paddingBottom": 0,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                        "width": "100%",
+                      },
+                      null,
+                    ]
+                  }
+                  underlineColorAndroid="transparent"
+                  value=""
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    clearTextOnFocus={true}
+                    editable={true}
+                    keyboardType="numeric"
+                    maxLength={3}
+                    multiline={true}
+                    numberOfLines={1}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder="192"
+                    placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                    rejectResponderTermination={true}
+                    selectionColor="rgba(152, 165, 198, 1)"
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "color": "rgba(103, 112, 123, 1)",
+                          "fontSize": 30,
+                          "height": 30,
+                          "justifyContent": "center",
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 0,
+                          "textAlign": "center",
+                          "textAlignVertical": "center",
+                          "width": "100%",
+                        },
+                        null,
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </TextInput>
+              </View>
+            </View>
+          </ForwardRef>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 30,
+                "justifyContent": "center",
+                "position": "relative",
+                "width": 24,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "position": "relative",
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#67707B",
+                    "bottom": 6,
+                    "height": 4,
+                    "position": "absolute",
+                    "width": 4,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#67707B",
+                      "bottom": 6,
+                      "height": 4,
+                      "position": "absolute",
+                      "width": 4,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <ForwardRef
+            changeColor={false}
+            changeText={[Function]}
+            editable={true}
+            focusFuc={[Function]}
+            iptStyle={null}
+            key="test-1"
+            maxVal={255}
+            minVal={0}
+            name="test-1"
+            placeholder="168"
+            viewStyle={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "height": 60,
+                    "justifyContent": "center",
+                    "lineHeight": 60,
+                    "width": 100,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "gray",
+                      "borderWidth": 1,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "height": 60,
+                      "justifyContent": "center",
+                      "lineHeight": 60,
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  clearTextOnFocus={true}
+                  editable={true}
+                  key="test-1"
+                  keyboardType="numeric"
+                  maxLength={3}
+                  multiline={true}
+                  numberOfLines={1}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholder="168"
+                  placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                  rejectResponderTermination={true}
+                  selectionColor="rgba(152, 165, 198, 1)"
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "color": "rgba(103, 112, 123, 1)",
+                        "fontSize": 30,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "paddingBottom": 0,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                        "width": "100%",
+                      },
+                      null,
+                    ]
+                  }
+                  underlineColorAndroid="transparent"
+                  value=""
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    clearTextOnFocus={true}
+                    editable={true}
+                    keyboardType="numeric"
+                    maxLength={3}
+                    multiline={true}
+                    numberOfLines={1}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder="168"
+                    placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                    rejectResponderTermination={true}
+                    selectionColor="rgba(152, 165, 198, 1)"
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "color": "rgba(103, 112, 123, 1)",
+                          "fontSize": 30,
+                          "height": 30,
+                          "justifyContent": "center",
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 0,
+                          "textAlign": "center",
+                          "textAlignVertical": "center",
+                          "width": "100%",
+                        },
+                        null,
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </TextInput>
+              </View>
+            </View>
+          </ForwardRef>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 30,
+                "justifyContent": "center",
+                "position": "relative",
+                "width": 24,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "position": "relative",
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#67707B",
+                    "bottom": 6,
+                    "height": 4,
+                    "position": "absolute",
+                    "width": 4,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#67707B",
+                      "bottom": 6,
+                      "height": 4,
+                      "position": "absolute",
+                      "width": 4,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <ForwardRef
+            changeColor={false}
+            changeText={[Function]}
+            editable={true}
+            focusFuc={[Function]}
+            iptStyle={null}
+            key="test-2"
+            maxVal={255}
+            minVal={0}
+            name="test-2"
+            placeholder="31"
+            viewStyle={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "height": 60,
+                    "justifyContent": "center",
+                    "lineHeight": 60,
+                    "width": 100,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "gray",
+                      "borderWidth": 1,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "height": 60,
+                      "justifyContent": "center",
+                      "lineHeight": 60,
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  clearTextOnFocus={true}
+                  editable={true}
+                  key="test-2"
+                  keyboardType="numeric"
+                  maxLength={3}
+                  multiline={true}
+                  numberOfLines={1}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholder="31"
+                  placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                  rejectResponderTermination={true}
+                  selectionColor="rgba(152, 165, 198, 1)"
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "color": "rgba(103, 112, 123, 1)",
+                        "fontSize": 30,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "paddingBottom": 0,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                        "width": "100%",
+                      },
+                      null,
+                    ]
+                  }
+                  underlineColorAndroid="transparent"
+                  value=""
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    clearTextOnFocus={true}
+                    editable={true}
+                    keyboardType="numeric"
+                    maxLength={3}
+                    multiline={true}
+                    numberOfLines={1}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder="31"
+                    placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                    rejectResponderTermination={true}
+                    selectionColor="rgba(152, 165, 198, 1)"
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "color": "rgba(103, 112, 123, 1)",
+                          "fontSize": 30,
+                          "height": 30,
+                          "justifyContent": "center",
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 0,
+                          "textAlign": "center",
+                          "textAlignVertical": "center",
+                          "width": "100%",
+                        },
+                        null,
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </TextInput>
+              </View>
+            </View>
+          </ForwardRef>
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "height": 30,
+                "justifyContent": "center",
+                "position": "relative",
+                "width": 24,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "height": 30,
+                  "justifyContent": "center",
+                  "position": "relative",
+                  "width": 24,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#67707B",
+                    "bottom": 6,
+                    "height": 4,
+                    "position": "absolute",
+                    "width": 4,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#67707B",
+                      "bottom": 6,
+                      "height": 4,
+                      "position": "absolute",
+                      "width": 4,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+          <ForwardRef
+            changeColor={false}
+            changeText={[Function]}
+            editable={true}
+            focusFuc={[Function]}
+            iptStyle={null}
+            key="test-3"
+            maxVal={255}
+            minVal={0}
+            name="test-3"
+            placeholder="177"
+            viewStyle={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "borderColor": "gray",
+                    "borderWidth": 1,
+                  },
+                  Object {
+                    "alignItems": "center",
+                    "height": 60,
+                    "justifyContent": "center",
+                    "lineHeight": 60,
+                    "width": 100,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "borderColor": "gray",
+                      "borderWidth": 1,
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "height": 60,
+                      "justifyContent": "center",
+                      "lineHeight": 60,
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <TextInput
+                  allowFontScaling={true}
+                  clearTextOnFocus={true}
+                  editable={true}
+                  key="test-3"
+                  keyboardType="numeric"
+                  maxLength={3}
+                  multiline={true}
+                  numberOfLines={1}
+                  onChangeText={[Function]}
+                  onFocus={[Function]}
+                  placeholder="177"
+                  placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                  rejectResponderTermination={true}
+                  selectionColor="rgba(152, 165, 198, 1)"
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "color": "rgba(103, 112, 123, 1)",
+                        "fontSize": 30,
+                        "height": 30,
+                        "justifyContent": "center",
+                        "paddingBottom": 0,
+                        "paddingLeft": 0,
+                        "paddingRight": 0,
+                        "paddingTop": 0,
+                        "textAlign": "center",
+                        "textAlignVertical": "center",
+                        "width": "100%",
+                      },
+                      null,
+                    ]
+                  }
+                  underlineColorAndroid="transparent"
+                  value=""
+                >
+                  <TextInput
+                    allowFontScaling={true}
+                    clearTextOnFocus={true}
+                    editable={true}
+                    keyboardType="numeric"
+                    maxLength={3}
+                    multiline={true}
+                    numberOfLines={1}
+                    onChangeText={[Function]}
+                    onFocus={[Function]}
+                    placeholder="177"
+                    placeholderTextColor="rgba(103, 112, 123, 0.5)"
+                    rejectResponderTermination={true}
+                    selectionColor="rgba(152, 165, 198, 1)"
+                    style={
+                      Array [
+                        Object {
+                          "alignItems": "center",
+                          "color": "rgba(103, 112, 123, 1)",
+                          "fontSize": 30,
+                          "height": 30,
+                          "justifyContent": "center",
+                          "paddingBottom": 0,
+                          "paddingLeft": 0,
+                          "paddingRight": 0,
+                          "paddingTop": 0,
+                          "textAlign": "center",
+                          "textAlignVertical": "center",
+                          "width": "100%",
+                        },
+                        null,
+                      ]
+                    }
+                    underlineColorAndroid="transparent"
+                    value=""
+                  />
+                </TextInput>
+              </View>
+            </View>
+          </ForwardRef>
+        </View>
+      </View>
+    </View>
+  </View>
+</ForwardRef>
+`;
+
+exports[`BreakPointInput components render focus 1`] = `
+<View
+  style={
+    Object {
+      "height": 112,
+      "marginBottom": 40,
+      "paddingHorizontal": 20,
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "flex-start",
+        "width": "100%",
+      }
+    }
+  />
+</View>
+`;

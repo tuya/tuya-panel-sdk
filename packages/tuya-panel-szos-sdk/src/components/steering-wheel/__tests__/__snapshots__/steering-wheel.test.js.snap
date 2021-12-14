@@ -89,50 +89,6 @@ exports[`StreeringWheel components content render 1`] = `
 </View>
 `;
 
-exports[`StreeringWheel components render with defaultValue 1`] = `
-<View
-  onLayout={[Function]}
-  style={
-    Object {
-      "height": 334,
-      "width": 334,
-    }
-  }
->
-  <PanGestureHandler
-    onGestureEvent={[Function]}
-    onHandlerStateChange={[Function]}
-    simultaneousHandlers={
-      Object {
-        "current": null,
-      }
-    }
-  >
-    <AnimatedComponent
-      style={
-        Object {
-          "transform": Array [
-            Object {
-              "rotate": "0deg",
-            },
-          ],
-        }
-      }
-    >
-      <Image
-        source={1}
-        style={
-          Object {
-            "height": 334,
-            "width": 334,
-          }
-        }
-      />
-    </AnimatedComponent>
-  </PanGestureHandler>
-</View>
-`;
-
 exports[`StreeringWheel components render with value 1`] = `
 <View
   onLayout={[Function]}

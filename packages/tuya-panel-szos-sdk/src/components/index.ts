@@ -1,18 +1,18 @@
 /*
  * @Author: 豆芽(douya.ye@tuya.com)
  * @Date: 2021-11-05 10:02:48
- * @LastEditTime: 2021-11-16 10:09:58
+ * @LastEditTime: 2021-12-14 17:56:27
  * @LastEditors: 豆芽(douya.ye@tuya.com)
  * @Description:
  * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/index.ts
  */
 export { default as GestureSlider } from './gesture-slider';
 export { default as SoundWave } from './sound-wave';
-
-import SteeringWheel from './steering-wheel';
-export { SteeringWheel };
-
 export { default as MultiSlider } from './multi-slider';
 export { default as ImageAnimate } from './image-animate';
 export { default as BoxShadow } from './box-shadow';
 export { default as WhiteSpace } from './white-space';
+export { default as SteeringWheel } from './steering-wheel';
+export { default as SimpleTopBar } from './simple-top-bar';
+export { default as BreakPointInput } from './break-point-input';
+export { default as NumAreaInput } from './number-area-input';
