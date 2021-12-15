@@ -8,3 +8,4 @@ export { parseSecondToDate } from './components/date-text/util';
 export { default as SportTargetContent } from './components/sport-target-value';
 export { default as SportNoTarget } from './components/sport-no-target';
 export { default as SportTarget } from './components/sport-target';
+export { default as SwipePop } from './components/swipe-pop';

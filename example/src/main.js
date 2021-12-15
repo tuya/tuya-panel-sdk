@@ -83,6 +83,7 @@ class MainLayout extends NavigatorLayout {
       ),
       renderTopBar: () => {
         if (
+          route.id === 'Outdoor.SwipePop' ||
           route.id === 'Ipc.IpcPlayer' ||
           route.id === 'Gateway.TopBarWithArc' ||
           route.id === 'Gateway.TempHumWithBlur'

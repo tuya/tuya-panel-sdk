@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SwipePop components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "column",
+    }
+  }
+>
+  <Top />
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "column",
+        "marginTop": 20,
+      }
+    }
+  >
+    <Header />
+  </View>
+  <SwipePop
+    activeKey="none"
+    arrowColor="#111"
+    arrowTintColor="rgba(0,0,0,0)"
+    contentType="full"
+    disabled={false}
+    lastArrowOffset={0}
+    maskColor="rgba(0,0,0,0.7)"
+    maskStyle={null}
+    onKeyChange={[Function]}
+    onSwiping={[Function]}
+    sections={
+      Array [
+        Object {
+          "height": 1334,
+          "key": "full",
+        },
+      ]
+    }
+    showHeight={1334}
+    showMask={false}
+    startValidHeight={10}
+    style={null}
+    wrapperStyle={null}
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "position": "absolute",
+          "top": 0,
+          "width": "100%",
+          "zIndex": 5,
+        }
+      }
+    >
+      <View
+        style={
+          Object {
+            "backgroundColor": "#fff",
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 1334,
+            "width": "100%",
+          }
+        }
+      >
+        <Bottom />
+      </View>
+    </View>
+  </SwipePop>
+</View>
+`;

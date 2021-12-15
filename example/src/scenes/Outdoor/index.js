@@ -10,6 +10,7 @@ import CircleProgress from './shadow-circle-progress';
 import Battery from './battery';
 import SportNoTarget from './sport-no-target';
 import SportTarget from './sport-target';
+import SwipePop from './swipe-pop';
 
 export default class OutdoorScene extends React.Component {
   get data() {
@@ -24,6 +25,7 @@ export default class OutdoorScene extends React.Component {
   static CalendarList = CalendarList;
   static SportNoTarget = SportNoTarget;
   static SportTarget = SportTarget;
+  static SwipePop = SwipePop;
 
   render() {
     return <TYFlatList data={this.data} />;
