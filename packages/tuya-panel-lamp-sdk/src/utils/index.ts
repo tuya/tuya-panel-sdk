@@ -2,6 +2,7 @@ import { Utils } from 'tuya-panel-kit';
 import _ from 'lodash';
 export { default as ColorUtils } from './color';
 export { default as StorageUtils } from './storage';
+export { default as SupportUtils } from './support';
 
 export function handleError(error: Error): void {
   // eslint-disable-next-line no-console
@@ -107,4 +108,22 @@ export function getCirclePointCoordinate(
 ): number[] {
   const [x, y] = center;
   return [x + radius * Math.sin(angle), y - radius * Math.cos(angle)];
+}
+
+/**
+ * transform
+ */
+export function* transform(value: string): Generator<number> {
+  let start = 0;
+  let result = 0;
+  let length: any;
+  for (; true; ) {
+    length = yield result;
+    result = parseInt(value.substr(start, length), 16) || 0;
+    if (start + length >= value.length) {
+      break;
+    }
+    start += length;
+  }
+  return result;
 }
