@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorRect components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.8}
+  onPress={[Function]}
+>
+  <Svg
+    height={100}
+    preserveAspectRatio="xMidYMid meet"
+    style={
+      Object {
+        "height": 100,
+        "width": 80,
+      }
+    }
+    width={80}
+  >
+    <Rect
+      fill="#E292FE"
+      height={50}
+      key="0"
+      rx={0}
+      ry={0}
+      width={80}
+      x="0"
+      y={0}
+    />
+    <Rect
+      fill="#FFF76B"
+      height={50}
+      key="1"
+      rx={0}
+      ry={0}
+      width={80}
+      x="0"
+      y={50}
+    />
+  </Svg>
+</TouchableOpacity>
+`;
+
+exports[`ColorRect components render with custom color percent 1`] = `
+<TouchableOpacity
+  activeOpacity={0.8}
+  onPress={[Function]}
+>
+  <Svg
+    height={100}
+    preserveAspectRatio="xMidYMid meet"
+    rx={8}
+    style={
+      Object {
+        "borderRadius": 8,
+        "height": 100,
+        "overflow": "hidden",
+        "width": 80,
+      }
+    }
+    width={80}
+  >
+    <Rect
+      fill="green"
+      height={14.000000000000002}
+      key="0"
+      rx={0}
+      ry={0}
+      width={80}
+      x="0"
+      y={0}
+    />
+    <Rect
+      fill="yellow"
+      height={26}
+      key="1"
+      rx={0}
+      ry={0}
+      width={80}
+      x="0"
+      y={14.000000000000002}
+    />
+    <Rect
+      fill="red"
+      height={60}
+      key="2"
+      rx={0}
+      ry={0}
+      width={80}
+      x="0"
+      y={40}
+    />
+  </Svg>
+</TouchableOpacity>
+`;
