@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.4.0...@tuya/tuya-panel-lamp-sdk@1.5.0) (2021-12-17)
+
+
+### Bug Fixes
+
+* update musicDrawer test file ([#141](https://github.com/tuya/tuya-panel-sdk/issues/141)) ([093b7a6](https://github.com/tuya/tuya-panel-sdk/commit/093b7a6c4529680f407609ba69f1ae93b44b1e95))
+
+
+### Features
+
+* **lamp:** add sdk Formatter ([#132](https://github.com/tuya/tuya-panel-sdk/issues/132)) ([06c7c13](https://github.com/tuya/tuya-panel-sdk/commit/06c7c13871461fcff11b47d8f5c1d34ef113d535))
+* **lamp:** add selector ([#138](https://github.com/tuya/tuya-panel-sdk/issues/138)) ([9164447](https://github.com/tuya/tuya-panel-sdk/commit/9164447bda59ce0fc687540300badc8f57f2999c))
+* add colorRect and musicDrawer components ([#139](https://github.com/tuya/tuya-panel-sdk/issues/139)) ([9ec09b0](https://github.com/tuya/tuya-panel-sdk/commit/9ec09b0659a296b52f14fc263287251557230ca6))
+
+
+
+
+
 # [1.4.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.3.0...@tuya/tuya-panel-lamp-sdk@1.4.0) (2021-12-02)
 
 
