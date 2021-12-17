@@ -11,4 +11,8 @@ export default {
   app_music_ball: require('./app_music_ball.png'),
   app_music_game: require('./app_music_game.png'),
   app_music_romantic: require('./app_music_romantic.png'),
+  mode1: require('./mode1.png'),
+  mode2: require('./mode2.png'),
+  stopIconLight: require('./stopIcon_light.png'),
+  startIconLight: require('./startIcon_light.png'),
 };
