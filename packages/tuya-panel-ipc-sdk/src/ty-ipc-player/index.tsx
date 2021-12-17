@@ -286,7 +286,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           );
           return false;
         }
-        TYEvent.emit('streamStatus', { status: 5, errCode: 'session_disconnect' });
         this.props.onListenSessionDisConnect && this.props.onListenSessionDisConnect();
         // session断开和进入后台调用同样的逻辑
         exitPlayPreview();
