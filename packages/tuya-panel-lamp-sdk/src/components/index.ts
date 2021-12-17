@@ -34,11 +34,15 @@ export { default as CountdownPicker } from './picker/countdown-picker';
 
 export { default as ColorDisk } from './preview/color-disk';
 
+export { default as ColorRect } from './preview/color-rect';
+
 export { default as WeekGroup } from './week-group';
 
 export { default as MusicBar } from './music/music-bar';
 
 export { default as AppMusicCard } from './music/music-card/app-music-card';
+
+export { default as MusicDrawer } from './music/music-drawer';
 
 export { default as ConicalGradient } from './gradient/conical-gradient';
 

@@ -20,10 +20,12 @@ import ScaleSliderScene from './ScaleSlider';
 import WhiteCrossSliderScene from './WhiteCrossSlider';
 import CountdownPickerScene from './CountdownPicker';
 import ColorDiskScene from './ColorDisk';
+import ColorRectScene from './ColorRect';
 import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 import ConicalGradientScene from './ConicalGradient';
 import ColorSelectorAnimationScene from './ColorSelectorAnimation';
+import MusicDrawerScene from './MusicDrawer';
 
 export default class LampScene extends Component {
   get data() {
@@ -48,8 +50,10 @@ export default class LampScene extends Component {
   static ScaleSlider = ScaleSliderScene;
   static WhiteCrossSlider = WhiteCrossSliderScene;
   static ColorDisk = ColorDiskScene;
+  static ColorRect = ColorRectScene;
   static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
+  static MusicDrawer = MusicDrawerScene;
   static ConicalGradient = ConicalGradientScene;
   static ColorSelectorAnimation = ColorSelectorAnimationScene;
 

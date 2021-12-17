@@ -1,0 +1,461 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MusicBar components basic render no active 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    key="multi"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "overflow": "hidden",
+          "width": "100%",
+        },
+        undefined,
+        Object {
+          "height": 102,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "overflow": "hidden",
+            "width": "100%",
+          },
+          Object {
+            "height": 102,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <View>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            type={null}
+            weight={null}
+          >
+            模式0
+          </TYText>
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": "100%",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              undefined,
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      onLayout={[Function]}
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="single"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "overflow": "hidden",
+          "width": "100%",
+        },
+        undefined,
+        Object {
+          "height": 102,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          undefined,
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "overflow": "hidden",
+            "width": "100%",
+          },
+          Object {
+            "height": 102,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <View>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            type={null}
+            weight={null}
+          >
+            模式1
+          </TYText>
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": "100%",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              undefined,
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      onLayout={[Function]}
+    />
+  </AnimatedComponent>
+</View>
+`;
+
+exports[`MusicBar components basic render with active item 1`] = `
+<View
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    key="multi"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "overflow": "hidden",
+          "width": "100%",
+        },
+        Object {
+          "width": 420,
+        },
+        Object {
+          "height": 80,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "pink",
+          },
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "overflow": "hidden",
+            "width": "100%",
+          },
+          Object {
+            "height": 80,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "red",
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+        <View>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "fontSize": 16,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            title0
+          </TYText>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "fontSize": 12,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            subTitle0
+          </TYText>
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": "100%",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "green",
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      onLayout={[Function]}
+    />
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="single"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "white",
+          "overflow": "hidden",
+          "width": "100%",
+        },
+        Object {
+          "width": 420,
+        },
+        Object {
+          "height": 80,
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "pink",
+          },
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+            "overflow": "hidden",
+            "width": "100%",
+          },
+          Object {
+            "height": 80,
+          },
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "flexDirection": "row",
+            "justifyContent": "flex-start",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "red",
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+        <View>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "fontSize": 16,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            title1
+          </TYText>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "fontSize": 12,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            subTitle1
+          </TYText>
+        </View>
+      </View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        onPress={[Function]}
+        style={
+          Object {
+            "alignItems": "center",
+            "height": "100%",
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "backgroundColor": "green",
+              },
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+              },
+            ]
+          }
+        >
+          <Image
+            resizeMode="contain"
+            source={1}
+          />
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      onLayout={[Function]}
+    />
+  </AnimatedComponent>
+</View>
+`;
