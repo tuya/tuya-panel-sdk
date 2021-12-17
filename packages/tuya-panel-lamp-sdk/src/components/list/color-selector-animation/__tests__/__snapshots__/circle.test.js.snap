@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={1}
+>
+  <Component
+    color="#333"
+    size={14}
+  />
+</TouchableOpacity>
+`;
+
+exports[`Circle components basic render 1`] = `
+<AnimatedComponent
+  style={
+    Array [
+      Object {
+        "borderRadius": 28,
+        "height": 56,
+        "width": 56,
+      },
+      Object {
+        "backgroundColor": "#fff",
+        "transform": Array [
+          Object {
+            "scale": "#3330",
+          },
+        ],
+      },
+    ]
+  }
+/>
+`;

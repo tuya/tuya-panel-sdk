@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorSelectorAnimation components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginBottom": 18,
+        "paddingHorizontal": 40,
+      },
+      Object {
+        "flexWrap": "wrap",
+      },
+      Object {},
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    key="0"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "height": 64,
+        "justifyContent": "center",
+        "marginBottom": 18,
+        "marginRight": 18,
+        "width": 64,
+      }
+    }
+  >
+    <Circle
+      backgroundColor="rgb(255, 51, 51)"
+      scaleValue={1}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    key="1"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "height": 64,
+        "justifyContent": "center",
+        "marginBottom": 18,
+        "marginRight": 18,
+        "width": 64,
+      }
+    }
+  >
+    <Circle
+      backgroundColor="rgb(255, 208, 163)"
+      scaleValue={1}
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    key="2"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "height": 64,
+        "justifyContent": "center",
+        "marginBottom": 18,
+        "marginRight": 18,
+        "width": 64,
+      }
+    }
+  >
+    <Circle
+      backgroundColor="rgb(0, 85, 255)"
+      scaleValue={1}
+    />
+  </TouchableOpacity>
+  <Btn
+    iconColor="#000000"
+    onPress={[Function]}
+    path="M896 480H544.8V128h-65.6v352H128v66.4h351.2V896h65.6V546.4H896z"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "rgba(0,0,0,0.1)",
+          "borderRadius": 28,
+          "height": 56,
+          "justifyContent": "center",
+          "marginBottom": 18,
+          "marginRight": 18,
+          "width": 56,
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;

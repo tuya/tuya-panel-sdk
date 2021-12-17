@@ -23,6 +23,7 @@ import ColorDiskScene from './ColorDisk';
 import WeekGroupScene from './WeekGroup';
 import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 import ConicalGradientScene from './ConicalGradient';
+import ColorSelectorAnimationScene from './ColorSelectorAnimation';
 
 export default class LampScene extends Component {
   get data() {
@@ -50,6 +51,7 @@ export default class LampScene extends Component {
   static WeekGroup = WeekGroupScene;
   static AppMusicCard = AppMusicCardScene;
   static ConicalGradient = ConicalGradientScene;
+  static ColorSelectorAnimation = ColorSelectorAnimationScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
