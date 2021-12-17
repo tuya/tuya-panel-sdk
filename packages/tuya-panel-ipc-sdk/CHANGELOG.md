@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.11.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.11.1...@tuya/tuya-panel-ipc-sdk@1.11.2) (2021-12-17)
+
+
+### Bug Fixes
+
+* add sessionDisconnect stream status and export all native modules ([#140](https://github.com/tuya/tuya-panel-sdk/issues/140)) ([66d3163](https://github.com/tuya/tuya-panel-sdk/commit/66d31637d5c9286bb3d6a5950458ee8174d71fda))
+
+
+
+
+
 ## [1.11.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.11.0...@tuya/tuya-panel-ipc-sdk@1.11.1) (2021-11-15)
 
 
