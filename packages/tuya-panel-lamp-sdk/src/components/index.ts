@@ -45,3 +45,5 @@ export { default as AppMusicCard } from './music/music-card/app-music-card';
 export { default as MusicDrawer } from './music/music-drawer';
 
 export { default as ConicalGradient } from './gradient/conical-gradient';
+
+export { default as ColorSelectorAnimation } from './list/color-selector-animation';
