@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.5.0...@tuya/tuya-panel-outdoor-sdk@0.6.0) (2021-12-17)
+
+
+### Features
+
+* add outdoor component swiper-pop ([#131](https://github.com/tuya/tuya-panel-sdk/issues/131)) ([f1422f5](https://github.com/tuya/tuya-panel-sdk/commit/f1422f55b3ba788e91546e6e892a24a6cef43eb8))
+
+
+
+
+
 # [0.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.4.0...@tuya/tuya-panel-outdoor-sdk@0.5.0) (2021-11-18)
 
 
