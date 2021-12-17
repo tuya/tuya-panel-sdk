@@ -16,10 +16,10 @@ import Strings from './i18n';
 import Styles from './style';
 import { TYIpcMessagePlayerProps } from './interface';
 
-const CameraMessageManager = NativeModules.TYRCTCameraMessageManager;
+export const CameraMessageManager = NativeModules.TYRCTCameraMessageManager;
 
 const { isIOS } = publicConfig;
-const MediaPlayer = isIOS
+export const MediaPlayer = isIOS
   ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
   : requireNativeComponent('TYRCTCameraMessageMediaPlayerManager');
 

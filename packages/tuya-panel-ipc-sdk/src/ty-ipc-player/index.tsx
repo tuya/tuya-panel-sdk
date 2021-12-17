@@ -128,7 +128,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('deviceDataChange', this.dpChange);
     TYEvent.on('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.on('getCameraConfig', this.getCameraConfig);
-    TYEvent.on('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.on('isEnterRnPage', this.judgeIsEnterRnPage);
     TYEvent.on('activeChangeScale', this.activeChangeScale);
     TYIpcPlayerManager.startPlay(
       this.props.isWirless,
@@ -286,6 +286,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           );
           return false;
         }
+        TYEvent.emit('streamStatus', { status: 5, errCode: 'session_disconnect' });
         this.props.onListenSessionDisConnect && this.props.onListenSessionDisConnect();
         // session断开和进入后台调用同样的逻辑
         exitPlayPreview();
@@ -349,7 +350,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.off('deviceDataChange', this.dpChange);
     TYEvent.off('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.off('getCameraConfig', this.getCameraConfig);
-    TYEvent.off('isEnterRnPage', this.jugeIsEnterRnPage);
+    TYEvent.off('isEnterRnPage', this.judgeIsEnterRnPage);
     TYEvent.off('activeChangeScale', this.activeChangeScale);
     AppState.removeEventListener('change', this.handleAppStateChange);
     this.foregroundListener.remove();
@@ -455,7 +456,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     return zoomVideoStatus;
   };
 
-  jugeIsEnterRnPage = (value: boolean) => {
+  judgeIsEnterRnPage = (value: boolean) => {
     this.otherRnPage = value;
   };
 
@@ -533,7 +534,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.props.onListenTalkingChangeMute(voiceStatus);
   };
 
-  onChangePreview = () => { };
+  onChangePreview = () => {};
 
   // 推送是否在录像
   listenIsRecording = (data: any) => {
@@ -846,7 +847,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               <item.component
                 key={`${index + 1}`}
                 {...(item.propData,
-                  { hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight })}
+                { hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight })}
                 resetFullScreenBtn={value => {
                   this.props.onFullScreenTapView(value);
                 }}
