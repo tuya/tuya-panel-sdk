@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Btn components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={1}
+>
+  <Component
+    color="#333"
+    size={14}
+  />
+</TouchableOpacity>
+`;
