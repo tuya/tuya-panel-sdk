@@ -1,0 +1,629 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShadowCircleProgress components basic render 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 16,
+      "display": "flex",
+      "marginBottom": 49,
+      "marginTop": 40,
+      "paddingHorizontal": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 96,
+        "justifyContent": "center",
+        "marginBottom": 100,
+      }
+    }
+  >
+    <Image
+      key="left"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="stop"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="right"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Gradient
+      height={76}
+      width={670}
+      wrapperStyle={
+        Object {
+          "borderRadius": 16,
+        }
+      }
+    />
+    <_class2
+      activeColor="#4DC478"
+      activeKey="left"
+      defaultActiveKey={0}
+      isUnderlineCenter={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 16,
+          "height": 76,
+          "width": 670,
+        }
+      }
+      tabActiveStyle={
+        Object {
+          "backgroundColor": "#4DC478",
+          "borderRadius": 14,
+        }
+      }
+      tabActiveTextStyle={Object {}}
+      tabStyle={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      tabTextStyle={Object {}}
+      tabs={
+        Array [
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "left",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnLeft",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "stop",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "Stop",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "right",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnRight",
+          },
+        ]
+      }
+      type="radio"
+      underlineStyle={Object {}}
+      wrapperStyle={Object {}}
+    />
+  </View>
+</View>
+`;
+
+exports[`ShadowCircleProgress components basic render right 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 16,
+      "display": "flex",
+      "marginBottom": 49,
+      "marginTop": 40,
+      "paddingHorizontal": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 96,
+        "justifyContent": "center",
+        "marginBottom": 100,
+      }
+    }
+  >
+    <Image
+      key="left"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="stop"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="right"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Gradient
+      height={76}
+      width={670}
+      wrapperStyle={
+        Object {
+          "borderRadius": 16,
+        }
+      }
+    />
+    <_class2
+      activeColor="#4DC478"
+      activeKey="right"
+      defaultActiveKey={0}
+      isUnderlineCenter={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 16,
+          "height": 76,
+          "width": 670,
+        }
+      }
+      tabActiveStyle={
+        Object {
+          "backgroundColor": "#4DC478",
+          "borderRadius": 14,
+        }
+      }
+      tabActiveTextStyle={Object {}}
+      tabStyle={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      tabTextStyle={Object {}}
+      tabs={
+        Array [
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "left",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnLeft",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "stop",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "Stop",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "right",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnRight",
+          },
+        ]
+      }
+      type="radio"
+      underlineStyle={Object {}}
+      wrapperStyle={Object {}}
+    />
+  </View>
+</View>
+`;
+
+exports[`ShadowCircleProgress components basic render stop 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 16,
+      "display": "flex",
+      "marginBottom": 49,
+      "marginTop": 40,
+      "paddingHorizontal": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 96,
+        "justifyContent": "center",
+        "marginBottom": 100,
+      }
+    }
+  >
+    <Image
+      key="left"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="stop"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="right"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Gradient
+      height={76}
+      width={670}
+      wrapperStyle={
+        Object {
+          "borderRadius": 16,
+        }
+      }
+    />
+    <_class2
+      activeColor="#4DC478"
+      activeKey="stop"
+      defaultActiveKey={0}
+      isUnderlineCenter={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 16,
+          "height": 76,
+          "width": 670,
+        }
+      }
+      tabActiveStyle={
+        Object {
+          "backgroundColor": "#4DC478",
+          "borderRadius": 14,
+        }
+      }
+      tabActiveTextStyle={Object {}}
+      tabStyle={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      tabTextStyle={Object {}}
+      tabs={
+        Array [
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "left",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnLeft",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "stop",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "Stop",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 1)",
+            },
+            "key": "right",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnRight",
+          },
+        ]
+      }
+      type="radio"
+      underlineStyle={Object {}}
+      wrapperStyle={Object {}}
+    />
+  </View>
+</View>
+`;
+
+exports[`ShadowCircleProgress components basic render straight 1`] = `
+<View
+  style={
+    Object {
+      "borderRadius": 16,
+      "display": "flex",
+      "marginBottom": 49,
+      "marginTop": 40,
+      "paddingHorizontal": 40,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "display": "flex",
+        "flex": 1,
+        "flexDirection": "row",
+        "height": 96,
+        "justifyContent": "center",
+        "marginBottom": 100,
+      }
+    }
+  >
+    <Image
+      key="left"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="stop"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+    <Image
+      key="right"
+      resizeMode="contain"
+      source={1}
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 1,
+        "marginTop": 40,
+      }
+    }
+  >
+    <Gradient
+      height={76}
+      width={670}
+      wrapperStyle={
+        Object {
+          "borderRadius": 16,
+        }
+      }
+    />
+    <_class2
+      activeColor="transparent"
+      activeKey="straight"
+      defaultActiveKey={0}
+      isUnderlineCenter={true}
+      onChange={[Function]}
+      style={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 16,
+          "height": 76,
+          "width": 670,
+        }
+      }
+      tabActiveStyle={
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 14,
+        }
+      }
+      tabActiveTextStyle={Object {}}
+      tabStyle={
+        Object {
+          "backgroundColor": "transparent",
+        }
+      }
+      tabTextStyle={Object {}}
+      tabs={
+        Array [
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+            },
+            "key": "left",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnLeft",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+            },
+            "key": "stop",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "Stop",
+          },
+          Object {
+            "activeTextStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+            },
+            "key": "right",
+            "tabStyle": Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+            "textStyle": Object {
+              "color": "rgba(255, 255, 255, 0.5)",
+              "fontSize": 16,
+            },
+            "title": "TurnRight",
+          },
+        ]
+      }
+      type="radio"
+      underlineStyle={Object {}}
+      wrapperStyle={Object {}}
+    />
+  </View>
+</View>
+`;
