@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2021-12-21)
+
+
+### Features
+
+* **tuya-panel-protocols:** add protocals of lamp ([#33](https://github.com/tuya/tuya-panel-sdk/issues/33)) ([3b738de](https://github.com/tuya/tuya-panel-sdk/commit/3b738dee227acc9d2bc4452bcab5ac35390886e6))
+
+
+
+
+
 # 1.1.0 (2021-07-14)
 
 

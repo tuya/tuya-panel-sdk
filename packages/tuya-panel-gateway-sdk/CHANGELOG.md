@@ -3,6 +3,26 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* rename component topbarWithArc to topBarWithArc ([5e0a253](https://github.com/tuya/tuya-panel-sdk/commit/5e0a2538e1795fc3c8cb2e2e139c9d150e4c6c42))
+* unit test and example use local images instead of network images with "tuyacn" ([#74](https://github.com/tuya/tuya-panel-sdk/issues/74)) ([1f349a8](https://github.com/tuya/tuya-panel-sdk/commit/1f349a85961b82ed64b0616e0ab3cd7c923e0689))
+
+
+### Features
+
+* add gateway compoents([#94](https://github.com/tuya/tuya-panel-sdk/issues/94)) ([47524f6](https://github.com/tuya/tuya-panel-sdk/commit/47524f6e28e5485828d73211fcb1b40c0820878d))
+* add gateway util library ([#77](https://github.com/tuya/tuya-panel-sdk/issues/77)) ([4353c48](https://github.com/tuya/tuya-panel-sdk/commit/4353c4886a55b8bfc8fbcfdca68992b0308915f3))
+* add some props in gateway components named "Add Progress" and "Device List Panel" ([#127](https://github.com/tuya/tuya-panel-sdk/issues/127)) ([9bcdd33](https://github.com/tuya/tuya-panel-sdk/commit/9bcdd336efc6d711acddbf3e91b592126e2c559e))
+* **gateway:** new gateway components ([#42](https://github.com/tuya/tuya-panel-sdk/issues/42)) ([65ecb1c](https://github.com/tuya/tuya-panel-sdk/commit/65ecb1ca23270c9410307ed910cf6487162ecc5e))
+
+
+
+
+
 # [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.4.1...@tuya/tuya-panel-gateway-sdk@1.5.0) (2021-12-11)
 
 

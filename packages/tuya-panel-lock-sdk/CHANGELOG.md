@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([2b4b70c](https://github.com/tuya/tuya-panel-sdk/commit/2b4b70ca2a5a78cc6d99ba4b5d257b2e092b8f70))
+* defend-time i18n ([#40](https://github.com/tuya/tuya-panel-sdk/issues/40)) ([8d81b7b](https://github.com/tuya/tuya-panel-sdk/commit/8d81b7b77040aa009c1220a6e45907f057ad7643))
+* use 1.0 for m.smart.operate.publish.log ([f187fc7](https://github.com/tuya/tuya-panel-sdk/commit/f187fc72dd5e2f7d982176305dce9ca563dc142d))
+
+
+### Features
+
+* **lock:** add seven lock component ([#101](https://github.com/tuya/tuya-panel-sdk/issues/101)) ([6393369](https://github.com/tuya/tuya-panel-sdk/commit/6393369fab4ebca0fd9fd88c34df40e736950059))
+* **tuya-panel-lock-sdk:** add slide-choose component([#112](https://github.com/tuya/tuya-panel-sdk/issues/112)) ([c7ea5fc](https://github.com/tuya/tuya-panel-sdk/commit/c7ea5fc42643617923d9b6b2ad54a936ddfe01b7))
+* add single TimePicker component([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([41d2a8b](https://github.com/tuya/tuya-panel-sdk/commit/41d2a8b66a88e4eaf1e5179f81d72ae32838d833))
+* lock dete-picker-view component add ([#53](https://github.com/tuya/tuya-panel-sdk/issues/53)) ([1e734c1](https://github.com/tuya/tuya-panel-sdk/commit/1e734c10c9fdddca4cffda2a87d0114ec191eca6))
+* panel lock sdk/week selection ([#83](https://github.com/tuya/tuya-panel-sdk/issues/83)) ([13ce050](https://github.com/tuya/tuya-panel-sdk/commit/13ce0503117aae12fa0327381a921c58f63d8240))
+* **Lock_sdk:** link Select、getPassword、finger and defendTime ([2da7242](https://github.com/tuya/tuya-panel-sdk/commit/2da724202eca3f040aec2a05000e29b0dc49328b))
+* **remote:** tuya-panel-remote-sdk first version([#36](https://github.com/tuya/tuya-panel-sdk/issues/36)) ([be60317](https://github.com/tuya/tuya-panel-sdk/commit/be6031758802336652fd7f5d4132ac0eca877c64))
+
+
+
+
+
 # [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.4.0...@tuya/tuya-panel-lock-sdk@1.5.0) (2021-11-15)
 
 

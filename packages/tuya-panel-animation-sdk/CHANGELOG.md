@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([2b4b70c](https://github.com/tuya/tuya-panel-sdk/commit/2b4b70ca2a5a78cc6d99ba4b5d257b2e092b8f70))
+* babel.config.js require error ([87b02a4](https://github.com/tuya/tuya-panel-sdk/commit/87b02a4900e3c567409c78f164b9391a755ea804))
+* **types:** fix WaveView types ([ebab28b](https://github.com/tuya/tuya-panel-sdk/commit/ebab28bc429f7e26b4c0a0ad8f0f34ed815c4141))
+
+
+### Features
+
+* add single TimePicker component([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([41d2a8b](https://github.com/tuya/tuya-panel-sdk/commit/41d2a8b66a88e4eaf1e5179f81d72ae32838d833))
+* **remote:** tuya-panel-remote-sdk first version([#36](https://github.com/tuya/tuya-panel-sdk/issues/36)) ([be60317](https://github.com/tuya/tuya-panel-sdk/commit/be6031758802336652fd7f5d4132ac0eca877c64))
+* add battery component ([#30](https://github.com/tuya/tuya-panel-sdk/issues/30)) ([6d1930b](https://github.com/tuya/tuya-panel-sdk/commit/6d1930ba157075b7331f97dd2d911b3d3b6e9db0))
+* add video Bit components ([8ea570b](https://github.com/tuya/tuya-panel-sdk/commit/8ea570b500ebd87188b7250679723cdb08ee5e57))
+* **Lock_sdk:** link Select、getPassword、finger and defendTime ([2da7242](https://github.com/tuya/tuya-panel-sdk/commit/2da724202eca3f040aec2a05000e29b0dc49328b))
+* **Particle:** Added particle divergence and merge animation ([8667d21](https://github.com/tuya/tuya-panel-sdk/commit/8667d212599bc0e7c928aab3bc737bf02f8a02f7))
+
+
+
+
+
 # [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-animation-sdk@1.4.0...@tuya/tuya-panel-animation-sdk@1.5.0) (2021-10-12)
 
 

@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.8.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* **tuya-panel-api:** modify response type ([85e6eb2](https://github.com/tuya/tuya-panel-sdk/commit/85e6eb2df7ba2c93ddee33d7611c14681618848a))
+* export way error ([dabbc6a](https://github.com/tuya/tuya-panel-sdk/commit/dabbc6a4a05fd25b35c8baf002dfc009c1df381d))
+* robot api export modify ([5aaa47c](https://github.com/tuya/tuya-panel-sdk/commit/5aaa47c1c03c806ec66de8fccc17c973a6bac204))
+* sunRise SunSet & conditionNum type definition ([6ec4076](https://github.com/tuya/tuya-panel-sdk/commit/6ec407663c86d50b8bd194314d584f4958d1291b))
+* use 1.0 for m.smart.operate.publish.log ([f187fc7](https://github.com/tuya/tuya-panel-sdk/commit/f187fc72dd5e2f7d982176305dce9ca563dc142d))
+
+
+### Features
+
+* adaptation of cloud interface changes([#68](https://github.com/tuya/tuya-panel-sdk/issues/68)) ([27ad2b1](https://github.com/tuya/tuya-panel-sdk/commit/27ad2b1f39725535c6323d81800b580e54704fe4))
+* add gateway relation api ([46fedaa](https://github.com/tuya/tuya-panel-sdk/commit/46fedaa7adc2791068129f9975b34c86f899bbd6))
+* add IGetWeatherQuality_1 ([#80](https://github.com/tuya/tuya-panel-sdk/issues/80)) ([3fb9a79](https://github.com/tuya/tuya-panel-sdk/commit/3fb9a79fb8819fe2de25f2fe8d92c11ed492ea10))
+* **interface:** add return type ([#34](https://github.com/tuya/tuya-panel-sdk/issues/34)) ([b53dcb8](https://github.com/tuya/tuya-panel-sdk/commit/b53dcb8c499e2d27f32871a1e6288ba030508d3c))
+* Tuya panel electrician api ([685454d](https://github.com/tuya/tuya-panel-sdk/commit/685454d27942cd5865be68ec831583e5b6bc5f07))
+* **tuya-panel-robot-sdk:** api & map ([bf84610](https://github.com/tuya/tuya-panel-sdk/commit/bf846108fd740ddd6919f45cc90cc0b79d2256f3))
+* add tuya-panel-api package ([1781df1](https://github.com/tuya/tuya-panel-sdk/commit/1781df1f69584b4cd2e4f01171c932b66ce800b4))
+
+
+
+
+
 ## [1.7.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.7.1...@tuya/tuya-panel-api@1.7.2) (2021-11-17)
 
 

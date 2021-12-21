@@ -3,6 +3,57 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.12.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* 1. add session DisConnect event listener 2.add onRetry Connect listen ([f2d6575](https://github.com/tuya/tuya-panel-sdk/commit/f2d65759ba21b4b688f8eb1816c6f8d34b442bdc))
+* add import TYIpcGpsSignal from '../index'; ([d6d851b](https://github.com/tuya/tuya-panel-sdk/commit/d6d851b1ffd1dcf206c91dad5a9b4f62705c6abf))
+* add session Disconnect stream status and export all native  modules ([#140](https://github.com/tuya/tuya-panel-sdk/issues/140):) ([92d3847](https://github.com/tuya/tuya-panel-sdk/commit/92d38476113afb58a126c18ad25d03cb922214ef))
+* adjust onListen RetryClick method ([5abb314](https://github.com/tuya/tuya-panel-sdk/commit/5abb314134d70d742640fe9b1fd0e3dad8dfee46))
+* babel.config.js require error ([87b02a4](https://github.com/tuya/tuya-panel-sdk/commit/87b02a4900e3c567409c78f164b9391a755ea804))
+* Compatible with non-camera products([#106](https://github.com/tuya/tuya-panel-sdk/issues/106)) ([2c7e84b](https://github.com/tuya/tuya-panel-sdk/commit/2c7e84b1f813640814bf368fd675b2efd3ad2f56))
+* enter the background to disconnect the P2P connection([#64](https://github.com/tuya/tuya-panel-sdk/issues/64)) ([f5647d4](https://github.com/tuya/tuya-panel-sdk/commit/f5647d4c6a00d23c29a9d4a7d1fba219d0b64827))
+* fix single mic voice err ([ae8710e](https://github.com/tuya/tuya-panel-sdk/commit/ae8710eb8ed7ec87938463a6332177750540f607))
+* Fix tuya-panel-demo/examples/ipcBasic full screen error ([a4281c6](https://github.com/tuya/tuya-panel-sdk/commit/a4281c60e5784c44c4cd7a00180d0887ec001174)), closes [#17](https://github.com/tuya/tuya-panel-sdk/issues/17)
+* modify ios into the background will go to connect to the P2p problem ([78ec408](https://github.com/tuya/tuya-panel-sdk/commit/78ec408f7d9234ef5abdc06b721dbf6ae28e3268))
+* native module can not found([#121](https://github.com/tuya/tuya-panel-sdk/issues/121)) ([597adf7](https://github.com/tuya/tuya-panel-sdk/commit/597adf7e00ef2ff40eb5c58df30ecb9dbddab338))
+* reset eslint error tip ([69419d6](https://github.com/tuya/tuya-panel-sdk/commit/69419d6df144d72b1920e9cd97b4a5244d300811))
+* Talkback method export error message. ([#95](https://github.com/tuya/tuya-panel-sdk/issues/95)) ([bde5014](https://github.com/tuya/tuya-panel-sdk/commit/bde5014c8a6ce46fc2fda523007514d8ef1743c7))
+* **ipc:** fix the bug of ipc message player ([#88](https://github.com/tuya/tuya-panel-sdk/issues/88)) ([c3c1993](https://github.com/tuya/tuya-panel-sdk/commit/c3c19932e5a69ab30de2ffdad5b90d8a5508b018))
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([2b4b70c](https://github.com/tuya/tuya-panel-sdk/commit/2b4b70ca2a5a78cc6d99ba4b5d257b2e092b8f70))
+* Modify the method of entering the background ([5247539](https://github.com/tuya/tuya-panel-sdk/commit/5247539bb2e2bfe052e4395b319ba48fb5ddece3))
+* reset package path ([2376ea9](https://github.com/tuya/tuya-panel-sdk/commit/2376ea9386df7b02c0ae662c5c8e5b52d0496973))
+* type ([13bbae6](https://github.com/tuya/tuya-panel-sdk/commit/13bbae6ad4fd5c044f7319e6110923721b15e00c))
+* video scale for android ([527e437](https://github.com/tuya/tuya-panel-sdk/commit/527e437c65a0289f9433b34c6203f4ee98968332))
+* video scale method ([04566c8](https://github.com/tuya/tuya-panel-sdk/commit/04566c844d2456b6b5f5e781c98c04bfc5dd447e))
+
+
+### Features
+
+* **ipc:** add music and loading componenet([#97](https://github.com/tuya/tuya-panel-sdk/issues/97)) ([cfcc3ea](https://github.com/tuya/tuya-panel-sdk/commit/cfcc3ea543fae919de1d7759707fdcd73f4392fa))
+* **ipc:** modify music control component([#99](https://github.com/tuya/tuya-panel-sdk/issues/99)) ([7ff5eea](https://github.com/tuya/tuya-panel-sdk/commit/7ff5eeab5dc3bd1f34eaa2e3f301bb343fc681e8))
+* 1.add errCode 2.add seesiond is connect listen 3. add extra player Props ([150d9cd](https://github.com/tuya/tuya-panel-sdk/commit/150d9cdec917a2aee32cbb46f7fd678b6b14fd21))
+* add battery component ([#30](https://github.com/tuya/tuya-panel-sdk/issues/30)) ([6d1930b](https://github.com/tuya/tuya-panel-sdk/commit/6d1930ba157075b7331f97dd2d911b3d3b6e9db0))
+* add initStatus, isMuting, isRecording, isTalkBacking, isHDOn methods ([64b0ae0](https://github.com/tuya/tuya-panel-sdk/commit/64b0ae0753873c1667f84b5483562e2f2e6860c8))
+* add iosSnapShootToPhoneAlbums, pausePlay method ([#81](https://github.com/tuya/tuya-panel-sdk/issues/81)) ([56ad725](https://github.com/tuya/tuya-panel-sdk/commit/56ad725fb60067140d9f10773f40933ded4471ae))
+* add IpcGridList and IpcStep Button component ([#86](https://github.com/tuya/tuya-panel-sdk/issues/86)) ([3e7e07a](https://github.com/tuya/tuya-panel-sdk/commit/3e7e07a8586556e1d6dc8aded429a299c98e5aeb))
+* add single TimePicker component([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([41d2a8b](https://github.com/tuya/tuya-panel-sdk/commit/41d2a8b66a88e4eaf1e5179f81d72ae32838d833))
+* **ipc:** add gps signal and message player component ([#76](https://github.com/tuya/tuya-panel-sdk/issues/76)) ([acdceca](https://github.com/tuya/tuya-panel-sdk/commit/acdcecacf8619e21b5117d2162e6b6b28c56409d))
+* add pir,grid,layout, cross module ([fc7b448](https://github.com/tuya/tuya-panel-sdk/commit/fc7b448e53e09121678fa3c3997d1d4545ab14e4))
+* add progressBar, tempHumi, ptzandtimeInterval component([#37](https://github.com/tuya/tuya-panel-sdk/issues/37)) ([86cb939](https://github.com/tuya/tuya-panel-sdk/commit/86cb939e43cdcf6f6ecc4a626af65a54194c9230))
+* add TYIpcDragSort component ([#69](https://github.com/tuya/tuya-panel-sdk/issues/69)) ([b1dd95f](https://github.com/tuya/tuya-panel-sdk/commit/b1dd95f7c20e5aaa8ea72fa596786b66d6b2709e))
+* **ipc:** add ty-ipc-ptz component ([27742e5](https://github.com/tuya/tuya-panel-sdk/commit/27742e5183a96d0eb9184e88d864b9bc24789c31))
+* add Pir component ([8026fb1](https://github.com/tuya/tuya-panel-sdk/commit/8026fb1b8b9732e24ffa17392d552a83bf13caa8))
+* add video Bit components ([8ea570b](https://github.com/tuya/tuya-panel-sdk/commit/8ea570b500ebd87188b7250679723cdb08ee5e57))
+* add whether the exit component needs to be disconnected from P2P ([9480c8a](https://github.com/tuya/tuya-panel-sdk/commit/9480c8ace6620b1f8d343a9eb166e9ee072a6e91))
+* debugger player ([3d735d7](https://github.com/tuya/tuya-panel-sdk/commit/3d735d709942339759b95b6bc6b36ac97482cbb8))
+
+
+
+
+
 ## [1.11.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.11.1...@tuya/tuya-panel-ipc-sdk@1.11.2) (2021-12-17)
 
 

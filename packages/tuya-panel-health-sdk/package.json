@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-health-sdk",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "涂鸦健康组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",

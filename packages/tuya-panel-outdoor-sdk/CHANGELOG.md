@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.7.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([2b4b70c](https://github.com/tuya/tuya-panel-sdk/commit/2b4b70ca2a5a78cc6d99ba4b5d257b2e092b8f70))
+* Remove fixed image paths ([#70](https://github.com/tuya/tuya-panel-sdk/issues/70)) ([0adf47c](https://github.com/tuya/tuya-panel-sdk/commit/0adf47c3ab70c70bb0fc4b6afc092c4c3e68cfaa))
+
+
+### Features
+
+* add outdoor component swiper-pop ([#131](https://github.com/tuya/tuya-panel-sdk/issues/131)) ([935baf0](https://github.com/tuya/tuya-panel-sdk/commit/935baf0770c88967d377661ebb913c158ef25394))
+* add outdoor new component: DateText([#118](https://github.com/tuya/tuya-panel-sdk/issues/118)) ([db1cba2](https://github.com/tuya/tuya-panel-sdk/commit/db1cba2be44605228f536cf641cff3314a1c1975))
+* add outdoor new component:DateText([#111](https://github.com/tuya/tuya-panel-sdk/issues/111)) ([a9b47e3](https://github.com/tuya/tuya-panel-sdk/commit/a9b47e32bc5a733ddb45ca94b8061f4fec79b065))
+* add panel outdoor sdk([#58](https://github.com/tuya/tuya-panel-sdk/issues/58)) ([551c200](https://github.com/tuya/tuya-panel-sdk/commit/551c2001347cb2bda357871a7ce75ecf31a1b90a))
+* add single TimePicker component([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([41d2a8b](https://github.com/tuya/tuya-panel-sdk/commit/41d2a8b66a88e4eaf1e5179f81d72ae32838d833))
+* sport page, target and no target component([#123](https://github.com/tuya/tuya-panel-sdk/issues/123)) ([98f1424](https://github.com/tuya/tuya-panel-sdk/commit/98f1424a6f0b8cf110793ce1c9f0202c79e2ff3a))
+
+
+
+
+
 # [0.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.5.0...@tuya/tuya-panel-outdoor-sdk@0.6.0) (2021-12-17)
 
 

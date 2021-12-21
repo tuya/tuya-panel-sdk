@@ -3,6 +3,35 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.6.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* update musicDrawer test file ([#141](https://github.com/tuya/tuya-panel-sdk/issues/141)) ([f70cfb0](https://github.com/tuya/tuya-panel-sdk/commit/f70cfb067ecd0ab54af2df110b28e30e7a85ddfb))
+
+
+### Features
+
+* **lamp:** add sdk Formatter ([#132](https://github.com/tuya/tuya-panel-sdk/issues/132)) ([23027f2](https://github.com/tuya/tuya-panel-sdk/commit/23027f20bf2a4076ccd62e964a97c361e4c78a02))
+* **lamp:** add selector ([#138](https://github.com/tuya/tuya-panel-sdk/issues/138)) ([add94fc](https://github.com/tuya/tuya-panel-sdk/commit/add94fc406fd26edfd609905217d075770551edd))
+* add color Rect and music Drawer components([#139](https://github.com/tuya/tuya-panel-sdk/issues/139)) ([23103a2](https://github.com/tuya/tuya-panel-sdk/commit/23103a211e562f0c1be32aedeb8a62ebad3598ca))
+* add Conical Gradient and fix slider([#124](https://github.com/tuya/tuya-panel-sdk/issues/124)) ([5a86320](https://github.com/tuya/tuya-panel-sdk/commit/5a8632030044017dc35c568ed1c39a8fe4943b8e))
+* **lamp:** Add ColorDisk component([#103](https://github.com/tuya/tuya-panel-sdk/issues/103)) ([05d1b20](https://github.com/tuya/tuya-panel-sdk/commit/05d1b2023559f37b18954a3797c140f9979fce6b))
+* **lamp:** Add Countdown Picker component([#105](https://github.com/tuya/tuya-panel-sdk/issues/105)) ([05aa148](https://github.com/tuya/tuya-panel-sdk/commit/05aa1484f47b843091ec1b97691356dad46b3ce9))
+* **lamp:** add lamp readme ([c2e67ca](https://github.com/tuya/tuya-panel-sdk/commit/c2e67ca7541cf02c2abb9868d7c2e16d558a7dc4))
+* **lamp:** add list, preview and white picker ([#61](https://github.com/tuya/tuya-panel-sdk/issues/61)) ([d662fa0](https://github.com/tuya/tuya-panel-sdk/commit/d662fa092269c99c0354db9dfc9922e63e2111c6))
+* **lamp:** add MusicBar & AppMusicCard component([#102](https://github.com/tuya/tuya-panel-sdk/issues/102)) ([a340819](https://github.com/tuya/tuya-panel-sdk/commit/a3408198127240c760171675015befce22377563))
+* **lamp:** Add new slider component([#107](https://github.com/tuya/tuya-panel-sdk/issues/107)) ([96481ec](https://github.com/tuya/tuya-panel-sdk/commit/96481ec95a419a3a0ac36d72997db8e6a1d506c4))
+* **lamp:** Add WeekGroup component([#104](https://github.com/tuya/tuya-panel-sdk/issues/104)) ([ad87c0e](https://github.com/tuya/tuya-panel-sdk/commit/ad87c0e52f00fada7f6d2002c548ff53b29b944c))
+* add point color config of the circle-handle ([#91](https://github.com/tuya/tuya-panel-sdk/issues/91)) ([d27e1a9](https://github.com/tuya/tuya-panel-sdk/commit/d27e1a963227003dc69a04c09df59c0440d99d94))
+* add single TimePicker component([#84](https://github.com/tuya/tuya-panel-sdk/issues/84)) ([41d2a8b](https://github.com/tuya/tuya-panel-sdk/commit/41d2a8b66a88e4eaf1e5179f81d72ae32838d833))
+* **lamp:** lamp component example ([783cf80](https://github.com/tuya/tuya-panel-sdk/commit/783cf80bd4d2827f1bfced3325b2ac77fb1d63a8))
+
+
+
+
+
 # [1.5.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.4.0...@tuya/tuya-panel-lamp-sdk@1.5.0) (2021-12-17)
 
 

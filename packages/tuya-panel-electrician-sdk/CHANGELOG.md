@@ -3,6 +3,27 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.4.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* **electrician:** add uses ([9dac147](https://github.com/tuya/tuya-panel-sdk/commit/9dac14777242b37e8cc5743320490c57788a21f4))
+* **electrician:** fix scope ([fc12950](https://github.com/tuya/tuya-panel-sdk/commit/fc12950d97169a38a378cae4761ee4a25f0fda72))
+* **tuya-panel-electrician-sdk:** modify static assets path ([#78](https://github.com/tuya/tuya-panel-sdk/issues/78)) ([2b4b70c](https://github.com/tuya/tuya-panel-sdk/commit/2b4b70ca2a5a78cc6d99ba4b5d257b2e092b8f70))
+
+
+### Features
+
+* add electrician ([818c736](https://github.com/tuya/tuya-panel-sdk/commit/818c736e0592f91a562bd7ea75fac9412319a9bb))
+* **Countdown:** add readme ([6198cb9](https://github.com/tuya/tuya-panel-sdk/commit/6198cb901eeaf407ebeb978ffa2c7a01282aeed4))
+* **electrician:** add componts ([4bd8d9d](https://github.com/tuya/tuya-panel-sdk/commit/4bd8d9d170881e608ea109a0ee34dd7aa014e4e0))
+* **feature/tuya-panel-robot-sdk:** lz4 util recode by ts ([5d30226](https://github.com/tuya/tuya-panel-sdk/commit/5d302268889f8fcc7b3fa82bd6db71f2365dc029))
+
+
+
+
+
 ## [1.3.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-electrician-sdk@1.3.2...@tuya/tuya-panel-electrician-sdk@1.3.3) (2021-11-17)
 
 **Note:** Version bump only for package @tuya/tuya-panel-electrician-sdk

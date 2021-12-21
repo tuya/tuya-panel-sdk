@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 1.2.0 (2021-12-21)
+
+
+### Bug Fixes
+
+* babel.config.js require error ([87b02a4](https://github.com/tuya/tuya-panel-sdk/commit/87b02a4900e3c567409c78f164b9391a755ea804))
+* robot api export modify ([5aaa47c](https://github.com/tuya/tuya-panel-sdk/commit/5aaa47c1c03c806ec66de8fccc17c973a6bac204))
+
+
+### Features
+
+* **feature/tuya-panel-robot-sdk:** lz4 util recode by ts ([5d30226](https://github.com/tuya/tuya-panel-sdk/commit/5d302268889f8fcc7b3fa82bd6db71f2365dc029))
+* **staticResource:** remove the default static resource ([#79](https://github.com/tuya/tuya-panel-sdk/issues/79)) ([bc562b4](https://github.com/tuya/tuya-panel-sdk/commit/bc562b43352bfdf57f3bfd303f85d36bf5448f43))
+* **tuya-panel-robot-sdk:** add some api ([8e9d095](https://github.com/tuya/tuya-panel-sdk/commit/8e9d095455fbe6cd2a951cacb2a17e1c31585040))
+* **tuya-panel-robot-sdk:** api & map ([bf84610](https://github.com/tuya/tuya-panel-sdk/commit/bf846108fd740ddd6919f45cc90cc0b79d2256f3))
+* **tuya-panel-robot-sdk:** build utils ([09d5756](https://github.com/tuya/tuya-panel-sdk/commit/09d5756fecfb92288f37f5561a2b2181a235344e))
+* **tuya-panel-robot-sdk:** deving ([05d4204](https://github.com/tuya/tuya-panel-sdk/commit/05d4204e0d2509a2c1166161231afaceb18bda0d))
+
+
+
+
+
 ## [1.1.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-robot-sdk@1.1.0...@tuya/tuya-panel-robot-sdk@1.1.1) (2021-10-12)
 
 **Note:** Version bump only for package @tuya/tuya-panel-robot-sdk
