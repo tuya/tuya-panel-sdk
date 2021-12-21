@@ -11,6 +11,7 @@ import Battery from './battery';
 import SportNoTarget from './sport-no-target';
 import SportTarget from './sport-target';
 import SwipePop from './swipe-pop';
+import TurnLight from './turn-light';
 
 export default class OutdoorScene extends React.Component {
   get data() {
@@ -26,6 +27,7 @@ export default class OutdoorScene extends React.Component {
   static SportNoTarget = SportNoTarget;
   static SportTarget = SportTarget;
   static SwipePop = SwipePop;
+  static TurnLight = TurnLight;
 
   render() {
     return <TYFlatList data={this.data} />;

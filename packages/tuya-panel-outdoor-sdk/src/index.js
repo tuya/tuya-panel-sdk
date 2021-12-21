@@ -9,3 +9,4 @@ export { default as SportTargetContent } from './components/sport-target-value';
 export { default as SportNoTarget } from './components/sport-no-target';
 export { default as SportTarget } from './components/sport-target';
 export { default as SwipePop } from './components/swipe-pop';
+export { default as TurnLight } from './components/turn-light';
