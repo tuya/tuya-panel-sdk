@@ -26,25 +26,29 @@ declare interface SceneColor {
   temperature: number;
 }
 
-declare interface SceneValue {
-  id?: number;
-  time?: number;
-  mode?: number;
-  speed?: number;
-  colors?: SceneColor[];
-}
-declare interface SceneData {
-  sceneId?: number;
-  pic?: any; // 小图
-  picBig?: any; // 大图
-  picMiddle?: any; // 中图
-  isDefault?: boolean; // 是否为默认的配置
-  isCustom?: boolean; // 是否为自定义产品
-  picIndex?: number; // 自定义默认图序号
-  name?: string;
-  value?: SceneValue;
+declare interface SceneUnit {
+  time: number;
+  speed: number;
+  mode: number;
+  hue: number;
+  saturation: number;
+  value: number;
+  brightness: number;
+  temperature: number;
+  isColour?: boolean;
 }
 
+declare interface SceneValue {
+  id: number;
+  colors?: SceneUnit[];
+}
+declare interface SceneData {
+  sceneId: number;
+  pic?: any; // 小图
+  name: string;
+  addTime?: number; // 自定义时使用
+  value: SceneValue;
+}
 declare interface SceneCloudPic {
   sceneId?: number;
   fileUrl?: string;
@@ -106,6 +110,60 @@ declare interface IRhythmData {
   key?: number;
 }
 
+declare interface RandomTimerItem {
+  power: boolean;
+  channel: number;
+  weeks: number[];
+  startTime: number;
+  endTime: number;
+  color: {
+    hue: number;
+    saturation: number;
+    value: number;
+    brightness: number;
+    temperature: number;
+  };
+}
+
+declare interface RandomTimerData {
+  version: number;
+  length: number;
+  nodes: RandomTimerItem[];
+}
+
+declare interface CycleTimerItem {
+  power: boolean;
+  channel: number;
+  weeks: number[];
+  startTime: number;
+  endTime: number;
+  openTime: number;
+  closeTime: number;
+  color: {
+    hue: number;
+    saturation: number;
+    value: number;
+    brightness: number;
+    temperature: number;
+  };
+}
+
+declare interface CycleTimerData {
+  version: number;
+  length: number;
+  nodes: CycleTimerItem[];
+}
+
+declare interface PowerMemoryData {
+  version: number;
+  mode: number;
+  hue: number;
+  saturation: number;
+  value: number;
+  brightness: number;
+  temperature: number;
+}
+
 declare interface DpCodes {
   powerCode: string; // 开关
   workModeCode: string; // 工作模式
@@ -117,4 +175,8 @@ declare interface DpCodes {
   musicCode: string; // 音乐
   countdownCode: string; // 倒计时
   rhythmCode: string; // 生物节律
+  cycleTimingCode: string; // 循环定时
+  randomTimingCode: string; // 随机定时
+  powerMemoryCode: string; // 断电记忆
+  doNotDisturbCode: string; // 停电勿扰
 }

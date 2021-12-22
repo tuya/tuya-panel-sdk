@@ -9,4 +9,8 @@ export default {
   countdownCode: 'countdown',
   controlCode: 'control_data',
   rhythmCode: 'rhythm_mode',
+  cycleTimingCode: 'cycle_timing',
+  randomTimingCode: 'random_timing',
+  powerMemoryCode: 'power_memory',
+  doNotDisturbCode: 'do_not_disturb',
 } as DpCodes;
