@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.7.0...@tuya/tuya-panel-outdoor-sdk@0.8.0) (2021-12-23)
+
+
+### Features
+
+* add outdoor turnlight component ([#149](https://github.com/tuya/tuya-panel-sdk/issues/149)) ([5fbb2bc](https://github.com/tuya/tuya-panel-sdk/commit/5fbb2bce305d0e2faf3d8e4a254ad063c9a33e44))
+
+
+
+
+
 # 0.7.0 (2021-12-21)
 
 
