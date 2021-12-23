@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.6.0...@tuya/tuya-panel-lamp-sdk@1.7.0) (2021-12-23)
+
+
+### Features
+
+* **lamp:** add new dp formatter ([#150](https://github.com/tuya/tuya-panel-sdk/issues/150)) ([08f822c](https://github.com/tuya/tuya-panel-sdk/commit/08f822c7c10c934511848d08c73c04367dfc3341))
+
+
+
+
+
 # 1.6.0 (2021-12-21)
 
 
