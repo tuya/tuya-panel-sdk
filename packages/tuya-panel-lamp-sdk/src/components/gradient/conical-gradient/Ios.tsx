@@ -9,7 +9,7 @@ interface Props {
   style: StyleProp<ViewStyle>;
 }
 
-const RCTConicalGradent = requireNativeComponent('TYRCTConicGradientView');
+const TYRCTConicGradientComp = requireNativeComponent('TYRCTConicGradientView');
 
 export default class ConicalGradent extends PureComponent<Props> {
   static defaultProps = {
@@ -21,6 +21,6 @@ export default class ConicalGradent extends PureComponent<Props> {
   };
 
   render() {
-    return <RCTConicalGradent {...this.props} />;
+    return <TYRCTConicGradientComp {...this.props} />;
   }
 }
