@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DpCacheText default render 1`] = `
+<Text
+  numberOfLines={1}
+  style={
+    Array [
+      Object {
+        "color": "#000000",
+      },
+      undefined,
+    ]
+  }
+>
+  豆芽
+</Text>
+`;
+
+exports[`DpCacheText rander show icon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+    style={
+      Object {
+        "color": "#000000",
+      }
+    }
+  >
+    豆芽
+  </Text>
+  <Component
+    color="red"
+    name="warning"
+    size={12}
+    style={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+  />
+</View>
+`;
