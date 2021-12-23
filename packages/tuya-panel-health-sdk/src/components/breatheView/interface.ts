@@ -5,7 +5,7 @@ export interface BreatheViewProps {
    */
   style?: StyleProp<ViewStyle>;
   /**
-   * 是否开启旋转动画
+   * 是否开启呼吸
    */
   active?: boolean;
   /**

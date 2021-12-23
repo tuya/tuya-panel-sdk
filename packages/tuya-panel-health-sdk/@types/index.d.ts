@@ -141,7 +141,7 @@ export interface BarPercentProps {
 export class BarPercent extends React.Component<BarPercentProps> {}
 
 // ScaleSlider 滚动刻度尺
-export interface SliderRulerProps {
+export interface ScaleSliderProps {
   /**
    * @language zh-CN
    * @description 刻度最小值
@@ -232,7 +232,7 @@ export interface SliderRulerProps {
   width?: number;
 }
 
-export class UnLockButton extends React.Component<UnLockButtonProps> {}
+export class ScaleSlider extends React.Component<ScaleSliderProps> {}
 
 // UnLockButton
 export interface UnLockButtonProps {
@@ -324,7 +324,7 @@ export class UnLockButton extends React.Component<UnLockButtonProps> {}
 export interface BreatheViewProps {
   /**
    * @language zh-CN
-   * @description 是否开启旋转动画
+   * @description 是否开启呼吸动画
    * @defaultValue false
    */
   /**
@@ -357,13 +357,13 @@ export interface BreatheViewProps {
   useNativeDriver?: boolean;
   /**
    * @language zh-CN
-   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
-   * @defaultValue false
+   * @description 此动画是否在InteractionManager. 默认为真。
+   * @defaultValue true
    */
   /**
    * @language en-US
-   * @description The background color of the bottom ring
-   * @defaultValue false
+   * @description Whether or not this animation creates an "interaction handle" on the InteractionManager. Default true.
+   * @defaultValue true
    */
   isInteraction?: boolean;
   /**
@@ -420,12 +420,12 @@ export interface RotateViewProps {
   useNativeDriver?: boolean;
   /**
    * @language zh-CN
-   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+   * @description 此动画是否在InteractionManager. 默认为真。
    * @defaultValue false
    */
   /**
    * @language en-US
-   * @description The background color of the bottom ring
+   * @description Whether or not this animation creates an "interaction handle" on the InteractionManager. Default true.
    * @defaultValue false
    */
   isInteraction?: boolean;

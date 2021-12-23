@@ -34,8 +34,8 @@ export interface ProgressProps {
    */
   strokeWidth?: number;
   /**
-   * @zh 进度条的宽度。`circle` 类型的进度条仅支持数字类型的`width`
-   * @en The Progress width. The `circle` type Progress only supports the number type `width`
+   * @zh 进度条的宽度。
+   * @en The Progress width
    */
   width?: string | number;
 }
