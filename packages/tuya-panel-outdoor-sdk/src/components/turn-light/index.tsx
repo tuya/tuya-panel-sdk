@@ -29,7 +29,7 @@ const TurnLight: FC<TurnLightProps> = (props: TurnLightProps) => {
   const tabRadios = HeaderList.map(({ key, name }: { key: string; name: any }) => {
     return {
       key,
-      title: Strings.getLang(name),
+      title: Strings.getLang(`TYOutdoor_${name}`),
       tabStyle: { alignItems: 'center', justifyContent: 'center' },
       textStyle: { fontSize: 16, color: 'rgba(255, 255, 255, 0.5)' },
       activeTextStyle:

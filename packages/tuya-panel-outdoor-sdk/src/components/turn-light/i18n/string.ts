@@ -1,12 +1,12 @@
 export default {
   en: {
-    turnLeft: 'TurnLeft',
-    turnRight: 'TurnRight',
-    stop: 'Stop',
+    TYOutdoor_turnLeft: 'TurnLeft',
+    TYOutdoor_turnRight: 'TurnRight',
+    TYOutdoor_stop: 'Stop',
   },
   zh: {
-    turnLeft: '左转',
-    turnRight: '右转',
-    stop: '刹车',
+    TYOutdoor_turnLeft: '左转',
+    TYOutdoor_turnRight: '右转',
+    TYOutdoor_stop: '刹车',
   },
 };
