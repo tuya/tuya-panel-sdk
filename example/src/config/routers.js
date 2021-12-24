@@ -15,6 +15,7 @@ import Ipc from '../scenes/Ipc';
 import Electrician from '../scenes/Electrician';
 import ApiScene from '../scenes/ApiScene';
 import Outdoor from '../scenes/Outdoor';
+import Szos from '../scenes/Szos';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
@@ -35,128 +36,132 @@ import IpcInfo from '../../../packages/tuya-panel-ipc-sdk/package.json';
 import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/package.json';
 import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
 import OutdoorInfo from '../../../packages/tuya-panel-outdoor-sdk/package.json';
+import SzosInfo from '../../../packages/tuya-panel-szos-sdk/package.json';
 
 import { traverseRouters } from '../utils';
 
-const mainRouter = [
-  {
+const mainRouter = [{
     id: 'main',
     Scene: Home,
-  },
-];
+}, ];
 
 export const elementsRouters = _.sortBy(
-  [
-    // {
-    //   id: 'Basic',
-    //   title: BasicInfo.name,
-    //   subTitle: BasicInfo.version,
-    //   Scene: BasicCategory,
-    // },
-    {
-      id: 'Lock',
-      title: LockInfo.name,
-      subTitle: LockInfo.version,
-      Scene: LockCategory,
-    },
-    {
-      id: 'Lamp',
-      title: LampInfo.name,
-      subTitle: LampInfo.version,
-      Scene: LampCategory,
-    },
-    // {
-    //   id: 'Standard',
-    //   title: StandardInfo.name,
-    //   subTitle: StandardInfo.version,
-    //   Scene: StandardCategory,
-    // },
-    {
-      id: 'SweepRobot',
-      title: RobotInfo.name,
-      subTitle: RobotInfo.version,
-      Scene: SweepRobotCategory,
-    },
-    // {
-    //   id: 'OS',
-    //   title: OSInfo.name,
-    //   subTitle: OSInfo.version,
-    //   Scene: OSCategory,
-    // },
-    // {
-    //   id: 'Sensor',
-    //   title: SensorInfo.name,
-    //   subTitle: SensorInfo.version,
-    //   Scene: SensorCategory,
-    // },
-    // {
-    //   id: 'Theme',
-    //   title: 'Theme',
-    //   value: '前往配置主题变量',
-    //   Scene: ThemeSetting,
-    // },
-    {
-      id: 'Health',
-      title: HealthInfo.name,
-      subTitle: HealthInfo.version,
-      Scene: Health,
-    },
-    // {
-    //   id: 'FullRoom',
-    //   title: FullRoomInfo.name,
-    //   subTitle: FullRoomInfo.version,
-    //   Scene: FullRoomCategory,
-    // },
-    {
-      id: 'Gateway',
-      title: GatewayInfo.name,
-      subTitle: GatewayInfo.version,
-      Scene: GateWayCategory,
-    },
-    // {
-    //   id: 'Cbt',
-    //   title: CbtInfo.name,
-    //   subTitle: CbtInfo.version,
-    //   Scene: CbtCategory,
-    // },
-    {
-      id: 'Animation',
-      title: AnimationInfo.name,
-      subTitle: AnimationInfo.version,
-      Scene: AnimationCategory,
-    },
-    {
-      id: 'Remote',
-      title: RemoteInfo.name,
-      subTitle: RemoteInfo.version,
-      Scene: Remote,
-    },
-    {
-      id: 'Ipc',
-      title: IpcInfo.name,
-      subTitle: IpcInfo.version,
-      Scene: Ipc,
-    },
-    {
-      id: 'Electrician',
-      title: ElectricianInfo.name,
-      subTitle: ElectricianInfo.version,
-      Scene: Electrician,
-    },
-    {
-      id: 'ApiScene',
-      title: ApiSceneInfo.name,
-      subTitle: ApiSceneInfo.version,
-      Scene: ApiScene,
-    },
-    {
-      id: 'Outdoor',
-      title: OutdoorInfo.name,
-      subTitle: OutdoorInfo.version,
-      Scene: Outdoor,
-    },
-  ],
-  'id'
+    [
+        // {
+        //   id: 'Basic',
+        //   title: BasicInfo.name,
+        //   subTitle: BasicInfo.version,
+        //   Scene: BasicCategory,
+        // },
+        {
+            id: 'Lock',
+            title: LockInfo.name,
+            subTitle: LockInfo.version,
+            Scene: LockCategory,
+        },
+        {
+            id: 'Lamp',
+            title: LampInfo.name,
+            subTitle: LampInfo.version,
+            Scene: LampCategory,
+        },
+        // {
+        //   id: 'Standard',
+        //   title: StandardInfo.name,
+        //   subTitle: StandardInfo.version,
+        //   Scene: StandardCategory,
+        // },
+        {
+            id: 'SweepRobot',
+            title: RobotInfo.name,
+            subTitle: RobotInfo.version,
+            Scene: SweepRobotCategory,
+        },
+        // {
+        //   id: 'OS',
+        //   title: OSInfo.name,
+        //   subTitle: OSInfo.version,
+        //   Scene: OSCategory,
+        // },
+        // {
+        //   id: 'Sensor',
+        //   title: SensorInfo.name,
+        //   subTitle: SensorInfo.version,
+        //   Scene: SensorCategory,
+        // },
+        // {
+        //   id: 'Theme',
+        //   title: 'Theme',
+        //   value: '前往配置主题变量',
+        //   Scene: ThemeSetting,
+        // },
+        {
+            id: 'Health',
+            title: HealthInfo.name,
+            subTitle: HealthInfo.version,
+            Scene: Health,
+        },
+        // {
+        //   id: 'FullRoom',
+        //   title: FullRoomInfo.name,
+        //   subTitle: FullRoomInfo.version,
+        //   Scene: FullRoomCategory,
+        // },
+        {
+            id: 'Gateway',
+            title: GatewayInfo.name,
+            subTitle: GatewayInfo.version,
+            Scene: GateWayCategory,
+        },
+        // {
+        //   id: 'Cbt',
+        //   title: CbtInfo.name,
+        //   subTitle: CbtInfo.version,
+        //   Scene: CbtCategory,
+        // },
+        {
+            id: 'Animation',
+            title: AnimationInfo.name,
+            subTitle: AnimationInfo.version,
+            Scene: AnimationCategory,
+        },
+        {
+            id: 'Remote',
+            title: RemoteInfo.name,
+            subTitle: RemoteInfo.version,
+            Scene: Remote,
+        },
+        {
+            id: 'Ipc',
+            title: IpcInfo.name,
+            subTitle: IpcInfo.version,
+            Scene: Ipc,
+        },
+        {
+            id: 'Electrician',
+            title: ElectricianInfo.name,
+            subTitle: ElectricianInfo.version,
+            Scene: Electrician,
+        },
+        {
+            id: 'ApiScene',
+            title: ApiSceneInfo.name,
+            subTitle: ApiSceneInfo.version,
+            Scene: ApiScene,
+        },
+        {
+            id: 'Outdoor',
+            title: OutdoorInfo.name,
+            subTitle: OutdoorInfo.version,
+            Scene: Outdoor,
+        }, {
+            id: 'Szos',
+            title: SzosInfo.name,
+            subTitle: SzosInfo.version,
+            Scene: Szos,
+        },
+    ],
+    'id'
 );
 
 export const subRouters = [...traverseRouters(elementsRouters, 2)];
