@@ -1,24 +1,13 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useEffect, useState, useRef } from 'react';
-import {
-  View,
-  StyleSheet,
-  ViewStyle,
-  StyleProp,
-  TouchableOpacity,
-  ScrollView,
-  NativeScrollEvent,
-  LayoutChangeEvent,
-} from 'react-native';
+import { View, StyleSheet, TouchableOpacity, ScrollView, LayoutChangeEvent } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import { ColorUtils } from '../../../utils';
 import { IColor, IColorSelectorAnimationProp } from './interface';
 import Circle from './Circle';
 import Btn from './Btn';
-// eslint-disable-next-line import/no-named-as-default
 import icon from '../../../res/iconfont';
 
-const { convertX: cx, winWidth } = Utils.RatioUtils;
+const { convertX: cx } = Utils.RatioUtils;
 
 const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
   onDel,
@@ -66,8 +55,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
       const active = index === i;
       return (
         <TouchableOpacity
-          // eslint-disable-next-line react/no-array-index-key
-          key={i}
+          key={i.toString(10)}
           activeOpacity={0.7}
           onPress={() => onSelect(i)}
           style={active ? activeStyle : btnStyle}
@@ -175,7 +163,7 @@ ColorSelectorAnimation.defaultProps = {
   delBtnStyle: {},
   activeStyle: {
     alignItems: 'center',
-    borderRadius: cx(14),
+    borderRadius: Math.round(cx(14)),
     borderWidth: 2,
     borderColor: 'rgba(0,0,0,0.9)',
     height: cx(28),
@@ -187,19 +175,17 @@ ColorSelectorAnimation.defaultProps = {
   },
   btnStyle: {
     alignItems: 'center',
-    borderRadius: cx(16),
+    borderRadius: Math.round(cx(16)),
     height: cx(32),
     justifyContent: 'center',
     marginRight: cx(9),
     width: cx(32),
     marginBottom: cx(9),
+    overflow: 'hidden',
   },
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onSelect(index: number) {},
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
+  onSelect() {},
   onAdd() {},
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  onDel(index: number) {},
+  onDel() {},
   addIconColor: '#000000',
   delIconColor: '#000000',
 };
@@ -208,11 +194,12 @@ const styles = StyleSheet.create({
   buttonStyle: {
     alignItems: 'center',
     backgroundColor: 'rgba(0,0,0,0.1)',
-    borderRadius: cx(14),
+    borderRadius: Math.round(cx(14)),
     height: cx(28),
     justifyContent: 'center',
     marginBottom: cx(9),
     marginRight: cx(9),
+    overflow: 'hidden',
     width: cx(28),
   },
   container: {

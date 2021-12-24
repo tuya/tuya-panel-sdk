@@ -11,6 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@tuya/tuya-panel-api": "^1.8.0",
     "ahooks": "^2.10.11",
     "color": "0.11.4",
     "d3-interpolate": "^1.4.0",
@@ -34,7 +35,7 @@
     "react-native": "^0.51.0",
     "react-native-image-picker": "0.26.10",
     "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "^4.4.0"
+    "tuya-panel-kit": "^4.7.12"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

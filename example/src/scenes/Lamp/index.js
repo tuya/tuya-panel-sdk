@@ -26,6 +26,11 @@ import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 import ConicalGradientScene from './ConicalGradient';
 import ColorSelectorAnimationScene from './ColorSelectorAnimation';
 import MusicDrawerScene from './MusicDrawer';
+import NormalTimingScene from './NormalTiming';
+import SceneFunScene from './SceneFun';
+import AddTimerScene from './NormalTiming/addTimer';
+import RepeatScene from './NormalTiming/weeks';
+import TestWhiteScene from './NormalTiming/testWhite';
 
 export default class LampScene extends Component {
   get data() {
@@ -56,6 +61,11 @@ export default class LampScene extends Component {
   static MusicDrawer = MusicDrawerScene;
   static ConicalGradient = ConicalGradientScene;
   static ColorSelectorAnimation = ColorSelectorAnimationScene;
+  static NormalTiming = NormalTimingScene;
+  static SceneFun = SceneFunScene;
+  static AddTimer = AddTimerScene;
+  static Repeat = RepeatScene;
+  static TestWhite = TestWhiteScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;

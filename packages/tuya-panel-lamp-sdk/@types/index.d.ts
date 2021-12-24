@@ -4,7 +4,6 @@ declare interface ConnectProps {
   robotStatus?: string;
   updateDp(d: any): void;
 }
-
 declare interface IColour {
   hue?: number;
   saturation: number;
@@ -117,4 +116,14 @@ declare interface DpCodes {
   musicCode: string; // 音乐
   countdownCode: string; // 倒计时
   rhythmCode: string; // 生物节律
+}
+
+declare interface ISceneData {
+  dpCode: string;
+  icon: string;
+  sceneName: string;
+  sceneData: string;
+  sceneId: number;
+  gmtCreate?: number;
+  gmtModified?: number;
 }

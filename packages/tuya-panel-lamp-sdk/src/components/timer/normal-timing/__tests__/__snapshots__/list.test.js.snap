@@ -1,0 +1,133 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List components base renderItem 1`] = `
+<FlatList
+  ListEmptyComponent={
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Object {
+            "tintColor": "#fff",
+          }
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "rgba(0,0,0,0.3)",
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        No timing
+      </TYText>
+    </View>
+  }
+  ListHeaderComponent={[Function]}
+  contentContainerStyle={
+    Array [
+      Object {
+        "paddingBottom": 220,
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+  data={Array []}
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;
+
+exports[`List components basic render 1`] = `
+<FlatList
+  ListEmptyComponent={
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <Image
+        resizeMode="contain"
+        source={1}
+        style={
+          Object {
+            "tintColor": "#fff",
+          }
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "color": "rgba(0,0,0,0.3)",
+          }
+        }
+        type={null}
+        weight={null}
+      >
+        No timing
+      </TYText>
+    </View>
+  }
+  ListHeaderComponent={[Function]}
+  contentContainerStyle={
+    Array [
+      Object {
+        "paddingBottom": 220,
+      },
+      Object {
+        "flex": 1,
+      },
+    ]
+  }
+  data={Array []}
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  showsVerticalScrollIndicator={false}
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;

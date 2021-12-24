@@ -61,9 +61,17 @@ module.exports = {
         'tuya.m.linkage.rule.disable',
         'tuya.m.device.lock.active.period',
         'tuya.m.device.relation.update.for.ble',
-        'tuya.m.device.relation.update'
+        'tuya.m.device.relation.update',
+        'tuya.m.timer.group.add',
+        'tuya.m.timer.group.update',
+        'tuya.m.timer.group.list',
+        'tuya.m.timer.group.remove',
+        'tuya.m.timer.group.status.update',
+        'tuya.m.light.scenelib.version.list',
+        'tuya.m.light.panel.scenelib.get',
+        'tuya.m.light.panel.scenelib.version.upgrade',
       ],
-    ]
+    ],
   },
   overrides: [
     {
@@ -73,7 +81,7 @@ module.exports = {
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
-        }
+        },
       },
       rules: {
         ...require('eslint-config-tuya-panel/overrides/rules/javascript'),
@@ -86,13 +94,13 @@ module.exports = {
         ],
         'react/state-in-constructor': 0,
       },
-      "settings": {
-        "import/resolver": {
-          "node": {
-            "extensions": [".js", ".jsx", ".ts", ".tsx"]
-          }
-        }
+      settings: {
+        'import/resolver': {
+          node: {
+            extensions: ['.js', '.jsx', '.ts', '.tsx'],
+          },
+        },
       },
-    }
+    },
   ],
 };
