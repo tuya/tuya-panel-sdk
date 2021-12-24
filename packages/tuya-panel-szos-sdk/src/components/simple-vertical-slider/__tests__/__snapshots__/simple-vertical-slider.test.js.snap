@@ -59,6 +59,7 @@ exports[`SimpleVerticalSlider components basic render 1`] = `
         Object {
           "backgroundColor": "#000",
           "height": 0,
+          "overflow": "hidden",
         },
       ]
     }
@@ -125,6 +126,7 @@ exports[`SimpleVerticalSlider components render touch 1`] = `
         Object {
           "backgroundColor": "#000",
           "height": NaN,
+          "overflow": "hidden",
         },
       ]
     }
@@ -191,6 +193,7 @@ exports[`SimpleVerticalSlider components render touch disabled 1`] = `
         Object {
           "backgroundColor": "#000",
           "height": 0,
+          "overflow": "hidden",
         },
       ]
     }

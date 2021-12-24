@@ -2,7 +2,7 @@
 
 [English](./README.md) | 简体中文
 
-涂鸦 深圳 OS 组件库
+涂鸦深圳 OS 组件库
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-szos-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-szos-sdk)
 
@@ -17,7 +17,7 @@ $ yarn add @tuya/tuya-panel-szos-sdk
 ## 使用
 
 ```js
-import { SoundWave } from '@tuya/tuya-panel-szos-sdk';
+import { TurnPlate } from '@tuya/tuya-panel-szos-sdk';
 ```
 
 ## 文档

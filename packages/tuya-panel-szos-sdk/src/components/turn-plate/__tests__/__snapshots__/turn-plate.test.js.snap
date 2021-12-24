@@ -14,7 +14,7 @@ exports[`TurnPlate components basic render 1`] = `
         "position": "relative",
         "width": 600,
       },
-      undefined,
+      Object {},
     ]
   }
 >
@@ -548,51 +548,51 @@ exports[`TurnPlate components basic render 1`] = `
         }
       />
     </AnimatedComponent>
-    <Progress
-      andDegree={290}
-      backColor="#E5E5E5"
-      backStrokeOpacity={1}
-      disabled={false}
-      endColor={null}
-      foreColor="#FF4800"
-      foreStrokeOpacity={1}
-      gradientId="Progress"
-      max={100}
-      min={0}
-      needMaxCircle={true}
-      needMinCircle={false}
-      onSlidingComplete={[Function]}
-      onValueChange={[Function]}
-      pointerEvents="box-only"
-      renderCenterView={null}
-      scaleHeight={30}
-      startColor={null}
-      startDegree={125}
-      stepValue={5}
-      style={
-        Array [
-          Object {
-            "opacity": 0,
-            "position": "absolute",
-          },
-          Object {
-            "height": 370,
-            "width": 370,
-          },
-          Object {},
-        ]
-      }
-      thumbFill="#fff"
-      thumbRadius={2}
-      thumbStroke="#fff"
-      thumbStrokeWidth={2}
-      value={0}
-      x1="0%"
-      x2="100%"
-      y1="0%"
-      y2="0%"
-    />
   </View>
+  <Progress
+    andDegree={280}
+    backColor="#E5E5E5"
+    backStrokeOpacity={1}
+    disabled={false}
+    endColor={null}
+    foreColor="#FF4800"
+    foreStrokeOpacity={1}
+    gradientId="Progress"
+    max={500}
+    min={0}
+    needMaxCircle={true}
+    needMinCircle={false}
+    onSlidingComplete={[Function]}
+    onValueChange={[Function]}
+    pointerEvents="box-only"
+    renderCenterView={null}
+    scaleHeight={90}
+    startColor={null}
+    startDegree={130}
+    stepValue={25}
+    style={
+      Array [
+        Object {
+          "opacity": 0,
+          "position": "absolute",
+        },
+        Object {
+          "height": 700,
+          "width": 700,
+        },
+        Object {},
+      ]
+    }
+    thumbFill="#fff"
+    thumbRadius={45}
+    thumbStroke="#fff"
+    thumbStrokeWidth={2}
+    value={0}
+    x1="0%"
+    x2="100%"
+    y1="0%"
+    y2="0%"
+  />
 </ImageBackground>
 `;
 
@@ -610,7 +610,7 @@ exports[`TurnPlate components dot render 1`] = `
         "position": "relative",
         "width": 600,
       },
-      undefined,
+      Object {},
     ]
   }
 >
@@ -696,7 +696,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 54.73983990404929,
           "top": 312.8301829746827,
@@ -719,7 +719,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 56.95479825716694,
           "top": 256.45572839034463,
@@ -742,7 +742,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 72.2689121972912,
           "top": 202.1559762323784,
@@ -765,7 +765,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 99.8359213500126,
           "top": 152.9315394498065,
@@ -788,7 +788,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 138.1324684007558,
           "top": 111.50256825599268,
@@ -811,7 +811,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 185.04228006250872,
           "top": 80.15843419479174,
@@ -834,7 +834,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 237.97311267458275,
           "top": 60.6312191045576,
@@ -857,7 +857,7 @@ exports[`TurnPlate components dot render 1`] = `
           "width": 20,
         },
         Object {
-          "backgroundColor": "#0ff",
+          "backgroundColor": "#ffa",
           "height": 12,
           "left": 293.99999999999994,
           "top": 54,
@@ -1114,7 +1114,7 @@ exports[`TurnPlate components dot render 1`] = `
           Object {
             "transform": Array [
               Object {
-                "rotate": "135deg",
+                "rotate": "27deg",
               },
             ],
           },
@@ -1144,50 +1144,50 @@ exports[`TurnPlate components dot render 1`] = `
         }
       />
     </AnimatedComponent>
-    <Progress
-      andDegree={290}
-      backColor="#E5E5E5"
-      backStrokeOpacity={1}
-      disabled={false}
-      endColor={null}
-      foreColor="#FF4800"
-      foreStrokeOpacity={1}
-      gradientId="Progress"
-      max={100}
-      min={0}
-      needMaxCircle={true}
-      needMinCircle={false}
-      onSlidingComplete={[Function]}
-      onValueChange={[Function]}
-      pointerEvents="box-only"
-      renderCenterView={null}
-      scaleHeight={30}
-      startColor={null}
-      startDegree={125}
-      stepValue={5}
-      style={
-        Array [
-          Object {
-            "opacity": 0,
-            "position": "absolute",
-          },
-          Object {
-            "height": 370,
-            "width": 370,
-          },
-          Object {},
-        ]
-      }
-      thumbFill="#fff"
-      thumbRadius={2}
-      thumbStroke="#fff"
-      thumbStrokeWidth={2}
-      value={50}
-      x1="0%"
-      x2="100%"
-      y1="0%"
-      y2="0%"
-    />
   </View>
+  <Progress
+    andDegree={280}
+    backColor="#E5E5E5"
+    backStrokeOpacity={1}
+    disabled={false}
+    endColor={null}
+    foreColor="#FF4800"
+    foreStrokeOpacity={1}
+    gradientId="Progress"
+    max={500}
+    min={0}
+    needMaxCircle={true}
+    needMinCircle={false}
+    onSlidingComplete={[Function]}
+    onValueChange={[Function]}
+    pointerEvents="box-only"
+    renderCenterView={null}
+    scaleHeight={90}
+    startColor={null}
+    startDegree={130}
+    stepValue={25}
+    style={
+      Array [
+        Object {
+          "opacity": 0,
+          "position": "absolute",
+        },
+        Object {
+          "height": 700,
+          "width": 700,
+        },
+        Object {},
+      ]
+    }
+    thumbFill="#fff"
+    thumbRadius={45}
+    thumbStroke="#fff"
+    thumbStrokeWidth={2}
+    value={50}
+    x1="0%"
+    x2="100%"
+    y1="0%"
+    y2="0%"
+  />
 </ImageBackground>
 `;

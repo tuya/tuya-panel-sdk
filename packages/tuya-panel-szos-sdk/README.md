@@ -2,7 +2,7 @@
 
 English | [简体中文](./README-zh_CN.md)
 
-Tuya szos component library
+Tuya Szos component library
 
 [![](https://img.shields.io/npm/v/@tuya/tuya-panel-szos-sdk/latest.svg)](https://www.npmjs.com/package/@tuya/tuya-panel-szos-sdk)
 
@@ -17,7 +17,7 @@ $ yarn add @tuya/tuya-panel-szos-sdk
 ## Usage
 
 ```js
-import { SoundWave } from '@tuya/tuya-panel-szos-sdk';
+import { TurnPlate } from '@tuya/tuya-panel-szos-sdk';
 ```
 
 ## Doc

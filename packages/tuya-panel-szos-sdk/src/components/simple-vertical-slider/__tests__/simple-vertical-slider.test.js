@@ -1,5 +1,4 @@
 import React from 'react';
-import { View } from 'react-native';
 import { shallow } from 'enzyme';
 import SimpleVerticalSlider from '..';
 
@@ -12,10 +11,12 @@ describe('SimpleVerticalSlider components', () => {
     value = 100;
     wrapper.setProps({ value });
   });
-  it(' type="linearGradient" render', () => {
+  it('type="linearGradient" render', () => {
     let value = 0;
-    const wrapper = shallow(<SimpleVerticalSlider type="linearGradient"  value={value} min={0} max={120} />);
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = shallow(
+      <SimpleVerticalSlider type="linearGradient" value={value} min={0} max={120} />
+    );
+    expect(wrapper.find('LinearGradient').name()).toBe('LinearGradient');
     value = 100;
     wrapper.setProps({ value });
   });

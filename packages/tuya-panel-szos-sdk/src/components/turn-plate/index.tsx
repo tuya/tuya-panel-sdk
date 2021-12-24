@@ -1,7 +1,15 @@
-import React, { FC, useEffect, useState } from 'react'
-import { Animated, ImageBackground, ImageSourcePropType, StyleProp, StyleSheet, View, ViewStyle, } from 'react-native'
-import { Progress, Utils } from 'tuya-panel-kit'
-import res from '../../res'
+import React, { FC, useEffect, useState } from 'react';
+import {
+  Animated,
+  ImageBackground,
+  ImageSourcePropType,
+  StyleProp,
+  StyleSheet,
+  View,
+  ViewStyle,
+} from 'react-native';
+import { Progress, Utils } from 'tuya-panel-kit';
+import res from '../../res';
 
 interface IProps {
   /**
@@ -50,39 +58,39 @@ interface IProps {
   imageSource?: ImageSourcePropType;
 }
 
-const { convertY,convertX } = Utils.RatioUtils
+const { convertY, convertX } = Utils.RatioUtils;
 
-const DriverHeight = convertY(185)
-const BoxHeight = convertY(300)
+const DriverHeight = convertY(185);
+const BoxHeight = convertY(300);
 // 点与点之间的角度
-const angleUnit = 13.5
-const DotCount = 21
-const intAngle = 225
+const angleUnit = 13.5;
+const DotCount = 21;
+const intAngle = 225;
 
 const TurnPlate: FC<IProps> = ({
-                                 turnPlateStyle = {},
-                                 imageStyle,
-                                 dotStyle = {},
-                                 turnPlateDotStyle = {},
-                                 progressStyle = {},
-                                 onTurnPlateChange,
-                                 value = 0,
-                                 stepValue = 25,
-                                 activeColor = '#6161EF',
-                                 inactiveColor = '#D9D9E0',
-                                 imageSource = res.driver,
-                               }: IProps) => {
-  const [ang, setAng] = useState<number>(value / stepValue)
+  turnPlateStyle,
+  imageStyle,
+  dotStyle,
+  turnPlateDotStyle,
+  progressStyle,
+  onTurnPlateChange,
+  value = 0,
+  stepValue,
+  activeColor,
+  inactiveColor,
+  imageSource,
+}: IProps) => {
+  const [ang, setAng] = useState<number>(value / stepValue);
 
   useEffect(() => {
     if (value) {
-      setAng(value / stepValue)
+      setAng(value / stepValue);
     }
-  }, [value])
+  }, [value]);
   return (
     <ImageBackground source={imageSource} style={[style.background, imageStyle]}>
       {Array.from({ length: DotCount }).map((c, i) => {
-        const dotAngle = ((i * angleUnit + intAngle) / 180) * Math.PI
+        const dotAngle = ((i * angleUnit + intAngle) / 180) * Math.PI;
         return (
           <View
             key={dotAngle}
@@ -100,15 +108,13 @@ const TurnPlate: FC<IProps> = ({
               dotStyle,
             ]}
           />
-        )
+        );
       })}
 
       <View style={[style.wrap, turnPlateStyle]}>
         <Animated.View style={[{ transform: [{ rotate: `${ang * angleUnit}deg` }] }, style.wrap]}>
-          <View style={[style.dot, { backgroundColor: activeColor }, turnPlateDotStyle]}/>
+          <View style={[style.dot, { backgroundColor: activeColor }, turnPlateDotStyle]} />
         </Animated.View>
-
-
       </View>
       <Progress
         style={[{ position: 'absolute', opacity: 0 }, style.progress, progressStyle]}
@@ -120,16 +126,26 @@ const TurnPlate: FC<IProps> = ({
         scaleHeight={90}
         thumbRadius={45}
         onValueChange={v => {
-          setAng(v / stepValue)
+          setAng(v / stepValue);
         }}
         onSlidingComplete={(v: number) => {
-          onTurnPlateChange(v)
+          onTurnPlateChange(v);
         }}
       />
     </ImageBackground>
-  )
-}
-
+  );
+};
+TurnPlate.defaultProps = {
+  turnPlateStyle: {},
+  dotStyle: {},
+  turnPlateDotStyle: {},
+  progressStyle: {},
+  imageStyle: {},
+  stepValue: 25,
+  activeColor: '#6161EF',
+  inactiveColor: '#D9D9E0',
+  imageSource: res.driver,
+};
 const style = StyleSheet.create({
   background: {
     alignItems: 'center',
@@ -156,6 +172,6 @@ const style = StyleSheet.create({
     height: DriverHeight,
     width: DriverHeight,
   },
-})
+});
 
-export default TurnPlate
+export default TurnPlate;

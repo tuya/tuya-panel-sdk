@@ -1,3 +1,5 @@
+/* eslint-disable react/sort-comp */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
 import {
   Animated,
@@ -11,9 +13,9 @@ import {
   ViewStyle,
 } from 'react-native';
 import { LinearGradient, Utils } from 'tuya-panel-kit';
-import {Rect} from 'react-native-svg';
+import { Rect } from 'react-native-svg';
 
-const { convertX: cx,convertY:cy } = Utils.RatioUtils;
+const { convertX: cx, convertY: cy } = Utils.RatioUtils;
 
 const defaultProps = {
   /**
@@ -73,7 +75,7 @@ const defaultProps = {
    */
   stops: {
     '0%': '#3ff3e9',
-    '100%': '#7C46CD'
+    '100%': '#7C46CD',
   },
   /**
    *
@@ -110,10 +112,11 @@ interface IProps extends DefaultProps {
 interface IState {
   value: number;
 }
-export default class SimpleVerticalSlider extends React.Component<IProps, IState> {
-  _panResponder: PanResponderInstance;
 
+export default class SimpleVerticalSlider extends React.Component<IProps, IState> {
   static defaultProps: DefaultProps = defaultProps;
+
+  _panResponder: PanResponderInstance;
 
   locked = false;
 
@@ -152,11 +155,17 @@ export default class SimpleVerticalSlider extends React.Component<IProps, IState
     });
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: IProps) {
     if (!this.locked) {
       this.setValue(nextProps.value);
     }
   }
+  // componentDidUpdate(preProps, preState) {
+  //   if (!this.locked && preState.value !== preProps.value) {
+  //     this.setValue(preProps.value);
+  //   }
+  // }
 
   shouldComponentUpdate() {
     return !this.locked;
@@ -283,7 +292,7 @@ export default class SimpleVerticalSlider extends React.Component<IProps, IState
     this.setState({ value: brightness });
   }
 
-  renderLinearGradient () {
+  renderLinearGradient() {
     const { stops, x1, x2, y1, y2 } = this.props;
     const w = this.props?.style?.width ?? this.width;
     const h = this.props?.style?.height ?? this.height;
@@ -291,7 +300,7 @@ export default class SimpleVerticalSlider extends React.Component<IProps, IState
     return (
       <LinearGradient
         gradientId="Gradient"
-        style={[{ width: w, height: h, position: 'absolute' }]}
+        style={{ width: w, height: h, position: 'absolute' }}
         x1={x1}
         y1={y1}
         x2={x2}
@@ -304,7 +313,7 @@ export default class SimpleVerticalSlider extends React.Component<IProps, IState
   }
 
   render() {
-    const { trackColor, activeColor, style,type } = this.props;
+    const { trackColor, activeColor, style, type } = this.props;
     return (
       <View
         style={[styles.container, style]}
@@ -320,8 +329,8 @@ export default class SimpleVerticalSlider extends React.Component<IProps, IState
             {
               backgroundColor: activeColor,
               height: this.brightAnimate,
-              overflow: 'hidden'
-            }
+              overflow: 'hidden',
+            },
           ]}
         >
           {type === 'linearGradient' && this.renderLinearGradient()}
