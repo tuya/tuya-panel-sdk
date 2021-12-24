@@ -116,5 +116,3 @@ class Progess extends React.Component<ProgessProps> {
 }
 
 export default Progess;
-
-
