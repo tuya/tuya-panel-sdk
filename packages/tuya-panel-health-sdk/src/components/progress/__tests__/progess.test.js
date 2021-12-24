@@ -15,7 +15,7 @@ describe('Progess components', () => {
     size = 60;
     wrapper.setProps({ size });
     expect(wrapper).toMatchSnapshot();
-    let color = '#FFC204';
+    const color = '#FFC204';
     wrapper.setProps({ color });
     wrapper.unmount();
   });
