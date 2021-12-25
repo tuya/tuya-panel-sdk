@@ -1,9 +1,8 @@
-import { CSSProperties } from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 /**
  * @title Slider
  */
-export interface SliderProps {
+export interface ScaleSliderProps {
   style?: StyleProp<ViewStyle>;
   /**
    * @zh 是否禁用
@@ -38,15 +37,15 @@ export interface SliderProps {
    * @zh 默认值
    * @en To set default value
    */
-  defaultValue?: number | number[];
+  defaultValue?: number;
   /**
    * @zh 值
    * @en To set value
    */
-  value?: number | number[];
+  value?: number;
   /**
    * @zh 选择值变化时触发
    * @en Callback when the user changed the slider's value
    */
-  onChange?: (val: number | number[]) => void;
+  onChange?: (val: number) => void;
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import { ScrollRuler } from '@tuya/tuya-panel-health-sdk';
+import { ScrollRuler, ScaleSlider } from '@tuya/tuya-panel-health-sdk';
 import Section from '../Section';
 
 const { convertX: cx } = Utils.RatioUtils;
@@ -30,7 +30,7 @@ const ScrollRulerExample = () => {
   return (
     <View style={{ flex: 1, padding: cx(20) }}>
       <Section title={getLang('dsc_default')}>
-        <ScrollRuler
+        {/* <ScrollRuler
           min={0}
           max={60}
           scaleColor={themeColor}
@@ -39,10 +39,12 @@ const ScrollRulerExample = () => {
           pointerStyle={{ borderBottomColor: themeColor }}
           title="体重"
           onChange={handleChange}
-        />
+        /> */}
+
+        <ScaleSlider />
       </Section>
       <Section title={getLang('dsc_default')}>
-        <ScrollRuler
+        {/* <ScrollRuler
           min={10}
           max={20}
           scaleColor={themeColor2}
@@ -53,7 +55,7 @@ const ScrollRulerExample = () => {
           value={17}
           formatValue={v => `${v * 10}cm`}
           onChange={handleChange}
-        />
+        /> */}
       </Section>
     </View>
   );
