@@ -26,6 +26,7 @@ import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 import ConicalGradientScene from './ConicalGradient';
 import ColorSelectorAnimationScene from './ColorSelectorAnimation';
 import MusicDrawerScene from './MusicDrawer';
+import RhythmsCircleScene from './RhythmsCircle';
 
 export default class LampScene extends Component {
   get data() {
@@ -56,6 +57,7 @@ export default class LampScene extends Component {
   static MusicDrawer = MusicDrawerScene;
   static ConicalGradient = ConicalGradientScene;
   static ColorSelectorAnimation = ColorSelectorAnimationScene;
+  static RhythmsCircle = RhythmsCircleScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
