@@ -10,8 +10,7 @@ const cx = (value: number) => {
   return Math.floor(convertX(value));
 };
 const Countdown = (props: CountdownProps) => {
-  // timer: number;
-  const { navigation } = props;
+  const { navigation, route } = props;
   const {
     params: {
       onSave,
@@ -32,7 +31,7 @@ const Countdown = (props: CountdownProps) => {
       offCountdownText,
       renderHeader,
     },
-  } = props.route;
+  } = route;
 
   const { isShowSecond, onChange, timeTextColor, timeTextSize } = picker;
   const {
@@ -147,10 +146,8 @@ const Countdown = (props: CountdownProps) => {
               hourLabel={hourLabel}
               minuteLabel={minuteLabel}
               secondLabel={secondLabel}
-              // timeTextStyle={picker.timeTextStyle}
               timeTextSize={timeTextSize}
               timeTextColor={timeTextColor}
-              disabledUpdate={false}
             />
             <TouchableOpacity style={confirmButtonStyle} onPress={handleSave} activeOpacity={0.7}>
               <TYText style={confirmTextStyle}>{confirmText}</TYText>

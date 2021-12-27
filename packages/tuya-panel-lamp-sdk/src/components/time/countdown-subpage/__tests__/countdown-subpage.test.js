@@ -24,10 +24,6 @@ describe('countdown-subpage components', () => {
       return node.name() === 'TouchableOpacity' && !!node.prop('onPress') === true;
     });
     targetNode.props().onPress();
-    const targetNode1 = wrapper.findWhere(node => {
-      return node.name() === 'TimePicker' && !!node.prop('onChange') === true;
-    });
-    targetNode1.at(100).props().onChange();
     expect(wrapper).toMatchSnapshot();
   });
   it('render time picker', () => {
@@ -43,7 +39,6 @@ describe('countdown-subpage components', () => {
     };
     const wrapper = shallow(<Clock {...props} />);
     const targetNode = wrapper.findWhere(node => {
-      console.log("'node.name === 'Button'", node.name());
       return node.name() === 'TouchableOpacity' && !!node.prop('onPress') === true;
     });
     expect(wrapper).toMatchSnapshot();

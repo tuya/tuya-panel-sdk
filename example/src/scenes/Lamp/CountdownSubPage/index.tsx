@@ -1,28 +1,24 @@
 import React from 'react';
-import { TYIpcNative } from '@tuya/tuya-panel-ipc-sdk';
 import { Utils } from 'tuya-panel-kit';
 import Strings from '../../../i18n';
 import CountdownSubPage from '../../../../../packages/tuya-panel-lamp-sdk/src/components/time/countdown-subpage';
+import { ParamsType } from '../../../../../packages/tuya-panel-lamp-sdk/lib/components/time/countdown-subpage/interface';
 
 const { winWidth, convertX } = Utils.RatioUtils;
 const cx = (value: number) => {
   return Math.floor(convertX(value));
 };
 const CountdownSubPageDemo = () => {
-  const handlePress = () => {
-    TYIpcNative.enterRnPage('Lamp.CountdownSubPage', '');
-  };
-  const params = {
+  const params: ParamsType = {
     background: '#fff',
     countdown: 100,
     minuteLabel: Strings.getLang('TYLamp_minute'),
     secondLabel: Strings.getLang('TYLamp_second'),
     hourLabel: Strings.getLang('TYLamp_hour'),
-    countdownDo: () => {},
     onSave: (time: number) => {},
     onCountdownText: Strings.getLang('TYLamp_onCountdown'),
     offCountdownText: Strings.getLang('TYLamp_offCountdown'),
-    confirmText: '确认',
+    confirmText: Strings.getLang('TYLamp_confirm'),
     confirmButtonStyle: {
       backgroundColor: '#87cefa',
       height: 48,
@@ -55,9 +51,10 @@ const CountdownSubPageDemo = () => {
     },
     picker: {
       time: 200,
-      isShowSecond: true,
-      timeTextStyle: { fontSize: 40, color: '#eee' },
+      isShowSecond: false,
       unitTextStyle: { fontSize: 14, color: 'rgba(255,255,255,0.5)' },
+      timeTextColor: '#333',
+      timeTextSize: 40,
       minuteLabel: Strings.getLang('TYLamp_minute'),
       secondLabel: Strings.getLang('TYLamp_second'),
       hourLabel: Strings.getLang('TYLamp_hour'),
@@ -70,7 +67,7 @@ const CountdownSubPageDemo = () => {
       hourLabel: Strings.getLang('TYLamp_hour'),
       timeTextStyle: { fontSize: 40, color: '#000' },
       unitTextStyle: { fontSize: 14, color: 'rgba(255,255,255,0.5)' },
-      lineColor: '#333',
+      lineColor: '#e3e3e3',
       activeColor: '#87cefa',
       innerBackgroundColor: 'rgba(255,255,255,0.85)',
       isShowHour: false,
@@ -78,6 +75,7 @@ const CountdownSubPageDemo = () => {
       lineHeight: 5,
       lineWidth: 1,
       lineNum: 100,
+      resetStyle: {},
       resetText: Strings.getLang('TYLamp_resetCountdown'),
       resetTextStyle: {
         color: '#888',
@@ -93,10 +91,5 @@ const CountdownSubPageDemo = () => {
       }}
     />
   );
-  // return (
-  //   <TouchableOpacity onPress={handlePress}>
-  //     <View style={{ width: 100, height: 100, backgroundColor: 'red' }} />
-  //   </TouchableOpacity>
-  // );
 };
 export default CountdownSubPageDemo;

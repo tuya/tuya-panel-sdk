@@ -1,20 +1,16 @@
 import { ReactNode } from 'react';
 import { StyleProp, TextStyle, ViewStyle } from 'react-native';
 export interface CountdownProps {
-  // power?: boolean;
-  // workMode?: string;
-  // deviceMode: string;
   navigation: any;
   route: { params: ParamsType };
 }
-// todo
 export interface ParamsType {
   /**
    * 当前剩余倒计时
    */
   countdown: number;
   /**
-   * topBar
+   * 渲染topBar方法
    */
   renderHeader: () => ReactNode | undefined;
   /**
@@ -79,7 +75,6 @@ export interface ParamsType {
   picker: PickerProps;
 }
 export interface PickerProps {
-  disabledUpdate: boolean;
   /**
    * 小时
    */
@@ -100,7 +95,9 @@ export interface PickerProps {
    * 时间文本字体大小
    */
   timeTextSize: number;
-
+  /**
+   * 时间单位文本字体大小
+   */
   unitTextStyle?: StyleProp<TextStyle>;
   /**
    * 时间

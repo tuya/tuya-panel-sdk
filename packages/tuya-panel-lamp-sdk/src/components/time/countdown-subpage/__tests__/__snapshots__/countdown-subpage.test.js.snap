@@ -48,7 +48,6 @@ exports[`countdown-subpage components basic render 1`] = `
       }
     >
       <TimePicker
-        disabledUpdate={false}
         onChange={[Function]}
         time={2000}
       />

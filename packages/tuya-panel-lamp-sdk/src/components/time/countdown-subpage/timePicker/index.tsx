@@ -14,14 +14,7 @@ const minutes = new Array(60).fill(1).map((v: number, index: number) => formatVa
 
 const TimePicker = (props: PickerProps) => {
   const { time, isShowSecond, onChange } = props;
-  const {
-    hourLabel,
-    minuteLabel,
-    secondLabel,
-    disabledUpdate,
-    timeTextColor,
-    timeTextSize,
-  } = props;
+  const { hourLabel, minuteLabel, secondLabel, timeTextColor, timeTextSize } = props;
   const minuteData = minutes;
   const currentTime = time; // 单位： 秒
   const _hour = formatValue(Math.floor(currentTime / 3600));
@@ -42,7 +35,7 @@ const TimePicker = (props: PickerProps) => {
 
   const timeRef = useRef(time);
   useEffect(() => {
-    if (timeRef.current !== time && !disabledUpdate) {
+    if (timeRef.current !== time) {
       const hour_ = formatValue(Math.floor(time / 3600));
       const minute_ = formatValue(Math.floor(time / 60 - Number(hour) * 60));
       const second_ = formatValue(Math.floor(time % 60));
@@ -50,7 +43,7 @@ const TimePicker = (props: PickerProps) => {
       setMinute(minute_);
       setSecond(second_);
     }
-  }, [time, disabledUpdate]);
+  }, [time]);
 
   const handleChange = () => {
     onChange(Number(hour) * 3600 + Number(minute) * 60 + Number(second));
