@@ -47,3 +47,5 @@ export { default as MusicDrawer } from './music/music-drawer';
 export { default as ConicalGradient } from './gradient/conical-gradient';
 
 export { default as ColorSelectorAnimation } from './list/color-selector-animation';
+
+export { default as TabsBar } from './tabs_bar';
