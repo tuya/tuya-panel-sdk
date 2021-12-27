@@ -1,6 +1,7 @@
 import React from 'react';
 import { TYIpcNative } from '@tuya/tuya-panel-ipc-sdk';
 import { Utils } from 'tuya-panel-kit';
+import Strings from '../../../i18n';
 import CountdownSubPage from '../../../../../packages/tuya-panel-lamp-sdk/src/components/time/countdown-subpage';
 
 const { winWidth, convertX } = Utils.RatioUtils;
@@ -13,14 +14,14 @@ const CountdownSubPageDemo = () => {
   };
   const params = {
     background: '#fff',
-    countdown: 4000,
-    minuteLabel: '分',
-    secondLabel: '秒',
-    hourLabel: '时',
+    countdown: 100,
+    minuteLabel: Strings.getLang('TYLamp_minute'),
+    secondLabel: Strings.getLang('TYLamp_second'),
+    hourLabel: Strings.getLang('TYLamp_hour'),
     countdownDo: () => {},
     onSave: (time: number) => {},
-    onCountdownText: 'The light will turn on automatically after the countdown',
-    offCountdownText: 'The light will turn off automatically after the countdown',
+    onCountdownText: Strings.getLang('TYLamp_onCountdown'),
+    offCountdownText: Strings.getLang('TYLamp_offCountdown'),
     confirmText: '确认',
     confirmButtonStyle: {
       backgroundColor: '#87cefa',
@@ -47,26 +48,26 @@ const CountdownSubPageDemo = () => {
       alignItems: 'center',
       justifyContent: 'center',
     },
-    cancelText: '取消',
+    cancelText: Strings.getLang('TYLamp_cancel'),
     cancelTextStyle: {
       color: '#fff',
       fontSize: 16,
     },
     picker: {
-      time: 4000,
+      time: 200,
       isShowSecond: true,
       timeTextStyle: { fontSize: 40, color: '#eee' },
       unitTextStyle: { fontSize: 14, color: 'rgba(255,255,255,0.5)' },
-      minuteLabel: '分',
-      secondLabel: '秒',
-      hourLabel: '时',
+      minuteLabel: Strings.getLang('TYLamp_minute'),
+      secondLabel: Strings.getLang('TYLamp_second'),
+      hourLabel: Strings.getLang('TYLamp_hour'),
     },
     clock: {
-      countdown: 4000,
-      totalCountDown: 4000,
-      minuteLabel: '分',
-      secondLabel: '秒',
-      hourLabel: '时',
+      countdown: 200,
+      totalCountDown: 200,
+      minuteLabel: Strings.getLang('TYLamp_minute'),
+      secondLabel: Strings.getLang('TYLamp_second'),
+      hourLabel: Strings.getLang('TYLamp_hour'),
       timeTextStyle: { fontSize: 40, color: '#000' },
       unitTextStyle: { fontSize: 14, color: 'rgba(255,255,255,0.5)' },
       lineColor: '#333',
@@ -77,7 +78,7 @@ const CountdownSubPageDemo = () => {
       lineHeight: 5,
       lineWidth: 1,
       lineNum: 100,
-      resetText: '重置定时',
+      resetText: Strings.getLang('TYLamp_resetCountdown'),
       resetTextStyle: {
         color: '#888',
       },

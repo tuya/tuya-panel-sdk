@@ -27,7 +27,6 @@ import ConicalGradientScene from './ConicalGradient';
 import ColorSelectorAnimationScene from './ColorSelectorAnimation';
 import MusicDrawerScene from './MusicDrawer';
 import CountdownSubPage from './CountdownSubPage';
-import CountdownSubPageInput from './CountdownSubPageInput';
 
 export default class LampScene extends Component {
   get data() {
@@ -58,9 +57,7 @@ export default class LampScene extends Component {
   static MusicDrawer = MusicDrawerScene;
   static ConicalGradient = ConicalGradientScene;
   static ColorSelectorAnimation = ColorSelectorAnimationScene;
-
   static CountdownSubPage = CountdownSubPage;
-  static CountdownSubPageInput = CountdownSubPageInput;
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
   }

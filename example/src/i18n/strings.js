@@ -23,6 +23,15 @@ module.exports = {
 
     TYLamp_average: '平均分配',
     TYLamp_percent: '按百分比分配',
+
+    TYLamp_hour: '时',
+    TYLamp_minute: '分',
+    TYLamp_second: '秒',
+    TYLamp_confirm: '确认',
+    TYLamp_cancel: '取消',
+    TYLamp_resetCountdown: '重置定时',
+    TYLamp_onCountdown: '倒计时结束后灯带将自动打开',
+    TYLamp_offCountdown: '倒计时结束后灯带将自动关闭',
   },
 
   en: {
@@ -45,5 +54,14 @@ module.exports = {
 
     TYLamp_average: 'Equally Calculate',
     TYLamp_percent: 'Calculate by percentage',
+
+    TYLamp_hour: 'hour',
+    TYLamp_minute: 'minute',
+    TYLamp_second: 'second',
+    TYLamp_confirm: 'confirm',
+    TYLamp_cancel: 'cancel',
+    TYLamp_resetCountdown: 'reset',
+    TYLamp_onCountdown: 'The light will turn on automatically after the countdown',
+    TYLamp_offCountdown: 'The light will turn off automatically after the countdown',
   },
 };
