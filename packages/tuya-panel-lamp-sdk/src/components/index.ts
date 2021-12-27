@@ -20,6 +20,8 @@ export { default as ColorSelectorNoScroll } from './list/color-selector-noScroll
 
 export { default as SingleTimePicker } from './time/single-time-picker';
 
+export { default as CountdownSubPage } from './time/countdown-subpage';
+
 export { default as BrightRectSlider } from './slider/bright-rect-slider';
 
 export { default as HueBrightCrossSlider } from './slider/hue-bright-cross-slider';
