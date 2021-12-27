@@ -90,7 +90,4 @@ export default {
   getPswMaxLen,
   getDefaultRandomLen,
   getRandomPassword,
-  wrapPsd,
-  getWeekDayNumber,
-  getWeekDayString,
 };
