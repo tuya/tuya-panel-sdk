@@ -50,14 +50,13 @@ const TimePicker = (props: PickerProps) => {
   };
 
   const handleHour = (value: number) => {
-    const state: any = { hour: formatValue(value) };
     if (Number(value) === maxHour) {
       if (Number(minute) > maxMinute) {
-        state.minute = formatValue(maxMinute);
+        setMinute(formatValue(maxMinute));
       }
     } else if (Number(value) === minHour) {
       if (Number(minute) < minMinute) {
-        state.minute = formatValue(minMinute);
+        setMinute(formatValue(maxMinute));
       }
     }
     setHour(formatValue(value));
