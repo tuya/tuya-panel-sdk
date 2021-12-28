@@ -156,7 +156,7 @@ export interface ClockProps {
   /**
    * 时间文本样式
    */
-  timeTextStyle: any;
+  timeTextStyle: StyleProp<TextStyle>;
   /**
    * 时分秒文本样式
    */
