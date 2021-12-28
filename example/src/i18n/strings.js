@@ -23,6 +23,9 @@ module.exports = {
 
     TYLamp_average: '平均分配',
     TYLamp_percent: '按百分比分配',
+    TYLamp_loop: '循环',
+    TYLamp_vertical: '竖直',
+    TYLamp_horizontal: '水平',
     TYLamp_animatedModal_customRender: '自定义渲染动画区域内容',
     TYLamp_animatedModal_customRenderForControl: '自定义渲染内容用于内部控制动画',
     TYLamp_animatedModal_light: '浅色模式效果',
@@ -54,6 +57,9 @@ module.exports = {
     TYLamp_average: 'Equally Calculate',
     TYLamp_percent: 'Calculate by percentage',
 
+    TYLamp_loop: 'loop',
+    TYLamp_vertical: 'Vertical',
+    TYLamp_horizontal: 'Horizontal',
     TYLamp_animatedModal_customRender: 'Custom rendering animation',
     TYLamp_animatedModal_customRenderForControl: 'Custom rendering content for control',
     TYLamp_animatedModal_light: 'Light mode effect',
