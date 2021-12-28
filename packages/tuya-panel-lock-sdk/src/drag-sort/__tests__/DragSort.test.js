@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
-import { SafeAreaView, View, StyleSheet, TouchableOpacity, Text } from 'react-native';
+import React from 'react';
+import { SafeAreaView, View, StyleSheet, TouchableOpacity, Text, Dimensions } from 'react-native';
 import { shallow } from 'enzyme';
 import DragSort from '../index';
 
+const widths = [80, 120, 90];
+const { width } = Dimensions.get('window');
+
+const getW = (index, isWidth) =>
+  isWidth ? (index % 3 === 0 ? width - 40 : (width - 60) / 2) : Math.random() > 0.5 ? 80 : 60;
+
+const items = [];
+for (let i = 0; i < 26; i++) {
+  items.push({
+    key: i,
+    text: String.fromCharCode(65 + i),
+    width: widths[i % 3],
+    height: getW(i, false),
+  });
+}
+
 describe('DragSort components', () => {
   it('DragSort render', () => {
-    const [dragSortList, setDragSortList] = useState([]);
     const _renderItem = (item, isSelect) => {
       return (
         <View style={styles.item_wrap}>
@@ -32,10 +47,9 @@ describe('DragSort components', () => {
     const wrapper = shallow(
       <SafeAreaView style={{ flex: 1, backgroundColor: '#fff' }}>
         <DragSort
-          dragSortList={dragSortList}
+          dragSortList={items}
           renderItem={_renderItem}
           onDataChange={(data, callback) => {
-            setDragSortList(data);
             callback();
           }}
         />
