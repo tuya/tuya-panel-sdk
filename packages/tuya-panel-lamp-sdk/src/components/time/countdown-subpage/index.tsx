@@ -161,7 +161,6 @@ const Countdown = (props: CountdownProps) => {
   );
 };
 
-Countdown.defaultProps = {};
 export default Countdown;
 
 const styles = StyleSheet.create({
