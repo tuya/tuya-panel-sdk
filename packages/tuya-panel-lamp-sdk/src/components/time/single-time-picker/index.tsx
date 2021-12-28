@@ -49,17 +49,20 @@ const SingleTimePicker: React.FC<SingleTimePickerProps> = props => {
     ];
   }, []);
 
-  const handleChangeTime = useCallback((h: number, m: number, amPm: string) => {
-    let newHour = h;
-    if (!is24Hour) {
-      if (amPm === 'PM') {
-        newHour = h < 12 ? h + 12 : h;
-      } else {
-        newHour = h >= 12 ? h - 12 : h;
+  const handleChangeTime = useCallback(
+    (h: number, m: number, amPm: string) => {
+      let newHour = h;
+      if (!is24Hour) {
+        if (amPm === 'PM') {
+          newHour = h < 12 ? h + 12 : h;
+        } else {
+          newHour = h >= 12 ? h - 12 : h;
+        }
       }
-    }
-    props.onChange(newHour, m);
-  }, []);
+      props.onChange(newHour, m);
+    },
+    [props.onChange]
+  );
 
   const handleAmPm = (value: string) => {
     handleChangeTime(hour, minute, value);
@@ -182,6 +185,7 @@ export default SingleTimePicker;
 
 const styles = StyleSheet.create({
   picker: {
+    backgroundColor: 'transparent',
     height: cx(200),
   },
   pickerContainer: {

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomTopBar components basic render 1`] = `
+<ThemedTopBar
+  actions={
+    Array [
+      Object {
+        "color": "#fff",
+        "onPress": [Function],
+        "size": 32,
+        "source": "Save",
+      },
+    ]
+  }
+  background="transparent"
+  contentStyle={
+    Object {
+      "marginTop": 8,
+    }
+  }
+  leftActions={
+    Array [
+      Object {
+        "onPress": [Function],
+        "size": 32,
+        "source": "Cancel",
+      },
+    ]
+  }
+  theme={null}
+  title=""
+/>
+`;

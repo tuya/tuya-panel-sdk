@@ -828,11 +828,6 @@
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
-"@tuya/tuya-panel-api@^1.6.1":
-  version "1.6.1"
-  resolved "https://registry.nlark.com/@tuya/tuya-panel-api/download/@tuya/tuya-panel-api-1.6.1.tgz#679323ed2269add834e901f5a079eaa26d9344ce"
-  integrity sha1-Z5Mj7SJprdg06QH1oHnqom2TRM4=
-
 "@types/hammerjs@^2.0.36":
   version "2.0.40"
   resolved "https://registry.nlark.com/@types/hammerjs/download/@types/hammerjs-2.0.40.tgz#ded0240b6ea1ad7afc1e60374c49087aaea5dbd8"

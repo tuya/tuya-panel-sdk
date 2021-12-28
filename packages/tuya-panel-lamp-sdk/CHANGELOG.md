@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.7.0...@tuya/tuya-panel-lamp-sdk@1.8.0) (2021-12-28)
+
+
+### Features
+
+* **lamp:** add tabsBar ([#157](https://github.com/tuya/tuya-panel-sdk/issues/157)) ([7e4c92d](https://github.com/tuya/tuya-panel-sdk/commit/7e4c92deab6f059353096178199969ecfd7358e7))
+* **lamp:** add timing and sceneFun ([#155](https://github.com/tuya/tuya-panel-sdk/issues/155)) ([605ba4a](https://github.com/tuya/tuya-panel-sdk/commit/605ba4a7ec10e9e046fd90d0cc379f07a06a0110))
+* **lamp-sdk-animatedModal:** add animatedModal component ([#152](https://github.com/tuya/tuya-panel-sdk/issues/152)) ([b7fdd19](https://github.com/tuya/tuya-panel-sdk/commit/b7fdd19dac8874bb09a10a03dd631fa5ebd59ca2))
+* add Bubble and DargSort ([#156](https://github.com/tuya/tuya-panel-sdk/issues/156)) ([a6ed10a](https://github.com/tuya/tuya-panel-sdk/commit/a6ed10a981e679c4ec9691b1c9d35aaca2505ab9))
+
+
+
+
+
 # [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.6.0...@tuya/tuya-panel-lamp-sdk@1.7.0) (2021-12-23)
 
 

@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SingleTimePicker components basic render 1`] = `
+<View
+  onLayout={[Function]}
+  pointerEvents="auto"
+  style={
+    Array [
+      Array [
+        Object {
+          "alignItems": "center",
+          "alignSelf": "stretch",
+          "borderColor": "#FFFFFF",
+          "borderRadius": 10,
+          "borderWidth": 0.5,
+          "justifyContent": "space-around",
+          "overflow": "hidden",
+        },
+        Object {
+          "flexDirection": "row",
+          "height": 96,
+          "width": 640,
+        },
+        Object {},
+      ],
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "position": "absolute",
+          "zIndex": 2,
+        },
+        Object {
+          "backgroundColor": "transparent",
+          "borderRadius": 10,
+        },
+        Object {},
+        Object {
+          "alignItems": "center",
+          "height": -12,
+          "justifyContent": "center",
+          "left": 0.002722118302077803,
+          "width": -12,
+        },
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      numberOfLines={1}
+      size={null}
+      style={
+        Array [
+          Object {},
+          Object {
+            "backgroundColor": "transparent",
+            "color": "#5190F3",
+            "fontSize": 28,
+            "textAlign": "center",
+          },
+          Object {},
+        ]
+      }
+      type={null}
+      weight={null}
+    />
+  </AnimatedComponent>
+  <Button
+    activeTextStyle={
+      Object {
+        "opacity": 0,
+      }
+    }
+    horizontal={true}
+    isActive={false}
+    key="TEST1"
+    label="1"
+    onItemPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {},
+      ]
+    }
+    textStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#CCCCCC",
+          "fontSize": 28,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="divider_1"
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#CCC",
+            "height": 0,
+            "width": 0.5,
+          },
+          Object {},
+        ],
+      ]
+    }
+  />
+  <Button
+    activeTextStyle={
+      Object {
+        "opacity": 0,
+      }
+    }
+    horizontal={true}
+    isActive={false}
+    key="TEST2"
+    label="2"
+    onItemPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {},
+      ]
+    }
+    textStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#CCCCCC",
+          "fontSize": 28,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="divider_2"
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#CCC",
+            "height": 0,
+            "width": 0.5,
+          },
+          Object {},
+        ],
+      ]
+    }
+  />
+  <Button
+    activeTextStyle={
+      Object {
+        "opacity": 0,
+      }
+    }
+    horizontal={true}
+    isActive={false}
+    key="TEST3"
+    label="3"
+    onItemPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {},
+      ]
+    }
+    textStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#CCCCCC",
+          "fontSize": 28,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="divider_3"
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#CCC",
+            "height": 0,
+            "width": 0.5,
+          },
+          Object {},
+        ],
+      ]
+    }
+  />
+  <Button
+    activeTextStyle={
+      Object {
+        "opacity": 0,
+      }
+    }
+    horizontal={true}
+    isActive={false}
+    key="TEST4"
+    label="4"
+    onItemPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {},
+      ]
+    }
+    textStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#CCCCCC",
+          "fontSize": 28,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  />
+  <View
+    key="divider_4"
+    style={
+      Array [
+        Array [
+          Object {
+            "backgroundColor": "#CCC",
+            "height": 0,
+            "width": 0.5,
+          },
+          Object {},
+        ],
+      ]
+    }
+  />
+  <Button
+    activeTextStyle={
+      Object {
+        "opacity": 0,
+      }
+    }
+    horizontal={true}
+    icon={
+      <TYText
+        align={null}
+        color={null}
+        size={36}
+        text="0"
+        type={null}
+        weight={null}
+      />
+    }
+    isActive={false}
+    key="0"
+    label={0}
+    onItemPress={[Function]}
+    style={
+      Array [
+        Object {
+          "flex": 1,
+        },
+        Object {},
+      ]
+    }
+    textStyle={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#CCCCCC",
+          "fontSize": 28,
+          "textAlign": "center",
+        },
+        Object {},
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`SingleTimePicker components button render 1`] = `
+<TouchableOpacity
+  activeOpacity={1}
+  style={
+    Array [
+      Object {
+        "flex": 1,
+      },
+      Array [
+        Object {
+          "alignItems": "center",
+          "flex": 1,
+          "justifyContent": "center",
+        },
+        Object {
+          "height": "100%",
+        },
+      ],
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    numberOfLines={1}
+    size={null}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "color": "#fff",
+          "textAlign": "center",
+        },
+        undefined,
+        Object {
+          "color": "#5190F3",
+        },
+        undefined,
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    0
+  </TYText>
+</TouchableOpacity>
+`;

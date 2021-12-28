@@ -85,3 +85,9 @@ export const getWeekDayNumber = (weekValue: string) => {
 export const getWeekDayString = (weekValue: number) => {
   return _padStart(weekValue.toString(2), 8, '0').slice(0, 7);
 };
+
+export default {
+  getPswMaxLen,
+  getDefaultRandomLen,
+  getRandomPassword,
+};
