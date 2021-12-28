@@ -1,8 +1,12 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { Utils } from 'tuya-panel-kit';
 import _ from 'lodash';
 export { default as ColorUtils } from './color';
 export { default as StorageUtils } from './storage';
 export { default as SupportUtils } from './support';
+import Strings from '../components/timer/normal-timing/i18n';
+
+const { CoreUtils } = Utils;
 
 export function handleError(error: Error): void {
   // eslint-disable-next-line no-console
@@ -126,4 +130,145 @@ export function* transform(value: string): Generator<number> {
     start += length;
   }
   return result;
+}
+
+export const parseJSON = (str: string) => {
+  let rst;
+  if (str && {}.toString.call(str) === '[object String]') {
+    // 当JSON字符串解析
+    try {
+      rst = JSON.parse(str);
+    } catch (e) {
+      // 出错，用eval继续解析JSON字符串
+      try {
+        // eslint-disable-next-line
+        rst = eval(`(${str})`);
+      } catch (e2) {
+        // 当成普通字符串
+        rst = str;
+      }
+    }
+  } else {
+    rst = typeof str === 'undefined' ? {} : str;
+  }
+
+  return rst;
+};
+
+export const parseHour12 = (time: number) => {
+  const t = Utils.TimeUtils.parseHour12(time);
+  return t.split(' ').reverse().join(' ');
+};
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export const repeatArrStr = (source: number[]) => {
+  if (!source) return '';
+  const days: string[] = [];
+  let repeat = '';
+  let workDay = true;
+  let weekend = true;
+  source.forEach((item, index: 0 | 1 | 2 | 3 | 4 | 5 | 6) => {
+    if (index > 0 && index < 6) {
+      if (item === 0) {
+        workDay = false;
+      }
+    }
+    if (index === 0 || index === 6) {
+      if (item === 0) {
+        weekend = false;
+      }
+    }
+    if (item === 1) {
+      // @ts-ignore
+      days.push(Strings.getLang(`TYLamp_day${index}`));
+    }
+  });
+  if (workDay && weekend) {
+    repeat = Strings.getLang('TYLamp_dayEvery');
+  } else if (days.length === 0) {
+    repeat = Strings.getLang('TYLamp_dayOnce');
+  } else {
+    repeat = days.join('、');
+  }
+  return repeat;
+};
+
+export const parseHour12Data = (second: number) => {
+  const t = second % 86400;
+  const originHour = parseInt(`${t / 3600}`, 10);
+  const m = parseInt(`${t / 60 - originHour * 60}`, 10);
+  let h = originHour % 12;
+  if (h === 0) {
+    h = 12;
+  }
+  return {
+    timeStr: `${CoreUtils.toFixed(h, 2)}:${CoreUtils.toFixed(m, 2)}`,
+    isPM: originHour >= 12,
+  };
+};
+
+// eslint-disable-next-line no-shadow
+export enum weeksStr {
+  dayOnce = '0',
+  dayEvery = '1',
+  custom = '2',
+}
+
+export const weeksArr = [weeksStr.dayOnce];
+export const dataSource = [
+  {
+    key: weeksStr.dayOnce,
+    title: Strings.getLang('TYLamp_dayOnce'),
+    value: weeksStr.dayOnce,
+  },
+  {
+    key: weeksStr.dayEvery,
+    title: Strings.getLang('TYLamp_dayEvery'),
+    value: weeksStr.dayEvery,
+  },
+  {
+    key: weeksStr.custom,
+    title: Strings.getLang('TYLamp_custom'),
+    value: weeksStr.custom,
+  },
+];
+
+export const colourFormat = (data: IColour) => {
+  const { hue, saturation, value } = data;
+  return `${to16(hue, 4)}${to16(saturation, 4)}${to16(value, 4)}`;
+};
+
+export const colourParse = (str: string) => {
+  if (str.length === 12) {
+    return {
+      hue: parseInt(str.slice(0, 4), 16),
+      saturation: parseInt(str.slice(4, 8), 16),
+      value: parseInt(str.slice(8, 12), 16),
+    };
+  }
+  return {
+    hue: 0,
+    saturation: 1000,
+    value: 1000,
+  };
+};
+
+export const actionTypeStr = (power: boolean, workMode: string) => {
+  let str = 'TYLamp_off';
+  if (power) {
+    if (workMode === 'white') {
+      str = 'TYLamp_white';
+    } else {
+      str = 'TYLamp_colour';
+    }
+  }
+  return Strings.getLang(str as any);
+};
+
+// eslint-disable-next-line no-shadow
+export enum WORK_MODE {
+  WHITE = 'white',
+  COLOUR = 'colour',
+  SCENE = 'scene',
+  MUSIC = 'music',
 }
