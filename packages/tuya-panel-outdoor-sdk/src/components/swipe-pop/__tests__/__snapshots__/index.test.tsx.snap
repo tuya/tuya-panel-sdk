@@ -31,7 +31,6 @@ exports[`SwipePop components basic render 1`] = `
     disabled={false}
     lastArrowOffset={0}
     maskColor="rgba(0,0,0,0.7)"
-    maskStyle={null}
     onKeyChange={[Function]}
     onSwiping={[Function]}
     sections={
@@ -45,8 +44,6 @@ exports[`SwipePop components basic render 1`] = `
     showHeight={1334}
     showMask={false}
     startValidHeight={10}
-    style={null}
-    wrapperStyle={null}
   >
     <View
       style={
