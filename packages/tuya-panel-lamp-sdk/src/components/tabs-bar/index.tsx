@@ -3,10 +3,10 @@ import { View, Animated, StyleSheet } from 'react-native';
 import { Utils, TYText } from 'tuya-panel-kit';
 import _get from 'lodash/get';
 import Button from './button';
-import { RadioBUttonProps } from './interface';
+import { RadioButtonProps } from './interface';
 
 const { convertX: cx } = Utils.RatioUtils;
-const TabsBar: React.FC<RadioBUttonProps> = props => {
+const TabsBar: React.FC<RadioButtonProps> = props => {
   const {
     dataSource,
     horizontal,
@@ -47,7 +47,11 @@ const TabsBar: React.FC<RadioBUttonProps> = props => {
   const _wrapperStyle = [
     styles.wrapperStyle,
     {
-      flexDirection: horizontal ? 'row' : 'column',
+      flexDirection: (horizontal ? 'row' : 'column') as
+        | 'row'
+        | 'column'
+        | 'row-reverse'
+        | 'column-reverse',
       width: horizontal ? dataSource.length * cx(64) : cx(64),
       height: horizontal ? cx(48) : dataSource.length * cx(48),
     },
@@ -178,7 +182,7 @@ const TabsBar: React.FC<RadioBUttonProps> = props => {
     <View
       onLayout={wrapperLayout}
       pointerEvents={disabled ? 'none' : 'auto'}
-      style={[_wrapperStyle as [], { opacity: disabled ? disabledOpacity : 1 }]}
+      style={[_wrapperStyle, { opacity: disabled ? disabledOpacity : 1 }]}
     >
       {!activeViewHidden && (
         <Animated.View style={_activeViewStyle}>

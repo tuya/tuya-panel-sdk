@@ -12,7 +12,7 @@ export interface buttonProps {
   icon?: ReactNode;
 }
 
-export interface RadioBUttonProps {
+export interface RadioButtonProps {
   /**
    * 是否水平显示，默认水平显示
    */
