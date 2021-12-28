@@ -55,9 +55,9 @@ module.exports = {
     TYLamp_average: 'Equally Calculate',
     TYLamp_percent: 'Calculate by percentage',
 
-    TYLamp_hour: 'hour',
-    TYLamp_minute: 'minute',
-    TYLamp_second: 'second',
+    TYLamp_hour: 'H',
+    TYLamp_minute: 'Min',
+    TYLamp_second: 'Sec',
     TYLamp_confirm: 'confirm',
     TYLamp_cancel: 'cancel',
     TYLamp_resetCountdown: 'reset',

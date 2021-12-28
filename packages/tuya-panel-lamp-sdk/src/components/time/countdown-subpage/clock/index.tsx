@@ -147,7 +147,7 @@ const styles = StyleSheet.create({
     zIndex: 1,
   },
   time: {
-    fontSize: cx(42),
+    fontSize: 42,
     textAlign: 'right',
     width: cx(56),
   },

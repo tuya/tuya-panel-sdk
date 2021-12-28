@@ -64,7 +64,7 @@ export interface ParamsType {
   /**
    * 取消文本样式
    */
-  cancelTextStyle: StyleProp<TextStyle>; // 取消文本样式
+  cancelTextStyle: StyleProp<TextStyle>;
   /**
    * clock
    */
@@ -150,13 +150,17 @@ export interface ClockProps {
    */
   isShowHour: boolean;
   /**
+   * 子标题文本样式
+   */
+  subTitleStyle: StyleProp<TextStyle>;
+  /**
    * 时间文本样式
    */
   timeTextStyle: any;
   /**
    * 时分秒文本样式
    */
-  unitTextStyle?: StyleProp<TextStyle>;
+  unitTextStyle: StyleProp<TextStyle>;
   /**
    * 已消耗指针的颜色
    */

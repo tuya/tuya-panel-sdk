@@ -27,12 +27,15 @@ exports[`countdown-subpage components basic render 1`] = `
       color={null}
       size={null}
       style={
-        Object {
-          "fontSize": 20,
-          "opacity": 0.5,
-          "textAlign": "center",
-          "width": 478,
-        }
+        Array [
+          Object {
+            "fontSize": 10,
+            "opacity": 0.5,
+            "paddingHorizontal": 32,
+            "textAlign": "center",
+          },
+          undefined,
+        ]
       }
       type={null}
       weight={null}
@@ -139,7 +142,7 @@ exports[`countdown-subpage components render clock 1`] = `
         style={
           Array [
             Object {
-              "fontSize": 84,
+              "fontSize": 42,
               "textAlign": "right",
               "width": 112,
             },
@@ -170,7 +173,7 @@ exports[`countdown-subpage components render clock 1`] = `
         style={
           Array [
             Object {
-              "fontSize": 84,
+              "fontSize": 42,
               "textAlign": "right",
               "width": 112,
             },

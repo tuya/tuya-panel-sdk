@@ -1,15 +1,14 @@
 import React from 'react';
 import { Utils } from 'tuya-panel-kit';
+import { CountdownSubPage } from '@tuya/tuya-panel-lamp-sdk';
 import Strings from '../../../i18n';
-import CountdownSubPage from '../../../../../packages/tuya-panel-lamp-sdk/src/components/time/countdown-subpage';
-import { ParamsType } from '../../../../../packages/tuya-panel-lamp-sdk/lib/components/time/countdown-subpage/interface';
 
 const { winWidth, convertX } = Utils.RatioUtils;
 const cx = (value: number) => {
   return Math.floor(convertX(value));
 };
 const CountdownSubPageDemo = () => {
-  const params: ParamsType = {
+  const params = {
     background: '#fff',
     countdown: 100,
     minuteLabel: Strings.getLang('TYLamp_minute'),
@@ -50,7 +49,7 @@ const CountdownSubPageDemo = () => {
       fontSize: 16,
     },
     picker: {
-      time: 200,
+      time: 250,
       isShowSecond: false,
       unitTextStyle: { fontSize: 14, color: 'rgba(255,255,255,0.5)' },
       timeTextColor: '#333',

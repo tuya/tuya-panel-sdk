@@ -37,6 +37,7 @@ const Countdown = (props: CountdownProps) => {
   const {
     innerBackgroundColor,
     totalCountDown,
+    subTitleStyle,
     isShowHour,
     lineColor,
     activeColor,
@@ -105,7 +106,7 @@ const Countdown = (props: CountdownProps) => {
     <View style={[{ backgroundColor: background }, { flex: 1 }]}>
       {!!renderHeader && renderHeader()}
       <View style={{ alignItems: 'center', flex: 1, justifyContent: 'space-around' }}>
-        <TYText style={styles.subTitle}>
+        <TYText style={[styles.subTitle, subTitleStyle]}>
           {countdown > 0 ? onCountdownText : offCountdownText}
         </TYText>
         {isInCountDown && (
@@ -128,6 +129,7 @@ const Countdown = (props: CountdownProps) => {
               lineWidth={lineWidth}
               lineNum={lineNum}
               resetText={resetText}
+              subTitleStyle={subTitleStyle}
               size={size}
               resetStyle={resetStyle}
               resetTextStyle={resetTextStyle}
@@ -170,9 +172,9 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   subTitle: {
-    fontSize: cx(10),
+    fontSize: 10,
     opacity: 0.5,
+    paddingHorizontal: cx(16),
     textAlign: 'center',
-    width: winWidth - cx(68) * 2,
   },
 });
