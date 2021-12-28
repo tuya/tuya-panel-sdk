@@ -22,10 +22,20 @@ const Button: React.FC<buttonProps> = props => {
   ];
   const wrapperStyle = [
     styles.wrapperStyle,
-    horizontal ? { height: '100%' } : { alignSelf: 'stretch' },
+    horizontal
+      ? { height: '100%' }
+      : {
+          alignSelf: 'stretch' as
+            | 'auto'
+            | 'flex-start'
+            | 'flex-end'
+            | 'stretch'
+            | 'baseline'
+            | 'center',
+        },
   ];
   return (
-    <TouchableOpacity onPress={onItemPress} activeOpacity={1} style={[style, wrapperStyle as []]}>
+    <TouchableOpacity onPress={onItemPress} activeOpacity={1} style={[style, wrapperStyle]}>
       {icon || (
         <TYText style={customTextStyle} numberOfLines={1}>
           {`${label}`}
