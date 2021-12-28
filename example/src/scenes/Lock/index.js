@@ -15,6 +15,8 @@ import DatePickerRange from './datePickerRange';
 import TimePickerRange from './timePickerRange';
 import RandomPassword from './randomPassword';
 import TouchableWarpView from './touchableView';
+import BubbleTip from './bubbleTip';
+import DragSort from './dragSort';
 import { produceRouterDatas } from '../../utils';
 
 export default class LampCategoryScene extends Component {
@@ -31,6 +33,8 @@ export default class LampCategoryScene extends Component {
   static TouchableView = TouchableWarpView;
   static AnimatedNumber = AnimatedNumber;
   static TimePickerRange = TimePickerRange;
+  static BubbleTip = BubbleTip;
+  static DragSort = DragSort;
   // static Gesture = Gesture;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lock\.((?!\.)\w)+$/.test(r.id)));
