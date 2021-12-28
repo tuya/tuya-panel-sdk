@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AnimatedModal components basic render 1`] = `
+<Portal
+  visible={true}
+>
+  <Motion.PullUp
+    animationConfig={
+      Object {
+        "delay": 0,
+        "duration": 300,
+        "isInteraction": true,
+        "useNativeDriver": true,
+      }
+    }
+    hideDuration={300}
+    onHide={[Function]}
+    onShow={[Function]}
+    show={true}
+    showDuration={300}
+    style={
+      Object {
+        "bottom": 0,
+        "position": "absolute",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#1A1A1A",
+          "width": 750,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#1A1A1A",
+              "borderBottomColor": "#FFFFFF",
+              "borderBottomWidth": 1,
+              "height": 56,
+            },
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+            },
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Object {
+              "color": "#FFF",
+              "fontSize": 16,
+            }
+          }
+          type={null}
+          weight={null}
+        >
+          Header
+        </TYText>
+      </View>
+      <View
+        style={Object {}}
+      >
+        <AnimatedComponent
+          style={
+            Object {
+              "height": 200,
+              "opacity": 1,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "alignSelf": "center",
+                  "backgroundColor": "rgba(255,255,255,0.08)",
+                  "borderRadius": 16,
+                  "flexDirection": "row",
+                  "height": 70,
+                  "justifyContent": "space-between",
+                  "marginVertical": 16,
+                  "paddingHorizontal": 16,
+                  "width": 320,
+                }
+              }
+            >
+              <TYText
+                align={null}
+                color={null}
+                size={null}
+                style={
+                  Object {
+                    "color": "#FFF",
+                  }
+                }
+                type={null}
+                weight={null}
+              >
+                自定义渲染动画区域内容
+              </TYText>
+            </View>
+          </View>
+        </AnimatedComponent>
+      </View>
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#1A1A1A",
+            "borderTopColor": "#FFF",
+            "borderTopWidth": 9,
+            "flexDirection": "row",
+            "height": 56,
+          }
+        }
+      >
+        <TouchableOpacity
+          activeOpacity={0.2}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 56,
+              "justifyContent": "center",
+              "width": 375,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#FFF",
+                "fontSize": 16,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            cancel
+          </TYText>
+        </TouchableOpacity>
+        <View
+          style={
+            Object {
+              "backgroundColor": "#FFFFFF",
+              "height": 24,
+              "justifyContent": "center",
+              "width": 1,
+            }
+          }
+        />
+        <TouchableOpacity
+          activeOpacity={0.2}
+          style={
+            Object {
+              "alignItems": "center",
+              "height": 56,
+              "justifyContent": "center",
+              "width": 375,
+            }
+          }
+        >
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            style={
+              Object {
+                "alignSelf": "center",
+                "color": "#FFF",
+                "fontSize": 16,
+              }
+            }
+            type={null}
+            weight={null}
+          >
+            confirm
+          </TYText>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </Motion.PullUp>
+</Portal>
+`;
