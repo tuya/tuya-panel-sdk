@@ -1,0 +1,1544 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddTimer components base render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Edit"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={12}
+    hourPickerStyle={Object {}}
+    is24Hour={true}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={0}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 32,
+          "flexDirection": "row",
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+          "width": 654,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Object {
+          "color": "#E35F5F",
+          "fontSize": 32,
+        }
+      }
+      type={null}
+      weight={null}
+    >
+      Delete
+    </TYText>
+  </TouchableOpacity>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components basic render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={21}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={34}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render WrapperComponent onCancel 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={21}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={34}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render WrapperComponent onMaskPress 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={21}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={34}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render WrapperComponent onSelect 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={21}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={34}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value=""
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render onBack 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Edit"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={12}
+    hourPickerStyle={Object {}}
+    is24Hour={true}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={0}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderRadius": 32,
+          "flexDirection": "row",
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+          "width": 654,
+        },
+        Object {},
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Object {
+          "color": "#E35F5F",
+          "fontSize": 32,
+        }
+      }
+      type={null}
+      weight={null}
+    >
+      Delete
+    </TYText>
+  </TouchableOpacity>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render row 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={21}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={34}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={true}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={true}
+    wrapperStyle={null}
+  />
+</View>
+`;
+
+exports[`AddTimer components render singleTimer onChange 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <CustomTopBar
+    onBack={[Function]}
+    onSave={[Function]}
+    themeColor="#1082fe"
+    title="Add"
+  />
+  <SingleTimePicker
+    amPmPickerStyle={Object {}}
+    amText="AM"
+    containerStyle={Object {}}
+    dividerColor="#ccc"
+    hour={2}
+    hourPickerStyle={Object {}}
+    is24Hour={false}
+    itemAlign="center"
+    itemStyle={Object {}}
+    itemTextColor="#ccc"
+    loop={false}
+    minute={3}
+    minutePickerStyle={Object {}}
+    onChange={[Function]}
+    pickerStyle={
+      Array [
+        Object {
+          "marginTop": 48,
+        },
+        undefined,
+      ]
+    }
+    pmText="PM"
+    prefixPosition="left"
+    selectedItemTextColor="#000"
+    textSize={20}
+    visibleItemCount={7}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution action"
+      onPress={[Function]}
+      value="Turn off"
+    />
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 32,
+          "height": 140,
+          "justifyContent": "center",
+          "marginHorizontal": 48,
+          "marginTop": 32,
+          "overflow": "hidden",
+        },
+        Object {},
+      ]
+    }
+  >
+    <Row
+      fontColor="#626982"
+      label="Execution cycle"
+      onPress={[Function]}
+      value="Once"
+    />
+  </View>
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Once",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "EveryDay",
+          "value": "1",
+        },
+        Object {
+          "key": "2",
+          "title": "Custom",
+          "value": "2",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="0"
+    visible={false}
+    wrapperStyle={null}
+  />
+  <WrapperComponent
+    backIconColor={null}
+    backText="Back"
+    cancelText="Cancel"
+    cancelTextStyle={null}
+    confirmText="Confirm"
+    confirmTextStyle={null}
+    dataSource={
+      Array [
+        Object {
+          "key": "0",
+          "title": "Turn on",
+          "value": "0",
+        },
+        Object {
+          "key": "1",
+          "title": "Turn off",
+          "value": "1",
+        },
+      ]
+    }
+    footer={null}
+    footerType="singleCancel"
+    footerWrapperStyle={null}
+    isAlign={false}
+    motionConfig={Object {}}
+    motionType="PullUp"
+    onBack={null}
+    onCancel={[Function]}
+    onConfirm={[Function]}
+    onMaskPress={[Function]}
+    onSelect={[Function]}
+    onSwitchValueChange={null}
+    showBack={false}
+    showTitleDivider={true}
+    subTitle=""
+    title="Repeat"
+    titleTextStyle={null}
+    titleWrapperStyle={null}
+    type="radio"
+    value="1"
+    visible={false}
+    wrapperStyle={null}
+  />
+</View>
+`;

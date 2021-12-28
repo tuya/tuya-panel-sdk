@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddButton components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.8}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "bottom": 128,
+      "height": 152,
+      "justifyContent": "center",
+      "position": "absolute",
+      "right": 24,
+      "width": 152,
+    }
+  }
+>
+  <Image
+    source={1}
+    style={
+      Object {
+        "height": 152,
+        "position": "absolute",
+        "width": 152,
+        "zIndex": 3,
+      }
+    }
+  />
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": 152,
+          "position": "absolute",
+          "width": 152,
+        },
+        Object {
+          "tintColor": "red",
+        },
+      ]
+    }
+  />
+  <Image
+    resizeMode="contain"
+    source={1}
+    style={
+      Object {
+        "height": 38,
+        "position": "absolute",
+        "top": 36,
+        "width": 38,
+      }
+    }
+  />
+</TouchableOpacity>
+`;

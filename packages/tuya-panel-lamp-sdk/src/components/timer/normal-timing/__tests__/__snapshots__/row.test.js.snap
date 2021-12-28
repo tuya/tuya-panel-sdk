@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Row components basic render 1`] = `
+<TouchableOpacity
+  activeOpacity={0.7}
+  onPress={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "height": 140,
+      "justifyContent": "space-between",
+      "paddingHorizontal": 48,
+    }
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Object {
+        "fontSize": 28,
+      }
+    }
+    type={null}
+    weight={null}
+  />
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "flex-end",
+      }
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      ellipsizeMode="tail"
+      numberOfLines={1}
+      size={null}
+      style={
+        Object {
+          "fontSize": 24,
+          "marginRight": 8,
+        }
+      }
+      type={null}
+      weight={null}
+    />
+    <Component
+      color="#fff"
+      name="arrow"
+      size={12}
+      style={
+        Object {
+          "opacity": 0.7,
+        }
+      }
+    />
+  </View>
+</TouchableOpacity>
+`;
