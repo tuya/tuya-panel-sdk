@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.8.0...@tuya/tuya-panel-api@1.9.0) (2021-12-28)
+
+
+### Features
+
+* **lamp:** add timing and sceneFun ([#155](https://github.com/tuya/tuya-panel-sdk/issues/155)) ([605ba4a](https://github.com/tuya/tuya-panel-sdk/commit/605ba4a7ec10e9e046fd90d0cc379f07a06a0110))
+
+
+
+
+
 # 1.8.0 (2021-12-21)
 
 

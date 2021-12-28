@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.6.0...@tuya/tuya-panel-lock-sdk@1.7.0) (2021-12-28)
+
+
+### Features
+
+* add Bubble and DargSort ([#156](https://github.com/tuya/tuya-panel-sdk/issues/156)) ([a6ed10a](https://github.com/tuya/tuya-panel-sdk/commit/a6ed10a981e679c4ec9691b1c9d35aaca2505ab9))
+
+
+
+
+
 # 1.6.0 (2021-12-21)
 
 
