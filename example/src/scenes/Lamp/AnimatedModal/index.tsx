@@ -2,6 +2,7 @@ import React, { FC, useState } from 'react';
 import AnimatedModal from '@tuya/tuya-panel-lamp-sdk/src/components/container/animatedModal';
 import { SwitchButton, Utils, TYText } from 'tuya-panel-kit';
 import { View, StyleSheet } from 'react-native';
+import Strings from '../../../i18n';
 
 const { convertX: cx, isIphoneX } = Utils.RatioUtils;
 
@@ -23,7 +24,9 @@ const AnimatedModalScene: FC = () => {
     return (
       <View style={{ marginTop: 16 }}>
         <View style={styles.darkContentSettingStyle}>
-          <TYText style={{ color: '#FFF' }}>自定义渲染动画区域内容</TYText>
+          <TYText style={{ color: '#FFF' }}>
+            {Strings.getLang('TYLamp_animatedModal_customRender')}
+          </TYText>
         </View>
       </View>
     );
@@ -33,7 +36,9 @@ const AnimatedModalScene: FC = () => {
     return (
       <View style={{ marginTop: 16 }}>
         <View style={styles.lightContentSettingStyle}>
-          <TYText style={{ color: '#000' }}>自定义渲染动画区域内容</TYText>
+          <TYText style={{ color: '#000' }}>
+            {Strings.getLang('TYLamp_animatedModal_customRender')}
+          </TYText>
         </View>
       </View>
     );
@@ -42,7 +47,9 @@ const AnimatedModalScene: FC = () => {
   const renderDarkContent = () => {
     return (
       <View style={styles.darkContentSettingStyle}>
-        <TYText style={{ color: '#FFF' }}>自定义渲染内容用于内部控制动画</TYText>
+        <TYText style={{ color: '#FFF' }}>
+          {Strings.getLang('TYLamp_animatedModal_customRenderForControl')}
+        </TYText>
         <SwitchButton
           value={value}
           onValueChange={v => setValue(v)}
@@ -56,7 +63,9 @@ const AnimatedModalScene: FC = () => {
   const renderLightContent = () => {
     return (
       <View style={styles.lightContentSettingStyle}>
-        <TYText style={{ color: '#000' }}>自定义渲染内容用于内部控制动画</TYText>
+        <TYText style={{ color: '#000' }}>
+          {Strings.getLang('TYLamp_animatedModal_customRenderForControl')}
+        </TYText>
         <SwitchButton
           value={value}
           onValueChange={v => setValue(v)}
@@ -70,7 +79,7 @@ const AnimatedModalScene: FC = () => {
   return (
     <View style={{ flex: 1, alignItems: 'center' }}>
       <View style={styles.settingStyle}>
-        <TYText>浅色模式效果</TYText>
+        <TYText> {Strings.getLang('TYLamp_animatedModal_light')}</TYText>
         <SwitchButton
           value={lightVisible}
           onValueChange={v => setLightVisible(v)}
@@ -80,7 +89,7 @@ const AnimatedModalScene: FC = () => {
       </View>
 
       <View style={styles.settingStyle}>
-        <TYText>深色模式效果</TYText>
+        <TYText>{Strings.getLang('TYLamp_animatedModal_dark')}</TYText>
         <SwitchButton
           value={darkVisible}
           onValueChange={v => setDarkVisible(v)}
@@ -105,7 +114,7 @@ const AnimatedModalScene: FC = () => {
             borderBottomColor: 'rgba(255,255,255,0.05)',
           },
           contentHeaderTextStyle: { fontSize: 16, color: '#FFF' },
-          contentHeaderTitle: '深色模式下头部栏',
+          contentHeaderTitle: `${Strings.getLang('TYLamp_animatedModal_darkHeaderTitle')}`,
         }}
         footerConfig={{
           contentFooterStyle: {
@@ -116,9 +125,9 @@ const AnimatedModalScene: FC = () => {
             alignItems: 'center',
             marginBottom: cx(isIphoneX ? 20 : 0),
           },
-          cancelText: '取消',
+          cancelText: `${Strings.getLang('TYLamp_animatedModal_cancelText')}`,
           cancelTextStyle: { alignSelf: 'center', color: 'rgba(255,255,255,0.5)' },
-          confirmText: '确认',
+          confirmText: `${Strings.getLang('TYLamp_animatedModal_confirmText')}`,
           confirmTextStyle: { alignSelf: 'center', color: '#1082FE' },
           footerDivideStyle: {
             height: cx(24),
@@ -156,7 +165,7 @@ const AnimatedModalScene: FC = () => {
             borderBottomColor: '#f8f8f8',
           },
           contentHeaderTextStyle: { fontSize: 16, color: '#000' },
-          contentHeaderTitle: '浅色模式下头部栏',
+          contentHeaderTitle: `${Strings.getLang('TYLamp_animatedModal_lightHeaderTitle')}`,
         }}
         footerConfig={{
           contentFooterStyle: {
@@ -167,9 +176,9 @@ const AnimatedModalScene: FC = () => {
             alignItems: 'center',
             marginBottom: cx(isIphoneX ? 20 : 0),
           },
-          cancelText: '取消',
+          cancelText: `${Strings.getLang('TYLamp_animatedModal_cancelText')}`,
           cancelTextStyle: { alignSelf: 'center', color: 'rgba(0,0,0,0.5)' },
-          confirmText: '确认',
+          confirmText: `${Strings.getLang('TYLamp_animatedModal_confirmText')}`,
           confirmTextStyle: { alignSelf: 'center', color: '#FD8252' },
           footerDivideStyle: {
             height: cx(24),

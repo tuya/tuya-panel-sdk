@@ -132,7 +132,6 @@ const AnimatedModal: React.FC<AnimatedModalProps> = props => {
   };
 
   return (
-    // todo 继承属性
     <Modal visible={modalVisible} onMaskPress={onMaskPress} {...modalProps}>
       <Motion.PullUp
         style={motionStyle}
