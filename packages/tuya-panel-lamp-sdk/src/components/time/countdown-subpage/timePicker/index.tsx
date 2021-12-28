@@ -56,7 +56,7 @@ const TimePicker = (props: PickerProps) => {
       }
     } else if (Number(value) === minHour) {
       if (Number(minute) < minMinute) {
-        setMinute(formatValue(maxMinute));
+        setMinute(formatValue(minMinute));
       }
     }
     setHour(formatValue(value));
