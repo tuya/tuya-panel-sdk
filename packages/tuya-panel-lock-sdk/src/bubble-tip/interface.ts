@@ -51,7 +51,7 @@ export interface IBubbleTipItemConfig {
  */
 export interface IBubbleTipBase {
   children: Array<React.ReactNode>;
-  distance: number;
+  distance?: number;
   waitingTime?: number;
   runInTime?: number;
   leavingTime?: number;
