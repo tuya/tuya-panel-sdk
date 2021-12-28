@@ -33,9 +33,12 @@ exports[`TYIpcMusicControl components basic render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -54,9 +57,12 @@ exports[`TYIpcMusicControl components basic render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -75,9 +81,12 @@ exports[`TYIpcMusicControl components basic render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -96,9 +105,12 @@ exports[`TYIpcMusicControl components basic render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -117,9 +129,12 @@ exports[`TYIpcMusicControl components basic render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -156,9 +171,12 @@ exports[`TYIpcMusicControl components render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -177,9 +195,12 @@ exports[`TYIpcMusicControl components render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -198,9 +219,12 @@ exports[`TYIpcMusicControl components render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -219,9 +243,12 @@ exports[`TYIpcMusicControl components render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>
@@ -240,9 +267,12 @@ exports[`TYIpcMusicControl components render 1`] = `
     <Image
       source={1}
       style={
-        Object {
-          "tintColor": "#000",
-        }
+        Array [
+          Object {
+            "tintColor": "#000",
+          },
+          undefined,
+        ]
       }
     />
   </TouchableOpacity>

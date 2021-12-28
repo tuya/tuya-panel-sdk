@@ -23,10 +23,17 @@ module.exports = {
 
     TYLamp_average: '平均分配',
     TYLamp_percent: '按百分比分配',
-
     TYLamp_loop: '循环',
     TYLamp_vertical: '竖直',
     TYLamp_horizontal: '水平',
+    TYLamp_animatedModal_customRender: '自定义渲染动画区域内容',
+    TYLamp_animatedModal_customRenderForControl: '自定义渲染内容用于内部控制动画',
+    TYLamp_animatedModal_light: '浅色模式效果',
+    TYLamp_animatedModal_dark: '深色模式效果',
+    TYLamp_animatedModal_lightHeaderTitle: '浅色模式下头部栏',
+    TYLamp_animatedModal_darkHeaderTitle: '深色模式下头部栏',
+    TYLamp_animatedModal_cancelText: '取消',
+    TYLamp_animatedModal_confirmText: '确认',
   },
 
   en: {
@@ -53,5 +60,13 @@ module.exports = {
     TYLamp_loop: 'loop',
     TYLamp_vertical: 'Vertical',
     TYLamp_horizontal: 'Horizontal',
+    TYLamp_animatedModal_customRender: 'Custom rendering animation',
+    TYLamp_animatedModal_customRenderForControl: 'Custom rendering content for control',
+    TYLamp_animatedModal_light: 'Light mode effect',
+    TYLamp_animatedModal_dark: 'Dark mode effect',
+    TYLamp_animatedModal_lightHeaderTitle: 'light header',
+    TYLamp_animatedModal_darkHeaderTitle: 'dark header',
+    TYLamp_animatedModal_cancelText: 'cancel',
+    TYLamp_animatedModal_confirmText: 'confirm',
   },
 };

@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DragSort components DragSort render 1`] = `
+<_class
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <ReviewDragSort
+    dragSortList={
+      Array [
+        Object {
+          "height": 80,
+          "key": 0,
+          "text": "A",
+          "width": 80,
+        },
+        Object {
+          "height": 80,
+          "key": 1,
+          "text": "B",
+          "width": 120,
+        },
+        Object {
+          "height": 60,
+          "key": 2,
+          "text": "C",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 3,
+          "text": "D",
+          "width": 80,
+        },
+        Object {
+          "height": 80,
+          "key": 4,
+          "text": "E",
+          "width": 120,
+        },
+        Object {
+          "height": 60,
+          "key": 5,
+          "text": "F",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 6,
+          "text": "G",
+          "width": 80,
+        },
+        Object {
+          "height": 60,
+          "key": 7,
+          "text": "H",
+          "width": 120,
+        },
+        Object {
+          "height": 60,
+          "key": 8,
+          "text": "I",
+          "width": 90,
+        },
+        Object {
+          "height": 80,
+          "key": 9,
+          "text": "J",
+          "width": 80,
+        },
+        Object {
+          "height": 60,
+          "key": 10,
+          "text": "K",
+          "width": 120,
+        },
+        Object {
+          "height": 80,
+          "key": 11,
+          "text": "L",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 12,
+          "text": "M",
+          "width": 80,
+        },
+        Object {
+          "height": 60,
+          "key": 13,
+          "text": "N",
+          "width": 120,
+        },
+        Object {
+          "height": 80,
+          "key": 14,
+          "text": "O",
+          "width": 90,
+        },
+        Object {
+          "height": 80,
+          "key": 15,
+          "text": "P",
+          "width": 80,
+        },
+        Object {
+          "height": 60,
+          "key": 16,
+          "text": "Q",
+          "width": 120,
+        },
+        Object {
+          "height": 60,
+          "key": 17,
+          "text": "R",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 18,
+          "text": "S",
+          "width": 80,
+        },
+        Object {
+          "height": 60,
+          "key": 19,
+          "text": "T",
+          "width": 120,
+        },
+        Object {
+          "height": 60,
+          "key": 20,
+          "text": "U",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 21,
+          "text": "V",
+          "width": 80,
+        },
+        Object {
+          "height": 80,
+          "key": 22,
+          "text": "W",
+          "width": 120,
+        },
+        Object {
+          "height": 80,
+          "key": 23,
+          "text": "X",
+          "width": 90,
+        },
+        Object {
+          "height": 60,
+          "key": 24,
+          "text": "Y",
+          "width": 80,
+        },
+        Object {
+          "height": 80,
+          "key": 25,
+          "text": "Z",
+          "width": 120,
+        },
+      ]
+    }
+    onDataChange={[Function]}
+    renderItem={[Function]}
+  />
+</_class>
+`;

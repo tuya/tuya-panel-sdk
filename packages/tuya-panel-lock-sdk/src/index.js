@@ -14,3 +14,5 @@ export { default as CustomKeyboard } from './custom-keyboard';
 export { default as TouchableView } from './touchable-view';
 export { default as LockUtils } from './utils';
 export { default as SlideChoose } from './slide-choose';
+export { default as DragSort } from './drag-sort';
+export { default as BubbleTip } from './bubble-tip';

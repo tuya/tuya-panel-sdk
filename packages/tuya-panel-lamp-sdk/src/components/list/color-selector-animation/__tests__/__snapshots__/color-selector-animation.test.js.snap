@@ -29,6 +29,7 @@ exports[`ColorSelectorAnimation components basic render 1`] = `
         "justifyContent": "center",
         "marginBottom": 18,
         "marginRight": 18,
+        "overflow": "hidden",
         "width": 64,
       }
     }
@@ -50,6 +51,7 @@ exports[`ColorSelectorAnimation components basic render 1`] = `
         "justifyContent": "center",
         "marginBottom": 18,
         "marginRight": 18,
+        "overflow": "hidden",
         "width": 64,
       }
     }
@@ -71,6 +73,7 @@ exports[`ColorSelectorAnimation components basic render 1`] = `
         "justifyContent": "center",
         "marginBottom": 18,
         "marginRight": 18,
+        "overflow": "hidden",
         "width": 64,
       }
     }
@@ -94,6 +97,7 @@ exports[`ColorSelectorAnimation components basic render 1`] = `
           "justifyContent": "center",
           "marginBottom": 18,
           "marginRight": 18,
+          "overflow": "hidden",
           "width": 56,
         },
         Object {},

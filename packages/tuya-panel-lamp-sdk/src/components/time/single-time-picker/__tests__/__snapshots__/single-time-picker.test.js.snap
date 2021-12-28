@@ -30,6 +30,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
@@ -72,6 +73,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
@@ -164,6 +166,7 @@ exports[`SingleTimePicker components basic render 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
@@ -512,6 +515,7 @@ exports[`SingleTimePicker components change time 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
@@ -554,6 +558,7 @@ exports[`SingleTimePicker components change time 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
@@ -646,6 +651,7 @@ exports[`SingleTimePicker components change time 1`] = `
     style={
       Array [
         Object {
+          "backgroundColor": "transparent",
           "height": 400,
         },
         Object {
