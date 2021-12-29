@@ -1,13 +1,14 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useMemo, useEffect } from 'react';
 import { View, PanResponder } from 'react-native';
 import { Utils, TYText } from 'tuya-panel-kit';
-// import { plus } from 'number-precision';
-// import { PanGestureHandler, State } from 'react-native-gesture-handler';
 import useMergeProps from '../utils/hooks/useMergeProps';
 import useMergeValue from '../utils/hooks/useMergeValue';
 import { ScaleSliderProps } from './interface';
-import { getOffset } from './utils';
+import { getOffset, getPrecision } from './utils';
 import styles from './style';
+
+import { isUndefined, isFunction } from '../../utils/is';
+import { plus } from '../../utils/number-precision';
 
 const { convertX: cx, convertY: cy } = Utils.RatioUtils;
 
@@ -18,74 +19,88 @@ const defaultProps: ScaleSliderProps = {
   max: 30,
   min: 0,
   step: 1,
+  color: '#333',
 };
 
 const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
   const props = useMergeProps<ScaleSliderProps>(baseProps, defaultProps);
-  const { min, max, step, disabled, style } = props;
-
+  const { min, max, step, disabled, color, style } = props;
+  const precision = useMemo(() => getPrecision(step), [step]);
   // 受控非受控处理
   const [value, setValue] = useMergeValue<number>(min, {
     defaultValue: props.defaultValue,
     value: props.value,
   });
-
-  // 线个数
+  // 刻度个数
   const stepsLength = Math.floor((max - min) / step);
-  // 刻度宽度
   const scaleWidth = stepsLength * SCALE_SPACE;
 
   // 获取值偏移量
   const offset = getOffset(value, [min, max]);
 
   //  ref
-  const position = useRef({
-    left: 0,
-    top: 0,
-  });
+  // 记录下上次滑动的距离
+  const lastDiff = useRef<number>(0);
+  const lastVal = useRef<number>(value);
+
+  useEffect(() => {
+    lastVal.current = value;
+  }, [value]);
 
   // 通过坐标获取值
   function getValueByCoords(x: number, y: number): number {
-    const { left, top } = position.current;
     const roadLength = scaleWidth;
-    let diff = x - left;
-
-    console.log('difff====', x, left, diff);
+    let diff = -(x - lastDiff.current);
     diff = diff < 0 ? 0 : diff > roadLength ? roadLength : diff;
     const stepLen = (roadLength * step) / (max - min);
     const steps = Math.round(diff / stepLen);
+    return plus(min, steps * step);
+  }
 
-    return min + steps * step;
+  // 判断值是否在[min, max]区间内，并且满足步长或是标签值
+  function getLegalValue(val: number): number {
+    if (isUndefined(val)) return min;
+    if (val <= min) return min;
+    if (val >= max) return max;
+
+    const steps = Math.round(val / step);
+    return parseFloat(Number(steps * step).toFixed(precision));
+  }
+
+  function onChange(val) {
+    lastVal.current = val;
+    setValue(val);
+    if (isFunction(props.onChange)) {
+      props.onChange(val);
+    }
   }
 
   const panResponder = useRef(
     PanResponder.create({
+      onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
       onPanResponderGrant: (evt, gestureState) => {
         const { moveX, moveY } = gestureState;
-        // add code here
-        // position.current = { left: moveX, top: moveY };
-        console.log('move start ', evt, gestureState);
       },
       onPanResponderMove: (evt, gestureState) => {
-        // add code here
-        const { moveX, moveY } = gestureState;
-        const v = getValueByCoords(moveX, moveY);
-        setValue(v);
-        //
-        console.log('move move ', v, moveX);
+        const { dx, dy } = gestureState;
+        const newVal = getValueByCoords(dx, dy);
+        onChange(getLegalValue(newVal));
       },
       onPanResponderRelease: (evt, gestureState) => {
-        const { moveX, moveY } = gestureState;
-        // position.current = { left: moveX, top: moveY };
-        console.log('move end ', evt, gestureState);
+        const { dx, dy } = gestureState;
+        const newVal = getValueByCoords(dx, dy);
+        const lastOffset = getOffset(newVal, [min, max]);
+        lastDiff.current = lastOffset * scaleWidth;
+
+        if (isFunction(props.onRelease)) {
+          props.onRelease(lastVal.current);
+        }
       },
     })
   ).current;
-
-  console.log(offset, value, 'dsds=======');
   return (
-    <View style={styles.wrapper}>
+    <View style={[styles.wrapper, style]}>
       <TYText> 当前值{value}</TYText>
       <View style={styles.outer} {...panResponder.panHandlers}>
         <View
@@ -105,7 +120,7 @@ const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
                 style={[
                   styles.item,
                   {
-                    backgroundColor: '#333',
+                    backgroundColor: color,
                     height: sortNumber % 10 === 0 ? cy(46) : sortNumber % 5 === 0 ? cy(28) : cy(24),
                   },
                 ]}

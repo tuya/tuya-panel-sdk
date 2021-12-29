@@ -7,12 +7,13 @@ export default StyleSheet.create({
   wrapper: {
     // height: '100%',
     width: '100%',
-    backgroundColor: 'pink',
+    overflow: 'hidden',
   },
   outer: {
     height: cy(46),
     width: cx(303),
     marginTop: cy(14),
+    overflow: 'hidden',
   },
 
   inner: {

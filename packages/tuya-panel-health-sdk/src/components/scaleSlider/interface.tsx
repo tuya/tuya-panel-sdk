@@ -22,11 +22,11 @@ export interface ScaleSliderProps {
    */
   max?: number;
   /**
-   * @zh 是否是范围选择
-   * @en Whether to allow range selection
-   * @version 2.14.0
+   * @zh 刻度尺的颜色以及角标
+   * @en The color of the scale and the corner mark
+   * @defaultValue 100
    */
-  range?: boolean | { draggableBar: boolean };
+  color?: string;
   /**
    * @zh 步长
    * @en Slide the value of one step
@@ -48,4 +48,9 @@ export interface ScaleSliderProps {
    * @en Callback when the user changed the slider's value
    */
   onChange?: (val: number) => void;
+  /**
+   * @zh 当手势抬起时触发
+   * @en Trigger when we see
+   */
+  onRelease?: (val: number) => void;
 }

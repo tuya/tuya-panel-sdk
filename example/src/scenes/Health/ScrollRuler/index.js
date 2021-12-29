@@ -41,7 +41,7 @@ const ScrollRulerExample = () => {
           onChange={handleChange}
         /> */}
 
-        <ScaleSlider />
+        <ScaleSlider min={0} max={60} defaultValue={20} onChange={handleChange} />
       </Section>
       <Section title={getLang('dsc_default')}>
         {/* <ScrollRuler
