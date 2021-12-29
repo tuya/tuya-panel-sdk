@@ -26,6 +26,7 @@ import AppMusicCardScene from './MusicRhythm/AppMusicCard';
 import ConicalGradientScene from './ConicalGradient';
 import ColorSelectorAnimationScene from './ColorSelectorAnimation';
 import MusicDrawerScene from './MusicDrawer';
+import CountdownSubPage from './CountdownSubPage';
 import TabsBarScene from './TabsBar';
 import AnimatedModalScene from './AnimatedModal';
 import NormalTimingScene from './NormalTiming';
@@ -63,6 +64,7 @@ export default class LampScene extends Component {
   static MusicDrawer = MusicDrawerScene;
   static ConicalGradient = ConicalGradientScene;
   static ColorSelectorAnimation = ColorSelectorAnimationScene;
+  static CountdownSubPage = CountdownSubPage;
   static TabsBar = TabsBarScene;
   static AnimatedModal = AnimatedModalScene;
   static NormalTiming = NormalTimingScene;
