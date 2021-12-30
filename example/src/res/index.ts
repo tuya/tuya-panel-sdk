@@ -3,5 +3,6 @@ const Res = {
   mode2: require('./mode2.png'),
   stopIconLight: require('./stopIcon_light.png'),
   startIconLight: require('./startIcon_light.png'),
+  timeLight: require('./time_light.png'),
 };
 export default Res;

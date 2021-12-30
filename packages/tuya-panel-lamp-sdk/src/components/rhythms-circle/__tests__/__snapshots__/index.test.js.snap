@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RhythmsCircle components render touch 1`] = `
+<View
+  style={
+    Array [
+      false,
+      Object {},
+      Object {
+        "borderRadius": 140,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 100,
+          "height": 200,
+          "left": 40,
+          "position": "absolute",
+          "top": 40,
+          "width": 200,
+        },
+        Object {
+          "backgroundColor": "transparent",
+        },
+      ]
+    }
+  />
+  <ConicalGradent
+    colors={
+      Array [
+        Object {
+          "angle": 1.4398966328953218,
+          "color": "#000",
+        },
+        Object {
+          "angle": 1.7016960206944711,
+          "color": "#CE8040",
+        },
+        Object {
+          "angle": 4.4505895925855405,
+          "color": "#CE8040",
+        },
+      ]
+    }
+    innerRadius={100}
+    offsetAngle={1.5707963267948966}
+    outerRadius={140}
+    segmentAngle={0.05235987755982988}
+  />
+  <Image
+    resizeMode="contain"
+    source={1}
+    style={
+      Object {
+        "height": 188,
+        "left": 46,
+        "position": "absolute",
+        "top": 46,
+        "width": 188,
+      }
+    }
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 280,
+          "width": 280,
+        },
+      ]
+    }
+  >
+    <View
+      key="390"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#222430",
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 18,
+            "height": 36,
+            "left": 21.026616635142744,
+            "top": 124.33685693359384,
+            "transform": Array [
+              Object {
+                "translateX": -18,
+              },
+              Object {
+                "translateY": -18,
+              },
+            ],
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#222430",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "tintColor": "#fff",
+              "width": 36,
+            },
+            Object {},
+          ]
+        }
+      />
+    </View>
+    <View
+      key="1020"
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#222430",
+            "position": "absolute",
+          },
+          Object {
+            "borderRadius": 18,
+            "height": 36,
+            "left": 255.9110991546882,
+            "top": 108.94171458769753,
+            "transform": Array [
+              Object {
+                "translateX": -18,
+              },
+              Object {
+                "translateY": -18,
+              },
+            ],
+            "width": 36,
+          },
+          Object {
+            "backgroundColor": "#222430",
+          },
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "borderRadius": 18,
+              "height": 36,
+              "tintColor": "#fff",
+              "width": 36,
+            },
+            Object {},
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        Object {
+          "left": 0,
+          "position": "absolute",
+          "top": 0,
+          "zIndex": 1,
+        },
+        Object {
+          "height": 280,
+          "width": 280,
+        },
+      ]
+    }
+  />
+</View>
+`;
