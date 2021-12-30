@@ -5,6 +5,7 @@ module.exports = {
     TY_Standard: '公版(Standard)',
     TY_SweepRobot: '扫地机(SweepRobot)',
     TY_Sensor: '传感器(Sensor)',
+    TY_Szos: '深圳OS(Szos)',
 
     TY_dp_switch_1: '开关1',
     TY_dp_switch_1_on: '开',
@@ -53,6 +54,8 @@ module.exports = {
     TY_Standard: '公版(Standard)',
     TY_SweepRobot: '扫地机(SweepRobot)',
     TY_Sensor: '传感器(Sensor)',
+    TY_Szos: '深圳OS(Szos)',
+
     TYLamp_am: 'AM',
     TYLamp_pm: 'PM',
 
