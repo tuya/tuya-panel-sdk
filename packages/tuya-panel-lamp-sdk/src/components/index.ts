@@ -51,4 +51,7 @@ export { default as ConicalGradient } from './gradient/conical-gradient';
 export { default as ColorSelectorAnimation } from './list/color-selector-animation';
 
 export { default as TabsBar } from './tabs-bar';
+
 export { default as NormalTiming } from './timer/normal-timing';
+
+export { default as RhythmsCircle } from './rhythms-circle';

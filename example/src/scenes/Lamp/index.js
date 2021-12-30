@@ -34,6 +34,7 @@ import SceneFunScene from './SceneFun';
 import AddTimerScene from './NormalTiming/addTimer';
 import RepeatScene from './NormalTiming/weeks';
 import TestWhiteScene from './NormalTiming/testWhite';
+import RhythmsCircleScene from './RhythmsCircle';
 
 export default class LampScene extends Component {
   get data() {
@@ -72,6 +73,7 @@ export default class LampScene extends Component {
   static AddTimer = AddTimerScene;
   static Repeat = RepeatScene;
   static TestWhite = TestWhiteScene;
+  static RhythmsCircle = RhythmsCircleScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
