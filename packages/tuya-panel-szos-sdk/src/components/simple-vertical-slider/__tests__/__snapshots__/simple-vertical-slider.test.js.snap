@@ -1,0 +1,202 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SimpleVerticalSlider components basic render 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 348,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eaeaea",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#000",
+          "height": 0,
+          "overflow": "hidden",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`SimpleVerticalSlider components render touch 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 348,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eaeaea",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#000",
+          "height": NaN,
+          "overflow": "hidden",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`SimpleVerticalSlider components render touch disabled 1`] = `
+<View
+  accessibilityLabel="ReactColorPicker_Slider"
+  onLayout={[Function]}
+  onMoveShouldSetResponder={[Function]}
+  onMoveShouldSetResponderCapture={[Function]}
+  onResponderEnd={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderReject={[Function]}
+  onResponderRelease={[Function]}
+  onResponderStart={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  onStartShouldSetResponderCapture={[Function]}
+  pointerEvents="box-only"
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "borderRadius": 32,
+        "flexDirection": "row",
+        "height": "100%",
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 348,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+          "height": "100%",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "rgba(206,206,206,0.12)",
+        },
+      ]
+    }
+  />
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#eaeaea",
+          "bottom": 0,
+          "left": 0,
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "backgroundColor": "#000",
+          "height": 0,
+          "overflow": "hidden",
+        },
+      ]
+    }
+  />
+</View>
+`;
