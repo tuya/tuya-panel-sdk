@@ -1,3 +1,4 @@
+import { Dayjs } from 'dayjs';
 const opt = Object.prototype.toString;
 
 export function isArray(obj: any): obj is any[] {
@@ -52,4 +53,18 @@ export function isEmptyObject(obj: any): boolean {
 
 export function isExist(obj: any): boolean {
   return obj || obj === 0;
+}
+
+export function isDayjs(time): time is Dayjs {
+  return (
+    isObject(time) &&
+    (('$y' in time &&
+      '$M' in time &&
+      '$D' in time &&
+      '$d' in time &&
+      '$H' in time &&
+      '$m' in time &&
+      '$s' in time) ||
+      time._isAMomentObject) // 兼容 moment 的验证
+  );
 }

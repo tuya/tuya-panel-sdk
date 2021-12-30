@@ -63,4 +63,4 @@ const RotateView: FC<RotateViewProps> = baseProps => {
   );
 };
 
-export default RotateView;
+export default React.memo(RotateView);

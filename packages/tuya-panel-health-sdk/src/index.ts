@@ -2,6 +2,7 @@
 import BarPercent from './components/barPercent';
 import UnLockButton from './components/unLockButton';
 import { LineProgress, CircleProgress, StepsProgress } from './components/progress';
+import { DaySwitch, WeekSwitch, MonthSwitch } from './components/dateSwitch';
 import BreatheView from './components/breatheView';
 import RotateView from './components/rotateView';
 import ScaleSlider from './components/scaleSlider';
@@ -17,4 +18,7 @@ export {
   hooks,
   StepsProgress,
   ScaleSlider,
+  DaySwitch,
+  WeekSwitch,
+  MonthSwitch,
 };
