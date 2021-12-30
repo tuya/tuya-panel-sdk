@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.8.0...@tuya/tuya-panel-lamp-sdk@1.9.0) (2021-12-30)
+
+
+### Features
+
+* **lamp:** add rhythms cicle ([#160](https://github.com/tuya/tuya-panel-sdk/issues/160)) ([75d383e](https://github.com/tuya/tuya-panel-sdk/commit/75d383e96da789e34e8e6ff20a65ea0f2f58b732))
+* add countdown subpage ([#158](https://github.com/tuya/tuya-panel-sdk/issues/158)) ([f704241](https://github.com/tuya/tuya-panel-sdk/commit/f7042415677351f4a9d204ef18d74137363241a3))
+
+
+
+
+
 # [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.7.0...@tuya/tuya-panel-lamp-sdk@1.8.0) (2021-12-28)
 
 
