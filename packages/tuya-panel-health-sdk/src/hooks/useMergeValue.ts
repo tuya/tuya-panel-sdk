@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { isUndefined } from '../../../utils/is';
+import { isUndefined } from '../utils/is';
 
 export default function useMergeValue<T>(
   defaultStateValue: T,

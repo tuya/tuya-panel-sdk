@@ -1,14 +1,15 @@
 import React, { FC, useRef, useMemo, useEffect } from 'react';
 import { View, PanResponder } from 'react-native';
-import { Utils, TYText } from 'tuya-panel-kit';
-import useMergeProps from '../utils/hooks/useMergeProps';
-import useMergeValue from '../utils/hooks/useMergeValue';
+import { Utils, TYText, IconFont } from 'tuya-panel-kit';
+import useMergeProps from '../../hooks/useMergeProps';
+import useMergeValue from '../../hooks/useMergeValue';
 import { ScaleSliderProps } from './interface';
 import { getOffset, getPrecision } from './utils';
 import styles from './style';
 
 import { isUndefined, isFunction } from '../../utils/is';
 import { plus } from '../../utils/number-precision';
+import { arrowBottomPath } from './icons';
 
 const { convertX: cx, convertY: cy } = Utils.RatioUtils;
 
@@ -19,12 +20,13 @@ const defaultProps: ScaleSliderProps = {
   max: 30,
   min: 0,
   step: 1,
-  color: '#333',
+  color: '#A699FF',
+  width: 375,
 };
 
 const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
   const props = useMergeProps<ScaleSliderProps>(baseProps, defaultProps);
-  const { min, max, step, disabled, color, style } = props;
+  const { min, max, step, disabled, color, width, style } = props;
   const precision = useMemo(() => getPrecision(step), [step]);
   // 受控非受控处理
   const [value, setValue] = useMergeValue<number>(min, {
@@ -43,6 +45,9 @@ const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
   const lastDiff = useRef<number>(0);
   const lastVal = useRef<number>(value);
 
+  useEffect(() => {
+    lastDiff.current = offset * scaleWidth;
+  }, []);
   useEffect(() => {
     lastVal.current = value;
   }, [value]);
@@ -80,7 +85,7 @@ const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
       onStartShouldSetPanResponder: () => true,
       onMoveShouldSetPanResponder: () => true,
       onPanResponderGrant: (evt, gestureState) => {
-        const { moveX, moveY } = gestureState;
+        // const { moveX, moveY } = gestureState;
       },
       onPanResponderMove: (evt, gestureState) => {
         const { dx, dy } = gestureState;
@@ -101,13 +106,16 @@ const ScaleSlider: FC<ScaleSliderProps> = baseProps => {
   ).current;
   return (
     <View style={[styles.wrapper, style]}>
-      <TYText> 当前值{value}</TYText>
+      <View style={styles.pointWrap}>
+        <IconFont d={arrowBottomPath} color={color} width={14} height={8} />
+      </View>
       <View style={styles.outer} {...panResponder.panHandlers}>
         <View
           style={[
             styles.inner,
             {
-              width: scaleWidth,
+              width: scaleWidth + width,
+              paddingHorizontal: width / 2,
               transform: [{ translateX: -(offset * scaleWidth) }],
             },
           ]}

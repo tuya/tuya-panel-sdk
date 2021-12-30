@@ -53,4 +53,5 @@ export interface ScaleSliderProps {
    * @en Trigger when we see
    */
   onRelease?: (val: number) => void;
+  width: number;
 }

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { View, StyleSheet } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import { ScrollRuler, ScaleSlider } from '@tuya/tuya-panel-health-sdk';
+import { ScaleSlider } from '@tuya/tuya-panel-health-sdk';
 import Section from '../Section';
 
 const { convertX: cx } = Utils.RatioUtils;
@@ -21,41 +21,25 @@ const getLang = key => {
 };
 
 const ScrollRulerExample = () => {
-  const handleChange = (v: number) => {
+  const handleChange = v => {
     console.log('changev', v);
   };
 
   const themeColor = 'pink';
-  const themeColor2 = '#34C495';
+
   return (
     <View style={{ flex: 1, padding: cx(20) }}>
       <Section title={getLang('dsc_default')}>
-        {/* <ScrollRuler
-          min={0}
-          max={60}
-          scaleColor={themeColor}
-          valueStyle={{ color: themeColor }}
-          titleStyle={{ color: themeColor }}
-          pointerStyle={{ borderBottomColor: themeColor }}
-          title="体重"
-          onChange={handleChange}
-        /> */}
-
         <ScaleSlider min={0} max={60} defaultValue={20} onChange={handleChange} />
       </Section>
       <Section title={getLang('dsc_default')}>
-        {/* <ScrollRuler
-          min={10}
-          max={20}
-          scaleColor={themeColor2}
-          valueStyle={{ color: themeColor2 }}
-          titleStyle={{ color: themeColor2 }}
-          pointerStyle={{ borderBottomColor: themeColor2 }}
-          title="身高"
-          value={17}
-          formatValue={v => `${v * 10}cm`}
+        <ScaleSlider
+          color={themeColor}
+          min={0}
+          max={100}
+          defaultValue={20}
           onChange={handleChange}
-        /> */}
+        />
       </Section>
     </View>
   );

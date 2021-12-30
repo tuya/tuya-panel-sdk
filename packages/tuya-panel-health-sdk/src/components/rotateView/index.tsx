@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useRef } from 'react';
 import { Animated, Easing } from 'react-native';
 import { RotateViewProps } from './interface';
-import useMergeProps from '../utils/hooks/useMergeProps';
+import useMergeProps from '../../hooks/useMergeProps';
 
 const defaultProps: RotateViewProps = {
   duration: 5000,

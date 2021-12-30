@@ -140,7 +140,7 @@ export interface BarPercentProps {
 
 export class BarPercent extends React.Component<BarPercentProps> {}
 
-// SliderRuler 滚动刻度尺
+// ScaleSlider 滚动刻度尺
 export interface SliderRulerProps {
   /**
    * @language zh-CN
@@ -177,98 +177,26 @@ export interface SliderRulerProps {
   value?: number;
   /**
    * @language zh-CN
-   * @description 标题
+   * @description 默认值
    * @defaultValue null
    */
   /**
    * @language en-US
-   * @description title
+   * @description defaultValue
    * @defaultValue null
    */
-  title?: string;
+  defaultValue?: string;
   /**
    * @language zh-CN
-   * @description 短刻度的高度
-   * @defaultValue 32
-   */
-  /**
-   * @language en-US
-   * @description Height of short scale
-   * @defaultValue 32
-   */
-  scaleShortHeight?: number;
-  /**
-   * @language zh-CN
-   * @description 中等刻度的高度
-   * @defaultValue 37
-   */
-  /**
-   * @language en-US
-   * @description Height of middle scale
-   * @defaultValue 37
-   */
-  scaleMiddleHeight?: number;
-  /**
-   * @language zh-CN
-   * @description 长刻度的高度
-   * @defaultValue 46
-   */
-  /**
-   * @language en-US
-   * @description Height of short scale
-   * @defaultValue 100
-   */
-  scaleLongHeight?: number;
-  /**
-   * @language zh-CN
-   * @description 刻度的颜色
+   * @description 刻度以及point颜色
    * @defaultValue () => {}
    */
   /**
    * @language en-US
-   * @description scal color
+   * @description Scale and point color
    * @defaultValue () => {}
    */
-  scaleColor?: ColorValue;
-  /**
-   * @language zh-CN
-   * @description 标题样式
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  /**
-   * @language en-US
-   * @description Title style
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  titleStyle?: StyleProp<ViewStyle>;
-  /**
-   * @language zh-CN
-   * @description value样式
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  /**
-   * @language en-US
-   * @description value style
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  valueStyle?: StyleProp<ViewStyle>;
-  /**
-   * @language zh-CN
-   * @description 刻度点样式
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  /**
-   * @language en-US
-   * @description pointer style
-   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
-   * @defaultValue null
-   */
-  pointerStyle?: StyleProp<ViewStyle>;
+  color?: ColorValue;
   /**
    * @language zh-CN
    * @description 滑动完成后的回调
@@ -279,18 +207,29 @@ export interface SliderRulerProps {
    * @description Callback for completion of sliding
    * @defaultValue null
    */
-  onChange?: (v: number | string) => void;
+  onChange?: (v: number) => void;
   /**
    * @language zh-CN
-   * @description 格式化当前值
+   * @description 滑动完成的回调
    * @defaultValue null
    */
   /**
    * @language en-US
-   * @description format value
+   * @description Slide completed
    * @defaultValue null
    */
-  formatValue?: (v: number) => number | string;
+  onRelease?: (v: number) => void;
+  /**
+   * @language zh-CN
+   * @description 刻度的宽
+   * @defaultValue 375
+   */
+  /**
+   * @language en-US
+   * @description The width of the scale
+   * @defaultValue 375
+   */
+  width?: number;
 }
 
 export class UnLockButton extends React.Component<UnLockButtonProps> {}
@@ -379,3 +318,131 @@ export interface UnLockButtonProps {
 }
 
 export class UnLockButton extends React.Component<UnLockButtonProps> {}
+
+// breatheView
+
+export interface BreatheViewProps {
+  /**
+   * @language zh-CN
+   * @description 是否开启旋转动画
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description Whether to turn on the rotation animation
+   * @defaultValue false
+   */
+  active?: boolean;
+  /**
+   * @language zh-CN
+   * @description 呼吸一轮的时间, 单位是ms
+   * @defaultValue 1500
+   */
+  /**
+   * @language en-US
+   * @description The time of one breath, the unit is ms
+   * @defaultValue 1500
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether to use native animation driver, generally it will be more useful on Android low-end machines
+   * @defaultValue true
+   */
+  useNativeDriver?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description The background color of the bottom ring
+   * @defaultValue false
+   */
+  isInteraction?: boolean;
+  /**
+   * @language zh-CN
+   * @description 按钮样式
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Button style
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue null
+   */
+  style?: StyleProp<ViewStyle>;
+}
+
+export class BreatheView extends React.Component<BreatheViewProps> {}
+
+// rotateView
+export interface RotateViewProps {
+  /**
+   * @language zh-CN
+   * @description 是否开启旋转动画
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description Whether to turn on the rotation animation
+   * @defaultValue false
+   */
+  active?: boolean;
+  /**
+   * @language zh-CN
+   * @description 旋转一轮的时间, 单位是ms
+   * @defaultValue 4500
+   */
+  /**
+   * @language en-US
+   * @description The time of one breath, the unit is ms
+   * @defaultValue 4500
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether to use native animation driver, generally it will be more useful on Android low-end machines
+   * @defaultValue true
+   */
+  useNativeDriver?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否使用原生动画驱动, 一般在安卓低端机上会比较有用
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description The background color of the bottom ring
+   * @defaultValue false
+   */
+  isInteraction?: boolean;
+  /**
+   * @language zh-CN
+   * @description 按钮样式
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Button style
+   * @types <a target='_blank' href='https://reactnative.dev/docs/view-style-props'>StyleProp<ViewStyle></a>
+   * @defaultValue null
+   */
+  style?: StyleProp<ViewStyle>;
+}
+
+export class RotateView extends React.Component<RotateViewProps> {}
+

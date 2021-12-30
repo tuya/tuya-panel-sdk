@@ -9,7 +9,7 @@ export interface BreatheViewProps {
    */
   active?: boolean;
   /**
-   * 旋转动画一圈的时间, 单位是ms
+   * 呼吸一轮的时间, 单位是ms
    */
   duration?: number;
   /**

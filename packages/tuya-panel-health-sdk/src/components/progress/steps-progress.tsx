@@ -4,7 +4,7 @@ import { View } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 
 import { ProgressProps } from './interface';
-import useMergeProps from '../utils/hooks/useMergeProps';
+import useMergeProps from '../../hooks/useMergeProps';
 import styles from './style';
 
 const { convertX: cx } = Utils.RatioUtils;

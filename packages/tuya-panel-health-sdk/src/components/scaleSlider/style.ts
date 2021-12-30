@@ -12,7 +12,7 @@ export default StyleSheet.create({
   outer: {
     height: cy(46),
     width: cx(303),
-    marginTop: cy(14),
+    marginTop: cy(10),
     overflow: 'hidden',
   },
 
@@ -25,5 +25,12 @@ export default StyleSheet.create({
 
   item: {
     width: 1,
+  },
+  pointWrap: {
+    alignItems: 'center',
+  },
+  point: {
+    width: cx(10),
+    height: cx(7),
   },
 });
