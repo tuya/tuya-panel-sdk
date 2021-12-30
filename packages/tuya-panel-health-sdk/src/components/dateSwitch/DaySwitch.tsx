@@ -59,7 +59,7 @@ function DaySwitch(baseProps) {
   }
   return (
     <View style={style}>
-      <Header onNext={onNext} onPrev={onPrev} timeText={value.format(realFormat)} />
+      <Header onNext={onNext} onPrev={onPrev} value={value.format(realFormat)} />
     </View>
   );
 }

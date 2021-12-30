@@ -69,7 +69,7 @@ function MonthSwitch(baseProps) {
   const formatValue = `${value[0].format(realFormat)}`;
   return (
     <View style={style}>
-      <Header onNext={onNext} onPrev={onPrev} timeText={formatValue} />
+      <Header onNext={onNext} onPrev={onPrev} value={formatValue} />
     </View>
   );
 }

@@ -1,60 +1,49 @@
-import React, { Component, SFC } from 'react';
+import React, { ReactNode } from 'react';
 import { View, StyleSheet, TouchableOpacity, TouchableOpacityProps } from 'react-native';
 
 import { IconFont, TYText, Utils } from 'tuya-panel-kit';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-interface IProp {
-  // 点击加
-  onNext: () => void;
-
-  // 点击上一次
-  onPrev: () => void;
-
-  // 中间文字，受控
-  timeText: React.ReactNode;
+export interface HeaderProps {
+  prefixCls?: string;
+  title?: ReactNode;
+  onPrev?: () => void;
+  onNext?: () => void;
+  // value?: Dayjs;
+  value: string;
   color?: string;
-  disabled?: boolean;
 }
 
-// picker头部文件，理论上这个区域渲染是可以让用户自定义的，保留切换方法既可以
 interface ButtonProps extends TouchableOpacityProps {
-  icon?: string;
-  color?: string;
+  icon: string;
+  color: string;
 }
 
-const Button: SFC<ButtonProps> = ({ icon = 'arrow', color = '#000', disabled, ...otherProps }) => {
-  console.log('props Button disabled', disabled);
+function Button(props: ButtonProps) {
+  const { icon = 'arrow', color = '#000', ...other } = props;
   return (
-    <TouchableOpacity {...(otherProps as TouchableOpacityProps)}>
-      <View style={[styles.iconButton, disabled ? { opacity: 0.6 } : {}]}>
+    <TouchableOpacity {...(other as TouchableOpacityProps)}>
+      <View style={styles.iconButton}>
         <IconFont name={icon} color={color} />
       </View>
     </TouchableOpacity>
   );
-};
+}
 
-class Header extends Component<IProp> {
-  render() {
-    const { onNext, timeText, onPrev, color = '#000', disabled } = this.props;
-    console.log('props disabled', disabled);
-    return (
-      <View style={styles.container}>
-        <Button icon="backIos" onPress={onPrev} color={color} />
-        <View>
-          {typeof timeText === 'string' ? (
-            <TYText size={16} color={color}>
-              {timeText}
-            </TYText>
-          ) : (
-            timeText
-          )}
-        </View>
-        <Button onPress={onNext} color={color} disabled={disabled} />
+function Header(props: HeaderProps) {
+  const { title, onPrev, onNext, value, color } = props;
+  return (
+    <View style={styles.container}>
+      <Button icon="backIos" onPress={onPrev} color={color} />
+      <View>
+        <TYText size={16} color={color}>
+          {value}
+        </TYText>
       </View>
-    );
-  }
+      <Button icon="arrow" onPress={onNext} color={color} />
+    </View>
+  );
 }
 
 const styles = StyleSheet.create({
