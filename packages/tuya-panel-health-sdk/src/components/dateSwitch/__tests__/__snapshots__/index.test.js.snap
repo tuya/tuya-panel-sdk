@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DaySwitch components basic DaySwitch render 1`] = `
+<View>
+  <Header
+    onNext={[Function]}
+    onPrev={[Function]}
+    value="2021-12-30"
+  />
+</View>
+`;
+
+exports[`DaySwitch components basic DaySwitch render controlled 1`] = `
+<View>
+  <Header
+    onNext={[Function]}
+    onPrev={[Function]}
+    value="2021-12-30"
+  />
+</View>
+`;
+
+exports[`DaySwitch components basic Header render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginTop": 20,
+      "paddingVertical": 8,
+    }
+  }
+>
+  <Button
+    icon="backIos"
+    onPress={[Function]}
+  />
+  <View>
+    <TYText
+      align={null}
+      color={null}
+      size={16}
+      type={null}
+      weight={null}
+    >
+      2022
+    </TYText>
+  </View>
+  <Button
+    icon="arrow"
+    onPress={[Function]}
+  />
+</View>
+`;
+
+exports[`DaySwitch components basic MonthSwitch render 1`] = `
+<View>
+  <Header
+    onNext={[Function]}
+    onPrev={[Function]}
+    value="2021-12"
+  />
+</View>
+`;
+
+exports[`DaySwitch components basic WeekSwitch render 1`] = `
+<View>
+  <Header
+    onNext={[Function]}
+    onPrev={[Function]}
+    value="2021-12-30-2021-12-30"
+  />
+</View>
+`;
