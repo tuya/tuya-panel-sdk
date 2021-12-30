@@ -34,6 +34,8 @@ module.exports = {
     TYLamp_animatedModal_darkHeaderTitle: '深色模式下头部栏',
     TYLamp_animatedModal_cancelText: '取消',
     TYLamp_animatedModal_confirmText: '确认',
+    TYLamp_rhythms_tip: '节点不能超过',
+    TYLamp_rhythms_tip1: '节点可以超过',
   },
 
   en: {
@@ -68,5 +70,7 @@ module.exports = {
     TYLamp_animatedModal_darkHeaderTitle: 'dark header',
     TYLamp_animatedModal_cancelText: 'cancel',
     TYLamp_animatedModal_confirmText: 'confirm',
+    TYLamp_rhythms_tip: 'Node no more than',
+    TYLamp_rhythms_tip1: 'Node can more than',
   },
 };

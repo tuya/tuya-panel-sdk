@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { RhythmsCircle } from '@tuya/tuya-panel-lamp-sdk';
-import { Utils } from 'tuya-panel-kit';
+import { Utils, TYText } from 'tuya-panel-kit';
 import Icon from '../../../res/rhythmIcons';
 import Res from '../../../res';
+import Strings from '../../../i18n';
 
 const { convertX: cx, winWidth } = Utils.RatioUtils;
 
@@ -52,7 +53,7 @@ const RhythmsCircleScene: React.FC = () => {
   return (
     <View style={styles.flex1}>
       <>
-        <Text style={styles.text}>No more than</Text>
+        <TYText style={styles.text}>{Strings.getLang('TYLamp_rhythms_tip')}</TYText>
         <RhythmsCircle
           pickerStyle={{ marginVertical: cx(30) }}
           timeImg={Res.timeLight}
@@ -69,7 +70,7 @@ const RhythmsCircleScene: React.FC = () => {
         />
       </>
       <>
-        <Text style={styles.text1}>Can more than</Text>
+        <TYText style={styles.text1}>{Strings.getLang('TYLamp_rhythms_tip1')}</TYText>
         <RhythmsCircle
           pickerStyle={{ marginVertical: cx(30) }}
           timeImg={Res.timeLight}
