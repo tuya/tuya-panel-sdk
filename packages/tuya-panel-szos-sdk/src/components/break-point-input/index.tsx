@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import React, { FC, useState, forwardRef, useImperativeHandle, useEffect, useRef } from 'react';
 import { StyleSheet, View } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import MyIpt from '../number-area-input';
+import MyIpt from './number-area-input';
 
 const { convertX, convertY } = Utils.RatioUtils;
 interface IPutProps {

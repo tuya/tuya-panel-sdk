@@ -18,7 +18,6 @@ export default class SzosScene extends Component {
   static TurnPlate = TurnPlate;
   static StreeringWheel = StreeringWheel;
   static BreakPointInput = BreakPointInput;
-  static BreakPointInput = BreakPointInput;
   static SimpleTopBar = SimpleTopBar;
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
