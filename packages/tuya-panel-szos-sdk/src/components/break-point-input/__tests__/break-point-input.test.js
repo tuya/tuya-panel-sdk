@@ -15,21 +15,12 @@ global.document = document;
 global.window = window;
 describe('BreakPointInput components', () => {
   it('basic render', () => {
-    const placeH = '12';
-    const wrapper = mount(<BreakPointInput name="test" placeHolder={placeH} />);
-    expect(wrapper).toMatchSnapshot();
-  });
-
-  it('basic placeHolder', () => {
-    const placeH = '192.168.1.1';
-    const wrapper = shallow(<BreakPointInput name="test" placeHolder={placeH} />);
+    const wrapper = shallow(<BreakPointInput name="test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render focus', () => {
-    const placeH = '12';
-    const changeColor = false;
-    const maxLen = 2;
+    const maxLen = 4;
     const func = () => {
       GlobalToast.show({
         text: 'focus',
@@ -38,28 +29,30 @@ describe('BreakPointInput components', () => {
         },
       });
     };
-    const wrapper = shallow(
-      <BreakPointInput
-        name="test"
-        maxLen={maxLen}
-        placeHolder={placeH}
-        focusFuc={func}
-        changeColor={changeColor}
-      />
-    );
+    const wrapper = shallow(<BreakPointInput name="test" maxLen={maxLen} focusFuc={func} />);
     const wrapperHandle = wrapper.children().at(0);
     wrapperHandle.simulate('focus');
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });
 
-  it('render change', () => {
-    const changeColor = false;
+  it('deny change', () => {
+    const wrapper = mount(<BreakPointInput name="test" placeHolder="192.168.31.177" />);
+    wrapper.setProps({ placeHolder: '44' });
+    expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
+  });
 
-    const wrapper = mount(
-      <BreakPointInput name="test" placeHolder="192.168.31.177" changeColor={changeColor} />
-    );
-    wrapper.setProps({ placeHolder: '192.168.hu.177' });
+  it('reg change', () => {
+    const wrapper = mount(<BreakPointInput name="test" placeHolder="192.168.31.177" />);
+    wrapper.setProps({ placeHolder: '44.gt.1.1' });
+    expect(wrapper).toMatchSnapshot();
+    wrapper.unmount();
+  });
+
+  it('render change', () => {
+    const wrapper = mount(<BreakPointInput name="test" placeHolder="192.168.31.177" />);
+    wrapper.setProps({ placeHolder: '192.168.666.177' });
     expect(wrapper).toMatchSnapshot();
     wrapper.unmount();
   });

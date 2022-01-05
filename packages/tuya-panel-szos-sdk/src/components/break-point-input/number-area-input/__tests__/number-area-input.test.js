@@ -5,12 +5,11 @@ import NumerAreaInput from '../index';
 
 describe('NumerAreaInput components', () => {
   it('basic render', () => {
-    const wrapper = shallow(<NumerAreaInput name="test" key="test" />);
+    const wrapper = shallow(<NumerAreaInput name="test" />);
     expect(wrapper).toMatchSnapshot();
   });
 
   it('render focus', () => {
-    const changeColor = false;
     const maxVal = 30;
     const func = () => {
       GlobalToast.show({
@@ -22,14 +21,12 @@ describe('NumerAreaInput components', () => {
     };
     const wrapper = shallow(
       <NumerAreaInput
-        key="test"
         name="test"
         placeholder="6"
         focusFuc={func}
         minVal={5}
         maxVal={maxVal}
         editable
-        changeColor={changeColor}
         viewStyle={{ borderColor: 'red', borderWidth: 1, borderRadius: 5, marginTop: 20 }}
       />
     );

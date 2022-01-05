@@ -42,21 +42,10 @@ interface IPutProps extends TextInputProps {
    * 输入框文本change事件
    */
   changeText?: any;
-  /*
-   * 限制输入框最小输入的值
-   */
-  minVal?: number;
-  /*
-   * 限制输入框最大输入的值
-   */
-  maxVal?: number;
 }
 
 const MyIpt: FC<IPutProps> = forwardRef(
-  (
-    { name, iptStyle, focusFuc, changeText, minVal = 0, maxVal = 255, viewStyle, ...props },
-    ref
-  ) => {
+  ({ name, iptStyle, focusFuc, changeText, viewStyle, ...props }, ref) => {
     const [value, setVal] = useState<string>('');
     const osg = useRef(null);
     useImperativeHandle(ref, () => ({
@@ -75,15 +64,6 @@ const MyIpt: FC<IPutProps> = forwardRef(
       setVal(val);
       changeText(val);
     };
-    const validate = () => {
-      const inputVal = parseInt(value, 10);
-      if (inputVal > maxVal || (value !== '' && inputVal < minVal)) {
-        setVal('');
-        return;
-      }
-      setVal(inputVal === 0 ? '0' : value);
-      changeText(value);
-    };
 
     return (
       <View style={[viewStyle, styles.wrap]}>
@@ -98,7 +78,6 @@ const MyIpt: FC<IPutProps> = forwardRef(
           onFocus={onF}
           clearTextOnFocus
           onChangeText={e => onChangeText(e)}
-          onBlur={validate}
           value={value}
           {...props}
         />
@@ -111,8 +90,6 @@ MyIpt.propTypes = {
   focusFuc: PropTypes.func,
   changeText: PropTypes.func,
   name: PropTypes.string,
-  minVal: PropTypes.number,
-  maxVal: PropTypes.number,
   iptStyle: ViewPropTypes.style,
   viewStyle: ViewPropTypes.style,
 };
@@ -121,8 +98,6 @@ MyIpt.defaultProps = {
   focusFuc: () => {},
   changeText: () => {},
   name: '',
-  minVal: 0,
-  maxVal: 255,
   iptStyle: null,
   viewStyle: { borderWidth: 1, borderColor: 'gray' },
 };

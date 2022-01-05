@@ -1,6 +1,9 @@
+/**
+ * @jest-environment jsdom
+ */
 import React from 'react';
 import { View } from 'react-native';
-import { shallow, useStateMock } from 'enzyme';
+import { shallow, useStateMock, mount } from 'enzyme';
 import { State } from 'react-native-gesture-handler';
 import SteeringWheel from '../index';
 
@@ -42,14 +45,14 @@ describe('StreeringWheel components', () => {
       nativeEvent: {
         state: State.BEGAN,
         absoluteX: 250,
-        absoluteY: 268,
+        absoluteY: 298,
       },
     });
     wrapperHandle.simulate('handlerStateChange', {
       nativeEvent: {
         state: State.ACTIVE,
         absoluteX: 263,
-        absoluteY: 271,
+        absoluteY: 291,
       },
     });
     wrapperHandle.simulate('handlerStateChange', {

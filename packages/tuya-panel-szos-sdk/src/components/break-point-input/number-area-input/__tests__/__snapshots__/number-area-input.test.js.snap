@@ -21,18 +21,13 @@ exports[`NumerAreaInput components basic render 1`] = `
   <TextInput
     allowFontScaling={true}
     clearTextOnFocus={true}
-    editable={true}
     key="test"
     keyboardType="numeric"
-    maxLength={3}
     multiline={true}
     numberOfLines={1}
     onChangeText={[Function]}
     onFocus={[Function]}
-    placeholder=""
-    placeholderTextColor="rgba(103, 112, 123, 0.5)"
     rejectResponderTermination={true}
-    selectionColor="rgba(152, 165, 198, 1)"
     style={
       Array [
         Object {
@@ -79,18 +74,15 @@ exports[`NumerAreaInput components render change 1`] = `
   <TextInput
     allowFontScaling={true}
     clearTextOnFocus={true}
-    editable={true}
     key="test"
     keyboardType="numeric"
-    maxLength={3}
+    maxVal="10"
+    minVal="5"
     multiline={true}
     numberOfLines={1}
     onChangeText={[Function]}
     onFocus={[Function]}
-    placeholder=""
-    placeholderTextColor="rgba(103, 112, 123, 0.5)"
     rejectResponderTermination={true}
-    selectionColor="rgba(152, 165, 198, 1)"
     style={
       Array [
         Object {
@@ -111,7 +103,7 @@ exports[`NumerAreaInput components render change 1`] = `
       ]
     }
     underlineColorAndroid="transparent"
-    value=""
+    value="20"
   />
 </View>
 `;
@@ -142,15 +134,14 @@ exports[`NumerAreaInput components render focus 1`] = `
     editable={true}
     key="test"
     keyboardType="numeric"
-    maxLength={3}
+    maxVal={30}
+    minVal={5}
     multiline={true}
     numberOfLines={1}
     onChangeText={[Function]}
     onFocus={[Function]}
-    placeholder=""
-    placeholderTextColor="rgba(103, 112, 123, 0.5)"
+    placeholder="6"
     rejectResponderTermination={true}
-    selectionColor="rgba(152, 165, 198, 1)"
     style={
       Array [
         Object {
