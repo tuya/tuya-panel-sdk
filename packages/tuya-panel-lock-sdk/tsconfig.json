@@ -1,9 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
-    "paths": {
-      "*": ["*"]
-    },
     "allowJs": true,
     "jsx":"react",
     "module": "esnext",
@@ -28,12 +25,16 @@
       "es2018",
       "esnext"
     ],
-    "typeRoots": ["./@types/"]
+    "typeRoots": ["./@types/"],
+    "paths": {
+      "@res": ["./src/res"],
+      "@utils": ["./src/utils"],
+    }
   },
   "include": [
     "./src/**/*",
     "./src/res/*",
-    "@types/index.d.ts"
+    "@types/index.d.ts",
   ],
   "exclude": [
     "**/__tests__/*",
