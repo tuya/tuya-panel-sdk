@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RotateView components basic render 1`] = `
+<AnimatedComponent
+  style={
+    Array [
+      undefined,
+      Object {
+        "transform": Array [
+          Object {
+            "rotate": "0deg",
+          },
+        ],
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  />
+</AnimatedComponent>
+`;

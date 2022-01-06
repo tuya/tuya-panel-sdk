@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreatheView components basic render 1`] = `
+<AnimatedComponent
+  style={
+    Array [
+      undefined,
+      Object {
+        "opacity": 1,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  />
+</AnimatedComponent>
+`;

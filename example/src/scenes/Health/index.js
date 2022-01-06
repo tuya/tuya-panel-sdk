@@ -7,12 +7,19 @@ import SleepBarPercent from './SleepBarPercent';
 import ScrollRuler from './ScrollRuler';
 import CountDown from './CountDown';
 import Progess from './Progess';
+import RotateView from './RotateView';
+import BreatheView from './BreatheView';
+import DaySwitch from './DaySwitch';
+
 export default class HealthScene extends Component {
   static UnlockButton = UnlockButton;
   static SleepBarPercent = SleepBarPercent;
   static ScrollRuler = ScrollRuler;
   static CountDown = CountDown;
   static Progess = Progess;
+  static BreatheView = BreatheView;
+  static RotateView = RotateView;
+  static DaySwitch = DaySwitch;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Health.+\w*$/.test(r.id)));
   }
