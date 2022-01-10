@@ -1,8 +1,11 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { TYSdk, Utils } from 'tuya-panel-kit';
 import { IEditTimerParams, ITimerParams } from './interface';
-import { parseJSON } from './utils';
-const { TimeUtils } = Utils;
+
+const {
+  TimeUtils,
+  JsonUtils: { parseJSON },
+} = Utils;
 
 /**
  * @description: 更新定时,支持群组定时
