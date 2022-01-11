@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimingRepeatList components basic render 1`] = `
+<ScrollViewMock
+  contentContainerStyle={
+    Array [
+      Object {
+        "paddingBottom": 64,
+      },
+      Object {},
+    ]
+  }
+  style={
+    Array [
+      Object {
+        "maxHeight": 298,
+        "overflow": "hidden",
+        "paddingHorizontal": 32,
+        "width": "100%",
+      },
+      Object {},
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={1}
+  >
+    <View
+      key="0"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#F5F5F5",
+            "borderRadius": 54,
+            "flexDirection": "row",
+            "height": 108,
+            "justifyContent": "space-between",
+            "marginTop": 18,
+            "paddingHorizontal": 48,
+            "width": "100%",
+          },
+          Object {},
+        ]
+      }
+    >
+      <SingleTime
+        amText="AM"
+        itemStyle={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+          }
+        }
+        pmText="PM"
+        time={720}
+        timeStyle={
+          Object {
+            "color": "#010101",
+            "fontSize": 32,
+            "fontWeight": "500",
+          }
+        }
+        unitStyle={
+          Object {
+            "color": "#010101",
+            "fontSize": 32,
+            "fontWeight": "500",
+            "marginRight": 8,
+          }
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "rgba(16,130,254,0.1)",
+              "borderRadius": 8,
+              "justifyContent": "center",
+              "marginLeft": 32,
+              "paddingHorizontal": 8,
+              "paddingVertical": 4,
+            },
+            Object {},
+          ]
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          style={
+            Array [
+              Object {
+                "color": "#39a9ff",
+                "fontSize": 24,
+              },
+              Object {},
+            ]
+          }
+          type={null}
+          weight={null}
+        >
+          Normal
+        </TYText>
+      </View>
+    </View>
+  </TouchableOpacity>
+</ScrollViewMock>
+`;

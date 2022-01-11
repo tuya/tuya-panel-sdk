@@ -5,7 +5,7 @@ import { ICircle } from './interface';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-const Circle: React.FC<ICircle> = ({ scaleValue, backgroundColor }) => {
+const Circle: React.FC<ICircle> = ({ scaleValue, backgroundColor, style }) => {
   const fadeAnim = useRef(new Animated.Value(scaleValue)).current;
   useEffect(() => {
     Animated.spring(fadeAnim, {
@@ -17,6 +17,7 @@ const Circle: React.FC<ICircle> = ({ scaleValue, backgroundColor }) => {
     <Animated.View
       style={[
         styles.colorBtn,
+        style,
         {
           backgroundColor,
           transform: [{ scale: fadeAnim }],

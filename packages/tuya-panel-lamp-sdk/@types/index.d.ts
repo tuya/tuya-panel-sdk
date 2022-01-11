@@ -189,3 +189,7 @@ declare interface ISceneData {
   gmtCreate?: number;
   gmtModified?: number;
 }
+declare interface ISwitchGradient {
+  on: number;
+  off: number;
+}

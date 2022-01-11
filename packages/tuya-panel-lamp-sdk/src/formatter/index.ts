@@ -11,3 +11,7 @@ export { default as PowerMemoryFormatter } from './powerMemory';
 export { default as RandomTimerFormatter } from './randomTiming';
 
 export { default as SceneFormatter } from './sceneData';
+
+export { default as RtcTimerFormatter } from './rtcTimer';
+
+export { default as SwitchGradientFormatter } from './switchGradient';

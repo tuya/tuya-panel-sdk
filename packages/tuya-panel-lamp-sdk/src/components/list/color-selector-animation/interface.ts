@@ -37,6 +37,10 @@ export interface IColorSelectorAnimationProp {
    */
   delBtnStyle?: StyleProp<ViewStyle>;
   /**
+   * 小圆按钮样式
+   */
+  circleStyle?: StyleProp<ViewStyle>;
+  /**
    * 新增按钮图标颜色
    */
   addIconColor?: string;
@@ -87,4 +91,5 @@ export interface IColor {
 export interface ICircle {
   scaleValue: number;
   backgroundColor: string;
+  style: StyleProp<ViewStyle>;
 }
