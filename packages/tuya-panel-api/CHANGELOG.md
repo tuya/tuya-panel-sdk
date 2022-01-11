@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.9.0...@tuya/tuya-panel-api@1.10.0) (2022-01-11)
+
+
+### Features
+
+* add lamp general api ([#163](https://github.com/tuya/tuya-panel-sdk/issues/163)) ([6669838](https://github.com/tuya/tuya-panel-sdk/commit/66698381f5a9804763c21e5d38e73559a7f4dfe9))
+
+
+
+
+
 # [1.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.8.0...@tuya/tuya-panel-api@1.9.0) (2021-12-28)
 
 
