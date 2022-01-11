@@ -5,11 +5,16 @@
 /* eslint-disable react/no-children-prop */
 import PropTypes from 'prop-types';
 import React, { FC, useState, forwardRef, useImperativeHandle, useEffect, useRef } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, TextInput } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
-import MyIpt from './number-area-input';
+import MyIpt, { NumberAreaInputRef } from './number-area-input';
 
 const { convertX, convertY } = Utils.RatioUtils;
+
+type IPutRef = {
+  value: string[];
+  resultStr: string;
+};
 interface IPutProps {
   /*
    * 必须有一个唯一的name
@@ -22,11 +27,11 @@ interface IPutProps {
   /*
    * 输入框ref
    */
-  ref?: any;
+  ref?: React.Ref<IPutRef>;
   /*
    * 输入框聚焦时触发
    */
-  focusFuc?: any;
+  focusFuc?: () => void;
   /*
    * 默认的值
    */
@@ -34,7 +39,7 @@ interface IPutProps {
 }
 
 const MyInput: FC<IPutProps> = forwardRef(({ name, focusFuc, placeHolder, maxLen }, ref) => {
-  const [ipAdd, setIpA] = useState<any[]>([]);
+  const [ipAdd, setIpA] = useState<string[]>([]);
   const [resultStr, setResStr] = useState<string>('');
   const refMap = useRef({ current: null });
 
@@ -58,7 +63,7 @@ const MyInput: FC<IPutProps> = forwardRef(({ name, focusFuc, placeHolder, maxLen
     }
   }, [placeHolder]);
 
-  const changeText = (idx: number, val: any) => {
+  const changeText = (idx: number, val: string) => {
     const ipAddRes = ipAdd;
 
     ipAddRes.splice(idx, 1, val);
@@ -83,14 +88,14 @@ const MyInput: FC<IPutProps> = forwardRef(({ name, focusFuc, placeHolder, maxLen
             return (
               <>
                 <MyIpt
-                  ref={(f: any) => {
+                  ref={(f: NumberAreaInputRef | TextInput) => {
                     refMap.current[index] = f;
                   }}
                   key={`${name}-${index}`}
                   name={`${name}-${index}`}
                   placeholder={ip}
                   focusFuc={focusFuc}
-                  changeText={(e: any) => changeText(index, e)}
+                  changeText={(e: string) => changeText(index, e)}
                 />
                 {ipAdd.length - 1 !== index && (
                   <View style={styles.pointWpt}>
@@ -108,7 +113,7 @@ const MyInput: FC<IPutProps> = forwardRef(({ name, focusFuc, placeHolder, maxLen
 MyInput.propTypes = {
   name: PropTypes.string,
   // eslint-disable-next-line react/no-unused-prop-types
-  ref: PropTypes.any,
+  // ref: PropTypes.object,
   focusFuc: PropTypes.func,
   placeHolder: PropTypes.string,
   maxLen: PropTypes.number,
@@ -116,7 +121,7 @@ MyInput.propTypes = {
 
 MyInput.defaultProps = {
   name: '',
-  ref: { current: null },
+  // ref: { current: null },
   focusFuc: () => {},
   maxLen: 3,
   placeHolder: '192.168.2.2',

@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { View } from 'react-native';
-import { shallow, useStateMock, mount } from 'enzyme';
+import { shallow, useStateMock } from 'enzyme';
 import { State } from 'react-native-gesture-handler';
 import SteeringWheel from '../index';
 
@@ -36,7 +36,7 @@ describe('StreeringWheel components', () => {
     };
     const wrapper = shallow(<SteeringWheel {...props} />);
     const wrapperHandle = wrapper.children().at(0);
-    wrapperHandle.simulate('layout', {
+    wrapper.simulate('layout', {
       nativeEvent: {
         layout: { x: 200, y: 277, width: 167, height: 167 },
       },
@@ -127,6 +127,11 @@ describe('StreeringWheel components', () => {
     };
     const changeRotate = () => {};
     const wrapper = shallow(<SteeringWheel {...props} changeRotate={changeRotate} />);
+    wrapper.simulate('layout', {
+      nativeEvent: {
+        layout: { x: 200, y: 277, width: 167, height: 167 },
+      },
+    });
     const wrapperHandle = wrapper.children().at(0);
     wrapperHandle.simulate('handlerStateChange', {
       nativeEvent: {
@@ -172,6 +177,13 @@ describe('StreeringWheel components', () => {
         state: State.END,
         x: 212,
         y: 222,
+      },
+    });
+    wrapperHandle.simulate('handlerStateChange', {
+      nativeEvent: {
+        state: State.END,
+        absoluteX: 144,
+        absoluteY: 295,
       },
     });
     expect(wrapper).toMatchSnapshot();

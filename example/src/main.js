@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import React from 'react';
 import { View, StatusBar } from 'react-native';
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 import { TYSdk, NavigatorLayout, TopBar } from 'tuya-panel-kit';
 import composeLayout from './composeLayout';
 import configureStore from './redux/configureStore';
@@ -42,26 +43,26 @@ class MainLayout extends NavigatorLayout {
   }
 
   /*
-  hookRoute 可以做一些控制处理
-  return 是一个 Object,
-  {
-    background: backgroundImage | linearGradientBackground,
-    backgroundColor: '#FCFCFC', // 颜色值
-    style: ViewPropTypes.style,
-    // topbarStyle: ViewPropTypes.style, // 需要 Android TopBar 组件支持设置 style
-    hideFullView: true | false,   // 控制是否隐藏 FullView
-    renderFullView: (props) => {
-      return (
-        <FullView>
-        </FullView>
-      );
-    },
-    FullView: ReactComponent,     // 自定义的 FullView 组件, 如果使用自定义 FullView 组件，TopBar、OfflineView 也需要在 FullView 里面调用
-    hideTopbar: true | false,   // 控制是否隐藏 TopBar
-    OfflineView: ReactComponent, // 自定义的 OfflineView 组件
-    showOfflineView: true | false, // 是否渲染 OfflineView
-  }
-  */
+        hookRoute 可以做一些控制处理
+        return 是一个 Object,
+        {
+          background: backgroundImage | linearGradientBackground,
+          backgroundColor: '#FCFCFC', // 颜色值
+          style: ViewPropTypes.style,
+          // topbarStyle: ViewPropTypes.style, // 需要 Android TopBar 组件支持设置 style
+          hideFullView: true | false,   // 控制是否隐藏 FullView
+          renderFullView: (props) => {
+            return (
+              <FullView>
+              </FullView>
+            );
+          },
+          FullView: ReactComponent,     // 自定义的 FullView 组件, 如果使用自定义 FullView 组件，TopBar、OfflineView 也需要在 FullView 里面调用
+          hideTopbar: true | false,   // 控制是否隐藏 TopBar
+          OfflineView: ReactComponent, // 自定义的 OfflineView 组件
+          showOfflineView: true | false, // 是否渲染 OfflineView
+        }
+        */
   // eslint-disable-next-line
   hookRoute(route) {
     //   switch (route.id) {
@@ -132,4 +133,4 @@ class MainLayout extends NavigatorLayout {
   }
 }
 
-export default composeLayout(store, MainLayout);
+export default gestureHandlerRootHOC(composeLayout(store, MainLayout));

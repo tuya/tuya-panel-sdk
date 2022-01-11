@@ -32,11 +32,6 @@ exports[`BreakPointInput components deny change 1`] = `
   maxLen={3}
   name="test"
   placeHolder="44"
-  ref={
-    Object {
-      "current": null,
-    }
-  }
 >
   <View
     style={
@@ -704,11 +699,6 @@ exports[`BreakPointInput components reg change 1`] = `
   maxLen={3}
   name="test"
   placeHolder="44.gt.1.1"
-  ref={
-    Object {
-      "current": null,
-    }
-  }
 >
   <View
     style={
@@ -1376,11 +1366,6 @@ exports[`BreakPointInput components render change 1`] = `
   maxLen={3}
   name="test"
   placeHolder="192.168.666.177"
-  ref={
-    Object {
-      "current": null,
-    }
-  }
 >
   <View
     style={

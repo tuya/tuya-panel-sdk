@@ -15,7 +15,7 @@ type IProps = {
   /*
    * 左边按钮功能
    */
-  leftActionFunc?: any;
+  leftActionFunc?: () => void;
   /*
    * 右边按钮功能
    */
@@ -27,7 +27,7 @@ type IProps = {
   /*
    * 右边图标位置替换node
    */
-  rightActionFunc?: any;
+  rightActionFunc?: () => void;
   /*
    * 左边图标样式
    */

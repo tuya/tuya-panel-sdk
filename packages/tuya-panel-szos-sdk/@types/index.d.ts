@@ -228,7 +228,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      */
     /**
      * @language en-US
-     * @description focus callback function 
+     * @description focus callback function
      * @defaultValue () => {}
      */
     focusFuc?: any;
@@ -245,7 +245,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
     placeHolder?: string;
   }
   export interface NumberAreaInputProps {
-  /**
+    /**
      * @language zh-CN
      * @description 必须有一个唯一的name字段
      * @defaultValue ''
@@ -255,8 +255,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description must have this unique key
      * @defaultValue ''
      */
-  name: string;
-  /**
+    name: string;
+    /**
      * @language zh-CN
      * @description 输入框外层样式
      * @defaultValue ''
@@ -266,8 +266,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description view style
      * @defaultValue ''
      */
-  viewStyle?: StyleProp<ViewStyle>;
-  /**
+    viewStyle?: StyleProp<ViewStyle>;
+    /**
      * @language zh-CN
      * @description 输入框样式
      * @defaultValue ''
@@ -277,19 +277,19 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description input style
      * @defaultValue ''
      */
-  iptStyle?: StyleProp<TextStyle>;
-  /**
+    iptStyle?: StyleProp<TextStyle>;
+    /**
      * @language zh-CN
      * @description 输入框聚焦时触发
      * @defaultValue () => {}
      */
     /**
      * @language en-US
-     * @description focus callback function 
+     * @description focus callback function
      * @defaultValue () => {}
      */
-  focusFuc?: any;
-  /**
+    focusFuc?: any;
+    /**
      * @language zh-CN
      * @description 输入框ref
      * @defaultValue 3
@@ -299,8 +299,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description input' ref
      * @defaultValue 3
      */
-  ref?: any;
-  /**
+    ref?: any;
+    /**
      * @language zh-CN
      * @description 输入框文本change事件
      * @defaultValue 3
@@ -310,8 +310,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description text change callback
      * @defaultValue 3
      */
-  changeText?: any;
-  /**
+    changeText?: any;
+    /**
      * @language zh-CN
      * @description 限制输入框最小输入的值
      * @defaultValue 0
@@ -321,8 +321,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description min value
      * @defaultValue 0
      */
-  minVal?: number;
-  /**
+    minVal?: number;
+    /**
      * @language zh-CN
      * @description 限制输入框最大输入的值
      * @defaultValue 255
@@ -332,7 +332,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description max value
      * @defaultValue 255
      */
-  maxVal?: number;
+    maxVal?: number;
   }
   export interface SimpleTopBarProps {
     /**
@@ -345,7 +345,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description TopBar.Content‘s style
      * @defaultValue { backgroundColor: '#fff' }
      */
-  wrapStyle?: StyleProp<ViewStyle>;
+    wrapStyle?: StyleProp<ViewStyle>;
     /**
      * @language zh-CN
      * @description TopBar.Content的标题
@@ -356,8 +356,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description TopBar.Content's title
      * @defaultValue ''
      */
-  title?: string;
-   /**
+    title?: string;
+    /**
      * @language zh-CN
      * @description title的样式
      * @defaultValue { fontSize: cx(17) }
@@ -367,8 +367,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description title‘s style
      * @defaultValue { fontSize: cx(17) }
      */
-  titleStyle?: StyleProp<TextStyle>;
-  /**
+    titleStyle?: StyleProp<TextStyle>;
+    /**
      * @language zh-CN
      * @description 左边的按钮位置元素
      * @defaultValue undefined
@@ -378,8 +378,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description left icon node
      * @defaultValue undefined
      */
-  leftNode?: React.ReactNode;
-  /**
+    leftNode?: React.ReactNode;
+    /**
      * @language zh-CN
      * @description 左边的按钮外层样式
      * @defaultValue { marginLeft: cx(25) }
@@ -389,8 +389,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description left icon content style
      * @defaultValue { marginLeft: cx(25) }
      */
-     leftStyle?: StyleProp<ViewStyle>;
-  /**
+    leftStyle?: StyleProp<ViewStyle>;
+    /**
      * @language zh-CN
      * @description 左边的按钮点击功能
      * @defaultValue () => {}
@@ -400,8 +400,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description left icon press callback
      * @defaultValue () => {}
      */
-  leftActionFunc?: any;
-  /**
+    leftActionFunc?: any;
+    /**
      * @language zh-CN
      * @description 右边的按钮位置元素
      * @defaultValue undefined
@@ -411,8 +411,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description right icon node
      * @defaultValue undefined
      */
-  rightNode?: React.ReactNode;
-  /**
+    rightNode?: React.ReactNode;
+    /**
      * @language zh-CN
      * @description 右边的按钮外层样式
      * @defaultValue { marginRight: cx(25) }
@@ -422,8 +422,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description right icon content style
      * @defaultValue { marginRight: cx(25) }
      */
-  rightStyle?: StyleProp<ViewStyle>;
-   /**
+    rightStyle?: StyleProp<ViewStyle>;
+    /**
      * @language zh-CN
      * @description 右边的按钮点击功能
      * @defaultValue () => {}
@@ -433,8 +433,8 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description right icon press callback
      * @defaultValue () => {}
      */
-  rightActionFunc?: any;
-    }
+    rightActionFunc?: any;
+  }
   export interface MultiSliderProps {
     /**
      * @language zh-CN
@@ -1462,6 +1462,185 @@ declare module '@tuya/tuya-panel-szos-sdk' {
     onTurnPlateChange: (v: number) => void;
   }
 
+  export interface GestureSliderProps {
+    /**
+     * @language zh-CN
+     * @description 区域样式
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Scope style
+     * @defaultValue {}
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 刻度变化回调
+     * @defaultValue ()=>{}
+     */
+    /**
+     * @language en-US
+     * @description Scale change callback
+     * @defaultValue ()=>{}
+     */
+    onChange?: (data: Date) => void;
+    /**
+     * @language zh-CN
+     * @description 默认刻度值(不可控)
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description Default scale value (uncontrollable)
+     * @defaultValue 0
+     */
+    defaultValue?: number;
+    /**
+     * @language zh-CN
+     * @description 游标样式
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Thumb style
+     * @defaultValue {}
+     */
+    thumbStyle?: StyleProp<ImageStyle>;
+    /**
+     * @language zh-CN
+     * @description 刻度条区域外部样式
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Scale bar area external style
+     * @defaultValue {}
+     */
+    outerTrackStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 刻度条区域内部样式
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Scale bar area internal style
+     * @defaultValue {}
+     */
+    innerTrackStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 宽度
+     * @defaultValue convertX(303)
+     */
+    /**
+     * @language en-US
+     * @description Width
+     * @defaultValue convertX(303)
+     */
+    width?: number;
+    /**
+     * @language zh-CN
+     * @description 高度
+     * @defaultValue convertY(60)
+     */
+    /**
+     * @language en-US
+     * @description Height
+     * @defaultValue convertY(60)
+     */
+    height?: number;
+    /**
+     * @language zh-CN
+     * @description 刻度条样式
+     * @defaultValue {}
+     */
+    /**
+     * @language en-US
+     * @description Scale bar style
+     * @defaultValue {}
+     */
+    stepPointStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 刻度值(可控)
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description Scale value (controllable)
+     * @defaultValue undefined
+     */
+    value?: number;
+    /**
+     * @language zh-CN
+     * @description 刻度最小值
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description Scale min
+     * @defaultValue 0
+     */
+    minValue?: number;
+    /**
+     * @language zh-CN
+     * @description 刻度最大值
+     * @defaultValue 12 * 60
+     */
+    /**
+     * @language en-US
+     * @description Scale maximum
+     * @defaultValue 12 * 60
+     */
+    maxValue?: number;
+    /**
+     * @language zh-CN
+     * @description 刻度间距
+     * @defaultValue 8
+     */
+    /**
+     * @language en-US
+     * @description Scale spacing
+     * @defaultValue 8
+     */
+    scaleSpace?: number;
+    /**
+     * @language zh-CN
+     * @description 刻度底色
+     * @defaultValue '#1B0A45'
+     */
+    /**
+     * @language en-US
+     * @description Scale background
+     * @defaultValue '#1B0A45'
+     */
+    scaleColor?: string | string[];
+    /**
+     * @language zh-CN
+     * @description 自定义游标
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description Custom thumb
+     * @defaultValue undefined
+     */
+    customThumb?: ViewComponent | TextComponent | ImageComponent;
+    /**
+     * @language zh-CN
+     * @description 刻度高度
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description Scale height
+     * @defaultValue undefined
+     */
+    scaleHeight?: number | number[];
+  }
+
   export const SoundWave: React.ComponentClass<SoundWaveProps>;
   export const StreeringWheel: React.ComponentClass<StreeringWheelProps>;
   export const BreakPointInput: React.ComponentClass<BreakPointInputProps>;
@@ -1474,4 +1653,5 @@ declare module '@tuya/tuya-panel-szos-sdk' {
   export const BoxShadow: React.ComponentClass<BoxShadowProps>;
   export const WhiteSpace: React.ComponentClass<WhiteSpaceProps>;
   export const DpCacheText: React.ComponentClass<DpCacheTextProps>;
+  export const GestureSlider: React.ComponentClass<GestureSliderProps>;
 }

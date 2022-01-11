@@ -41,7 +41,12 @@ interface IOnlieProp {
    */
   topPart?: number;
 }
-
+type LayoutType = {
+  x: number;
+  y: number;
+  width: number;
+  height: number;
+};
 const Wheel: FC<IOnlieProp> = ({
   wheelStyle,
   changeRotate,
@@ -63,9 +68,9 @@ const Wheel: FC<IOnlieProp> = ({
   // 手势状态
   const [state, setState] = useState<string>('');
   // 中心点
-  const [center, setCenter] = useState<any>({});
-  const [centerX, setCenterX] = useState<any>({});
-  const [centerY, setCenterY] = useState<any>({});
+  const [center, setCenter] = useState<LayoutType>({ x: 0, y: 0, width: 0, height: 0 });
+  const [centerX, setCenterX] = useState<number>(0);
+  const [centerY, setCenterY] = useState<number>(0);
 
   const [positionX, setPositionX] = useState<number>(0);
   const [positionY, setPositionY] = useState<number>(0);
@@ -196,9 +201,7 @@ const Wheel: FC<IOnlieProp> = ({
     }
   };
 
-  const _onLayout = (e: {
-    nativeEvent: { layout: { x: any; y: any; width: any; height: any } };
-  }) => {
+  const _onLayout = (e: { nativeEvent: { layout: LayoutType } }) => {
     // 指定坐标点与正北方向的夹角
     const { x, y, width, height } = e.nativeEvent.layout;
 

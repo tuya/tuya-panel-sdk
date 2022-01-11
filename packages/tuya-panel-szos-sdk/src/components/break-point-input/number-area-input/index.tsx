@@ -17,6 +17,10 @@ import { Utils } from 'tuya-panel-kit';
 
 const { convertX: cx, convertY: cy } = Utils.RatioUtils;
 
+export type NumberAreaInputRef = {
+  value: string;
+  setFocus: () => void;
+};
 interface IPutProps extends TextInputProps {
   /*
    * 必须有一个唯一的name
@@ -33,26 +37,26 @@ interface IPutProps extends TextInputProps {
   /*
    * 输入框聚焦时触发
    */
-  focusFuc?: any;
+  focusFuc?: () => void;
   /*
    * 输入框ref
    */
-  ref?: any;
+  ref?: React.LegacyRef<TextInput>;
   /*
    * 输入框文本change事件
    */
-  changeText?: any;
+  changeText?: (v: string) => void;
 }
 
 const MyIpt: FC<IPutProps> = forwardRef(
   ({ name, iptStyle, focusFuc, changeText, viewStyle, ...props }, ref) => {
     const [value, setVal] = useState<string>('');
     const osg = useRef(null);
-    useImperativeHandle(ref, () => ({
+    useImperativeHandle<TextInput | NumberAreaInputRef, NumberAreaInputRef>(ref, () => ({
       // 定义modal ref 的属性
       value,
       setFocus: () => {
-        osg?.current.focus();
+        osg?.current?.focus();
       },
     }));
 
@@ -60,7 +64,7 @@ const MyIpt: FC<IPutProps> = forwardRef(
       focusFuc();
     };
 
-    const onChangeText = (val: any) => {
+    const onChangeText = (val: string) => {
       setVal(val);
       changeText(val);
     };

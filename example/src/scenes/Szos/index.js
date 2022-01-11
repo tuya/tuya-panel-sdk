@@ -8,6 +8,7 @@ import TurnPlate from './TurnPlate';
 import StreeringWheel from './SteeringWheel';
 import BreakPointInput from './BreakPointInput';
 import SimpleTopBar from './SimpleTopBar';
+import GestureSlider from './GestureSlider';
 
 export default class SzosScene extends Component {
   get data() {
@@ -19,6 +20,7 @@ export default class SzosScene extends Component {
   static StreeringWheel = StreeringWheel;
   static BreakPointInput = BreakPointInput;
   static SimpleTopBar = SimpleTopBar;
+  static GestureSlider = GestureSlider;
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
   }
