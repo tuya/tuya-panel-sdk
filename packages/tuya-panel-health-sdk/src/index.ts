@@ -6,6 +6,7 @@ import { DaySwitch, WeekSwitch, MonthSwitch } from './components/dateSwitch';
 import BreatheView from './components/breatheView';
 import RotateView from './components/rotateView';
 import ScaleSlider from './components/scaleSlider';
+import RangeBar from './components/rangeBar';
 
 import * as hooks from './hooks';
 export {
@@ -21,4 +22,5 @@ export {
   DaySwitch,
   WeekSwitch,
   MonthSwitch,
+  RangeBar,
 };

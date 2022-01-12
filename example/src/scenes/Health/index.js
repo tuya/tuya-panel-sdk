@@ -10,6 +10,7 @@ import Progess from './Progess';
 import RotateView from './RotateView';
 import BreatheView from './BreatheView';
 import DaySwitch from './DaySwitch';
+import RangeBar from './RangeBar';
 
 export default class HealthScene extends Component {
   static UnlockButton = UnlockButton;
@@ -20,6 +21,7 @@ export default class HealthScene extends Component {
   static BreatheView = BreatheView;
   static RotateView = RotateView;
   static DaySwitch = DaySwitch;
+  static RangeBar = RangeBar;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Health.+\w*$/.test(r.id)));
   }
