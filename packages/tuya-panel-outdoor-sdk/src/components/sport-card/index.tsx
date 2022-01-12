@@ -1,8 +1,8 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, ImageSourcePropType } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import { Utils, IconFont } from 'tuya-panel-kit';
 
-export interface ISportCardProps {
+interface ICard {
   /**
    *
    */
@@ -10,7 +10,7 @@ export interface ISportCardProps {
   /**
    * iconfont字符串图片
    */
-  image: string;
+  iconFont: string;
   /**
    * 值
    */
@@ -22,48 +22,52 @@ export interface ISportCardProps {
   /**
    * key
    */
-  code: string;
+  dp: string;
   /**
    * 背景色
    */
   bgColor: string;
 }
 
-type IProps = {
+interface IProps {
   /**
    * dp点数据
    */
-  dpDatas: ISportCardProps[];
+  dpDatas: ICard[];
   /**
-   * 目标步数
+   * 文本颜色
    */
-  targetSteps: number;
-};
+  titleColor?: string;
+  /**
+   * 子标题
+   */
+  subTitleColor?: string;
+  subTitleOpacity?: number;
+  iconColor?: string;
+}
 
 const { convertX: cx } = Utils.RatioUtils;
 
-const SportCard: React.FC<IProps> = ({ dpDatas, targetSteps }) => {
+const SportCard: React.FC<IProps> = (props: IProps) => {
+  const { dpDatas = [], titleColor, subTitleColor, subTitleOpacity, iconColor } = props;
+
   return (
     <View style={styles.contentBottom}>
-      {dpDatas.map((item: ISportCardProps) => {
+      {dpDatas.map((item: ICard) => {
         return (
-          <View style={styles.dpElement} key={item.code}>
+          <View style={styles.dpElement} key={item.dp}>
             <View style={styles.dpElementTop}>
-              <Text style={[styles.dpElementTopTitle, { color: targetSteps ? '#333' : '#FFF' }]}>
-                {item.value}
-              </Text>
-              <Text style={[styles.dpElementTopUnit, { color: targetSteps ? '#333' : '#FFF' }]}>
-                {item.unit}
-              </Text>
+              <Text style={[styles.dpElementTopTitle, { color: titleColor }]}>{item.value}</Text>
+              <Text style={[styles.dpElementTopUnit, { color: titleColor }]}>{item.unit}</Text>
             </View>
             <View style={styles.dpElementBottom}>
               <View style={[styles.iconView, { backgroundColor: item.bgColor }]}>
-                <IconFont color="#FFF" size={cx(14)} d={item.image} />
+                <IconFont color={iconColor} size={cx(14)} d={item.iconFont} />
               </View>
               <Text
                 style={[
                   styles.dpElementBottomName,
-                  { color: targetSteps ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)' },
+                  { color: subTitleColor, opacity: subTitleOpacity },
                 ]}
               >
                 {item.tip}
@@ -74,6 +78,13 @@ const SportCard: React.FC<IProps> = ({ dpDatas, targetSteps }) => {
       })}
     </View>
   );
+};
+
+SportCard.defaultProps = {
+  titleColor: '#000',
+  subTitleColor: '#000',
+  subTitleOpacity: 1,
+  iconColor: '#fff',
 };
 
 const styles = StyleSheet.create({

@@ -1,0 +1,289 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sport-card components basic render 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "height": 100,
+    }
+  }
+>
+  <View
+    key="activetime_day"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 44,
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 28,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        h
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 14,
+              "height": 28,
+              "marginRight": 12,
+              "width": 28,
+            },
+            Object {
+              "backgroundColor": "#24D671",
+            },
+          ]
+        }
+      >
+        <Component
+          color="#fff"
+          d=""
+          size={28}
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 20,
+              "lineHeight": 28,
+            },
+            Object {
+              "color": "#000",
+              "opacity": 1,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    key="calories_day"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 44,
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 28,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        cal
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 14,
+              "height": 28,
+              "marginRight": 12,
+              "width": 28,
+            },
+            Object {
+              "backgroundColor": "#FE9456",
+            },
+          ]
+        }
+      >
+        <Component
+          color="#fff"
+          d=""
+          size={28}
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 20,
+              "lineHeight": 28,
+            },
+            Object {
+              "color": "#000",
+              "opacity": 1,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <View
+    key="distance_day"
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "alignItems": "baseline",
+          "flexDirection": "row",
+        }
+      }
+    >
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 44,
+              "fontWeight": "bold",
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      />
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 28,
+            },
+            Object {
+              "color": "#000",
+            },
+          ]
+        }
+      >
+        km
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginTop": 10,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 14,
+              "height": 28,
+              "marginRight": 12,
+              "width": 28,
+            },
+            Object {
+              "backgroundColor": "#F6BA7B",
+            },
+          ]
+        }
+      >
+        <Component
+          color="#fff"
+          d=""
+          size={28}
+        />
+      </View>
+      <Text
+        style={
+          Array [
+            Object {
+              "fontSize": 20,
+              "lineHeight": 28,
+            },
+            Object {
+              "color": "#000",
+              "opacity": 1,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
