@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-lamp-sdk",
-  "version": "1.9.1",
+  "version": "1.9.2",
   "description": "涂鸦照明业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@tuya/tuya-panel-api": "^1.10.0",
+    "@tuya/tuya-panel-api": "^1.10.1",
     "ahooks": "^2.10.11",
     "color": "0.11.4",
     "d3-interpolate": "^1.4.0",
