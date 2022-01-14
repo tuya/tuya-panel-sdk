@@ -139,8 +139,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.clarityStatus,
       this.props.voiceStatus,
       this.props.hightScaleMode,
-      this.props.channelNum,
-      this.state.isBusy
+      this.props.channelNum
     );
 
     // 非摄像头品类的产品，旋转屏幕使用方法需初始化
@@ -288,7 +287,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             hightScaleMode,
             channelNum,
           } = this.props;
-          const { isBusy } = this.state;
           TYIpcPlayerManager.startPlay(
             isWirless,
             privateMode,
@@ -296,8 +294,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum,
-            isBusy
+            channelNum
           );
         }
         // 低功耗session断开并且进入面板有上报低功耗休眠false
@@ -311,7 +308,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             hightScaleMode,
             channelNum,
           } = this.props;
-          const { isBusy } = this.state;
           TYIpcPlayerManager.startPlay(
             isWirless,
             privateMode,
@@ -319,8 +315,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum,
-            isBusy
+            channelNum
           );
           return false;
         }
@@ -338,7 +333,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   componentWillReceiveProps(nextProps: TYIpcPlayerProps) {
     // 隐私模式和设备在线变更监听 重新拉流
     const { privateMode, deviceOnline, zoomStatus, channelNum, scaleMultiple } = this.props;
-    const { isBusy } = this.state;
     if (
       !_.isEqual(privateMode, nextProps.privateMode) ||
       !_.isEqual(deviceOnline, nextProps.deviceOnline) ||
@@ -351,8 +345,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         nextProps.clarityStatus,
         nextProps.voiceStatus,
         nextProps.hightScaleMode,
-        nextProps.channelNum,
-        isBusy
+        nextProps.channelNum
       );
     }
 
@@ -441,7 +434,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.onLivePage = true;
       let sendNativePage = 0;
       let sendCameraAction = 0;
-      const { nativePage, isBusy } = this.state;
+      const { nativePage } = this.state;
       nativePage === 1 && ((sendNativePage = 0), (sendCameraAction = 2));
       nativePage === 2 && ((sendNativePage = 0), (sendCameraAction = 0));
       // 从设置页面返回到预览界面
@@ -458,8 +451,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum,
-        isBusy
+        channelNum
       );
     }
     this.goToBack = false;
@@ -549,7 +541,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       hightScaleMode,
       channelNum,
     } = this.props;
-    const { isBusy } = this.state;
     TYIpcPlayerManager.startPlay(
       isWirless,
       privateMode,
@@ -557,8 +548,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       clarityStatus,
       voiceStatus,
       hightScaleMode,
-      channelNum,
-      isBusy
+      channelNum
     );
   };
 
@@ -653,6 +643,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   getStreamStatus = (data: { status: number; errMsg?: any }) => {
     const { status, errMsg } = data;
     const { clarityStatus } = this.props;
+    const { isBusy } = this.state;
     // 监听到视频流获取的状态变化,将视频流状态
     let showLoading = true;
     let showRetry = false;
@@ -685,7 +676,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       showRetry = true;
     }
 
-    if (status === 9) {
+    if (status === 5 && isBusy) {
       loadText = Strings.getLang('tyIpc_video_device_busy');
       showRetry = false;
     }
@@ -724,7 +715,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         hightScaleMode,
         channelNum,
       } = this.props;
-      const { videoStatus, isBusy } = this.state;
+      const { videoStatus } = this.state;
       // 表示隐私模式
       if (videoStatus === 1) {
         this.setState({
@@ -747,8 +738,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum,
-        isBusy
+        channelNum
       );
     }
   };

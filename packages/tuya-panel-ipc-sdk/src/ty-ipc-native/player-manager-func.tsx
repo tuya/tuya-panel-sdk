@@ -39,11 +39,10 @@ class PlayerManagerFun {
     clarityStatus: string,
     voiceStatus: string,
     hightScaleMode: boolean,
-    channelNum: number,
-    isBusy: boolean
+    channelNum: number
   ) => {
     /* 返回状态进行定义
-       status:  0: 设备离线 1: 隐私模式 2: 正在连接P2P通道 3: 通道构建失败 4: 正在获取视频流 5: 获取视频流失败 6: 正常播放 7: 音频模式 8: 点击恢复 9: 设备忙线
+       status:  0: 设备离线 1: 隐私模式 2: 正在连接P2P通道 3: 通道构建失败 4: 正在获取视频流 5: 获取视频流失败 6: 正常播放 7: 音频模式 8: 点击恢复 
     */
     if (!deviceOnline) {
       TYEvent.emit('streamStatus', { status: 0 });
@@ -55,7 +54,7 @@ class PlayerManagerFun {
       return false;
     }
     channelNum === -1 &&
-      connecP2PAndStartPreview(isWirless, clarityStatus, voiceStatus, hightScaleMode, isBusy);
+      connecP2PAndStartPreview(isWirless, clarityStatus, voiceStatus, hightScaleMode);
     channelNum !== -1 &&
       connecP2PAndStartPreviewWithChannel(
         isWirless,

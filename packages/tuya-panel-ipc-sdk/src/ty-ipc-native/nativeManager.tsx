@@ -13,16 +13,15 @@ export const connecP2PAndStartPreview = (
   isWirless: boolean,
   clarityStatus: string,
   voiceStatus: string,
-  hightScaleMode: boolean,
-  isBusy: boolean
+  hightScaleMode: boolean
 ) => {
   TYEvent.emit('streamStatus', { status: 2 });
   CameraManager.isConnected(msg => {
     TYEvent.emit('p2pIsConnected', Boolean(msg));
     if (!msg) {
-      connectAndstartPreView(isWirless, clarityStatus, voiceStatus, hightScaleMode, isBusy);
+      connectAndstartPreView(isWirless, clarityStatus, voiceStatus, hightScaleMode);
     } else {
-      startPreview(clarityStatus, voiceStatus, hightScaleMode, isBusy);
+      startPreview(clarityStatus, voiceStatus, hightScaleMode);
     }
   });
 };
@@ -34,8 +33,7 @@ const connectAndstartPreView = (
   isWirless: boolean,
   clarityStatus: string,
   voiceStatus: string,
-  hightScaleMode: boolean,
-  isBusy: boolean
+  hightScaleMode: boolean
 ) => {
   if (isWirless) {
     wakeupWirless();
@@ -43,7 +41,7 @@ const connectAndstartPreView = (
   CameraManager.connect(
     () => {
       TYEvent.emit('p2pIsConnected', true);
-      startPreview(clarityStatus, voiceStatus, hightScaleMode, isBusy);
+      startPreview(clarityStatus, voiceStatus, hightScaleMode);
     },
     errMsg => {
       TYEvent.emit('streamStatus', { status: 3, errMsg });
@@ -76,12 +74,7 @@ const connectAndstartPreViewWithChannel = (
   );
 };
 
-const startPreview = (
-  clarityStatus: string,
-  voiceStatus: string,
-  hightScaleMode: boolean,
-  isBusy: boolean
-) => {
+const startPreview = (clarityStatus: string, voiceStatus: string, hightScaleMode: boolean) => {
   TYEvent.emit('streamStatus', { status: 4 });
   CameraManager.startPreviewWithDefinition(
     decodeClarityDic[clarityStatus],
@@ -100,11 +93,7 @@ const startPreview = (
       operatMute(voiceStatus);
     },
     errMsg => {
-      if (isBusy) {
-        TYEvent.emit('streamStatus', { status: 9, errMsg });
-      } else {
-        TYEvent.emit('streamStatus', { status: 5, errMsg });
-      }
+      TYEvent.emit('streamStatus', { status: 5, errMsg });
     }
   );
 };
