@@ -63,8 +63,6 @@ interface TYIpcPlayerState {
   currentVideoScale: number;
   currentScaleStatus: number;
   isBusy: boolean;
-  reConnect: boolean;
-  p2pIsConnecting: boolean;
 }
 
 class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
@@ -109,8 +107,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       currentScaleStatus: -1,
       currentVideoScale: 1,
       isBusy: false,
-      reConnect: false,
-      p2pIsConnecting: false,
     };
     this.goToBack = false;
     this.onLivePage = true;
@@ -130,7 +126,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('talkingChangeMute', this.listenTalkingChangeMute);
     TYEvent.on('isRecordingListen', this.listenIsRecording);
     TYEvent.on('p2pIsConnected', this.listenP2PIsConnected);
-    TYEvent.on('p2pIsConnecting', this.listenP2PIsConnecting);
     TYEvent.on('supportedAudioMode', this.supportedAudioMode);
     TYEvent.on('deviceDataChange', this.dpChange);
     TYEvent.on('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
@@ -145,9 +140,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.voiceStatus,
       this.props.hightScaleMode,
       this.props.channelNum,
-      this.state.isBusy,
-      this.state.reConnect,
-      this.state.p2pIsConnecting
+      this.state.isBusy
     );
 
     // 非摄像头品类的产品，旋转屏幕使用方法需初始化
@@ -289,9 +282,26 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         }
         // 设备重连
         if (e && e.errorCode && (e.errorCode === '-105' || e.errorCode === '-3')) {
-          this.setState({
-            reConnect: true,
-          });
+          const {
+            isWirless,
+            privateMode,
+            deviceOnline,
+            clarityStatus,
+            voiceStatus,
+            hightScaleMode,
+            channelNum,
+          } = this.props;
+          const { isBusy } = this.state;
+          TYIpcPlayerManager.startPlay(
+            isWirless,
+            privateMode,
+            deviceOnline,
+            clarityStatus,
+            voiceStatus,
+            hightScaleMode,
+            channelNum,
+            isBusy
+          );
         }
         // 低功耗session断开并且进入面板有上报低功耗休眠false
         if (this.wirlessFlag) {
@@ -304,7 +314,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             hightScaleMode,
             channelNum,
           } = this.props;
-          const { isBusy, reConnect, p2pIsConnecting } = this.state;
+          const { isBusy } = this.state;
           TYIpcPlayerManager.startPlay(
             isWirless,
             privateMode,
@@ -313,9 +323,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             voiceStatus,
             hightScaleMode,
             channelNum,
-            isBusy,
-            reConnect,
-            p2pIsConnecting
+            isBusy
           );
           return false;
         }
@@ -333,7 +341,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   componentWillReceiveProps(nextProps: TYIpcPlayerProps) {
     // 隐私模式和设备在线变更监听 重新拉流
     const { privateMode, deviceOnline, zoomStatus, channelNum, scaleMultiple } = this.props;
-    const { isBusy, reConnect, p2pIsConnecting } = this.state;
+    const { isBusy } = this.state;
     if (
       !_.isEqual(privateMode, nextProps.privateMode) ||
       !_.isEqual(deviceOnline, nextProps.deviceOnline) ||
@@ -347,9 +355,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         nextProps.voiceStatus,
         nextProps.hightScaleMode,
         nextProps.channelNum,
-        isBusy,
-        reConnect,
-        p2pIsConnecting
+        isBusy
       );
     }
 
@@ -384,7 +390,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.off('talkingChangeMute', this.listenTalkingChangeMute);
     TYEvent.off('isRecordingListen', this.listenIsRecording);
     TYEvent.off('p2pIsConnected', this.listenP2PIsConnected);
-    TYEvent.off('p2pIsConnecting', this.listenP2PIsConnecting);
     TYEvent.off('deviceDataChange', this.dpChange);
     TYEvent.off('autoAdjustViewScaleMode', this.autoAdjustViewScaleMode);
     TYEvent.off('getCameraConfig', this.getCameraConfig);
@@ -439,7 +444,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.onLivePage = true;
       let sendNativePage = 0;
       let sendCameraAction = 0;
-      const { nativePage, isBusy, reConnect, p2pIsConnecting } = this.state;
+      const { nativePage, isBusy } = this.state;
       nativePage === 1 && ((sendNativePage = 0), (sendCameraAction = 2));
       nativePage === 2 && ((sendNativePage = 0), (sendCameraAction = 0));
       // 从设置页面返回到预览界面
@@ -457,9 +462,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         voiceStatus,
         hightScaleMode,
         channelNum,
-        isBusy,
-        reConnect,
-        p2pIsConnecting
+        isBusy
       );
     }
     this.goToBack = false;
@@ -549,7 +552,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       hightScaleMode,
       channelNum,
     } = this.props;
-    const { isBusy, reConnect, p2pIsConnecting } = this.state;
+    const { isBusy } = this.state;
     TYIpcPlayerManager.startPlay(
       isWirless,
       privateMode,
@@ -558,9 +561,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       voiceStatus,
       hightScaleMode,
       channelNum,
-      isBusy,
-      reConnect,
-      p2pIsConnecting
+      isBusy
     );
   };
 
@@ -597,14 +598,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       isTwoWayTalk: Boolean(isTwoWayTalk),
     });
     this.props.onChangeSupportedMicWay(data);
-  };
-
-  listenP2PIsConnecting = data => {
-    if (data) {
-      this.setState({
-        p2pIsConnecting: true,
-      });
-    }
   };
 
   listenP2PIsConnected = p2pContent => {
@@ -734,7 +727,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         hightScaleMode,
         channelNum,
       } = this.props;
-      const { videoStatus, isBusy, reConnect, p2pIsConnecting } = this.state;
+      const { videoStatus, isBusy } = this.state;
       // 表示隐私模式
       if (videoStatus === 1) {
         this.setState({
@@ -758,9 +751,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         voiceStatus,
         hightScaleMode,
         channelNum,
-        isBusy,
-        reConnect,
-        p2pIsConnecting
+        isBusy
       );
     }
   };

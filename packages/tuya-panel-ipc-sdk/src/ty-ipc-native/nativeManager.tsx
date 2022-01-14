@@ -14,27 +14,15 @@ export const connecP2PAndStartPreview = (
   clarityStatus: string,
   voiceStatus: string,
   hightScaleMode: boolean,
-  reConnect: boolean,
-  isBusy: boolean,
-  p2pIsConnecting: boolean
+  isBusy: boolean
 ) => {
   TYEvent.emit('streamStatus', { status: 2 });
-  TYEvent.emit('p2pIsConnecting', true);
   CameraManager.isConnected(msg => {
     TYEvent.emit('p2pIsConnected', Boolean(msg));
-    TYEvent.emit('p2pIsConnecting', false);
     if (!msg) {
-      connectAndstartPreView(
-        isWirless,
-        clarityStatus,
-        voiceStatus,
-        hightScaleMode,
-        reConnect,
-        isBusy,
-        p2pIsConnecting
-      );
+      connectAndstartPreView(isWirless, clarityStatus, voiceStatus, hightScaleMode, isBusy);
     } else {
-      startPreview(clarityStatus, voiceStatus, hightScaleMode, reConnect, isBusy, p2pIsConnecting);
+      startPreview(clarityStatus, voiceStatus, hightScaleMode, isBusy);
     }
   });
 };
@@ -47,9 +35,7 @@ const connectAndstartPreView = (
   clarityStatus: string,
   voiceStatus: string,
   hightScaleMode: boolean,
-  reConnect: boolean,
-  isBusy: boolean,
-  p2pIsConnecting: boolean
+  isBusy: boolean
 ) => {
   if (isWirless) {
     wakeupWirless();
@@ -57,7 +43,7 @@ const connectAndstartPreView = (
   CameraManager.connect(
     () => {
       TYEvent.emit('p2pIsConnected', true);
-      startPreview(clarityStatus, voiceStatus, hightScaleMode, reConnect, isBusy, p2pIsConnecting);
+      startPreview(clarityStatus, voiceStatus, hightScaleMode, isBusy);
     },
     errMsg => {
       TYEvent.emit('streamStatus', { status: 3, errMsg });
@@ -94,9 +80,7 @@ const startPreview = (
   clarityStatus: string,
   voiceStatus: string,
   hightScaleMode: boolean,
-  reConnect: boolean,
-  isBusy: boolean,
-  p2pIsConnecting: boolean
+  isBusy: boolean
 ) => {
   TYEvent.emit('streamStatus', { status: 4 });
   CameraManager.startPreviewWithDefinition(
@@ -116,16 +100,7 @@ const startPreview = (
       operatMute(voiceStatus);
     },
     errMsg => {
-      if (reConnect && !p2pIsConnecting) {
-        startPreview(
-          clarityStatus,
-          voiceStatus,
-          hightScaleMode,
-          reConnect,
-          isBusy,
-          p2pIsConnecting
-        );
-      } else if (isBusy) {
+      if (isBusy) {
         TYEvent.emit('streamStatus', { status: 9, errMsg });
       } else {
         TYEvent.emit('streamStatus', { status: 5, errMsg });
