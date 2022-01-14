@@ -62,6 +62,7 @@ module.exports = {
         'tuya.m.device.lock.active.period',
         'tuya.m.device.relation.update.for.ble',
         'tuya.m.device.relation.update',
+        'tuya.m.device.relation.update.for.beacon',
         'tuya.m.timer.group.add',
         'tuya.m.timer.group.update',
         'tuya.m.timer.group.list',
