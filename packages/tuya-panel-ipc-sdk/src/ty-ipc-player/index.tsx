@@ -276,9 +276,6 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           this.setState({
             isBusy: true,
           });
-          this.props.videoLoadText({ videoLoadText: Strings.getLang('deviceBusy') });
-          this.props.showVideoLoadAction({ showVideoLoad: true });
-          this.props.showTryAgain({ showTryAgain: true });
         }
         // 设备重连
         if (e && e.errorCode && (e.errorCode === '-105' || e.errorCode === '-3')) {
