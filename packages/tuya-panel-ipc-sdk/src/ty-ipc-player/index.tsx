@@ -641,7 +641,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   };
 
   getStreamStatus = (data: { status: number; errMsg?: any }) => {
-    const { status, errMsg } = data;
+    const { errMsg } = data;
+    let { status } = data;
     const { clarityStatus } = this.props;
     const { isBusy } = this.state;
     // 监听到视频流获取的状态变化,将视频流状态
@@ -679,6 +680,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     if (status === 5 && isBusy) {
       loadText = Strings.getLang('tyIpc_video_device_busy');
       showRetry = false;
+      status = 9;
     }
 
     this.setState({
