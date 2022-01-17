@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-health-sdk@1.2.0...@tuya/tuya-panel-health-sdk@1.3.0) (2022-01-06)
+
+
+### Features
+
+* add breatheView steps-progress scale-slider ([#161](https://github.com/tuya/tuya-panel-sdk/issues/161)) ([8f8efc5](https://github.com/tuya/tuya-panel-sdk/commit/8f8efc5b0d9209813b1586678c39d4cdc2995fe7))
+
+
+
+
+
 # 1.2.0 (2021-12-21)
 
 

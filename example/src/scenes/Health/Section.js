@@ -1,6 +1,7 @@
 import React, { SFC } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
+
 const { convertX: cx } = Utils.RatioUtils;
 
 const Section = props => {
@@ -14,8 +15,10 @@ const Section = props => {
   );
 };
 
-
 const styles = StyleSheet.create({
+  box: {
+    minHeight: 200,
+  },
   title: {
     backgroundColor: '#F0F0F0',
     fontSize: cx(22),

@@ -54,9 +54,9 @@ const AddProgress: FC<AddProgressProps> = ({
 
   // 监听进度，如果已添加数和待添加总数相同，则触发完成事件，否则刷新倒计时。
   useEffect(() => {
+    clearTimeout(timer);
     if (progress !== total) {
       if (!isCustomProgressChange) {
-        clearTimeout(timer);
         countdown();
       }
     } else if (typeof onFinish === 'function') {

@@ -1,37 +1,37 @@
 {
-  "name": "@tuya/tuya-panel-szos-sdk",
-  "version": "1.0.0",
-  "description": "涂鸦深圳OS业务组件库",
-  "main": "./lib/index.js",
-  "scripts": {
-    "dev": "tsc -w",
-    "prebuild": "../../node_modules/del-cli/cli.js lib/",
-    "build": "../../node_modules/.bin/tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
-    "prepublishOnly": "yarn build",
-    "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix --ignore-path ../../.eslintignore",
-    "test": "jest"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "url": "tuya/tuya-panel-sdk",
-    "directory": "packages/tuya-panel-szos-sdk"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "@types/react": "^16.9.56",
-    "@types/react-native": "^0.63.35",
-    "@types/tuya-panel-kit": "^4.0.0"
-  },
-  "peerDependencies": {
-    "@tuya-rn/tuya-native-components": "^4.0.0",
-    "react": "^16.9.0",
-    "react-native": "0.59.10",
-    "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "^4.2.1"
-  },
-  "license": "ISC",
-  "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
+    "name": "@tuya/tuya-panel-szos-sdk",
+    "version": "1.1.1",
+    "description": "涂鸦深圳OS业务组件库",
+    "main": "./lib/index.js",
+    "scripts": {
+        "dev": "tsc -w",
+        "prebuild": "../../node_modules/del-cli/cli.js lib/",
+        "build": "../../node_modules/.bin/tsc -d",
+        "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+        "prepublishOnly": "yarn build",
+        "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix --ignore-path ../../.eslintignore",
+        "test": "jest"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "repository": {
+        "url": "tuya/tuya-panel-sdk",
+        "directory": "packages/tuya-panel-szos-sdk"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/react": "^16.9.56",
+        "@types/react-native": "^0.63.35",
+        "@types/tuya-panel-kit": "^4.0.0"
+    },
+    "peerDependencies": {
+        "@tuya-rn/tuya-native-components": "^4.0.0",
+        "react": "^16.9.0",
+        "react-native": "0.59.10",
+        "react-native-svg": "5.5.1",
+        "tuya-panel-kit": "^4.2.1"
+    },
+    "license": "ISC",
+    "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"
 }

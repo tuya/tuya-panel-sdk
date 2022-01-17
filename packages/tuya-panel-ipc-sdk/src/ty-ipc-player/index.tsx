@@ -62,6 +62,7 @@ interface TYIpcPlayerState {
   zoomVideoStatus: number;
   currentVideoScale: number;
   currentScaleStatus: number;
+  isBusy: boolean;
 }
 
 class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
@@ -105,6 +106,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       // 记录App 推送的比例及当前视频播放比例
       currentScaleStatus: -1,
       currentVideoScale: 1,
+      isBusy: false,
     };
     this.goToBack = false;
     this.onLivePage = true;
@@ -252,7 +254,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // session断开，提示网络错误
     this.sessionDidDisconnectedListener = DeviceEventEmitter.addListener(
       'sessionDidDisconnected',
-      () => {
+      e => {
         // 对于隐私模式为false或undefined时对session处理, 隐私模式为true时不做处理
         const { privateMode: privateModeState } = this.props;
         if (!privateModeState) {
@@ -263,6 +265,37 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             // 点击重试
             retryText: Strings.getLang('tyIpc_video_stream_retry'),
           });
+        }
+        // 设备忙线
+        if (
+          e &&
+          e.errorCode &&
+          (e.errorCode === '-113' || e.errorCode === '-23' || e.errorCode === '-104')
+        ) {
+          this.setState({
+            isBusy: true,
+          });
+        }
+        // 设备重连
+        if (e && e.errorCode && (e.errorCode === '-105' || e.errorCode === '-3')) {
+          const {
+            isWirless,
+            privateMode,
+            deviceOnline,
+            clarityStatus,
+            voiceStatus,
+            hightScaleMode,
+            channelNum,
+          } = this.props;
+          TYIpcPlayerManager.startPlay(
+            isWirless,
+            privateMode,
+            deviceOnline,
+            clarityStatus,
+            voiceStatus,
+            hightScaleMode,
+            channelNum
+          );
         }
         // 低功耗session断开并且进入面板有上报低功耗休眠false
         if (this.wirlessFlag) {
@@ -608,13 +641,15 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   };
 
   getStreamStatus = (data: { status: number; errMsg?: any }) => {
-    const { status, errMsg } = data;
+    const { errMsg } = data;
+    let { status } = data;
     const { clarityStatus } = this.props;
+    const { isBusy } = this.state;
     // 监听到视频流获取的状态变化,将视频流状态
     let showLoading = true;
     let showRetry = false;
     let showAnimation = true;
-    const loadText =
+    let loadText =
       clarityStatus === 'AUDIO'
         ? Strings.getLang('tyIpc_audio_stream_geting')
         : videoLoadText[status];
@@ -640,6 +675,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     if (status === 8) {
       retryText = Strings.getLang('tyIpc_video_stream_retry_play');
       showRetry = true;
+    }
+
+    if (status === 5 && isBusy) {
+      loadText = Strings.getLang('tyIpc_video_device_busy');
+      showRetry = false;
+      status = 9;
     }
 
     this.setState({

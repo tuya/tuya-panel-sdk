@@ -1,0 +1,2389 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScaleSlider components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Component
+      color="#A699FF"
+      d="M1536 0H73.142857l731.428572 1024z"
+      height={8}
+      width={14}
+    />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "height": 92,
+        "marginTop": 20,
+        "overflow": "hidden",
+        "width": 606,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "height": 92,
+            "justifyContent": "space-between",
+          },
+          Object {
+            "paddingHorizontal": 187.5,
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+            "width": 855,
+          },
+        ]
+      }
+    >
+      <View
+        key="0"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="1"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="2"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="3"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="4"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="5"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="6"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="7"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="8"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="9"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="10"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="11"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="12"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="13"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="14"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="15"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="16"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="17"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="18"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="19"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="20"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="21"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="22"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="23"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="24"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="25"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="26"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="27"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="28"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="29"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="30"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="31"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="32"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="33"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="34"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="35"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="36"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="37"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="38"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="39"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="40"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="41"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="42"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="43"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="44"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="45"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="46"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="47"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="48"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="49"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="50"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="51"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="52"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="53"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="54"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="55"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="56"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="57"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="58"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="59"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;
+
+exports[`ScaleSlider components render touch 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "overflow": "hidden",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+      }
+    }
+  >
+    <Component
+      color="#A699FF"
+      d="M1536 0H73.142857l731.428572 1024z"
+      height={8}
+      width={14}
+    />
+  </View>
+  <View
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    style={
+      Object {
+        "height": 92,
+        "marginTop": 20,
+        "overflow": "hidden",
+        "width": 606,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "flex-start",
+            "flexDirection": "row",
+            "height": 92,
+            "justifyContent": "space-between",
+          },
+          Object {
+            "paddingHorizontal": 187.5,
+            "transform": Array [
+              Object {
+                "translateX": -0,
+              },
+            ],
+            "width": 1175,
+          },
+        ]
+      }
+    >
+      <View
+        key="0"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="1"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="2"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="3"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="4"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="5"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="6"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="7"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="8"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="9"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="10"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="11"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="12"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="13"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="14"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="15"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="16"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="17"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="18"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="19"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="20"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="21"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="22"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="23"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="24"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="25"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="26"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="27"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="28"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="29"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="30"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="31"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="32"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="33"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="34"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="35"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="36"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="37"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="38"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="39"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="40"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="41"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="42"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="43"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="44"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="45"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="46"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="47"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="48"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="49"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="50"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="51"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="52"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="53"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="54"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="55"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="56"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="57"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="58"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="59"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="60"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="61"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="62"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="63"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="64"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="65"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="66"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="67"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="68"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="69"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="70"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="71"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="72"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="73"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="74"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="75"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="76"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="77"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="78"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="79"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="80"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="81"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="82"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="83"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="84"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="85"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="86"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="87"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="88"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="89"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="90"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 92,
+            },
+          ]
+        }
+      />
+      <View
+        key="91"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="92"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="93"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="94"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="95"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 56,
+            },
+          ]
+        }
+      />
+      <View
+        key="96"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="97"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="98"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+      <View
+        key="99"
+        style={
+          Array [
+            Object {
+              "width": 1,
+            },
+            Object {
+              "backgroundColor": "#A699FF",
+              "height": 48,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+</View>
+`;

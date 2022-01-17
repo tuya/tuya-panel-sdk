@@ -42,7 +42,7 @@ class PlayerManagerFun {
     channelNum: number
   ) => {
     /* 返回状态进行定义
-       status:  0: 设备离线 1: 隐私模式 2: 正在连接P2P通道 3: 通道构建失败 4: 正在获取视频流 5: 获取视频流失败 6: 正常播放 7.音频模式ei
+       status:  0: 设备离线 1: 隐私模式 2: 正在连接P2P通道 3: 通道构建失败 4: 正在获取视频流 5: 获取视频流失败 6: 正常播放 7: 音频模式 8: 点击恢复 9: 设备忙线
     */
     if (!deviceOnline) {
       TYEvent.emit('streamStatus', { status: 0 });
@@ -218,7 +218,7 @@ class PlayerManagerFun {
     theme: 1: 黑色 2：白色
     默认是白色
   */
-  enterParamAlbum = (param: { theme: number;[propName: string]: any }) => {
+  enterParamAlbum = (param: { theme: number; [propName: string]: any }) => {
     CameraManager.gotoCameraAlbumPanelWithParams(param);
   };
 
@@ -385,7 +385,7 @@ class PlayerManagerFun {
     time:  播放的时间戳, 单位秒
     @param
   */
-  enterParamPlayBack = (param: { theme?: 1 | 2; time?: number;[propName: string]: any }) => {
+  enterParamPlayBack = (param: { theme?: 1 | 2; time?: number; [propName: string]: any }) => {
     TYEvent.emit('changeCameraAction', { action: 1, nativePage: 1 });
     CameraManager.gotoCameraNewPlaybackPanelWithParams(param);
   };
@@ -409,7 +409,7 @@ class PlayerManagerFun {
     time:  播放的时间戳, 单位秒
     @param
   */
-  enterParamCloudBack = (param: { theme?: 1 | 2; time?: number;[propName: string]: any }) => {
+  enterParamCloudBack = (param: { theme?: 1 | 2; time?: number; [propName: string]: any }) => {
     TYEvent.emit('changeCameraAction', { action: 0, nativePage: 2 });
     CameraManager.gotoCloudStoragePanelWithParams(param);
   };
@@ -429,7 +429,7 @@ class PlayerManagerFun {
     theme: 主题色 黑色为1 白色为2
     @param
   */
-  enterParamMessageAll = (param: { theme?: 1 | 2;[propName: string]: any }) => {
+  enterParamMessageAll = (param: { theme?: 1 | 2; [propName: string]: any }) => {
     CameraManager.gotoCameraMessageCenterPanelWithParams(param);
   };
 

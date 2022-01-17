@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.12.0...@tuya/tuya-panel-ipc-sdk@1.13.0) (2022-01-14)
+
+
+### Features
+
+* **ipc-panel-sdk:** add re-connect error code ([#167](https://github.com/tuya/tuya-panel-sdk/issues/167)) ([029cb54](https://github.com/tuya/tuya-panel-sdk/commit/029cb54670fdf7f8a0d9fe8909101d807406d0d7))
+* add Bubble and DargSort ([#156](https://github.com/tuya/tuya-panel-sdk/issues/156)) ([a6ed10a](https://github.com/tuya/tuya-panel-sdk/commit/a6ed10a981e679c4ec9691b1c9d35aaca2505ab9))
+
+
+
+
+
 # 1.12.0 (2021-12-21)
 
 
