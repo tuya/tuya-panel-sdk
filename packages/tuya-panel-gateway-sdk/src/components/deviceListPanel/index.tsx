@@ -250,12 +250,10 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
         direction = dy >= 0 ? 'down' : 'up';
         // 当前滑块离顶部上边距
         const finalValue = releaseTopRef.current + dy;
-
         // finalValue在滑动设定范围内时
         if (finalValue <= initialPosition && finalValue >= highestPosition) {
           animatedTop.setValue(finalValue);
           movingTop = finalValue;
-          releaseTopRef.current = finalValue;
           // setRadius(finalValue > highestPosition ? cx(10) : 0);
           // 动态设置滑块上边距动画值
         }
