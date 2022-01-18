@@ -1787,3 +1787,349 @@ export interface LightAnimateProps {
    */
   onRelease?: () => any;
 }
+
+export interface LetterSearchProps {
+  /**
+   * @language zh-CN
+   * @description 列表自定义头部内容
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List custom header content
+   * @defaultValue null
+   */
+  header?: JSX.Element | null;
+  /**
+   * @language zh-CN
+   * @description header高度
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description Header height
+   * @defaultValue 0
+   */
+  offset: number;
+  /**
+   * @language zh-CN
+   * @description 列表项的actionOpacity，值范围：0-1，默认0.7
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description Actionopacity of list item, value range: 0-1, default: 0.7
+   * @defaultValue 0.7
+   */
+  sectionItemOpacity?: number;
+  /**
+   * @language zh-CN
+   * @description 列表项样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item style
+   * @defaultValue null
+   */
+  sectionItemStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表项主标题字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item main title font style
+   * @defaultValue null
+   */
+  sectionItemTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表项副标题字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item subtitle font style
+   * @defaultValue null
+   */
+  sectionItemSubTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表项头部样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item header style
+   * @defaultValue null
+   */
+  sectionHeaderStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表项头部字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item header font style
+   * @defaultValue null
+   */
+  sectionHeaderTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表项高度
+   * @defaultValue 60
+   */
+  /**
+   * @language en-US
+   * @description List item height
+   * @defaultValue 60
+   */
+  itemHeight: number;
+  /**
+   * @language zh-CN
+   * @description 列表项点击事件
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description List item click event
+   * @defaultValue null
+   */
+  onPress?: (item: SectionItem) => void;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项字置顶图标
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Letter selection list item word top Icon
+   * @defaultValue null
+   */
+  letterTopImage?: number;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项置顶图标样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Alphabetic selection list item top icon style
+   * @defaultValue null
+   */
+  letterTopStyle?: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项置顶图标选中样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Letter selection list item top icon selected style
+   * @defaultValue null
+   */
+  letterTopActiveStyle?: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项container样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Letter selection list item container style
+   * @defaultValue null
+   */
+  letterMainStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Alphabetic selection list item style
+   * @defaultValue null
+   */
+  letterItemStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Alphabetic selection list item font style
+   * @defaultValue null
+   */
+  letterItemTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项字体选中样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Letter selection list item font selection style
+   * @defaultValue null
+   */
+  letterItemTextActiveStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 字母选择列表项的actionOpacity,值范围：0-1，默认0.7
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description Actionopacity of letter selection list item, value range: 0-1, default: 0.7
+   * @defaultValue 0.7
+   */
+  letterItemOpacity: number;
+  /**
+   * @language zh-CN
+   * @description 列表数据
+   * @defaultValue []
+   */
+  /**
+   * @language en-US
+   * @description List data
+   * @defaultValue []
+   */
+  readonly sections: Array<SectionLists>;
+  /**
+   * @language zh-CN
+   * @description 初始渲染列表个数
+   * @defaultValue 100
+   */
+  /**
+   * @language en-US
+   * @description Number of initial rendering lists
+   * @defaultValue 100
+   */
+  initialNumToRender?: number;
+  /**
+   * @language zh-CN
+   * @description 是否开启动画效果，默认开启
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether to turn on the animation effect. It is turned on by default
+   * @defaultValue true
+   */
+  animated?: boolean;
+  /**
+   * @language zh-CN
+   * @description 搜索栏搜索框placeholder
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search bar search box placeholder
+   * @defaultValue null
+   */
+  placeholderText?: string;
+  /**
+   * @language zh-CN
+   * @description 搜索栏重置文案自定义，不超过12个字符
+   * @defaultValue '重置'
+   */
+  /**
+   * @language en-US
+   * @description Search bar reset copywriting customization, no more than 12 characters
+   * @defaultValue 'reset'
+   */
+  reset: string;
+  /**
+   * @language zh-CN
+   * @description 搜索栏重置按钮actionOpacity,范围：0-1，默认0.7
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description Search bar reset button actionability, range: 0-1, default: 0.7
+   * @defaultValue 0.7
+   */
+  researchBtnOpacity: number;
+  /**
+   * @language zh-CN
+   * @description 搜索框重置字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search box reset font style
+   * @defaultValue null
+   */
+  researchTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索栏样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search bar style
+   * @defaultValue null
+   */
+  researchStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索栏搜索框样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search bar search box style
+   * @defaultValue null
+   */
+  researchInputStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索结果展示项列表的actionOpacity，0-1，默认0.7
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description The Actionability of the search result display item list is 0-1, and the default is 0.7
+   * @defaultValue 0.7
+   */
+  searchListItemOpacity?: number;
+  /**
+   * @language zh-CN
+   * @description 搜索结果展示项列表样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search results display item list style
+   * @defaultValue null
+   */
+  searchListItemStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索结果展示项列表主标题字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Font style of main title of search result display item list
+   * @defaultValue null
+   */
+  searchListTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索结果展示项列表副标题字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search results display item list subtitle font style
+   * @defaultValue null
+   */
+  searchListSubTextStyle?: StyleProp<ViewStyle>;
+}
+
+export const LetterSearch: React.ComponentClass<LetterSearchProps>;
