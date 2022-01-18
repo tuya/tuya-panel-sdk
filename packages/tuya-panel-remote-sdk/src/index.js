@@ -6,6 +6,7 @@ import CurtainsAnimate from './components/curtains-animate';
 import PusherAnimate from './components/pusher-animate';
 import RollerAnimate from './components/roller-animate';
 import LightAnimate from './components/light-animate';
+import LetterSearch from './components/letter-search';
 
 export {
   CircleHandle,
@@ -15,4 +16,5 @@ export {
   PusherAnimate,
   RollerAnimate,
   LightAnimate,
+  LetterSearch,
 };
