@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.7.0...@tuya/tuya-panel-gateway-sdk@1.8.0) (2022-01-18)
+
+
+### Features
+
+* **gateway:** Add a new open API of gateway. Add a new util to transform mac. ([#168](https://github.com/tuya/tuya-panel-sdk/issues/168)) ([5593dbb](https://github.com/tuya/tuya-panel-sdk/commit/5593dbb71991af120066e627c3f82270ba58f5ad))
+
+
+
+
+
 # [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-gateway-sdk@1.6.0...@tuya/tuya-panel-gateway-sdk@1.7.0) (2022-01-06)
 
 
