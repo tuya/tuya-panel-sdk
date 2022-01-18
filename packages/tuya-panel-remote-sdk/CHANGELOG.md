@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.5.0...@tuya/tuya-panel-remote-sdk@0.6.0) (2022-01-18)
+
+
+### Features
+
+* **remote:** Add new LetterSearch component ([#169](https://github.com/tuya/tuya-panel-sdk/issues/169)) ([6744adf](https://github.com/tuya/tuya-panel-sdk/commit/6744adf7178b69f925187523301b2eb1dda75a62))
+
+
+
+
+
 # 0.5.0 (2021-12-21)
 
 
