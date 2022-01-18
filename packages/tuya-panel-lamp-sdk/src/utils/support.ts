@@ -16,14 +16,22 @@ const {
 } = dpCodes;
 
 const supportDp = (code: string) => {
-  const { schema } = TYSdk.devInfo;
-  return !!schema[code];
+  try {
+    const { schema } = TYSdk.devInfo;
+    return !!schema[code];
+  } catch (error) {
+    return false;
+  }
 };
 
 const supportWorkMode = (code: string) => {
-  const { schema } = TYSdk.devInfo;
-  const workModeRange: string[] = _get(schema[workModeCode], 'range') || [];
-  return workModeRange.includes(code);
+  try {
+    const { schema } = TYSdk.devInfo;
+    const workModeRange: string[] = _get(schema[workModeCode], 'range') || [];
+    return workModeRange.includes(code);
+  } catch (error) {
+    return false;
+  }
 };
 
 const isSupportByDpAndWorkMode = (
