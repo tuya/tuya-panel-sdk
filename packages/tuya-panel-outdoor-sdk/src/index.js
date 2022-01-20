@@ -9,3 +9,5 @@ export { default as SportTargetContent } from './components/sport-target-value';
 export { default as SportNoTarget } from './components/sport-no-target';
 export { default as SportTarget } from './components/sport-target';
 export { default as SportCard } from './components/sport-card';
+export { default as ControlDeviceCommon } from './components/control-device-common';
+export { putDpData } from './utils';

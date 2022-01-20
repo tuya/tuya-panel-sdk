@@ -11,6 +11,7 @@ import Battery from './battery';
 import SportNoTarget from './sport-no-target';
 import SportTarget from './sport-target';
 import SportCard from './sport-card';
+import ControlDeviceCommon from './control-device-common';
 
 export default class OutdoorScene extends React.Component {
   get data() {
@@ -26,6 +27,7 @@ export default class OutdoorScene extends React.Component {
   static SportNoTarget = SportNoTarget;
   static SportTarget = SportTarget;
   static SportCard = SportCard;
+  static ControlDeviceCommon = ControlDeviceCommon;
 
   render() {
     return <TYFlatList data={this.data} />;
