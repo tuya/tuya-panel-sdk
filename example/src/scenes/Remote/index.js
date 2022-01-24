@@ -10,6 +10,7 @@ import PusherAnimate from './PusherAnimate';
 import RollerAnimate from './RollerAnimate';
 import LightAnimate from './LightAnimate';
 import LetterSearch from './LetterSearch';
+import MaskView from './MaskView';
 
 export default class SweepRobotCategoryScene extends Component {
   get data() {
@@ -25,6 +26,7 @@ export default class SweepRobotCategoryScene extends Component {
   static RollerAnimate = RollerAnimate;
   static LightAnimate = LightAnimate;
   static LetterSearch = LetterSearch;
+  static MaskView = MaskView;
 
   render() {
     return (
