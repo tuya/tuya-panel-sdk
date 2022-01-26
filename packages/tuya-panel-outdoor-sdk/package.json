@@ -28,7 +28,7 @@
     "react": "^16.0.0",
     "react-native": "^0.51.0",
     "react-native-svg": "5.5.1",
-    "tuya-panel-kit": "^4.4.0"
+    "tuya-panel-kit": "^4.5.5"
   },
   "license": "ISC",
   "gitHead": "1a7027600504ced3086df8c833ab314c3716a934"

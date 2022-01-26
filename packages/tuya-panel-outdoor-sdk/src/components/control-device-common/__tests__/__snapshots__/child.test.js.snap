@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`child components child render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "#fff",
+      "borderRadius": 100,
+      "height": 100,
+      "justifyContent": "center",
+      "width": 100,
+    }
+  }
+>
+  <Component
+    color="red"
+    d=""
+    size={48}
+  />
+</View>
+`;

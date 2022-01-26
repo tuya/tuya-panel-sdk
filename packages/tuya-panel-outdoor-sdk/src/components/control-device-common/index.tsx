@@ -1,14 +1,12 @@
 /* eslint-disable camelcase */
 import React, { FC, useState, useEffect, useRef } from 'react';
-import { View, TouchableOpacity, StyleSheet, ActivityIndicator, ViewStyle } from 'react-native';
+import { View, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 import { TYSdk, Utils, IconFont } from 'tuya-panel-kit';
-import { putDpfindDevice, getDeviceLocation } from './api';
-import { loadedModal, putDpType, getCurrentLocation } from './utils';
-import HomeModal from './homeModal';
-import Strings from './i18n/index';
-import icons from './res/icons';
-import { IProps, ILocation } from './interface';
+import { putDpfindDevice, getDeviceLocation } from './common/api';
+import { loadedModal, putDpType, getCurrentLocation } from './common/utils';
+import { IProps, ILocation } from './common/interface';
 import Child from './child';
+import homeModal from './homeModal';
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -25,7 +23,7 @@ enum ActionStatus {
   success = 'success',
 }
 
-const Component: FC<IProps> = (props: IProps) => {
+const Main: FC<IProps> = (props: IProps) => {
   const {
     themeColor,
     deviceOnline,
@@ -34,6 +32,11 @@ const Component: FC<IProps> = (props: IProps) => {
     onSearchResult,
     onRingLampResult,
     // 下面是可选
+    searchIcon,
+    ringIcon,
+    lampIcon,
+    successIcon,
+    timeout,
     modalStartPoint, // modalStartPoint, 有蒙层才需要设置此属性
     searchModalProp, // 蒙层才需要设置此属性
     ringModalProp, // 蒙层才需要设置此属性
@@ -89,6 +92,8 @@ const Component: FC<IProps> = (props: IProps) => {
           },
         };
         onSearchResult({ error: false, ...p });
+      } else {
+        onSearchResult({ error: true, ...{ msg: '失败' } });
       }
     } catch (error) {
       onSearchResult({ error: true, ...error });
@@ -194,7 +199,7 @@ const Component: FC<IProps> = (props: IProps) => {
             await getLocation();
             searchSuccess();
           }
-        }, 10 * 1000);
+        }, timeout);
       }
     } catch (error) {
       showLoading.current = false;
@@ -256,7 +261,7 @@ const Component: FC<IProps> = (props: IProps) => {
         message: '超时',
       };
       onRingLampResult && onRingLampResult({ error: false, ...msg });
-    }, 10 * 1000);
+    }, timeout);
     putDpType(bleState, dpCode, open);
   };
 
@@ -361,11 +366,7 @@ const Component: FC<IProps> = (props: IProps) => {
             ) : (
               <IconFont
                 opacity={getOpacity(search)}
-                d={
-                  search === ActionStatus.success
-                    ? iconProp.successIcon || iconProp.icon
-                    : iconProp.icon
-                }
+                d={search === ActionStatus.success ? successIcon || searchIcon : searchIcon}
                 size={iconProp.size}
                 color={search === ActionStatus.success ? '#FFF' : iconProp.color}
               />
@@ -398,7 +399,7 @@ const Component: FC<IProps> = (props: IProps) => {
             ) : (
               <IconFont
                 opacity={getOpacity(ring)}
-                d={iconProp.icon}
+                d={ringIcon}
                 size={iconProp.size}
                 color={ring === ActionStatus.success ? '#FFF' : iconProp.color}
               />
@@ -432,7 +433,7 @@ const Component: FC<IProps> = (props: IProps) => {
             ) : (
               <IconFont
                 opacity={getOpacity(lamp)}
-                d={iconProp.icon}
+                d={lampIcon}
                 size={iconProp.size}
                 color={lamp === ActionStatus.success ? '#FFF' : iconProp.color}
               />
@@ -440,66 +441,66 @@ const Component: FC<IProps> = (props: IProps) => {
           </View>
         </TouchableOpacity>
       ) : null}
-
       {/* 蒙层 */}
-      {searchModalProp && (
-        <Child
-          title={searchModalProp.title}
-          subTitle={searchModalProp.subTitle}
-          done={searchModalProp.done}
-          bgImage={searchModalProp.bgImage}
-          bgStyle={searchModalProp.bgStyle}
-          bgChildStyle={searchModalProp.bgChildStyle}
-          showModal={searchModal}
-          v1Bottom={getModalHeight(1).bottom1}
-          v2Bottom={getModalHeight(1).bottom2}
-          iconBoxStyle={searchModalProp.iconBoxStyle}
-          iconProp={iconProp}
-          onMaskPress={() => onMaskPress(1)}
-        />
-      )}
-      {ringModalProp && (
-        <Child
-          title={ringModalProp.title}
-          subTitle={ringModalProp.subTitle}
-          done={ringModalProp.done}
-          bgImage={ringModalProp.bgImage}
-          bgStyle={ringModalProp.bgStyle}
-          bgChildStyle={ringModalProp.bgChildStyle}
-          showModal={ringModal}
-          v1Bottom={getModalHeight(2).bottom1}
-          v2Bottom={getModalHeight(2).bottom2}
-          iconBoxStyle={ringModalProp.iconBoxStyle}
-          iconProp={iconProp}
-          onMaskPress={() => onMaskPress(2)}
-        />
-      )}
-      {lampModalProp && (
-        <Child
-          title={lampModalProp.title}
-          subTitle={lampModalProp.subTitle}
-          done={lampModalProp.done}
-          bgImage={lampModalProp.bgImage}
-          bgStyle={lampModalProp.bgStyle}
-          bgChildStyle={lampModalProp.bgChildStyle}
-          showModal={lampModal}
-          v1Bottom={getModalHeight(3).bottom1}
-          v2Bottom={getModalHeight(3).bottom2}
-          iconBoxStyle={lampModalProp.iconBoxStyle}
-          iconProp={iconProp}
-          onMaskPress={() => onMaskPress(3)}
-        />
-      )}
+      {searchModalProp &&
+        homeModal({
+          title: searchModalProp.title,
+          subTitle: searchModalProp.subTitle,
+          done: searchModalProp.done,
+          bgImage: searchModalProp.bgImage,
+          bgStyle: searchModalProp.bgStyle,
+          bgChildStyle: searchModalProp.bgChildStyle,
+          showModal: searchModal,
+          v1Bottom: getModalHeight(1).bottom1,
+          v2Bottom: getModalHeight(1).bottom2,
+          iconBoxStyle: searchModalProp.iconBoxStyle,
+          iconProp,
+          icon: searchIcon,
+          onMaskPress: () => onMaskPress(1),
+        })(Child)}
+      {ringModalProp &&
+        homeModal({
+          title: ringModalProp.title,
+          subTitle: ringModalProp.subTitle,
+          done: ringModalProp.done,
+          bgImage: ringModalProp.bgImage,
+          bgStyle: ringModalProp.bgStyle,
+          bgChildStyle: ringModalProp.bgChildStyle,
+          showModal: ringModal,
+          v1Bottom: getModalHeight(1).bottom1,
+          v2Bottom: getModalHeight(1).bottom2,
+          iconBoxStyle: ringModalProp.iconBoxStyle,
+          iconProp,
+          icon: ringIcon,
+          onMaskPress: () => onMaskPress(2),
+        })(Child)}
+      {lampModalProp &&
+        homeModal({
+          title: lampModalProp.title,
+          subTitle: lampModalProp.subTitle,
+          done: lampModalProp.done,
+          bgImage: lampModalProp.bgImage,
+          bgStyle: lampModalProp.bgStyle,
+          bgChildStyle: lampModalProp.bgChildStyle,
+          showModal: lampModal,
+          v1Bottom: getModalHeight(1).bottom1,
+          v2Bottom: getModalHeight(1).bottom2,
+          iconBoxStyle: lampModalProp.iconBoxStyle,
+          iconProp,
+          icon: lampIcon,
+          onMaskPress: () => onMaskPress(3),
+        })(Child)}
     </View>
   );
 };
 
-Component.defaultProps = {
+Main.defaultProps = {
   modalStartPoint: cx(200),
   iconSpace: cx(12),
+  timeout: 10 * 1000,
 };
 
-export default Component;
+export default Main;
 
 const styles = StyleSheet.create({
   btnView: {

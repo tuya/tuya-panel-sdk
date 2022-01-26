@@ -19,7 +19,7 @@ const Component: FC = () => {
   const onRingLampResult = (result: any) => {
     const { error } = result;
     if (error) {
-      // 错误处理
+      // 错误处理,比如超时（目前10s）
     }
   };
 
@@ -33,8 +33,6 @@ const Component: FC = () => {
           iconProp={{
             color: '#333',
             size: cx(24),
-            icon: icons.home_lamp,
-            successIcon: icons.home_search_success,
             iconStyle: {
               width: cx(50),
               height: cx(50),
@@ -45,37 +43,41 @@ const Component: FC = () => {
           }}
           onSearchResult={onSearchResult}
           onRingLampResult={onRingLampResult}
+          searchIcon={icons.home_search}
+          ringIcon={icons.home_ring}
+          lampIcon={icons.home_lamp}
+          successIcon={icons.home_search_success}
           modalStartPoint={cx(300) - topBarHeight}
           searchModalProp={{
             title: 'title',
             subTitle: 'subTitle',
             done: 'done',
             bgImage: Res.searchBg,
+            iconBoxStyle: styles.contentTarget,
             bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
             bgChildStyle: {
               width: cx(280),
               height: cx(150),
               marginTop: cx(40),
+              marginLeft: cx(20),
             },
-            iconBoxStyle: styles.contentTarget,
           }}
           ringModalProp={{
             title: 'title',
             subTitle: 'subTitle',
             done: 'done',
             bgImage: Res.searchBg,
-            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
             iconBoxStyle: styles.contentTarget,
+            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
           }}
           lampModalProp={{
             title: 'title',
             subTitle: 'subTitle',
             done: 'done',
+            iconBoxStyle: styles.contentTarget,
             bgImage: Res.searchBg,
             bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
-            iconBoxStyle: styles.contentTarget,
           }}
-          lampIcon={icons.home_search}
           iconSpace={cx(12)}
           viewStyle={styles.controlView}
         />

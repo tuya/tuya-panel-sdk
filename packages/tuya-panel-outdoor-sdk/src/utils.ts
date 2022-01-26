@@ -5,6 +5,7 @@ const _TYDeviceDevice = NativeModules.TYRCTDeviceModule || NativeModules.TYRCTPa
 
 // 兼容蓝牙模式下发，app版本高于3.28.5
 const putDpData = (data: any) => {
+  // eslint-disable-next-line consistent-return
   return new Promise((resolve, reject) => {
     const { option, ...params } = data;
     let isEmpty = true;
@@ -85,4 +86,4 @@ const putDpData = (data: any) => {
   });
 };
 
-export { putDpData };
+export default { putDpData };

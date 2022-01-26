@@ -1,4 +1,4 @@
-import { ViewStyle, TextStyle, ImageSourcePropType } from 'react-native';
+import { ViewStyle } from 'react-native';
 
 // 云端和app定位数据
 export interface ILocation {
@@ -40,8 +40,9 @@ export interface IModalOutProps {
    */
   bgImage: number;
   /**
-   * true：显示蒙层，只有首次显示，可以清除缓存重置
+   * icon父层-样式
    */
+  iconBoxStyle: ViewStyle;
   /**
    * 引导蒙层-背景图样式
    */
@@ -49,7 +50,7 @@ export interface IModalOutProps {
   /**
    * 引导蒙层-背景图内部子视图
    */
-  bgChildStyle: ViewStyle;
+  bgChildStyle?: ViewStyle;
 }
 
 // 外层传入的蒙层属性
@@ -64,9 +65,9 @@ export interface IModalProps extends IModalOutProps {
    */
   v2Bottom: number;
   /**
-   * icon父层-样式
+   * icon-样式
    */
-  iconBoxStyle: ViewStyle;
+  icon: string;
   /**
    * icon-样式
    */
@@ -75,6 +76,13 @@ export interface IModalProps extends IModalOutProps {
    * 点击事件
    */
   onMaskPress: () => void;
+}
+
+export interface IIcon extends IIconProps {
+  /**
+   * icon图标
+   */
+  icon: string;
 }
 
 // icon样式
@@ -88,17 +96,9 @@ export interface IIconProps {
    */
   size: number;
   /**
-   * 引导蒙层-icon图标
-   */
-  icon: string;
-  /**
-   * icon点击后成功图标-目前只作用在搜索功能
-   */
-  successIcon?: string;
-  /**
    * icon-样式
    */
-  iconStyle: ViewStyle;
+  iconStyle?: ViewStyle;
 }
 
 // 主页属性-最外层引用参数
@@ -120,6 +120,12 @@ export interface IProps {
    */
   iconProp: IIconProps;
   /**
+   * icon图标
+   */
+  searchIcon: string;
+  ringIcon: string;
+  lampIcon: string;
+  /**
    * 搜索功能-结果回调
    */
   onSearchResult: (result: { error: boolean }) => void;
@@ -128,21 +134,29 @@ export interface IProps {
    */
   onRingLampResult: (result: { error: boolean }) => void;
   /**
+   * icon点击后成功图标-目前只作用在搜索功能
+   */
+  successIcon?: string;
+  /**
+   * 超时处理时间
+   */
+  timeout?: number;
+  /**
    * 蒙层最上方元素距离底部的高度，自行对齐
    */
   modalStartPoint?: number;
   /**
    * 搜索引导层-对应的属性，guideModal的exist为true才有效
    */
-  searchModalProp?: IModalProps;
+  searchModalProp?: IModalOutProps;
   /**
    * 响铃引导层-对应的属性，guideModal的exist为true才有效
    */
-  ringModalProp?: IModalProps;
+  ringModalProp?: IModalOutProps;
   /**
    * 闪灯引导层-对应的属性，guideModal的exist为true才有效
    */
-  lampModalProp?: IModalProps;
+  lampModalProp?: IModalOutProps;
   /**
    * 图标上下间距, 默认cx(12)
    */

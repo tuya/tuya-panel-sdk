@@ -1,12 +1,9 @@
-import React, { ReactElement } from 'react';
-import { View, StyleSheet, ImageSourcePropType } from 'react-native';
-import { TYSdk, Utils, IconFont } from 'tuya-panel-kit';
-import homeModal from './homeModal';
-import { IIconProps } from './interface';
+import React from 'react';
+import { View } from 'react-native';
+import { IconFont } from 'tuya-panel-kit';
+import { IIcon } from './common/interface';
 
-const { convertX: cx } = Utils.RatioUtils;
-
-const child = (props: IIconProps) => {
+const Child = (props: IIcon) => {
   const { icon, color, size, iconStyle } = props;
   return (
     <View style={{ backgroundColor: '#fff', ...iconStyle }}>
@@ -14,7 +11,4 @@ const child = (props: IIconProps) => {
     </View>
   );
 };
-
-export default homeModal(child);
-
-const styles = StyleSheet.create({});
+export default Child;

@@ -1,0 +1,984 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render components modal render 1`] = `
+<View>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "marginBottom": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Component
+        color="#333"
+        d=""
+        opacity={1}
+        size={48}
+      />
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "marginBottom": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Component
+        color="#333"
+        d=""
+        opacity={1}
+        size={48}
+      />
+    </View>
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    disabled={false}
+    onPress={[Function]}
+    style={
+      Object {
+        "marginBottom": 24,
+      }
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "justifyContent": "center",
+          },
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#FFF",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Component
+        color="#333"
+        d=""
+        opacity={1}
+        size={48}
+      />
+    </View>
+  </TouchableOpacity>
+  <Portal
+    onMaskPress={[Function]}
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+    visible={false}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 20,
+          },
+          Object {
+            "bottom": 784,
+          },
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Child
+        color="#333"
+        icon=""
+        iconStyle={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          }
+        }
+        size={48}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+          Object {
+            "bottom": 384,
+          },
+        ]
+      }
+    >
+      <ImageBackground
+        source={0}
+        style={
+          Object {
+            "height": 340,
+            "justifyContent": "center",
+            "width": 560,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "height": "100%",
+                "width": "100%",
+              },
+              Object {
+                "height": 300,
+                "marginTop": 80,
+                "width": 560,
+              },
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "lineHeight": 40,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(0,0,0,0.9)",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              title
+            </Text>
+          </View>
+          <Text
+            numberOfLines={2}
+            style={
+              Object {
+                "color": "rgba(0,0,0,0.5)",
+                "flex": 1,
+                "fontSize": 28,
+                "marginTop": 16,
+              }
+            }
+          >
+            subTitle
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 40,
+                "justifyContent": "center",
+                "marginBottom": 48,
+                "marginTop": 48,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#0376FF",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              done
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
+    </View>
+  </Portal>
+  <Portal
+    onMaskPress={[Function]}
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+    visible={false}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 20,
+          },
+          Object {
+            "bottom": 784,
+          },
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Child
+        color="#333"
+        icon=""
+        iconStyle={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          }
+        }
+        size={48}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+          Object {
+            "bottom": 384,
+          },
+        ]
+      }
+    >
+      <ImageBackground
+        source={0}
+        style={
+          Object {
+            "height": 340,
+            "justifyContent": "center",
+            "width": 560,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "height": "100%",
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "lineHeight": 40,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(0,0,0,0.9)",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              title
+            </Text>
+          </View>
+          <Text
+            numberOfLines={2}
+            style={
+              Object {
+                "color": "rgba(0,0,0,0.5)",
+                "flex": 1,
+                "fontSize": 28,
+                "marginTop": 16,
+              }
+            }
+          >
+            subTitle
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 40,
+                "justifyContent": "center",
+                "marginBottom": 48,
+                "marginTop": 48,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#0376FF",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              done
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
+    </View>
+  </Portal>
+  <Portal
+    onMaskPress={[Function]}
+    style={
+      Object {
+        "position": "absolute",
+      }
+    }
+    visible={false}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "position": "absolute",
+            "right": 20,
+          },
+          Object {
+            "bottom": 784,
+          },
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          },
+        ]
+      }
+    >
+      <Child
+        color="#333"
+        icon=""
+        iconStyle={
+          Object {
+            "alignItems": "center",
+            "borderRadius": 100,
+            "height": 100,
+            "justifyContent": "center",
+            "width": 100,
+          }
+        }
+        size={48}
+      />
+    </View>
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+            "justifyContent": "center",
+          },
+          Object {
+            "bottom": 384,
+          },
+        ]
+      }
+    >
+      <ImageBackground
+        source={0}
+        style={
+          Object {
+            "height": 340,
+            "justifyContent": "center",
+            "width": 560,
+          }
+        }
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "height": "100%",
+                "width": "100%",
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "lineHeight": 40,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "rgba(0,0,0,0.9)",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              title
+            </Text>
+          </View>
+          <Text
+            numberOfLines={2}
+            style={
+              Object {
+                "color": "rgba(0,0,0,0.5)",
+                "flex": 1,
+                "fontSize": 28,
+                "marginTop": 16,
+              }
+            }
+          >
+            subTitle
+          </Text>
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "height": 40,
+                "justifyContent": "center",
+                "marginBottom": 48,
+                "marginTop": 48,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#0376FF",
+                  "fontSize": 32,
+                  "fontWeight": "500",
+                }
+              }
+            >
+              done
+            </Text>
+          </TouchableOpacity>
+        </View>
+      </ImageBackground>
+    </View>
+  </Portal>
+</View>
+`;
+
+exports[`render components no modal render 1`] = `
+<Main
+  bleState={false}
+  deviceOnline={true}
+  iconProp={
+    Object {
+      "color": "#333",
+      "iconStyle": Object {
+        "alignItems": "center",
+        "borderRadius": 100,
+        "height": 100,
+        "justifyContent": "center",
+        "width": 100,
+      },
+      "size": 48,
+    }
+  }
+  iconSpace={24}
+  lampIcon=""
+  modalStartPoint={512}
+  onRingLampResult={[Function]}
+  onSearchResult={[Function]}
+  ringIcon=""
+  searchIcon=""
+  successIcon=""
+  themeColor="red"
+  timeout={10000}
+>
+  <View>
+    <View>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        disabled={false}
+        onPress={[Function]}
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <AnimatedComponent
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "marginBottom": 24,
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginBottom": 24,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginBottom": 24,
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 100,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      },
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 100,
+                        "height": 100,
+                        "justifyContent": "center",
+                        "width": 100,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    color="#333"
+                    d=""
+                    opacity={1}
+                    size={48}
+                  >
+                    <IconFont
+                      color="#333"
+                      d=""
+                      fill={null}
+                      hFlip={false}
+                      height={null}
+                      name={null}
+                      opacity={1}
+                      size={48}
+                      stroke={null}
+                      strokeCap="round"
+                      strokeDash={
+                        Array [
+                          0,
+                          0,
+                        ]
+                      }
+                      strokeJoin="round"
+                      strokeWidth={1}
+                      style={null}
+                      vFlip={false}
+                      viewBox="0 0 1024 1024"
+                      width={null}
+                    />
+                  </Component>
+                </View>
+              </View>
+            </View>
+          </View>
+        </AnimatedComponent>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        disabled={false}
+        onPress={[Function]}
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <AnimatedComponent
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "marginBottom": 24,
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginBottom": 24,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginBottom": 24,
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 100,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      },
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 100,
+                        "height": 100,
+                        "justifyContent": "center",
+                        "width": 100,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    color="#333"
+                    d=""
+                    opacity={1}
+                    size={48}
+                  >
+                    <IconFont
+                      color="#333"
+                      d=""
+                      fill={null}
+                      hFlip={false}
+                      height={null}
+                      name={null}
+                      opacity={1}
+                      size={48}
+                      stroke={null}
+                      strokeCap="round"
+                      strokeDash={
+                        Array [
+                          0,
+                          0,
+                        ]
+                      }
+                      strokeJoin="round"
+                      strokeWidth={1}
+                      style={null}
+                      vFlip={false}
+                      viewBox="0 0 1024 1024"
+                      width={null}
+                    />
+                  </Component>
+                </View>
+              </View>
+            </View>
+          </View>
+        </AnimatedComponent>
+      </TouchableOpacity>
+      <TouchableOpacity
+        activeOpacity={0.2}
+        disabled={false}
+        onPress={[Function]}
+        style={
+          Object {
+            "marginBottom": 24,
+          }
+        }
+      >
+        <AnimatedComponent
+          accessible={true}
+          isTVSelectable={true}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Array [
+              Object {
+                "marginBottom": 24,
+              },
+              Object {
+                "opacity": 1,
+              },
+            ]
+          }
+        >
+          <View
+            accessible={true}
+            isTVSelectable={true}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "marginBottom": 24,
+                "opacity": 1,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              isTVSelectable={true}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginBottom": 24,
+                  "opacity": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "alignItems": "center",
+                      "justifyContent": "center",
+                    },
+                    Object {
+                      "alignItems": "center",
+                      "backgroundColor": "#FFF",
+                      "borderRadius": 100,
+                      "height": 100,
+                      "justifyContent": "center",
+                      "width": 100,
+                    },
+                  ]
+                }
+              >
+                <View
+                  style={
+                    Array [
+                      Object {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                      },
+                      Object {
+                        "alignItems": "center",
+                        "backgroundColor": "#FFF",
+                        "borderRadius": 100,
+                        "height": 100,
+                        "justifyContent": "center",
+                        "width": 100,
+                      },
+                    ]
+                  }
+                >
+                  <Component
+                    color="#333"
+                    d=""
+                    opacity={1}
+                    size={48}
+                  >
+                    <IconFont
+                      color="#333"
+                      d=""
+                      fill={null}
+                      hFlip={false}
+                      height={null}
+                      name={null}
+                      opacity={1}
+                      size={48}
+                      stroke={null}
+                      strokeCap="round"
+                      strokeDash={
+                        Array [
+                          0,
+                          0,
+                        ]
+                      }
+                      strokeJoin="round"
+                      strokeWidth={1}
+                      style={null}
+                      vFlip={false}
+                      viewBox="0 0 1024 1024"
+                      width={null}
+                    />
+                  </Component>
+                </View>
+              </View>
+            </View>
+          </View>
+        </AnimatedComponent>
+      </TouchableOpacity>
+    </View>
+  </View>
+</Main>
+`;
