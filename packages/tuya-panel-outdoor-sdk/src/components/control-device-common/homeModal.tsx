@@ -1,55 +1,11 @@
 import React, { ReactElement } from 'react';
 import { Utils, Modal } from 'tuya-panel-kit';
 import { View, StyleSheet, ImageBackground, TouchableOpacity, Text } from 'react-native';
-import { IIcon, IIconProps, IModalProps } from './common/interface';
+import { IIcon, IModalProps } from './common/interface';
 
 const { convertX: cx } = Utils.RatioUtils;
 
-// const HomeModal = (Component: (props: IIconProps) => ReactElement) => {
-//   const result = (props: IModalProps) => {
-//     const {
-//       title,
-//       subTitle,
-//       done,
-//       bgImage,
-//       bgStyle,
-//       bgChildStyle,
-//       showModal,
-//       v1Bottom,
-//       v2Bottom,
-//       iconBoxStyle,
-//       iconProp,
-//       icon,
-//       onMaskPress,
-//     } = props;
-//     const curIcon = { ...iconProp, ...{ icon } };
-//     return (
-//       <Modal style={styles.modalView} visible={showModal} onMaskPress={onMaskPress}>
-//         <View style={[iconBoxStyle, { bottom: v1Bottom }, iconProp.iconStyle]}>
-//           <Component {...curIcon} />
-//         </View>
-//         <View style={[styles.alertWrap, { bottom: v2Bottom }]}>
-//           <ImageBackground style={bgStyle} source={bgImage}>
-//             <View style={[{ width: '100%', height: '100%' }, bgChildStyle]}>
-//               <View style={styles.titleWrap}>
-//                 <Text style={styles.titleViewName}>{title}</Text>
-//               </View>
-//               <Text numberOfLines={2} style={styles.titleTip}>
-//                 {subTitle}
-//               </Text>
-//               <TouchableOpacity style={styles.modalButton} onPress={onMaskPress}>
-//                 <Text style={styles.modalText}>{done}</Text>
-//               </TouchableOpacity>
-//             </View>
-//           </ImageBackground>
-//         </View>
-//       </Modal>
-//     );
-//   };
-//   return result;
-// };
-
-const HomeModal = (props: IModalProps) => {
+const homeModal = (props: IModalProps) => {
   const result = (Child: (childProps: IIcon) => ReactElement) => {
     const {
       title,
@@ -93,7 +49,7 @@ const HomeModal = (props: IModalProps) => {
   return result;
 };
 
-export default HomeModal;
+export default homeModal;
 
 const styles = StyleSheet.create({
   alertWrap: {

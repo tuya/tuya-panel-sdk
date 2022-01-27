@@ -1,7 +1,43 @@
 import { AsyncStorage, NativeModules } from 'react-native';
 import { TYSdk } from 'tuya-panel-kit';
-import { putDpfindDevice } from './api';
+import { getDeviceLocation, putDpfindDevice } from './api';
 import utils from '../../../utils';
+import { ILocation } from './interface';
+
+/**
+ * 获取位置
+ */
+export const getLocation = async () => {
+  try {
+    // 获取设备位置
+    const device = getDeviceLocation();
+    // 获取手机位置
+    const phone = getCurrentLocation();
+    const res = await Promise.all<ILocation>([device, phone]);
+    if (res.length >= 2) {
+      const deviceResult = res[0];
+      const phoneResult = res[1];
+      const { lat, lon, reportTime } = deviceResult;
+      const { address, latitude, longitude } = phoneResult;
+      const p = {
+        device: {
+          latitude: lat,
+          longitude: lon,
+          reportTime,
+        },
+        phone: {
+          address,
+          latitude,
+          longitude,
+        },
+      };
+      return { error: false, ...p };
+    }
+    return { error: true, ...{ msg: '失败' } };
+  } catch (error) {
+    return { error: true, ...error };
+  }
+};
 
 /**
   查询是否首次加载modal
@@ -27,9 +63,9 @@ const getPidKey = (name: string) => {
 
 // 获取手机经纬度，app最低支持3.33。这个是3.33之后开发的
 export const getCurrentLocation = () => {
-  const getLocation = NativeModules.TYRCTPanelManager.requirePreciseLocation;
+  const location = NativeModules.TYRCTPanelManager.requirePreciseLocation;
   return new Promise((resolve, reject) => {
-    getLocation(
+    location(
       {},
       (d: any) => {
         resolve(d);

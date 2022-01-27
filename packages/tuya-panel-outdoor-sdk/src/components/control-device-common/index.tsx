@@ -3,7 +3,7 @@ import React, { FC, useState, useEffect, useRef } from 'react';
 import { View, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 import { TYSdk, Utils, IconFont } from 'tuya-panel-kit';
 import { putDpfindDevice, getDeviceLocation } from './common/api';
-import { loadedModal, putDpType, getCurrentLocation } from './common/utils';
+import { loadedModal, putDpType, getCurrentLocation, getLocation } from './common/utils';
 import { IProps, ILocation } from './common/interface';
 import Child from './child';
 import homeModal from './homeModal';
@@ -64,42 +64,6 @@ const Main: FC<IProps> = (props: IProps) => {
     };
   }, []);
 
-  /**
-   * 获取位置
-   */
-  const getLocation = async () => {
-    try {
-      // 获取设备位置
-      const device = getDeviceLocation();
-      // 获取手机位置
-      const phone = getCurrentLocation();
-      const res = await Promise.all<ILocation>([device, phone]);
-      if (res.length >= 2) {
-        const deviceResult = res[0];
-        const phoneResult = res[1];
-        const { lat, lon, reportTime } = deviceResult;
-        const { address, latitude, longitude } = phoneResult;
-        const p = {
-          device: {
-            latitude: lat,
-            longitude: lon,
-            reportTime,
-          },
-          phone: {
-            address,
-            latitude,
-            longitude,
-          },
-        };
-        onSearchResult({ error: false, ...p });
-      } else {
-        onSearchResult({ error: true, ...{ msg: '失败' } });
-      }
-    } catch (error) {
-      onSearchResult({ error: true, ...error });
-    }
-  };
-
   const dpListen = async (data: any) => {
     const { type, payload } = data;
     if (type === 'dpData') {
@@ -117,12 +81,13 @@ const Main: FC<IProps> = (props: IProps) => {
         // 网关上报此dp点：ble_location
         // cat1上报dp点：lbs_position || gps_position || wifi_position
         // 连接模式上报：link_mode
-        await getLocation();
+        const result = await getLocation();
         if (showLoading.current) {
           searchTimer.current && clearTimeout(searchTimer.current);
           showLoading.current = false;
           searchSuccess();
         }
+        onSearchResult(result);
       }
       if (alarm_light_switch !== undefined) {
         if (alarm_light_switch) {
@@ -196,8 +161,9 @@ const Main: FC<IProps> = (props: IProps) => {
           // 超过10秒，从云端获取数据展示
           if (showLoading.current) {
             showLoading.current = false;
-            await getLocation();
+            const result = await getLocation();
             searchSuccess();
+            onSearchResult(result);
           }
         }, timeout);
       }
@@ -467,8 +433,8 @@ const Main: FC<IProps> = (props: IProps) => {
           bgStyle: ringModalProp.bgStyle,
           bgChildStyle: ringModalProp.bgChildStyle,
           showModal: ringModal,
-          v1Bottom: getModalHeight(1).bottom1,
-          v2Bottom: getModalHeight(1).bottom2,
+          v1Bottom: getModalHeight(2).bottom1,
+          v2Bottom: getModalHeight(2).bottom2,
           iconBoxStyle: ringModalProp.iconBoxStyle,
           iconProp,
           icon: ringIcon,
@@ -483,8 +449,8 @@ const Main: FC<IProps> = (props: IProps) => {
           bgStyle: lampModalProp.bgStyle,
           bgChildStyle: lampModalProp.bgChildStyle,
           showModal: lampModal,
-          v1Bottom: getModalHeight(1).bottom1,
-          v2Bottom: getModalHeight(1).bottom2,
+          v1Bottom: getModalHeight(3).bottom1,
+          v2Bottom: getModalHeight(3).bottom2,
           iconBoxStyle: lampModalProp.iconBoxStyle,
           iconProp,
           icon: lampIcon,
