@@ -4,11 +4,11 @@ import { Utils, IconFont } from 'tuya-panel-kit';
 
 interface ICard {
   /**
-   *
+   * 下标单位
    */
   tip: string;
   /**
-   * iconfont字符串图片
+   *  图标
    */
   iconFont: string;
   /**
@@ -20,7 +20,7 @@ interface ICard {
    */
   unit: string;
   /**
-   * key
+   * dp点
    */
   dp: string;
   /**
