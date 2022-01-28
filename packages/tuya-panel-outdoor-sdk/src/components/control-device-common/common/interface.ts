@@ -120,12 +120,6 @@ export interface IProps {
    */
   iconProp: IIconProps;
   /**
-   * icon图标
-   */
-  searchIcon: string;
-  ringIcon: string;
-  lampIcon: string;
-  /**
    * 搜索功能-结果回调
    */
   onSearchResult: (result: { error: boolean }) => void;
@@ -133,6 +127,12 @@ export interface IProps {
    * 闪灯 || 响铃功能-结果回调
    */
   onRingLampResult: (result: { error: boolean }) => void;
+  /**
+   * icon图标
+   */
+  searchIcon?: string;
+  ringIcon?: string;
+  lampIcon?: string;
   /**
    * icon点击后成功图标-目前只作用在搜索功能
    */

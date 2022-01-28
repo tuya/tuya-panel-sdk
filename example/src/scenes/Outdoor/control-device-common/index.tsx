@@ -43,41 +43,37 @@ const Component: FC = () => {
           }}
           onSearchResult={onSearchResult}
           onRingLampResult={onRingLampResult}
-          searchIcon={icons.home_search}
-          ringIcon={icons.home_ring}
-          lampIcon={icons.home_lamp}
-          successIcon={icons.home_search_success}
           modalStartPoint={cx(300) - topBarHeight}
-          searchModalProp={{
-            title: 'title',
-            subTitle: 'subTitle',
-            done: 'done',
-            bgImage: Res.searchBg,
-            iconBoxStyle: styles.contentTarget,
-            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
-            bgChildStyle: {
-              width: cx(280),
-              height: cx(150),
-              marginTop: cx(40),
-              marginLeft: cx(20),
-            },
-          }}
-          ringModalProp={{
-            title: 'title',
-            subTitle: 'subTitle',
-            done: 'done',
-            bgImage: Res.searchBg,
-            iconBoxStyle: styles.contentTarget,
-            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
-          }}
-          lampModalProp={{
-            title: 'title',
-            subTitle: 'subTitle',
-            done: 'done',
-            iconBoxStyle: styles.contentTarget,
-            bgImage: Res.searchBg,
-            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
-          }}
+          // searchModalProp={{
+          //   title: 'title',
+          //   subTitle: 'subTitle',
+          //   done: 'done',
+          //   bgImage: Res.searchBg,
+          //   iconBoxStyle: styles.contentTarget,
+          //   bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
+          //   bgChildStyle: {
+          //     width: cx(280),
+          //     height: cx(150),
+          //     marginTop: cx(40),
+          //     marginLeft: cx(20),
+          //   },
+          // }}
+          // ringModalProp={{
+          //   title: 'title',
+          //   subTitle: 'subTitle',
+          //   done: 'done',
+          //   bgImage: Res.searchBg,
+          //   iconBoxStyle: styles.contentTarget,
+          //   bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
+          // }}
+          // lampModalProp={{
+          //   title: 'title',
+          //   subTitle: 'subTitle',
+          //   done: 'done',
+          //   iconBoxStyle: styles.contentTarget,
+          //   bgImage: Res.searchBg,
+          //   bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
+          // }}
           iconSpace={cx(12)}
           viewStyle={styles.controlView}
         />
@@ -96,7 +92,7 @@ const styles = StyleSheet.create({
     right: cx(10),
   },
   controlView: {
-    backgroundColor: 'blue',
+    // backgroundColor: 'blue',
   },
 });
 

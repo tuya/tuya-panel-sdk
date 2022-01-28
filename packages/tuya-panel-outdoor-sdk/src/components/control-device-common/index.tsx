@@ -7,6 +7,7 @@ import { loadedModal, putDpType, getCurrentLocation, getLocation } from './commo
 import { IProps, ILocation } from './common/interface';
 import Child from './child';
 import homeModal from './homeModal';
+import icons from './res/icons';
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -464,6 +465,10 @@ Main.defaultProps = {
   modalStartPoint: cx(200),
   iconSpace: cx(12),
   timeout: 10 * 1000,
+  searchIcon: icons.home_search,
+  ringIcon: icons.home_ring,
+  lampIcon: icons.home_lamp,
+  successIcon: icons.home_search_success,
 };
 
 export default Main;
