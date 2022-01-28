@@ -5,18 +5,22 @@ exports[`sport-card components basic render 1`] = `
   style={
     Object {
       "flexDirection": "row",
+      "flexWrap": "wrap",
       "height": 100,
     }
   }
 >
   <View
-    key="activetime_day"
     style={
-      Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
     }
   >
     <View
@@ -102,13 +106,16 @@ exports[`sport-card components basic render 1`] = `
     </View>
   </View>
   <View
-    key="calories_day"
     style={
-      Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
     }
   >
     <View
@@ -194,13 +201,16 @@ exports[`sport-card components basic render 1`] = `
     </View>
   </View>
   <View
-    key="distance_day"
     style={
-      Object {
-        "alignItems": "center",
-        "flex": 1,
-        "justifyContent": "center",
-      }
+      Array [
+        Object {
+          "alignItems": "center",
+          "justifyContent": "center",
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
     }
   >
     <View
