@@ -122,11 +122,11 @@ export interface IProps {
   /**
    * 搜索功能-结果回调
    */
-  onSearchResult: (result: { error: boolean }) => void;
+  onSearchResult?: (result: { error: boolean }) => void;
   /**
    * 闪灯 || 响铃功能-结果回调
    */
-  onRingLampResult: (result: { error: boolean }) => void;
+  onRingLampResult?: (result: { error: boolean }) => void;
   /**
    * icon图标
    */

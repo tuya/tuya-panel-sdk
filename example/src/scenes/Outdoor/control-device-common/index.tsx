@@ -44,20 +44,20 @@ const Component: FC = () => {
           onSearchResult={onSearchResult}
           onRingLampResult={onRingLampResult}
           modalStartPoint={cx(300) - topBarHeight}
-          // searchModalProp={{
-          //   title: 'title',
-          //   subTitle: 'subTitle',
-          //   done: 'done',
-          //   bgImage: Res.searchBg,
-          //   iconBoxStyle: styles.contentTarget,
-          //   bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
-          //   bgChildStyle: {
-          //     width: cx(280),
-          //     height: cx(150),
-          //     marginTop: cx(40),
-          //     marginLeft: cx(20),
-          //   },
-          // }}
+          searchModalProp={{
+            title: 'title',
+            subTitle: 'subTitle',
+            done: 'done',
+            bgImage: Res.searchBg,
+            iconBoxStyle: styles.contentTarget,
+            bgStyle: { width: cx(280), height: cx(170), justifyContent: 'center' },
+            bgChildStyle: {
+              width: cx(280),
+              height: cx(150),
+              marginTop: cx(40),
+              marginLeft: cx(20),
+            },
+          }}
           // ringModalProp={{
           //   title: 'title',
           //   subTitle: 'subTitle',

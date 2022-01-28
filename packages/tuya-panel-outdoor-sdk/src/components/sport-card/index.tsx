@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ViewStyle } from 'react-native';
 import { Utils, IconFont } from 'tuya-panel-kit';
 
 interface ICard {
@@ -42,20 +42,30 @@ interface IProps {
    * 子标题
    */
   subTitleColor?: string;
+  /**
+   *  透明度
+   */
   subTitleOpacity?: number;
+  /**
+   * icon颜色
+   */
   iconColor?: string;
+  /**
+   * 盒子样式
+   */
+  boxStyle?: ViewStyle;
 }
 
 const { convertX: cx } = Utils.RatioUtils;
 
 const SportCard: React.FC<IProps> = (props: IProps) => {
-  const { dpDatas = [], titleColor, subTitleColor, subTitleOpacity, iconColor } = props;
+  const { dpDatas = [], titleColor, subTitleColor, subTitleOpacity, iconColor, boxStyle } = props;
 
   return (
     <View style={styles.contentBottom}>
       {dpDatas.map((item: ICard) => {
         return (
-          <View style={styles.dpElement} key={item.dp}>
+          <View style={[styles.dpElement, boxStyle]}>
             <View style={styles.dpElementTop}>
               <Text style={[styles.dpElementTopTitle, { color: titleColor }]}>{item.value}</Text>
               <Text style={[styles.dpElementTopUnit, { color: titleColor }]}>{item.unit}</Text>
@@ -85,16 +95,17 @@ SportCard.defaultProps = {
   subTitleColor: '#000',
   subTitleOpacity: 1,
   iconColor: '#fff',
+  boxStyle: { flex: 1 },
 };
 
 const styles = StyleSheet.create({
   contentBottom: {
     flexDirection: 'row',
+    flexWrap: 'wrap',
     height: cx(50),
   },
   dpElement: {
     alignItems: 'center',
-    flex: 1,
     justifyContent: 'center',
   },
   dpElementBottom: {

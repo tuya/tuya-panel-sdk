@@ -88,7 +88,7 @@ const Main: FC<IProps> = (props: IProps) => {
           showLoading.current = false;
           searchSuccess();
         }
-        onSearchResult(result);
+        onSearchResult && onSearchResult(result);
       }
       if (alarm_light_switch !== undefined) {
         if (alarm_light_switch) {
@@ -152,7 +152,7 @@ const Main: FC<IProps> = (props: IProps) => {
           },
           phone,
         };
-        onSearchResult({ error: false, ...p });
+        onSearchResult && onSearchResult({ error: false, ...p });
         searchSuccess();
       } else {
         showLoading.current = true;
@@ -164,14 +164,14 @@ const Main: FC<IProps> = (props: IProps) => {
             showLoading.current = false;
             const result = await getLocation();
             searchSuccess();
-            onSearchResult(result);
+            onSearchResult && onSearchResult(result);
           }
         }, timeout);
       }
     } catch (error) {
       showLoading.current = false;
       setSearch(ActionStatus.normal);
-      onSearchResult({ error: true, ...error });
+      onSearchResult && onSearchResult({ error: true, ...error });
     }
   };
   /**

@@ -58,15 +58,7 @@ const Component: FC = () => {
       if (data.dp === 'activetime_day') {
         card.tip = 't1';
         card.value = 'v1';
-        const card2: ICard = {
-          tip: 'v2',
-          iconFont: data.iconFont,
-          value: 'v2',
-          unit: 'h',
-          dp: 'resttime_day',
-          bgColor: '#0060D3',
-        };
-        return [...preArray, card, card2];
+        return [...preArray, card];
       }
       if (data.dp === 'calories_day') {
         card.tip = 't3';
