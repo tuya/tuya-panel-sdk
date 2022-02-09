@@ -185,6 +185,7 @@ export interface TYIpcPlayerProps {
   zoomInTimesStyle: any;
   enterBackgroundEvent: () => any;
   enterForegroundEvent: () => any;
+  activeConnect: 'none' | 'connect' | 'startPreview';
 }
 
 export const _defaultProps = {
@@ -235,4 +236,5 @@ export const _defaultProps = {
   zoomInTimesStyle: _defaultZoomInTimesStyle,
   enterBackgroundEvent: (): void => {},
   enterForegroundEvent: (): void => {},
+  activeConnect: 'connect',
 };

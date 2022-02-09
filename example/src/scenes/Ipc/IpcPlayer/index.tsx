@@ -12,6 +12,7 @@ const IpcPLayer: React.FC = () => {
   const [isFullScreen, setIsFullScreen] = useState(false);
   const [fullPlayerWidth, setFullPlayerWidth] = useState(winWidth);
   const [fullPlayerHeight, setFullPlayerHeight] = useState(winHeight);
+  const [connectValue, setConnectValue] = useState('connect');
   const onChangeStreamStatus = (status: number) => {
     console.log(status, 'sds');
   };
@@ -92,6 +93,14 @@ const IpcPLayer: React.FC = () => {
       });
   };
 
+  const activeConnect = () => {
+    setConnectValue('connect');
+  };
+
+  const activeNone = () => {
+    setConnectValue('none');
+  };
+
   const enterBackgroundEvent = () => {
     console.log('进入后台');
   };
@@ -122,6 +131,7 @@ const IpcPLayer: React.FC = () => {
           renderFullComArr={[{ component: NormalTopRight, propData: {} }]}
           enterBackgroundEvent={enterBackgroundEvent}
           enterForegroundEvent={enterForegroundEvent}
+          activeConnect={connectValue}
         />
         <View style={styles.featureContain}>
           <TouchableOpacity style={styles.feature} onPress={enterFullScreen}>
@@ -151,6 +161,12 @@ const IpcPLayer: React.FC = () => {
           <TouchableOpacity style={styles.feature} onPress={pausePlay}>
             <TYText style={styles.featureTxt} text="暂停播放" />
           </TouchableOpacity>
+          {/* <TouchableOpacity style={styles.feature} onPress={activeConnect}>
+            <TYText style={styles.featureTxt} text="调整连接" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.feature} onPress={activeNone}>
+            <TYText style={styles.featureTxt} text="调整为None" />
+          </TouchableOpacity> */}
         </View>
       </View>
     </View>
