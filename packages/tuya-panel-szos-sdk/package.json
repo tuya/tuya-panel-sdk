@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-szos-sdk",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "涂鸦深圳OS业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -19,6 +19,7 @@
     "url": "tuya/tuya-panel-sdk",
     "directory": "packages/tuya-panel-szos-sdk"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/react": "^16.9.56",
     "@types/react-native": "^0.63.35",
