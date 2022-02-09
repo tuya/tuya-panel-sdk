@@ -13,17 +13,30 @@ export const connecP2PAndStartPreview = (
   isWirless: boolean,
   clarityStatus: string,
   voiceStatus: string,
-  hightScaleMode: boolean
+  hightScaleMode: boolean,
+  activeConnect: 'none' | 'connect' | 'startPreview'
 ) => {
   TYEvent.emit('streamStatus', { status: 2 });
-  CameraManager.isConnected(msg => {
-    TYEvent.emit('p2pIsConnected', Boolean(msg));
-    if (!msg) {
-      connectAndstartPreView(isWirless, clarityStatus, voiceStatus, hightScaleMode);
-    } else {
-      startPreview(clarityStatus, voiceStatus, hightScaleMode);
-    }
-  });
+  // 传入为none表示不去主动连接P2P及视频流
+  if (activeConnect === 'none') {
+    return false;
+  }
+  // 传入为connect表示主动连接P2P及视频流
+  if (activeConnect === 'connect') {
+    CameraManager.isConnected(msg => {
+      TYEvent.emit('p2pIsConnected', Boolean(msg));
+      if (!msg) {
+        connectAndstartPreView(isWirless, clarityStatus, voiceStatus, hightScaleMode);
+      } else {
+        startPreview(clarityStatus, voiceStatus, hightScaleMode);
+      }
+    });
+  }
+  // 传入为startPreview表示只需要连接视频流
+  if (activeConnect === 'startPreview') {
+    TYEvent.emit('p2pIsConnected', true);
+    startPreview(clarityStatus, voiceStatus, hightScaleMode);
+  }
 };
 
 /*
@@ -58,20 +71,33 @@ const connectAndstartPreViewWithChannel = (
   clarityStatus: string,
   voiceStatus: string,
   hightScaleMode: boolean,
-  channelNum: number
+  channelNum: number,
+  activeConnect: 'none' | 'connect' | 'startPreview'
 ) => {
   if (isWirless) {
     wakeupWirless();
   }
-  CameraManager.connect(
-    () => {
-      TYEvent.emit('p2pIsConnected', true);
-      startPreviewWithChannel(clarityStatus, voiceStatus, hightScaleMode, channelNum);
-    },
-    errMsg => {
-      TYEvent.emit('streamStatus', { status: 3, errMsg });
-    }
-  );
+  // 传入为none表示不去主动连接P2P及视频流
+  if (activeConnect === 'none') {
+    return false;
+  }
+  // 传入为connect表示主动连接P2P及视频流
+  if (activeConnect === 'connect') {
+    CameraManager.connect(
+      () => {
+        TYEvent.emit('p2pIsConnected', true);
+        startPreviewWithChannel(clarityStatus, voiceStatus, hightScaleMode, channelNum);
+      },
+      errMsg => {
+        TYEvent.emit('streamStatus', { status: 3, errMsg });
+      }
+    );
+  }
+  // 传入为startPreview表示只需要连接视频流
+  if (activeConnect === 'startPreview') {
+    TYEvent.emit('p2pIsConnected', true);
+    startPreviewWithChannel(clarityStatus, voiceStatus, hightScaleMode, channelNum);
+  }
 };
 
 const startPreview = (clarityStatus: string, voiceStatus: string, hightScaleMode: boolean) => {
@@ -310,7 +336,8 @@ export const connecP2PAndStartPreviewWithChannel = (
   clarityStatus: string,
   voiceStatus: string,
   hightScaleMode: boolean,
-  channelNum: number
+  channelNum: number,
+  activeConnect: 'none' | 'connect' | 'startPreview'
 ) => {
   TYEvent.emit('streamStatus', { status: 2 });
   CameraManager.isConnected(msg => {
@@ -321,7 +348,8 @@ export const connecP2PAndStartPreviewWithChannel = (
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum
+        channelNum,
+        activeConnect
       );
     } else {
       startPreviewWithChannel(clarityStatus, voiceStatus, hightScaleMode, channelNum);
