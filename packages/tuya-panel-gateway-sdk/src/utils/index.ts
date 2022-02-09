@@ -314,6 +314,7 @@ const addPrefixToI18n = (
   });
   return newI18n;
 };
+
 // 获取子设备在线状态
 export const getOnlineState = (pcc = ''): boolean => {
   // pcc: mesh category
@@ -324,6 +325,40 @@ export const getOnlineState = (pcc = ''): boolean => {
     return ['05', '50'].includes(`${_head}${_footer}`);
   }
   return false;
+};
+
+/**
+ * @language zh-CN
+ * @description 转换mac字符串的格式
+ * @param {string} mac 要转换的mac字符串
+ * @return {boolean} isLowerCase 是否要转为小写，如果传false则会转为大写，默认为true
+ * @return {boolean} isSplitByColon 是否要用冒号分割，默认为false
+ */
+/**
+ * @language en-US
+ * @description Transform the format of a mac string.
+ * @param {string} mac The mac string to be transformed
+ * @return {boolean} isLowerCase Whether to convert to lowercase, if false, it will be converted to uppercase, the default value is true
+ * @return {boolean} isSplitByColon Whether to use colon to split, the default value is false
+ */
+export const transformMac = (mac: string, isLowerCase = true, isSplitByColon = false): string => {
+  const casedMac = isLowerCase ? mac.toLowerCase() : mac.toUpperCase();
+  // 以两个字符为一组，不匹配末尾的一组
+  const replaceRegex = /(\w{2})(?!$)/g;
+  // 已经用冒号分隔的mac
+  const macWithColonRegex = /(\w{2}:){5}(\w{2})/;
+  // 不使用冒号分割的mac
+  const macWithoutColonRegex = /(\w{2}){6}/;
+
+  // 如果需要用冒号分割，并且当前的mac不符合用冒号分隔的mac的正则，则按两个字符一组替换
+  if (isSplitByColon && !macWithColonRegex.test(casedMac)) {
+    return casedMac.replace(replaceRegex, '$1:');
+  }
+  // 如果不需要用冒号分割，并且当前的mac不符合不使用冒号分割的mac的正则，需要替换所有冒号为空字符
+  if (!isSplitByColon && !macWithoutColonRegex.test(casedMac)) {
+    return casedMac.replace(/:/g, '');
+  }
+  return casedMac;
 };
 
 export default {
@@ -339,4 +374,5 @@ export default {
   isAddableDevice,
   addPrefixToI18n,
   getOnlineState,
+  transformMac,
 };

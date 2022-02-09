@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-remote-sdk",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "涂鸦万能遥控器业务与组件库",
   "main": "./lib/index.js",
   "types": "./@types/index.d.ts",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "tsc -w",
-    "prebuild": "../../node_modules/del-cli/cli.js lib/",
+    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
     "build": "tsc -d",
     "test": "jest -u"
   },

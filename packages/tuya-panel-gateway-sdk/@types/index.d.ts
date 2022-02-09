@@ -1226,6 +1226,21 @@ export const GatewayUtils: {
    * @return {boolean} device online status
    */
   getOnlineState: (pcc: string) => boolean;
+  /**
+   * @language zh-CN
+   * @description 转换mac字符串的格式
+   * @param {string} mac 要转换的mac字符串
+   * @return {boolean} isLowerCase 是否要转为小写，如果传false则会转为大写，默认为true
+   * @return {boolean} isSplitByColon 是否要用冒号分割，默认为false
+   */
+  /**
+   * @language en-US
+   * @description Transform the format of a mac string.
+   * @param {string} mac The mac string to be transformed
+   * @return {boolean} isLowerCase Whether to convert to lowercase, if false, it will be converted to uppercase, the default value is true
+   * @return {boolean} isSplitByColon Whether to use colon to split, the default value is false
+   */
+  transformMac: (mac: string, isLowerCase = true, isSplitByColon = false) => string;
 };
 
 export interface StopsProps {

@@ -1,0 +1,1009 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LetterSearch components basic render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "flexDirection": "row",
+          "height": 100,
+          "justifyContent": "space-between",
+          "paddingHorizontal": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      defaultValue=""
+      inlineImageLeft="search"
+      onChangeText={[Function]}
+      placeholder="Please enter keyword search"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+            "borderColor": "gray",
+            "borderRadius": 34,
+            "flex": 1,
+            "height": 68,
+            "padding": 0,
+            "paddingLeft": 30,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={[Function]}
+      style={
+        Object {
+          "marginLeft": 20,
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 28,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Reset
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <SectionList
+    data={Array []}
+    disableVirtualization={false}
+    getItemLayout={[Function]}
+    horizontal={false}
+    initialNumToRender={100}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onEndReachedThreshold={2}
+    renderItem={[Function]}
+    renderSectionHeader={[Function]}
+    scrollEventThrottle={50}
+    sections={
+      Array [
+        Object {
+          "data": Array [
+            Object {
+              "key": "A-1",
+              "name": "Apple",
+              "subName": "apple",
+            },
+            Object {
+              "key": "A-2",
+              "name": "Actor",
+              "subName": "actor",
+            },
+            Object {
+              "key": "A-3",
+              "name": "Arouse",
+              "subName": "arouse",
+            },
+            Object {
+              "key": "A-4",
+              "name": "athlete",
+              "subName": "athlete",
+            },
+          ],
+          "title": "A",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "B-1",
+              "name": "Baby",
+              "subName": "baby",
+            },
+            Object {
+              "key": "B-2",
+              "name": "Back",
+              "subName": "back",
+            },
+            Object {
+              "key": "B-3",
+              "name": "backer",
+              "subName": "backer",
+            },
+            Object {
+              "key": "B-4",
+              "name": "Bad",
+              "subName": "bad",
+            },
+          ],
+          "title": "B",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "C-1",
+              "name": "Candy",
+              "subName": "candy",
+            },
+            Object {
+              "key": "C-2",
+              "name": "canvas",
+              "subName": "canvas",
+            },
+            Object {
+              "key": "C-3",
+              "name": "Can",
+              "subName": "can",
+            },
+            Object {
+              "key": "C-4",
+              "name": "cap",
+              "subName": "cap",
+            },
+          ],
+          "title": "C",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "D-1",
+              "name": "Day",
+              "subName": "day",
+            },
+            Object {
+              "key": "D-2",
+              "name": "dam",
+              "subName": "dam",
+            },
+            Object {
+              "key": "D-3",
+              "name": "danger",
+            },
+            Object {
+              "key": "D-4",
+              "name": "Dark",
+            },
+          ],
+          "title": "D",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "Z-1",
+              "name": "Zoom",
+              "subName": "apple",
+            },
+            Object {
+              "key": "Z-2",
+              "name": "Zit",
+            },
+            Object {
+              "key": "Z-3",
+              "name": "zombie",
+            },
+            Object {
+              "key": "Z-4",
+              "name": "zone",
+            },
+          ],
+          "title": "Z",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "#-1",
+              "name": "12zss",
+            },
+            Object {
+              "key": "#-2",
+              "name": "火腿肠",
+            },
+            Object {
+              "key": "#-3",
+              "name": "？///",
+            },
+            Object {
+              "key": "#-4",
+              "name": "。77",
+            },
+          ],
+          "title": "#",
+        },
+      ]
+    }
+    stickySectionHeadersEnabled={true}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "position": "absolute",
+          "right": 0,
+          "top": 340,
+          "width": 68,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "height": 28,
+              "resizeMode": "contain",
+              "tintColor": "#00CC99",
+              "width": 28,
+            },
+            undefined,
+          ]
+        }
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="A"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        A
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="B"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        B
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="C"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        C
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="D"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        D
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="Z"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Z
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="#"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        #
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
+
+exports[`LetterSearch components custom render 1`] = `
+<View>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "#fff",
+          "flexDirection": "row",
+          "height": 100,
+          "justifyContent": "space-between",
+          "paddingHorizontal": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      defaultValue=""
+      inlineImageLeft="search"
+      onChangeText={[Function]}
+      placeholder="请输入品牌名称"
+      rejectResponderTermination={true}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#F8F8F8",
+            "borderColor": "gray",
+            "borderRadius": 34,
+            "flex": 1,
+            "height": 68,
+            "padding": 0,
+            "paddingLeft": 30,
+          },
+          undefined,
+        ]
+      }
+      underlineColorAndroid="transparent"
+    />
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={[Function]}
+      style={
+        Object {
+          "marginLeft": 20,
+        }
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000",
+              "fontSize": 28,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        取消
+      </TYText>
+    </TouchableOpacity>
+  </View>
+  <SectionList
+    ListHeaderComponent={
+      <View
+        style={
+          Object {
+            "height": 50,
+            "justifyContent": "center",
+            "paddingHorizontal": 20,
+          }
+        }
+      >
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          1.header的高度需要和offset的数值一致
+        </TYText>
+        <TYText
+          align={null}
+          color={null}
+          size={null}
+          type={null}
+          weight={null}
+        >
+          2.initialNumToRender的数值尽量设置大于总数据量长度
+        </TYText>
+      </View>
+    }
+    data={Array []}
+    disableVirtualization={false}
+    getItemLayout={[Function]}
+    horizontal={false}
+    initialNumToRender={100}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    onEndReachedThreshold={2}
+    renderItem={[Function]}
+    renderSectionHeader={[Function]}
+    scrollEventThrottle={50}
+    sections={
+      Array [
+        Object {
+          "data": Array [
+            Object {
+              "key": "A-1",
+              "name": "Apple",
+              "subName": "apple",
+            },
+            Object {
+              "key": "A-2",
+              "name": "Actor",
+              "subName": "actor",
+            },
+            Object {
+              "key": "A-3",
+              "name": "Arouse",
+              "subName": "arouse",
+            },
+            Object {
+              "key": "A-4",
+              "name": "athlete",
+              "subName": "athlete",
+            },
+          ],
+          "title": "A",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "B-1",
+              "name": "Baby",
+              "subName": "baby",
+            },
+            Object {
+              "key": "B-2",
+              "name": "Back",
+              "subName": "back",
+            },
+            Object {
+              "key": "B-3",
+              "name": "backer",
+              "subName": "backer",
+            },
+            Object {
+              "key": "B-4",
+              "name": "Bad",
+              "subName": "bad",
+            },
+          ],
+          "title": "B",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "C-1",
+              "name": "Candy",
+              "subName": "candy",
+            },
+            Object {
+              "key": "C-2",
+              "name": "canvas",
+              "subName": "canvas",
+            },
+            Object {
+              "key": "C-3",
+              "name": "Can",
+              "subName": "can",
+            },
+            Object {
+              "key": "C-4",
+              "name": "cap",
+              "subName": "cap",
+            },
+          ],
+          "title": "C",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "D-1",
+              "name": "Day",
+              "subName": "day",
+            },
+            Object {
+              "key": "D-2",
+              "name": "dam",
+              "subName": "dam",
+            },
+            Object {
+              "key": "D-3",
+              "name": "danger",
+            },
+            Object {
+              "key": "D-4",
+              "name": "Dark",
+            },
+          ],
+          "title": "D",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "Z-1",
+              "name": "Zoom",
+              "subName": "apple",
+            },
+            Object {
+              "key": "Z-2",
+              "name": "Zit",
+            },
+            Object {
+              "key": "Z-3",
+              "name": "zombie",
+            },
+            Object {
+              "key": "Z-4",
+              "name": "zone",
+            },
+          ],
+          "title": "Z",
+        },
+        Object {
+          "data": Array [
+            Object {
+              "key": "#-1",
+              "name": "12zss",
+            },
+            Object {
+              "key": "#-2",
+              "name": "火腿肠",
+            },
+            Object {
+              "key": "#-3",
+              "name": "？///",
+            },
+            Object {
+              "key": "#-4",
+              "name": "。77",
+            },
+          ],
+          "title": "#",
+        },
+      ]
+    }
+    stickySectionHeadersEnabled={true}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "position": "absolute",
+          "right": 0,
+          "top": 340,
+          "width": 68,
+        },
+        Object {
+          "top": 100,
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.7}
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <Image
+        source={1}
+        style={
+          Array [
+            Object {
+              "height": 28,
+              "resizeMode": "contain",
+              "tintColor": "#00CC99",
+              "width": 28,
+            },
+            undefined,
+          ]
+        }
+      />
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="A"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        A
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="B"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        B
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="C"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        C
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="D"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        D
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="Z"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        Z
+      </TYText>
+    </TouchableOpacity>
+    <TouchableOpacity
+      activeOpacity={0.7}
+      key="#"
+      onPress={[Function]}
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "height": 34,
+            "justifyContent": "center",
+            "width": "100%",
+          },
+          undefined,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Array [
+            Object {
+              "color": "#000000",
+              "fontSize": 32,
+            },
+            undefined,
+          ]
+        }
+        type={null}
+        weight={null}
+      >
+        #
+      </TYText>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
