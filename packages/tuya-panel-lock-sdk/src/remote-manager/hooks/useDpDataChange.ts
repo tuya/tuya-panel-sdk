@@ -1,6 +1,6 @@
 /* eslint-disable import/no-unresolved */
 import { useEffect, useState, useRef, useCallback } from 'react';
-import RCTDeviceEventEmitter from 'RCTDeviceEventEmitter';
+import RCTDeviceEventEmitter from 'react-native/Libraries/EventEmitter/RCTDeviceEventEmitter';
 import moment from 'moment';
 import { TYSdk } from 'tuya-panel-kit';
 import Strings from '../i18n';

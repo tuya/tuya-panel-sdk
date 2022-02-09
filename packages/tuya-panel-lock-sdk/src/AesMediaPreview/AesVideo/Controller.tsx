@@ -11,6 +11,17 @@ const { convertX: cx } = Utils.RatioUtils;
 const MAX_P = 1000;
 const MIN_P = 0;
 
+const toRotateMode = (rotate: number) => {
+  const rotateMap = {
+    0: 0,
+    90: 1,
+    180: 2,
+    270: 3,
+  };
+
+  return rotateMap[rotate];
+};
+
 const PlayerController: React.FC = () => {
   const {
     videoSource,
@@ -23,6 +34,7 @@ const PlayerController: React.FC = () => {
     onProgress,
     toastApi,
     downloadAble,
+    rotate,
   } = useContext(VideoContext);
 
   const handleSliding = (v: number) => {
@@ -38,7 +50,7 @@ const PlayerController: React.FC = () => {
         url: videoSource, // 附件地址（string)
         encryptKey: videoKey, // 加密key（string)
         savePath: 2, // 保存在什么地方（t.Integer）。0: 默认值，保存在手机相册。1: 保存在 App 相册。2: 同时保存到手机相册和 App 相册
-        rotateMode: 0, // 旋转角度（t.Integer)，仅支持：0(正常模式，不旋转)、1(顺时针旋转90度)、2(顺时针旋转180度)、3(顺时针旋转270度)
+        rotateMode: toRotateMode(rotate), // 旋转角度（t.Integer)，仅支持：0(正常模式，不旋转)、1(顺时针旋转90度)、2(顺时针旋转180度)、3(顺时针旋转270度)
       },
       () => {
         toastApi.success(Strings.getLang('saveSuccess'));

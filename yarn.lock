@@ -2232,6 +2232,31 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@tuya-native/tuya-plugin-meta@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry-npm.tuya-inc.top/@tuya-native/tuya-plugin-meta/download/@tuya-native/tuya-plugin-meta-0.0.21.tgz#c12edc232155519750576e386d19f02745f8c998"
+  integrity sha1-wS7cIyFVUZdQV244bRnwJ0X4yZg=
+  dependencies:
+    "@types/node" "^12.6.9"
+    reflect-metadata "^0.1.13"
+    typescript "^3.5.3"
+
+"@tuya-rn/TYUniUtilsManager@^1.0.6":
+  version "1.0.6"
+  resolved "https://registry-npm.tuya-inc.top/@tuya-rn/TYUniUtilsManager/download/@tuya-rn/TYUniUtilsManager-1.0.6.tgz#59aa74794726c3882591af79eb77e18a6a2a56de"
+  integrity sha1-Wap0eUcmw4glka9563fhimoqVt4=
+  dependencies:
+    "@tuya-native/tuya-plugin-meta" "^0.0.21"
+    "@tuya-rn/tuya_universal_plugin_cli_rn" "^1.0.1"
+    react-native "0.59.10"
+
+"@tuya-rn/tuya_universal_plugin_cli_rn@^1.0.1":
+  version "1.0.7"
+  resolved "https://registry-npm.tuya-inc.top/@tuya-rn/tuya_universal_plugin_cli_rn/download/@tuya-rn/tuya_universal_plugin_cli_rn-1.0.7.tgz#9a4dee106b96e986235cb348a5695aa38fe85b14"
+  integrity sha1-mk3uEGuW6YYjXLNIpWlao4/oWxQ=
+  dependencies:
+    react-native "0.59.10"
+
 "@types/babel__core@^7.0.0", "@types/babel__core@^7.1.0", "@types/babel__core@^7.1.7":
   version "7.1.12"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.12.tgz#4d8e9e51eb265552a7e4f1ff2219ab6133bdfb2d"
@@ -2385,6 +2410,11 @@
   version "14.14.20"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.20.tgz#f7974863edd21d1f8a494a73e8e2b3658615c340"
   integrity sha512-Y93R97Ouif9JEOWPIUyU+eyIdyRqQR0I8Ez1dzku4hDx34NWh4HbtIc3WNzwB1Y9ULvNGeu5B8h8bVL5cAk4/A==
+
+"@types/node@^12.6.9":
+  version "12.20.46"
+  resolved "https://registry.npmmirror.com/@types/node/-/node-12.20.46.tgz#7e49dee4c54fd19584e6a9e0da5f3dc2e9136bc7"
+  integrity sha512-cPjLXj8d6anFPzFvOPxS3fvly3Shm5nTfl6g8X5smexixbuGUf7hfr21J5tX9JW+UPStp/5P5R8qrKL5IyVJ+A==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.0"
@@ -11507,6 +11537,11 @@ redent@^3.0.0:
     indent-string "^4.0.0"
     strip-indent "^3.0.0"
 
+reflect-metadata@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.npmmirror.com/reflect-metadata/-/reflect-metadata-0.1.13.tgz#67ae3ca57c972a2aa1642b10fe363fe32d49dc08"
+  integrity sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==
+
 reflect.ownkeys@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/reflect.ownkeys/-/reflect.ownkeys-0.2.0.tgz#749aceec7f3fdf8b63f927a04809e90c5c0b3460"
@@ -13175,6 +13210,11 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
+
+typescript@^3.5.3:
+  version "3.9.10"
+  resolved "https://registry.npmmirror.com/typescript/-/typescript-3.9.10.tgz#70f3910ac7a51ed6bef79da7800690b19bf778b8"
+  integrity sha512-w6fIxVE/H1PkLKcCPsFqKE7Kv7QUwhU8qQY2MueZXWx5cPZdwFupLgKK3vntcK98BtNHZtAF4LA/yl2a7k8R6Q==
 
 typescript@^3.6.4:
   version "3.9.7"

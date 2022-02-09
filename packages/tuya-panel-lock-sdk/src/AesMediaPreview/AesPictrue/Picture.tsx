@@ -1,21 +1,12 @@
 import React from 'react';
-import {
-  View,
-  StyleSheet,
-  TouchableWithoutFeedback,
-  Image,
-  TouchableOpacity,
-  NativeModules,
-} from 'react-native';
+import { View, StyleSheet, TouchableWithoutFeedback, Image, TouchableOpacity } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import ViewTransformer from 'react-native-easy-view-transformer';
-import res from '../../res';
+import ty from '@tuya-rn/TYUniUtilsManager';
 import { useToast } from '../../hooks';
 import Strings from '../i18n';
 import AesImage from './AesImage';
 import { IPictureProps } from '../interface';
-
-const downloader = NativeModules.TYRCTEncryptImageDownloadManager;
 
 const { width: screenWidth, height: screenHeight, convertX: cx, convertY: cy } = Utils.RatioUtils;
 
@@ -35,16 +26,19 @@ const Picture: React.FC<IPictureProps> = ({
   const handleDownLoad = () => {
     try {
       toastApi.loading();
-      downloader.saveToAlbum(
-        imagePath,
-        imageKey,
-        () => {
+      (ty.saveToAlbum as any)({
+        url: imagePath,
+        encryptKey: imageKey,
+        orientation: rotate,
+        success: () => {
           toastApi.success(Strings.getLang('saveSuccess'));
         },
-        () => {
+        fail: (e: any) => {
+          // eslint-disable-next-line no-console
+          console.error('error', e);
           toastApi.error(Strings.getLang('saveFail'));
-        }
-      );
+        },
+      });
     } catch (err) {
       toastApi.error(Strings.getLang('saveFail'));
     }
@@ -56,7 +50,7 @@ const Picture: React.FC<IPictureProps> = ({
     <TouchableWithoutFeedback onPress={onClose}>
       <View style={styles.container}>
         <TouchableWithoutFeedback onPress={onClose}>
-          <Image source={res.minclose} style={styles.closeIcon} />
+          <Image source={require('../res/minclose.png')} style={styles.closeIcon} />
         </TouchableWithoutFeedback>
 
         <ViewTransformer
@@ -86,7 +80,10 @@ const Picture: React.FC<IPictureProps> = ({
             style={styles.downloadButton}
             onPress={handleDownLoad}
           >
-            <Image source={res.download} style={{ width: cy(32), height: cy(32) }} />
+            <Image
+              source={require('../res/download.png')}
+              style={{ width: cy(32), height: cy(32) }}
+            />
           </TouchableOpacity>
         )}
 

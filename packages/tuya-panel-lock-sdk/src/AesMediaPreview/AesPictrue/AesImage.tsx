@@ -1,7 +1,7 @@
-import React, { useState, useRef } from 'react';
-import { View, requireNativeComponent, ViewStyle } from 'react-native';
+import React, { useState, useRef, useEffect } from 'react';
+import { View, requireNativeComponent, ViewStyle, Image, StyleSheet } from 'react-native';
 import moment from 'moment';
-import { Utils } from 'tuya-panel-kit';
+import { Utils, TYText } from 'tuya-panel-kit';
 import { delayCall } from '../../utils';
 import { IAesImage } from '../interface';
 
@@ -22,7 +22,11 @@ const AesImage: React.FC<IAesImage> = ({
   rotate = 0,
   imageKey,
   imagePath,
-  errorImage = <View />,
+  errorImage = (
+    <Image source={require('../res/failFace.png')} style={{ width: '50%', height: '50%' }} />
+  ),
+  errorTextStyle,
+  errorText = '加载失败',
 }) => {
   const [isError, setisError] = useState(false);
   const [imgWidth, setImageWidth] = useState(width);
@@ -30,8 +34,13 @@ const AesImage: React.FC<IAesImage> = ({
   const [imgKey, setImgkey] = useState(moment().valueOf());
   /** 记录重新渲次数 */
   const reRenderCount = useRef<number>(0);
+  const reRenderTimer = useRef<ReturnType<typeof setTimeout>>();
   const noImageInfo = !imagePath && !imageKey;
   const boxWidth = width || winWidth;
+
+  useEffect(() => {
+    return () => clearTimeout(reRenderTimer.current);
+  }, []);
 
   /** 旋转后是否为 水平状态 */
   const isHorizontal = !isValidNumber(rotate) || rotate % 180 === 0;
@@ -55,6 +64,8 @@ const AesImage: React.FC<IAesImage> = ({
   };
 
   const onLoadImgFail = (e: Error) => {
+    setisError(true);
+    onLoadImageFailed && onLoadImageFailed(e);
     /** app 加载失败了 重新渲染五次 */
     if (reRenderCount.current < 5) {
       reRenderCount.current += 1;
@@ -63,10 +74,7 @@ const AesImage: React.FC<IAesImage> = ({
         setImgkey(moment().valueOf());
       };
 
-      delayCall(updateKey, 2000);
-    } else {
-      setisError(true);
-      onLoadImageFailed && onLoadImageFailed(e);
+      reRenderTimer.current = delayCall(updateKey, 2000);
     }
   };
 
@@ -85,8 +93,8 @@ const AesImage: React.FC<IAesImage> = ({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#000000',
-    width: imgWidth,
-    height: imgHeight,
+    width,
+    height: width,
   };
 
   return (
@@ -98,7 +106,13 @@ const AesImage: React.FC<IAesImage> = ({
       }}
     >
       {isError ? (
-        <View style={errorBgStyle}>{errorImage}</View>
+        <View style={errorBgStyle}>
+          {errorImage}
+          <TYText
+            style={StyleSheet.flatten([{ color: '#fff', fontSize: cx(18) }, errorTextStyle])}
+            text={errorText}
+          />
+        </View>
       ) : (
         <AESImageView
           key={imgKey}

@@ -24,7 +24,7 @@ const Video = React.forwardRef<any, IVideoProps>(
     imagePath,
     videoKey,
     videoSource,
-    errorImage = <Image source={require('../res/loadError.png')} style={styles.icon} />,
+    errorImage = <Image source={require('../res/failFace.png')} style={styles.icon} />,
     errorText = Strings.getLang('videoError'),
     onLoadImageFailed,
     onLoadImageSuccess,
@@ -37,20 +37,23 @@ const Video = React.forwardRef<any, IVideoProps>(
     const [duration, setDuration] = useState<number>(0);
     const [progress, setProgress] = useState<number>(0);
     const [videoHeight, setVideoHeight] = useState<number>(defaultVideoHeight);
+    const [isError, setIsError] = useState<boolean>(false);
     const durationRef = useRefenrence(duration);
     const isPalying = status === PlayStatus.play;
+
     /** 旋转后是否为 水平状态 */
     const isHorizontal = rotate % 180 === 0;
     /** 根据播放器旋转的角度设置不同的宽高 */
-    const playerHeight = videoHeight > winWidth ? videoHeight : winWidth;
-    const palyerWidth = winWidth;
+    const playerHeight = isHorizontal ? videoHeight : winWidth;
+    const palyerWidth = isHorizontal ? winWidth : videoHeight;
 
     useEffect(() => {
-      const onPlayMediaVideoInfo = ({ duration: d, height: h, progress: p }: any) => {
+      const onPlayMediaVideoInfo = ({ duration: d, width: w, height: h, progress: p }: any) => {
+        const rate = isHorizontal ? h / w : w / h;
+
         setDuration(d);
         setProgress(p);
-
-        h > 0 && setVideoHeight(h);
+        setVideoHeight(rate * winWidth);
       };
 
       const onPlayFinished = () => {
@@ -62,6 +65,7 @@ const Video = React.forwardRef<any, IVideoProps>(
       emitter.addListener('playMediaVideoFinished', onPlayFinished);
 
       createFn();
+
       return () => {
         stopFn();
         emitter.removeListener('playMediaVideoInfo', onPlayMediaVideoInfo);
@@ -74,8 +78,8 @@ const Video = React.forwardRef<any, IVideoProps>(
         if (status === PlayStatus.init) {
           setStatus(PlayStatus.loading);
           await toggleMute(false);
-          setStatus(PlayStatus.play);
           await playFn({ path: videoSource, key: videoKey, startTime: 0 });
+          setStatus(PlayStatus.play);
         } else if (status === PlayStatus.pause) {
           setStatus(PlayStatus.play);
           await resumFn();
@@ -105,19 +109,35 @@ const Video = React.forwardRef<any, IVideoProps>(
       setStatus(PlayStatus.play);
     };
 
+    const handleImageLoadFailed = (e: any) => {
+      onLoadImageFailed && onLoadImageFailed(e);
+
+      setIsError(true);
+    };
+
+    const handleImageLoadSuccess = (size: any) => {
+      onLoadImageSuccess && onLoadImageSuccess(size);
+
+      setIsError(false);
+    };
+
+    const handleVideoLoadFailure = (e: any) => {
+      onLoadVideoFailed && onLoadImageFailed(e);
+    };
+
+    const handleVideoLoadSuccess = () => {
+      onLoadVideoSuccess && onLoadVideoSuccess();
+    };
+
     const videoStyle = {
       height: playerHeight,
       width: palyerWidth,
-      transform: [
-        { rotate: `${rotate}deg` },
-        {
-          /** 翻转后 通过缩放填满播放器内的黑边 */
-          scaleY: isHorizontal ? 1 : winWidth / videoHeight,
-        },
-      ],
+      position: 'absolute',
+      transform: [{ rotate: `${rotate}deg` }],
     };
 
-    const showPlayer = status === PlayStatus.play || status === PlayStatus.pause;
+    const showPlayer =
+      status === PlayStatus.play || status === PlayStatus.loading || status === PlayStatus.pause;
 
     /** ios 加上rotateZ属性会失效 安卓要加这个 */
     const PlayerProps = isIos ? {} : { rotateZ: rotate };
@@ -148,26 +168,27 @@ const Video = React.forwardRef<any, IVideoProps>(
           imageKey,
           imagePath,
           downloadAble,
+          rotate,
         }}
       >
         {/* 整体高度 = 播放器高度 + 底部控制栏高度 */}
-        <View style={[styles.wrapper, { height: playerHeight + 120, width: palyerWidth }]}>
+        <View style={[styles.wrapper, { height: playerHeight + 160 }]}>
           <View style={[styles.videoContainer, { height: playerHeight }]}>
             {showPlayer && (
               <Player
-                {...PlayerProps}
+                onLoadSuccess={handleVideoLoadSuccess}
+                onLoadFailure={handleVideoLoadFailure}
                 style={videoStyle}
                 doubleClick={false}
-                onLoadFail={onLoadVideoFailed}
-                onLoadSuccess={onLoadVideoSuccess}
+                {...PlayerProps}
               />
             )}
 
             {/* 封面图 */}
             {showCoverImage && (
               <AesImage
-                onLoadImageFailed={onLoadImageFailed}
-                onLoadImageSuccess={onLoadImageSuccess}
+                onLoadImageFailed={handleImageLoadFailed}
+                onLoadImageSuccess={handleImageLoadSuccess}
                 rotate={rotate}
                 imagePath={imagePath}
                 imageKey={imageKey}
@@ -176,7 +197,7 @@ const Video = React.forwardRef<any, IVideoProps>(
             )}
 
             <View style={styles.playerCenter}>
-              <PlayButton visible={showPlayButton} />
+              {!isError && <PlayButton visible={showPlayButton} />}
 
               {/* loading ｜ 错误提示 */}
               {status === PlayStatus.loading && (
@@ -201,7 +222,7 @@ const Video = React.forwardRef<any, IVideoProps>(
             </View>
           </View>
           {/* 底部控制栏 */}
-          {status !== PlayStatus.error && <PlayerController />}
+          {status !== PlayStatus.error && !isError && <PlayerController />}
         </View>
 
         {toastElement}

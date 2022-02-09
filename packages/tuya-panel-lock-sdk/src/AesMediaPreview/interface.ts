@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 import React from 'react';
-import { ViewStyle } from 'react-native';
+import { TextStyle, ViewStyle } from 'react-native';
 
 export type IAesImage = Pick<
   IPreviewer,
@@ -11,6 +11,8 @@ export type IAesImage = Pick<
   | 'imageStyle'
   | 'rotate'
   | 'errorImage'
+  | 'errorText'
+  | 'errorTextStyle'
   | 'onLoadImageSuccess'
   | 'onLoadImageFailed'
   | 'downloadAble'
@@ -25,6 +27,7 @@ export type IVideoProps = Pick<
   | 'rotate'
   | 'errorImage'
   | 'errorText'
+  | 'errorTextStyle'
   | 'defaultVideoHeight'
   | 'onLoadImageSuccess'
   | 'onLoadImageFailed'
@@ -177,9 +180,20 @@ export interface IPreviewer {
   /**
    * @language en-US
    * @description error text
-   * @defaultValue undefined
+   * @defaultValue 加载失败
    */
   errorText?: string;
+  /**
+   * @language zh-CN
+   * @description 错误显示文案样式
+   * @defaultValue undefined
+   */
+  /**
+   * @language en-US
+   * @description error text style
+   * @defaultValue undefined
+   */
+  errorTextStyle?: TextStyle | TextStyle[];
   /**
    * @language zh-CN
    * @description 成功回调
@@ -212,7 +226,7 @@ export interface IPreviewer {
    * @description success callback
    * @defaultValue undefined
    */
-  onLoadVideoSuccess?: (size: any) => void;
+  onLoadVideoSuccess?: () => void;
   /**
    * @language zh-CN
    * @description 失败回调
