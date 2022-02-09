@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AvPreview components Mantle render 1`] = `
+<Component
+  style={
+    Array [
+      undefined,
+      Object {
+        "height": undefined,
+      },
+    ]
+  }
+>
+  <Component
+    stops={
+      Object {
+        "0%": "rgba(0,0,0,0.4)",
+        "100%": "rgba(0,0,0,0)",
+      }
+    }
+    style={
+      Object {
+        "height": undefined,
+      }
+    }
+    x1="0%"
+    x2="0%"
+    y1="0%"
+    y2="100%"
+  >
+    <Component />
+  </Component>
+</Component>
+`;
+
+exports[`AvPreview components Picture render 1`] = `
+<Component>
+  <Component>
+    <Component>
+      <Component
+        source={1}
+      />
+    </Component>
+    <Component
+      enableScale={true}
+      enableTranslate={false}
+      maxScale={2}
+      onSingleTapConfirmed={[Function]}
+    >
+      <Component
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <Memo(AesImage) />
+      </Component>
+    </Component>
+    <Component
+      onPress={[Function]}
+      testID="download-btn"
+    >
+      <Component
+        source={1}
+        style={
+          Object {
+            "height": undefined,
+            "width": undefined,
+          }
+        }
+      />
+    </Component>
+  </Component>
+</Component>
+`;
+
+exports[`AvPreview components PlayButton render 1`] = `""`;
+
+exports[`AvPreview components Video render 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "downloadAble": true,
+      "duration": 0,
+      "emitter": Object {
+        "addListener": [Function],
+        "removeListener": [Function],
+      },
+      "handlePlay": [Function],
+      "imageKey": undefined,
+      "imagePath": undefined,
+      "isPalying": false,
+      "onProgress": [Function],
+      "progress": 0,
+      "setStatus": [Function],
+      "status": "init",
+      "toastApi": Object {
+        "error": [Function],
+        "loading": [Function],
+        "success": [Function],
+      },
+      "videoKey": undefined,
+      "videoSource": undefined,
+    }
+  }
+>
+  <Component
+    style={
+      Array [
+        undefined,
+        Object {
+          "height": NaN,
+          "width": undefined,
+        },
+      ]
+    }
+  >
+    <Component
+      style={
+        Array [
+          undefined,
+          Object {
+            "height": undefined,
+          },
+        ]
+      }
+    >
+      <Memo(AesImage)
+        rotate={0}
+      />
+      <Component>
+        <PlayButton
+          visible={true}
+        />
+      </Component>
+    </Component>
+    <PlayerController />
+  </Component>
+</ContextProvider>
+`;
