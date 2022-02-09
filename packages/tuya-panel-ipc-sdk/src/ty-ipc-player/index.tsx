@@ -139,7 +139,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.clarityStatus,
       this.props.voiceStatus,
       this.props.hightScaleMode,
-      this.props.channelNum
+      this.props.channelNum,
+      this.props.activeConnect
     );
 
     // 非摄像头品类的产品，旋转屏幕使用方法需初始化
@@ -286,6 +287,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             voiceStatus,
             hightScaleMode,
             channelNum,
+            activeConnect,
           } = this.props;
           TYIpcPlayerManager.startPlay(
             isWirless,
@@ -294,7 +296,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum
+            channelNum,
+            activeConnect
           );
         }
         // 低功耗session断开并且进入面板有上报低功耗休眠false
@@ -307,6 +310,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             voiceStatus,
             hightScaleMode,
             channelNum,
+            activeConnect,
           } = this.props;
           TYIpcPlayerManager.startPlay(
             isWirless,
@@ -315,7 +319,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum
+            channelNum,
+            activeConnect
           );
           return false;
         }
@@ -332,11 +337,19 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   componentWillReceiveProps(nextProps: TYIpcPlayerProps) {
     // 隐私模式和设备在线变更监听 重新拉流
-    const { privateMode, deviceOnline, zoomStatus, channelNum, scaleMultiple } = this.props;
+    const {
+      privateMode,
+      deviceOnline,
+      zoomStatus,
+      channelNum,
+      scaleMultiple,
+      activeConnect,
+    } = this.props;
     if (
       !_.isEqual(privateMode, nextProps.privateMode) ||
       !_.isEqual(deviceOnline, nextProps.deviceOnline) ||
-      !_.isEqual(channelNum, nextProps.channelNum)
+      !_.isEqual(channelNum, nextProps.channelNum) ||
+      !_.isEqual(activeConnect, nextProps.activeConnect)
     ) {
       TYIpcPlayerManager.startPlay(
         nextProps.isWirless,
@@ -345,7 +358,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         nextProps.clarityStatus,
         nextProps.voiceStatus,
         nextProps.hightScaleMode,
-        nextProps.channelNum
+        nextProps.channelNum,
+        nextProps.activeConnect
       );
     }
 
@@ -427,6 +441,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       voiceStatus,
       hightScaleMode,
       channelNum,
+      activeConnect,
     } = this.props;
     this.initStatus();
     this.resetMulScaleWithBefore();
@@ -451,7 +466,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum
+        channelNum,
+        activeConnect
       );
     }
     this.goToBack = false;
@@ -540,6 +556,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       voiceStatus,
       hightScaleMode,
       channelNum,
+      activeConnect,
     } = this.props;
     TYIpcPlayerManager.startPlay(
       isWirless,
@@ -548,7 +565,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       clarityStatus,
       voiceStatus,
       hightScaleMode,
-      channelNum
+      channelNum,
+      activeConnect
     );
   };
 
@@ -716,6 +734,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         voiceStatus,
         hightScaleMode,
         channelNum,
+        activeConnect,
       } = this.props;
       const { videoStatus } = this.state;
       // 表示隐私模式
@@ -740,7 +759,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum
+        channelNum,
+        activeConnect
       );
     }
   };
