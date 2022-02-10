@@ -46,6 +46,8 @@ module.exports = {
     TYLamp_animatedModal_confirmText: '确认',
     TYLamp_rhythms_tip: '节点不能超过',
     TYLamp_rhythms_tip1: '节点可以超过',
+    TYLamp_save: '保存',
+    TYLamp_test_white: '白光页面',
   },
 
   en: {
@@ -92,5 +94,7 @@ module.exports = {
     TYLamp_animatedModal_confirmText: 'confirm',
     TYLamp_rhythms_tip: 'Node no more than',
     TYLamp_rhythms_tip1: 'Node can more than',
+    TYLamp_save: 'Save',
+    TYLamp_test_white: 'White page',
   },
 };
