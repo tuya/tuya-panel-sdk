@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.9.3...@tuya/tuya-panel-lamp-sdk@1.9.4) (2022-02-10)
+
+
+### Bug Fixes
+
+* **lamp:** fix lamp rhythms ([#173](https://github.com/tuya/tuya-panel-sdk/issues/173)) ([48d5485](https://github.com/tuya/tuya-panel-sdk/commit/48d54853e78aca6b30c7fc013b311515167058a3))
+
+
+
+
+
 ## [1.9.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.9.2...@tuya/tuya-panel-lamp-sdk@1.9.3) (2022-01-18)
 
 
