@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import React, { useState } from 'react';
 import { TouchableOpacity, StyleSheet, View, Dimensions } from 'react-native';
-import { TYText } from 'tuya-panel-kit';
+import { TYText, TYSdk } from 'tuya-panel-kit';
 import { TYIpcPlayer, TYIpcNative, TYIpcVideoBit } from '@tuya/tuya-panel-ipc-sdk';
 
 const { width: winWidth, height: winHeight } = Dimensions.get('screen');
@@ -109,6 +109,12 @@ const IpcPLayer: React.FC = () => {
     console.log('进入前台');
   };
 
+  const openFloatWindow = () => {
+    TYIpcNative.openFloatWindow().then(() => {
+      TYSdk.native.back();
+    });
+  };
+
   return (
     <View onLayout={_onLayout} style={styles.TYIpcPlayerPage}>
       <TYText style={styles.descTxt} text="Description: 视频播放" />
@@ -160,6 +166,9 @@ const IpcPLayer: React.FC = () => {
           </TouchableOpacity>
           <TouchableOpacity style={styles.feature} onPress={pausePlay}>
             <TYText style={styles.featureTxt} text="暂停播放" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.feature} onPress={openFloatWindow}>
+            <TYText style={styles.featureTxt} text="小窗播放" />
           </TouchableOpacity>
           {/* <TouchableOpacity style={styles.feature} onPress={activeConnect}>
             <TYText style={styles.featureTxt} text="调整连接" />
