@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorCard components basic render 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "alignItems": "center",
+        "height": 270,
+        "justifyContent": "center",
+        "width": 406,
+      },
+    ]
+  }
+>
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "#fff",
+            "borderWidth": 1,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        resizeMode="stretch"
+        source={1}
+        style={
+          Object {
+            "height": 180,
+            "opacity": 1,
+            "width": 400,
+          }
+        }
+      />
+    </View>
+  </TouchableWithoutFeedback>
+  <Slider
+    activeColor="#fff"
+    borderColor="transparent"
+    borderWidth={1}
+    clickEnabled={true}
+    disabled={false}
+    fontColor="#000"
+    invalidSwipeDistance={7}
+    max={1000}
+    min={10}
+    minPercent={1}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    onlySlider={false}
+    opacityAnimationValue={1}
+    showPercent={true}
+    style={
+      Object {
+        "width": 400,
+      }
+    }
+    tempValue={0}
+    trackColor="grey"
+    value={0}
+  />
+</View>
+`;
+
+exports[`ColorCard components basic render no slider 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "alignItems": "center",
+        "height": 160,
+        "justifyContent": "center",
+        "width": 286,
+      },
+    ]
+  }
+>
+  <TouchableWithoutFeedback
+    onPress={[Function]}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "borderColor": "#fff",
+            "borderWidth": 1,
+            "overflow": "hidden",
+          },
+          Object {
+            "borderTopLeftRadius": 12,
+            "borderTopRightRadius": 12,
+          },
+        ]
+      }
+    >
+      <AnimatedComponent
+        resizeMode="stretch"
+        source={1}
+        style={
+          Object {
+            "height": 70,
+            "opacity": 1,
+            "width": 280,
+          }
+        }
+      />
+    </View>
+  </TouchableWithoutFeedback>
+  <AnimatedComponent
+    pointerEvents="none"
+    style={
+      Array [
+        Object {
+          "borderColor": "#fff",
+        },
+        Object {
+          "borderRadius": 10,
+          "borderWidth": 3,
+          "height": 37,
+          "left": -31,
+          "position": "absolute",
+          "top": -31,
+          "width": 37,
+        },
+        false,
+        false,
+        false,
+        undefined,
+        undefined,
+      ]
+    }
+  />
+  <Slider
+    activeColor="#fff"
+    borderColor="transparent"
+    borderWidth={1}
+    clickEnabled={true}
+    disabled={false}
+    fontColor="#000"
+    invalidSwipeDistance={7}
+    max={1000}
+    min={10}
+    minPercent={1}
+    onGrant={[Function]}
+    onMove={[Function]}
+    onPress={[Function]}
+    onRelease={[Function]}
+    onlySlider={false}
+    opacityAnimationValue={1}
+    showPercent={true}
+    style={
+      Object {
+        "width": 280,
+      }
+    }
+    tempValue={0}
+    trackColor="grey"
+    value={1000}
+  />
+</View>
+`;

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { TYFlatList } from 'tuya-panel-kit';
 import { produceRouterDatas } from '../../utils';
 import { subRouters } from '../../config/routers';
+import ColorCards from './ColorCard';
+import DisturbDialogScene from './DisturbDialog';
 import RectColorAndBrightPickerScene from './RectColorAndBrightPicker';
 import TemperaturePickerScene from './TemperaturePicker';
 import HueSaturationPickerScene from './HueSaturationPicker';
@@ -41,6 +43,7 @@ export default class LampScene extends Component {
     return produceRouterDatas(subRouters.filter(r => /^Lamp.+\w*$/.test(r.id)));
   }
 
+  static ColorCards = ColorCards;
   static RectColorAndBrightPicker = RectColorAndBrightPickerScene;
   static TemperaturePicker = TemperaturePickerScene;
   static HueSaturationPicker = HueSaturationPickerScene;
@@ -74,6 +77,7 @@ export default class LampScene extends Component {
   static Repeat = RepeatScene;
   static TestWhite = TestWhiteScene;
   static RhythmsCircle = RhythmsCircleScene;
+  static DisturbDialog = DisturbDialogScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
