@@ -195,6 +195,7 @@ class Slider extends React.Component<IProps, IState> {
       Animated.timing(this.brightAnimate, {
         toValue: this.brightWidth,
         duration: 100,
+        useNativeDriver: false,
       }).start();
       if (nextProps.value !== this.props.value) {
         this.setState({ value: nextProps.value });
@@ -215,6 +216,7 @@ class Slider extends React.Component<IProps, IState> {
     Animated.timing(this.state.opacityAnimationValue, {
       toValue: value,
       duration: 300,
+      useNativeDriver: false,
     }).start();
   };
 
@@ -310,6 +312,7 @@ class Slider extends React.Component<IProps, IState> {
       Animated.timing(this.brightAnimate, {
         toValue: width,
         duration: 100,
+        useNativeDriver: false,
       }).start();
     } else {
       this.brightAnimate.setValue(width);

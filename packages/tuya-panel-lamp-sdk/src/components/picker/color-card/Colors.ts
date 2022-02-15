@@ -54,18 +54,10 @@ export const Color = [
   { hue: 258, saturation: 810, value: 700 },
   { hue: 285, saturation: 780, value: 940 },
   { hue: 339, saturation: 980, value: 980 },
-];
-
-export const White = [
-  { color: '#FFCA5C', value: 90 },
-  { color: '#FFD783', value: 180 },
-  { color: '#FFE7B4', value: 270 },
-  { color: '#FFF2D6', value: 360 },
-  { color: '#FFF7E7', value: 450 },
-  { color: '#FFFFFF', value: 540 },
-  { color: '#F2FAFF', value: 630 },
-  { color: '#E8F6FE', value: 720 },
-  { color: '#DFF3FF', value: 810 },
-  { color: '#D7F0FF', value: 900 },
-  { color: '#CDECFE', value: 990 },
-];
+].map(item => {
+  return {
+    ...item,
+    brightness: 0,
+    temperature: 0,
+  };
+});

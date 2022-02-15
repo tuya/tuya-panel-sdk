@@ -3,8 +3,6 @@ export interface ColourData {
   hue: number;
   saturation: number;
   value: number;
-}
-export interface WhiteData {
   brightness: number;
   temperature: number;
 }
@@ -18,6 +16,8 @@ export interface ColorCardsProps {
   width?: number;
   /** 总高 */
   height?: number;
+  /** 是否是彩光 */
+  isColour?: boolean;
   /** 总样式 */
   style?: StyleProp<ViewStyle>;
   /** 整体透明度 */
@@ -31,13 +31,13 @@ export interface ColorCardsProps {
   /** 行数 */
   yNum?: number;
   /* 值  */
-  value?: ColourData | WhiteData;
+  value?: ColourData;
   /* 开始滑动的事件  */
-  onGrant?: (data: ColourData | WhiteData) => void;
+  onGrant?: (data: ColourData) => void;
   /* 滑动中的事件  */
-  onMove?: (data: ColourData | WhiteData) => void;
+  onMove?: (data: ColourData) => void;
   /* 滑动释放的事件  */
-  onRelease?: (data: ColourData | WhiteData) => void;
+  onRelease?: (data: ColourData) => void;
   /* 是否有边框  */
   hasBorder?: boolean;
   /* 边框颜色  */
@@ -48,6 +48,7 @@ export interface ColorCardsProps {
   hideBright?: boolean;
   /* 颜色配置项  */
   colors?: Array<ColourData>;
+  // colors: enum
   /* 选中区间的边框  */
   innerBorder?: number;
   /* 选中区间的圆角  */

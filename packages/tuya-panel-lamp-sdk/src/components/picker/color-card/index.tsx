@@ -3,7 +3,7 @@ import { View, TouchableWithoutFeedback, Animated } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import { useControllableValue, usePersistFn } from 'ahooks';
 import { Svg, Rect } from 'react-native-svg';
-import { objectShallowEqual, hsv2hex } from '../../../utils';
+import { objectShallowEqual, hsv2hex, ColorUtils } from '../../../utils';
 import Slider from './Slider';
 import { Color as ColorData } from './Colors';
 import { ColorCardsProps } from './interface';
@@ -13,6 +13,7 @@ const { convertX: cx } = Utils.RatioUtils;
 const ColorCard: React.FC<ColorCardsProps> = props => {
   const {
     style,
+    isColour = true,
     height = 200,
     width = 400,
     hasBorder = false,
@@ -51,11 +52,23 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
     const xCount = Math.floor(locationX / singleWidth) + 1;
     const yCount = Math.floor(locationY / singleHeight);
     const totalCount = xNum * yCount + xCount;
-    setValue({ ...colors[totalCount - 1], value: value.value });
+    setValue(
+      isColour
+        ? {
+            ...colors[totalCount - 1],
+            value: value.value,
+          }
+        : {
+            ...colors[totalCount - 1],
+            brightness: value.brightness,
+          }
+    );
   });
   const colourCards = useMemo(() => {
     const currentIndex = colors.findIndex(item =>
-      objectShallowEqual(item, value, ['hue', 'saturation'])
+      isColour
+        ? objectShallowEqual(item, value, ['hue', 'saturation'])
+        : objectShallowEqual(item, value, ['temperature'])
     );
     const xIndex = currentIndex % xNum;
     const yIndex = Math.floor(currentIndex / xNum);
@@ -86,15 +99,18 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
               {colors.map((item, index) => {
                 const top = index % xNum;
                 const left = Math.floor(index / xNum);
-                console.log('singleWidth', singleWidth, 'singleHeight', singleHeight);
                 return (
                   <Rect
-                    key={item.hue}
+                    key={item}
                     x={top * singleWidth}
                     y={left * singleHeight}
                     width={singleWidth}
                     height={singleHeight}
-                    fill={hsv2hex(item.hue, item.saturation, item.value)}
+                    fill={
+                      isColour
+                        ? hsv2hex(item.hue, item.saturation, item.value)
+                        : ColorUtils.brightKelvin2rgba(item.brightness, item.temperature)
+                    }
                   />
                 );
               })}
@@ -111,7 +127,6 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
                 borderRadius: innerRadius,
                 width: singleWidth + innerBorder * 1.2,
                 height: singleHeight + innerBorder * 1.2,
-                // todo
                 top: yIndex * singleHeight - innerBorder / 2,
                 left: xIndex * singleWidth - innerBorder / 2,
                 position: 'absolute',
@@ -144,17 +159,20 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
   }, [singleWidth, singleHeight, xNum, yNum, value, opacityAnimationValue]);
 
   const handleBrightMove = (v: number) => {
-    onMove?.({ ...value, value: v });
+    const params = isColour ? { ...value, value: v } : { ...value, brightness: v };
+    onMove?.(params);
   };
 
   const handleBrightComplete = (v: number) => {
-    setValue({ ...value, value: v });
+    const params = isColour ? { ...value, value: v } : { ...value, brightness: v };
+    setValue(params);
   };
 
   useEffect(() => {
     Animated.timing(opacity, {
       toValue: opacityAnimationValue,
       duration: 300,
+      useNativeDriver: false,
     }).start();
   }, [opacityAnimationValue]);
 
@@ -185,7 +203,7 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
             max={1000}
             // trackColor={isDarkTheme ? 'rgba(255,255,255,0.1)' : '#DDD'}
             clickEnabled
-            value={value.value}
+            value={isColour ? value.value : value.brightness}
             onGrant={handleBrightComplete}
             onMove={handleBrightMove}
             onRelease={handleBrightComplete}

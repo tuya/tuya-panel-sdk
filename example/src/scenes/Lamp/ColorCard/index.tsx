@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import { ColorCard } from '@tuya/tuya-panel-lamp-sdk';
 import { TYText } from 'tuya-panel-kit';
@@ -9,14 +9,6 @@ const ColorCards: React.FC = () => {
     trackColor: '#383838',
     activeColor: '#fff',
     fontColor: '#000',
-  };
-  const [value, setValue] = useState({});
-  const [value2, setValue2] = useState({});
-  const handleColorComplete = (d: any) => {
-    setValue(d);
-  };
-  const handleColorMove = (d: any) => {
-    setValue(d);
   };
   const colors = [
     {
@@ -170,6 +162,18 @@ const ColorCards: React.FC = () => {
       value: 1000,
     },
   ];
+  const whiteColors = [1000, 900, 800, 700, 600, 500, 400, 300, 200, 100, 0].map(item => {
+    return {
+      brightness: 1000,
+      temperature: item,
+      hue: 0,
+      saturation: 0,
+      value: 0,
+    };
+  });
+  const [value, setValue] = useState(colors[0]);
+  const [value2, setValue2] = useState(colors[0]);
+  const [value3, setValue3] = useState(whiteColors[0]);
   return (
     <View style={styles.container}>
       <TYText style={styles.title}>{Strings.getLang('TYLamp_defaultStyle')}</TYText>
@@ -179,9 +183,9 @@ const ColorCards: React.FC = () => {
         disabled={false}
         brightOption={brightOption}
         value={value}
-        onGrant={handleColorComplete}
-        onMove={handleColorMove}
-        onRelease={handleColorComplete}
+        onGrant={setValue}
+        onMove={setValue}
+        onRelease={setValue}
       />
       <TYText style={styles.title}>{Strings.getLang('TYLamp_hideBright')}</TYText>
       <ColorCard
@@ -200,15 +204,27 @@ const ColorCards: React.FC = () => {
         brightOption={brightOption}
         hideBright
         value={value2}
-        onGrant={(v: any) => {
-          setValue2(v);
-        }}
-        onMove={(v: any) => {
-          setValue2(v);
-        }}
-        onRelease={(v: any) => {
-          setValue2(v);
-        }}
+        onGrant={setValue2}
+        onMove={setValue2}
+        onRelease={setValue2}
+      />
+      <TYText style={styles.title}>{Strings.getLang('TYLamp_white')}</TYText>
+      <ColorCard
+        style={styles.picker}
+        innerRadius={12}
+        isColour={false}
+        colors={whiteColors}
+        xNum={11}
+        yNum={1}
+        width={400}
+        height={200}
+        opacityAnimationValue={1}
+        disabled={false}
+        brightOption={brightOption}
+        value={value3}
+        onGrant={setValue3}
+        onMove={setValue3}
+        onRelease={setValue3}
       />
     </View>
   );
