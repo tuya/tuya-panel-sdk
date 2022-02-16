@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.13.1...@tuya/tuya-panel-ipc-sdk@1.14.0) (2022-02-16)
+
+
+### Features
+
+* active connect ([#178](https://github.com/tuya/tuya-panel-sdk/issues/178)) ([bcacc04](https://github.com/tuya/tuya-panel-sdk/commit/bcacc0472ddc57cc814e64ac7d65b66edbc595f1))
+* float window ([#177](https://github.com/tuya/tuya-panel-sdk/issues/177)) ([c0495cd](https://github.com/tuya/tuya-panel-sdk/commit/c0495cd5692720aff787876f3c4d5e3eabadc3a6))
+
+
+
+
+
 ## [1.13.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.13.0...@tuya/tuya-panel-ipc-sdk@1.13.1) (2022-02-09)
 
 **Note:** Version bump only for package @tuya/tuya-panel-ipc-sdk
