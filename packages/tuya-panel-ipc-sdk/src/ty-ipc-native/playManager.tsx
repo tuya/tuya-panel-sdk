@@ -43,6 +43,7 @@ class TYIpcPlayerManager extends React.Component {
   static isTalkBacking = PlayerManagerFun.isTalkBacking;
   static isHDOn = PlayerManagerFun.isHDOn;
   static iosSnapShootToPhoneAlbums = PlayerManagerFun.iosSnapShootToPhoneAlbums;
+  static openFloatWindow = PlayerManagerFun.openFloatWindow;
 
   static render() {
     return null;
