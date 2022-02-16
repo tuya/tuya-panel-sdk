@@ -230,8 +230,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         }
         // 针对安卓从原生界面返回，判定P2p有没有连接，低功耗进行唤醒
         if (isForeground && !this.onLivePage && !isIOS) {
-          const { isWirless, deviceOnline } = this.props;
-          judgeP2pISConnectedOperate(isWirless, deviceOnline);
+          const { isWirless, deviceOnline, notNeedJudgeConnectForeground } = this.props;
+          if (!notNeedJudgeConnectForeground) {
+            judgeP2pISConnectedOperate(isWirless, deviceOnline);
+          }
         }
       }
     );
@@ -620,7 +622,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   handleAppStateChange = nextAppState => {
     // 表示手机应用滑到后台,统一断开disconenct, 安卓和ios差异限制, 安卓立即断开,ios5秒后断开
-    const { enterBackDisConP2P, isWirless, deviceOnline } = this.props;
+    const {
+      enterBackDisConP2P,
+      isWirless,
+      deviceOnline,
+      notNeedJudgeConnectForeground,
+    } = this.props;
     if (nextAppState === 'background' && !enterBackDisConP2P) {
       enterBackTimeOutSpecial();
     }
@@ -628,10 +635,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
     nextAppState === 'active' && isIOS && cancelEnterBackTimeOut();
     // 进入前台，判定是否处于预览页面,如果处于预览页面，不做处理, 如果不处于预览页面,判定P2P是否连接，如若未连接，进行连接P2P,如若已连接，则忽略，目的是返回预览界面,可以快速出流
-    nextAppState === 'active' &&
-      isIOS &&
-      !this.onLivePage &&
-      judgeP2pISConnectedOperate(isWirless, deviceOnline);
+
+    if (nextAppState === 'active' && isIOS && !this.onLivePage) {
+      if (!notNeedJudgeConnectForeground) {
+        judgeP2pISConnectedOperate(isWirless, deviceOnline);
+      }
+    }
 
     // TYEvent.emit('previewState', nextAppState);
   };
