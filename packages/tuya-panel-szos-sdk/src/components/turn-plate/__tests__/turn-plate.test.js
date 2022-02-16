@@ -18,23 +18,4 @@ describe('TurnPlate components', () => {
     );
     expect(component).toMatchSnapshot();
   });
-  // it('handleChangeTurnPlate render', () => {
-  //   const onChangeTurnPlate = jest.fn();
-  //   const component = render(
-  //     <TurnPlate
-  //       handleChangeTurnPlate={onChangeTurnPlate}
-  //       value={50}
-  //     />
-  //   );
-  //   // fireEvent
-  //   const {instance} = component.root;
-  //   instance.handleChangeTurnPlate = onChangeTurnPlate;
-  //   instance.handleChangeTurnPlate(20);
-  //   component.update(<TurnPlate
-  //     handleChangeTurnPlate={onChangeTurnPlate}
-  //     value={50}
-  //   />)
-  //   expect(instance.handleChangeTurnPlate).toHaveBeenCalled()
-  //   expect(component).toMatchSnapshot();
-  // });
 });

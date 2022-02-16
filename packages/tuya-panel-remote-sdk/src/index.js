@@ -7,6 +7,7 @@ import PusherAnimate from './components/pusher-animate';
 import RollerAnimate from './components/roller-animate';
 import LightAnimate from './components/light-animate';
 import LetterSearch from './components/letter-search';
+import MaskView from './components/mask-view';
 
 export {
   CircleHandle,
@@ -17,4 +18,5 @@ export {
   RollerAnimate,
   LightAnimate,
   LetterSearch,
+  MaskView
 };

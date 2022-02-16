@@ -58,7 +58,7 @@ interface IProps {
   imageSource?: ImageSourcePropType;
 }
 
-const { convertY, convertX } = Utils.RatioUtils;
+const { convertY } = Utils.RatioUtils;
 
 const DriverHeight = convertY(185);
 const BoxHeight = convertY(300);

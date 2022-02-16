@@ -67,6 +67,7 @@
     "dev:remote": "yarn build && cd packages/tuya-panel-remote-sdk  && yarn run dev",
     "dev:health": "yarn build && cd packages/tuya-panel-health-sdk  && yarn run dev",
     "dev:outdoor": "yarn build && cd packages/tuya-panel-outdoor-sdk  && yarn run dev",
+    "dev:szos": "yarn build && cd packages/tuya-panel-szos-sdk  && yarn run dev",
     "prepublish-it": "yarn build",
     "publish-it": "lerna publish"
   },

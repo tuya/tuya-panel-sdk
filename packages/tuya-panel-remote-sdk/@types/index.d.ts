@@ -2133,3 +2133,129 @@ export interface LetterSearchProps {
 }
 
 export const LetterSearch: React.ComponentClass<LetterSearchProps>;
+
+export interface MaskViewProp {
+  /**
+   * @language zh-CN
+   * @description mask 是否可见
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description mask visible
+   * @defaultValue false
+   */
+  visible?: boolean;
+  /**
+   * @language zh-CN
+   * @description 内容区高度
+   * @defaultValue cx(300)
+   */
+  /**
+   * @language en-US
+   * @description content height
+   * @defaultValue cx(300)
+   */
+  height?: number;
+  /**
+   * @language zh-CN
+   * @description 内容区偏移屏幕动画方向的距离
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description content offsetX
+   * @defaultValue 0
+   */
+  offsetX?: number;
+  /**
+   * @language zh-CN
+   * @description 内容区偏移屏幕动画方向的距离
+   * @defaultValue 0
+   */
+  /**
+   * @language en-US
+   * @description content offsetY
+   * @defaultValue 0
+   */
+  offsetY?: number;
+  /**
+   * @language zh-CN
+   * @description 动画持续时间
+   * @defaultValue 300
+   */
+  /**
+   * @language en-US
+   * @description animate duration
+   * @defaultValue 300
+   */
+  duration?: number;
+  /**
+   * @language zh-CN
+   * @description 内容区组件
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description content child
+   * @defaultValue null
+   */
+  children?: React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description mask 背景色
+   * @defaultValue '#FFF'
+   */
+  /**
+   * @language en-US
+   * @description mask background
+   * @defaultValue '#FFF'
+   */
+  maskBgColor?: string;
+  /**
+   * @language zh-CN
+   * @description mask 透明度
+   * @defaultValue 0.7
+   */
+  /**
+   * @language en-US
+   * @description mask opacity
+   * @defaultValue 0.7
+   */
+  maskOpacity?: number;
+  /**
+   * @language zh-CN
+   * @description 内容区出现的方向
+   * @defaultValue left
+   */
+  /**
+   * @language en-US
+   * @description content position animate
+   * @defaultValue left
+   */
+  direction?: 'left' | 'top' | 'bottom' | 'right';
+  /**
+   * @language zh-CN
+   * @description mask 隐藏方法
+   * @defaultValue left
+   */
+  /**
+   * @language en-US
+   * @description mask hidden function
+   * @defaultValue left
+   */
+  onClose?: () => void;
+  /**
+   * @language zh-CN
+   * @description content 样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description content wrapper style
+   * @defaultValue null
+   */
+  style?: StyleProp<ViewStyle>;
+}
+
+export const MaskView: React.ComponentClass<MaskViewProp>;
