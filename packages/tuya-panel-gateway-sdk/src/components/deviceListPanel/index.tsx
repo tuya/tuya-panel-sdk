@@ -9,6 +9,8 @@ import {
   PanResponderInstance,
   PanResponder,
   LayoutChangeEvent,
+  UIManager,
+  findNodeHandle,
 } from 'react-native';
 import { TYText, Utils, IconFont, TYSdk, TopBar, TabBar, Carousel } from 'tuya-panel-kit';
 import styles from './style';
@@ -64,8 +66,9 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
 
   const [listHeight, setListHeight] = useState(300);
 
-  const panelHeight = useRef(0);
   const tabsHeight = useRef(0);
+
+  const animatedPanResponderRef = useRef();
 
   const selectedIndex = useMemo(() => {
     // @ts-ignore
@@ -138,6 +141,11 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
       }
       // 每次释放后重置方向
       direction = 'down';
+
+      const handle = findNodeHandle(animatedPanResponderRef.current);
+      UIManager.measure(handle, (x, y, width, height) => {
+        setListHeight(height - tabsHeight.current - panelChildrenHeight);
+      });
     });
   };
 
@@ -213,7 +221,6 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
 
     // 吸顶和吸底动画
     animatedToTop(finalTop);
-    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
   };
 
   panResponder = useRef(
@@ -281,7 +288,7 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
       <Animated.View
         style={[styles.scrollMain, panelStyle, { top: animatedTop, borderRadius: radius }]}
         {...(panResponder && panResponder.panHandlers ? panResponder.panHandlers : {})}
-        onLayout={panResponderOnLayout}
+        ref={animatedPanResponderRef}
       >
         <View
           style={[styles.tabMain, { paddingHorizontal: listPaddingHorizontal }]}
@@ -320,16 +327,9 @@ const DeviceListPanel: FC<DeviceListPanelProps> = ({
     typeof onTabChange === 'function' && onTabChange(value);
   };
 
-  const panResponderOnLayout = (e: LayoutChangeEvent) => {
-    const { height } = e.nativeEvent.layout;
-    panelHeight.current = height;
-    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
-  };
-
   const tabsOnLayout = (e: LayoutChangeEvent) => {
     const { height } = e.nativeEvent.layout;
     tabsHeight.current = height;
-    setListHeight(panelHeight.current - tabsHeight.current - panelChildrenHeight);
   };
 
   const handleCarouselChange = (val: number) => {

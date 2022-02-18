@@ -86,8 +86,20 @@ export const getWeekDayString = (weekValue: number) => {
   return _padStart(weekValue.toString(2), 8, '0').slice(0, 7);
 };
 
-export default {
-  getPswMaxLen,
-  getDefaultRandomLen,
-  getRandomPassword,
+/**
+ * 延时触发回调
+ * @param cb
+ * @param delay
+ * @returns returnType<typeof setTimeout>
+ */
+export const delayCall = (cb: () => void, delay = 3000) => {
+  const timer = setTimeout(() => {
+    try {
+      cb && cb();
+    } finally {
+      clearTimeout(timer);
+    }
+  }, delay);
+
+  return timer;
 };

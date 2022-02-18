@@ -17,9 +17,13 @@ import RandomPassword from './randomPassword';
 import TouchableWarpView from './touchableView';
 import BubbleTip from './bubbleTip';
 import DragSort from './dragSort';
+import AvPreview from './avPreview';
+import RemoteManager from './remoteManager';
 import { produceRouterDatas } from '../../utils';
 
 export default class LampCategoryScene extends Component {
+  static AvPreview = AvPreview;
+  static RemoteManager = RemoteManager;
   static CountDownButton = CountDownButtonDemo;
   static SlideChoose = SlideChooseDemo;
   static LinkSelect = LinkSelect;
