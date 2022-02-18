@@ -171,7 +171,7 @@ const ColorCard: React.FC<ColorCardsProps> = props => {
   useEffect(() => {
     Animated.timing(opacity, {
       toValue: opacityAnimationValue,
-      duration: 300,
+      duration: 150,
       useNativeDriver: false,
     }).start();
   }, [opacityAnimationValue]);
