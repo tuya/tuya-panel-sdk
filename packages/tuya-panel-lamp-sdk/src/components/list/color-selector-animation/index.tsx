@@ -29,6 +29,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
   delIconColor,
   scaleValue,
   scrollEnabled,
+  size,
 }) => {
   const [index, setIndx] = useState(selectIndex);
   const [newData, setNewData] = useState(data);
@@ -81,6 +82,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
             path={icon.add}
             style={[styles.buttonStyle, addBtnStyle]}
             iconColor={addIconColor}
+            size={size}
           />
         )}
         {showDel && (
@@ -89,6 +91,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
             path={icon.remove}
             style={[styles.buttonStyle, delBtnStyle]}
             iconColor={delIconColor}
+            size={size}
           />
         )}
       </>
@@ -195,6 +198,7 @@ ColorSelectorAnimation.defaultProps = {
   onDel() {},
   addIconColor: '#000000',
   delIconColor: '#000000',
+  size: 14,
 };
 
 const styles = StyleSheet.create({
