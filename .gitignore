@@ -408,3 +408,4 @@ scripts
 .npmrc
 **/*/package-lock.json
 .git-rewrite
+/.idea/codeStyles/
