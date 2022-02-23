@@ -10,3 +10,4 @@ export { default as BreakPointInput } from './break-point-input';
 // export { default as DpCacheText } from './dp-cache-text';
 export { default as SimpleVerticalSlider } from './simple-vertical-slider';
 export { default as TurnPlate } from './turn-plate';
+export { default as LineBoxSvg } from './line-box-svg';
