@@ -13,7 +13,7 @@ import { TYText, Utils } from 'tuya-panel-kit';
 import TimeFormatComponent from '../time-format-component';
 import Strings from './i18n';
 
-const { rangeTime, singleTime } = TimeFormatComponent;
+const { RangeTime, SingleTime } = TimeFormatComponent;
 
 const { convertX: cx } = Utils.RatioUtils;
 
@@ -83,9 +83,11 @@ const TimingRepeatList: React.FC<IProp> = ({
         {data.map(({ name, startTime, endTime = startTime }, i: number) => {
           return (
             <View key={i.toString()} style={[styles.itemStyle, itemStyle]}>
-              {startTime === endTime
-                ? singleTime({ time: startTime, is24Hour, ...singleTimeProps })
-                : rangeTime({ startTime, endTime, is24Hour, ...rangeTimeProps })}
+              {startTime === endTime ? (
+                <SingleTime time={startTime} is24Hour {...singleTimeProps} />
+              ) : (
+                <RangeTime startTime endTime is24Hour {...rangeTimeProps} />
+              )}
               <View style={[styles.rightStyle, rightStyle]}>
                 <TYText style={[styles.nameStyle, nameStyle]}>{name}</TYText>
               </View>

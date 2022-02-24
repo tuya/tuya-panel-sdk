@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, StyleProp, ViewStyle, TextStyle, StyleSheet } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
 import Strings from '../timing-repeat-list/i18n';
@@ -37,7 +37,7 @@ export interface ISingProp {
   timeStyle?: StyleProp<TextStyle>;
 }
 // eslint-disable-next-line react/display-name
-export default ({
+const SingleTime: FC<ISingProp> = ({
   time = 720,
   is24Hour = false,
   amText = Strings.getLang('TYLamp_am'),
@@ -76,3 +76,5 @@ const styles = StyleSheet.create({
     marginRight: cx(4),
   },
 });
+
+export default SingleTime;

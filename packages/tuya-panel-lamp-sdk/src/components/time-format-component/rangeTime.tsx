@@ -1,5 +1,5 @@
 /* eslint-disable no-param-reassign */
-import React from 'react';
+import React, { FC } from 'react';
 import { View, StyleProp, ViewStyle, TextStyle, StyleSheet } from 'react-native';
 import { TYText, Utils } from 'tuya-panel-kit';
 import Strings from '../timing-repeat-list/i18n';
@@ -59,7 +59,7 @@ export interface IRangeProp {
 }
 
 // eslint-disable-next-line react/display-name
-export default ({
+const RangeTime: FC<IRangeProp> = ({
   startTime = 60,
   endTime = 120,
   is24Hour = false,
@@ -158,3 +158,5 @@ const styles = StyleSheet.create({
     marginRight: cx(4),
   },
 });
+
+export default RangeTime;

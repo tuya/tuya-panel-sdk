@@ -1,7 +1,7 @@
-import rangeTime from './rangeTime';
-import singleTime from './singleTime';
+import RangeTime from './rangeTime';
+import SingleTime from './singleTime';
 
 export default {
-  rangeTime,
-  singleTime,
+  RangeTime,
+  SingleTime,
 };
