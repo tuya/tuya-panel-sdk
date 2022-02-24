@@ -35,6 +35,8 @@ import AddTimerScene from './NormalTiming/addTimer';
 import RepeatScene from './NormalTiming/weeks';
 import TestWhiteScene from './NormalTiming/testWhite';
 import RhythmsCircleScene from './RhythmsCircle';
+import TimeFormatComponentScene from './TimeFormatComponent';
+import TimingRepeatListScene from './TimingRepeatList';
 
 export default class LampScene extends Component {
   get data() {
@@ -74,6 +76,8 @@ export default class LampScene extends Component {
   static Repeat = RepeatScene;
   static TestWhite = TestWhiteScene;
   static RhythmsCircle = RhythmsCircleScene;
+  static TimeFormatComponent = TimeFormatComponentScene;
+  static TimingRepeatList = TimingRepeatListScene;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;

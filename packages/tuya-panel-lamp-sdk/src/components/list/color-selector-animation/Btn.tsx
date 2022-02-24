@@ -7,11 +7,12 @@ export interface IProps {
   style?: StyleProp<ViewStyle>;
   onPress?: () => void;
   path: string;
+  size: number;
 }
 
-const Btn: React.FC<IProps> = ({ style, onPress, iconColor, path }) => (
+const Btn: React.FC<IProps> = ({ style, onPress, iconColor, path, size }) => (
   <TouchableOpacity activeOpacity={1} onPress={onPress} style={style}>
-    <IconFont d={path} size={14} color={iconColor} />
+    <IconFont d={path} size={size} color={iconColor} />
   </TouchableOpacity>
 );
 
