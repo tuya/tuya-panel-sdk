@@ -52,6 +52,8 @@ module.exports = {
     TYLamp_sleepTiming_title: '入睡',
     TYLamp_12_title: '12小时进制',
     TYLamp_24_title: '24小时进制',
+    TYLamp_save: '保存',
+    TYLamp_test_white: '白光页面',
   },
 
   en: {
@@ -104,5 +106,7 @@ module.exports = {
     TYLamp_sleepTiming_title: 'Sleep',
     TYLamp_12_title: 'Base 12 hours',
     TYLamp_24_title: 'Base 24 hours',
+    TYLamp_save: 'Save',
+    TYLamp_test_white: 'White page',
   },
 };
