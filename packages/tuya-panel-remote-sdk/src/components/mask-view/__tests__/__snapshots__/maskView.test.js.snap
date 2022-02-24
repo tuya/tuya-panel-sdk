@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaskView components bottom render 1`] = `
+<View
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "left": -750,
+          "top": 323,
+        },
+        Object {
+          "height": 600,
+          "width": 520,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`MaskView components left render 1`] = `
+<View
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "left": -750,
+          "top": 323,
+        },
+        Object {
+          "height": 600,
+          "width": 520,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`MaskView components offset 1`] = `
+<View
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "left": -750,
+          "top": 323,
+        },
+        Object {
+          "height": 600,
+          "width": 520,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`MaskView components right render 1`] = `
+<View
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "left": -750,
+          "top": 323,
+        },
+        Object {
+          "height": 600,
+          "width": 520,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`MaskView components top render 1`] = `
+<View
+  style={
+    Object {
+      "display": "none",
+      "height": "100%",
+      "justifyContent": "center",
+      "position": "relative",
+      "width": "100%",
+    }
+  }
+>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "position": "absolute",
+          "width": "100%",
+        },
+        Object {
+          "left": -750,
+          "top": 323,
+        },
+        Object {
+          "height": 600,
+          "width": 520,
+        },
+        null,
+      ]
+    }
+  />
+</View>
+`;

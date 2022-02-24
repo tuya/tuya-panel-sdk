@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.6.0...@tuya/tuya-panel-remote-sdk@0.7.0) (2022-02-10)
+
+
+### Features
+
+* **remote:** Add new LetterSearch and MaskView component([#171](https://github.com/tuya/tuya-panel-sdk/issues/171)) ([8413239](https://github.com/tuya/tuya-panel-sdk/commit/8413239cf42911f19aa161e131254daa749c1588))
+
+
+
+
+
 # [0.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.5.0...@tuya/tuya-panel-remote-sdk@0.6.0) (2022-01-18)
 
 

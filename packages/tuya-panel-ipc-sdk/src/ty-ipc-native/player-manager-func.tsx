@@ -776,6 +776,39 @@ class PlayerManagerFun {
       );
     });
   };
+
+  // 开启视频浮窗
+  openFloatWindow = (): Promise<{ success: boolean; err?: any }> => {
+    return new Promise(resolve => {
+      if (CameraManager.openFloatWindowWithCallback) {
+        // 增加成功或失败回调 3.36
+        CameraManager.openFloatWindowWithCallback(
+          () => {
+            resolve({
+              success: true,
+            });
+          },
+          err => {
+            resolve({
+              success: false,
+              err,
+            });
+          }
+        );
+      } else if (CameraManager.openFloatWindow) {
+        // 该方法无回调信息，除ipc品类之外调用
+        CameraManager.openFloatWindow();
+        resolve({
+          success: true,
+        });
+      } else {
+        resolve({
+          success: false,
+          err: 'Method does not exist',
+        });
+      }
+    });
+  };
 }
 
 export default new PlayerManagerFun();

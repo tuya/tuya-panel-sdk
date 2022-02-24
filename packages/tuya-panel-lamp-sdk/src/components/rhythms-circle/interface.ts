@@ -36,7 +36,7 @@ export interface RhythmsCircleProps {
   /**
    * 数据
    */
-  data: IData[];
+  data?: IData[];
   /**
    * 滑块图标是否可拖动
    */

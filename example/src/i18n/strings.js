@@ -49,6 +49,8 @@ module.exports = {
     TYLamp_rhythms_tip1: '节点可以超过',
     TYLamp_hideBright: '隐藏亮度条',
     TYLamp_white: '白光',
+    TYLamp_save: '保存',
+    TYLamp_test_white: '白光页面',
   },
 
   en: {
@@ -99,5 +101,7 @@ module.exports = {
     TYLamp_rhythms_tip1: 'Node can more than',
     TYLamp_hideBright: 'Hide Brightness Slider',
     TYLamp_white: 'White',
+    TYLamp_save: 'Save',
+    TYLamp_test_white: 'White page',
   },
 };
