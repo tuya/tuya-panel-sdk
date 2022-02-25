@@ -7,6 +7,9 @@ import {
   MediaPlayer as MessageMediaPlayer,
 } from '../ty-ipc-message-player/tyIpcMessagePlayer';
 import TYRCTLifecycleManager from '../ty-ipc-player/components/tyrctLifecycleManager';
+import HomeDeviceManager from '../ty-ipc-multiple-player/native/homeDeviceManager';
+import MultiCameraManager from '../ty-ipc-multiple-player/native/multiCameraManager';
+import MultiDeviceManager from '../ty-ipc-multiple-player/native/multiDeviceManager';
 
 export default {
   /**
@@ -37,4 +40,16 @@ export default {
    * @description 原生控制面板生命周期监听模块
    */
   TYRCTLifecycleManager,
+  /**
+   * @description 跨设备信息模块
+   */
+  HomeDeviceManager,
+  /**
+   * @description 多设备预览功能控制
+   */
+  MultiCameraManager,
+  /**
+   * @description 跨设备下发
+   */
+  MultiDeviceManager,
 };
