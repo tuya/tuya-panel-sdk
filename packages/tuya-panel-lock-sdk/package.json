@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-lock-sdk",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "涂鸦门锁业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "directory": "packages/tuya-panel-lock-sdk"
   },
   "dependencies": {
-    "@tuya/tuya-panel-ipc-sdk": "^1.14.0",
+    "@tuya/tuya-panel-ipc-sdk": "^1.15.0",
     "color": "0.11.4",
     "lodash": "^4.17.11",
     "prop-types": "^15.6.2",

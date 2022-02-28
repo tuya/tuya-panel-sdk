@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.14.0...@tuya/tuya-panel-ipc-sdk@1.15.0) (2022-02-28)
+
+
+### Features
+
+* ipc-multiple-player ([#179](https://github.com/tuya/tuya-panel-sdk/issues/179)) ([f916ee4](https://github.com/tuya/tuya-panel-sdk/commit/f916ee4105927d86e65420620f4d91e353954aa4))
+
+
+
+
+
 # [1.14.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.13.1...@tuya/tuya-panel-ipc-sdk@1.14.0) (2022-02-16)
 
 
