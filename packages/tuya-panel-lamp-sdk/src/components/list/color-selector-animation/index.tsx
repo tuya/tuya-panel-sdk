@@ -24,10 +24,12 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
   delBtnStyle,
   activeStyle,
   btnStyle,
+  circleStyle,
   addIconColor,
   delIconColor,
   scaleValue,
   scrollEnabled,
+  size,
 }) => {
   const [index, setIndx] = useState(selectIndex);
   const [newData, setNewData] = useState(data);
@@ -60,7 +62,11 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
           onPress={() => onSelect(i)}
           style={active ? activeStyle : btnStyle}
         >
-          <Circle backgroundColor={color} scaleValue={active ? scaleValue : 1} />
+          <Circle
+            backgroundColor={color}
+            scaleValue={active ? scaleValue : 1}
+            style={circleStyle}
+          />
         </TouchableOpacity>
       );
     });
@@ -76,6 +82,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
             path={icon.add}
             style={[styles.buttonStyle, addBtnStyle]}
             iconColor={addIconColor}
+            size={size}
           />
         )}
         {showDel && (
@@ -84,6 +91,7 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
             path={icon.remove}
             style={[styles.buttonStyle, delBtnStyle]}
             iconColor={delIconColor}
+            size={size}
           />
         )}
       </>
@@ -107,7 +115,8 @@ const ColorSelectorAnimation: React.FC<IColorSelectorAnimationProp> = ({
   const handleDel = (i: number) => {
     onDel(i);
     if (refLayout.current) {
-      refX.current.scrollTo({ x: left * (newData.length + 1 - refNum.current) });
+      // animated修复安卓滑动问题
+      refX.current.scrollTo({ x: left * (newData.length + 1 - refNum.current), animated: false });
     }
   };
 
@@ -183,11 +192,13 @@ ColorSelectorAnimation.defaultProps = {
     marginBottom: cx(9),
     overflow: 'hidden',
   },
+  circleStyle: {},
   onSelect() {},
   onAdd() {},
   onDel() {},
   addIconColor: '#000000',
   delIconColor: '#000000',
+  size: 14,
 };
 
 const styles = StyleSheet.create({

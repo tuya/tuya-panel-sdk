@@ -51,6 +51,12 @@ module.exports = {
     TYLamp_white: '白光',
     TYLamp_save: '保存',
     TYLamp_test_white: '白光页面',
+    TYLamp_timing_repeat: '定时重复',
+    TYLamp_timing_tip: '目前设置的定时与以下存在重复',
+    TYLamp_normalTiming_title: '普通',
+    TYLamp_sleepTiming_title: '入睡',
+    TYLamp_12_title: '12小时进制',
+    TYLamp_24_title: '24小时进制',
   },
 
   en: {
@@ -103,5 +109,11 @@ module.exports = {
     TYLamp_white: 'White',
     TYLamp_save: 'Save',
     TYLamp_test_white: 'White page',
+    TYLamp_timing_repeat: 'Timed repetition',
+    TYLamp_timing_tip: 'The current timing is the same as the following',
+    TYLamp_normalTiming_title: 'Ordinary',
+    TYLamp_sleepTiming_title: 'Sleep',
+    TYLamp_12_title: 'Base 12 hours',
+    TYLamp_24_title: 'Base 24 hours',
   },
 };
