@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { FC, useRef } from 'react';
 import { View, StyleSheet, Image, Animated, TouchableOpacity, Easing } from 'react-native';
-import { TYText } from 'tuya-panel-kit';
+import { SwitchButton, TYText } from 'tuya-panel-kit';
 import { useControllableValue, useUpdateEffect } from 'ahooks';
 import { DrawerProps, DrawerData } from './interface';
 
@@ -15,6 +15,7 @@ const MusicDrawer: FC<DrawerProps> = props => {
     animateEasing,
     onPress,
     renderActiveContent,
+    switchOption,
   } = props;
   const {
     containerStyle,
@@ -89,7 +90,6 @@ const MusicDrawer: FC<DrawerProps> = props => {
         ? item.rightIconSource?.stopIcon
         : item.rightIconSource?.startIcon
       : item.rightIconSource?.normalIcon;
-
     if (res !== undefined) {
       return (
         <TouchableOpacity style={style.videoBtnBox} onPress={() => handlePress(item, index)}>
@@ -99,7 +99,19 @@ const MusicDrawer: FC<DrawerProps> = props => {
         </TouchableOpacity>
       );
     }
-    return <View />;
+    return (
+      <SwitchButton
+        value={activeIndex === index}
+        {...switchOption}
+        onValueChange={() => {
+          if (index === activeIndex) {
+            setActiveIndex(-1);
+          } else {
+            setActiveIndex(index);
+          }
+        }}
+      />
+    );
   };
   const renderItem = (item: DrawerData, index: number) => {
     return (

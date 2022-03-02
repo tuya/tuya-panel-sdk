@@ -19,13 +19,11 @@ const MusicDrawers: React.FC = () => {
       startIcon: Res.startIconLight,
     },
   }));
-  const CustomizeDrawerData = videoListData.map((item, index) => ({
+
+  const CustomizeDrawerData2 = videoListData.map((item, index) => ({
     id: item,
     title: `${Strings.getLang('TYLamp_mode')}${index}`,
     subTitle: `${Strings.getLang('TYLamp_subTitle')}${index}`,
-    rightIconSource: {
-      normalIcon: Res.startIconLight,
-    },
   }));
   const renderActiveContent = (key: string) => {
     if (key === 'multi') {
@@ -100,7 +98,7 @@ const MusicDrawers: React.FC = () => {
       <TYText style={styles.title}>{Strings.getLang('TYLamp_customizeDescription')}</TYText>
       <View style={{ alignItems: 'center' }}>
         <MusicDrawer
-          value={CustomizeDrawerData}
+          value={CustomizeDrawerData2}
           styles={{
             containerStyle: [styles.videoContainer, { backgroundColor: 'green', width: 300 }],
             contentStyle: [styles.videoContent, { backgroundColor: 'green' }],
@@ -113,6 +111,13 @@ const MusicDrawers: React.FC = () => {
           onChangeIndex={setActiveVideoIndex}
           height={150}
           renderActiveContent={renderCustomizeContent}
+          switchOption={{
+            theme: {
+              onTintColor: '#00F',
+              onThumbTintColor: '#57BCFB',
+              thumbTintColor: '#57BCFB',
+            },
+          }}
         />
       </View>
     </ScrollView>
