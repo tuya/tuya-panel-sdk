@@ -52,4 +52,20 @@ export interface DrawerProps {
   animateDuration?: number;
   // 动画过渡方式
   animateEasing?: 'linear' | 'bounce' | 'ease' | 'quad';
+  // 开关样式
+  switchOption?: SwitchOption;
+}
+interface SwitchOption {
+  theme: {
+    onTintColor?: string;
+    onThumbTintColor?: string;
+    thumbTintColor?: string;
+  };
+  size: {
+    activeSize?: number;
+    margin?: number;
+    width?: number;
+    height?: number;
+    borderRadius?: number;
+  };
 }

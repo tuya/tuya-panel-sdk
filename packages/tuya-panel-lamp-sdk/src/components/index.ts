@@ -34,6 +34,8 @@ export { default as WhiteCrossSlider } from './slider/white-cross-slider';
 
 export { default as CountdownPicker } from './picker/countdown-picker';
 
+export { default as ColorCard } from './picker/color-card';
+
 export { default as ColorDisk } from './preview/color-disk';
 
 export { default as ColorRect } from './preview/color-rect';

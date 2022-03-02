@@ -16,4 +16,5 @@ export default {
   stopIconLight: require('./stopIcon_light.png'),
   startIconLight: require('./startIcon_light.png'),
   timeBg: require('./timeBg.png'),
+  colorCard_colour: require('./colorCard_colour.png'),
 };
