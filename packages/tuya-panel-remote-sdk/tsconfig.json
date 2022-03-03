@@ -23,6 +23,6 @@
     "lib": ["es5", "es6", "es2015", "es2016", "es2017", "es2018", "esnext"],
     "typeRoots": ["./@types/"]
   },
-  "include": ["./src/**/*", "./@types/index.d.ts"],
+  "include": ["./src/**/*","./src/res/*", "./@types/index.d.ts"],
   "exclude": ["./node_modules", "./node_modules/@types/"]
 }

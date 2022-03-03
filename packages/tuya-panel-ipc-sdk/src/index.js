@@ -19,3 +19,5 @@ export { default as TYIpcMusicControl } from './ty-ipc-music-control';
 export { default as TYIpcLoading } from './ty-ipc-loading';
 export { default as TYIpcGridList } from './ty-ipc-grid-list';
 export { default as TYIpcStepButton } from './ty-ipc-step-button';
+export { default as TYIpcMultiplePlayer } from './ty-ipc-multiple-player';
+export { default as TYIpcMultipleManager } from './ty-ipc-multiple-player/playManager';

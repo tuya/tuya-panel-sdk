@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-szos-sdk",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "涂鸦深圳OS业务组件库",
   "main": "./lib/index.js",
   "scripts": {

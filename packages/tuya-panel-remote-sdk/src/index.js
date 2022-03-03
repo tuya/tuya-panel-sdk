@@ -6,6 +6,11 @@ import CurtainsAnimate from './components/curtains-animate';
 import PusherAnimate from './components/pusher-animate';
 import RollerAnimate from './components/roller-animate';
 import LightAnimate from './components/light-animate';
+import LetterSearch from './components/letter-search';
+import MaskView from './components/mask-view';
+import SearchInput from './components/search-input';
+// utils
+import RemoteUtils from './utils';
 
 export {
   CircleHandle,
@@ -15,4 +20,8 @@ export {
   PusherAnimate,
   RollerAnimate,
   LightAnimate,
+  LetterSearch,
+  MaskView,
+  SearchInput,
+  RemoteUtils,
 };

@@ -1,0 +1,1313 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorCard components basic render 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "alignItems": "center",
+        "height": 266,
+        "justifyContent": "center",
+        "width": 406,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "width": 400,
+      }
+    }
+  >
+    <TouchableWithoutFeedback
+      onPress={[Function]}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderColor": "#fff",
+              "borderWidth": 1,
+              "height": 180,
+              "opacity": 1,
+              "overflow": "hidden",
+              "width": 400,
+            },
+            Object {
+              "borderTopLeftRadius": 12,
+              "borderTopRightRadius": 12,
+            },
+          ]
+        }
+      >
+        <Svg
+          height={180}
+          preserveAspectRatio="xMidYMid meet"
+          width={400}
+        >
+          <Rect
+            fill="#FFDBD9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={0}
+          />
+          <Rect
+            fill="#FFE2D6"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={0}
+          />
+          <Rect
+            fill="#FFECD4"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={0}
+          />
+          <Rect
+            fill="#FCFADC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={0}
+          />
+          <Rect
+            fill="#F6FADC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={0}
+          />
+          <Rect
+            fill="#DDEDD3"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={0}
+          />
+          <Rect
+            fill="#CCF1FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={0}
+          />
+          <Rect
+            fill="#D4E4FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={0}
+          />
+          <Rect
+            fill="#D9C9FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={0}
+          />
+          <Rect
+            fill="#F1CCFF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={0}
+          />
+          <Rect
+            fill="#FAD4E2"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={0}
+          />
+          <Rect
+            fill="#FFB7B0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={31}
+          />
+          <Rect
+            fill="#FFC5AB"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={31}
+          />
+          <Rect
+            fill="#FFD9A8"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={31}
+          />
+          <Rect
+            fill="#FFFCC9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={31}
+          />
+          <Rect
+            fill="#F1F7B7"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={31}
+          />
+          <Rect
+            fill="#CDE8B5"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={31}
+          />
+          <Rect
+            fill="#92E4FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={31}
+          />
+          <Rect
+            fill="#A6C5FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={31}
+          />
+          <Rect
+            fill="#B18CFF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={31}
+          />
+          <Rect
+            fill="#E291FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={31}
+          />
+          <Rect
+            fill="#F5A4C0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={31}
+          />
+          <Rect
+            fill="#FF8C82"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={62}
+          />
+          <Rect
+            fill="#FFA67D"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={62}
+          />
+          <Rect
+            fill="#FFC978"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={62}
+          />
+          <Rect
+            fill="#FFFA94"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={62}
+          />
+          <Rect
+            fill="#EAF28F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={62}
+          />
+          <Rect
+            fill="#B2DE8C"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={62}
+          />
+          <Rect
+            fill="#53D8FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={62}
+          />
+          <Rect
+            fill="#73A6FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={62}
+          />
+          <Rect
+            fill="#854EFC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={62}
+          />
+          <Rect
+            fill="#D557FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={62}
+          />
+          <Rect
+            fill="#FF5996"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={62}
+          />
+          <Rect
+            fill="#FF614F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={93}
+          />
+          <Rect
+            fill="#FF8547"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={93}
+          />
+          <Rect
+            fill="#FFB640"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={93}
+          />
+          <Rect
+            fill="#FFF86B"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={93}
+          />
+          <Rect
+            fill="#E4F065"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={93}
+          />
+          <Rect
+            fill="#96D45F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={93}
+          />
+          <Rect
+            fill="#00C6FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={93}
+          />
+          <Rect
+            fill="#3A88FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={93}
+          />
+          <Rect
+            fill="#5E2FEB"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={93}
+          />
+          <Rect
+            fill="#BD38F2"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={93}
+          />
+          <Rect
+            fill="#FF2172"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={93}
+          />
+          <Rect
+            fill="#FF3F14"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={124}
+          />
+          <Rect
+            fill="#FF6A00"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={124}
+          />
+          <Rect
+            fill="#FFAA00"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={124}
+          />
+          <Rect
+            fill="#FFFC42"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={124}
+          />
+          <Rect
+            fill="#DBED37"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={124}
+          />
+          <Rect
+            fill="#75BA3F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={124}
+          />
+          <Rect
+            fill="#00A3D9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={124}
+          />
+          <Rect
+            fill="#0061FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={124}
+          />
+          <Rect
+            fill="#4D22B3"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={124}
+          />
+          <Rect
+            fill="#C135F0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={124}
+          />
+          <Rect
+            fill="#FA055B"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={124}
+          />
+        </Svg>
+      </AnimatedComponent>
+    </TouchableWithoutFeedback>
+  </View>
+  <View
+    style={
+      Object {
+        "width": 400,
+      }
+    }
+  >
+    <Slider
+      activeColor="#fff"
+      borderColor="transparent"
+      borderWidth={1}
+      clickEnabled={true}
+      disabled={false}
+      fontColor="#000"
+      invalidSwipeDistance={7}
+      max={1000}
+      min={10}
+      minPercent={1}
+      onGrant={[Function]}
+      onMove={[Function]}
+      onPress={[Function]}
+      onRelease={[Function]}
+      onlySlider={false}
+      opacityAnimationValue={1}
+      showPercent={true}
+      style={
+        Object {
+          "width": 400,
+        }
+      }
+      tempValue={0}
+      trackColor="grey"
+      value={0}
+    />
+  </View>
+</View>
+`;
+
+exports[`ColorCard components basic render no slider 1`] = `
+<View
+  style={
+    Array [
+      undefined,
+      Object {
+        "alignItems": "center",
+        "height": 156,
+        "justifyContent": "center",
+        "width": 286,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "width": 280,
+      }
+    }
+  >
+    <TouchableWithoutFeedback
+      onPress={[Function]}
+      style={
+        Object {
+          "width": 280,
+        }
+      }
+    >
+      <AnimatedComponent
+        style={
+          Array [
+            Object {
+              "borderColor": "#fff",
+              "borderWidth": 1,
+              "height": 70,
+              "opacity": 1,
+              "overflow": "hidden",
+              "width": 280,
+            },
+            Object {
+              "borderTopLeftRadius": 12,
+              "borderTopRightRadius": 12,
+            },
+          ]
+        }
+      >
+        <Svg
+          height={70}
+          preserveAspectRatio="xMidYMid meet"
+          width={280}
+        >
+          <Rect
+            fill="#FFDBD9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={0}
+          />
+          <Rect
+            fill="#FFE2D6"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={0}
+          />
+          <Rect
+            fill="#FFECD4"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={0}
+          />
+          <Rect
+            fill="#FCFADC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={0}
+          />
+          <Rect
+            fill="#F6FADC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={0}
+          />
+          <Rect
+            fill="#DDEDD3"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={0}
+          />
+          <Rect
+            fill="#CCF1FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={0}
+          />
+          <Rect
+            fill="#D4E4FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={0}
+          />
+          <Rect
+            fill="#D9C9FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={0}
+          />
+          <Rect
+            fill="#F1CCFF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={0}
+          />
+          <Rect
+            fill="#FAD4E2"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={0}
+          />
+          <Rect
+            fill="#FFB7B0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={31}
+          />
+          <Rect
+            fill="#FFC5AB"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={31}
+          />
+          <Rect
+            fill="#FFD9A8"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={31}
+          />
+          <Rect
+            fill="#FFFCC9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={31}
+          />
+          <Rect
+            fill="#F1F7B7"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={31}
+          />
+          <Rect
+            fill="#CDE8B5"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={31}
+          />
+          <Rect
+            fill="#92E4FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={31}
+          />
+          <Rect
+            fill="#A6C5FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={31}
+          />
+          <Rect
+            fill="#B18CFF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={31}
+          />
+          <Rect
+            fill="#E291FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={31}
+          />
+          <Rect
+            fill="#F5A4C0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={31}
+          />
+          <Rect
+            fill="#FF8C82"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={62}
+          />
+          <Rect
+            fill="#FFA67D"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={62}
+          />
+          <Rect
+            fill="#FFC978"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={62}
+          />
+          <Rect
+            fill="#FFFA94"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={62}
+          />
+          <Rect
+            fill="#EAF28F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={62}
+          />
+          <Rect
+            fill="#B2DE8C"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={62}
+          />
+          <Rect
+            fill="#53D8FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={62}
+          />
+          <Rect
+            fill="#73A6FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={62}
+          />
+          <Rect
+            fill="#854EFC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={62}
+          />
+          <Rect
+            fill="#D557FF"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={62}
+          />
+          <Rect
+            fill="#FF5996"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={62}
+          />
+          <Rect
+            fill="#FF614F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={93}
+          />
+          <Rect
+            fill="#FF8547"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={93}
+          />
+          <Rect
+            fill="#FFB640"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={93}
+          />
+          <Rect
+            fill="#FFF86B"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={93}
+          />
+          <Rect
+            fill="#E4F065"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={93}
+          />
+          <Rect
+            fill="#96D45F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={93}
+          />
+          <Rect
+            fill="#00C6FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={93}
+          />
+          <Rect
+            fill="#3A88FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={93}
+          />
+          <Rect
+            fill="#5E2FEB"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={93}
+          />
+          <Rect
+            fill="#BD38F2"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={93}
+          />
+          <Rect
+            fill="#FF2172"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={93}
+          />
+          <Rect
+            fill="#FF3F14"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={0}
+            y={124}
+          />
+          <Rect
+            fill="#FF6A00"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={31}
+            y={124}
+          />
+          <Rect
+            fill="#FFAA00"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={62}
+            y={124}
+          />
+          <Rect
+            fill="#FFFC42"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={93}
+            y={124}
+          />
+          <Rect
+            fill="#DBED37"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={124}
+            y={124}
+          />
+          <Rect
+            fill="#75BA3F"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={155}
+            y={124}
+          />
+          <Rect
+            fill="#00A3D9"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={186}
+            y={124}
+          />
+          <Rect
+            fill="#0061FC"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={217}
+            y={124}
+          />
+          <Rect
+            fill="#4D22B3"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={248}
+            y={124}
+          />
+          <Rect
+            fill="#C135F0"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={279}
+            y={124}
+          />
+          <Rect
+            fill="#FA055B"
+            height={31}
+            key="[object Object]"
+            rx={0}
+            ry={0}
+            width={31}
+            x={310}
+            y={124}
+          />
+        </Svg>
+      </AnimatedComponent>
+    </TouchableWithoutFeedback>
+    <AnimatedComponent
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "borderColor": "#fff",
+          },
+          Object {
+            "borderRadius": 10,
+            "borderWidth": 3,
+            "height": 34.6,
+            "left": -32.5,
+            "position": "absolute",
+            "top": -32.5,
+            "width": 34.6,
+          },
+          false,
+          false,
+          false,
+          undefined,
+          undefined,
+        ]
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "width": 280,
+      }
+    }
+  >
+    <Slider
+      activeColor="#fff"
+      borderColor="transparent"
+      borderWidth={1}
+      clickEnabled={true}
+      disabled={false}
+      fontColor="#000"
+      invalidSwipeDistance={7}
+      max={1000}
+      min={10}
+      minPercent={1}
+      onGrant={[Function]}
+      onMove={[Function]}
+      onPress={[Function]}
+      onRelease={[Function]}
+      onlySlider={false}
+      opacityAnimationValue={1}
+      showPercent={true}
+      style={
+        Object {
+          "width": 280,
+        }
+      }
+      tempValue={0}
+      trackColor="grey"
+      value={1000}
+    />
+  </View>
+</View>
+`;

@@ -5,7 +5,7 @@ exports[`DaySwitch components basic DaySwitch render 1`] = `
   <Header
     onNext={[Function]}
     onPrev={[Function]}
-    value="2021-12-30"
+    value="2022-01-18"
   />
 </View>
 `;
@@ -15,7 +15,7 @@ exports[`DaySwitch components basic DaySwitch render controlled 1`] = `
   <Header
     onNext={[Function]}
     onPrev={[Function]}
-    value="2021-12-30"
+    value="2022-01-18"
   />
 </View>
 `;
@@ -59,7 +59,7 @@ exports[`DaySwitch components basic MonthSwitch render 1`] = `
   <Header
     onNext={[Function]}
     onPrev={[Function]}
-    value="2021-12"
+    value="2022-01"
   />
 </View>
 `;
@@ -69,7 +69,7 @@ exports[`DaySwitch components basic WeekSwitch render 1`] = `
   <Header
     onNext={[Function]}
     onPrev={[Function]}
-    value="2021-12-30-2021-12-30"
+    value="2022-01-18-2022-01-18"
   />
 </View>
 `;

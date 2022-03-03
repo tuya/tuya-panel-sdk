@@ -34,6 +34,8 @@ export { default as WhiteCrossSlider } from './slider/white-cross-slider';
 
 export { default as CountdownPicker } from './picker/countdown-picker';
 
+export { default as ColorCard } from './picker/color-card';
+
 export { default as ColorDisk } from './preview/color-disk';
 
 export { default as ColorRect } from './preview/color-rect';
@@ -55,3 +57,7 @@ export { default as TabsBar } from './tabs-bar';
 export { default as NormalTiming } from './timer/normal-timing';
 
 export { default as RhythmsCircle } from './rhythms-circle';
+
+export { default as TimeFormatComponent } from './time-format-component';
+
+export { default as TimingRepeatList } from './timing-repeat-list';

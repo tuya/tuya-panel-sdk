@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.15.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.14.0...@tuya/tuya-panel-ipc-sdk@1.15.0) (2022-02-28)
+
+
+### Features
+
+* ipc-multiple-player ([#179](https://github.com/tuya/tuya-panel-sdk/issues/179)) ([f916ee4](https://github.com/tuya/tuya-panel-sdk/commit/f916ee4105927d86e65420620f4d91e353954aa4))
+
+
+
+
+
+# [1.14.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.13.1...@tuya/tuya-panel-ipc-sdk@1.14.0) (2022-02-16)
+
+
+### Features
+
+* active connect ([#178](https://github.com/tuya/tuya-panel-sdk/issues/178)) ([bcacc04](https://github.com/tuya/tuya-panel-sdk/commit/bcacc0472ddc57cc814e64ac7d65b66edbc595f1))
+* float window ([#177](https://github.com/tuya/tuya-panel-sdk/issues/177)) ([c0495cd](https://github.com/tuya/tuya-panel-sdk/commit/c0495cd5692720aff787876f3c4d5e3eabadc3a6))
+
+
+
+
+
+## [1.13.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.13.0...@tuya/tuya-panel-ipc-sdk@1.13.1) (2022-02-09)
+
+**Note:** Version bump only for package @tuya/tuya-panel-ipc-sdk
+
+
+
+
+
+# [1.13.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.12.0...@tuya/tuya-panel-ipc-sdk@1.13.0) (2022-01-14)
+
+
+### Features
+
+* **ipc-panel-sdk:** add re-connect error code ([#167](https://github.com/tuya/tuya-panel-sdk/issues/167)) ([029cb54](https://github.com/tuya/tuya-panel-sdk/commit/029cb54670fdf7f8a0d9fe8909101d807406d0d7))
+* add Bubble and DargSort ([#156](https://github.com/tuya/tuya-panel-sdk/issues/156)) ([a6ed10a](https://github.com/tuya/tuya-panel-sdk/commit/a6ed10a981e679c4ec9691b1c9d35aaca2505ab9))
+
+
+
+
+
 # 1.12.0 (2021-12-21)
 
 

@@ -1,0 +1,254 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Slider basic mount 1`] = `
+<Slider
+  activeColor="#fff"
+  clickEnabled={false}
+  disabled={false}
+  fontColor="#000"
+  invalidSwipeDistance={7}
+  max={1000}
+  min={10}
+  minPercent={1}
+  onGrant={[Function]}
+  onMove={[Function]}
+  onPress={[Function]}
+  onRelease={[Function]}
+  onlySlider={false}
+  opacityAnimationValue={1}
+  showPercent={true}
+  tempValue={0}
+  trackColor="rgba(255,255,255,0.1)"
+  value={100}
+>
+  <View
+    style={
+      Object {
+        "borderBottomLeftRadius": 12,
+        "borderBottomRightRadius": 12,
+        "borderColor": undefined,
+        "borderTopLeftRadius": 0,
+        "borderTopRightRadius": 0,
+        "borderWidth": undefined,
+        "marginTop": 2,
+        "overflow": "hidden",
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "borderBottomLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "borderColor": undefined,
+          "borderTopLeftRadius": 0,
+          "borderTopRightRadius": 0,
+          "borderWidth": undefined,
+          "marginTop": 2,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <AnimatedComponent
+        accessibilityLabel="ReactColorPicker_Slider"
+        onLayout={[Function]}
+        onMoveShouldSetResponder={[Function]}
+        onMoveShouldSetResponderCapture={[Function]}
+        onResponderEnd={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderReject={[Function]}
+        onResponderRelease={[Function]}
+        onResponderStart={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        onStartShouldSetResponderCapture={[Function]}
+        pointerEvents="box-only"
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "borderBottomLeftRadius": 12,
+              "borderBottomRightRadius": 12,
+              "flexDirection": "row",
+              "height": 80,
+              "justifyContent": "center",
+              "overflow": "hidden",
+              "width": "100%",
+            },
+            Object {
+              "borderBottomLeftRadius": 12,
+              "borderBottomRightRadius": 12,
+              "opacity": 1,
+              "overflow": "hidden",
+            },
+          ]
+        }
+      >
+        <View
+          accessibilityLabel="ReactColorPicker_Slider"
+          onLayout={[Function]}
+          onMoveShouldSetResponder={[Function]}
+          onMoveShouldSetResponderCapture={[Function]}
+          onResponderEnd={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderReject={[Function]}
+          onResponderRelease={[Function]}
+          onResponderStart={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          onStartShouldSetResponderCapture={[Function]}
+          pointerEvents="box-only"
+          style={
+            Object {
+              "alignItems": "center",
+              "borderBottomLeftRadius": 12,
+              "borderBottomRightRadius": 12,
+              "flexDirection": "row",
+              "height": 80,
+              "justifyContent": "center",
+              "opacity": 1,
+              "overflow": "hidden",
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessibilityLabel="ReactColorPicker_Slider"
+            onLayout={[Function]}
+            onMoveShouldSetResponder={[Function]}
+            onMoveShouldSetResponderCapture={[Function]}
+            onResponderEnd={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderReject={[Function]}
+            onResponderRelease={[Function]}
+            onResponderStart={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            onStartShouldSetResponderCapture={[Function]}
+            pointerEvents="box-only"
+            style={
+              Object {
+                "alignItems": "center",
+                "borderBottomLeftRadius": 12,
+                "borderBottomRightRadius": 12,
+                "flexDirection": "row",
+                "height": 80,
+                "justifyContent": "center",
+                "opacity": 1,
+                "overflow": "hidden",
+                "width": "100%",
+              }
+            }
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#313131",
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "backgroundColor": "rgba(255,255,255,0.1)",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#313131",
+                      "height": "100%",
+                      "width": "100%",
+                    },
+                    Object {
+                      "backgroundColor": "rgba(255,255,255,0.1)",
+                    },
+                  ]
+                }
+              />
+            </View>
+          </View>
+        </View>
+      </AnimatedComponent>
+    </View>
+  </View>
+</Slider>
+`;
+
+exports[`Slider basic render 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomLeftRadius": 12,
+      "borderBottomRightRadius": 12,
+      "borderColor": undefined,
+      "borderTopLeftRadius": 0,
+      "borderTopRightRadius": 0,
+      "borderWidth": undefined,
+      "marginTop": 2,
+      "overflow": "hidden",
+    }
+  }
+>
+  <AnimatedComponent
+    accessibilityLabel="ReactColorPicker_Slider"
+    onLayout={[Function]}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pointerEvents="box-only"
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "borderBottomLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "flexDirection": "row",
+          "height": 80,
+          "justifyContent": "center",
+          "overflow": "hidden",
+          "width": "100%",
+        },
+        Object {
+          "borderBottomLeftRadius": 12,
+          "borderBottomRightRadius": 12,
+          "opacity": 1,
+          "overflow": "hidden",
+        },
+      ]
+    }
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#313131",
+            "height": "100%",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "rgba(255,255,255,0.1)",
+          },
+        ]
+      }
+    />
+  </AnimatedComponent>
+</View>
+`;
