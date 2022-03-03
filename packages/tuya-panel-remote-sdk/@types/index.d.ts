@@ -1685,7 +1685,6 @@ export interface PusherAnimate {
 export const Pusher: React.ComponentClass<PusherAnimate>;
 
 export const LightAnimate: React.ComponentClass<LightAnimateProps>;
-
 export interface LightAnimateProps {
   /**
    * @language zh-CN
@@ -2131,7 +2130,6 @@ export interface LetterSearchProps {
    */
   searchListSubTextStyle?: StyleProp<ViewStyle>;
 }
-
 export const LetterSearch: React.ComponentClass<LetterSearchProps>;
 
 export interface MaskViewProp {
@@ -2259,3 +2257,207 @@ export interface MaskViewProp {
 }
 
 export const MaskView: React.ComponentClass<MaskViewProp>;
+
+export interface SearchInputProp {
+  /**
+   * @language zh-CN
+   * @description 组件样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description component style
+   * @defaultValue null
+   */
+  style?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索框样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description search box style
+   * @defaultValue null
+   */
+  inputStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 搜索框搜索事件
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description search box search event
+   * @defaultValue null
+   */
+  onChange: (value: string) => void;
+  /**
+   * @language zh-CN
+   * @description 是否显示重置按钮，默认不显示
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description Whether to display the reset button, it is not displayed by default
+   * @defaultValue false
+   */
+  allowClear?: boolean;
+  /**
+   * @language zh-CN
+   * @description 搜索框placeholder
+   * @defaultValue 请输入关键字搜索
+   */
+  /**
+   * @language en-US
+   * @description search box placeholder
+   * @defaultValue Please enter keyword search
+   */
+  placeholder?: string;
+  /**
+   * @language zh-CN
+   * @description 搜索框placeholder字体颜色
+   * @defaultValue rgba(0,0,0,0.7)
+   */
+  /**
+   * @language en-US
+   * @description Search box placeholder font color
+   * @defaultValue rgba(0,0,0,0.7)
+   */
+  placeholderTextColor?: string;
+  /**
+   * @language zh-CN
+   * @description 重置事件
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description reset event
+   * @defaultValue null
+   */
+  onCancel?: (() => void) | null;
+  /**
+   * @language zh-CN
+   * @description 是否显示搜索图标
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description whether to show the search icon
+   * @defaultValue null
+   */
+  showSearchIcon?: boolean;
+  /**
+   * @language zh-CN
+   * @description 搜索图标样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Search icon style
+   * @defaultValue null
+   */
+  searchImageStyle?: ImageStyle;
+  /**
+   * @language zh-CN
+   * @description 自定义搜索图标
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description custom search icon
+   * @defaultValue null
+   */
+  searchIcon?: string;
+  /**
+   * @language zh-CN
+   * @description 搜索框默认值
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description search box default
+   * @defaultValue null
+   */
+  defaultValue?: string;
+  /**
+   * @language zh-CN
+   * @description 重置文案自定义，不超过12个字符
+   * @defaultValue 重置
+   */
+  /**
+   * @language en-US
+   * @description Reset copywriting customization, no more than 12 characters
+   * @defaultValue Reset
+   */
+  resetValue?: string;
+  /**
+   * @language zh-CN
+   * @description 重置字体样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description reset font style
+   * @defaultValue null
+   */
+  resetTextStyle?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 重置按钮样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description reset button style
+   * @defaultValue null
+   */
+  resetTouchableStyle?: StyleProp<ViewStyle>;
+}
+export const SearchInput: React.ComponentClass<SearchInputProp>;
+
+// 红外线方法库
+export const RemoteUtils: {
+  /**
+   * @language zh-CN
+   * @description 字符串转对象
+   * @param {string} obj 需要装对象的字符串
+   * @return {string} 对象
+   */
+  /**
+   * @language en-US
+   * @description String to Object
+   * @param {string} obj The string to be loaded with the object
+   * @return {string} Object
+   */
+  parseJSON: (obj: string) => any;
+
+  /**
+   * @language zh-CN
+   * @description 设置颜色透明度,仅支持16进制的颜色
+   * @param {string} color 颜色
+   * @param {number} opacity 透明度，值为0-1
+   * @return {string} 设置过透明度的颜色值
+   * @return {string} 非16进制的颜色返回原值
+   */
+  /**
+   * @language en-US
+   * @description Set the color transparency, only supports hexadecimal colors
+   * @param {string} color color
+   * @param {number} opacity opacity，value:0-1
+   * @return {string} Color value with transparency set
+   * @return {string} Colors other than hexadecimal return the original value
+   */
+  hexToRgb: (color: string, opacity: number) => string;
+  /**
+   * @language zh-CN
+   * @description 空调数据转化
+   * @param {string} codeList 码库数据列表
+   */
+  /**
+   * @language en-US
+   * @description Air Conditioning Data Conversion
+   * @param {string} codeList Codebase data list
+   */
+  getAirKeyData: (codeList: Array<any>) => any;
+};

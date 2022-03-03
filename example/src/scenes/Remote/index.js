@@ -11,6 +11,7 @@ import RollerAnimate from './RollerAnimate';
 import LightAnimate from './LightAnimate';
 import LetterSearch from './LetterSearch';
 import MaskView from './MaskView';
+import SearchInput from './SearchInput';
 
 export default class SweepRobotCategoryScene extends Component {
   get data() {
@@ -27,6 +28,7 @@ export default class SweepRobotCategoryScene extends Component {
   static LightAnimate = LightAnimate;
   static LetterSearch = LetterSearch;
   static MaskView = MaskView;
+  static SearchInput = SearchInput;
 
   render() {
     return (
