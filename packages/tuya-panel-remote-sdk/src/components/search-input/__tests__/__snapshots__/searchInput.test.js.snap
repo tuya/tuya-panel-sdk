@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 100,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 20,
+        "position": "relative",
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    defaultValue=""
+    inlineImageLeft="search"
+    onChangeText={[Function]}
+    placeholder="Please enter keyword search"
+    placeholderTextColor="rgba(0,0,0,0.7)"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "borderColor": "gray",
+          "borderRadius": 34,
+          "flex": 1,
+          "height": 68,
+          "padding": 0,
+          "paddingLeft": 30,
+        },
+        Object {},
+        undefined,
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+</View>
+`;
+
+exports[`SearchInput components custom render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "height": 100,
+        "justifyContent": "space-between",
+        "paddingHorizontal": 20,
+        "position": "relative",
+        "width": "100%",
+      },
+      Object {
+        "backgroundColor": "yellow",
+      },
+    ]
+  }
+>
+  <TextInput
+    allowFontScaling={true}
+    defaultValue=""
+    inlineImageLeft="search"
+    onChangeText={[Function]}
+    placeholder="Please enter keyword search"
+    placeholderTextColor="red"
+    rejectResponderTermination={true}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#F8F8F8",
+          "borderColor": "gray",
+          "borderRadius": 34,
+          "flex": 1,
+          "height": 68,
+          "padding": 0,
+          "paddingLeft": 30,
+        },
+        Object {
+          "paddingLeft": 72,
+        },
+        Object {
+          "backgroundColor": "#ccc",
+        },
+      ]
+    }
+    underlineColorAndroid="transparent"
+  />
+  <Image
+    source={1}
+    style={
+      Array [
+        Object {
+          "height": 32,
+          "left": 50,
+          "position": "absolute",
+          "width": 32,
+        },
+        undefined,
+        Object {
+          "tintColor": "rgba(0,0,0,0.3)",
+        },
+      ]
+    }
+  />
+  <TouchableOpacity
+    activeOpacity={0.8}
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "marginLeft": 20,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          undefined,
+          Object {
+            "color": "#000",
+            "fontSize": 28,
+          },
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      Clear
+    </TYText>
+  </TouchableOpacity>
+</View>
+`;
