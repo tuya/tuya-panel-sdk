@@ -1,0 +1,877 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DeviceItem components content 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <Swipeout
+      accessibilityLabel="Swipeout"
+      autoClose={true}
+      buttonWidth={160}
+      disabled={false}
+      rowID={-1}
+      sectionID={-1}
+      sensitivity={50}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+            },
+            Object {
+              "borderRadius": 20,
+              "height": 220,
+              "width": 690,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "width": 160,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View>
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(51, 51, 51)",
+                      "fontSize": 36,
+                      "marginBottom": 16,
+                    },
+                    null,
+                  ]
+                }
+                text="Title"
+                type={null}
+                weight={null}
+              />
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(51, 51, 51, 0.6)",
+                      "fontSize": 24,
+                    },
+                    null,
+                  ]
+                }
+                text="SubTitle"
+                type={null}
+                weight={null}
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 10,
+                "width": 60,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={Object {}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </Swipeout>
+  </View>
+</View>
+`;
+
+exports[`DeviceItem components custom content 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <Swipeout
+      accessibilityLabel="Swipeout"
+      autoClose={true}
+      buttonWidth={160}
+      disabled={false}
+      rowID={-1}
+      sectionID={-1}
+      sensitivity={50}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        style={
+          Object {
+            "height": "100%",
+          }
+        }
+        text="自定义内容"
+        type={null}
+        weight={null}
+      />
+    </Swipeout>
+  </View>
+</View>
+`;
+
+exports[`DeviceItem components extra 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <Swipeout
+      accessibilityLabel="Swipeout"
+      autoClose={true}
+      buttonWidth={160}
+      disabled={false}
+      rowID={-1}
+      sectionID={-1}
+      sensitivity={50}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+            },
+            Object {
+              "borderRadius": 20,
+              "height": 220,
+              "width": 690,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "width": 160,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View>
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(51, 51, 51)",
+                      "fontSize": 36,
+                      "marginBottom": 16,
+                    },
+                    null,
+                  ]
+                }
+                type={null}
+                weight={null}
+              />
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(51, 51, 51, 0.6)",
+                      "fontSize": 24,
+                    },
+                    null,
+                  ]
+                }
+                type={null}
+                weight={null}
+              />
+            </View>
+          </View>
+          <TYText
+            align={null}
+            color={null}
+            size={null}
+            text="extra"
+            type={null}
+            weight={null}
+          />
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 10,
+                "width": 60,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={Object {}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </Swipeout>
+  </View>
+</View>
+`;
+
+exports[`DeviceItem components leftIcon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <Swipeout
+      accessibilityLabel="Swipeout"
+      autoClose={true}
+      buttonWidth={160}
+      disabled={false}
+      rowID={-1}
+      sectionID={-1}
+      sensitivity={50}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+            },
+            Object {
+              "borderRadius": 20,
+              "height": 220,
+              "width": 690,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "width": 160,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View>
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(51, 51, 51)",
+                      "fontSize": 36,
+                      "marginBottom": 16,
+                    },
+                    null,
+                  ]
+                }
+                type={null}
+                weight={null}
+              />
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(51, 51, 51, 0.6)",
+                      "fontSize": 24,
+                    },
+                    null,
+                  ]
+                }
+                type={null}
+                weight={null}
+              />
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "justifyContent": "center",
+                "marginLeft": 10,
+                "width": 60,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={Object {}}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </Swipeout>
+  </View>
+</View>
+`;
+
+exports[`DeviceItem components rightIcon 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <Swipeout
+      accessibilityLabel="Swipeout"
+      autoClose={true}
+      buttonWidth={160}
+      disabled={false}
+      rowID={-1}
+      sectionID={-1}
+      sensitivity={50}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <TouchableOpacity
+        activeOpacity={0.8}
+        style={
+          Array [
+            Object {
+              "backgroundColor": "#FFF",
+            },
+            Object {
+              "borderRadius": 20,
+              "height": 220,
+              "width": 690,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "justifyContent": "center",
+                "width": 160,
+              }
+            }
+          >
+            <Image
+              source={1}
+              style={
+                Object {
+                  "height": 80,
+                  "width": 80,
+                }
+              }
+            />
+          </View>
+          <View
+            style={
+              Object {
+                "flex": 1,
+                "justifyContent": "center",
+              }
+            }
+          >
+            <View>
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgb(51, 51, 51)",
+                      "fontSize": 36,
+                      "marginBottom": 16,
+                    },
+                    null,
+                  ]
+                }
+                text="Title"
+                type={null}
+                weight={null}
+              />
+              <TYText
+                align={null}
+                color={null}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                size={null}
+                style={
+                  Array [
+                    Object {
+                      "color": "rgba(51, 51, 51, 0.6)",
+                      "fontSize": 24,
+                    },
+                    null,
+                  ]
+                }
+                text="SubTitle"
+                type={null}
+                weight={null}
+              />
+            </View>
+          </View>
+        </View>
+      </TouchableOpacity>
+    </Swipeout>
+  </View>
+</View>
+`;
+
+exports[`DeviceItem components scroll 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 20,
+        "flexDirection": "row",
+      },
+      Object {
+        "height": 220,
+        "width": 690,
+      },
+      null,
+      Object {
+        "borderWidth": 0,
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "shadowColor": "#000",
+        "shadowOffset": Object {
+          "height": 0,
+          "width": 0,
+        },
+        "shadowOpacity": 0.1,
+        "shadowRadius": 10,
+      }
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#FFF",
+          },
+          Object {
+            "borderRadius": 20,
+            "height": 220,
+            "width": 690,
+          },
+          null,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "height": "100%",
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "justifyContent": "center",
+              "width": 160,
+            }
+          }
+        >
+          <Image
+            source={1}
+            style={
+              Object {
+                "height": 80,
+                "width": 80,
+              }
+            }
+          />
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View>
+            <TYText
+              align={null}
+              color={null}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "rgb(51, 51, 51)",
+                    "fontSize": 36,
+                    "marginBottom": 16,
+                  },
+                  null,
+                ]
+              }
+              text="Title"
+              type={null}
+              weight={null}
+            />
+            <TYText
+              align={null}
+              color={null}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "rgba(51, 51, 51, 0.6)",
+                    "fontSize": 24,
+                  },
+                  null,
+                ]
+              }
+              text="SubTitle"
+              type={null}
+              weight={null}
+            />
+          </View>
+        </View>
+      </View>
+    </TouchableOpacity>
+  </View>
+</View>
+`;
