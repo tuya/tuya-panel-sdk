@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.8.0...@tuya/tuya-panel-remote-sdk@0.9.0) (2022-03-15)
+
+
+### Features
+
+* Add DeviceItem Component([#185](https://github.com/tuya/tuya-panel-sdk/issues/185)) ([387827a](https://github.com/tuya/tuya-panel-sdk/commit/387827a3e887940e254cbd9a99f5c1cd6faffbdc))
+
+
+
+
+
 # [0.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.7.0...@tuya/tuya-panel-remote-sdk@0.8.0) (2022-03-03)
 
 
