@@ -2416,6 +2416,253 @@ export interface SearchInputProp {
 }
 export const SearchInput: React.ComponentClass<SearchInputProp>;
 
+export interface DeviceItemProp {
+  /**
+   * @language zh-CN
+   * @description 容器高度
+   * @defaultValue cx(110)
+   */
+  /**
+   * @language en-US
+   * @description component height
+   * @defaultValue cx(110)
+   */
+  height?: number;
+  /**
+   * @language zh-CN
+   * @description 容器宽度
+   * @defaultValue screenWidth * 0.92
+   */
+  /**
+   * @language en-US
+   * @description component width
+   * @defaultValue screenWidth * 0.92
+   */
+  width?: number;
+  /**
+   * @language zh-CN
+   * @description 左侧的icon
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description left icon
+   * @defaultValue null
+   */
+  icon?: number | string | React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 左侧的icon样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description left icon style
+   * @defaultValue null
+   */
+  iconStyle?: StyleProp<ImageStyle>;
+  /**
+   * @language zh-CN
+   * @description 标题
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description title
+   * @defaultValue null
+   */
+  title?: string;
+  /**
+   * @language zh-CN
+   * @description 标题样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description title style
+   * @defaultValue null
+   */
+  titleStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 副标题
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description subtitle
+   * @defaultValue null
+   */
+  subTitle?: string;
+  /**
+   * @language zh-CN
+   * @description 副标题样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description subtitle style
+   * @defaultValue null
+   */
+  subTitleStyle?: StyleProp<TextStyle>;
+  /**
+   * @language zh-CN
+   * @description 列表右侧的自定义内容
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Custom content to the right of the list
+   * @defaultValue null
+   */
+  extra?: React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 左滑右侧内容
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Swipe left and right content
+   * @defaultValue null
+   */
+  swipeContent?: any;
+  /**
+   * @language zh-CN
+   * @description 侧滑之后出现按钮的宽度
+   * @defaultValue cx(80)
+   */
+  /**
+   * @language en-US
+   * @description The width of the button that appears after sliding
+   * @defaultValue cx(80)
+   */
+  swipeContentButtonWidth?: number;
+  /**
+   * @language zh-CN
+   * @description 容器样式
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description component style
+   * @defaultValue null
+   */
+  style?: StyleProp<ViewStyle>;
+  /**
+   * @language zh-CN
+   * @description 右侧icon
+   * @defaultValue right-arrow
+   */
+  /**
+   * @language en-US
+   * @description right icon
+   * @defaultValue right-arrow
+   */
+  rightIcon?: number | string | React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 右侧icon样式
+   * @defaultValue {}
+   */
+  /**
+   * @language en-US
+   * @description right icon style
+   * @defaultValue {}
+   */
+  rightIconStyle?: React.ReactNode;
+  /**
+   * @language zh-CN
+   * @description 是否启用侧滑
+   * @defaultValue IOS默认开启
+   */
+  /**
+   * @language en-US
+   * @description Whether to enable side slide
+   * @defaultValue IOS is enabled by default
+   */
+  enableSwipe?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否禁用
+   * @defaultValue false
+   */
+  /**
+   * @language en-US
+   * @description disabled
+   * @defaultValue false
+   */
+  disabled?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否展示右侧箭头
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description Whether to show the right arrow
+   * @defaultValue true
+   */
+  showRightArrow?: boolean;
+  /**
+   * @language zh-CN
+   * @description 是否显示阴影
+   * @defaultValue true
+   */
+  /**
+   * @language en-US
+   * @description whether to show shadows
+   * @defaultValue true
+   */
+  showShadow?: boolean;
+  /**
+   * @language zh-CN
+   * @description 滑动组件时触发
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Fired when the component is swiped
+   * @defaultValue null
+   */
+  onScroll?: (value?: boolean) => void;
+  /**
+   * @language zh-CN
+   * @description 短按组件时触发
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Triggered when a component is short pressed
+   * @defaultValue null
+   */
+  onPress?: (...args: any) => void;
+  /**
+   * @language zh-CN
+   * @description 长按组件时触发
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description Triggered when a component is long pressed
+   * @defaultValue null
+   */
+  onLongPress?: (...args: any) => void;
+  /**
+   * @language zh-CN
+   * @description 自定义内容
+   * @defaultValue null
+   */
+  /**
+   * @language en-US
+   * @description custom content
+   * @defaultValue null
+   */
+  content?: React.ReactNode;
+}
+
+export const DeviceItem: React.ComponentClass<DeviceItemProp>;
+
 // 红外线方法库
 export const RemoteUtils: {
   /**
