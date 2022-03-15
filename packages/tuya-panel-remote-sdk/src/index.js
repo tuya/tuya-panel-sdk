@@ -9,6 +9,8 @@ import LightAnimate from './components/light-animate';
 import LetterSearch from './components/letter-search';
 import MaskView from './components/mask-view';
 import SearchInput from './components/search-input';
+import DeviceItem from './components/device-item';
+
 // utils
 import RemoteUtils from './utils';
 
@@ -23,5 +25,6 @@ export {
   LetterSearch,
   MaskView,
   SearchInput,
+  DeviceItem,
   RemoteUtils,
 };
