@@ -6,7 +6,10 @@ export { default as StorageUtils } from './storage';
 export { default as SupportUtils } from './support';
 import Strings from '../components/timer/normal-timing/i18n';
 
-const { CoreUtils } = Utils;
+const {
+  CoreUtils,
+  ColorUtils: { color },
+} = Utils;
 
 export function handleError(error: Error): void {
   // eslint-disable-next-line no-console
@@ -271,4 +274,14 @@ export enum WORK_MODE {
   COLOUR = 'colour',
   SCENE = 'scene',
   MUSIC = 'music',
+}
+export function objectShallowEqual(obj1: any, obj2: any, keys?: string[]): boolean {
+  if (obj1 === obj2) return true;
+  const keys1 = Object.keys(obj1).filter(key => (keys ? keys.includes(key) : true));
+  const keys2 = Object.keys(obj2).filter(key => (keys ? keys.includes(key) : true));
+  return keys1.length === keys2.length && keys1.every(key => obj1[key] === obj2[key]);
+}
+/** hsv 转 hex */
+export function hsv2hex(hue = 0, saturation = 0, value = 1000): string {
+  return color.hsb2hex(hue, saturation / 10, value / 10);
 }

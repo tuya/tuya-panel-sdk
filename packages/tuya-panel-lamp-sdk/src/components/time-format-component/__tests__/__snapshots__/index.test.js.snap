@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RangeTime components basic render 1`] = `
+<TYText
+  align={null}
+  color={null}
+  ellipsizeMode="tail"
+  numberOfLines={1}
+  size={null}
+  style={
+    Array [
+      Object {
+        "color": "#010101",
+        "flex": 1,
+        "fontSize": 32,
+        "fontWeight": "500",
+      },
+      Object {},
+    ]
+  }
+  type={null}
+  weight={null}
+>
+  01:00 - 02:00
+</TYText>
+`;
+
+exports[`SingleTime components basic render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      Object {},
+    ]
+  }
+>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#010101",
+          "fontSize": 32,
+          "fontWeight": "500",
+          "marginRight": 8,
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    PM
+  </TYText>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Array [
+        Object {
+          "color": "#010101",
+          "fontSize": 32,
+          "fontWeight": "500",
+        },
+        Object {},
+      ]
+    }
+    type={null}
+    weight={null}
+  >
+    12:00
+  </TYText>
+</View>
+`;

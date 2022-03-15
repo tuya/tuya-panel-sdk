@@ -12,7 +12,7 @@ module.exports = {
     TY_dp_switch_1_off: '关',
     TYLamp_am: '上午',
     TYLamp_pm: '下午',
-
+    TYLamp_openDialog: '打开弹窗',
     TYLamp_mode: '模式',
     TYLamp_unSelected: '未选中状态',
     TYLamp_selected: '选中状态',
@@ -20,6 +20,7 @@ module.exports = {
     TYLamp_customizeContent: '自定义内容',
     TYLamp_drawerContent: '下拉内容',
     TYLamp_subTitle: '子标题',
+    TYLamp_defaultStyle: '默认样式',
     TYLamp_customizeDescription: '没有左边按钮，有子标题，按钮固定',
 
     TYLamp_average: '平均分配',
@@ -46,8 +47,16 @@ module.exports = {
     TYLamp_animatedModal_confirmText: '确认',
     TYLamp_rhythms_tip: '节点不能超过',
     TYLamp_rhythms_tip1: '节点可以超过',
+    TYLamp_hideBright: '隐藏亮度条',
+    TYLamp_white: '白光',
     TYLamp_save: '保存',
     TYLamp_test_white: '白光页面',
+    TYLamp_timing_repeat: '定时重复',
+    TYLamp_timing_tip: '目前设置的定时与以下存在重复',
+    TYLamp_normalTiming_title: '普通',
+    TYLamp_sleepTiming_title: '入睡',
+    TYLamp_12_title: '12小时进制',
+    TYLamp_24_title: '24小时进制',
   },
 
   en: {
@@ -60,6 +69,7 @@ module.exports = {
 
     TYLamp_am: 'AM',
     TYLamp_pm: 'PM',
+    TYLamp_openDialog: 'Open Dialog',
 
     TYLamp_mode: 'mode',
     TYLamp_unSelected: 'Unselected State',
@@ -68,6 +78,7 @@ module.exports = {
     TYLamp_customizeContent: 'Customize Content',
     TYLamp_drawerContent: 'Drawer Content',
     TYLamp_subTitle: 'Subtitle',
+    TYLamp_defaultStyle: 'Default Style',
     TYLamp_customizeDescription: 'Has no left icon,but has subtitle,only one button image',
 
     TYLamp_average: 'Equally Calculate',
@@ -94,7 +105,15 @@ module.exports = {
     TYLamp_animatedModal_confirmText: 'confirm',
     TYLamp_rhythms_tip: 'Node no more than',
     TYLamp_rhythms_tip1: 'Node can more than',
+    TYLamp_hideBright: 'Hide Brightness Slider',
+    TYLamp_white: 'White',
     TYLamp_save: 'Save',
     TYLamp_test_white: 'White page',
+    TYLamp_timing_repeat: 'Timed repetition',
+    TYLamp_timing_tip: 'The current timing is the same as the following',
+    TYLamp_normalTiming_title: 'Ordinary',
+    TYLamp_sleepTiming_title: 'Sleep',
+    TYLamp_12_title: 'Base 12 hours',
+    TYLamp_24_title: 'Base 24 hours',
   },
 };
