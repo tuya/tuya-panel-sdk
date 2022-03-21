@@ -46,7 +46,7 @@ exports[`SingleTimePicker components basic render 1`] = `
           "alignItems": "center",
           "height": -12,
           "justifyContent": "center",
-          "left": 0.006079842784179945,
+          "left": 0.0006855502001243963,
           "width": -12,
         },
       ]

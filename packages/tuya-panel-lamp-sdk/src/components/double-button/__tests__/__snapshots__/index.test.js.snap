@@ -1,0 +1,201 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DoubleButton components basic render 1`] = `
+<AnimatedComponent
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "overflow": "hidden",
+      },
+      Object {
+        "borderRadius": 68,
+      },
+      Object {
+        "height": 140,
+        "width": 600,
+      },
+    ]
+  }
+>
+  <LinearGradient
+    gradientId="linear-gradient"
+    stops={
+      Object {
+        "0%": "#FF536B",
+        "100%": "#2856F4",
+      }
+    }
+    style={null}
+    x1="0%"
+    x2="100%"
+    y1="0%"
+    y2="0%"
+  >
+    <Rect
+      height="100%"
+      rx={0}
+      ry={0}
+      width="100%"
+      x={0}
+      y={0}
+    />
+  </LinearGradient>
+  <TouchableOpacity
+    activeOpacity={1}
+    delayLongPress={2000}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": "100%",
+        "justifyContent": "center",
+        "width": "50%",
+      }
+    }
+  >
+    <AnimatedComponent
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "borderRadius": 68,
+          },
+          Object {
+            "height": "100%",
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "backgroundColor": "#FF536B",
+            "left": 0,
+            "opacity": 0,
+            "width": "75%",
+          },
+        ]
+      }
+    />
+    <AnimatedComponent
+      size={32}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {
+            "left": "0%",
+            "opacity": 1,
+            "top": 0,
+          },
+        ]
+      }
+    >
+      test
+    </AnimatedComponent>
+    <AnimatedComponent
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {
+            "bottom": 0,
+            "opacity": 1,
+          },
+        ]
+      }
+    >
+      test
+    </AnimatedComponent>
+  </TouchableOpacity>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {},
+        Object {
+          "opacity": 1,
+          "position": "absolute",
+        },
+      ]
+    }
+  />
+  <TouchableOpacity
+    activeOpacity={1}
+    delayLongPress={2000}
+    onLongPress={[Function]}
+    onPress={[Function]}
+    onPressIn={[Function]}
+    onPressOut={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": "100%",
+        "justifyContent": "center",
+        "width": "50%",
+      }
+    }
+  >
+    <AnimatedComponent
+      pointerEvents="none"
+      style={
+        Array [
+          Object {
+            "borderRadius": 68,
+          },
+          Object {
+            "height": "100%",
+            "position": "absolute",
+            "top": 0,
+          },
+          Object {
+            "backgroundColor": "#2856F4",
+            "opacity": 0,
+            "right": 0,
+            "width": "75%",
+          },
+        ]
+      }
+    />
+    <AnimatedComponent
+      size={32}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {
+            "opacity": 1,
+            "right": "0%",
+            "top": 0,
+          },
+        ]
+      }
+    >
+      test
+    </AnimatedComponent>
+    <AnimatedComponent
+      size={24}
+      style={
+        Array [
+          Object {
+            "color": "#fff",
+          },
+          Object {
+            "bottom": 0,
+            "opacity": 1,
+          },
+        ]
+      }
+    >
+      test
+    </AnimatedComponent>
+  </TouchableOpacity>
+</AnimatedComponent>
+`;
