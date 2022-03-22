@@ -26,3 +26,5 @@ export {
 } from './AesMediaPreview';
 export { default as useRemoteManager } from './remote-manager';
 export { default as DPUtil } from './utils/DPUtil';
+export { default as Hijack } from './hijack';
+export { default as TYListItemSeries } from './list-item-series';

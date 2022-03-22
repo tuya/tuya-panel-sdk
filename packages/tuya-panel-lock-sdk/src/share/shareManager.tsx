@@ -4,7 +4,7 @@ import { Utils, Button, Popup, GlobalToast, Dialog } from 'tuya-panel-kit';
 import { ShareMessageProps, shareItem as shareItemData } from './interface';
 import { initShareList, getShareList } from './utils';
 
-const shareManger = NativeModules.TYRCTShareManager;
+export const shareManger = NativeModules.TYRCTShareManager;
 
 const { width, convertX } = Utils.RatioUtils;
 
@@ -16,10 +16,10 @@ const ShareManager: React.FC<ShareMessageProps> = props => {
     onClick,
     onFail,
     onSuccess,
-    confirmText = 'Confirm',
-    pswCopySuccess = 'Copy success',
-    sendSuccess = 'Send success',
-    sendSuccessTip = 'Current information sharing successfully',
+    confirmText,
+    pswCopySuccess,
+    sendSuccess,
+    sendSuccessTip,
     customShareList,
   } = props;
   const shareList = getShareList();
@@ -60,8 +60,8 @@ const ShareManager: React.FC<ShareMessageProps> = props => {
 
   if (customShareList && customShareList.length > 0) {
     customShareList.forEach((item: shareItemData) => {
-      if (shareList[item.key]) {
-        shareList[item.key] = {
+      if (shareList[item.key.toLocaleLowerCase()]) {
+        shareList[item.key.toLocaleLowerCase()] = {
           img: item.img,
           title: item.title,
         };

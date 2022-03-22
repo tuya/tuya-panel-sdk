@@ -19,6 +19,8 @@ import BubbleTip from './bubbleTip';
 import DragSort from './dragSort';
 import AvPreview from './avPreview';
 import RemoteManager from './remoteManager';
+import Hijack from './hijack';
+import ListItemSeries from './listItemSeries';
 import { produceRouterDatas } from '../../utils';
 
 export default class LampCategoryScene extends Component {
@@ -39,6 +41,8 @@ export default class LampCategoryScene extends Component {
   static TimePickerRange = TimePickerRange;
   static BubbleTip = BubbleTip;
   static DragSort = DragSort;
+  static Hijack = Hijack;
+  static ListItemSeries = ListItemSeries;
   // static Gesture = Gesture;
   get data() {
     return produceRouterDatas(subRouters.filter(r => /^Lock\.((?!\.)\w)+$/.test(r.id)));
