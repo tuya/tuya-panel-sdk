@@ -3,7 +3,7 @@
     "build": "tsc -d"
   },
   "name": "@tuya/tuya-panel-dragon-sdk",
-  "version": "0.0.21",
+  "version": "0.1.0",
   "main": "lib/index.js",
   "license": "MIT",
   "publishConfig": {
