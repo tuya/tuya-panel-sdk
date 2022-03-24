@@ -6,6 +6,9 @@
   "version": "0.0.21",
   "main": "lib/index.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@types/lodash": "^4.14.149",
     "@types/react-native": "^0.51.0",
