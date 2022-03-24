@@ -18,22 +18,17 @@ exports[`WhitePicker basic render 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -55,6 +50,8 @@ exports[`WhitePicker basic render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     storageKey="testKey"
     thumbComponent={[Function]}
@@ -83,6 +80,9 @@ exports[`WhitePicker basic render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={1000}
   />
@@ -95,29 +95,24 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
     Array [
       Object {
         "offset": "0%",
-        "stopColor": "#FF9F3E",
+        "stopColor": "#FFCA5C",
         "stopOpacity": 1,
       },
       Object {
-        "offset": "50%",
-        "stopColor": "#FFFFFF",
-        "stopOpacity": 1,
-      },
-      Object {
-        "offset": "53%",
+        "offset": "60%",
         "stopColor": "#FFFFFF",
         "stopOpacity": 1,
       },
       Object {
         "offset": "100%",
-        "stopColor": "#B4D0FF",
+        "stopColor": "#CDECFE",
         "stopOpacity": 1,
       },
     ]
   }
   brightOption={Object {}}
   clickEnabled={true}
-  direction="leftBottom"
+  direction="left"
   disabled={false}
   hideBright={false}
   lossColor="rgba(0,0,0,0.2)"
@@ -127,6 +122,8 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -166,35 +163,30 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FF9F3E",
+                  "stopColor": "#FFCA5C",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "50%",
-                  "stopColor": "#FFFFFF",
-                  "stopOpacity": 1,
-                },
-                Object {
-                  "offset": "53%",
+                  "offset": "60%",
                   "stopColor": "#FFFFFF",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#B4D0FF",
+                  "stopColor": "#CDECFE",
                   "stopOpacity": 1,
                 },
               ],
               "x1": "0%",
               "x2": "100%",
-              "y1": "100%",
+              "y1": "0%",
               "y2": "0%",
             },
           ]
         }
         clickEnabled={true}
         coorToValue={[Function]}
-        direction="leftBottom"
+        direction="left"
         disabled={false}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
@@ -203,6 +195,8 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -280,6 +274,9 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={1000}
       >
@@ -343,73 +340,103 @@ exports[`WhitePicker componentWillReceiveProps render 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
@@ -426,29 +453,24 @@ exports[`WhitePicker rectPicker mount 1`] = `
     Array [
       Object {
         "offset": "0%",
-        "stopColor": "#FF9F3E",
+        "stopColor": "#FFCA5C",
         "stopOpacity": 1,
       },
       Object {
-        "offset": "50%",
-        "stopColor": "#FFFFFF",
-        "stopOpacity": 1,
-      },
-      Object {
-        "offset": "53%",
+        "offset": "60%",
         "stopColor": "#FFFFFF",
         "stopOpacity": 1,
       },
       Object {
         "offset": "100%",
-        "stopColor": "#B4D0FF",
+        "stopColor": "#CDECFE",
         "stopOpacity": 1,
       },
     ]
   }
   brightOption={Object {}}
   clickEnabled={true}
-  direction="leftBottom"
+  direction="left"
   disabled={false}
   hideBright={false}
   lossColor="rgba(0,0,0,0.2)"
@@ -458,6 +480,8 @@ exports[`WhitePicker rectPicker mount 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -497,35 +521,30 @@ exports[`WhitePicker rectPicker mount 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FF9F3E",
+                  "stopColor": "#FFCA5C",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "50%",
-                  "stopColor": "#FFFFFF",
-                  "stopOpacity": 1,
-                },
-                Object {
-                  "offset": "53%",
+                  "offset": "60%",
                   "stopColor": "#FFFFFF",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#B4D0FF",
+                  "stopColor": "#CDECFE",
                   "stopOpacity": 1,
                 },
               ],
               "x1": "0%",
               "x2": "100%",
-              "y1": "100%",
+              "y1": "0%",
               "y2": "0%",
             },
           ]
         }
         clickEnabled={true}
         coorToValue={[Function]}
-        direction="leftBottom"
+        direction="left"
         disabled={false}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
@@ -534,6 +553,8 @@ exports[`WhitePicker rectPicker mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -611,6 +632,9 @@ exports[`WhitePicker rectPicker mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={1000}
       >
@@ -674,73 +698,103 @@ exports[`WhitePicker rectPicker mount 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
@@ -757,29 +811,24 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
     Array [
       Object {
         "offset": "0%",
-        "stopColor": "#FF9F3E",
+        "stopColor": "#FFCA5C",
         "stopOpacity": 1,
       },
       Object {
-        "offset": "50%",
-        "stopColor": "#FFFFFF",
-        "stopOpacity": 1,
-      },
-      Object {
-        "offset": "53%",
+        "offset": "60%",
         "stopColor": "#FFFFFF",
         "stopOpacity": 1,
       },
       Object {
         "offset": "100%",
-        "stopColor": "#B4D0FF",
+        "stopColor": "#CDECFE",
         "stopOpacity": 1,
       },
     ]
   }
   brightOption={Object {}}
   clickEnabled={true}
-  direction="leftBottom"
+  direction="left"
   disabled={true}
   hideBright={false}
   lossColor="rgba(0,0,0,0.2)"
@@ -789,6 +838,8 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -828,35 +879,30 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FF9F3E",
+                  "stopColor": "#FFCA5C",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "50%",
-                  "stopColor": "#FFFFFF",
-                  "stopOpacity": 1,
-                },
-                Object {
-                  "offset": "53%",
+                  "offset": "60%",
                   "stopColor": "#FFFFFF",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#B4D0FF",
+                  "stopColor": "#CDECFE",
                   "stopOpacity": 1,
                 },
               ],
               "x1": "0%",
               "x2": "100%",
-              "y1": "100%",
+              "y1": "0%",
               "y2": "0%",
             },
           ]
         }
         clickEnabled={true}
         coorToValue={[Function]}
-        direction="leftBottom"
+        direction="left"
         disabled={true}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
@@ -865,6 +911,8 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -942,6 +990,9 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={1000}
       >
@@ -1005,73 +1056,103 @@ exports[`WhitePicker rectPicker mount disable 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
@@ -1100,22 +1181,17 @@ exports[`WhitePicker render left 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -1137,6 +1213,8 @@ exports[`WhitePicker render left 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -1164,6 +1242,9 @@ exports[`WhitePicker render left 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -1188,22 +1269,17 @@ exports[`WhitePicker render right 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -1225,6 +1301,8 @@ exports[`WhitePicker render right 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -1252,6 +1330,9 @@ exports[`WhitePicker render right 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -1276,22 +1357,17 @@ exports[`WhitePicker render rightBottom 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -1313,6 +1389,8 @@ exports[`WhitePicker render rightBottom 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -1340,6 +1418,9 @@ exports[`WhitePicker render rightBottom 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -1364,22 +1445,17 @@ exports[`WhitePicker render rightTop 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -1401,6 +1477,8 @@ exports[`WhitePicker render rightTop 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -1428,6 +1506,9 @@ exports[`WhitePicker render rightTop 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -1452,22 +1533,17 @@ exports[`WhitePicker render top 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FF9F3E",
+              "stopColor": "#FFCA5C",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "50%",
-              "stopColor": "#FFFFFF",
-              "stopOpacity": 1,
-            },
-            Object {
-              "offset": "53%",
+              "offset": "60%",
               "stopColor": "#FFFFFF",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#B4D0FF",
+              "stopColor": "#CDECFE",
               "stopOpacity": 1,
             },
           ],
@@ -1489,6 +1565,8 @@ exports[`WhitePicker render top 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -1516,6 +1594,9 @@ exports[`WhitePicker render top 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -1528,29 +1609,24 @@ exports[`WhitePicker slider mount 1`] = `
     Array [
       Object {
         "offset": "0%",
-        "stopColor": "#FF9F3E",
+        "stopColor": "#FFCA5C",
         "stopOpacity": 1,
       },
       Object {
-        "offset": "50%",
-        "stopColor": "#FFFFFF",
-        "stopOpacity": 1,
-      },
-      Object {
-        "offset": "53%",
+        "offset": "60%",
         "stopColor": "#FFFFFF",
         "stopOpacity": 1,
       },
       Object {
         "offset": "100%",
-        "stopColor": "#B4D0FF",
+        "stopColor": "#CDECFE",
         "stopOpacity": 1,
       },
     ]
   }
   brightOption={Object {}}
   clickEnabled={true}
-  direction="leftBottom"
+  direction="left"
   disabled={false}
   hideBright={false}
   lossColor="rgba(0,0,0,0.2)"
@@ -1560,6 +1636,8 @@ exports[`WhitePicker slider mount 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -1599,35 +1677,30 @@ exports[`WhitePicker slider mount 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FF9F3E",
+                  "stopColor": "#FFCA5C",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "50%",
-                  "stopColor": "#FFFFFF",
-                  "stopOpacity": 1,
-                },
-                Object {
-                  "offset": "53%",
+                  "offset": "60%",
                   "stopColor": "#FFFFFF",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#B4D0FF",
+                  "stopColor": "#CDECFE",
                   "stopOpacity": 1,
                 },
               ],
               "x1": "0%",
               "x2": "100%",
-              "y1": "100%",
+              "y1": "0%",
               "y2": "0%",
             },
           ]
         }
         clickEnabled={true}
         coorToValue={[Function]}
-        direction="leftBottom"
+        direction="left"
         disabled={false}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
@@ -1636,6 +1709,8 @@ exports[`WhitePicker slider mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -1713,6 +1788,9 @@ exports[`WhitePicker slider mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={1000}
       >
@@ -1776,73 +1854,103 @@ exports[`WhitePicker slider mount 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>

@@ -10,6 +10,7 @@ import RectPicker, {
   defaultProps as baseDefualt,
 } from './RectPicker';
 import Slider, { IBrightOption } from './Slider';
+import ColorUtils from '../../../utils/color';
 
 export interface IWhite {
   brightness: number;
@@ -33,7 +34,7 @@ const defaultProps = {
    * bottom 从下往上，0在下边
    * @version ^0.3.0
    */
-  direction: 'leftBottom' as
+  direction: 'left' as
     | 'leftBottom'
     | 'leftTop'
     | 'rightBottom'
@@ -42,12 +43,10 @@ const defaultProps = {
     | 'right'
     | 'top'
     | 'bottom',
-
   bgs: [
-    { offset: '0%', stopColor: '#FF9F3E', stopOpacity: 1 },
-    { offset: '50%', stopColor: '#FFFFFF', stopOpacity: 1 },
-    { offset: '53%', stopColor: '#FFFFFF', stopOpacity: 1 },
-    { offset: '100%', stopColor: '#B4D0FF', stopOpacity: 1 },
+    { offset: '0%', stopColor: '#FFCA5C', stopOpacity: 1 },
+    { offset: '60%', stopColor: '#FFFFFF', stopOpacity: 1 },
+    { offset: '100%', stopColor: '#CDECFE', stopOpacity: 1 },
   ] as ILinearColors[],
   onGrant(v: any, option?: { isChangeBright: boolean }) {},
   onMove(v: any, option?: { isChangeBright: boolean }) {},
@@ -86,6 +85,7 @@ export default class WhitePicker extends Component<WhiteProps, IWhite> {
     }
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: WhiteProps) {
     const {
       value: { temperature, brightness },
@@ -300,8 +300,9 @@ export default class WhitePicker extends Component<WhiteProps, IWhite> {
     return origin;
   };
 
-  valueToColor = (): string => {
-    return 'transparent';
+  valueToColor = (data: IWhite): string => {
+    const { temperature, brightness } = data;
+    return ColorUtils.brightKelvin2rgba(brightness, temperature);
   };
 
   firPropsEvent(cb: (params?: any) => void, ...args: any[]) {
@@ -342,6 +343,8 @@ export default class WhitePicker extends Component<WhiteProps, IWhite> {
       lossSliderColor,
       clickEnabled,
       hideBright,
+      opacityAnimationValue,
+      opacityAnimationDuration,
       ...pickerProps
     } = this.props;
     const { temperature, brightness } = this.state;
@@ -361,6 +364,8 @@ export default class WhitePicker extends Component<WhiteProps, IWhite> {
           value={{ temperature, brightness }}
           lossShow={lossShow}
           clickEnabled={clickEnabled}
+          opacityAnimationValue={opacityAnimationValue}
+          opacityAnimationDuration={opacityAnimationDuration}
           {...pickerProps}
           bgs={this.getBgs()}
           style={rectStyle}
@@ -372,6 +377,8 @@ export default class WhitePicker extends Component<WhiteProps, IWhite> {
         />
         {!hideBright && (
           <Slider
+            opacityAnimationValue={opacityAnimationValue}
+            opacityAnimationDuration={opacityAnimationDuration}
             {...brightOption}
             {...sliderProps}
             clickEnabled={clickEnabled}

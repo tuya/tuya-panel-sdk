@@ -11,6 +11,8 @@ exports[`TemperaturePolarPicker components basic render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   step={1}
   storageKey="temperature_polar_picker"
   style={
@@ -28,10 +30,11 @@ exports[`TemperaturePolarPicker components basic render 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -84,7 +87,7 @@ exports[`TemperaturePolarPicker components basic render 1`] = `
         fill="url(#temp_polar_540138)"
       />
     </Svg>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -137,6 +140,8 @@ exports[`TemperaturePolarPicker components componentWillReceiveProps render 1`] 
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   step={1}
   storageKey="temperature_polar_picker"
   style={
@@ -154,10 +159,11 @@ exports[`TemperaturePolarPicker components componentWillReceiveProps render 1`] 
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -210,7 +216,7 @@ exports[`TemperaturePolarPicker components componentWillReceiveProps render 1`] 
         fill="url(#temp_polar_540138)"
       />
     </Svg>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -263,6 +269,8 @@ exports[`TemperaturePolarPicker components render touch 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   step={1}
   storageKey="temperature_polar_picker"
   style={
@@ -280,10 +288,11 @@ exports[`TemperaturePolarPicker components render touch 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -336,7 +345,7 @@ exports[`TemperaturePolarPicker components render touch 1`] = `
         fill="url(#temp_polar_540270)"
       />
     </Svg>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -389,6 +398,8 @@ exports[`TemperaturePolarPicker components render touch disabled 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   step={1}
   storageKey="temperature_polar_picker"
   style={
@@ -406,10 +417,11 @@ exports[`TemperaturePolarPicker components render touch disabled 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -462,7 +474,7 @@ exports[`TemperaturePolarPicker components render touch disabled 1`] = `
         fill="url(#temp_polar_540138)"
       />
     </Svg>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
