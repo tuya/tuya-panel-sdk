@@ -3,6 +3,8 @@ import _ from 'lodash';
 import { View, ViewStyle, StyleProp } from 'react-native';
 import RectPicker, { ValidBound, ILinear, Point, defaultProps as baseDefualt } from './RectPicker';
 import Slider, { IBrightOption } from './Slider';
+import ColorUtils from '../../../utils/color';
+import { rectGradientBg } from '../../../config';
 
 export interface IHsv {
   hue: number;
@@ -19,7 +21,7 @@ const defaultProps = {
   /**
    * 色度偏量
    */
-  hueOffset: 60,
+  hueOffset: 1,
   /**
    * 亮度配置
    */
@@ -32,28 +34,10 @@ const defaultProps = {
    * 失去焦点时的亮度滑动条颜色
    */
   lossSliderColor: 'rgba(255,255,255,0.4)',
-  bgs: [
-    {
-      colors: [
-        { offset: '0%', stopColor: '#FFFC00', stopOpacity: 1 },
-        { offset: '18%', stopColor: '#C3FF45', stopOpacity: 1 },
-        { offset: '34%', stopColor: '#39DDFC', stopOpacity: 1 },
-        { offset: '51%', stopColor: '#6382FC', stopOpacity: 1 },
-        { offset: '67%', stopColor: '#FF3FD5', stopOpacity: 1 },
-        { offset: '82%', stopColor: '#FE491F', stopOpacity: 1 },
-        { offset: '100%', stopColor: '#FFB900', stopOpacity: 1 },
-      ],
-    },
-    {
-      x2: '0%',
-      y2: '100%',
-      colors: [
-        { offset: '0%', stopColor: '#fff', stopOpacity: 1 },
-        { offset: '24%', stopColor: '#fff', stopOpacity: 0.9 },
-        { offset: '100%', stopColor: '#fff', stopOpacity: 0 },
-      ],
-    },
-  ] as ILinear[],
+  /**
+   * 背景渐变配置
+   */
+  bgs: rectGradientBg,
   /**
    * 滑动开始事件
    * @param v
@@ -72,7 +56,6 @@ const defaultProps = {
    * @param option
    */
   onRelease(v: any, option?: { isChangeBright: boolean }) {},
-
   /**
    * 点击事件
    * @param v
@@ -104,6 +87,7 @@ export default class ColourPicker extends Component<ColourProps, IState> {
     this.state = { ...this.props.value };
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: ColourProps) {
     if (!_.isEqual(nextProps.value, this.props.value)) {
       this.setState({ ...nextProps.value });
@@ -167,8 +151,9 @@ export default class ColourPicker extends Component<ColourProps, IState> {
     return { x: x + validStartX, y: y + validStartY };
   };
 
-  valueToColor = (): string => {
-    return 'transparent';
+  valueToColor = (hsv: IHsv): string => {
+    const { hue, saturation, value } = hsv;
+    return ColorUtils.hsv2rgba(hue!, saturation, value) || 'transparent';
   };
 
   firPropsEvent(cb: (params?: any) => void, ...args: any[]) {
@@ -204,6 +189,8 @@ export default class ColourPicker extends Component<ColourProps, IState> {
       lossSliderColor,
       clickEnabled,
       hideBright,
+      opacityAnimationValue,
+      opacityAnimationDuration,
       ...pickerProps
     } = this.props;
     const { hue, saturation, value: bright } = this.state;
@@ -220,6 +207,8 @@ export default class ColourPicker extends Component<ColourProps, IState> {
           value={{ hue, saturation, value: bright }}
           lossShow={lossShow}
           clickEnabled={clickEnabled}
+          opacityAnimationValue={opacityAnimationValue}
+          opacityAnimationDuration={opacityAnimationDuration}
           {...pickerProps}
           style={rectStyle}
           onGrant={this.handlePickerGrant}
@@ -230,6 +219,8 @@ export default class ColourPicker extends Component<ColourProps, IState> {
         />
         {!hideBright && (
           <Slider
+            opacityAnimationValue={opacityAnimationValue}
+            opacityAnimationDuration={opacityAnimationDuration}
             {...brightOption}
             {...sliderProps}
             value={bright}

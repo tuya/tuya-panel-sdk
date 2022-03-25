@@ -12,6 +12,8 @@ exports[`TemperaturePicker components basic render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   sideOffset={10}
   step={1}
   storageKey="temperature_picker"
@@ -30,10 +32,11 @@ exports[`TemperaturePicker components basic render 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -88,7 +91,7 @@ exports[`TemperaturePicker components basic render 1`] = `
         />
       </Svg>
     </View>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -142,6 +145,8 @@ exports[`TemperaturePicker components componentWillReceiveProps render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   sideOffset={10}
   step={1}
   storageKey="temperature_picker"
@@ -160,10 +165,11 @@ exports[`TemperaturePicker components componentWillReceiveProps render 1`] = `
   touchThumbRadius={0}
   value={0}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -218,7 +224,7 @@ exports[`TemperaturePicker components componentWillReceiveProps render 1`] = `
         />
       </Svg>
     </View>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -272,6 +278,8 @@ exports[`TemperaturePicker components render touch 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   sideOffset={10}
   step={1}
   storageKey="temperature_picker"
@@ -290,10 +298,11 @@ exports[`TemperaturePicker components render touch 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -348,7 +357,7 @@ exports[`TemperaturePicker components render touch 1`] = `
         />
       </Svg>
     </View>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -402,6 +411,8 @@ exports[`TemperaturePicker components render touch disabled 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   sideOffset={10}
   step={1}
   storageKey="temperature_picker"
@@ -420,10 +431,11 @@ exports[`TemperaturePicker components render touch disabled 1`] = `
   touchThumbRadius={0}
   value={1000}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
@@ -478,7 +490,7 @@ exports[`TemperaturePicker components render touch disabled 1`] = `
         />
       </Svg>
     </View>
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {

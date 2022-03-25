@@ -8,6 +8,9 @@ import {
   LayoutChangeEvent,
   PanResponderGestureState,
   PanResponderInstance,
+  Animated,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 import _ from 'lodash';
 import { Svg, Rect, Defs, LinearGradient, Stop } from 'react-native-svg';
@@ -59,13 +62,22 @@ export const defaultProps = {
   onMove(v: any) {},
   onRelease(v: any) {},
   onPress(v: any) {},
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
 
 interface IProps extends DefaultProps {
   value: any;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
+  pickerStyle?: StyleProp<ViewStyle>;
   coorToValue: (coor: Point, validBound: ValidBound) => any;
   valueToCoor: (value: any, originCoor?: Point, validBound?: ValidBound) => Point;
   valueToColor: (value: any) => string;
@@ -84,7 +96,7 @@ export default class RectPicker extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = { value: this.props.value };
-
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     // rn的坑，需要在此赋值才有效果
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this.handleSetResponder,
@@ -114,6 +126,13 @@ export default class RectPicker extends Component<IProps, IState> {
     if (nextProps.thumbSize !== this.props.thumbSize) {
       this.handleViewBoxChange(nextProps.thumbSize);
     }
+    if (this.props.opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
+    }
   }
 
   shouldComponentUpdate() {
@@ -132,6 +151,7 @@ export default class RectPicker extends Component<IProps, IState> {
   private isThumbFocus = false;
   private grantTime = 0;
   private linearGradientId = `rectPicker_${idIndex++}`;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   coorToValue(point: Point) {
     const { coorToValue } = this.props;
@@ -299,7 +319,15 @@ export default class RectPicker extends Component<IProps, IState> {
   };
 
   render() {
-    const { style, bgs, thumbComponent: ThumbView, disabled, thumbSize, thumbImg } = this.props;
+    const {
+      style,
+      pickerStyle,
+      bgs,
+      thumbComponent: ThumbView,
+      disabled,
+      thumbSize,
+      thumbImg,
+    } = this.props;
     const { showPicker, pickerHeight, pickerWidth, thumbPosition } = this;
     return (
       <View
@@ -309,38 +337,47 @@ export default class RectPicker extends Component<IProps, IState> {
         onLayout={this.handlePickerLayout}
       >
         {showPicker && (
-          <Svg
-            height={pickerHeight}
-            width={pickerWidth}
-            viewBox={`0 0 ${pickerWidth} ${pickerHeight}`}
+          <Animated.View
+            style={[
+              {
+                opacity: this.bgOpacityAnim,
+              },
+              pickerStyle,
+            ]}
           >
-            <Defs>
-              {bgs.map(({ x1 = '0%', x2 = '100%', y1 = '0%', y2 = '0%', colors }, index) => (
-                <LinearGradient
+            <Svg
+              height={pickerHeight}
+              width={pickerWidth}
+              viewBox={`0 0 ${pickerWidth} ${pickerHeight}`}
+            >
+              <Defs>
+                {bgs.map(({ x1 = '0%', x2 = '100%', y1 = '0%', y2 = '0%', colors }, index) => (
+                  <LinearGradient
+                    key={index}
+                    id={`${this.linearGradientId}_${index}`}
+                    x1={x1}
+                    x2={x2}
+                    y1={y1}
+                    y2={y2}
+                  >
+                    {colors.map((color, i) => (
+                      <Stop key={i} {...color} />
+                    ))}
+                  </LinearGradient>
+                ))}
+              </Defs>
+              {bgs.map((bg, index) => (
+                <Rect
                   key={index}
-                  id={`${this.linearGradientId}_${index}`}
-                  x1={x1}
-                  x2={x2}
-                  y1={y1}
-                  y2={y2}
-                >
-                  {colors.map((color, i) => (
-                    <Stop key={i} {...color} />
-                  ))}
-                </LinearGradient>
+                  fill={`url(#${this.linearGradientId}_${index})`}
+                  x="0"
+                  y="0"
+                  width={pickerWidth}
+                  height={pickerHeight}
+                />
               ))}
-            </Defs>
-            {bgs.map((bg, index) => (
-              <Rect
-                key={index}
-                fill={`url(#${this.linearGradientId}_${index})`}
-                x="0"
-                y="0"
-                width={pickerWidth}
-                height={pickerHeight}
-              />
-            ))}
-          </Svg>
+            </Svg>
+          </Animated.View>
         )}
         {/* render thumb */}
         {showPicker && (

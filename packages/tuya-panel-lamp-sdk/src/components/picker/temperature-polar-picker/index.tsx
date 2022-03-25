@@ -6,6 +6,7 @@ import {
   PanResponderInstance,
   GestureResponderEvent,
   PanResponderGestureState,
+  Animated,
 } from 'react-native';
 
 import { Utils } from 'tuya-panel-kit';
@@ -105,6 +106,14 @@ const defaultProps = {
    * @param value
    */
   onPress(value: number) {},
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -136,18 +145,13 @@ interface Position {
 
 export default class TemperaturePolarPicker extends Component<IProps, IState> {
   static defaultProps: DefaultProps = defaultProps;
-  private locked = false;
-  private _panResponder: PanResponderInstance;
-  private temperature: number;
-  private coor: Position = { x: 0, y: 0 };
-  private thumbRef: View;
-  private tempValue: number;
-  private maxSize = 100;
+
   constructor(props: IProps) {
     super(props);
     this.state = { hideThumb: this.props.hideThumb, showThumbEnabled: false };
     this.tempValue = this.props.value;
     this.initData(this.props);
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this.handleSetResponder,
       onMoveShouldSetPanResponder: () => this.locked,
@@ -175,6 +179,13 @@ export default class TemperaturePolarPicker extends Component<IProps, IState> {
         radius !== oldRadius || innerRadius !== oldInnerRadius || thumbRadius !== oldThumbRadius
       );
     }
+    if (this.props.opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
+    }
   }
 
   shouldComponentUpdate() {
@@ -188,6 +199,15 @@ export default class TemperaturePolarPicker extends Component<IProps, IState> {
 
     return { locationX: locationX - maxRadius, locationY: locationY - maxRadius };
   }
+
+  private locked = false;
+  private _panResponder: PanResponderInstance;
+  private temperature: number;
+  private coor: Position = { x: 0, y: 0 };
+  private thumbRef: View;
+  private tempValue: number;
+  private maxSize = 100;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   initData(props: IProps, needUpdate = true) {
     const { radius, thumbRadius, value, storageKey } = props;
@@ -357,10 +377,11 @@ export default class TemperaturePolarPicker extends Component<IProps, IState> {
           style,
         ]}
       >
-        <View
+        <Animated.View
           style={{
             width: size,
             height: size,
+            opacity: this.bgOpacityAnim,
           }}
         >
           {bgImg ? (
@@ -401,7 +422,7 @@ export default class TemperaturePolarPicker extends Component<IProps, IState> {
               <Path d={path} fill={`url(#${gradientId})`} />
             </Svg>
           )}
-        </View>
+        </Animated.View>
         <View
           style={{
             position: 'absolute',
