@@ -10,10 +10,13 @@ import {
   PanResponderGestureState,
   StyleProp,
   ViewStyle,
+  Animated,
 } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
+import { Svg, RadialGradient, Stop, Defs, Path } from 'react-native-svg';
 import ColorUtils from '../../../utils/color';
-import Res from '../../../res';
+import ConicalGradient from '../../gradient/conical-gradient';
+import { circleGradientBg } from '../../../config';
 
 interface HsvColor {
   hue: number;
@@ -42,10 +45,9 @@ const defaultProps = {
    */
   disalbedThumbOpacity: 0.4,
   /**
-   * 轨道的图
+   * 色盘样子
    */
-  // eslint-disable-next-line import/no-unresolved
-  bgImg: Res.colorPicker,
+  gradientBg: circleGradientBg,
   /**
    * 轨道外圈半径
    */
@@ -118,6 +120,14 @@ const defaultProps = {
    * @param color
    */
   onPress(color: HsvColor) {},
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -130,6 +140,11 @@ type IProps = {
    * 滑块样式
    */
   thumbStyle?: StyleProp<ViewStyle>;
+  /**
+   * 轨道的图
+   * 当设置后，gradientBg 属性将不起作用
+   */
+  bgImg?: any;
 } & DefaultProps;
 
 interface IState {
@@ -143,6 +158,7 @@ export default class HuePicker extends Component<IProps, IState> {
     this.state = { hideThumb: this.props.hideThumb };
     this.tempColor = this.props.value;
     this.initData(this.props);
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this.handleSetResponder,
       onMoveShouldSetPanResponder: () => this.locked,
@@ -160,6 +176,13 @@ export default class HuePicker extends Component<IProps, IState> {
         this.setState({ hideThumb: nextProps.hideThumb });
       }
       this.initData(nextProps);
+    }
+    if (this.props.opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
     }
   }
 
@@ -182,6 +205,7 @@ export default class HuePicker extends Component<IProps, IState> {
   private thumbRef: React.ReactNode;
   private tempColor: HsvColor;
   private maxSize = 100;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   initData(props: IProps) {
     const { radius, thumbRadius, value } = props;
@@ -321,17 +345,26 @@ export default class HuePicker extends Component<IProps, IState> {
       accessibilityLabel,
       bgImg,
       radius,
+      innerRadius,
       thumbRadius,
       style,
       disabled,
       thumbStyle,
+      gradientBg,
       ...rest
     } = this.props;
     const { hideThumb } = this.state;
     const size = radius * 2;
+    const ringWidth = radius - innerRadius;
     const thumbSize = thumbRadius * 2;
     const coor = this.valueToCoor(this.color);
     const { maxSize } = this;
+    const percent = Math.floor((innerRadius / radius) * 100);
+    const path = `M0 ${radius}A${radius} ${radius} 0 1 0 ${size} ${radius}A${radius} ${radius} 0 1 0 0 ${radius}Z
+    M${ringWidth} ${radius}A${innerRadius} ${innerRadius} 0 1 1 ${
+      size - ringWidth
+    } ${radius}A${innerRadius} ${innerRadius} 0 1 1 ${ringWidth} ${radius}Z`;
+    const gradientId = `${size}${ringWidth}`;
 
     return (
       <View
@@ -346,20 +379,49 @@ export default class HuePicker extends Component<IProps, IState> {
           style,
         ]}
       >
-        <View
+        <Animated.View
           style={{
             width: size,
             height: size,
+            opacity: this.bgOpacityAnim,
           }}
         >
-          <Image
-            source={bgImg}
-            style={{
-              width: size,
-              height: size,
-            }}
-          />
-        </View>
+          {bgImg ? (
+            <Image
+              source={bgImg}
+              style={{
+                width: size,
+                height: size,
+              }}
+            />
+          ) : (
+            <View
+              style={{ width: size, height: size, justifyContent: 'center', alignItems: 'center' }}
+            >
+              <ConicalGradient outerRadius={radius} innerRadius={innerRadius} colors={gradientBg} />
+              <View style={{ position: 'absolute', left: 0, top: 0 }}>
+                <Svg width={size} height={size}>
+                  <Defs>
+                    <RadialGradient
+                      id={gradientId}
+                      cx={radius}
+                      cy={radius}
+                      rx={radius}
+                      ry={radius}
+                      fx={radius}
+                      fy={radius}
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <Stop offset={`${percent}%`} stopColor="#fff" stopOpacity="1" />
+                      <Stop offset="100%" stopColor="#fff" stopOpacity="0" />
+                    </RadialGradient>
+                  </Defs>
+                  <Path d={path} fill={`url(#${gradientId})`} />
+                </Svg>
+              </View>
+            </View>
+          )}
+        </Animated.View>
         <View
           style={{
             position: 'absolute',
