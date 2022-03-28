@@ -20,7 +20,7 @@ export const getPath = (
   min: number,
   max: number,
   slope?: number
-) => {
+): string => {
   const getPoint = (value: number, index: number, stepX: number) => {
     const x = stepX * index;
     const y = ((buttonLineY - TopLineY) * (max - value)) / (max - min) + TopLineY;
@@ -95,4 +95,34 @@ export const getPath = (
     }
     return `${path}C${cp1.x},${cp1.y} ${cp2.x},${cp2.y} ${point.x},${point.y}`;
   }, '');
+};
+
+/**
+ * 转化时间为 时或分格式
+ * @param date 时间,单位为秒
+ * @param timeBit 转化的格式,minute:mm:ss,hour:hh:mm:ss
+ * @returns string mm:ss || hh:mm:ss
+ */
+type TimeBit = 'mimute' | 'hour';
+export const transTime = (_date = 0, timeBit: TimeBit = 'mimute'): string => {
+  const date = _date || 0;
+  let date2 = Math.floor(date / 60);
+  let bit1 = '';
+  let bit2 = '00';
+
+  if (timeBit === 'hour') {
+    const date1 = Math.floor(date / (60 * 60));
+    if (date1 < 100) {
+      bit1 = `00${Math.floor(date / (60 * 60))}`.slice(-2) + ':';
+    }
+    bit1 = `${Math.floor(date / (60 * 60))}:`;
+    date2 %= 60;
+  }
+  if (date2 < 100) {
+    bit2 = `00${date2}`.slice(-2);
+  } else {
+    bit2 = `${date2}`;
+  }
+
+  return bit1 + bit2 + ':' + `00${Math.ceil(date % 60)}`.slice(-2);
 };

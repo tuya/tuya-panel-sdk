@@ -16,11 +16,12 @@ exports[`TurnPlate components basic render 1`] = `
         "height": 600,
         "width": 600,
       },
-      undefined,
+      Object {},
     ]
   }
 >
   <View
+    key="3.9269908169872414"
     style={
       Array [
         Object {
@@ -37,11 +38,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 463.7056274847714,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.162610266006475"
     style={
       Array [
         Object {
@@ -58,11 +60,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 419.3996555318279,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.39822971502571"
     style={
       Array [
         Object {
@@ -79,11 +82,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 368.1640786499874,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.633849164044945"
     style={
       Array [
         Object {
@@ -100,11 +104,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 312.8301829746827,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.869468613064179"
     style={
       Array [
         Object {
@@ -121,11 +126,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 256.45572839034463,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.105088062083414"
     style={
       Array [
         Object {
@@ -142,11 +148,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 202.1559762323784,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.340707511102648"
     style={
       Array [
         Object {
@@ -163,11 +170,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 152.9315394498065,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.576326960121882"
     style={
       Array [
         Object {
@@ -184,11 +192,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 111.50256825599268,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.811946409141117"
     style={
       Array [
         Object {
@@ -205,11 +214,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 80.15843419479174,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.047565858160352"
     style={
       Array [
         Object {
@@ -226,11 +236,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 60.6312191045576,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.283185307179586"
     style={
       Array [
         Object {
@@ -247,11 +258,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 54,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.518804756198821"
     style={
       Array [
         Object {
@@ -268,11 +280,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 60.63121910455763,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.754424205218055"
     style={
       Array [
         Object {
@@ -289,11 +302,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 80.15843419479168,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.99004365423729"
     style={
       Array [
         Object {
@@ -310,11 +324,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 111.5025682559926,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.225663103256523"
     style={
       Array [
         Object {
@@ -331,11 +346,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 152.93153944980622,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.461282552275758"
     style={
       Array [
         Object {
@@ -352,11 +368,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 202.1559762323783,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.696902001294994"
     style={
       Array [
         Object {
@@ -373,11 +390,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 256.45572839034475,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.932521450314227"
     style={
       Array [
         Object {
@@ -394,11 +412,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 312.8301829746826,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.168140899333462"
     style={
       Array [
         Object {
@@ -415,11 +434,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 368.1640786499873,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.403760348352696"
     style={
       Array [
         Object {
@@ -436,11 +456,12 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 419.3996555318276,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.63937979737193"
     style={
       Array [
         Object {
@@ -457,7 +478,7 @@ exports[`TurnPlate components basic render 1`] = `
           "top": 463.7056274847712,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
@@ -468,23 +489,21 @@ exports[`TurnPlate components basic render 1`] = `
           "height": 370,
           "width": 370,
         },
-        undefined,
+        Object {},
       ]
     }
   >
     <AnimatedComponent
       style={
-        Array [
-          Object {
-            "height": 370,
-            "transform": Array [
-              Object {
-                "rotate": "0deg",
-              },
-            ],
-            "width": 370,
-          },
-        ]
+        Object {
+          "height": 370,
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+          "width": 370,
+        }
       }
     >
       <View
@@ -502,7 +521,7 @@ exports[`TurnPlate components basic render 1`] = `
               "opacity": 1,
               "top": 281.06601717798213,
             },
-            undefined,
+            Object {},
           ]
         }
       />
@@ -539,7 +558,7 @@ exports[`TurnPlate components basic render 1`] = `
           "height": 540,
           "width": 540,
         },
-        undefined,
+        Object {},
       ]
     }
     thumbFill="#fff"
@@ -571,11 +590,12 @@ exports[`TurnPlate components disabled render 1`] = `
         "height": 600,
         "width": 600,
       },
-      undefined,
+      Object {},
     ]
   }
 >
   <View
+    key="3.9269908169872414"
     style={
       Array [
         Object {
@@ -592,11 +612,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 463.7056274847714,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.162610266006475"
     style={
       Array [
         Object {
@@ -613,11 +634,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 419.3996555318279,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.39822971502571"
     style={
       Array [
         Object {
@@ -634,11 +656,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 368.1640786499874,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.633849164044945"
     style={
       Array [
         Object {
@@ -655,11 +678,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 312.8301829746827,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.869468613064179"
     style={
       Array [
         Object {
@@ -676,11 +700,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 256.45572839034463,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.105088062083414"
     style={
       Array [
         Object {
@@ -697,11 +722,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 202.1559762323784,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.340707511102648"
     style={
       Array [
         Object {
@@ -718,11 +744,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 152.9315394498065,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.576326960121882"
     style={
       Array [
         Object {
@@ -739,11 +766,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 111.50256825599268,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.811946409141117"
     style={
       Array [
         Object {
@@ -760,11 +788,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 80.15843419479174,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.047565858160352"
     style={
       Array [
         Object {
@@ -781,11 +810,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 60.6312191045576,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.283185307179586"
     style={
       Array [
         Object {
@@ -802,11 +832,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 54,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.518804756198821"
     style={
       Array [
         Object {
@@ -823,11 +854,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 60.63121910455763,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.754424205218055"
     style={
       Array [
         Object {
@@ -844,11 +876,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 80.15843419479168,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.99004365423729"
     style={
       Array [
         Object {
@@ -865,11 +898,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 111.5025682559926,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.225663103256523"
     style={
       Array [
         Object {
@@ -886,11 +920,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 152.93153944980622,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.461282552275758"
     style={
       Array [
         Object {
@@ -907,11 +942,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 202.1559762323783,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.696902001294994"
     style={
       Array [
         Object {
@@ -928,11 +964,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 256.45572839034475,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.932521450314227"
     style={
       Array [
         Object {
@@ -949,11 +986,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 312.8301829746826,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.168140899333462"
     style={
       Array [
         Object {
@@ -970,11 +1008,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 368.1640786499873,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.403760348352696"
     style={
       Array [
         Object {
@@ -991,11 +1030,12 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 419.3996555318276,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.63937979737193"
     style={
       Array [
         Object {
@@ -1012,7 +1052,7 @@ exports[`TurnPlate components disabled render 1`] = `
           "top": 463.7056274847712,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
@@ -1023,23 +1063,21 @@ exports[`TurnPlate components disabled render 1`] = `
           "height": 370,
           "width": 370,
         },
-        undefined,
+        Object {},
       ]
     }
   >
     <AnimatedComponent
       style={
-        Array [
-          Object {
-            "height": 370,
-            "transform": Array [
-              Object {
-                "rotate": "135deg",
-              },
-            ],
-            "width": 370,
-          },
-        ]
+        Object {
+          "height": 370,
+          "transform": Array [
+            Object {
+              "rotate": "135deg",
+            },
+          ],
+          "width": 370,
+        }
       }
     >
       <View
@@ -1057,7 +1095,7 @@ exports[`TurnPlate components disabled render 1`] = `
               "opacity": 0.7,
               "top": 281.06601717798213,
             },
-            undefined,
+            Object {},
           ]
         }
       />
@@ -1094,7 +1132,7 @@ exports[`TurnPlate components disabled render 1`] = `
           "height": 540,
           "width": 540,
         },
-        undefined,
+        Object {},
       ]
     }
     thumbFill="#fff"
@@ -1126,11 +1164,12 @@ exports[`TurnPlate components dot render 1`] = `
         "height": 600,
         "width": 600,
       },
-      undefined,
+      Object {},
     ]
   }
 >
   <View
+    key="3.9269908169872414"
     style={
       Array [
         Object {
@@ -1147,11 +1186,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 463.7056274847714,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.39822971502571"
     style={
       Array [
         Object {
@@ -1168,11 +1208,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 368.1640786499874,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="4.869468613064179"
     style={
       Array [
         Object {
@@ -1189,11 +1230,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 256.45572839034463,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.340707511102648"
     style={
       Array [
         Object {
@@ -1210,11 +1252,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 152.9315394498065,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="5.811946409141117"
     style={
       Array [
         Object {
@@ -1231,11 +1274,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 80.15843419479174,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.283185307179586"
     style={
       Array [
         Object {
@@ -1252,11 +1296,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 54,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="6.754424205218055"
     style={
       Array [
         Object {
@@ -1273,11 +1318,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 80.15843419479168,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.225663103256523"
     style={
       Array [
         Object {
@@ -1294,11 +1340,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 152.93153944980622,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="7.696902001294994"
     style={
       Array [
         Object {
@@ -1315,11 +1362,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 256.45572839034475,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.168140899333462"
     style={
       Array [
         Object {
@@ -1336,11 +1384,12 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 368.1640786499873,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
   <View
+    key="8.63937979737193"
     style={
       Array [
         Object {
@@ -1357,7 +1406,7 @@ exports[`TurnPlate components dot render 1`] = `
           "top": 463.7056274847712,
           "width": 12,
         },
-        undefined,
+        Object {},
       ]
     }
   />
@@ -1368,23 +1417,21 @@ exports[`TurnPlate components dot render 1`] = `
           "height": 370,
           "width": 370,
         },
-        undefined,
+        Object {},
       ]
     }
   >
     <AnimatedComponent
       style={
-        Array [
-          Object {
-            "height": 370,
-            "transform": Array [
-              Object {
-                "rotate": "162deg",
-              },
-            ],
-            "width": 370,
-          },
-        ]
+        Object {
+          "height": 370,
+          "transform": Array [
+            Object {
+              "rotate": "162deg",
+            },
+          ],
+          "width": 370,
+        }
       }
     >
       <View
@@ -1402,7 +1449,7 @@ exports[`TurnPlate components dot render 1`] = `
               "opacity": 1,
               "top": 281.06601717798213,
             },
-            undefined,
+            Object {},
           ]
         }
       />
@@ -1439,7 +1486,7 @@ exports[`TurnPlate components dot render 1`] = `
           "height": 540,
           "width": 540,
         },
-        undefined,
+        Object {},
       ]
     }
     thumbFill="#fff"

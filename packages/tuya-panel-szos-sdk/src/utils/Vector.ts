@@ -8,7 +8,7 @@ export default class Vector {
 
   $length = 0;
 
-  get length() {
+  get length(): number {
     return this.$length;
   }
 
@@ -18,30 +18,30 @@ export default class Vector {
     this.$length = this._length();
   }
 
-  _length() {
+  _length(): number {
     return Math.sqrt(this.x ** 2 + this.y ** 2);
   }
 
-  normalize() {
+  normalize(): Vector {
     if (this.$length === 0) {
       return new Vector(this.x, this.y);
     }
     return new Vector(this.x / this.length, this.y / this.length);
   }
 
-  add(v: Vector) {
+  add(v: Vector): Vector {
     return new Vector(this.x + v.x, this.y + v.y);
   }
 
-  multiply(v: number) {
+  multiply(v: number): Vector {
     return new Vector(this.x * v, this.y * v);
   }
 
-  dot(v: Vector) {
+  dot(v: Vector): number {
     return this.x * v.x + this.y * v.y;
   }
 
-  angle(v: Vector) {
+  angle(v: Vector): number {
     return (Math.acos(this.dot(v) / (this.length * v.length)) * 180) / Math.PI;
   }
 }

@@ -149,6 +149,7 @@ const TurnPlate: FC<IProps> = (props: IProps) => {
           const dotAngle = ((i * angleUnit + startAngle) / 180) * Math.PI;
           return (
             <View
+              key={`${dotAngle}`}
               style={[
                 style.dot,
                 {
