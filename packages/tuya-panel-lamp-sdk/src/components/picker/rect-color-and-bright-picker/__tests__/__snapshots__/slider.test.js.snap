@@ -47,6 +47,7 @@ exports[`Slider Percent render 1`] = `
             "marginLeft": 9,
             "width": 50,
           },
+          undefined,
           Object {
             "color": undefined,
           },
@@ -91,6 +92,7 @@ exports[`Slider Percent render 1`] = `
             "marginLeft": 9,
             "width": 50,
           },
+          undefined,
           Object {
             "color": undefined,
           },
@@ -119,6 +121,9 @@ exports[`Slider basic mount 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
+  showAnimation={true}
   trackColor="#313131"
   value={100}
 >
@@ -182,73 +187,103 @@ exports[`Slider basic mount 1`] = `
         ]
       }
     >
-      <View
-        style={
-          Array [
-            Object {
-              "backgroundColor": "#313131",
-              "height": "100%",
-              "width": "100%",
-            },
-            Object {
-              "backgroundColor": "#313131",
-            },
-          ]
-        }
-      >
-        <View
-          style={
-            Array [
-              Object {
-                "backgroundColor": "#313131",
-                "height": "100%",
-                "width": "100%",
-              },
-              Object {
-                "backgroundColor": "#313131",
-              },
-            ]
-          }
-        />
-      </View>
       <AnimatedComponent
         style={
-          Array [
-            Object {
-              "backgroundColor": "#fff",
-              "height": "100%",
-              "left": 0,
-              "position": "absolute",
-            },
-            Object {
-              "backgroundColor": "#fff",
-              "width": 0,
-            },
-          ]
+          Object {
+            "height": "100%",
+            "opacity": 1,
+            "width": "100%",
+          }
         }
       >
         <View
           style={
             Object {
-              "backgroundColor": "#fff",
               "height": "100%",
-              "left": 0,
-              "position": "absolute",
-              "width": 0,
+              "opacity": 1,
+              "width": "100%",
             }
           }
         >
           <View
             style={
               Object {
-                "backgroundColor": "#fff",
                 "height": "100%",
-                "left": 0,
-                "position": "absolute",
-                "width": 0,
+                "opacity": 1,
+                "width": "100%",
               }
             }
-          />
+          >
+            <View
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#313131",
+                    "height": "100%",
+                    "width": "100%",
+                  },
+                  Object {
+                    "backgroundColor": "#313131",
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "backgroundColor": "#313131",
+                      "height": "100%",
+                      "width": "100%",
+                    },
+                    Object {
+                      "backgroundColor": "#313131",
+                    },
+                  ]
+                }
+              />
+            </View>
+            <AnimatedComponent
+              style={
+                Array [
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                  },
+                  Object {
+                    "backgroundColor": "#fff",
+                    "width": 0,
+                  },
+                ]
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "backgroundColor": "#fff",
+                    "height": "100%",
+                    "left": 0,
+                    "position": "absolute",
+                    "width": 0,
+                  }
+                }
+              >
+                <View
+                  style={
+                    Object {
+                      "backgroundColor": "#fff",
+                      "height": "100%",
+                      "left": 0,
+                      "position": "absolute",
+                      "width": 0,
+                    }
+                  }
+                />
+              </View>
+            </AnimatedComponent>
+          </View>
         </View>
       </AnimatedComponent>
     </View>
@@ -287,36 +322,46 @@ exports[`Slider basic render 1`] = `
     ]
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#313131",
-          "height": "100%",
-          "width": "100%",
-        },
-        Object {
-          "backgroundColor": "#313131",
-        },
-      ]
-    }
-  />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-        },
-        Object {
-          "backgroundColor": "#fff",
-          "width": 0,
-        },
-      ]
+      Object {
+        "height": "100%",
+        "opacity": 1,
+        "width": "100%",
+      }
     }
-  />
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#313131",
+            "height": "100%",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "#313131",
+          },
+        ]
+      }
+    />
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+          },
+          Object {
+            "backgroundColor": "#fff",
+            "width": 0,
+          },
+        ]
+      }
+    />
+  </AnimatedComponent>
 </View>
 `;
 
@@ -351,43 +396,53 @@ exports[`Slider render touch 1`] = `
     ]
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#313131",
-          "height": "100%",
-          "width": "100%",
-        },
-        Object {
-          "backgroundColor": "#313131",
-        },
-      ]
-    }
-  />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-        },
-        Object {
-          "backgroundColor": "#fff",
-          "width": NaN,
-        },
-      ]
+      Object {
+        "height": "100%",
+        "opacity": 1,
+        "width": "100%",
+      }
     }
-  />
-  <Percent
-    brightWidth={NaN}
-    colorInner="#000"
-    colorOver="#fff"
-    height={44}
-    percent={10}
-  />
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#313131",
+            "height": "100%",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "#313131",
+          },
+        ]
+      }
+    />
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+          },
+          Object {
+            "backgroundColor": "#fff",
+            "width": NaN,
+          },
+        ]
+      }
+    />
+    <Percent
+      brightWidth={NaN}
+      colorInner="#000"
+      colorOver="#fff"
+      height={44}
+      percent={10}
+    />
+  </AnimatedComponent>
 </View>
 `;
 
@@ -422,35 +477,45 @@ exports[`Slider render touch disabled 1`] = `
     ]
   }
 >
-  <View
-    style={
-      Array [
-        Object {
-          "backgroundColor": "#313131",
-          "height": "100%",
-          "width": "100%",
-        },
-        Object {
-          "backgroundColor": "#313131",
-        },
-      ]
-    }
-  />
   <AnimatedComponent
     style={
-      Array [
-        Object {
-          "backgroundColor": "#fff",
-          "height": "100%",
-          "left": 0,
-          "position": "absolute",
-        },
-        Object {
-          "backgroundColor": "#fff",
-          "width": 0,
-        },
-      ]
+      Object {
+        "height": "100%",
+        "opacity": 1,
+        "width": "100%",
+      }
     }
-  />
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#313131",
+            "height": "100%",
+            "width": "100%",
+          },
+          Object {
+            "backgroundColor": "#313131",
+          },
+        ]
+      }
+    />
+    <AnimatedComponent
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#fff",
+            "height": "100%",
+            "left": 0,
+            "position": "absolute",
+          },
+          Object {
+            "backgroundColor": "#fff",
+            "width": 0,
+          },
+        ]
+      }
+    />
+  </AnimatedComponent>
 </View>
 `;

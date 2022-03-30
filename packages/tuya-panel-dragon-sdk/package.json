@@ -1,0 +1,27 @@
+{
+  "scripts": {
+    "build": "tsc -d"
+  },
+  "name": "@tuya/tuya-panel-dragon-sdk",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.149",
+    "@types/react-native": "^0.51.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
+  },
+  "peerDependencies": {
+    "lodash": "^4.17.15",
+    "react-native": "^0.51.0"
+  },
+  "files": [
+    "lib",
+    "@types"
+  ]
+}

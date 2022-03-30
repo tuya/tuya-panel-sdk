@@ -3,6 +3,40 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.10.0...@tuya/tuya-panel-lamp-sdk@1.11.0) (2022-03-25)
+
+
+### Features
+
+* update animate and add formatter ([#188](https://github.com/tuya/tuya-panel-sdk/issues/188)) ([c1fa55b](https://github.com/tuya/tuya-panel-sdk/commit/c1fa55be450813e9f6ee4ee536da6cd5f05f15fe))
+
+
+
+
+
+# [1.10.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.9.4...@tuya/tuya-panel-lamp-sdk@1.10.0) (2022-03-02)
+
+
+### Features
+
+* **lamp:** add component formatter ([#183](https://github.com/tuya/tuya-panel-sdk/issues/183)) ([4f23788](https://github.com/tuya/tuya-panel-sdk/commit/4f2378845d8e0e0506ca0a152838d182d5ad24fa))
+* Add color card ([#180](https://github.com/tuya/tuya-panel-sdk/issues/180)) ([7be0788](https://github.com/tuya/tuya-panel-sdk/commit/7be07884c386b68fd69b39e91614eb8ad45940c5))
+
+
+
+
+
+## [1.9.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.9.3...@tuya/tuya-panel-lamp-sdk@1.9.4) (2022-02-10)
+
+
+### Bug Fixes
+
+* **lamp:** fix lamp rhythms ([#173](https://github.com/tuya/tuya-panel-sdk/issues/173)) ([48d5485](https://github.com/tuya/tuya-panel-sdk/commit/48d54853e78aca6b30c7fc013b311515167058a3))
+
+
+
+
+
 ## [1.9.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.9.2...@tuya/tuya-panel-lamp-sdk@1.9.3) (2022-01-18)
 
 

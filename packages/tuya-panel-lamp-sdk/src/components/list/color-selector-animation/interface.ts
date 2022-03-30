@@ -37,6 +37,10 @@ export interface IColorSelectorAnimationProp {
    */
   delBtnStyle?: StyleProp<ViewStyle>;
   /**
+   * 小圆按钮样式
+   */
+  circleStyle?: StyleProp<ViewStyle>;
+  /**
    * 新增按钮图标颜色
    */
   addIconColor?: string;
@@ -72,6 +76,10 @@ export interface IColorSelectorAnimationProp {
    * 列表滚动颜色过多时,为了使添加按钮保持原位，需要设置x的偏移值(颜色按钮宽度加margin值)
    */
   left?: number;
+  /**
+   * 添加删除图标大小
+   */
+  size?: number;
 }
 
 export interface IColor {
@@ -87,4 +95,5 @@ export interface IColor {
 export interface ICircle {
   scaleValue: number;
   backgroundColor: string;
+  style: StyleProp<ViewStyle>;
 }

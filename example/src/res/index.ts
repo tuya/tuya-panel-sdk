@@ -4,5 +4,6 @@ const Res = {
   stopIconLight: require('./stopIcon_light.png'),
   startIconLight: require('./startIcon_light.png'),
   timeLight: require('./time_light.png'),
+  colorCard2: require('./colorCard2.png'),
 };
 export default Res;

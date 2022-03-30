@@ -13,6 +13,7 @@ import {
 import { usePersistFn } from 'ahooks';
 import ConicalGradient from '../gradient/conical-gradient';
 import Res from '../../res';
+import Icon from '../../res/rhythmIcons';
 import { IData, RhythmsCircleProps } from './interface';
 
 const totalTime = 24 * 60;
@@ -440,7 +441,44 @@ RhythmsCircle.defaultProps = {
   size: 280,
   ringWidth: 40,
   thumbSize: 36,
-  data: [],
+  data: [
+    {
+      color: '#CE8040',
+      noActiveColor: '#fff',
+      activeColor: '#F7EB2A',
+      icon: Icon.icon1,
+      index: 0,
+      time: 390,
+      valid: true,
+    },
+    {
+      color: '#CEECFE',
+      noActiveColor: '#fff',
+      activeColor: '#FFB420',
+      icon: Icon.icon2,
+      index: 1,
+      time: 690,
+      valid: true,
+    },
+    {
+      color: '#CE8040',
+      noActiveColor: '#fff',
+      activeColor: '#54FFC6',
+      icon: Icon.icon3,
+      index: 2,
+      time: 1020,
+      valid: true,
+    },
+    {
+      color: '#333',
+      noActiveColor: '#fff',
+      activeColor: '#3391FF',
+      icon: Icon.icon4,
+      index: 3,
+      time: 1260,
+      valid: true,
+    },
+  ],
   disabled: false,
   disabledOpacity: 1,
   stepOverEnabled: false,

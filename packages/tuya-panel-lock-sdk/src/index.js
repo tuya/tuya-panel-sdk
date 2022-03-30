@@ -16,3 +16,13 @@ export { default as LockUtils } from './utils';
 export { default as SlideChoose } from './slide-choose';
 export { default as DragSort } from './drag-sort';
 export { default as BubbleTip } from './bubble-tip';
+export {
+  default as usePreviewModal,
+  AesImage,
+  Video as AesVideo,
+  IVideoProps,
+  IAesImage as IAesImageProps,
+  IPreviewer as IPreviewerProps,
+} from './AesMediaPreview';
+export { default as useRemoteManager } from './remote-manager';
+export { default as DPUtil } from './utils/DPUtil';

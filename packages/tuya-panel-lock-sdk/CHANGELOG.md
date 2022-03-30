@@ -3,6 +3,33 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.8.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.8.1...@tuya/tuya-panel-lock-sdk@1.8.2) (2022-02-28)
+
+**Note:** Version bump only for package @tuya/tuya-panel-lock-sdk
+
+
+
+
+
+## [1.8.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.8.0...@tuya/tuya-panel-lock-sdk@1.8.1) (2022-02-16)
+
+**Note:** Version bump only for package @tuya/tuya-panel-lock-sdk
+
+
+
+
+
+# [1.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.7.0...@tuya/tuya-panel-lock-sdk@1.8.0) (2022-02-10)
+
+
+### Features
+
+* **tuya-panel-lock-sdk:** Add AesMediaPreview、RemoteManager、DPUtil ([#174](https://github.com/tuya/tuya-panel-sdk/issues/174)) ([f8ec70e](https://github.com/tuya/tuya-panel-sdk/commit/f8ec70edd9c5708ee6a0decb6d5b931792b9367d))
+
+
+
+
+
 # [1.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.6.0...@tuya/tuya-panel-lock-sdk@1.7.0) (2021-12-28)
 
 

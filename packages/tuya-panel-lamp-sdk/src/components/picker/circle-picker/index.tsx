@@ -11,6 +11,7 @@ import {
   PanResponder,
   StyleProp,
   ViewStyle,
+  Animated,
 } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 
@@ -112,6 +113,14 @@ const defaultProps = {
    * 自定义轨道
    */
   renderTrack: null,
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -144,6 +153,7 @@ export default class CirclePicker extends React.Component<IProps> {
     this.initData(this.props);
     this.initRangeValue(this.props);
     this.handleValue(this.getRightValue(this.props));
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this.handleSetPanResponder,
       onMoveShouldSetPanResponder: () => !this.props.disabled && this.dragEnable,
@@ -174,6 +184,7 @@ export default class CirclePicker extends React.Component<IProps> {
       minRangeValue,
       maxRangeValue,
       thumbSize,
+      opacityAnimationValue,
     } = this.props;
 
     if (
@@ -194,6 +205,14 @@ export default class CirclePicker extends React.Component<IProps> {
     }
 
     this.handleValue(this.getRightValue(nextProps));
+
+    if (opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
+    }
   }
 
   shouldComponentUpdate() {
@@ -265,6 +284,7 @@ export default class CirclePicker extends React.Component<IProps> {
   private width: number;
   private height: number;
   private thumbRef: View;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   handleSetPanResponder = (e: GestureResponderEvent) => {
     if (this.props.disabled) {
@@ -430,21 +450,28 @@ export default class CirclePicker extends React.Component<IProps> {
     const { startDeg, endDeg, width, height, thumbX, thumbY } = this;
     return (
       <View style={[styles.box, wrapperStyle]}>
-        {typeof renderTrack === 'function' ? (
-          renderTrack()
-        ) : (
-          <Svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
-            <Defs>
-              <LinearGradient id="linear" x1="0%" x2="100%" y1="0%" y2="0%">
-                {stopColors.map((item, index) => (
-                  // eslint-disable-next-line react/no-array-index-key
-                  <Stop key={index} {...item} />
-                ))}
-              </LinearGradient>
-            </Defs>
-            <Path d={this.getPath(startDeg, endDeg)} fill="url(#linear)" />
-          </Svg>
-        )}
+        <Animated.View
+          style={{
+            opacity: this.bgOpacityAnim,
+          }}
+        >
+          {typeof renderTrack === 'function' ? (
+            renderTrack()
+          ) : (
+            <Svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
+              <Defs>
+                <LinearGradient id="linear" x1="0%" x2="100%" y1="0%" y2="0%">
+                  {stopColors.map((item, index) => (
+                    // eslint-disable-next-line react/no-array-index-key
+                    <Stop key={index} {...item} />
+                  ))}
+                </LinearGradient>
+              </Defs>
+              <Path d={this.getPath(startDeg, endDeg)} fill="url(#linear)" />
+            </Svg>
+          )}
+        </Animated.View>
+
         {showThumb && (
           <View
             ref={ref => {
