@@ -64,7 +64,7 @@ describe('ColourPicker', () => {
   });
 
   it('rectPicker mount', () => {
-    let value = { hue: 100, saturation: 500, value: 500 };
+    const value = { hue: 100, saturation: 500, value: 500 };
     const wrapper = mount(<RectColorAndBrightPicker.ColourPicker value={value} />);
 
     expect(wrapper).toMatchSnapshot();
@@ -90,8 +90,8 @@ describe('ColourPicker', () => {
   });
 
   it('rectPicker mount disable', () => {
-    let value = { hue: 100, saturation: 500, value: 500 };
-    const wrapper = mount(<RectColorAndBrightPicker.ColourPicker value={value} disabled={true} />);
+    const value = { hue: 100, saturation: 500, value: 500 };
+    const wrapper = mount(<RectColorAndBrightPicker.ColourPicker value={value} disabled />);
 
     expect(wrapper).toMatchSnapshot();
 
@@ -123,7 +123,7 @@ describe('ColourPicker', () => {
   });
 
   it('slider mount', () => {
-    let value = { hue: 100, saturation: 500, value: 500 };
+    const value = { hue: 100, saturation: 500, value: 500 };
     const wrapper = mount(<RectColorAndBrightPicker.ColourPicker value={value} />);
 
     expect(wrapper).toMatchSnapshot();

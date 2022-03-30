@@ -10,6 +10,8 @@ exports[`HuePicker components basic render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   style={
     Array [
       Object {
@@ -25,24 +27,74 @@ exports[`HuePicker components basic render 1`] = `
   touchThumbRadius={0}
   value={0}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 540,
-          "width": 540,
-        }
+    <ConicalGradent
+      colors={
+        Array [
+          Object {
+            "angle": 0,
+            "color": "#FF0000",
+          },
+          Object {
+            "angle": 0.5215043804959056,
+            "color": "#FF007F",
+          },
+          Object {
+            "angle": 1.049291946298991,
+            "color": "#FF00FF",
+          },
+          Object {
+            "angle": 1.5707963267948966,
+            "color": "#7F00FF",
+          },
+          Object {
+            "angle": 2.092300707290802,
+            "color": "#0000FF",
+          },
+          Object {
+            "angle": 2.6200882730938875,
+            "color": "#007FFF",
+          },
+          Object {
+            "angle": 3.141592653589793,
+            "color": "#00FFFF",
+          },
+          Object {
+            "angle": 3.6630970340856988,
+            "color": "#00FF7F",
+          },
+          Object {
+            "angle": 4.1908845998887845,
+            "color": "#00FF00",
+          },
+          Object {
+            "angle": 4.71238898038469,
+            "color": "#7FFF00",
+          },
+          Object {
+            "angle": 5.233893360880595,
+            "color": "#FFFF00",
+          },
+          Object {
+            "angle": 5.761680926683681,
+            "color": "#FF7F00",
+          },
+        ]
       }
+      innerRadius={150}
+      offsetAngle={0}
+      outerRadius={270}
+      segmentAngle={0.017453292519943295}
     />
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -119,6 +171,8 @@ exports[`HuePicker components componentWillReceiveProps render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   style={
     Array [
       Object {
@@ -134,24 +188,74 @@ exports[`HuePicker components componentWillReceiveProps render 1`] = `
   touchThumbRadius={0}
   value={0}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 540,
-          "width": 540,
-        }
+    <ConicalGradent
+      colors={
+        Array [
+          Object {
+            "angle": 0,
+            "color": "#FF0000",
+          },
+          Object {
+            "angle": 0.5215043804959056,
+            "color": "#FF007F",
+          },
+          Object {
+            "angle": 1.049291946298991,
+            "color": "#FF00FF",
+          },
+          Object {
+            "angle": 1.5707963267948966,
+            "color": "#7F00FF",
+          },
+          Object {
+            "angle": 2.092300707290802,
+            "color": "#0000FF",
+          },
+          Object {
+            "angle": 2.6200882730938875,
+            "color": "#007FFF",
+          },
+          Object {
+            "angle": 3.141592653589793,
+            "color": "#00FFFF",
+          },
+          Object {
+            "angle": 3.6630970340856988,
+            "color": "#00FF7F",
+          },
+          Object {
+            "angle": 4.1908845998887845,
+            "color": "#00FF00",
+          },
+          Object {
+            "angle": 4.71238898038469,
+            "color": "#7FFF00",
+          },
+          Object {
+            "angle": 5.233893360880595,
+            "color": "#FFFF00",
+          },
+          Object {
+            "angle": 5.761680926683681,
+            "color": "#FF7F00",
+          },
+        ]
       }
+      innerRadius={150}
+      offsetAngle={0}
+      outerRadius={270}
+      segmentAngle={0.017453292519943295}
     />
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -228,6 +332,8 @@ exports[`HuePicker components render touch 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   style={
     Array [
       Object {
@@ -243,24 +349,74 @@ exports[`HuePicker components render touch 1`] = `
   touchThumbRadius={0}
   value={300}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 540,
-          "width": 540,
-        }
+    <ConicalGradent
+      colors={
+        Array [
+          Object {
+            "angle": 0,
+            "color": "#FF0000",
+          },
+          Object {
+            "angle": 0.5215043804959056,
+            "color": "#FF007F",
+          },
+          Object {
+            "angle": 1.049291946298991,
+            "color": "#FF00FF",
+          },
+          Object {
+            "angle": 1.5707963267948966,
+            "color": "#7F00FF",
+          },
+          Object {
+            "angle": 2.092300707290802,
+            "color": "#0000FF",
+          },
+          Object {
+            "angle": 2.6200882730938875,
+            "color": "#007FFF",
+          },
+          Object {
+            "angle": 3.141592653589793,
+            "color": "#00FFFF",
+          },
+          Object {
+            "angle": 3.6630970340856988,
+            "color": "#00FF7F",
+          },
+          Object {
+            "angle": 4.1908845998887845,
+            "color": "#00FF00",
+          },
+          Object {
+            "angle": 4.71238898038469,
+            "color": "#7FFF00",
+          },
+          Object {
+            "angle": 5.233893360880595,
+            "color": "#FFFF00",
+          },
+          Object {
+            "angle": 5.761680926683681,
+            "color": "#FF7F00",
+          },
+        ]
       }
+      innerRadius={0}
+      offsetAngle={0}
+      outerRadius={270}
+      segmentAngle={0.017453292519943295}
     />
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -337,6 +493,8 @@ exports[`HuePicker components render touch disabled 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   style={
     Array [
       Object {
@@ -352,24 +510,74 @@ exports[`HuePicker components render touch disabled 1`] = `
   touchThumbRadius={0}
   value={300}
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
-      style={
-        Object {
-          "height": 540,
-          "width": 540,
-        }
+    <ConicalGradent
+      colors={
+        Array [
+          Object {
+            "angle": 0,
+            "color": "#FF0000",
+          },
+          Object {
+            "angle": 0.5215043804959056,
+            "color": "#FF007F",
+          },
+          Object {
+            "angle": 1.049291946298991,
+            "color": "#FF00FF",
+          },
+          Object {
+            "angle": 1.5707963267948966,
+            "color": "#7F00FF",
+          },
+          Object {
+            "angle": 2.092300707290802,
+            "color": "#0000FF",
+          },
+          Object {
+            "angle": 2.6200882730938875,
+            "color": "#007FFF",
+          },
+          Object {
+            "angle": 3.141592653589793,
+            "color": "#00FFFF",
+          },
+          Object {
+            "angle": 3.6630970340856988,
+            "color": "#00FF7F",
+          },
+          Object {
+            "angle": 4.1908845998887845,
+            "color": "#00FF00",
+          },
+          Object {
+            "angle": 4.71238898038469,
+            "color": "#7FFF00",
+          },
+          Object {
+            "angle": 5.233893360880595,
+            "color": "#FFFF00",
+          },
+          Object {
+            "angle": 5.761680926683681,
+            "color": "#FF7F00",
+          },
+        ]
       }
+      innerRadius={150}
+      offsetAngle={0}
+      outerRadius={270}
+      segmentAngle={0.017453292519943295}
     />
-  </View>
+  </AnimatedComponent>
   <View
     style={
       Object {

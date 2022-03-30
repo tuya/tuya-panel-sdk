@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.8.0...@tuya/tuya-panel-remote-sdk@0.9.0) (2022-03-15)
+
+
+### Features
+
+* Add DeviceItem Component([#185](https://github.com/tuya/tuya-panel-sdk/issues/185)) ([387827a](https://github.com/tuya/tuya-panel-sdk/commit/387827a3e887940e254cbd9a99f5c1cd6faffbdc))
+
+
+
+
+
+# [0.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.7.0...@tuya/tuya-panel-remote-sdk@0.8.0) (2022-03-03)
+
+
+### Features
+
+* **remote:** add new component and utils ([#184](https://github.com/tuya/tuya-panel-sdk/issues/184)) ([f4bef8d](https://github.com/tuya/tuya-panel-sdk/commit/f4bef8d4a576fbe4c014f3a881e42305b96ba5bb))
+
+
+
+
+
+# [0.7.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.6.0...@tuya/tuya-panel-remote-sdk@0.7.0) (2022-02-10)
+
+
+### Features
+
+* **remote:** Add new LetterSearch and MaskView component([#171](https://github.com/tuya/tuya-panel-sdk/issues/171)) ([8413239](https://github.com/tuya/tuya-panel-sdk/commit/8413239cf42911f19aa161e131254daa749c1588))
+
+
+
+
+
 # [0.6.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.5.0...@tuya/tuya-panel-remote-sdk@0.6.0) (2022-01-18)
 
 

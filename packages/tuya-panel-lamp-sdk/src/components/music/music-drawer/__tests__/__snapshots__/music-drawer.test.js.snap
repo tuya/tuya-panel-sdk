@@ -586,7 +586,11 @@ exports[`MusicBar components basic render with no right icon 1`] = `
           </TYText>
         </View>
       </View>
-      <View />
+      <ThemedSwitchButton
+        onValueChange={[Function]}
+        theme={null}
+        value={false}
+      />
     </View>
     <View
       onLayout={[Function]}
@@ -698,7 +702,11 @@ exports[`MusicBar components basic render with no right icon 1`] = `
           </TYText>
         </View>
       </View>
-      <View />
+      <ThemedSwitchButton
+        onValueChange={[Function]}
+        theme={null}
+        value={true}
+      />
     </View>
     <View
       onLayout={[Function]}

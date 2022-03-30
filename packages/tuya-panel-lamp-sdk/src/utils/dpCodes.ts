@@ -1,4 +1,5 @@
 export default {
+  sleepCode: 'sleep_mode',
   powerCode: 'switch_led',
   colourCode: 'colour_data',
   workModeCode: 'work_mode',
@@ -13,4 +14,7 @@ export default {
   randomTimingCode: 'random_timing',
   powerMemoryCode: 'power_memory',
   doNotDisturbCode: 'do_not_disturb',
-} as DpCodes;
+
+  dreamLightSceneCode: 'dreamlight_scene_mode',
+  dreamLightMicMusicCode: 'dreamlightmic_music_data',
+};

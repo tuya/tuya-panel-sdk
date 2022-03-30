@@ -6,7 +6,6 @@ exports[`Btn components basic render 1`] = `
 >
   <Component
     color="#333"
-    size={14}
   />
 </TouchableOpacity>
 `;

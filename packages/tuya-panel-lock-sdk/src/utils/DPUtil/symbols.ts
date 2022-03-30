@@ -1,0 +1,10 @@
+export const replyCb = Symbol('replycb');
+export const timeoutCb = Symbol('timeoutCb');
+export const observerList = Symbol('observerList');
+export const symbolDpKey = Symbol('dpKey');
+export const checkHasCurrentDp = Symbol('checkHasCurrentDp');
+export const symbolTimer = Symbol('timer');
+export const lastReportTime = Symbol('lastReportTime');
+export const initObserver = Symbol('initObserver');
+export const getLastDpsTime = Symbol('getLastDpsTime');
+export const hasListened = Symbol('hasListened');

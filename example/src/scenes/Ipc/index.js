@@ -21,6 +21,7 @@ import IpcMusicControl from './IpcMusicControl';
 import IpcLoading from './IpcLoading';
 import IpcGridList from './IpcGridList';
 import IpcStepButton from './IpcStepButton';
+import IpcMultiplePlayer from './IpcMultiplePlayer';
 
 export default class AnimatedScene extends Component {
   get data() {
@@ -46,6 +47,7 @@ export default class AnimatedScene extends Component {
   static IpcLoading = IpcLoading;
   static IpcGridList = IpcGridList;
   static IpcStepButton = IpcStepButton;
+  static IpcMultiplePlayer = IpcMultiplePlayer;
 
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;

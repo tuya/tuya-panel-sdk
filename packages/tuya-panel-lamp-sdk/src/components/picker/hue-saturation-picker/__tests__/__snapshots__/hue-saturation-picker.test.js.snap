@@ -4,7 +4,6 @@ exports[`HueSaturationPicker components basic render 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
-  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -13,6 +12,8 @@ exports[`HueSaturationPicker components basic render 1`] = `
   onMove={[MockFunction]}
   onPress={[MockFunction]}
   onRelease={[MockFunction]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   stepHue={1}
   stepSaturation={1}
   style={
@@ -38,24 +39,130 @@ exports[`HueSaturationPicker components basic render 1`] = `
     }
   }
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
+    <View
       style={
         Object {
+          "alignItems": "center",
           "height": 540,
+          "justifyContent": "center",
           "width": 540,
         }
       }
-    />
-  </View>
+    >
+      <ConicalGradent
+        colors={
+          Array [
+            Object {
+              "angle": 0,
+              "color": "#FF0000",
+            },
+            Object {
+              "angle": 0.5215043804959056,
+              "color": "#FF007F",
+            },
+            Object {
+              "angle": 1.049291946298991,
+              "color": "#FF00FF",
+            },
+            Object {
+              "angle": 1.5707963267948966,
+              "color": "#7F00FF",
+            },
+            Object {
+              "angle": 2.092300707290802,
+              "color": "#0000FF",
+            },
+            Object {
+              "angle": 2.6200882730938875,
+              "color": "#007FFF",
+            },
+            Object {
+              "angle": 3.141592653589793,
+              "color": "#00FFFF",
+            },
+            Object {
+              "angle": 3.6630970340856988,
+              "color": "#00FF7F",
+            },
+            Object {
+              "angle": 4.1908845998887845,
+              "color": "#00FF00",
+            },
+            Object {
+              "angle": 4.71238898038469,
+              "color": "#7FFF00",
+            },
+            Object {
+              "angle": 5.233893360880595,
+              "color": "#FFFF00",
+            },
+            Object {
+              "angle": 5.761680926683681,
+              "color": "#FF7F00",
+            },
+          ]
+        }
+        innerRadius={0}
+        offsetAngle={0}
+        outerRadius={270}
+        segmentAngle={0.017453292519943295}
+      />
+      <View
+        style={
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          }
+        }
+      >
+        <Svg
+          height={540}
+          preserveAspectRatio="xMidYMid meet"
+          width={540}
+        >
+          <Defs>
+            <RadialGradient
+              cx={270}
+              cy={270}
+              fx={270}
+              fy={270}
+              gradientUnits="userSpaceOnUse"
+              id="540270"
+              r="50%"
+              rx={270}
+              ry={270}
+            >
+              <Stop
+                offset="0%"
+                stopColor="#fff"
+                stopOpacity="1"
+              />
+              <Stop
+                offset="100%"
+                stopColor="#fff"
+                stopOpacity="0"
+              />
+            </RadialGradient>
+          </Defs>
+          <Path
+            d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M270 270A0 0 0 1 1 270 270A0 0 0 1 1 270 270Z"
+            fill="url(#540270)"
+          />
+        </Svg>
+      </View>
+    </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -128,7 +235,6 @@ exports[`HueSaturationPicker components componentWillReceiveProps render 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
-  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -137,6 +243,8 @@ exports[`HueSaturationPicker components componentWillReceiveProps render 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   stepHue={1}
   stepSaturation={1}
   style={
@@ -160,24 +268,130 @@ exports[`HueSaturationPicker components componentWillReceiveProps render 1`] = `
     }
   }
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
+    <View
       style={
         Object {
+          "alignItems": "center",
           "height": 540,
+          "justifyContent": "center",
           "width": 540,
         }
       }
-    />
-  </View>
+    >
+      <ConicalGradent
+        colors={
+          Array [
+            Object {
+              "angle": 0,
+              "color": "#FF0000",
+            },
+            Object {
+              "angle": 0.5215043804959056,
+              "color": "#FF007F",
+            },
+            Object {
+              "angle": 1.049291946298991,
+              "color": "#FF00FF",
+            },
+            Object {
+              "angle": 1.5707963267948966,
+              "color": "#7F00FF",
+            },
+            Object {
+              "angle": 2.092300707290802,
+              "color": "#0000FF",
+            },
+            Object {
+              "angle": 2.6200882730938875,
+              "color": "#007FFF",
+            },
+            Object {
+              "angle": 3.141592653589793,
+              "color": "#00FFFF",
+            },
+            Object {
+              "angle": 3.6630970340856988,
+              "color": "#00FF7F",
+            },
+            Object {
+              "angle": 4.1908845998887845,
+              "color": "#00FF00",
+            },
+            Object {
+              "angle": 4.71238898038469,
+              "color": "#7FFF00",
+            },
+            Object {
+              "angle": 5.233893360880595,
+              "color": "#FFFF00",
+            },
+            Object {
+              "angle": 5.761680926683681,
+              "color": "#FF7F00",
+            },
+          ]
+        }
+        innerRadius={0}
+        offsetAngle={0}
+        outerRadius={270}
+        segmentAngle={0.017453292519943295}
+      />
+      <View
+        style={
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          }
+        }
+      >
+        <Svg
+          height={540}
+          preserveAspectRatio="xMidYMid meet"
+          width={540}
+        >
+          <Defs>
+            <RadialGradient
+              cx={270}
+              cy={270}
+              fx={270}
+              fy={270}
+              gradientUnits="userSpaceOnUse"
+              id="540270"
+              r="50%"
+              rx={270}
+              ry={270}
+            >
+              <Stop
+                offset="0%"
+                stopColor="#fff"
+                stopOpacity="1"
+              />
+              <Stop
+                offset="100%"
+                stopColor="#fff"
+                stopOpacity="0"
+              />
+            </RadialGradient>
+          </Defs>
+          <Path
+            d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M270 270A0 0 0 1 1 270 270A0 0 0 1 1 270 270Z"
+            fill="url(#540270)"
+          />
+        </Svg>
+      </View>
+    </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -248,7 +462,6 @@ exports[`HueSaturationPicker components render touch 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
-  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -257,6 +470,8 @@ exports[`HueSaturationPicker components render touch 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   stepHue={1}
   stepSaturation={1}
   style={
@@ -280,24 +495,130 @@ exports[`HueSaturationPicker components render touch 1`] = `
     }
   }
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
+    <View
       style={
         Object {
+          "alignItems": "center",
           "height": 540,
+          "justifyContent": "center",
           "width": 540,
         }
       }
-    />
-  </View>
+    >
+      <ConicalGradent
+        colors={
+          Array [
+            Object {
+              "angle": 0,
+              "color": "#FF0000",
+            },
+            Object {
+              "angle": 0.5215043804959056,
+              "color": "#FF007F",
+            },
+            Object {
+              "angle": 1.049291946298991,
+              "color": "#FF00FF",
+            },
+            Object {
+              "angle": 1.5707963267948966,
+              "color": "#7F00FF",
+            },
+            Object {
+              "angle": 2.092300707290802,
+              "color": "#0000FF",
+            },
+            Object {
+              "angle": 2.6200882730938875,
+              "color": "#007FFF",
+            },
+            Object {
+              "angle": 3.141592653589793,
+              "color": "#00FFFF",
+            },
+            Object {
+              "angle": 3.6630970340856988,
+              "color": "#00FF7F",
+            },
+            Object {
+              "angle": 4.1908845998887845,
+              "color": "#00FF00",
+            },
+            Object {
+              "angle": 4.71238898038469,
+              "color": "#7FFF00",
+            },
+            Object {
+              "angle": 5.233893360880595,
+              "color": "#FFFF00",
+            },
+            Object {
+              "angle": 5.761680926683681,
+              "color": "#FF7F00",
+            },
+          ]
+        }
+        innerRadius={0}
+        offsetAngle={0}
+        outerRadius={270}
+        segmentAngle={0.017453292519943295}
+      />
+      <View
+        style={
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          }
+        }
+      >
+        <Svg
+          height={540}
+          preserveAspectRatio="xMidYMid meet"
+          width={540}
+        >
+          <Defs>
+            <RadialGradient
+              cx={270}
+              cy={270}
+              fx={270}
+              fy={270}
+              gradientUnits="userSpaceOnUse"
+              id="540270"
+              r="50%"
+              rx={270}
+              ry={270}
+            >
+              <Stop
+                offset="0%"
+                stopColor="#fff"
+                stopOpacity="1"
+              />
+              <Stop
+                offset="100%"
+                stopColor="#fff"
+                stopOpacity="0"
+              />
+            </RadialGradient>
+          </Defs>
+          <Path
+            d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M270 270A0 0 0 1 1 270 270A0 0 0 1 1 270 270Z"
+            fill="url(#540270)"
+          />
+        </Svg>
+      </View>
+    </View>
+  </AnimatedComponent>
   <View
     style={
       Object {
@@ -368,7 +689,6 @@ exports[`HueSaturationPicker components render touch disabled 1`] = `
 <View
   disalbedThumbOpacity={0.4}
   hideThumb={false}
-  innerRadius={0}
   maxSaturation={1000}
   minSaturation={0}
   offsetAngle={0}
@@ -377,6 +697,8 @@ exports[`HueSaturationPicker components render touch disabled 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   stepHue={1}
   stepSaturation={1}
   style={
@@ -400,24 +722,130 @@ exports[`HueSaturationPicker components render touch disabled 1`] = `
     }
   }
 >
-  <View
+  <AnimatedComponent
     style={
       Object {
         "height": 540,
+        "opacity": 1,
         "width": 540,
       }
     }
   >
-    <Image
-      source={1}
+    <View
       style={
         Object {
+          "alignItems": "center",
           "height": 540,
+          "justifyContent": "center",
           "width": 540,
         }
       }
-    />
-  </View>
+    >
+      <ConicalGradent
+        colors={
+          Array [
+            Object {
+              "angle": 0,
+              "color": "#FF0000",
+            },
+            Object {
+              "angle": 0.5215043804959056,
+              "color": "#FF007F",
+            },
+            Object {
+              "angle": 1.049291946298991,
+              "color": "#FF00FF",
+            },
+            Object {
+              "angle": 1.5707963267948966,
+              "color": "#7F00FF",
+            },
+            Object {
+              "angle": 2.092300707290802,
+              "color": "#0000FF",
+            },
+            Object {
+              "angle": 2.6200882730938875,
+              "color": "#007FFF",
+            },
+            Object {
+              "angle": 3.141592653589793,
+              "color": "#00FFFF",
+            },
+            Object {
+              "angle": 3.6630970340856988,
+              "color": "#00FF7F",
+            },
+            Object {
+              "angle": 4.1908845998887845,
+              "color": "#00FF00",
+            },
+            Object {
+              "angle": 4.71238898038469,
+              "color": "#7FFF00",
+            },
+            Object {
+              "angle": 5.233893360880595,
+              "color": "#FFFF00",
+            },
+            Object {
+              "angle": 5.761680926683681,
+              "color": "#FF7F00",
+            },
+          ]
+        }
+        innerRadius={0}
+        offsetAngle={0}
+        outerRadius={270}
+        segmentAngle={0.017453292519943295}
+      />
+      <View
+        style={
+          Object {
+            "left": 0,
+            "position": "absolute",
+            "top": 0,
+          }
+        }
+      >
+        <Svg
+          height={540}
+          preserveAspectRatio="xMidYMid meet"
+          width={540}
+        >
+          <Defs>
+            <RadialGradient
+              cx={270}
+              cy={270}
+              fx={270}
+              fy={270}
+              gradientUnits="userSpaceOnUse"
+              id="540270"
+              r="50%"
+              rx={270}
+              ry={270}
+            >
+              <Stop
+                offset="0%"
+                stopColor="#fff"
+                stopOpacity="1"
+              />
+              <Stop
+                offset="100%"
+                stopColor="#fff"
+                stopOpacity="0"
+              />
+            </RadialGradient>
+          </Defs>
+          <Path
+            d="M0 270A270 270 0 1 0 540 270A270 270 0 1 0 0 270Z
+    M270 270A0 0 0 1 1 270 270A0 0 0 1 1 270 270Z"
+            fill="url(#540270)"
+          />
+        </Svg>
+      </View>
+    </View>
+  </AnimatedComponent>
   <View
     style={
       Object {

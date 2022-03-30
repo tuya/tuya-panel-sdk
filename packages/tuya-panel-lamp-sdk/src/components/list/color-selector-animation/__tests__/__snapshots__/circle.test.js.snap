@@ -9,6 +9,7 @@ exports[`Circle components basic render 1`] = `
         "height": 56,
         "width": 56,
       },
+      undefined,
       Object {
         "backgroundColor": "#fff",
         "transform": Array [
