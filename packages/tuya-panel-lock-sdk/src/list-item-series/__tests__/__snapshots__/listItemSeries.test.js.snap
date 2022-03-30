@@ -96,3 +96,106 @@ exports[`Hijack component base render 1`] = `
   </View>
 </View>
 `;
+
+exports[`TYListItemSeries component base render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <TYListItem
+    Action={
+      <SwitchButton
+        onValueChange={[MockFunction]}
+        value={true}
+      />
+    }
+    Icon={null}
+    actionDisabled={false}
+    actionType="auto"
+    arrow={false}
+    arrowColor={null}
+    arrowUseIcon={false}
+    disabled={false}
+    iconColor={null}
+    iconSize={null}
+    iconType="auto"
+    imageFollowIconColor={true}
+    needUpdate={true}
+    onPress={null}
+    styles={Object {}}
+    subTitle="测试门锁联动组件"
+    theme={
+      Object {
+        "cellBg": "white",
+        "descFontColor": "red",
+        "fontColor": "#333333",
+        "subFontColor": "#999",
+      }
+    }
+    title="测试"
+    useART={false}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "width": 750,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYListItem
+      Action="test"
+      Icon={null}
+      actionDisabled={false}
+      actionType="auto"
+      arrow={false}
+      arrowColor={null}
+      arrowUseIcon={false}
+      disabled={false}
+      iconColor={null}
+      iconSize={null}
+      iconType="auto"
+      imageFollowIconColor={true}
+      needUpdate={true}
+      onPress={[MockFunction]}
+      styles={
+        Object {
+          "subTitle": Object {
+            "fontSize": 12,
+          },
+          "title": Object {
+            "fontSize": 12,
+          },
+        }
+      }
+      subTitle="子组件测试联动"
+      theme={
+        Object {
+          "cellBg": "#00000005",
+          "cellRadius": 8,
+          "fontColor": "#333333",
+          "margin": Array [
+            12,
+            12,
+            12,
+            12,
+          ],
+          "subFontColor": "#999",
+        }
+      }
+      title="子组件"
+      useART={false}
+    />
+  </View>
+</View>
+`;

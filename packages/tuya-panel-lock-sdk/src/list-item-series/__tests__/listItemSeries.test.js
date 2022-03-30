@@ -30,15 +30,6 @@ describe('TYListItemSeries component', () => {
       );
     };
     const component = setup();
-    const target = component.findWhere(node => node.name() === 'SwitchButton');
-    const target3 = component.findWhere(node => {
-      console.log('node', node.name(), node);
-      return node.name() === 'SwitchButton';
-    });
-    target
-      .at(0)
-      .props()
-      .onValueChange(() => {});
     expect(component).toMatchSnapshot();
   });
 });
