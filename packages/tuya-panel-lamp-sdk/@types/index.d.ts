@@ -163,11 +163,11 @@ declare interface PowerMemoryData {
   temperature: number;
 }
 
-declare interface ISleepData{
-  version:number;
-  number:number;
-  nodes:Array;
-  mode?:number;
+declare interface ISleepData {
+  version: number;
+  number: number;
+  nodes: Array;
+  mode?: number;
 }
 
 declare interface SleepItem {
@@ -182,7 +182,25 @@ declare interface SleepItem {
   brightness: number;
   temperature: number;
 }
-
+declare interface IWakeUpData {
+  version: number;
+  number: number;
+  nodes: Array;
+  mode?: number;
+}
+declare interface WakeUpItem {
+  power: boolean;
+  weeks: number[];
+  delay: number;
+  hour: number;
+  minute: number;
+  hue: number;
+  saturation: number;
+  value: number;
+  brightness: number;
+  temperature: number;
+  last: number;
+}
 declare interface DpCodes {
   powerCode: string; // 开关
   workModeCode: string; // 工作模式
@@ -198,7 +216,8 @@ declare interface DpCodes {
   randomTimingCode: string; // 随机定时
   powerMemoryCode: string; // 断电记忆
   doNotDisturbCode: string; // 停电勿扰
-  sleepCode:string; //入睡
+  sleepCode: string; //入睡
+  wakeUpCode: string; //唤醒
 }
 
 declare interface ISceneData {
