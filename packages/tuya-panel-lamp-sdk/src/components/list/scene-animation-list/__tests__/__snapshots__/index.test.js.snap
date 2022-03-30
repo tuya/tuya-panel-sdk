@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SceneAnimationList components basic render 1`] = `
+<ScrollViewMock
+  contentContainerStyle={
+    Array [
+      Object {
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "space-between",
+        "width": "100%",
+      },
+      Object {
+        "paddingHorizontal": 20,
+      },
+    ]
+  }
+  scrollEventThrottle={16}
+  showsVerticalScrollIndicator={false}
+>
+  <AnimatedComponent
+    key="0"
+    style={
+      Array [
+        undefined,
+        Object {
+          "borderRadius": 32,
+          "height": 176,
+          "marginTop": 40,
+          "overflow": "hidden",
+          "width": 336,
+        },
+        Object {
+          "borderWidth": undefined,
+        },
+        Object {
+          "backgroundColor": "rgba(0, 0, 255, 1)",
+          "borderColor": undefined,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            undefined,
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "space-around",
+              "paddingHorizontal": 40,
+              "width": "100%",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        type={null}
+        weight={null}
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="1"
+    style={
+      Array [
+        undefined,
+        Object {
+          "borderRadius": 32,
+          "height": 176,
+          "marginTop": 40,
+          "overflow": "hidden",
+          "width": 336,
+        },
+        false,
+        Object {
+          "backgroundColor": "rgba(0, 0, 255, 1)",
+          "borderColor": undefined,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            undefined,
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "space-around",
+              "paddingHorizontal": 40,
+              "width": "100%",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        type={null}
+        weight={null}
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="2"
+    style={
+      Array [
+        undefined,
+        Object {
+          "borderRadius": 32,
+          "height": 176,
+          "marginTop": 40,
+          "overflow": "hidden",
+          "width": 336,
+        },
+        false,
+        Object {
+          "backgroundColor": "rgba(0, 0, 255, 1)",
+          "borderColor": undefined,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            undefined,
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "space-around",
+              "paddingHorizontal": 40,
+              "width": "100%",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        type={null}
+        weight={null}
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
+  <AnimatedComponent
+    key="3"
+    style={
+      Array [
+        undefined,
+        Object {
+          "borderRadius": 32,
+          "height": 176,
+          "marginTop": 40,
+          "overflow": "hidden",
+          "width": 336,
+        },
+        false,
+        Object {
+          "backgroundColor": "rgba(0, 0, 255, 1)",
+          "borderColor": undefined,
+          "transform": Array [
+            Object {
+              "scale": 1,
+            },
+          ],
+        },
+      ]
+    }
+  >
+    <TouchableOpacity
+      activeOpacity={1}
+      onPress={[Function]}
+      style={
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "height": "100%",
+          "justifyContent": "center",
+          "width": "100%",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            undefined,
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "height": "100%",
+              "justifyContent": "space-around",
+              "paddingHorizontal": 40,
+              "width": "100%",
+            },
+          ]
+        }
+      />
+      <TYText
+        align={null}
+        color={null}
+        size={null}
+        type={null}
+        weight={null}
+      />
+    </TouchableOpacity>
+  </AnimatedComponent>
+</ScrollViewMock>
+`;

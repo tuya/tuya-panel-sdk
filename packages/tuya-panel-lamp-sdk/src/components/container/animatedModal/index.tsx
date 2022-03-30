@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Modal, Motion, TYText, Utils } from 'tuya-panel-kit';
 import { View, Animated, TouchableOpacity, StyleSheet } from 'react-native';
-import { AnimatedModalProps, footOperationType } from './interface';
+import { footOperationType } from './interface';
 
 const { winWidth } = Utils.RatioUtils;
-const AnimatedModal: React.FC<AnimatedModalProps> = props => {
+const AnimatedModal: React.FC<any> = props => {
   const {
     motionStyle,
     isRenderHead,
