@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.11.0...@tuya/tuya-panel-lamp-sdk@1.12.0) (2022-03-30)
+
+
+### Features
+
+* animation component and scene list ([#190](https://github.com/tuya/tuya-panel-sdk/issues/190)) ([c70d6fc](https://github.com/tuya/tuya-panel-sdk/commit/c70d6fcba018a9bf6f80f2773cdb17e59a502bc9))
+
+
+
+
+
 # [1.11.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.10.0...@tuya/tuya-panel-lamp-sdk@1.11.0) (2022-03-25)
 
 
