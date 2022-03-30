@@ -9,6 +9,9 @@ import {
   GestureResponderEvent,
   PanResponderGestureState,
   ViewStyle,
+  Easing,
+  StyleProp,
+  TextStyle,
 } from 'react-native';
 import { IconFont, TYText } from 'tuya-panel-kit';
 import icons from './icons';
@@ -20,6 +23,14 @@ interface IPercentProps {
   width?: number | string;
   height?: number | string;
   brightWidth: number;
+  /**
+   * 图标尺寸
+   */
+  iconSize?: number;
+  /**
+   * 百分比文字样式
+   */
+  percentStyle?: StyleProp<TextStyle>;
 }
 
 export class Percent extends React.Component<IPercentProps, IPercentProps> {
@@ -28,6 +39,7 @@ export class Percent extends React.Component<IPercentProps, IPercentProps> {
     this.state = { ...this.props };
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: IPercentProps) {
     this.setState({ ...nextProps });
   }
@@ -37,7 +49,16 @@ export class Percent extends React.Component<IPercentProps, IPercentProps> {
   }
 
   render() {
-    const { percent, height, width, brightWidth, colorOver, colorInner } = this.state;
+    const {
+      percent,
+      height,
+      width,
+      brightWidth,
+      colorOver,
+      colorInner,
+      iconSize,
+      percentStyle,
+    } = this.state;
     let icon = icons.brightLevel1;
     if (percent > 20 && percent <= 60) {
       icon = icons.brightLevel2;
@@ -48,8 +69,10 @@ export class Percent extends React.Component<IPercentProps, IPercentProps> {
     return (
       <View style={[styles.percent, { height, width }]}>
         <View style={{ flex: 1, alignItems: 'center', flexDirection: 'row' }}>
-          <IconFont d={icon} size={32} color={colorOver} style={styles.percentIcon} />
-          <TYText style={[styles.percentText, { color: colorOver }]}>{percentText}</TYText>
+          <IconFont d={icon} size={iconSize || 32} color={colorOver} style={styles.percentIcon} />
+          <TYText style={[styles.percentText, percentStyle, { color: colorOver }]}>
+            {percentText}
+          </TYText>
         </View>
         <View
           style={{
@@ -63,8 +86,10 @@ export class Percent extends React.Component<IPercentProps, IPercentProps> {
             backgroundColor: colorOver,
           }}
         >
-          <IconFont style={styles.percentIcon} d={icon} size={32} color={colorInner} />
-          <TYText style={[styles.percentText, { color: colorInner }]}>{percentText}</TYText>
+          <IconFont style={styles.percentIcon} d={icon} size={iconSize || 32} color={colorInner} />
+          <TYText style={[styles.percentText, percentStyle, { color: colorInner }]}>
+            {percentText}
+          </TYText>
         </View>
       </View>
     );
@@ -86,18 +111,57 @@ const defaultProps = {
   onMove(v: number) {},
   onRelease(v: number) {},
   onPress(v: number) {},
+  showAnimation: true, // 使用动画显示
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 export interface IBrightOption {
+  /**
+   * 最小值
+   */
   min?: number;
+  /**
+   * 最大值
+   */
   max?: number;
+  /**
+   * 最小百分比
+   */
   minPercent?: number;
+  /**
+   * 字体颜色
+   */
   fontColor?: string;
+  /**
+   * 轨道背景色
+   */
   trackColor?: string;
+  /**
+   * 激活区颜色
+   */
   activeColor?: string;
+  /**
+   * 滑动生效的开始距离
+   * 默认为 7 个像素距离
+   */
   invalidSwipeDistance?: number;
   formatPercent?: (value: number) => number;
-  style?: ViewStyle | ViewStyle[];
+  style?: StyleProp<ViewStyle>;
+  /**
+   * 图标大小
+   */
+  iconSize?: number;
+  /**
+   * 百分比样式
+   */
+  percentStyle?: StyleProp<TextStyle>;
 }
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -105,6 +169,8 @@ type DefaultProps = Readonly<typeof defaultProps>;
 type IProps = {
   style?: ViewStyle | ViewStyle[];
   formatPercent?: (value: number) => number;
+  iconSize?: number;
+  percentStyle?: StyleProp<TextStyle>;
 } & DefaultProps;
 
 interface IState {
@@ -116,7 +182,7 @@ export default class Slider extends React.Component<IProps, IState> {
 
   constructor(props: IProps) {
     super(props);
-
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     this._panResponder = PanResponder.create({
       // 要求成为响应者：
       onStartShouldSetPanResponder: this.handleStartPanResponder,
@@ -132,11 +198,21 @@ export default class Slider extends React.Component<IProps, IState> {
     this.state = { value: this.props.value };
   }
 
+  // eslint-disable-next-line react/no-deprecated
   componentWillReceiveProps(nextProps: IProps) {
     if (!this.locked) {
       this.brightWidth = this.valueToWidth(nextProps.value);
-      this.brightAnimate.setValue(this.brightWidth);
-      this.setState({ value: nextProps.value });
+      if (nextProps.value !== this.props.value) {
+        this.setAnimationValue(this.brightWidth);
+        this.setState({ value: nextProps.value });
+      }
+    }
+    if (this.props.opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
     }
   }
 
@@ -178,6 +254,24 @@ export default class Slider extends React.Component<IProps, IState> {
     }
   };
 
+  setAnimationValue(value: number, isSliding = false) {
+    if (!isSliding && this.props.showAnimation) {
+      if (value !== this.brightWidth) {
+        this.brightAnimate.stopAnimation();
+        const duration = isSliding
+          ? 32
+          : Math.round((300 * Math.abs(value - this.brightWidth)) / this.sliderWidth);
+        Animated.timing(this.brightAnimate, {
+          toValue: value,
+          duration,
+          easing: Easing.linear,
+        }).start();
+      }
+    } else {
+      this.brightAnimate.setValue(value);
+    }
+  }
+
   private _panResponder: PanResponderInstance;
   private percentRef: Percent;
   private locked = false;
@@ -188,6 +282,7 @@ export default class Slider extends React.Component<IProps, IState> {
   private moving = false;
   private grantTime = 0;
   private isTouchStart = false;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   handleStartPanResponder = () => {
     if (this.props.disabled) {
@@ -229,7 +324,7 @@ export default class Slider extends React.Component<IProps, IState> {
 
     const value = this.coorToValue(width);
     width = this.valueToWidth(value);
-    this.brightAnimate.setValue(width);
+    this.setAnimationValue(width, !isEnd);
 
     this.percentRef &&
       this.percentRef.setNativeProps({ percent: this.formatPercent(value), brightWidth: width });
@@ -277,7 +372,7 @@ export default class Slider extends React.Component<IProps, IState> {
   }
 
   render() {
-    const { trackColor, activeColor, fontColor, style } = this.props;
+    const { trackColor, activeColor, fontColor, style, iconSize, percentStyle } = this.props;
     const containerStyle = [styles.container, style];
     const { height = 44 } = StyleSheet.flatten(containerStyle);
     return (
@@ -288,29 +383,46 @@ export default class Slider extends React.Component<IProps, IState> {
         pointerEvents="box-only"
         {...this._panResponder.panHandlers}
       >
-        <View style={[styles.track, { backgroundColor: trackColor }]} />
         <Animated.View
-          style={[
-            styles.mark,
-            {
-              backgroundColor: activeColor,
-              width: this.brightAnimate,
-            },
-          ]}
-        />
-        {this.showPercent && (
-          <Percent
-            ref={(ref: Percent) => {
-              this.percentRef = ref;
-            }}
-            percent={this.formatPercent(this.state.value)}
-            colorOver={activeColor}
-            colorInner={fontColor}
-            width={this.sliderWidth}
-            height={height}
-            brightWidth={this.brightWidth}
+          style={{
+            height: '100%',
+            width: '100%',
+            opacity: this.bgOpacityAnim,
+          }}
+        >
+          <View
+            style={[
+              styles.track,
+              {
+                backgroundColor: trackColor,
+              },
+            ]}
           />
-        )}
+          <Animated.View
+            style={[
+              styles.mark,
+              {
+                backgroundColor: activeColor,
+                width: this.brightAnimate,
+              },
+            ]}
+          />
+          {this.showPercent && (
+            <Percent
+              ref={(ref: Percent) => {
+                this.percentRef = ref;
+              }}
+              percent={this.formatPercent(this.state.value)}
+              colorOver={activeColor}
+              colorInner={fontColor}
+              width={this.sliderWidth}
+              height={height}
+              brightWidth={this.brightWidth}
+              iconSize={iconSize}
+              percentStyle={percentStyle}
+            />
+          )}
+        </Animated.View>
       </View>
     );
   }

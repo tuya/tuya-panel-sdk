@@ -100,6 +100,14 @@ const defaultProps = {
    * @param value
    */
   onPress(value: White) {},
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -187,6 +195,8 @@ export default class TemperatureBrightPicker extends Component<Props> {
       storageKey,
       style,
       showBright,
+      opacityAnimationValue,
+      opacityAnimationDuration,
       ...rest
     } = this.props;
     const innerWidth = fontSize * 2;
@@ -203,6 +213,8 @@ export default class TemperatureBrightPicker extends Component<Props> {
           max={maxTemperature}
           step={stepTemperature}
           storageKey={storageKey}
+          opacityAnimationValue={opacityAnimationValue}
+          opacityAnimationDuration={opacityAnimationDuration}
           onGrant={this.handleGrant}
           onMove={this.handleMove}
           onRelease={this.handleRelease}

@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-lamp-sdk",
-  "version": "1.9.3",
+  "version": "1.11.0",
   "description": "涂鸦照明业务组件库",
   "main": "./lib/index.js",
   "scripts": {

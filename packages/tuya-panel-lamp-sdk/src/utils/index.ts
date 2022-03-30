@@ -6,7 +6,11 @@ export { default as StorageUtils } from './storage';
 export { default as SupportUtils } from './support';
 import Strings from '../components/timer/normal-timing/i18n';
 
-const { CoreUtils } = Utils;
+const {
+  CoreUtils,
+  NumberUtils: { numToHexString },
+  ColorUtils: { color },
+} = Utils;
 
 export function handleError(error: Error): void {
   // eslint-disable-next-line no-console
@@ -49,7 +53,7 @@ export const formatPercent = (
   return Math.round(((100 - minPercent) * (value - min)) / (max - min) + minPercent);
 };
 
-export const to16 = (value: number, length = 2): string => {
+export const to16 = (value: number | boolean, length = 2): string => {
   let result = Number(value).toString(16);
   if (result.length < length) {
     result = _.padStart(result, length, '0');
@@ -271,4 +275,46 @@ export enum WORK_MODE {
   COLOUR = 'colour',
   SCENE = 'scene',
   MUSIC = 'music',
+}
+export function objectShallowEqual(obj1: any, obj2: any, keys?: string[]): boolean {
+  if (obj1 === obj2) return true;
+  const keys1 = Object.keys(obj1).filter(key => (keys ? keys.includes(key) : true));
+  const keys2 = Object.keys(obj2).filter(key => (keys ? keys.includes(key) : true));
+  return keys1.length === keys2.length && keys1.every(key => obj1[key] === obj2[key]);
+}
+/** hsv 转 hex */
+export function hsv2hex(hue = 0, saturation = 0, value = 1000): string {
+  return color.hsb2hex(hue, saturation / 10, value / 10);
+}
+
+export function nToHS(value = 0, num = 2): string {
+  return numToHexString(value || 0, num);
+}
+
+export function avgSplit(str = '', num = 1): string[] {
+  const reg = new RegExp(`.{1,${num}}`, 'g');
+  return str.match(reg) || [];
+}
+
+export function sToN(str = '', base = 16): number {
+  return parseInt(str, base) || 0;
+}
+
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export function toN(n: any): number {
+  return +n || 0;
+}
+
+export function* formatterTransform(value: string): any {
+  let start = 0;
+  let result: number | string = '';
+  let length;
+  while (true) {
+    length = yield result;
+    const newStart: number = length > 0 ? start + length : value.length + (length || 0);
+    result = length > 0 ? sToN(value.slice(start, newStart)) : value.slice(start, newStart);
+    if (newStart >= value.length) break;
+    start = newStart;
+  }
+  return result;
 }

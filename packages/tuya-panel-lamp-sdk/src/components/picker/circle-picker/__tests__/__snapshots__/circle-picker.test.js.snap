@@ -11,39 +11,47 @@ exports[`CirclePicker components basic render 1`] = `
     ]
   }
 >
-  <Svg
-    height={441.7056274847714}
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 480 441.7056274847714"
-    width={480}
+  <AnimatedComponent
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
-    <Defs>
-      <LinearGradient
-        id="linear"
-        x1="0%"
-        x2="100%"
-        y1="0%"
-        y2="0%"
-      >
-        <Stop
-          key="0"
-          offset="0%"
-          stopColor="#FEECAB"
-          stopOpacity={1}
-        />
-        <Stop
-          key="1"
-          offset="100%"
-          stopColor="#C0E8FF"
-          stopOpacity={1}
-        />
-      </LinearGradient>
-    </Defs>
-    <Path
-      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
-      fill="url(#linear)"
-    />
-  </Svg>
+    <Svg
+      height={441.7056274847714}
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 480 441.7056274847714"
+      width={480}
+    >
+      <Defs>
+        <LinearGradient
+          id="linear"
+          x1="0%"
+          x2="100%"
+          y1="0%"
+          y2="0%"
+        >
+          <Stop
+            key="0"
+            offset="0%"
+            stopColor="#FEECAB"
+            stopOpacity={1}
+          />
+          <Stop
+            key="1"
+            offset="100%"
+            stopColor="#C0E8FF"
+            stopOpacity={1}
+          />
+        </LinearGradient>
+      </Defs>
+      <Path
+        d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+        fill="url(#linear)"
+      />
+    </Svg>
+  </AnimatedComponent>
   <View
     style={
       Array [
@@ -115,39 +123,47 @@ exports[`CirclePicker components componentWillReceiveProps render 1`] = `
     ]
   }
 >
-  <Svg
-    height={441.7056274847714}
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 480 441.7056274847714"
-    width={480}
+  <AnimatedComponent
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
-    <Defs>
-      <LinearGradient
-        id="linear"
-        x1="0%"
-        x2="100%"
-        y1="0%"
-        y2="0%"
-      >
-        <Stop
-          key="0"
-          offset="0%"
-          stopColor="#FEECAB"
-          stopOpacity={1}
-        />
-        <Stop
-          key="1"
-          offset="100%"
-          stopColor="#C0E8FF"
-          stopOpacity={1}
-        />
-      </LinearGradient>
-    </Defs>
-    <Path
-      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
-      fill="url(#linear)"
-    />
-  </Svg>
+    <Svg
+      height={441.7056274847714}
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 480 441.7056274847714"
+      width={480}
+    >
+      <Defs>
+        <LinearGradient
+          id="linear"
+          x1="0%"
+          x2="100%"
+          y1="0%"
+          y2="0%"
+        >
+          <Stop
+            key="0"
+            offset="0%"
+            stopColor="#FEECAB"
+            stopOpacity={1}
+          />
+          <Stop
+            key="1"
+            offset="100%"
+            stopColor="#C0E8FF"
+            stopOpacity={1}
+          />
+        </LinearGradient>
+      </Defs>
+      <Path
+        d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+        fill="url(#linear)"
+      />
+    </Svg>
+  </AnimatedComponent>
   <View
     style={
       Array [
@@ -219,39 +235,47 @@ exports[`CirclePicker components render touch 1`] = `
     ]
   }
 >
-  <Svg
-    height={529.7056274847714}
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 480 529.7056274847714"
-    width={480}
+  <AnimatedComponent
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
-    <Defs>
-      <LinearGradient
-        id="linear"
-        x1="0%"
-        x2="100%"
-        y1="0%"
-        y2="0%"
-      >
-        <Stop
-          key="0"
-          offset="0%"
-          stopColor="#FEECAB"
-          stopOpacity={1}
-        />
-        <Stop
-          key="1"
-          offset="100%"
-          stopColor="#C0E8FF"
-          stopOpacity={1}
-        />
-      </LinearGradient>
-    </Defs>
-    <Path
-      d="M240 240 A120 120 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A120 120 0 0 1 240 240 A0 0 0 1 0 240 240 Z"
-      fill="url(#linear)"
-    />
-  </Svg>
+    <Svg
+      height={529.7056274847714}
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 480 529.7056274847714"
+      width={480}
+    >
+      <Defs>
+        <LinearGradient
+          id="linear"
+          x1="0%"
+          x2="100%"
+          y1="0%"
+          y2="0%"
+        >
+          <Stop
+            key="0"
+            offset="0%"
+            stopColor="#FEECAB"
+            stopOpacity={1}
+          />
+          <Stop
+            key="1"
+            offset="100%"
+            stopColor="#C0E8FF"
+            stopOpacity={1}
+          />
+        </LinearGradient>
+      </Defs>
+      <Path
+        d="M240 240 A120 120 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A120 120 0 0 1 240 240 A0 0 0 1 0 240 240 Z"
+        fill="url(#linear)"
+      />
+    </Svg>
+  </AnimatedComponent>
   <View
     style={
       Array [
@@ -323,39 +347,47 @@ exports[`CirclePicker components render touch disabled 1`] = `
     ]
   }
 >
-  <Svg
-    height={441.7056274847714}
-    preserveAspectRatio="xMidYMid meet"
-    viewBox="0 0 480 441.7056274847714"
-    width={480}
+  <AnimatedComponent
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
   >
-    <Defs>
-      <LinearGradient
-        id="linear"
-        x1="0%"
-        x2="100%"
-        y1="0%"
-        y2="0%"
-      >
-        <Stop
-          key="0"
-          offset="0%"
-          stopColor="#FEECAB"
-          stopOpacity={1}
-        />
-        <Stop
-          key="1"
-          offset="100%"
-          stopColor="#C0E8FF"
-          stopOpacity={1}
-        />
-      </LinearGradient>
-    </Defs>
-    <Path
-      d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
-      fill="url(#linear)"
-    />
-  </Svg>
+    <Svg
+      height={441.7056274847714}
+      preserveAspectRatio="xMidYMid meet"
+      viewBox="0 0 480 441.7056274847714"
+      width={480}
+    >
+      <Defs>
+        <LinearGradient
+          id="linear"
+          x1="0%"
+          x2="100%"
+          y1="0%"
+          y2="0%"
+        >
+          <Stop
+            key="0"
+            offset="0%"
+            stopColor="#FEECAB"
+            stopOpacity={1}
+          />
+          <Stop
+            key="1"
+            offset="100%"
+            stopColor="#C0E8FF"
+            stopOpacity={1}
+          />
+        </LinearGradient>
+      </Defs>
+      <Path
+        d="M115.54920651116765 364.45079348883235 A32 32 0 0 1 70.29437251522862 409.7056274847714 A240 240 0 1 1 409.7056274847714 409.70562748477136 A32 32 0 0 1 364.4507934888324 364.45079348883235 A176 176 0 1 0 115.54920651116765 364.45079348883235 Z"
+        fill="url(#linear)"
+      />
+    </Svg>
+  </AnimatedComponent>
   <View
     style={
       Array [

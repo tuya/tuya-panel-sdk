@@ -45,17 +45,29 @@ ColorUtils.bright2Opacity = (
  * 亮度将转化为透明度变化
  */
 ColorUtils.hsv2rgba = function (hue: number, saturation: number, bright: number) {
-  let color: string = ColorUtils.hsb2hex(hue, saturation / 10, 100);
-  // @ts-ignore
-  color = new ColorObj(color as string).alpha(this.bright2Opacity(bright)).rgbString();
-  return color;
+  try {
+    let color: string = ColorUtils.hsb2hex(hue, saturation / 10, 100);
+    // @ts-ignore
+    color = new ColorObj(color as string).alpha(this.bright2Opacity(bright)).rgbString();
+    return color;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn(error);
+    return 'transparent';
+  }
 };
 
 ColorUtils.brightKelvin2rgba = function (bright: number, kelvin: number) {
-  let color = ColorUtils.brightKelvin2rgb(1000, kelvin || 0);
-  // @ts-ignore
-  color = new ColorObj(color).alpha(this.bright2Opacity(bright)).rgbString();
-  return color;
+  try {
+    let color = ColorUtils.brightKelvin2rgb(1000, kelvin || 0);
+    // @ts-ignore
+    color = new ColorObj(color).alpha(this.bright2Opacity(bright)).rgbString();
+    return color;
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.warn(error);
+    return 'transparent';
+  }
 };
 
 export default ColorUtils;

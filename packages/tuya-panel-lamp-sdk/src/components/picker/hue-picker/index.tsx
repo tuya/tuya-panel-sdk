@@ -10,10 +10,12 @@ import {
   PanResponderGestureState,
   StyleProp,
   ViewStyle,
+  Animated,
 } from 'react-native';
 import { Utils } from 'tuya-panel-kit';
 import ColorUtils from '../../../utils/color';
-import Res from '../../../res';
+import ConicalGradient from '../../gradient/conical-gradient';
+import { circleGradientBg } from '../../../config';
 
 const { convertX } = Utils.RatioUtils;
 
@@ -36,9 +38,9 @@ const defaultProps = {
    */
   disalbedThumbOpacity: 0.4,
   /**
-   * 轨道的图
+   * 色盘样子
    */
-  bgImg: Res.colorBg,
+  gradientBg: circleGradientBg,
   /**
    * 轨道外圈半径
    */
@@ -92,6 +94,14 @@ const defaultProps = {
    * @param hue
    */
   onPress(hue: number) {},
+  /**
+   * 背景透明度动画值
+   */
+  opacityAnimationValue: 1,
+  /**
+   * 背景透明度动画时间
+   */
+  opacityAnimationDuration: 150,
 };
 
 type DefaultProps = Readonly<typeof defaultProps>;
@@ -104,6 +114,11 @@ type HuePickerProps = {
    * 滑块样式
    */
   thumbStyle?: StyleProp<ViewStyle>;
+  /**
+   * 轨道的图
+   * 当设置后，gradientBg 属性将不起作用
+   */
+  bgImg?: any;
 } & DefaultProps;
 
 interface IState {
@@ -118,6 +133,7 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
     this.state = { hideThumb: this.props.hideThumb };
     this.tempHue = this.props.value;
     this.initData(this.props);
+    this.bgOpacityAnim = new Animated.Value(this.props.opacityAnimationValue);
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this.handleSetResponder,
       onMoveShouldSetPanResponder: () => this.locked,
@@ -135,6 +151,13 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
         this.setState({ hideThumb: nextProps.hideThumb });
       }
       this.initData(nextProps);
+    }
+    if (this.props.opacityAnimationValue !== nextProps.opacityAnimationValue) {
+      Animated.timing(this.bgOpacityAnim, {
+        toValue: nextProps.opacityAnimationValue,
+        duration: nextProps.opacityAnimationDuration,
+        useNativeDriver: true,
+      }).start();
     }
   }
 
@@ -157,6 +180,7 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
   private coor: { x: number; y: number } = { x: 0, y: 0 };
   private thumbRef: React.ReactNode;
   private tempHue = 0;
+  private bgOpacityAnim: Animated.Value = new Animated.Value(1);
 
   initData(props: HuePickerProps) {
     const { radius, innerRadius, value } = props;
@@ -270,6 +294,7 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
       style,
       disabled,
       thumbStyle,
+      gradientBg,
       ...rest
     } = this.props;
     const { hideThumb } = this.state;
@@ -290,20 +315,25 @@ export default class HuePicker extends Component<HuePickerProps, IState> {
           style,
         ]}
       >
-        <View
+        <Animated.View
           style={{
             width: size,
             height: size,
+            opacity: this.bgOpacityAnim,
           }}
         >
-          <Image
-            source={bgImg}
-            style={{
-              width: size,
-              height: size,
-            }}
-          />
-        </View>
+          {bgImg ? (
+            <Image
+              source={bgImg}
+              style={{
+                width: size,
+                height: size,
+              }}
+            />
+          ) : (
+            <ConicalGradient outerRadius={radius} innerRadius={innerRadius} colors={gradientBg} />
+          )}
+        </Animated.View>
         <View
           style={{
             position: 'absolute',

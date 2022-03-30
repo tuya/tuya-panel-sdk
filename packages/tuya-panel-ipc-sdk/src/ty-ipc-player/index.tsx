@@ -139,7 +139,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.props.clarityStatus,
       this.props.voiceStatus,
       this.props.hightScaleMode,
-      this.props.channelNum
+      this.props.channelNum,
+      this.props.activeConnect
     );
 
     // 非摄像头品类的产品，旋转屏幕使用方法需初始化
@@ -229,8 +230,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         }
         // 针对安卓从原生界面返回，判定P2p有没有连接，低功耗进行唤醒
         if (isForeground && !this.onLivePage && !isIOS) {
-          const { isWirless, deviceOnline } = this.props;
-          judgeP2pISConnectedOperate(isWirless, deviceOnline);
+          const { isWirless, deviceOnline, notNeedJudgeConnectForeground } = this.props;
+          if (!notNeedJudgeConnectForeground) {
+            judgeP2pISConnectedOperate(isWirless, deviceOnline);
+          }
         }
       }
     );
@@ -286,6 +289,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             voiceStatus,
             hightScaleMode,
             channelNum,
+            activeConnect,
           } = this.props;
           TYIpcPlayerManager.startPlay(
             isWirless,
@@ -294,7 +298,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum
+            channelNum,
+            activeConnect
           );
         }
         // 低功耗session断开并且进入面板有上报低功耗休眠false
@@ -307,6 +312,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             voiceStatus,
             hightScaleMode,
             channelNum,
+            activeConnect,
           } = this.props;
           TYIpcPlayerManager.startPlay(
             isWirless,
@@ -315,7 +321,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             clarityStatus,
             voiceStatus,
             hightScaleMode,
-            channelNum
+            channelNum,
+            activeConnect
           );
           return false;
         }
@@ -332,11 +339,19 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   componentWillReceiveProps(nextProps: TYIpcPlayerProps) {
     // 隐私模式和设备在线变更监听 重新拉流
-    const { privateMode, deviceOnline, zoomStatus, channelNum, scaleMultiple } = this.props;
+    const {
+      privateMode,
+      deviceOnline,
+      zoomStatus,
+      channelNum,
+      scaleMultiple,
+      activeConnect,
+    } = this.props;
     if (
       !_.isEqual(privateMode, nextProps.privateMode) ||
       !_.isEqual(deviceOnline, nextProps.deviceOnline) ||
-      !_.isEqual(channelNum, nextProps.channelNum)
+      !_.isEqual(channelNum, nextProps.channelNum) ||
+      !_.isEqual(activeConnect, nextProps.activeConnect)
     ) {
       TYIpcPlayerManager.startPlay(
         nextProps.isWirless,
@@ -345,7 +360,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         nextProps.clarityStatus,
         nextProps.voiceStatus,
         nextProps.hightScaleMode,
-        nextProps.channelNum
+        nextProps.channelNum,
+        nextProps.activeConnect
       );
     }
 
@@ -427,6 +443,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       voiceStatus,
       hightScaleMode,
       channelNum,
+      activeConnect,
     } = this.props;
     this.initStatus();
     this.resetMulScaleWithBefore();
@@ -451,7 +468,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum
+        channelNum,
+        activeConnect
       );
     }
     this.goToBack = false;
@@ -540,6 +558,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       voiceStatus,
       hightScaleMode,
       channelNum,
+      activeConnect,
     } = this.props;
     TYIpcPlayerManager.startPlay(
       isWirless,
@@ -548,7 +567,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       clarityStatus,
       voiceStatus,
       hightScaleMode,
-      channelNum
+      channelNum,
+      activeConnect
     );
   };
 
@@ -602,7 +622,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   handleAppStateChange = nextAppState => {
     // 表示手机应用滑到后台,统一断开disconenct, 安卓和ios差异限制, 安卓立即断开,ios5秒后断开
-    const { enterBackDisConP2P, isWirless, deviceOnline } = this.props;
+    const {
+      enterBackDisConP2P,
+      isWirless,
+      deviceOnline,
+      notNeedJudgeConnectForeground,
+    } = this.props;
     if (nextAppState === 'background' && !enterBackDisConP2P) {
       enterBackTimeOutSpecial();
     }
@@ -610,10 +635,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
     nextAppState === 'active' && isIOS && cancelEnterBackTimeOut();
     // 进入前台，判定是否处于预览页面,如果处于预览页面，不做处理, 如果不处于预览页面,判定P2P是否连接，如若未连接，进行连接P2P,如若已连接，则忽略，目的是返回预览界面,可以快速出流
-    nextAppState === 'active' &&
-      isIOS &&
-      !this.onLivePage &&
-      judgeP2pISConnectedOperate(isWirless, deviceOnline);
+
+    if (nextAppState === 'active' && isIOS && !this.onLivePage) {
+      if (!notNeedJudgeConnectForeground) {
+        judgeP2pISConnectedOperate(isWirless, deviceOnline);
+      }
+    }
 
     // TYEvent.emit('previewState', nextAppState);
   };
@@ -716,6 +743,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         voiceStatus,
         hightScaleMode,
         channelNum,
+        activeConnect,
       } = this.props;
       const { videoStatus } = this.state;
       // 表示隐私模式
@@ -740,7 +768,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         clarityStatus,
         voiceStatus,
         hightScaleMode,
-        channelNum
+        channelNum,
+        activeConnect
       );
     }
   };

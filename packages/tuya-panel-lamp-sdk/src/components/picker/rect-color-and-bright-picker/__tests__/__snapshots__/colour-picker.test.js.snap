@@ -18,37 +18,67 @@ exports[`ColourPicker basic render 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FFFC00",
+              "stopColor": "#FF0000",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "18%",
-              "stopColor": "#C3FF45",
+              "offset": "8%",
+              "stopColor": "#FF7F00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "34%",
-              "stopColor": "#39DDFC",
+              "offset": "20%",
+              "stopColor": "#FFFF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "51%",
-              "stopColor": "#6382FC",
+              "offset": "25%",
+              "stopColor": "#7FFF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "67%",
-              "stopColor": "#FF3FD5",
+              "offset": "33%",
+              "stopColor": "#00FF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "82%",
-              "stopColor": "#FE491F",
+              "offset": "42%",
+              "stopColor": "#00FF7F",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "50%",
+              "stopColor": "#00FFFF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "58%",
+              "stopColor": "#007FFF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "66%",
+              "stopColor": "#0000FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "75%",
+              "stopColor": "#7F00FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "83%",
+              "stopColor": "#FF00FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "92%",
+              "stopColor": "#FF007F",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#FFB900",
+              "stopColor": "#FF0000",
               "stopOpacity": 1,
             },
           ],
@@ -61,7 +91,7 @@ exports[`ColourPicker basic render 1`] = `
               "stopOpacity": 1,
             },
             Object {
-              "offset": "24%",
+              "offset": "16%",
               "stopColor": "#fff",
               "stopOpacity": 0.9,
             },
@@ -79,7 +109,7 @@ exports[`ColourPicker basic render 1`] = `
     clickEnabled={true}
     coorToValue={[Function]}
     disabled={false}
-    hueOffset={60}
+    hueOffset={1}
     initData={[Function]}
     lossColor="rgba(0,0,0,0.2)"
     lossShow={false}
@@ -87,6 +117,8 @@ exports[`ColourPicker basic render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -115,6 +147,9 @@ exports[`ColourPicker basic render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -139,37 +174,67 @@ exports[`ColourPicker componentWillReceiveProps render 1`] = `
           "colors": Array [
             Object {
               "offset": "0%",
-              "stopColor": "#FFFC00",
+              "stopColor": "#FF0000",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "18%",
-              "stopColor": "#C3FF45",
+              "offset": "8%",
+              "stopColor": "#FF7F00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "34%",
-              "stopColor": "#39DDFC",
+              "offset": "20%",
+              "stopColor": "#FFFF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "51%",
-              "stopColor": "#6382FC",
+              "offset": "25%",
+              "stopColor": "#7FFF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "67%",
-              "stopColor": "#FF3FD5",
+              "offset": "33%",
+              "stopColor": "#00FF00",
               "stopOpacity": 1,
             },
             Object {
-              "offset": "82%",
-              "stopColor": "#FE491F",
+              "offset": "42%",
+              "stopColor": "#00FF7F",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "50%",
+              "stopColor": "#00FFFF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "58%",
+              "stopColor": "#007FFF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "66%",
+              "stopColor": "#0000FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "75%",
+              "stopColor": "#7F00FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "83%",
+              "stopColor": "#FF00FF",
+              "stopOpacity": 1,
+            },
+            Object {
+              "offset": "92%",
+              "stopColor": "#FF007F",
               "stopOpacity": 1,
             },
             Object {
               "offset": "100%",
-              "stopColor": "#FFB900",
+              "stopColor": "#FF0000",
               "stopOpacity": 1,
             },
           ],
@@ -182,7 +247,7 @@ exports[`ColourPicker componentWillReceiveProps render 1`] = `
               "stopOpacity": 1,
             },
             Object {
-              "offset": "24%",
+              "offset": "16%",
               "stopColor": "#fff",
               "stopOpacity": 0.9,
             },
@@ -200,7 +265,7 @@ exports[`ColourPicker componentWillReceiveProps render 1`] = `
     clickEnabled={true}
     coorToValue={[Function]}
     disabled={false}
-    hueOffset={60}
+    hueOffset={1}
     initData={[Function]}
     lossColor="rgba(0,0,0,0.2)"
     lossShow={false}
@@ -208,6 +273,8 @@ exports[`ColourPicker componentWillReceiveProps render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
     showThumbWhenDisabled={true}
     thumbComponent={[Function]}
     thumbImg={1}
@@ -236,6 +303,9 @@ exports[`ColourPicker componentWillReceiveProps render 1`] = `
     onMove={[Function]}
     onPress={[Function]}
     onRelease={[Function]}
+    opacityAnimationDuration={150}
+    opacityAnimationValue={1}
+    showAnimation={true}
     trackColor="#313131"
     value={500}
   />
@@ -250,37 +320,67 @@ exports[`ColourPicker rectPicker mount 1`] = `
         "colors": Array [
           Object {
             "offset": "0%",
-            "stopColor": "#FFFC00",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "18%",
-            "stopColor": "#C3FF45",
+            "offset": "8%",
+            "stopColor": "#FF7F00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "34%",
-            "stopColor": "#39DDFC",
+            "offset": "20%",
+            "stopColor": "#FFFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "51%",
-            "stopColor": "#6382FC",
+            "offset": "25%",
+            "stopColor": "#7FFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "67%",
-            "stopColor": "#FF3FD5",
+            "offset": "33%",
+            "stopColor": "#00FF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "82%",
-            "stopColor": "#FE491F",
+            "offset": "42%",
+            "stopColor": "#00FF7F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "50%",
+            "stopColor": "#00FFFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "58%",
+            "stopColor": "#007FFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "66%",
+            "stopColor": "#0000FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "75%",
+            "stopColor": "#7F00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "83%",
+            "stopColor": "#FF00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "92%",
+            "stopColor": "#FF007F",
             "stopOpacity": 1,
           },
           Object {
             "offset": "100%",
-            "stopColor": "#FFB900",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
         ],
@@ -293,7 +393,7 @@ exports[`ColourPicker rectPicker mount 1`] = `
             "stopOpacity": 1,
           },
           Object {
-            "offset": "24%",
+            "offset": "16%",
             "stopColor": "#fff",
             "stopOpacity": 0.9,
           },
@@ -312,7 +412,7 @@ exports[`ColourPicker rectPicker mount 1`] = `
   clickEnabled={true}
   disabled={false}
   hideBright={false}
-  hueOffset={60}
+  hueOffset={1}
   lossColor="rgba(0,0,0,0.2)"
   lossShow={false}
   lossSliderColor="rgba(255,255,255,0.4)"
@@ -320,6 +420,8 @@ exports[`ColourPicker rectPicker mount 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -360,37 +462,67 @@ exports[`ColourPicker rectPicker mount 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FFFC00",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "18%",
-                  "stopColor": "#C3FF45",
+                  "offset": "8%",
+                  "stopColor": "#FF7F00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "34%",
-                  "stopColor": "#39DDFC",
+                  "offset": "20%",
+                  "stopColor": "#FFFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "51%",
-                  "stopColor": "#6382FC",
+                  "offset": "25%",
+                  "stopColor": "#7FFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "67%",
-                  "stopColor": "#FF3FD5",
+                  "offset": "33%",
+                  "stopColor": "#00FF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "82%",
-                  "stopColor": "#FE491F",
+                  "offset": "42%",
+                  "stopColor": "#00FF7F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "50%",
+                  "stopColor": "#00FFFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "58%",
+                  "stopColor": "#007FFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "66%",
+                  "stopColor": "#0000FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "75%",
+                  "stopColor": "#7F00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "83%",
+                  "stopColor": "#FF00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "92%",
+                  "stopColor": "#FF007F",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#FFB900",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
               ],
@@ -403,7 +535,7 @@ exports[`ColourPicker rectPicker mount 1`] = `
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "24%",
+                  "offset": "16%",
                   "stopColor": "#fff",
                   "stopOpacity": 0.9,
                 },
@@ -421,7 +553,7 @@ exports[`ColourPicker rectPicker mount 1`] = `
         clickEnabled={true}
         coorToValue={[Function]}
         disabled={false}
-        hueOffset={60}
+        hueOffset={1}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
         lossShow={false}
@@ -429,6 +561,8 @@ exports[`ColourPicker rectPicker mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -507,6 +641,9 @@ exports[`ColourPicker rectPicker mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={500}
       >
@@ -570,73 +707,103 @@ exports[`ColourPicker rectPicker mount 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
@@ -655,37 +822,67 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
         "colors": Array [
           Object {
             "offset": "0%",
-            "stopColor": "#FFFC00",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "18%",
-            "stopColor": "#C3FF45",
+            "offset": "8%",
+            "stopColor": "#FF7F00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "34%",
-            "stopColor": "#39DDFC",
+            "offset": "20%",
+            "stopColor": "#FFFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "51%",
-            "stopColor": "#6382FC",
+            "offset": "25%",
+            "stopColor": "#7FFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "67%",
-            "stopColor": "#FF3FD5",
+            "offset": "33%",
+            "stopColor": "#00FF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "82%",
-            "stopColor": "#FE491F",
+            "offset": "42%",
+            "stopColor": "#00FF7F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "50%",
+            "stopColor": "#00FFFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "58%",
+            "stopColor": "#007FFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "66%",
+            "stopColor": "#0000FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "75%",
+            "stopColor": "#7F00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "83%",
+            "stopColor": "#FF00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "92%",
+            "stopColor": "#FF007F",
             "stopOpacity": 1,
           },
           Object {
             "offset": "100%",
-            "stopColor": "#FFB900",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
         ],
@@ -698,7 +895,7 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
             "stopOpacity": 1,
           },
           Object {
-            "offset": "24%",
+            "offset": "16%",
             "stopColor": "#fff",
             "stopOpacity": 0.9,
           },
@@ -717,7 +914,7 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
   clickEnabled={true}
   disabled={true}
   hideBright={false}
-  hueOffset={60}
+  hueOffset={1}
   lossColor="rgba(0,0,0,0.2)"
   lossShow={false}
   lossSliderColor="rgba(255,255,255,0.4)"
@@ -725,6 +922,8 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -765,37 +964,67 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FFFC00",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "18%",
-                  "stopColor": "#C3FF45",
+                  "offset": "8%",
+                  "stopColor": "#FF7F00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "34%",
-                  "stopColor": "#39DDFC",
+                  "offset": "20%",
+                  "stopColor": "#FFFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "51%",
-                  "stopColor": "#6382FC",
+                  "offset": "25%",
+                  "stopColor": "#7FFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "67%",
-                  "stopColor": "#FF3FD5",
+                  "offset": "33%",
+                  "stopColor": "#00FF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "82%",
-                  "stopColor": "#FE491F",
+                  "offset": "42%",
+                  "stopColor": "#00FF7F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "50%",
+                  "stopColor": "#00FFFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "58%",
+                  "stopColor": "#007FFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "66%",
+                  "stopColor": "#0000FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "75%",
+                  "stopColor": "#7F00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "83%",
+                  "stopColor": "#FF00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "92%",
+                  "stopColor": "#FF007F",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#FFB900",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
               ],
@@ -808,7 +1037,7 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "24%",
+                  "offset": "16%",
                   "stopColor": "#fff",
                   "stopOpacity": 0.9,
                 },
@@ -826,7 +1055,7 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
         clickEnabled={true}
         coorToValue={[Function]}
         disabled={true}
-        hueOffset={60}
+        hueOffset={1}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
         lossShow={false}
@@ -834,6 +1063,8 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -912,6 +1143,9 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={500}
       >
@@ -975,73 +1209,103 @@ exports[`ColourPicker rectPicker mount disable 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
@@ -1060,37 +1324,67 @@ exports[`ColourPicker slider mount 1`] = `
         "colors": Array [
           Object {
             "offset": "0%",
-            "stopColor": "#FFFC00",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "18%",
-            "stopColor": "#C3FF45",
+            "offset": "8%",
+            "stopColor": "#FF7F00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "34%",
-            "stopColor": "#39DDFC",
+            "offset": "20%",
+            "stopColor": "#FFFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "51%",
-            "stopColor": "#6382FC",
+            "offset": "25%",
+            "stopColor": "#7FFF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "67%",
-            "stopColor": "#FF3FD5",
+            "offset": "33%",
+            "stopColor": "#00FF00",
             "stopOpacity": 1,
           },
           Object {
-            "offset": "82%",
-            "stopColor": "#FE491F",
+            "offset": "42%",
+            "stopColor": "#00FF7F",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "50%",
+            "stopColor": "#00FFFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "58%",
+            "stopColor": "#007FFF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "66%",
+            "stopColor": "#0000FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "75%",
+            "stopColor": "#7F00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "83%",
+            "stopColor": "#FF00FF",
+            "stopOpacity": 1,
+          },
+          Object {
+            "offset": "92%",
+            "stopColor": "#FF007F",
             "stopOpacity": 1,
           },
           Object {
             "offset": "100%",
-            "stopColor": "#FFB900",
+            "stopColor": "#FF0000",
             "stopOpacity": 1,
           },
         ],
@@ -1103,7 +1397,7 @@ exports[`ColourPicker slider mount 1`] = `
             "stopOpacity": 1,
           },
           Object {
-            "offset": "24%",
+            "offset": "16%",
             "stopColor": "#fff",
             "stopOpacity": 0.9,
           },
@@ -1122,7 +1416,7 @@ exports[`ColourPicker slider mount 1`] = `
   clickEnabled={true}
   disabled={false}
   hideBright={false}
-  hueOffset={60}
+  hueOffset={1}
   lossColor="rgba(0,0,0,0.2)"
   lossShow={false}
   lossSliderColor="rgba(255,255,255,0.4)"
@@ -1130,6 +1424,8 @@ exports[`ColourPicker slider mount 1`] = `
   onMove={[Function]}
   onPress={[Function]}
   onRelease={[Function]}
+  opacityAnimationDuration={150}
+  opacityAnimationValue={1}
   showThumbWhenDisabled={true}
   thumbComponent={[Function]}
   thumbImg={1}
@@ -1170,37 +1466,67 @@ exports[`ColourPicker slider mount 1`] = `
               "colors": Array [
                 Object {
                   "offset": "0%",
-                  "stopColor": "#FFFC00",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "18%",
-                  "stopColor": "#C3FF45",
+                  "offset": "8%",
+                  "stopColor": "#FF7F00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "34%",
-                  "stopColor": "#39DDFC",
+                  "offset": "20%",
+                  "stopColor": "#FFFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "51%",
-                  "stopColor": "#6382FC",
+                  "offset": "25%",
+                  "stopColor": "#7FFF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "67%",
-                  "stopColor": "#FF3FD5",
+                  "offset": "33%",
+                  "stopColor": "#00FF00",
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "82%",
-                  "stopColor": "#FE491F",
+                  "offset": "42%",
+                  "stopColor": "#00FF7F",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "50%",
+                  "stopColor": "#00FFFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "58%",
+                  "stopColor": "#007FFF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "66%",
+                  "stopColor": "#0000FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "75%",
+                  "stopColor": "#7F00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "83%",
+                  "stopColor": "#FF00FF",
+                  "stopOpacity": 1,
+                },
+                Object {
+                  "offset": "92%",
+                  "stopColor": "#FF007F",
                   "stopOpacity": 1,
                 },
                 Object {
                   "offset": "100%",
-                  "stopColor": "#FFB900",
+                  "stopColor": "#FF0000",
                   "stopOpacity": 1,
                 },
               ],
@@ -1213,7 +1539,7 @@ exports[`ColourPicker slider mount 1`] = `
                   "stopOpacity": 1,
                 },
                 Object {
-                  "offset": "24%",
+                  "offset": "16%",
                   "stopColor": "#fff",
                   "stopOpacity": 0.9,
                 },
@@ -1231,7 +1557,7 @@ exports[`ColourPicker slider mount 1`] = `
         clickEnabled={true}
         coorToValue={[Function]}
         disabled={false}
-        hueOffset={60}
+        hueOffset={1}
         initData={[Function]}
         lossColor="rgba(0,0,0,0.2)"
         lossShow={false}
@@ -1239,6 +1565,8 @@ exports[`ColourPicker slider mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
         showThumbWhenDisabled={true}
         thumbComponent={[Function]}
         thumbImg={1}
@@ -1317,6 +1645,9 @@ exports[`ColourPicker slider mount 1`] = `
         onMove={[Function]}
         onPress={[Function]}
         onRelease={[Function]}
+        opacityAnimationDuration={150}
+        opacityAnimationValue={1}
+        showAnimation={true}
         trackColor="#313131"
         value={500}
       >
@@ -1380,73 +1711,103 @@ exports[`ColourPicker slider mount 1`] = `
               ]
             }
           >
-            <View
-              style={
-                Array [
-                  Object {
-                    "backgroundColor": "#313131",
-                    "height": "100%",
-                    "width": "100%",
-                  },
-                  Object {
-                    "backgroundColor": "#313131",
-                  },
-                ]
-              }
-            >
-              <View
-                style={
-                  Array [
-                    Object {
-                      "backgroundColor": "#313131",
-                      "height": "100%",
-                      "width": "100%",
-                    },
-                    Object {
-                      "backgroundColor": "#313131",
-                    },
-                  ]
-                }
-              />
-            </View>
             <AnimatedComponent
               style={
-                Array [
-                  Object {
-                    "backgroundColor": "#fff",
-                    "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                  },
-                  Object {
-                    "backgroundColor": "#fff",
-                    "width": 0,
-                  },
-                ]
+                Object {
+                  "height": "100%",
+                  "opacity": 1,
+                  "width": "100%",
+                }
               }
             >
               <View
                 style={
                   Object {
-                    "backgroundColor": "#fff",
                     "height": "100%",
-                    "left": 0,
-                    "position": "absolute",
-                    "width": 0,
+                    "opacity": 1,
+                    "width": "100%",
                   }
                 }
               >
                 <View
                   style={
                     Object {
-                      "backgroundColor": "#fff",
                       "height": "100%",
-                      "left": 0,
-                      "position": "absolute",
-                      "width": 0,
+                      "opacity": 1,
+                      "width": "100%",
                     }
                   }
-                />
+                >
+                  <View
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#313131",
+                          "height": "100%",
+                          "width": "100%",
+                        },
+                        Object {
+                          "backgroundColor": "#313131",
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Array [
+                          Object {
+                            "backgroundColor": "#313131",
+                            "height": "100%",
+                            "width": "100%",
+                          },
+                          Object {
+                            "backgroundColor": "#313131",
+                          },
+                        ]
+                      }
+                    />
+                  </View>
+                  <AnimatedComponent
+                    style={
+                      Array [
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                        },
+                        Object {
+                          "backgroundColor": "#fff",
+                          "width": 0,
+                        },
+                      ]
+                    }
+                  >
+                    <View
+                      style={
+                        Object {
+                          "backgroundColor": "#fff",
+                          "height": "100%",
+                          "left": 0,
+                          "position": "absolute",
+                          "width": 0,
+                        }
+                      }
+                    >
+                      <View
+                        style={
+                          Object {
+                            "backgroundColor": "#fff",
+                            "height": "100%",
+                            "left": 0,
+                            "position": "absolute",
+                            "width": 0,
+                          }
+                        }
+                      />
+                    </View>
+                  </AnimatedComponent>
+                </View>
               </View>
             </AnimatedComponent>
           </View>
