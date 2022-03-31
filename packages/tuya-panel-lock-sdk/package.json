@@ -7,7 +7,7 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "../../node_modules/.bin/tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "postbuild": "../../node_modules/cpy-cli/cli.js **/*.png **/*.html **/*.json ../lib/ --cwd=src/ --no-overwrite --parents",
     "test": "jest"
   },
   "publishConfig": {
