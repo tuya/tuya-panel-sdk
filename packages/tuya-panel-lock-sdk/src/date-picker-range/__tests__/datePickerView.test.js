@@ -19,11 +19,11 @@ describe('detePickerView components', () => {
   it('default value render', () => {
     const setup = (props = {}) => {
       return shallow(
-        <DatePickerRange mode="datetime" startDate={''} endDate={''} onDateChange={jest.fn()} />
+        <DatePickerRange mode="datetime" startDate="" endDate="" onDateChange={jest.fn()} />
       );
     };
     // expect(wrapper).toMatchSnapshot();
-    let wrapper = setup();
+    const wrapper = setup();
     wrapper.instance().openModal(1);
     wrapper.instance().confirmModal();
     wrapper.instance().openModal(0);
@@ -40,10 +40,10 @@ describe('detePickerView components', () => {
   it('TouchableOpacity event', () => {
     const setup = (props = {}) => {
       return shallow(
-        <DatePickerRange mode="hour" startDate={''} endDate={''} onDateChange={jest.fn()} />
+        <DatePickerRange mode="hour" startDate="" endDate="" onDateChange={jest.fn()} />
       );
     };
-    let wrapper = setup();
+    const wrapper = setup();
     wrapper.instance().setDate(new Date());
     wrapper.instance().openModal(0);
     wrapper.instance().confirmModal();
@@ -66,7 +66,7 @@ describe('detePickerView components', () => {
         />
       );
     };
-    let wrapper = setup();
+    const wrapper = setup();
     wrapper.instance().componentDidMount();
     wrapper.instance().componentWillReceiveProps({ date: new Date() });
     wrapper.instance().onValueChange(1, 1, 1);
@@ -89,7 +89,7 @@ describe('detePickerView components', () => {
         />
       );
     };
-    let wrapper = setup();
+    const wrapper = setup();
     wrapper.instance().componentDidMount();
     wrapper.instance().componentWillReceiveProps({ date: new Date() });
     wrapper.instance().onValueChange(1, 1, 1);
@@ -112,7 +112,7 @@ describe('detePickerView components', () => {
         />
       );
     };
-    let wrapper = setup();
+    const wrapper = setup();
     wrapper.instance().componentDidMount();
     wrapper.instance().componentWillReceiveProps({ date: new Date() });
     wrapper.instance().onValueChange(1, 1, 1);

@@ -200,7 +200,6 @@ export default class DatePickerRange extends PureComponent<
         value: endDate === '' ? placeholder : endDate,
       },
     ];
-    //
     return (
       <View style={style}>
         {data.map((item, index) => {
@@ -210,14 +209,22 @@ export default class DatePickerRange extends PureComponent<
               key={item.label}
               onPress={() => this.openModal(index)}
             >
-              <TYText>{item.label}</TYText>
+              {(React.isValidElement(item.label) && item.label) || (
+                <TYText style={this.props.labelStyle}>{item.label}</TYText>
+              )}
               <View style={styles.pickerItem}>
                 <TYText
-                  style={{ marginRight: 5, color: item.value === placeholder ? '#d6d9dc' : '#333' }}
+                  style={[
+                    {
+                      marginRight: 5,
+                      color: item.value === placeholder ? '#d6d9dc' : '#333',
+                    },
+                    this.props.valueStyle,
+                  ]}
                 >
                   {this.formatDate(item.value)}
                 </TYText>
-                <IconFont name="arrow" />
+                <IconFont name="arrow" style={this.props.iconStyle} color={this.props.iconColor} />
               </View>
             </TouchableOpacity>
           );
@@ -230,11 +237,10 @@ export default class DatePickerRange extends PureComponent<
 const styles = StyleSheet.create({
   container: {
     alignItems: 'center',
-    backgroundColor: '#fff',
+    // backgroundColor: '#fff',
     flexDirection: 'row',
     height: 58,
     justifyContent: 'space-between',
-    paddingHorizontal: 5,
   },
   pickerItem: {
     alignItems: 'center',

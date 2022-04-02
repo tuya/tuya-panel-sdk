@@ -41,7 +41,23 @@ export default class ShareManager extends Component {
           <Share
             shareMessage="浮丘测试"
             themeColor="#cd6d8c"
-            customShareList={[{ key: 'message', title: 'test', img: logo }]}
+            customShareList={[
+              {
+                key: 'WeChat',
+                title: 'test',
+                img: logo,
+                shareData: {
+                  title: '',
+                  contentType: 'miniProgram',
+                  message: 'miniProgram',
+                  miniProgramInfo: {
+                    webpageUrl: 'https://www.tuya.com',
+                    userName: 'gh_42ad2888c42d',
+                    miniProgramType: 0,
+                  },
+                },
+              },
+            ]}
             text="分享"
             onClick={params => {
               console.log('params', params);

@@ -164,7 +164,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
         cols: [],
         value: [],
       },
-      newDate: props.date,
+      newDate: props.minDate,
     };
   }
 
@@ -191,6 +191,19 @@ class DatePicker extends React.Component<DatePickerprops, any> {
     this.setState({
       newDate: newValue,
     });
+    switch (this.props.mode) {
+      case HOUR:
+        newValue.setMinutes(0);
+        newValue.setSeconds(0);
+        break;
+      case DATE:
+        newValue.setHours(0);
+        newValue.setMinutes(0);
+        newValue.setSeconds(0);
+        break;
+      default:
+        break;
+    }
     if (this.props.onDateChange) {
       this.props.onDateChange(newValue);
     }
@@ -205,7 +218,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
 
   // get now date
   getDate() {
-    return this.getRealDate(this.props.minDate || this.state.date);
+    return this.getRealDate(this.state.minDate || this.props.date);
   }
 
   getRealHour(hour) {
@@ -569,6 +582,7 @@ class DatePicker extends React.Component<DatePickerprops, any> {
   render() {
     // const { value, cols } = this.getIndexAndCols();
     const { value, cols } = this.state.indexAndCols;
+
     let pickerFontSize = cx(30);
     if (cols.length < 3) {
       pickerFontSize = cx(27);

@@ -17,6 +17,7 @@ export default class timePickerRange extends Component {
 
   componentDidMount() {}
   onDateChange(params) {
+    console.log('params', params);
     this.setState({
       beginTime: params.beginTime,
       endTime: params.endTime,

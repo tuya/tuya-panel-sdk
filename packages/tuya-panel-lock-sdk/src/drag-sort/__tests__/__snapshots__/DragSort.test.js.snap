@@ -20,7 +20,7 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 80,
         },
         Object {
-          "height": 60,
+          "height": 80,
           "key": 1,
           "text": "B",
           "width": 120,
@@ -32,7 +32,7 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 90,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 3,
           "text": "D",
           "width": 80,
@@ -44,7 +44,7 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 120,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 5,
           "text": "F",
           "width": 90,
@@ -56,25 +56,25 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 80,
         },
         Object {
-          "height": 60,
+          "height": 80,
           "key": 7,
           "text": "H",
           "width": 120,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 8,
           "text": "I",
           "width": 90,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 9,
           "text": "J",
           "width": 80,
         },
         Object {
-          "height": 60,
+          "height": 80,
           "key": 10,
           "text": "K",
           "width": 120,
@@ -104,7 +104,7 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 90,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 15,
           "text": "P",
           "width": 80,
@@ -122,13 +122,13 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 90,
         },
         Object {
-          "height": 60,
+          "height": 80,
           "key": 18,
           "text": "S",
           "width": 80,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 19,
           "text": "T",
           "width": 120,
@@ -140,13 +140,13 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 90,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 21,
           "text": "V",
           "width": 80,
         },
         Object {
-          "height": 60,
+          "height": 80,
           "key": 22,
           "text": "W",
           "width": 120,
@@ -158,13 +158,13 @@ exports[`DragSort components DragSort render 1`] = `
           "width": 90,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 24,
           "text": "Y",
           "width": 80,
         },
         Object {
-          "height": 80,
+          "height": 60,
           "key": 25,
           "text": "Z",
           "width": 120,

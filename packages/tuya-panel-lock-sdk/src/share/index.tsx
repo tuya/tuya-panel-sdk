@@ -19,6 +19,10 @@ const Share: React.FC<ShareProps> = props => {
     children,
     cancelText = 'Cancel',
     customShareList,
+    confirmText = 'Confirm',
+    pswCopySuccess = 'Copy success',
+    sendSuccess = 'Send success',
+    sendSuccessTip = 'Current information sharing successfully',
   } = props;
   const startShare = () => {
     Popup.custom({
@@ -34,6 +38,10 @@ const Share: React.FC<ShareProps> = props => {
           onFail={onFail}
           onSuccess={onSuccess}
           customShareList={customShareList}
+          confirmText={confirmText}
+          pswCopySuccess={pswCopySuccess}
+          sendSuccess={sendSuccess}
+          sendSuccessTip={sendSuccessTip}
         />
       ),
       title: <View />,
