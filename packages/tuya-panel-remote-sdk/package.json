@@ -10,7 +10,7 @@
   },
   "scripts": {
     "dev": "tsc -w",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "postbuild": "../../node_modules/cpy-cli/cli.js **/*.png **/*.jpg **/*.html **/*.json ../lib/ --cwd=src/ --no-overwrite --parents",
     "build": "tsc -d",
     "test": "jest -u"
   },
