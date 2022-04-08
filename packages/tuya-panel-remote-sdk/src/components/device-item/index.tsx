@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import { Utils, Swipeout, TYText } from 'tuya-panel-kit';
 import { BoxShadow } from 'react-native-shadow';
-import { isString } from 'lodash';
+import { isString, pickBy } from 'lodash';
 
 import Res from './res';
 import { MainProps } from './interface';
@@ -81,12 +81,16 @@ const DeviceItem: React.FC<MainProps> = ({
     </View>
   );
 
+  const innerStyle = () => {
+    return pickBy(style as any, (__, key: string) => !key.startsWith('border'));
+  };
+
   const renderItem = (innerSty?: StyleProp<ViewStyle>) => {
     if (React.isValidElement(content)) return content;
     return (
       <TouchableOpacity
         activeOpacity={disabled ? 1 : 0.8}
-        style={[styles.inner, { height, width }, innerSty]}
+        style={[{ height, width }, styles.radius, innerSty]}
         onPress={!disabled && onPress}
         onLongPress={!disabled && onLongPress}
       >
@@ -147,7 +151,7 @@ const DeviceItem: React.FC<MainProps> = ({
     );
   };
 
-  return <View style={[styles.outer, { height, width }, style]}>{renderShadow()}</View>;
+  return <View style={[styles.outer, { height, width }, innerStyle()]}>{renderShadow()}</View>;
 };
 
 const styles = StyleSheet.create({
@@ -169,6 +173,9 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     borderRadius: cx(10),
     flexDirection: 'row',
+  },
+  radius: {
+    borderRadius: cx(10),
   },
   rightIcon: {
     justifyContent: 'center',
