@@ -203,7 +203,7 @@ export default class TimerFormatter {
       endTime,
       endDpData,
     } = data;
-
+    if (Object.keys(data).length === 0) return '';
     if (repeat) {
       const statusStr = status ? '1' : '0';
       const timerIdStr = _.padStart(timerId.toString(2), 7, '0');
