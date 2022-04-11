@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.8.0...@tuya/tuya-panel-outdoor-sdk@0.9.0) (2022-04-11)
+
+
+### Bug Fixes
+
+* Remove the single quotes surrounding the paths ([#193](https://github.com/tuya/tuya-panel-sdk/issues/193)) ([984197d](https://github.com/tuya/tuya-panel-sdk/commit/984197d1d6bdf09a3ffddd12c8c1c95d1a601f5d))
+
+
+### Features
+
+* add Bubble and DargSort ([#156](https://github.com/tuya/tuya-panel-sdk/issues/156)) ([a6ed10a](https://github.com/tuya/tuya-panel-sdk/commit/a6ed10a981e679c4ec9691b1c9d35aaca2505ab9))
+
+
+
+
+
 # [0.8.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-outdoor-sdk@0.7.0...@tuya/tuya-panel-outdoor-sdk@0.8.0) (2021-12-23)
 
 

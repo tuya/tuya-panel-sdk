@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.3.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-szos-sdk@1.2.0...@tuya/tuya-panel-szos-sdk@1.3.0) (2022-04-11)
+
+
+### Bug Fixes
+
+* Remove the single quotes surrounding the paths ([#193](https://github.com/tuya/tuya-panel-sdk/issues/193)) ([984197d](https://github.com/tuya/tuya-panel-sdk/commit/984197d1d6bdf09a3ffddd12c8c1c95d1a601f5d))
+
+
+### Features
+
+* add TurnPlate、SimpleVerticalSlider components ([#192](https://github.com/tuya/tuya-panel-sdk/issues/192)) ([781bf06](https://github.com/tuya/tuya-panel-sdk/commit/781bf0664933111cdef2adc92ab5c3528e195274))
+
+
+
+
+
 # [1.2.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-szos-sdk@1.1.0...@tuya/tuya-panel-szos-sdk@1.2.0) (2022-02-10)
 
 
