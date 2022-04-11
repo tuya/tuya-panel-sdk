@@ -1395,6 +1395,17 @@ declare module '@tuya/tuya-panel-szos-sdk' {
     progressStyle?: StyleProp<ViewStyle>;
     /**
      * @language zh-CN
+     * @description 禁止转动转盘
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description Do not turn the turntable
+     * @defaultValue false
+     */
+    disabled: boolean;
+    /**
+     * @language zh-CN
      * @description 转动的值
      * @defaultValue 0
      */
@@ -1403,7 +1414,7 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description The value of the rotation
      * @defaultValue 0
      */
-    value: number;
+    plateValue: number;
     /**
      * @language zh-CN
      * @description 每一个圆点的值步长
@@ -1414,7 +1425,51 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @description Step value
      * @defaultValue 5
      */
-    stepValue?: number;
+    plateStepValue?: number;
+    /**
+     * @language zh-CN
+     * @description 圆点起始角度
+     * @defaultValue 225
+     */
+    /**
+     * @language en-US
+     * @description The starting Angle of the dot
+     * @defaultValue 225
+     */
+    startAngle?: number;
+    /**
+     * @language zh-CN
+     * @description 圆点结束角度
+     * @defaultValue 270
+     */
+    /**
+     * @language en-US
+     * @description The end Angle of the dot
+     * @defaultValue 270
+     */
+    endAngle?: number;
+    /**
+     * @language zh-CN
+     * @description 盒子容器大小
+     * @defaultValue 300
+     */
+    /**
+     * @language en-US
+     * @description Box container size
+     * @defaultValue 300
+     */
+    boxHeight?: number;
+    /**
+     * @language zh-CN
+     * @description 转盘容器大小
+     * @defaultValue 185
+     */
+    /**
+     * @language en-US
+     * @description Size of turntable container
+     * @defaultValue 185
+     */
+    driverHeight?: number;
     /**
      * @language zh-CN
      * @description 激活颜色
@@ -1426,7 +1481,6 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @defaultValue #6161EF
      */
     activeColor?: string;
-
     /**
      * @language zh-CN
      * @description 未激活颜色
@@ -1449,6 +1503,72 @@ declare module '@tuya/tuya-panel-szos-sdk' {
      * @defaultValue res.driver
      */
     imageSource?: ImageSourcePropType;
+    /**
+     * @language zh-CN
+     * @description Progress组件的最大值
+     * @defaultValue 100
+     */
+    /**
+     * @language en-US
+     * @description Progress component max
+     * @defaultValue 100
+     */
+    max: number;
+    /**
+     * @language zh-CN
+     * @description Progress组件的最小值
+     * @defaultValue 0
+     */
+    /**
+     * @language en-US
+     * @description Progress component min
+     * @defaultValue 0
+     */
+    min: number;
+    /**
+     * @language zh-CN
+     * @description Progress组件开始角度
+     * @defaultValue 130
+     */
+    /**
+     * @language en-US
+     * @description Progress component startDegree
+     * @defaultValue 130
+     */
+    startDegree?: number;
+    /**
+     * @language zh-CN
+     * @description Progress组件结束角度
+     * @defaultValue 280
+     */
+    /**
+     * @language en-US
+     * @description Progress component andDegree
+     * @defaultValue 280
+     */
+    andDegree?: number;
+    /**
+     * @language zh-CN
+     * @description Progress组件的进度条渲染的高度
+     * @defaultValue 70
+     */
+    /**
+     * @language en-US
+     * @description Progress component，The number of rendering lines of the progress bar
+     * @defaultValue 70
+     */
+    scaleHeight?: number;
+    /**
+     * @language zh-CN
+     * @description Progress thumb小圆球的半径
+     * @defaultValue 35
+     */
+    /**
+     * @language en-US
+     * @description Progress component，Radius of thumb ball
+     * @defaultValue 35
+     */
+    thumbRadius?: number;
     /**
      * @language zh-CN
      * @description 转盘事件

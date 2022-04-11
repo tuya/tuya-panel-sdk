@@ -12,7 +12,7 @@ export default class TurnPlateScene extends PureComponent {
   }
 
   // 更新主动降噪值
-  changeTurnPlate(value: number) {
+  handleTurnPlateChange(value: number) {
     this.setState({ value });
   }
 
@@ -30,7 +30,12 @@ export default class TurnPlateScene extends PureComponent {
         }}
       >
         <TYText text={`当前value:${value}`} />
-        <TurnPlate onTurnPlateChange={(v: number) => this.changeTurnPlate(v)} value={value} />
+        <TurnPlate
+          max={80}
+          min={0}
+          onTurnPlateChange={v => this.handleTurnPlateChange(v)}
+          plateValue={Number(value)}
+        />
       </View>
     );
   }

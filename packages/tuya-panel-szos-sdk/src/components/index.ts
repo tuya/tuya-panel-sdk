@@ -1,5 +1,5 @@
 export { default as GestureSlider } from './gesture-slider';
-// export { default as SoundWave } from './sound-wave';
+export { default as SoundWave } from './sound-wave';
 // export { default as MultiSlider } from './multi-slider';
 // export { default as ImageAnimate } from './image-animate';
 // export { default as BoxShadow } from './box-shadow';
@@ -10,3 +10,4 @@ export { default as BreakPointInput } from './break-point-input';
 // export { default as DpCacheText } from './dp-cache-text';
 export { default as SimpleVerticalSlider } from './simple-vertical-slider';
 export { default as TurnPlate } from './turn-plate';
+export { default as LineBoxSvg } from './line-box-svg';
