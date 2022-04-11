@@ -140,8 +140,9 @@ const Index = () => {
           title="电视机"
           subTitle="海尔"
           icon={Res.iconLight}
-          style={{ marginBottom: cx(20) }}
+          style={{ marginBottom: cx(20), backgroundColor: 'red' }}
           swipeContent={swipeContent}
+          enableSwipe={false}
           onLongPress={onLongPressWithToast}
         />
         <DeviceItem
@@ -149,7 +150,7 @@ const Index = () => {
           subTitle="灯控"
           icon={Res.iconLight}
           showRightArrow={false}
-          style={{ marginBottom: cx(20) }}
+          style={{ marginBottom: cx(20), backgroundColor: 'red' }}
           swipeContent={swipeContent}
           onLongPress={onLongPressWithToast}
         />
