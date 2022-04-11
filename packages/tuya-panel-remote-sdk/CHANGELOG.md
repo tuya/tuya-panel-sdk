@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.9.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.9.0...@tuya/tuya-panel-remote-sdk@0.9.1) (2022-04-11)
+
+
+### Bug Fixes
+
+* Fix the bug that DeviceItem component style attribute does not take effect ([#196](https://github.com/tuya/tuya-panel-sdk/issues/196)) ([ee6fcaa](https://github.com/tuya/tuya-panel-sdk/commit/ee6fcaa987ad2e1de22e27a956ba5ab8c602bd9d))
+* Remove the single quotes surrounding the paths ([#193](https://github.com/tuya/tuya-panel-sdk/issues/193)) ([984197d](https://github.com/tuya/tuya-panel-sdk/commit/984197d1d6bdf09a3ffddd12c8c1c95d1a601f5d))
+
+
+
+
+
 # [0.9.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-remote-sdk@0.8.0...@tuya/tuya-panel-remote-sdk@0.9.0) (2022-03-15)
 
 

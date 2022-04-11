@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.13.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.12.0...@tuya/tuya-panel-lamp-sdk@1.13.0) (2022-04-11)
+
+
+### Bug Fixes
+
+* **lamp:** fix rtcTimer ([#194](https://github.com/tuya/tuya-panel-sdk/issues/194)) ([aed0838](https://github.com/tuya/tuya-panel-sdk/commit/aed0838d0e30ec908494694a568968144510e1c4))
+* Remove the single quotes surrounding the paths ([#193](https://github.com/tuya/tuya-panel-sdk/issues/193)) ([984197d](https://github.com/tuya/tuya-panel-sdk/commit/984197d1d6bdf09a3ffddd12c8c1c95d1a601f5d))
+
+
+### Features
+
+* **tuya-panel-lock-sdk:** Add AesMediaPreview、RemoteManager、DPUtil ([8f81084](https://github.com/tuya/tuya-panel-sdk/commit/8f81084bd180fff3e595dade11a92c982a3501d6))
+
+
+
+
+
 # [1.12.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.11.0...@tuya/tuya-panel-lamp-sdk@1.12.0) (2022-03-30)
 
 
