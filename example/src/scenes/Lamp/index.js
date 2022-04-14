@@ -38,6 +38,8 @@ import TestWhiteScene from './NormalTiming/testWhite';
 import RhythmsCircleScene from './RhythmsCircle';
 import TimeFormatComponentScene from './TimeFormatComponent';
 import TimingRepeatListScene from './TimingRepeatList';
+import BottomBarScene from './BottomBar';
+import ColorRecognitionScene from './ColorRecognition';
 
 export default class LampScene extends Component {
   get data() {
@@ -80,7 +82,8 @@ export default class LampScene extends Component {
   static RhythmsCircle = RhythmsCircleScene;
   static TimeFormatComponent = TimeFormatComponentScene;
   static TimingRepeatList = TimingRepeatListScene;
-
+  static BottomBar = BottomBarScene;
+  static ColorRecognition = ColorRecognitionScene;
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
   }

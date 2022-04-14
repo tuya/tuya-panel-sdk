@@ -300,12 +300,13 @@ export function sToN(str = '', base = 16): number {
   return parseInt(str, base) || 0;
 }
 
-// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export function toN(n: any): number {
+export function toN(n: number): number {
   return +n || 0;
 }
 
-export function* formatterTransform(value: string): any {
+export function* formatterTransform(
+  value: string
+): Generator<number | string, number | string, number | string> {
   let start = 0;
   let result: number | string = '';
   let length;
@@ -318,3 +319,9 @@ export function* formatterTransform(value: string): any {
   }
   return result;
 }
+
+export const { toFixed } = Utils.CoreUtils;
+
+export const nToSH = (value = 0, num = 2): string => {
+  return numToHexString(value || 0, num);
+};
