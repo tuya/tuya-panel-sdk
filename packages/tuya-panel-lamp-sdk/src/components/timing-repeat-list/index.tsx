@@ -100,6 +100,7 @@ const TimingRepeatList: React.FC<IProp> = ({
 };
 
 TimingRepeatList.defaultProps = {
+  is24Hour: false,
   data: [
     {
       name: Strings.getLang('TYLamp_normal'),
