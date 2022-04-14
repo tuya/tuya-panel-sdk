@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.13.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.13.0...@tuya/tuya-panel-lamp-sdk@1.13.1) (2022-04-14)
+
+
+### Bug Fixes
+
+* **lamp:** fix component TimingRepeatList ([#197](https://github.com/tuya/tuya-panel-sdk/issues/197)) ([31f530e](https://github.com/tuya/tuya-panel-sdk/commit/31f530ec137fb3f6f6d6683888b84d5700b3d1f9))
+
+
+
+
+
 # [1.13.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.12.0...@tuya/tuya-panel-lamp-sdk@1.13.0) (2022-04-11)
 
 
