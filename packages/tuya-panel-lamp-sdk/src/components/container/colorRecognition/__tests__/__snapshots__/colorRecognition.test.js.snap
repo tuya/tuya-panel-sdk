@@ -1,0 +1,766 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColorRecognization components basic render 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.15)",
+      "borderRadius": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 16,
+        "height": 180,
+        "marginTop": 12,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      resizeMode="stretch"
+      source={1}
+      style={
+        Object {
+          "height": 180,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 12,
+          "height": 32,
+          "justifyContent": "center",
+          "left": 24,
+          "position": "absolute",
+          "width": 128,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#4779A1",
+              "bottom": 0,
+              "left": 0,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#146293",
+              "bottom": 0,
+              "left": 24,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#5F799F",
+              "bottom": 0,
+              "left": 48,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#EBA495",
+              "bottom": 0,
+              "left": 72,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#FDC89E",
+              "bottom": 0,
+              "left": 96,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Object {
+        "marginLeft": 16,
+        "marginVertical": 16,
+      }
+    }
+    type={null}
+    weight={null}
+  >
+    变化方式
+  </TYText>
+  <FlatList
+    columnWrapperStyle={
+      Object {
+        "justifyContent": "space-between",
+        "marginBottom": 12,
+        "paddingHorizontal": 16,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "index": 0,
+          "key": 0,
+          "title": "Fall",
+          "value": "Fall",
+        },
+        Object {
+          "index": 1,
+          "key": 1,
+          "title": "Rainbow",
+          "value": "Rainbow",
+        },
+        Object {
+          "index": 2,
+          "key": 2,
+          "title": "Greedy snake",
+          "value": "Greedy snake",
+        },
+        Object {
+          "index": 3,
+          "key": 3,
+          "title": "Chase",
+          "value": "Chase",
+        },
+        Object {
+          "index": 4,
+          "key": 4,
+          "title": "Flying Apsaras",
+          "value": "Flying Apsaras",
+        },
+        Object {
+          "index": 5,
+          "key": 5,
+          "title": "Colored flag",
+          "value": "Colored flag",
+        },
+        Object {
+          "index": 6,
+          "key": 6,
+          "title": "Collision",
+          "value": "Collision",
+        },
+        Object {
+          "index": 7,
+          "key": 7,
+          "title": "Rebound",
+          "value": "Rebound",
+        },
+        Object {
+          "index": 8,
+          "key": 8,
+          "title": "Shine",
+          "value": "Shine",
+        },
+        Object {
+          "index": 9,
+          "key": 9,
+          "title": "Jump",
+          "value": "Jump",
+        },
+        Object {
+          "index": 10,
+          "key": 10,
+          "title": "Breathing",
+          "value": "Breathing",
+        },
+        Object {
+          "index": 11,
+          "key": 11,
+          "title": "Twinkle",
+          "value": "Twinkle",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    extraData={1}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={3}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEnabled={false}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;
+
+exports[`ColorRecognization components render with other activeKey 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.15)",
+      "borderRadius": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 16,
+        "height": 180,
+        "marginTop": 12,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      resizeMode="stretch"
+      source={1}
+      style={
+        Object {
+          "height": 180,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 12,
+          "height": 32,
+          "justifyContent": "center",
+          "left": 24,
+          "position": "absolute",
+          "width": 128,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#4779A1",
+              "bottom": 0,
+              "left": 0,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#146293",
+              "bottom": 0,
+              "left": 24,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#5F799F",
+              "bottom": 0,
+              "left": 48,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#EBA495",
+              "bottom": 0,
+              "left": 72,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#FDC89E",
+              "bottom": 0,
+              "left": 96,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Object {
+        "marginLeft": 16,
+        "marginVertical": 16,
+      }
+    }
+    type={null}
+    weight={null}
+  >
+    变化方式
+  </TYText>
+  <FlatList
+    columnWrapperStyle={
+      Object {
+        "justifyContent": "space-between",
+        "marginBottom": 12,
+        "paddingHorizontal": 16,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "index": 0,
+          "key": 0,
+          "title": "Fall",
+          "value": "Fall",
+        },
+        Object {
+          "index": 1,
+          "key": 1,
+          "title": "Rainbow",
+          "value": "Rainbow",
+        },
+        Object {
+          "index": 2,
+          "key": 2,
+          "title": "Greedy snake",
+          "value": "Greedy snake",
+        },
+        Object {
+          "index": 3,
+          "key": 3,
+          "title": "Chase",
+          "value": "Chase",
+        },
+        Object {
+          "index": 4,
+          "key": 4,
+          "title": "Flying Apsaras",
+          "value": "Flying Apsaras",
+        },
+        Object {
+          "index": 5,
+          "key": 5,
+          "title": "Colored flag",
+          "value": "Colored flag",
+        },
+        Object {
+          "index": 6,
+          "key": 6,
+          "title": "Collision",
+          "value": "Collision",
+        },
+        Object {
+          "index": 7,
+          "key": 7,
+          "title": "Rebound",
+          "value": "Rebound",
+        },
+        Object {
+          "index": 8,
+          "key": 8,
+          "title": "Shine",
+          "value": "Shine",
+        },
+        Object {
+          "index": 9,
+          "key": 9,
+          "title": "Jump",
+          "value": "Jump",
+        },
+        Object {
+          "index": 10,
+          "key": 10,
+          "title": "Breathing",
+          "value": "Breathing",
+        },
+        Object {
+          "index": 11,
+          "key": 11,
+          "title": "Twinkle",
+          "value": "Twinkle",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    extraData={2}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={3}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEnabled={false}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;
+
+exports[`ColorRecognization components render with other source 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.15)",
+      "borderRadius": 16,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignSelf": "center",
+        "borderRadius": 16,
+        "height": 180,
+        "marginTop": 12,
+        "overflow": "hidden",
+        "paddingHorizontal": 16,
+        "width": "100%",
+      }
+    }
+  >
+    <Image
+      resizeMode="stretch"
+      source={1}
+      style={
+        Object {
+          "height": 180,
+          "width": "100%",
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "bottom": 12,
+          "height": 32,
+          "justifyContent": "center",
+          "left": 24,
+          "position": "absolute",
+          "width": 128,
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#4779A1",
+              "bottom": 0,
+              "left": 0,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#146293",
+              "bottom": 0,
+              "left": 24,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#5F799F",
+              "bottom": 0,
+              "left": 48,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#EBA495",
+              "bottom": 0,
+              "left": 72,
+            },
+          ]
+        }
+      />
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 16,
+              "height": 32,
+              "overflow": "hidden",
+              "position": "absolute",
+              "width": 32,
+            },
+            Object {
+              "backgroundColor": "#FDC89E",
+              "bottom": 0,
+              "left": 96,
+            },
+          ]
+        }
+      />
+    </View>
+  </View>
+  <TYText
+    align={null}
+    color={null}
+    size={null}
+    style={
+      Object {
+        "marginLeft": 16,
+        "marginVertical": 16,
+      }
+    }
+    type={null}
+    weight={null}
+  >
+    变化方式
+  </TYText>
+  <FlatList
+    columnWrapperStyle={
+      Object {
+        "justifyContent": "space-between",
+        "marginBottom": 12,
+        "paddingHorizontal": 16,
+      }
+    }
+    data={
+      Array [
+        Object {
+          "index": 0,
+          "key": 0,
+          "title": "Fall",
+          "value": "Fall",
+        },
+        Object {
+          "index": 1,
+          "key": 1,
+          "title": "Rainbow",
+          "value": "Rainbow",
+        },
+        Object {
+          "index": 2,
+          "key": 2,
+          "title": "Greedy snake",
+          "value": "Greedy snake",
+        },
+        Object {
+          "index": 3,
+          "key": 3,
+          "title": "Chase",
+          "value": "Chase",
+        },
+        Object {
+          "index": 4,
+          "key": 4,
+          "title": "Flying Apsaras",
+          "value": "Flying Apsaras",
+        },
+        Object {
+          "index": 5,
+          "key": 5,
+          "title": "Colored flag",
+          "value": "Colored flag",
+        },
+        Object {
+          "index": 6,
+          "key": 6,
+          "title": "Collision",
+          "value": "Collision",
+        },
+        Object {
+          "index": 7,
+          "key": 7,
+          "title": "Rebound",
+          "value": "Rebound",
+        },
+        Object {
+          "index": 8,
+          "key": 8,
+          "title": "Shine",
+          "value": "Shine",
+        },
+        Object {
+          "index": 9,
+          "key": 9,
+          "title": "Jump",
+          "value": "Jump",
+        },
+        Object {
+          "index": 10,
+          "key": 10,
+          "title": "Breathing",
+          "value": "Breathing",
+        },
+        Object {
+          "index": 11,
+          "key": 11,
+          "title": "Twinkle",
+          "value": "Twinkle",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    extraData={2}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={3}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEnabled={false}
+    scrollEventThrottle={50}
+    showsVerticalScrollIndicator={false}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+  />
+</View>
+`;
