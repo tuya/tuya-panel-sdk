@@ -300,13 +300,12 @@ export function sToN(str = '', base = 16): number {
   return parseInt(str, base) || 0;
 }
 
-export function toN(n: number): number {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export function toN(n: any): number {
   return +n || 0;
 }
 
-export function* formatterTransform(
-  value: string
-): Generator<number | string, number | string, number | string> {
+export function* formatterTransform(value: string): any {
   let start = 0;
   let result: number | string = '';
   let length;
