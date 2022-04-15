@@ -52,6 +52,7 @@
     "test:health": "cd packages/tuya-panel-health-sdk && yarn test",
     "test:outdoor": "cd packages/tuya-panel-outdoor-sdk && yarn test",
     "test:szos": "cd packages/tuya-panel-szos-sdk && yarn test",
+    "test:sensing": "cd packages/tuya-panel-sensing-sdk && yarn test",
     "lint": "eslint packages --ext .js,.jsx,.ts,.tsx --fix --ignore-path .eslintignore",
     "format": "prettier --write packages/**/*/*.{js,jsx,ts,tsx}",
     "dev": "lerna run dev",
