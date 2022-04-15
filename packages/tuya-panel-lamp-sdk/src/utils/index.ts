@@ -318,3 +318,9 @@ export function* formatterTransform(value: string): any {
   }
   return result;
 }
+
+export const { toFixed } = Utils.CoreUtils;
+
+export const nToSH = (value = 0, num = 2): string => {
+  return numToHexString(value || 0, num);
+};

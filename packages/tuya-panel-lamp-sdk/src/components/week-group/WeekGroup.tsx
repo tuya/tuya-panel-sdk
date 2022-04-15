@@ -18,6 +18,7 @@ const WeekGroup: React.FC<WeekGroupProps> = props => {
     style,
     theme,
     background,
+    buttonProps,
     activeColor = '#1082FE',
     size = cx(40),
     accessibilityLabel = 'WeekGroup',
@@ -37,6 +38,7 @@ const WeekGroup: React.FC<WeekGroupProps> = props => {
         const isActive = !!value[key];
         return (
           <Button
+            {...buttonProps}
             key={key}
             theme={theme}
             background={isActive ? activeColor : background}

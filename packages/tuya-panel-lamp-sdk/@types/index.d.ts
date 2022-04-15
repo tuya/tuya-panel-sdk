@@ -234,3 +234,30 @@ declare interface ISwitchGradient {
   on: number;
   off: number;
 }
+
+declare interface DrawToolType {
+  /** 版本号 */
+  version?: number;
+  /** 涂抹动作（1：全选，2：单选，3：擦除） */
+  daubType?: DaubTypeType;
+  /** 涂抹效果（1：静态，2：闪烁，3：呼吸） */
+  effect?: number;
+  /** 彩光色相 */
+  hue?: number;
+  /** 彩光饱和度 */
+  saturation?: number;
+  /** 彩光亮度 */
+  value?: number;
+  /** 白光亮度 */
+  brightness?: number;
+  /** 白光色温 */
+  temperature?: number;
+  /** 当前涂抹色是否是白光 */
+  isWhite?: boolean;
+  /** 点选类型(0: 连续，1: 单点) */
+  singleType?: number;
+  /** 点数 */
+  quantity?: number;
+  /** 编号 */
+  indexs?: Set<number>;
+}
