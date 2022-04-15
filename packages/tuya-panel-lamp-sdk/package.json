@@ -1,13 +1,13 @@
 {
   "name": "@tuya/tuya-panel-lamp-sdk",
-  "version": "1.11.0",
+  "version": "1.13.1",
   "description": "涂鸦照明业务组件库",
   "main": "./lib/index.js",
   "scripts": {
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "postbuild": "../../node_modules/cpy-cli/cli.js **/*.png **/*.jpg **/*.html **/*.json ../lib/ --cwd=src/ --no-overwrite --parents",
     "test": "jest"
   },
   "dependencies": {

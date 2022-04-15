@@ -1,13 +1,13 @@
 {
   "name": "@tuya/tuya-panel-szos-sdk",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "涂鸦深圳OS业务组件库",
   "main": "./lib/index.js",
   "scripts": {
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "../../node_modules/.bin/tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents",
+    "postbuild": "../../node_modules/cpy-cli/cli.js **/*.png **/*.html **/*.json ../lib/ --cwd=src/ --no-overwrite --parents",
     "prepublishOnly": "yarn build",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx --fix --ignore-path ../../.eslintignore",
     "test": "jest"

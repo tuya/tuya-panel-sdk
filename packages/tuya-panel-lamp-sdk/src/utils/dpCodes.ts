@@ -1,5 +1,6 @@
 export default {
   sleepCode: 'sleep_mode',
+  wakeUpCode: 'wakeup_mode',
   powerCode: 'switch_led',
   colourCode: 'colour_data',
   workModeCode: 'work_mode',

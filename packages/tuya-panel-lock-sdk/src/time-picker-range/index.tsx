@@ -38,8 +38,8 @@ const TimePickerRange: React.FC<TimePickerRangeProps> = (props: TimePickerRangeP
   const [beginTime, setBeginTime] = useState<number>(480);
   const [endTime, setEndTime] = useState<number>(1200);
   React.useEffect(() => {
-    setBeginTime(_beginTime || defaultBeginTime);
-    setEndTime(_endTime || defaultEndTime);
+    setBeginTime(_beginTime);
+    setEndTime(_endTime);
   }, [_beginTime, _endTime]);
   // 时间弹框
   const timePicker = (key: string) => {
@@ -47,7 +47,7 @@ const TimePickerRange: React.FC<TimePickerRangeProps> = (props: TimePickerRangeP
     const hour = getTimeHour(currentTime);
     const min = getTimeMin(currentTime);
     const second = getTimeSecond(currentTime);
-    let currentSelectTime: number;
+    let currentSelectTime = currentTime;
     const onTimeChange = (params: timeItem) => {
       currentSelectTime = props.isShowSecond ? apiToTimeWithSecond(params) : apiToTime(params);
     };
@@ -86,6 +86,7 @@ const TimePickerRange: React.FC<TimePickerRangeProps> = (props: TimePickerRangeP
   };
   const customOnClickRule: ruleProps = {
     beginTime: (time: number) => {
+      console.log('time', time);
       customOnClick({ beginTime: time, endTime });
     },
     endTime: (time: number) => {

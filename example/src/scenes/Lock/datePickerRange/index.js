@@ -51,20 +51,26 @@ export default class Password extends Component {
       <View style={{ flex: 1, backgroundColor: '#f8f8f8' }}>
         <View style={{ paddingVertical: 10 }}>
           <View style={styles.title}>
-            <TYText text={'年月日时分'} size={20}></TYText>
+            <TYText text="年月日时分" size={20} />
           </View>
           <DatePickerRange
+            style={{ backgroundColor: '#adad' }}
             mode="datetime"
             startDate={startDateTime}
             endDate={endDateTime}
             onDateChange={params => {
               this.onDateTimeChange(params);
             }}
+            valueStyle={{ color: '#fff' }}
+            iconColor="#fff"
+            labelStyle={{ color: '#fff' }}
+            onConfirm={() => {}}
+            onCancel={() => {}}
           />
         </View>
         <View style={{ paddingVertical: 10 }}>
           <View style={styles.title}>
-            <TYText text={'年月日时'} size={20}></TYText>
+            <TYText text="年月日时" size={20} />
           </View>
           <DatePickerRange
             mode="hour"
@@ -77,7 +83,7 @@ export default class Password extends Component {
         </View>
         <View style={{ paddingVertical: 10 }}>
           <View style={styles.title}>
-            <TYText text={'年月日'} size={20}></TYText>
+            <TYText text="年月日" size={20} />
           </View>
           <DatePickerRange
             mode="date"

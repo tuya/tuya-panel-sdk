@@ -1,0 +1,1701 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hijack component base render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <TYListItem
+    Action={
+      <SwitchButton
+        onTintColor="#239C8E"
+        onValueChange={[Function]}
+        value={true}
+      />
+    }
+    Icon={null}
+    actionDisabled={false}
+    actionType="auto"
+    arrow={false}
+    arrowColor={null}
+    arrowUseIcon={false}
+    disabled={false}
+    iconColor={null}
+    iconSize={null}
+    iconType="auto"
+    imageFollowIconColor={true}
+    needUpdate={true}
+    onPress={null}
+    style={
+      Object {
+        "height": 148,
+      }
+    }
+    styles={Object {}}
+    subTitle="开启后，可在遇到劫持危险时设置提醒告知亲友"
+    theme={Object {}}
+    title="特殊指纹"
+    useART={false}
+  />
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "marginHorizontal": 32,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#999",
+            "fontSize": 12,
+            "marginTop": 11,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      短信通知
+    </TYText>
+    <View
+      key="app"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="设置提醒方式"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      key="phone"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="app通知"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingLeft": 54,
+              "width": 684,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "width": 124,
+              }
+            }
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "#515151",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                ]
+              }
+              type={null}
+              weight={null}
+            >
+              +
+              86
+            </TYText>
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+          <TextInput
+            allowFontScaling={true}
+            autoFocus={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 28,
+                "height": 40,
+                "textAlign": "left",
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="18651554452"
+          />
+        </View>
+        <Divider
+          color="rgba(51,51,51,0.1)"
+          flexDirection="row"
+          height={0.5}
+          style={
+            Object {
+              "marginLeft": 48,
+            }
+          }
+          visible={true}
+          width={null}
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingLeft": 54,
+                "width": 684,
+              },
+              Object {
+                "justifyContent": "space-around",
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            maxLength={6}
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "color": "#333",
+                  "flex": 1,
+                  "fontSize": 28,
+                  "height": 40,
+                  "textAlign": "left",
+                },
+                Object {
+                  "marginLeft": 124,
+                },
+              ]
+            }
+            underlineColorAndroid="transparent"
+            value="1234"
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 2,
+                  "height": 21,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "backgroundColor": "#239C8E",
+                },
+              ]
+            }
+            testID="getPhoneCode"
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 12,
+                  "paddingHorizontal": 8,
+                }
+              }
+              type={null}
+              weight={null}
+            >
+              验证码
+            </TYText>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Hijack component promise reject 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <TYListItem
+    Action={
+      <SwitchButton
+        onTintColor="#239C8E"
+        onValueChange={[Function]}
+        value={true}
+      />
+    }
+    Icon={null}
+    actionDisabled={false}
+    actionType="auto"
+    arrow={false}
+    arrowColor={null}
+    arrowUseIcon={false}
+    disabled={false}
+    iconColor={null}
+    iconSize={null}
+    iconType="auto"
+    imageFollowIconColor={true}
+    needUpdate={true}
+    onPress={null}
+    style={
+      Object {
+        "height": 148,
+      }
+    }
+    styles={Object {}}
+    subTitle="开启后，可在遇到劫持危险时设置提醒告知亲友"
+    theme={Object {}}
+    title="特殊指纹"
+    useART={false}
+  />
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "marginHorizontal": 32,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#999",
+            "fontSize": 12,
+            "marginTop": 11,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      短信通知
+    </TYText>
+    <View
+      key="app"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="设置提醒方式"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      key="phone"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="app通知"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingLeft": 54,
+              "width": 684,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "width": 124,
+              }
+            }
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "#515151",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                ]
+              }
+              type={null}
+              weight={null}
+            >
+              +
+              86
+            </TYText>
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+          <TextInput
+            allowFontScaling={true}
+            autoFocus={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 28,
+                "height": 40,
+                "textAlign": "left",
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="18651554452"
+          />
+        </View>
+        <Divider
+          color="rgba(51,51,51,0.1)"
+          flexDirection="row"
+          height={0.5}
+          style={
+            Object {
+              "marginLeft": 48,
+            }
+          }
+          visible={true}
+          width={null}
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingLeft": 54,
+                "width": 684,
+              },
+              Object {
+                "justifyContent": "space-around",
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            maxLength={6}
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "color": "#333",
+                  "flex": 1,
+                  "fontSize": 28,
+                  "height": 40,
+                  "textAlign": "left",
+                },
+                Object {
+                  "marginLeft": 124,
+                },
+              ]
+            }
+            underlineColorAndroid="transparent"
+            value="1234"
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 2,
+                  "height": 21,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "backgroundColor": "#239C8E",
+                },
+              ]
+            }
+            testID="getPhoneCode"
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 12,
+                  "paddingHorizontal": 8,
+                }
+              }
+              type={null}
+              weight={null}
+            >
+              验证码
+            </TYText>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Hijack component test 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <TYListItem
+    Action={
+      <SwitchButton
+        onTintColor="#239C8E"
+        onValueChange={[Function]}
+        value={true}
+      />
+    }
+    Icon={null}
+    actionDisabled={false}
+    actionType="auto"
+    arrow={false}
+    arrowColor={null}
+    arrowUseIcon={false}
+    disabled={false}
+    iconColor={null}
+    iconSize={null}
+    iconType="auto"
+    imageFollowIconColor={true}
+    needUpdate={true}
+    onPress={null}
+    style={
+      Object {
+        "height": 148,
+      }
+    }
+    styles={Object {}}
+    subTitle="开启后，可在遇到劫持危险时设置提醒告知亲友"
+    theme={Object {}}
+    title="特殊指纹"
+    useART={false}
+  />
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "marginHorizontal": 32,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#999",
+            "fontSize": 12,
+            "marginTop": 11,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      短信通知
+    </TYText>
+    <View
+      key="app"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="设置提醒方式"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      key="phone"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="app通知"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingLeft": 54,
+              "width": 684,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "width": 124,
+              }
+            }
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "#515151",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                ]
+              }
+              type={null}
+              weight={null}
+            >
+              +
+              86
+            </TYText>
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+          <TextInput
+            allowFontScaling={true}
+            autoFocus={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 28,
+                "height": 40,
+                "textAlign": "left",
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="18651554452"
+          />
+        </View>
+        <Divider
+          color="rgba(51,51,51,0.1)"
+          flexDirection="row"
+          height={0.5}
+          style={
+            Object {
+              "marginLeft": 48,
+            }
+          }
+          visible={true}
+          width={null}
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingLeft": 54,
+                "width": 684,
+              },
+              Object {
+                "justifyContent": "space-around",
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            maxLength={6}
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "color": "#333",
+                  "flex": 1,
+                  "fontSize": 28,
+                  "height": 40,
+                  "textAlign": "left",
+                },
+                Object {
+                  "marginLeft": 124,
+                },
+              ]
+            }
+            underlineColorAndroid="transparent"
+            value="1234"
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 2,
+                  "height": 21,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "backgroundColor": "#239C8E",
+                },
+              ]
+            }
+            testID="getPhoneCode"
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 12,
+                  "paddingHorizontal": 8,
+                }
+              }
+              type={null}
+              weight={null}
+            >
+              验证码
+            </TYText>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`Hijack component test 2`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#fff",
+        "justifyContent": "center",
+        "width": 750,
+      },
+      undefined,
+    ]
+  }
+>
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <TYListItem
+    Action={
+      <SwitchButton
+        onTintColor="#239C8E"
+        onValueChange={[Function]}
+        value={true}
+      />
+    }
+    Icon={null}
+    actionDisabled={false}
+    actionType="auto"
+    arrow={false}
+    arrowColor={null}
+    arrowUseIcon={false}
+    disabled={false}
+    iconColor={null}
+    iconSize={null}
+    iconType="auto"
+    imageFollowIconColor={true}
+    needUpdate={true}
+    onPress={null}
+    style={
+      Object {
+        "height": 148,
+      }
+    }
+    styles={Object {}}
+    subTitle="开启后，可在遇到劫持危险时设置提醒告知亲友"
+    theme={Object {}}
+    title="特殊指纹"
+    useART={false}
+  />
+  <Divider
+    color="rgba(51,51,51,0.1)"
+    flexDirection="row"
+    height={1}
+    style={
+      Object {
+        "marginLeft": 32,
+      }
+    }
+    visible={true}
+    width={null}
+  />
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#fff",
+          "marginHorizontal": 32,
+        },
+        undefined,
+      ]
+    }
+  >
+    <TYText
+      align={null}
+      color={null}
+      size={null}
+      style={
+        Array [
+          Object {
+            "color": "#999",
+            "fontSize": 12,
+            "marginTop": 11,
+          },
+          undefined,
+        ]
+      }
+      type={null}
+      weight={null}
+    >
+      短信通知
+    </TYText>
+    <View
+      key="app"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="设置提醒方式"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+    </View>
+    <View
+      key="phone"
+    >
+      <TouchableOpacity
+        activeOpacity={0.9}
+        onPress={[Function]}
+        testID="TouchableOpacity"
+      >
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "height": 38,
+                "justifyContent": "space-between",
+                "width": 686,
+              },
+              undefined,
+            ]
+          }
+        >
+          <View
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Image
+              source={1}
+            />
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#515151",
+                  "fontSize": 14,
+                  "marginLeft": 14,
+                }
+              }
+              text="app通知"
+              type={null}
+              weight={null}
+            />
+          </View>
+          <View
+            style={
+              Array [
+                Object {
+                  "alignItems": "center",
+                  "borderColor": "#D0D0D0",
+                  "borderRadius": 8,
+                  "borderWidth": 1,
+                  "height": 16,
+                  "justifyContent": "center",
+                  "width": 16,
+                },
+                Object {
+                  "borderColor": "transparent",
+                },
+              ]
+            }
+          >
+            <Component
+              color="#239C8E"
+              name="selected"
+              size={32}
+            />
+          </View>
+        </View>
+      </TouchableOpacity>
+      <View
+        style={
+          Object {
+            "marginBottom": 5,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "#fff",
+              "flexDirection": "row",
+              "justifyContent": "space-between",
+              "paddingLeft": 54,
+              "width": 684,
+            }
+          }
+        >
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Object {
+                "alignItems": "center",
+                "flexDirection": "row",
+                "width": 124,
+              }
+            }
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Array [
+                  Object {
+                    "color": "#515151",
+                    "fontSize": 14,
+                  },
+                  Object {
+                    "marginRight": 8,
+                  },
+                ]
+              }
+              type={null}
+              weight={null}
+            >
+              +
+              86
+            </TYText>
+            <Image
+              source={1}
+            />
+          </TouchableOpacity>
+          <TextInput
+            allowFontScaling={true}
+            autoFocus={true}
+            keyboardType="numeric"
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "#fff",
+                "color": "#333",
+                "flex": 1,
+                "fontSize": 28,
+                "height": 40,
+                "textAlign": "left",
+              }
+            }
+            underlineColorAndroid="transparent"
+            value="18651554452"
+          />
+        </View>
+        <Divider
+          color="rgba(51,51,51,0.1)"
+          flexDirection="row"
+          height={0.5}
+          style={
+            Object {
+              "marginLeft": 48,
+            }
+          }
+          visible={true}
+          width={null}
+        />
+        <View
+          style={
+            Array [
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "#fff",
+                "flexDirection": "row",
+                "justifyContent": "space-between",
+                "paddingLeft": 54,
+                "width": 684,
+              },
+              Object {
+                "justifyContent": "space-around",
+              },
+            ]
+          }
+        >
+          <TextInput
+            allowFontScaling={true}
+            keyboardType="numeric"
+            maxLength={6}
+            onChangeText={[Function]}
+            onEndEditing={[Function]}
+            placeholder=""
+            placeholderTextColor="#b7b7b7"
+            rejectResponderTermination={true}
+            style={
+              Array [
+                Object {
+                  "backgroundColor": "#fff",
+                  "color": "#333",
+                  "flex": 1,
+                  "fontSize": 28,
+                  "height": 40,
+                  "textAlign": "left",
+                },
+                Object {
+                  "marginLeft": 124,
+                },
+              ]
+            }
+            underlineColorAndroid="transparent"
+            value="1234"
+          />
+          <TouchableOpacity
+            activeOpacity={0.2}
+            onPress={[Function]}
+            style={
+              Array [
+                Object {
+                  "borderRadius": 2,
+                  "height": 21,
+                  "justifyContent": "center",
+                },
+                Object {
+                  "backgroundColor": "#239C8E",
+                },
+              ]
+            }
+            testID="getPhoneCode"
+          >
+            <TYText
+              align={null}
+              color={null}
+              size={null}
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": 12,
+                  "paddingHorizontal": 8,
+                }
+              }
+              type={null}
+              weight={null}
+            >
+              验证码
+            </TYText>
+          </TouchableOpacity>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
+`;

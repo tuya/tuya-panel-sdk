@@ -1,3 +1,4 @@
+import React from 'react';
 import { StyleProp, ViewStyle, TextStyle } from 'react-native';
 // Motion
 export interface MotionProps {
@@ -226,7 +227,7 @@ export interface DatePickerViewProps {
    * @description startLabel label
    * @defaultValue string
    */
-  startLabel?: string;
+  startLabel?: React.ReactNode | string;
   /**
    * @language zh-CN
    * @description 结束时间标签
@@ -237,7 +238,7 @@ export interface DatePickerViewProps {
    * @description endLabel label
    * @defaultValue string
    */
-  endLabel?: string;
+  endLabel?: React.ReactNode | string;
   /**
    * @language zh-CN
    * @description 开始时间
@@ -520,6 +521,10 @@ export interface DatePickerViewProps {
    * @defaultValue () => {}
    */
   onDateChange: ({ startDate, endDate }: { startDate: any; endDate: any }) => void;
+  labelStyle?: StyleProp<TextStyle>;
+  valueStyle?: StyleProp<TextStyle>;
+  iconStyle?: StyleProp<ViewStyle> | undefined;
+  iconColor?: any;
 }
 export interface DatePickerViewState {
   /**

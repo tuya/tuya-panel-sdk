@@ -1,6 +1,6 @@
 {
   "name": "@tuya/tuya-panel-ipc-sdk",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "涂鸦Ipc业务组件库",
   "main": "./lib/index.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "dev": "tsc -w",
     "prebuild": "../../node_modules/del-cli/cli.js lib/",
     "build": "tsc -d",
-    "postbuild": "../../node_modules/cpy-cli/cli.js '**/*.png' **/*.jpg '**/*.html' '**/*.json' '../lib/' --cwd=src/ --no-overwrite --parents"
+    "postbuild": "../../node_modules/cpy-cli/cli.js **/*.png **/*.jpg **/*.html **/*.json ../lib/ --cwd=src/ --no-overwrite --parents"
   },
   "repository": {
     "type": "git",

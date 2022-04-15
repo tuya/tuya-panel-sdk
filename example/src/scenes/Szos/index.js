@@ -9,6 +9,8 @@ import StreeringWheel from './SteeringWheel';
 import BreakPointInput from './BreakPointInput';
 import SimpleTopBar from './SimpleTopBar';
 import GestureSlider from './GestureSlider';
+import LineBoxSvg from './LineBoxSvg';
+import SoundWave from './SoundWave';
 
 export default class SzosScene extends Component {
   get data() {
@@ -21,6 +23,8 @@ export default class SzosScene extends Component {
   static BreakPointInput = BreakPointInput;
   static SimpleTopBar = SimpleTopBar;
   static GestureSlider = GestureSlider;
+  static LineBoxSvg = LineBoxSvg;
+  static SoundWave = SoundWave;
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
   }

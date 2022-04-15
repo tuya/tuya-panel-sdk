@@ -84,9 +84,9 @@ const TimingRepeatList: React.FC<IProp> = ({
           return (
             <View key={i.toString()} style={[styles.itemStyle, itemStyle]}>
               {startTime === endTime ? (
-                <SingleTime time={startTime} is24Hour {...singleTimeProps} />
+                <SingleTime time={startTime} is24Hour={is24Hour} {...singleTimeProps} />
               ) : (
-                <RangeTime startTime endTime is24Hour {...rangeTimeProps} />
+                <RangeTime startTime endTime is24Hour={is24Hour} {...rangeTimeProps} />
               )}
               <View style={[styles.rightStyle, rightStyle]}>
                 <TYText style={[styles.nameStyle, nameStyle]}>{name}</TYText>
@@ -100,6 +100,7 @@ const TimingRepeatList: React.FC<IProp> = ({
 };
 
 TimingRepeatList.defaultProps = {
+  is24Hour: false,
   data: [
     {
       name: Strings.getLang('TYLamp_normal'),

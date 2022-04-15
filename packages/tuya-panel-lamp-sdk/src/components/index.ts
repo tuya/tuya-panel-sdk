@@ -61,3 +61,7 @@ export { default as RhythmsCircle } from './rhythms-circle';
 export { default as TimeFormatComponent } from './time-format-component';
 
 export { default as TimingRepeatList } from './timing-repeat-list';
+
+export { default as DoubleButton } from './double-button';
+
+export { default as SceneAnimationList } from './list/scene-animation-list';
