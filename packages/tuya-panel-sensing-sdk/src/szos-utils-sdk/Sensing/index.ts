@@ -1,5 +1,5 @@
 import { DpSchema } from 'tuya-panel-kit';
-import { parseJson as parse, transLateNumber } from '../Normal';
+import { transLateNumber } from '../Normal';
 
 /**
  * @description 法氏度转华氏度
@@ -62,18 +62,6 @@ const fTemperatureSensitivityToc = (f: number, scale = 2) => {
  */
 
 const isSupportDp = <T extends string | number>(code: T): boolean => code !== undefined;
-
-/**
- *
- * @param obj JSON字符串
- * @returns JSON 对象
- */
-const parseJSON = (obj: string) => {
-  const data =
-    typeof obj === 'string' ? (typeof parse(obj) === 'object' ? JSON.parse(obj) : {}) : {};
-
-  return data;
-};
 
 /**
  * @description 十六进制转rgba

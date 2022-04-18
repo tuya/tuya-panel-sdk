@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { View, Text, StyleSheet, StyleProp, ViewStyle, TextStyle } from 'react-native';
 import { IconFont } from 'tuya-panel-kit';
-import { cx } from '../utils';
+import { cx } from '../../utils';
 
 interface DpCacheTextProps {
   title: string;

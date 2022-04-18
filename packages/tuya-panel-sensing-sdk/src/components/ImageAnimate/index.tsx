@@ -32,7 +32,7 @@ const ImageAnimate: FC<ImageAnimateProps> = ({ children, style, source }) => {
     <View style={[styles.container, style]}>
       <Animated.Image
         style={[{ transform: [{ rotate }] }, styles.icon]}
-        source={source || require('../res/reload.png')}
+        source={source || require('../../res/reload.png')}
       />
       {children}
     </View>

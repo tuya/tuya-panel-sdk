@@ -17,7 +17,7 @@ $ yarn add @tuya/tuya-panel-sensing-sdk
 ## Usage
 
 ```js
-import { useState } from '@tuya/tuya-panel-sensing-sdk';
+import { useDpState } from '@tuya/tuya-panel-sensing-sdk';
 ```
 
 ## Doc

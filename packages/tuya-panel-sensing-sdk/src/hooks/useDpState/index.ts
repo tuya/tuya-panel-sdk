@@ -1,6 +1,7 @@
+/* istanbul ignore file */
 import { DpType, TYSdk, Utils } from 'tuya-panel-kit';
-import { Utils as Normal } from '../szos-utils-sdk';
-import { useDpSchema } from './index';
+import { Utils as Normal } from '../../szos-utils-sdk';
+import { useDpSchema } from '../index';
 
 const { transLateNumber } = Normal;
 const {

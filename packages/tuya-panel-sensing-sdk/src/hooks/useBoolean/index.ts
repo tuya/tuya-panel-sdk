@@ -1,5 +1,6 @@
+/* istanbul ignore file */
 import { useMemo } from 'react';
-import useToggle from './useToggle';
+import useToggle from '../useToggle';
 
 export interface Actions {
   setTrue: () => void;

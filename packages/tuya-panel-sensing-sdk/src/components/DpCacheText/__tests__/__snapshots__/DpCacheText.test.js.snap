@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DpCacheText basic 1`] = `
+<Text
+  numberOfLines={1}
+/>
+`;
+
+exports[`DpCacheText basic demo 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+  />
+  <Component
+    color="red"
+    name="warning"
+    size={12}
+    style={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+  />
+</View>
+`;
+
+exports[`DpCacheText basic demo1 1`] = `
+<Text
+  numberOfLines={1}
+>
+  ;;
+</Text>
+`;
+
+exports[`DpCacheText basic demoewfwf 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    numberOfLines={1}
+  >
+    s
+  </Text>
+  <Component
+    color="red"
+    name="warning"
+    size={12}
+    style={
+      Object {
+        "marginLeft": 8,
+      }
+    }
+  />
+</View>
+`;

@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   StepperProps as StepperPropsPanel,
   TabBarProps as TabBarPropsPanel,
@@ -475,7 +476,9 @@ declare module '@tuya/tuya-panel-sensing-sdk' {
     labelTextColor?: string;
   }
 
-  export interface StepperProps extends StepperPropsPanel {}
+  export interface StepperProps extends StepperPropsPanel {
+    [props: string]: any;
+  }
 
   export interface TabBarProps extends TabBarPropsPanel {
     /**
@@ -638,6 +641,323 @@ declare module '@tuya/tuya-panel-sensing-sdk' {
     size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | number;
   }
 
+  export interface AlarmCloudProps {
+    /**
+     * @language zh-CN
+     * @description 标题
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description title
+     * @defaultValue ''
+     */
+    title: string;
+    /**
+     * @language zh-CN
+     * @description 最小值文案
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description minTitle
+     * @defaultValue undefined
+     */
+    minTitle?: string;
+    /**
+     * @language zh-CN
+     * @description 最大值文案
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description maxTitle
+     * @defaultValue undefined
+     */
+    maxTitle?: string;
+    /**
+     * @language zh-CN
+     * @description 是否展示step组件
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description showStepComp
+     * @defaultValue false
+     */
+    showStepComp?: boolean;
+    /**
+     * @language zh-CN
+     * @description step组件props
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description stepMixProps
+     * @defaultValue undefined
+     */
+    stepMixProps?: StepperProps;
+    /**
+     * @language zh-CN
+     * @description step组件props
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description stepMaxProps
+     * @defaultValue undefined
+     */
+    stepMaxProps?: StepperProps;
+    /**
+     * @language zh-CN
+     * @description title样式
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description titleStyle
+     * @defaultValue undefined
+     */
+    titleStyle?: StyleProp<TextStyle>;
+    /**
+     * @language zh-CN
+     * @description switch props
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description switchButtonProps
+     * @defaultValue undefined
+     */
+    switchButtonProps?: SwitchButtonProps;
+    /**
+     * @language zh-CN
+     * @description multiSliderProps
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description multiSliderProps
+     * @defaultValue undefined
+     */
+    multiSliderProps?: MultiSliderProps;
+    /**
+     * @language zh-CN
+     * @description 头部样式
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description multiSliderProps
+     * @defaultValue undefined
+     */
+    topStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 底部样式
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description bottomStyle
+     * @defaultValue undefined
+     */
+    bottomStyle?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description 样式
+     * @defaultValue false
+     */
+    /**
+     * @language en-US
+     * @description style
+     * @defaultValue undefined
+     */
+    style?: StyleProp<ViewStyle>;
+  }
+
+  export interface AlarmSwitchProps {
+    /**
+     * @language zh-CN
+     * @description 语言环境
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description language
+     * @defaultValue ''
+     */
+    language: string;
+    /**
+     * @language zh-CN
+     * @description 初始化数据
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description initList
+     * @defaultValue ''
+     */
+    initList?: any[];
+    /**
+     * @language zh-CN
+     * @description 每项样式
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description itemStyle
+     * @defaultValue ''
+     */
+    itemStyle?: TYListItemProps;
+    /**
+     * @language zh-CN
+     * @description style
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description itemStyle
+     * @defaultValue ''
+     */
+    style?: StyleProp<ViewStyle>;
+  }
+
+  export interface TemperatureScaleSwitchingProps {
+    /**
+     * @language zh-CN
+     * @description 类型
+     * @defaultValue 'checkBox'
+     */
+    /**
+     * @language en-US
+     * @description type
+     * @defaultValue ''
+     */
+    type: 'checkBox' | 'list' | 'picker';
+    /**
+     * @language zh-CN
+     * @description 标题
+     * @defaultValue ''
+     */
+    /**
+     * @language en-US
+     * @description title
+     * @defaultValue ''
+     */
+    title: string;
+    /**
+     * @language zh-CN
+     * @description 样式
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description style
+     * @defaultValue undefined
+     */
+    style?: StyleProp<ViewStyle>;
+    /**
+     * @language zh-CN
+     * @description code
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description dpCode
+     * @defaultValue undefined
+     */
+    dpCode?: string;
+    /**
+     * @language zh-CN
+     * @description 是否展示icon
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description showIcon
+     * @defaultValue undefined
+     */
+    showIcon?: boolean;
+    /**
+     * @language zh-CN
+     * @description schema
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description schema
+     * @defaultValue undefined
+     */
+    schema?: DpSchema;
+    /**
+     * @language zh-CN
+     * @description 值
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description value
+     * @defaultValue undefined
+     */
+    value?: string;
+    /**
+     * @language zh-CN
+     * @description 温度单位
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description tempUnit
+     * @defaultValue undefined
+     */
+    tempUnit?: string;
+    /**
+     * @language zh-CN
+     * @description 下发dp回调
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description putDp
+     * @defaultValue undefined
+     */
+    putDp?: (dpInfo: Record<string, any>) => void;
+    /**
+     * @language zh-CN
+     * @description checkBoxProps
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description checkBoxProps
+     * @defaultValue undefined
+     */
+    checkBoxProps?: TabBarProps & NewTabProps;
+    /**
+     * @language zh-CN
+     * @description PopUpListProps
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description PopUpListProps
+     * @defaultValue undefined
+     */
+    listProps?: PopUpListProps;
+    /**
+     * @language zh-CN
+     * @description PopupPickerProps
+     * @defaultValue undefined
+     */
+    /**
+     * @language en-US
+     * @description PopupPickerProps
+     * @defaultValue undefined
+     */
+    pickerProps?: PopupPickerProps;
+  }
+
   export const MultiSlider: React.ComponentClass<MultiSliderProps>;
   export const Stepper: React.ComponentClass<StepperProps>;
   export const TabBar: React.ComponentClass<TabBarProps>;
@@ -645,4 +965,7 @@ declare module '@tuya/tuya-panel-sensing-sdk' {
   export const ImageAnimate: React.ComponentClass<ImageAnimateProps>;
   export const SendEmail: React.ComponentClass<SendEmailProps>;
   export const WhiteSpace: React.ComponentClass<WhiteSpaceProps>;
+  export const AlarmCloud: React.ComponentClass<AlarmCloudProps>;
+  export const AlarmSwitch: React.ComponentClass<AlarmSwitch>;
+  export const TemperatureScaleSwitching: React.ComponentClass<TemperatureScaleSwitchingProps>;
 }

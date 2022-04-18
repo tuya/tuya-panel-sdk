@@ -1,5 +1,6 @@
+/* istanbul ignore file */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { SensingSDK } from '../SensingSDK';
+import { SensingSDK } from '../../SensingSDK';
 
 const useCurrentByDp = <T = ['temp_current', 'humidity_value'], U = { [props: string]: string }>(
   showDataTime: boolean,

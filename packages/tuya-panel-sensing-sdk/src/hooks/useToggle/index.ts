@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { useMemo, useState } from 'react';
 
 export interface Actions<T> {

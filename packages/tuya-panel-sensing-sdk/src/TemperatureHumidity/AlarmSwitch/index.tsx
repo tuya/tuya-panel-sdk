@@ -12,14 +12,14 @@ const theme = {
   cellBg: '#ffffff',
 };
 
-interface IProductSettingProps {
+interface AlarmSwitchProps {
   language: string;
   initList?: any[];
   itemStyle?: TYListItemProps;
   style?: StyleProp<ViewStyle>;
 }
 
-const ProductSetting: FC<IProductSettingProps> = props => {
+const AlarmSwitch: FC<AlarmSwitchProps> = props => {
   const { language, initList, itemStyle, style } = props;
   const [list, setList] = useState<any[]>(initList || []);
 
@@ -141,4 +141,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProductSetting;
+export default AlarmSwitch;

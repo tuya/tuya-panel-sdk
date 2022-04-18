@@ -1,5 +1,6 @@
+/* istanbul ignore file */
 import { DpType, TYSdk } from 'tuya-panel-kit';
-import { SensingSDK } from '../SensingSDK';
+import { SensingSDK } from '../../SensingSDK';
 
 const TYDevice = TYSdk.device;
 

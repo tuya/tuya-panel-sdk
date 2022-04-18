@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import { Button, StyleProp, StyleSheet, TouchableOpacity, ViewStyle } from 'react-native';
 import { Dialog, DialogPromptProps } from 'tuya-panel-kit';
-import { SensingUtils } from '../szos-utils-sdk';
-import { cx, notification } from '../utils';
+import { SensingUtils } from '../../szos-utils-sdk';
+import { cx, notification } from '../../utils';
 
 interface SendEmailProps extends DialogPromptProps {
   errInfo?: {

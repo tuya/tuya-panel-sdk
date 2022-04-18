@@ -1,5 +1,6 @@
+/* istanbul ignore file */
 import { Utils, DpSchema, TYSdk } from 'tuya-panel-kit';
-import { Utils as Normal } from '../szos-utils-sdk';
+import { Utils as Normal } from '../../szos-utils-sdk';
 
 const { NumberUtils } = Utils;
 
