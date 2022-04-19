@@ -1,11 +1,3 @@
-/*
- * @Author: 豆芽(douya.ye@tuya.com)
- * @Date: 2021-11-29 15:39:50
- * @LastEditTime: 2021-11-29 16:52:38
- * @LastEditors: 豆芽(douya.ye@tuya.com)
- * @Description:
- * @FilePath: /tuya-panel-sdk/packages/tuya-panel-szos-sdk/src/components/multi-slider/__tests__/converters.test.js
- */
 import { valueToPosition, positionToValue, createArray, closest, roundFun } from '../converters';
 
 describe('converters', () => {
