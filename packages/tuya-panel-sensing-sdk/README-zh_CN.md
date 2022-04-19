@@ -20,6 +20,12 @@ $ yarn add @tuya/tuya-panel-sensing-sdk
 import { useDpState } from '@tuya/tuya-panel-sensing-sdk';
 ```
 
+### 注意事项
+
+- tuya-pannel-kit-4.9.4
+- react-native-0.59.10
+- react-16.8.3
+
 ## 文档
 
 了解更多传感 通用 业务 组件文档，请参考链接 [Tuya Design](https://developer.tuya.com/cn/docs/control-panel-sdk/szos-sdk?id=Kaiuyhfamrhom)

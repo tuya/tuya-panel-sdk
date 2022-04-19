@@ -20,6 +20,12 @@ $ yarn add @tuya/tuya-panel-sensing-sdk
 import { useDpState } from '@tuya/tuya-panel-sensing-sdk';
 ```
 
+### Matters needing attention
+
+- tuya-pannel-kit-4.9.4
+- react-native-0.59.10
+- react-16.8.3
+
 ## Doc
 
 For more documentation on sensing components, please refer to [Tuya Design](https://developer.tuya.com/cn/docs/control-panel-sdk/szos-sdk?id=Kaiuyhfamrhom)
