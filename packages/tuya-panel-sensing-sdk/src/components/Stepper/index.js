@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { ViewPropTypes, StyleSheet, View, TouchableOpacity, TextInput } from 'react-native';

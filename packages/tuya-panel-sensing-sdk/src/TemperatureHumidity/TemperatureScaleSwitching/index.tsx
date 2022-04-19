@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import React, { FC } from 'react';
 import { FlatList, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import {

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 export { default as MultiSlider } from './MultiSlider';
 export { default as ImageAnimate } from './ImageAnimate';
 export { default as WhiteSpace } from './WhiteSpace';

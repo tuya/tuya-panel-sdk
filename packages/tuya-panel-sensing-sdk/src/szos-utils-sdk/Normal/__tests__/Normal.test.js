@@ -7,7 +7,7 @@ describe('isInteger', () => {
   });
   it('{}', () => {
     const result = Normal.isInteger({});
-    expect(result).toBe({});
+    expect(result).toEqual({});
   });
 
   it('111.999', () => {
@@ -35,7 +35,7 @@ describe('type', () => {
 describe('parseJSON', () => {
   it('undefined', () => {
     const result = Normal.parseJson(undefined);
-    expect(result).toBe(undefined);
+    expect(result).toEqual({});
   });
   it('other', () => {
     const result = Normal.parseJson('jiijji');
@@ -43,7 +43,7 @@ describe('parseJSON', () => {
   });
   it('obj', () => {
     const result = Normal.parseJson({});
-    expect(result).toBe({});
+    expect(result).toEqual({});
   });
 });
 
@@ -96,11 +96,11 @@ describe('cameLiza', () => {
 
   it('number', () => {
     const result = Normal.cameLiza(1111);
-    expect(result).toBe('111');
+    expect(result).toBe('1111');
   });
   it('string by reg', () => {
-    const result = Normal.cameLiza('111___---nuinuinu');
-    expect(result).toBe('111nuinuinu');
+    const result = Normal.cameLiza('111___---222');
+    expect(result).toBe('111222');
   });
   it('empty', () => {
     const result = Normal.cameLiza('');
@@ -118,11 +118,11 @@ describe('getBitValue', () => {
 describe('isEmptyObj', () => {
   it('obj', () => {
     const result = Normal.isEmptyObj({ a: '豆芽' });
-    expect(result).toBeTruthy();
+    expect(result).toBeFalsy();
   });
   it('empty obj', () => {
     const result = Normal.isEmptyObj({});
-    expect(result).toBeFalsy();
+    expect(result).toBeTruthy();
   });
 });
 
@@ -137,7 +137,7 @@ describe('transLateNumber', () => {
   });
   it('number 2', () => {
     const result = Normal.transLateNumber(1.88989, 0);
-    expect(result).toBe(1);
+    expect(result).toBe(2);
   });
 });
 
@@ -188,29 +188,29 @@ describe('formatNumber2String', () => {
 describe('createArr', () => {
   it('length', () => {
     const result = Normal.createArray(9);
-    expect(result).toBe([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(result).toEqual([0, 1, 2, 3, 4, 5, 6, 7, 8]);
   });
 });
 
 describe('createArrayByStep', () => {
   it('start', () => {
     const result = Normal.createArrayByStep(8, 1);
-    expect(result).toBe([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    expect(result).toEqual([1, 2, 3, 4, 5, 6, 7, 8]);
   });
 
   it('default', () => {
     const result = Normal.createArrayByStep(8);
-    expect(result).toBe([0, 1, 2, 3, 4, 5, 6, 7, 8]);
+    expect(result).toEqual([0, 1, 2, 3, 4, 5, 6, 7]);
   });
 });
 
 describe('range', () => {
   it('default', () => {
     const result = Normal.range();
-    expect(result).toBe([]);
+    expect(result).toEqual([]);
   });
   it('basic', () => {
     const result = Normal.range(1, 2, 0, 0);
-    expect(result).toBe([1]);
+    expect(result).toEqual([1]);
   });
 });

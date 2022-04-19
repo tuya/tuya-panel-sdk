@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable prettier/prettier */
 import React from 'react'
 import { View, ViewPropTypes, Animated, StyleSheet } from 'react-native'

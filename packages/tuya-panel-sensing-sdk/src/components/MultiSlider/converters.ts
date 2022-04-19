@@ -1,4 +1,4 @@
-const closest = (array: any[], n: number) => {
+export const closest = (array: any[], n: number) => {
   let minI = 0;
   let maxI = array.length - 1;
 
@@ -62,7 +62,7 @@ export function positionToValue(position: number, valuesArray: number[], sliderL
   return valuesArray[Math.round(index)];
 }
 
-const roundFun = (value: number, n: number) =>
+export const roundFun = (value: number, n: number) =>
   Math.round(value * Math.pow(10, n)) / Math.pow(10, n);
 
 export function createArray(start: number, end: number, step: number) {

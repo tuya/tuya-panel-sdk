@@ -3,7 +3,7 @@ import Sensing from '../index';
 describe('fToc', () => {
   it('normal', () => {
     const result = Sensing.fToc(20);
-    expect(result).toBe(7);
+    expect(result).toBe(-6.67);
   });
   it('default', () => {
     const result = Sensing.fToc('');
@@ -18,7 +18,7 @@ describe('cTof', () => {
   });
   it('normal', () => {
     const result = Sensing.cTof(20);
-    expect(result).cTof(68);
+    expect(result).toBe(68);
   });
 });
 
@@ -77,7 +77,7 @@ describe('addZero', () => {
 
   it('default 2', () => {
     const result = Sensing.addZero(12);
-    expect(result).toBe(12);
+    expect(result).toBe('12');
   });
 });
 
@@ -91,32 +91,32 @@ describe('validateEmail', () => {
 describe('strToWeek', () => {
   it('default', () => {
     const result = Sensing.strToWeek('1111111111', []);
-    expect(result).toBe([]);
+    expect(result).toEqual([]);
   });
 
   it('default 1', () => {
     const result = Sensing.strToWeek('11111111', ['1', '2', '3', '4', '5', '6', '7']);
-    expect(result).toBe([]);
+    expect(result).toEqual(['1', '2', '3', '4', '5', '6', '7']);
   });
 
   it('default 2', () => {
     const result = Sensing.strToWeek('1111111', ['1', '2', '3', '4', '5', '6', '7']);
-    expect(result).toBe([]);
+    expect(result).toEqual(['1', '2', '3', '4', '5', '6', '7']);
   });
 
   it('default 3', () => {
     const result = Sensing.strToWeek('0000000', ['1', '2', '3', '4', '5', '6', '7']);
-    expect(result).toBe([]);
+    expect(result).toEqual([]);
   });
 });
 
 describe('customDp', () => {
   it('default', () => {
     const result = Sensing.customDp({});
-    expect(result).toBe({});
+    expect(result).toEqual({});
   });
   it('normal', () => {
-    const result = Sensing.customDp({
+    const d = {
       doorcontact_state: {
         code: 'doorcontact_state',
         extContent: '{"trigger":"direct"}',
@@ -128,19 +128,22 @@ describe('customDp', () => {
         type: 'bool',
         dptype: 'obj',
       },
-    });
-    expect(result).toBe({
-      doorcontact_state: {
-        code: 'doorcontact_state',
-        extContent: '{"trigger":"direct"}',
-        iconname: 'icon-menci',
-        id: 102,
-        mode: 'ro',
-        name: '门磁状态',
-        trigger: 'direct',
-        type: 'bool',
-        dptype: 'obj',
-      },
+    };
+    const result = Sensing.customDp(d);
+    expect(result).toEqual({
+      bool: [
+        {
+          code: 'doorcontact_state',
+          extContent: '{"trigger":"direct"}',
+          iconname: 'icon-menci',
+          id: 102,
+          mode: 'ro',
+          name: '门磁状态',
+          trigger: 'direct',
+          type: 'bool',
+          dptype: 'obj',
+        },
+      ],
     });
   });
 });

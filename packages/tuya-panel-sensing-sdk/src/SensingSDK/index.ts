@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { NativeModules } from 'react-native';
 import moment from 'moment';
