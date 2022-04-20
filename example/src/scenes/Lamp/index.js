@@ -88,7 +88,7 @@ export default class LampScene extends Component {
   static ColorRecognition = ColorRecognitionScene;
   static DoubleButton = DoubleButtonScene;
   static SceneAnimationList = SceneAnimationListScene;
-
+  
   render() {
     return <TYFlatList contentContainerStyle={{ paddingTop: 16 }} data={this.data} />;
   }
