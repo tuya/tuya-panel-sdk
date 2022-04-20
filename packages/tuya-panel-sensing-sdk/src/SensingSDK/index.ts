@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { NativeModules } from 'react-native';
 import moment from 'moment';
@@ -930,6 +931,8 @@ class SensingSDK<I = string, C = string> {
    * ```
    */
 
+  /* istanbul ignore next */
+
   getHourList = async (
     dateArr: number[],
     dpCode: string,
@@ -1022,6 +1025,8 @@ class SensingSDK<I = string, C = string> {
    * }
    * ```
    */
+
+  /* istanbul ignore next */
   getDayList = async (
     dateArr: number[],
     dpCode: string,
@@ -1113,6 +1118,7 @@ class SensingSDK<I = string, C = string> {
    * }
    * ```
    */
+  /* istanbul ignore next */
   getMonthList = async (
     dateArr: number[],
     dpCode: string,
@@ -1186,6 +1192,7 @@ class SensingSDK<I = string, C = string> {
    * @param {string} type 'sum' | 'avg
    * @returns
    */
+  /* istanbul ignore next */
   exportHourList = async (
     date: number[],
     dpExcelQuery: IDpExcelQuery[],
@@ -1222,6 +1229,7 @@ class SensingSDK<I = string, C = string> {
    * @param {string} type 'sum' | 'avg
    * @returns
    */
+  /* istanbul ignore next */
 
   exportDayList = async (
     dateArr: number[],
@@ -1258,6 +1266,7 @@ class SensingSDK<I = string, C = string> {
    * @param {string} type 'sum' | 'avg
    * @returns
    */
+  /* istanbul ignore next */
   exportMonthList = async (
     dateArr: number[],
     dpExcelQuery: IDpExcelQuery[],
@@ -1290,6 +1299,7 @@ class SensingSDK<I = string, C = string> {
    * @param type
    * @returns
    */
+  /* istanbul ignore next */
 
   getYearAverage = async (timeArr: [number, number], code: C, type: ChartType) => {
     try {
@@ -1337,6 +1347,8 @@ class SensingSDK<I = string, C = string> {
    *
    * @returns 获取开通统计Dp
    */
+
+  /* istanbul ignore next */
   getStatisticsConfig = async () => {
     try {
       const list = await apiRequest(API.statisticsConfig, { pid: this.devInfo!.productId });

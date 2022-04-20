@@ -5,7 +5,7 @@ import { cx } from '../../utils';
 import { MultiSlider, Stepper } from '../../components';
 import { MultiSliderProps } from '../../components/MultiSlider';
 
-interface IAlarmCloudProps {
+interface AlarmCloudProps {
   title: string;
   minTitle?: string;
   maxTitle?: string;
@@ -20,7 +20,7 @@ interface IAlarmCloudProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const AlarmCloud: FC<IAlarmCloudProps> = props => {
+const AlarmCloud: FC<AlarmCloudProps> = props => {
   const {
     title = '湿度告警',
     switchButtonProps,

@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/no-unused-state */
 import React from 'react';

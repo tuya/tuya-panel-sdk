@@ -1,3 +1,4 @@
+/* istanbul ignore file */
 import { NativeModules } from 'react-native';
 const _TYDeviceDevice = NativeModules.TYRCTDeviceModule || NativeModules.TYRCTPanelManager;
 

@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DpCacheText basic demo 1`] = `
+<Fragment>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    onPress={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="导出"
+    >
+      导出
+    </Button>
+  </TouchableOpacity>
+</Fragment>
+`;
+
+exports[`DpCacheText basic demo1 1`] = `
+<Fragment>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    onPress={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="导出"
+    >
+      导出
+    </Button>
+  </TouchableOpacity>
+</Fragment>
+`;
+
+exports[`DpCacheText callback 1`] = `
+<Fragment>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    onPress={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="导出"
+    >
+      导出
+    </Button>
+  </TouchableOpacity>
+</Fragment>
+`;
+
+exports[`DpCacheText press 1`] = `
+<Fragment>
+  <TouchableOpacity
+    activeOpacity={0.3}
+    onPress={[Function]}
+  >
+    <Button
+      onPress={[Function]}
+      title="导出"
+    >
+      导出
+    </Button>
+  </TouchableOpacity>
+</Fragment>
+`;

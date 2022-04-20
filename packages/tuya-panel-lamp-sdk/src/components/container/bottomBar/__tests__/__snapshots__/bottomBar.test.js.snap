@@ -1,0 +1,435 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BottomBar components basic render 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "height": "100%",
+      "justifyContent": "space-around",
+      "paddingHorizontal": 12,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="light"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "#FFF",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="scene"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="music"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="plan"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`BottomBar components render with power 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "height": "100%",
+      "justifyContent": "space-around",
+      "paddingHorizontal": 12,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="power"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0D84FF",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 88,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 32,
+          "tintColor": "#FFF",
+          "width": 32,
+        }
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="light"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "#FFF",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="scene"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="music"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="plan"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`BottomBar components render with power in random index 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+      "flex": 1,
+      "flexDirection": "row",
+      "height": "100%",
+      "justifyContent": "space-around",
+      "paddingHorizontal": 12,
+    }
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="light"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "#FFF",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="scene"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="power"
+    style={
+      Object {
+        "alignItems": "center",
+        "backgroundColor": "#0D84FF",
+        "borderRadius": 24,
+        "height": 48,
+        "justifyContent": "center",
+        "width": 88,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Object {
+          "height": 32,
+          "tintColor": "#FFF",
+          "width": 32,
+        }
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="music"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+  <TouchableOpacity
+    activeOpacity={0.2}
+    key="plan"
+    onPress={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 26,
+        "justifyContent": "center",
+        "width": 26,
+      }
+    }
+  >
+    <Image
+      source={1}
+      style={
+        Array [
+          Object {
+            "height": 26,
+            "width": 26,
+          },
+          Object {
+            "tintColor": "rgba(255,255,255,0.3)",
+          },
+        ]
+      }
+    />
+  </TouchableOpacity>
+</View>
+`;

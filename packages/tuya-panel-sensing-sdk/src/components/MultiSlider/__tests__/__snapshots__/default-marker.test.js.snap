@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default label default render 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  delayPressOut={100}
+  underlayColor="black"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "backgroundColor": "#77B7FF",
+          "borderColor": "#77B7FF",
+          "borderRadius": 24,
+          "borderWidth": 1,
+          "height": 24,
+          "shadowColor": "#77B7FF",
+          "shadowOffset": Object {
+            "height": 3,
+            "width": 0,
+          },
+          "shadowOpacity": 0.2,
+          "shadowRadius": 1,
+          "width": 24,
+        },
+        Object {
+          "backgroundColor": "#77B7FF",
+        },
+        Object {},
+      ]
+    }
+  />
+</TouchableHighlight>
+`;

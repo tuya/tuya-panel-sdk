@@ -1,5 +1,6 @@
+/* istanbul ignore file */
 import React, { FC } from 'react';
-import { FlatList, StyleSheet } from 'react-native';
+import { FlatList, StyleProp, StyleSheet, ViewStyle } from 'react-native';
 import {
   Divider,
   DpSchema,
@@ -14,10 +15,10 @@ import { cx, isIos } from '../../utils';
 import { TabBar } from '../../components';
 import { NewTabProps } from '../../components/TabBar';
 
-interface ITemperatureScaleSwitchingProps {
+interface TemperatureScaleSwitchingProps {
   type: 'checkBox' | 'list' | 'picker';
   title: string;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   dpCode?: string;
   showIcon?: boolean;
   schema?: DpSchema;
@@ -41,7 +42,7 @@ const MAP_TEM = {
   f: '℉',
 };
 
-const TemperatureScaleSwitching: FC<ITemperatureScaleSwitchingProps> = props => {
+const TemperatureScaleSwitching: FC<TemperatureScaleSwitchingProps> = props => {
   const {
     showIcon,
     dpCode,

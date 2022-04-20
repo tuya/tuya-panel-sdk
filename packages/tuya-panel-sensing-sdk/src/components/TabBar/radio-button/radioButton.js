@@ -1,11 +1,4 @@
-/*
- * @Author: your name
- * @Date: 2021-10-21 15:12:50
- * @LastEditTime: 2021-10-29 15:14:33
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: /000001afpy/src/components/tabbar/radio-button/radioButton.js
- */
+/* istanbul ignore file */
 /* eslint-disable react/require-default-props */
 /* eslint-disable prettier/prettier */
 import React from 'react'

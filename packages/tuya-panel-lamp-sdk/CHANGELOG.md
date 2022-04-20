@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.14.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.13.1...@tuya/tuya-panel-lamp-sdk@1.14.0) (2022-04-15)
+
+
+### Features
+
+* **lamp:** Add bottomBar component and colorRecogniztion component ([#198](https://github.com/tuya/tuya-panel-sdk/issues/198)) ([99946b5](https://github.com/tuya/tuya-panel-sdk/commit/99946b58d70ca9341dd4d178a0caa33fe6c84467))
+
+
+
+
+
 ## [1.13.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lamp-sdk@1.13.0...@tuya/tuya-panel-lamp-sdk@1.13.1) (2022-04-14)
 
 

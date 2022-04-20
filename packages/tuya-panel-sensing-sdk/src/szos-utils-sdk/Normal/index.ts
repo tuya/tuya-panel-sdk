@@ -146,7 +146,7 @@ export const createArrayByStep = (length: number, start = 0) =>
  * @returns {Array} []
  */
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-export const range = (start = 0, end: number, step = 1, scale = 2) => {
+export const range = (start = 0, end = 0, step = 1, scale = 2) => {
   let index = -1;
   let length = Math.max(Math.ceil((end - start) / (step || 1)), 0);
 

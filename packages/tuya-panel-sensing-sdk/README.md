@@ -17,8 +17,14 @@ $ yarn add @tuya/tuya-panel-sensing-sdk
 ## Usage
 
 ```js
-import { useState } from '@tuya/tuya-panel-sensing-sdk';
+import { useDpState } from '@tuya/tuya-panel-sensing-sdk';
 ```
+
+### Matters needing attention
+
+- tuya-pannel-kit-4.9.4
+- react-native-0.59.10
+- react-16.8.3
 
 ## Doc
 
