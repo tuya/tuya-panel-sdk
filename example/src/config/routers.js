@@ -16,6 +16,7 @@ import Electrician from '../scenes/Electrician';
 import ApiScene from '../scenes/ApiScene';
 import Outdoor from '../scenes/Outdoor';
 import Szos from '../scenes/Szos';
+import Sensing from '../scenes/Sensing';
 // // import OSCategory from '../scenes/OS';
 // import ThemeSetting from '../scenes/Theme';
 // import FullRoomCategory from '../scenes/FullRoom';
@@ -37,6 +38,7 @@ import ElectricianInfo from '../../../packages/tuya-panel-electrician-sdk/packag
 import LockInfo from '../../../packages/tuya-panel-lock-sdk/package.json';
 import OutdoorInfo from '../../../packages/tuya-panel-outdoor-sdk/package.json';
 import SzosInfo from '../../../packages/tuya-panel-szos-sdk/package.json';
+import SensingInfo from '../../../packages/tuya-panel-sensing-sdk/package.json';
 
 import { traverseRouters } from '../utils';
 
@@ -162,6 +164,12 @@ export const elementsRouters = _.sortBy(
       title: SzosInfo.name,
       subTitle: SzosInfo.version,
       Scene: Szos,
+    },
+    {
+      id: 'Sensing',
+      title: SensingInfo.name,
+      subTitle: SensingInfo.version,
+      Scene: Sensing,
     },
   ],
   'id'
