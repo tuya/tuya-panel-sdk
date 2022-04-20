@@ -26,6 +26,7 @@ module.exports = {
           '@tuya/tuya-panel-animation-sdk': '../packages/tuya-panel-animation-sdk/lib/index.js',
           '@tuya/tuya-panel-electrician-sdk': '../packages/tuya-panel-electrician-sdk/lib/index.js',
           '@tuya/tuya-panel-outdoor-sdk': '../packages/tuya-panel-outdoor-sdk/lib/index.js',
+          '@tuya/tuya-panel-sensing-sdk': '../packages/tuya-panel-sensing-sdk/lib/index.js',
         },
       },
     ],

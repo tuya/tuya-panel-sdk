@@ -16,6 +16,7 @@ module.exports = {
       '@tuya/tuya-panel-ipc-sdk',
       '@tuya/tuya-panel-electrician-sdk',
       '@tuya/tuya-panel-outdoor-sdk',
+      '@tuya/tuya-panel-sensing-sdk',
     ]
   },
   rules: {
