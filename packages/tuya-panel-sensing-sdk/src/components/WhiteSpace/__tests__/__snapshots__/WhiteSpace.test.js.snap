@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DpCacheText basic demo 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 4,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`DpCacheText basic demo1 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 12,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
