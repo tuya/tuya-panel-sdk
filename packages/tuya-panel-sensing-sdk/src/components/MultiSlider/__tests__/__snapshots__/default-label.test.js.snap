@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`default label default render 1`] = `
+<View
+  style={
+    Object {
+      "position": "relative",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "minWidth": 48,
+          "position": "absolute",
+        },
+        Object {
+          "left": -13,
+        },
+        false,
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "color": "#000000",
+            "fontSize": 12,
+            "fontStyle": "normal",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#ffffff",
+          },
+        ]
+      }
+    >
+      0%
+    </Text>
+  </View>
+  <View
+    style={
+      Array [
+        Object {
+          "bottom": 0,
+          "minWidth": 48,
+          "position": "absolute",
+        },
+        Object {
+          "bottom": 0,
+          "left": 77,
+        },
+        Object {},
+      ]
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "color": "#000000",
+            "fontSize": 12,
+            "fontStyle": "normal",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#ffffff",
+          },
+        ]
+      }
+    >
+      100%
+    </Text>
+  </View>
+</View>
+`;

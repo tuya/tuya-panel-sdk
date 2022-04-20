@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MultiSlider basic demo 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <Text
+      numberOfLines={1}
+    >
+      湿度告警
+    </Text>
+    <ThemedSwitchButton
+      onValueChange={[Function]}
+      theme={null}
+      value={false}
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "marginTop": 18,
+        },
+        Object {
+          "maxHeight": 1,
+          "opacity": 0,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`MultiSlider basic demo1 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "#ffffff",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    style={
+      Array [
+        undefined,
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+      ]
+    }
+  >
+    <Text
+      numberOfLines={1}
+    >
+      湿度告警
+    </Text>
+    <ThemedSwitchButton
+      onValueChange={[Function]}
+      theme={null}
+      value={false}
+    />
+  </View>
+  <AnimatedComponent
+    style={
+      Array [
+        Object {
+          "flexDirection": "column",
+          "marginTop": 18,
+        },
+        Object {
+          "maxHeight": 1,
+          "opacity": 0,
+        },
+        undefined,
+      ]
+    }
+  />
+</View>
+`;
