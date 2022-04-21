@@ -2436,6 +2436,20 @@
     "@types/prop-types" "*"
     "@types/react" "*"
 
+"@types/react-native@^0.65":
+  version "0.65.22"
+  resolved "https://registry.npmmirror.com/@types/react-native/-/react-native-0.65.22.tgz#58eaf2f64eb37fcb5fa9725547a8e043c4ecbc07"
+  integrity sha512-3M5ukXrxuoMHlH6pF+HVcudX3SoUUynmUJiTZqPPSY/wDlFVOfbf0P21F7gkXeHbsZ6RbZfoQfQMR6rs7xsPDA==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-native@^0.67.3":
+  version "0.67.4"
+  resolved "https://registry.npmmirror.com/@types/react-native/-/react-native-0.67.4.tgz#97a8d3cff2a7606f247008e93d9fe2a3879bc84e"
+  integrity sha512-L81CB6W1m0s7d+TH/loP318+VKPwwjWQBUTVYQ1+lQTWiE5jHxyihgCmd7JbwLICo708FRSDwJW7pJoiZHy6yg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*":
   version "17.0.0"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.0.tgz#5af3eb7fad2807092f0046a1302b7823e27919b8"
@@ -2480,6 +2494,17 @@
   dependencies:
     "@types/react" "*"
     "@types/react-native" "*"
+    react-native-gesture-handler "1.8.0"
+    react-native-safe-area-context "3.1.7"
+    react-native-svg "5.5.1"
+
+"@types/tuya-panel-kit@^4.7.2":
+  version "4.7.2"
+  resolved "https://registry.npmmirror.com/@types/tuya-panel-kit/-/tuya-panel-kit-4.7.2.tgz#492ff87493953d7759dfc51d6ad3b56c195e7c3c"
+  integrity sha512-e/RzhIZIFzgav6tO/7WXkXgJ34hPnOBD95kP7VaBsE1eLLbiugZbbXPlLi/cc/187N2n99IsUFzm24HldrF1zA==
+  dependencies:
+    "@types/react" "*"
+    "@types/react-native" "^0.65"
     react-native-gesture-handler "1.8.0"
     react-native-safe-area-context "3.1.7"
     react-native-svg "5.5.1"
@@ -3956,6 +3981,11 @@ big-integer@^1.6.44:
   version "1.6.48"
   resolved "https://registry.yarnpkg.com/big-integer/-/big-integer-1.6.48.tgz#8fd88bd1632cba4a1c8c3e3d7159f08bb95b4b9e"
   integrity sha512-j51egjPa7/i+RdiRuJbPdJ2FIUYYPhvYLjzoYbcMMm62ooO6F94fETG4MTs46zPAF9Brs04OajboA/qTGuz78w==
+
+bignumber.js@^9.0.2:
+  version "9.0.2"
+  resolved "https://registry.npmmirror.com/bignumber.js/-/bignumber.js-9.0.2.tgz#71c6c6bed38de64e24a65ebe16cfcf23ae693673"
+  integrity sha512-GAcQvbpsM0pUb0zw1EI0KhQEZ+lRwR5fYaAp3vPOYuP7aDvGy6cVN6XHLauvF8SOga2y0dcLcjt3iQDTSEliyw==
 
 binary-extensions@^1.0.0:
   version "1.13.1"

@@ -1,0 +1,250 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageAnimate default render 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ImageAnimate render width children 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source="https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthAll 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source="https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthChildren 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <AnimatedComponent
+    source="https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate render widthSource 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <AnimatedComponent
+    source="https://www.google.com.hk/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png"
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`ImageAnimate render widthStyle 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+  <Text>
+    我是children
+  </Text>
+</View>
+`;
+
+exports[`ImageAnimate use effect 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <AnimatedComponent
+    source={1}
+    style={
+      Array [
+        Object {
+          "transform": Array [
+            Object {
+              "rotate": "0deg",
+            },
+          ],
+        },
+        Object {
+          "height": 16,
+          "marginRight": 3,
+          "width": 16,
+        },
+      ]
+    }
+  />
+</View>
+`;
