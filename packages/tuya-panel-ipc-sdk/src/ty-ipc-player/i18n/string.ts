@@ -25,6 +25,8 @@ export default {
     tyIpc_video_channel_pause: 'In pause',
     tyIpc_video_stream_retry_play: 'Click the play',
     tyIpc_video_device_busy: 'Device busy',
+    tyIpc_operatorFailed: 'Operation Failed',
+    tyIpc_device_talking: 'The device is talking',
   },
   zh: {
     tyIpc_voice_failure: '声音切换失败',
@@ -52,5 +54,7 @@ export default {
     tyIpc_video_channel_pause: '播放已暂停',
     tyIpc_video_stream_retry_play: '点击恢复',
     tyIpc_video_device_busy: '设备忙线',
+    tyIpc_operatorFailed: '操作失败',
+    tyIpc_device_talking: '设备正在对讲中',
   },
 };

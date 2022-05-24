@@ -177,7 +177,7 @@ const operatMute = (voiceStatus: string) => {
     voiceStatus === 'OFF',
     () => {},
     () => {
-      CameraManager.showTip(Strings.getLang('operatorFailed'));
+      CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
     }
   );
 };
