@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.16.0...@tuya/tuya-panel-ipc-sdk@1.16.1) (2022-05-24)
+
+
+### Bug Fixes
+
+* Correct intercom status ([#208](https://github.com/tuya/tuya-panel-sdk/issues/208)) ([df25157](https://github.com/tuya/tuya-panel-sdk/commit/df25157f68c4b8e6c7aaec3da600a11070b6e520))
+
+
+
+
+
 # [1.16.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.15.0...@tuya/tuya-panel-ipc-sdk@1.16.0) (2022-04-11)
 
 
