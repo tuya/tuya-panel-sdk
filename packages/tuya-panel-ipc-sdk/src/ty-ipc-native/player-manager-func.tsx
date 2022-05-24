@@ -13,6 +13,7 @@ import {
 } from './nativeManager';
 import { decodeClarityDic } from './cameraData';
 import TYRCTOrientationManager from './tyrctOrientationManager';
+import { isTalkBacking } from '../ty-ipc-multiple-player/components/player/playerManagerFunc';
 
 const isIOS = Platform.OS === 'ios';
 
@@ -340,18 +341,25 @@ class PlayerManagerFun {
         TYEvent.emit('talkingChangeMute', { voiceStatus: isTwoTalk === true ? 'ON' : 'OFF' });
       },
       () => {
-        CameraManager.showTip(Strings.getLang('operatorFailed'));
+        CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
       }
     );
-    CameraManager.startTalk(
-      () => {
+    CameraManager.isTalkBacking(result => {
+      if (result) {
         TYEvent.emit('isTalkingListen', { isTalking: true });
-      },
-      err => {
-        TYEvent.emit('isTalkingListen', { isTalking: false, err });
-        CameraManager.showTip(Strings.getLang('operatorFailed'));
+        CameraManager.showTip(Strings.getLang('tyIpc_device_talking'));
+      } else {
+        CameraManager.startTalk(
+          () => {
+            TYEvent.emit('isTalkingListen', { isTalking: true });
+          },
+          err => {
+            TYEvent.emit('isTalkingListen', { isTalking: false, err });
+            CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
+          }
+        );
       }
-    );
+    });
   };
 
   /*
@@ -367,7 +375,7 @@ class PlayerManagerFun {
           TYEvent.emit('talkingChangeMute', { voiceStatus: !isTwoTalk ? 'ON' : 'OFF' });
         },
         () => {
-          CameraManager.showTip(Strings.getLang('operatorFailed'));
+          CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
         }
       );
     CameraManager.stopTalk(
@@ -375,8 +383,10 @@ class PlayerManagerFun {
         TYEvent.emit('isTalkingListen', { isTalking: false });
       },
       () => {
-        TYEvent.emit('isTalkingListen', { isTalking: false });
-        CameraManager.showTip(Strings.getLang('operatorFailed'));
+        CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
+        CameraManager.isTalkBacking(result => {
+          TYEvent.emit('isTalkingListen', { isTalking: Boolean(result) });
+        });
       }
     );
   };
