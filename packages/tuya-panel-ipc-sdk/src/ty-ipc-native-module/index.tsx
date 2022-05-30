@@ -1,41 +1,40 @@
-import CameraManager from '../ty-ipc-native/nativeApi';
-import CameraPlayer from '../ty-ipc-player/nativePlayer';
-import OrientationManager from '../ty-ipc-native/tyrctOrientationManager';
-import DeviceMultiManager from '../ty-ipc-cross-device/mulDevNativeApi';
-import {
-  CameraMessageManager,
-  MediaPlayer as MessageMediaPlayer,
-} from '../ty-ipc-message-player/tyIpcMessagePlayer';
-import TYRCTLifecycleManager from '../ty-ipc-player/components/tyrctLifecycleManager';
-import HomeDeviceManager from '../ty-ipc-multiple-player/native/homeDeviceManager';
-import MultiCameraManager from '../ty-ipc-multiple-player/native/multiCameraManager';
-import MultiDeviceManager from '../ty-ipc-multiple-player/native/multiDeviceManager';
+import { NativeModules, requireNativeComponent, Platform } from 'react-native';
+
+import nativePlayer from './nativePlayer';
+
+const {
+  TYRCTCameraManager,
+  TYRCTCameraMessageManager,
+  TYRCTOrientationManager,
+  TYRCTDeviceMultiManager,
+  TYRCTHomeDevManager,
+  TYRCTMultiCameraManager,
+  TYRCTLifecycleManager,
+} = NativeModules;
+
+const isIOS = Platform.OS === 'ios';
 
 export default {
   /**
    * @description IPC 功能控制模块
    */
-  CameraManager,
+  CameraManager: TYRCTCameraManager,
   /**
    * @description IPC 播放器组件
    */
-  CameraPlayer,
+  CameraPlayer: nativePlayer,
   /**
    * @description 旋转屏幕模块
    */
-  OrientationManager,
+  OrientationManager: TYRCTOrientationManager,
   /**
    * @description 跨设备控制模块
    */
-  DeviceMultiManager,
+  DeviceMultiManager: TYRCTDeviceMultiManager,
   /**
    * @description 消息功能控制模块
    */
-  CameraMessageManager,
-  /**
-   * @description 消息功能控制播放器组件
-   */
-  MessageMediaPlayer,
+  CameraMessageManager: TYRCTCameraMessageManager,
   /**
    * @description 原生控制面板生命周期监听模块
    */
@@ -43,13 +42,19 @@ export default {
   /**
    * @description 跨设备信息模块
    */
-  HomeDeviceManager,
+  HomeDeviceManager: TYRCTHomeDevManager,
   /**
    * @description 多设备预览功能控制
    */
-  MultiCameraManager,
+  MultiCameraManager: TYRCTMultiCameraManager,
   /**
    * @description 跨设备下发
    */
-  MultiDeviceManager,
+  MultiDeviceManager: TYRCTDeviceMultiManager,
+  /**
+   * @description 消息功能控制播放器组件
+   */
+  MessageMediaPlayer: isIOS
+    ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
+    : requireNativeComponent('TYRCTCameraMessageMediaPlayerManager'),
 };

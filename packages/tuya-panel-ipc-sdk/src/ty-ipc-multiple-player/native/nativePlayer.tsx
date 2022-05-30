@@ -1,3 +1,3 @@
-import Player from '../../ty-ipc-player/nativePlayer';
+import native from '../../ty-ipc-native-module';
 
-export default Player;
+export default native.CameraPlayer;

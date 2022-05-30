@@ -356,3 +356,14 @@ export const connecP2PAndStartPreviewWithChannel = (
     }
   });
 };
+
+export const isTalkAndClose = () => {
+  CameraManager.isTalkBacking(msg => {
+    if (msg) {
+      CameraManager.stopTalk(
+        () => {},
+        () => {}
+      );
+    }
+  });
+};

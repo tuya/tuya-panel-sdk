@@ -1,27 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import {
-  View,
-  Image,
-  TouchableOpacity,
-  NativeModules,
-  requireNativeComponent,
-  NativeEventEmitter,
-} from 'react-native';
+import { View, Image, TouchableOpacity, NativeEventEmitter } from 'react-native';
 import { TYText, TYSdk } from 'tuya-panel-kit';
-import publicConfig from '../publicConfig';
 import Res from './res';
-import CameraManager from '../ty-ipc-native/nativeApi';
+import native from '../ty-ipc-native-module';
 import { getImageInfoUrl, getImageKey, checkVersion } from './utils';
 import Strings from './i18n';
 import Styles from './style';
 import { TYIpcMessagePlayerProps } from './interface';
 
-export const CameraMessageManager = NativeModules.TYRCTCameraMessageManager;
+const { CameraManager, CameraMessageManager, MessageMediaPlayer } = native;
 
-const { isIOS } = publicConfig;
-export const MediaPlayer = isIOS
-  ? requireNativeComponent('TYRCTCameraMessageMediaPlayer')
-  : requireNativeComponent('TYRCTCameraMessageMediaPlayerManager');
+export const MediaPlayer = MessageMediaPlayer;
 
 const isNewApp = checkVersion(TYSdk.mobile.mobileInfo.appVersion, '3.28.0');
 const TYIpcMessagePlayer: React.FunctionComponent<TYIpcMessagePlayerProps> & {

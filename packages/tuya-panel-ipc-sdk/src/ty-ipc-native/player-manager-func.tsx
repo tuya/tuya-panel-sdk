@@ -13,7 +13,6 @@ import {
 } from './nativeManager';
 import { decodeClarityDic } from './cameraData';
 import TYRCTOrientationManager from './tyrctOrientationManager';
-import { isTalkBacking } from '../ty-ipc-multiple-player/components/player/playerManagerFunc';
 
 const isIOS = Platform.OS === 'ios';
 
