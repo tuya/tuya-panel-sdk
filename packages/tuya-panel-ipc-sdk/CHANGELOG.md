@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.17.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.16.1...@tuya/tuya-panel-ipc-sdk@1.17.0) (2022-07-04)
+
+
+### Features
+
+* Network change. ([#210](https://github.com/tuya/tuya-panel-sdk/issues/210)) ([bcaaf33](https://github.com/tuya/tuya-panel-sdk/commit/bcaaf33415fc0ff9b695bb33617dc89d1d939636))
+
+
+
+
+
 ## [1.16.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.16.0...@tuya/tuya-panel-ipc-sdk@1.16.1) (2022-05-24)
 
 
