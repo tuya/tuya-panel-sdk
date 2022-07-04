@@ -21,7 +21,7 @@ import {
   exitPlayPreview,
   getConfigCameraInfo,
 } from '../ty-ipc-native/nativeManager';
-import NativePlayer from './nativePlayer';
+import native from '../ty-ipc-native-module';
 import Strings from './i18n';
 import Config from './config';
 import { enterBackTimeOut, cancelEnterBackTimeOut, enterBackTimeOutSpecial } from './utils';
@@ -37,10 +37,14 @@ import { videoLoadText } from '../ty-ipc-native/cameraData';
 import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
 import TYRCTOrientationManager from '../ty-ipc-native/tyrctOrientationManager';
 
+const { CameraPlayer: NativePlayer, CameraManager } = native;
+
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
 if (!isIOS && UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
+
+const CameraManagerNativeEventEmitter = new NativeEventEmitter(CameraManager);
 
 const TYEvent = TYSdk.event;
 const TYNative = TYSdk.native;
@@ -84,6 +88,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   otherRnPage: boolean;
   props: any;
   currentScaleStatus: number;
+  networkStatusDidChangedListener: any;
+  netDisconnect: boolean;
+  netDisconnectTimer: any;
   constructor(props: TYIpcPlayerProps) {
     super(props);
     this.state = {
@@ -114,6 +121,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.wirlessFlag = false;
     this.isFirstJudgeP2p = true;
     this.otherRnPage = false;
+    this.netDisconnect = false;
   }
 
   componentWillMount() {
@@ -333,6 +341,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       }
     );
 
+    this.listenNetworkChange();
+
     // ios使用Rn本身提供的检测进入手机应用后台
     AppState.addEventListener('change', this.handleAppStateChange);
   }
@@ -411,10 +421,77 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     this.fromH5PageListener.remove();
     this.p2pListener.remove();
     this.sessionDidDisconnectedListener.remove();
+    this.networkStatusDidChangedListener && this.networkStatusDidChangedListener.remove();
     // 退出视频预览界面
     const { backIsNeedDisConnectP2P } = this.props;
     TYIpcPlayerManager.backPlayPreview(backIsNeedDisConnectP2P);
   }
+
+  // 监听网络变化
+  listenNetworkChange = () => {
+    try {
+      // 监听网络状态变化
+      // 断开对讲
+      this.networkStatusDidChangedListener = CameraManagerNativeEventEmitter.addListener(
+        'networkStatusDidChanged',
+        res => {
+          if (this.onLivePage && !this.goToBack) {
+            const {
+              isWirless,
+              privateMode,
+              deviceOnline,
+              clarityStatus,
+              voiceStatus,
+              hightScaleMode,
+              channelNum,
+              activeConnect,
+            } = this.props;
+            if (isIOS) {
+              if (res.isAvailable) {
+                this.netDisconnect = false;
+                if (this.netDisconnectTimer) {
+                  clearTimeout(this.netDisconnectTimer);
+                  this.netDisconnectTimer = null;
+                }
+              } else {
+                // 断网情况下，ios多做一步重连操作，直接重连，有可能失败
+                // 一般情况下，网络重连15秒之内会有二次切换
+                // 15秒之后，触发二次重连，本次重连不管成功与否，都展示最终结果
+                this.netDisconnect = true;
+                this.netDisconnectTimer = setTimeout(() => {
+                  this.netDisconnect = false;
+                }, 15 * 1000);
+              }
+
+              TYIpcPlayerManager.startPlay(
+                isWirless,
+                privateMode,
+                deviceOnline,
+                clarityStatus,
+                voiceStatus,
+                hightScaleMode,
+                channelNum,
+                activeConnect
+              );
+            } else if (res.isAvailable) {
+              TYIpcPlayerManager.startPlay(
+                isWirless,
+                privateMode,
+                deviceOnline,
+                clarityStatus,
+                voiceStatus,
+                hightScaleMode,
+                channelNum,
+                activeConnect
+              );
+            }
+          }
+        }
+      );
+    } catch (err) {
+      this.networkStatusDidChangedListener = null;
+    }
+  };
 
   enterBackground = () => {
     this.goToBack = true;
@@ -695,7 +772,18 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     status === 1 &&
       ((retryText = Strings.getLang('tyIpc_private_mode_sleep_close')), (showAnimation = false));
 
-    if (status === 3 || status === 5) {
+    if (status === 3) {
+      if (this.netDisconnect) {
+        // 不显示重连，准备二次重连
+        loadText = Strings.getLang('tyIpc_audio_stream_geting');
+        retryText = '';
+      } else {
+        // 显示重连
+        showRetry = true;
+      }
+    }
+
+    if (status === 5) {
       showRetry = true;
     }
 
