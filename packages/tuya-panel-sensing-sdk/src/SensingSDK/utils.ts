@@ -1,6 +1,7 @@
-/* istanbul ignore file */
 import { NativeModules } from 'react-native';
-const _TYDeviceDevice = NativeModules.TYRCTDeviceModule || NativeModules.TYRCTPanelManager;
+import { EasyLoading } from '../components/Loading';
+
+const _TYDeviceDevice = NativeModules.TYRCTDeviceModule || NativeModules.TYRCTPanelManager || {};
 
 const type = (val: any) => Object.prototype.toString.call(val).slice(8, -1).toLowerCase();
 
@@ -29,13 +30,25 @@ export const parseJson = (str: string) => {
 const sucStyle = 'background: green; color: #fff;';
 const errStyle = 'background: red; color: #fff;';
 
+export interface ILoadingOptions {
+  loading: boolean;
+  text?: string;
+  timeout?: number;
+  key?: any;
+}
+
 export const apiRequest = <T>(
   a: string,
   postData: Record<string, any>,
-  // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-  v: string = '1.0'
-): Promise<T> =>
-  new Promise((resolve, reject) => {
+  v = '1.0',
+  loadingOptions?: ILoadingOptions
+): Promise<T> => {
+  const showLoading = loadingOptions && loadingOptions?.loading;
+
+  showLoading &&
+    EasyLoading.show(loadingOptions?.text, loadingOptions?.timeout, loadingOptions?.key);
+
+  return new Promise((resolve, reject) => {
     _TYDeviceDevice.apiRNRequest(
       {
         a,
@@ -44,6 +57,9 @@ export const apiRequest = <T>(
       },
       (d: any) => {
         const data = parseJson(d);
+        showLoading && EasyLoading.dismis(loadingOptions?.text, loadingOptions?.key);
+        showLoading && EasyLoading.unBind(loadingOptions?.key);
+
         if (__DEV__) {
           console.info(`API Success: %c${a}%o`, sucStyle, data);
         }
@@ -51,6 +67,8 @@ export const apiRequest = <T>(
       },
       (err: any) => {
         const e = parseJson(err);
+        showLoading && EasyLoading.dismis(loadingOptions?.text, loadingOptions?.key);
+        showLoading && EasyLoading.unBind(loadingOptions?.key); // 解绑
         if (__DEV__) {
           console.info(`API Failed: %c${a}%o`, errStyle, e.message || e.errorMsg || e);
         }
@@ -58,6 +76,7 @@ export const apiRequest = <T>(
       }
     );
   });
+};
 
 export const empty = ['0.00', '#', null, undefined, '', '0.0', '0', 0]; // 异常值
 
@@ -97,6 +116,8 @@ export const wrapCharData = (source: Record<string, any>, needWrap = false) => {
     };
     return memo;
   }, {});
+
+  __DEV__ && console.log('继承后的数据', target);
 
   return target;
 };

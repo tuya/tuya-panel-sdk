@@ -7,6 +7,10 @@ import {
   DpCacheText,
   SendEmail,
   Stepper,
+  AddService,
+  BleOfflineView,
+  NewOfflineView,
+  Loading,
 } from './components';
 import { AlarmCloud, AlarmSwitch, TemperatureScaleSwitching } from './TemperatureHumidity';
 import {
@@ -31,6 +35,11 @@ import {
   hideLoading,
   jumpToH5,
   notification,
+  BleSDK,
+  isShowCloudAlarm,
+  reductionDpState,
+  translateDpSchema,
+  scaleNumber,
 } from './utils';
 
 export type {
@@ -78,7 +87,27 @@ const Utils = {
   hideLoading,
   jumpToH5,
   notification,
+  BleSDK,
+  isShowCloudAlarm,
+  reductionDpState,
+  translateDpSchema,
+  scaleNumber,
 };
+
+const hooks = {
+  useBoolean,
+  useToggle,
+  useDpSchema,
+  useDpState,
+  useUpdateInfo,
+  useCurrentByDp,
+};
+
+class SDK extends SensingSDK {
+  static Utils = Utils;
+  static hooks = hooks;
+  static BleSDK = BleSDK;
+}
 
 export {
   SensingSDK,
@@ -98,6 +127,10 @@ export {
   Stepper,
   AlarmSwitch,
   TemperatureScaleSwitching,
+  AddService,
+  BleOfflineView,
+  NewOfflineView,
+  Loading,
 };
 
-export default SensingSDK;
+export default SDK;

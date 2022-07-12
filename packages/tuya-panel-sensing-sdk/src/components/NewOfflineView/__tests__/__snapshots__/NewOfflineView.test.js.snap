@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NewOfflineView default render 1`] = `
+<NewOfflineView
+  animatedStyle={null}
+  isJumpToWifi={false}
+  maskColor="rgba(0, 0, 0, 0.8)"
+  onClose={null}
+  onConfirm={[Function]}
+  onHelpPress={[Function]}
+  onLinkPress={[Function]}
+  show={true}
+  showDeviceImg={true}
+  style={null}
+/>
+`;

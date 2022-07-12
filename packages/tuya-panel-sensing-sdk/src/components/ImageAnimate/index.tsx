@@ -1,5 +1,6 @@
 import React, { useEffect, useState, FC } from 'react';
 import { StyleSheet, View, Animated, Easing, StyleProp, ViewStyle } from 'react-native';
+import Res from '../../res';
 
 interface ImageAnimateProps {
   style?: StyleProp<ViewStyle>;
@@ -32,7 +33,7 @@ const ImageAnimate: FC<ImageAnimateProps> = ({ children, style, source }) => {
     <View style={[styles.container, style]}>
       <Animated.Image
         style={[{ transform: [{ rotate }] }, styles.icon]}
-        source={source || require('../../res/reload.png')}
+        source={source || Res.reload}
       />
       {children}
     </View>
