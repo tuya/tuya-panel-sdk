@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AddService default render 1`] = `
+<FlatList
+  ItemSeparatorComponent={[Function]}
+  contentContainerStyle={
+    Object {
+      "backgroundColor": "#FFF",
+      "borderRadius": 32,
+      "paddingHorizontal": 40,
+    }
+  }
+  data={
+    Array [
+      Object {
+        "conditionType": 1,
+        "dpCode": "temp_current",
+        "dpId": "1",
+        "dpValue": Array [
+          0,
+          10,
+        ],
+        "entityValue": "tempAlarm",
+        "key": "tempAlarm",
+        "name": "tempAlarm",
+        "status": false,
+        "timeout": 0,
+        "timer": Array [],
+      },
+      Object {
+        "conditionType": 1,
+        "dpCode": "humidity_value",
+        "dpId": "2",
+        "dpValue": Array [
+          0,
+          10,
+        ],
+        "entityValue": "humidityAlarm",
+        "key": "humidityAlarm",
+        "name": "humidityAlarm",
+        "status": false,
+        "timeout": 0,
+        "timer": Array [],
+      },
+    ]
+  }
+  disableVirtualization={false}
+  horizontal={false}
+  initialNumToRender={10}
+  keyExtractor={[Function]}
+  maxToRenderPerBatch={10}
+  numColumns={1}
+  onEndReachedThreshold={2}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  updateCellsBatchingPeriod={50}
+  windowSize={21}
+/>
+`;

@@ -17,6 +17,7 @@ import useCurrentByDp from './hooks/useCurrentByDp';
 import useDpScheme from './hooks/useDpSchema';
 import useDpState from './hooks/useDpState';
 import useUpdateInfo from './hooks/useUpdateInfo';
+import AddService from './AddService';
 
 export default class SensingScenes extends Component {
   get data() {
@@ -50,6 +51,8 @@ export default class SensingScenes extends Component {
   static useDpState = useDpState;
 
   static useUpdateInfo = useUpdateInfo;
+
+  static AddService = AddService;
 
   // eslint-disable-next-line react/sort-comp
   componentDidMount() {

@@ -96,7 +96,16 @@ module.exports = {
         'tuya.p.support.dp.cache.get',
         'tuya.m.device.cache.dp.add',
         'tuya.m.linkage.device.execute.log.query',
-        'tuya.m.device.cache.dp.get'
+        'tuya.m.device.cache.dp.get',
+        'tuya.m.linkage.device.execute.log.query',
+        'tuya.m.device.cache.dp.get',
+        'tuya.m.device.dp.history.list',
+        'tuya.m.sense.data.email.export',
+        'tuya.m.sense.data.file.export',
+        'tuya.m.sense.data.file.export.result',
+        'tuya.m.sense.data.query',
+        'tuya.m.linkage.device.criticalAlerts.config.query',
+        'tuya.m.linkage.device.criticalAlerts.config.save'
       ],
     ],
   },

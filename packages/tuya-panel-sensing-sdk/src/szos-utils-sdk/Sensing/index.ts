@@ -10,7 +10,7 @@ import { transLateNumber } from '../Normal';
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const fToc = (f: number, scale = 2) => {
-  if (!f && f !== 0) return f;
+  if (typeof f !== 'number' && f !== 0) return f;
   const value = (f - 32) / 1.8;
   return transLateNumber(value, scale);
 };
@@ -24,7 +24,7 @@ const fToc = (f: number, scale = 2) => {
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const cTof = (c: number, scale = 2) => {
-  if (!c && c !== 0) return c;
+  if (typeof c !== 'number' && c !== 0) return c;
   const value = 1.8 * c + 32;
   return transLateNumber(value, scale);
 };

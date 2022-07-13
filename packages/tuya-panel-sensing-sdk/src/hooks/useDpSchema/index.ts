@@ -8,10 +8,11 @@ const { transLateNumber } = Normal;
 
 const { scaleNumber } = NumberUtils;
 
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const useDpSchema = (schema?: { [props: string]: DpSchema }, prefix?: string) => {
   const wrapPrefix = prefix ? `${prefix}_` : '';
 
-  const wrapSchema = schema || TYSdk.devInfo?.schema;
+  const wrapSchema = schema || TYSdk.devInfo?.schema || {};
 
   const source = Object.keys(wrapSchema || TYSdk.devInfo?.schema);
 

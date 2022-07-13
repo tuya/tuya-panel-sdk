@@ -1,9 +1,7 @@
-/* istanbul ignore file */
-/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { NativeModules } from 'react-native';
 import moment from 'moment';
 import { times } from './loadsh';
-import { apiRequest, parseJson, empty, wrapCharData } from './utils';
+import { apiRequest, parseJson, empty, wrapCharData, ILoadingOptions } from './utils';
 
 export type ChartType = 'sum' | 'avg' | 'minux' | 'max' | 'min' | 'count' | 'min&max';
 
@@ -287,6 +285,39 @@ export enum EntityValue {
   tamperAlarm,
 }
 
+export interface IAlarmScenesLogDataItem {
+  eventTime: string;
+  executeRelateObj: {
+    associativeEntityId: string;
+    associativeEntityValue: string;
+    bindExecutor: string;
+    bizDomain: string;
+    id: number;
+    conditionRuleId: string;
+    enable: boolean;
+    uid: string;
+    gmtModified: number;
+    icon: string;
+    name: string;
+    ownerId: string;
+    property: string;
+    sourceEntityId: string;
+    status: boolean;
+    triggerRuleId: string;
+    [props: string]: any;
+  };
+  executeTime: string;
+  extraInfo: { title: string; content: string; ruleName: string; [props: string]: any };
+  ownerId: string;
+  source: string;
+  triggerDevId: string;
+  triggerDp: string;
+  triggerRuleId: string;
+  uid: string;
+  userRead: boolean;
+  [props: string]: any;
+}
+
 /**
  * @param dpId 绑定的DP ID
  * @param dpValue 告警value
@@ -485,6 +516,47 @@ export interface IDeviceLogResponse {
   hasNext: boolean;
 }
 
+/**
+ * @devId 设备ID
+ * @modelCode dpCode
+ * @startTime 开始时间
+ * @endTime 结束时间
+ * @tempUnitCode 1-摄氏度 2-华氏度
+ * @startRowKey 起始查询rowKey
+ * @querySize 此次查询最大数量
+ * @sortType （1-升序 2-倒序）
+ */
+export interface IQueryParam {
+  devId: string;
+  modelCode: string;
+  startTime: number;
+  endTime: number;
+  tempUnitCode: 1 | 2 | null;
+  startRowKey: string;
+  querySize: number;
+  sortType: 1 | 2;
+}
+
+export interface IQueryData {
+  total: number;
+  dataList: {
+    timeStamp: number;
+    unit: '℉' | '℃';
+    dpId: number;
+    value: string;
+  }[];
+  hasNext: boolean;
+  lastRowKey: string;
+  modelCode: string;
+}
+
+export interface ICriticalAlerts {
+  devId: string;
+  criticalAlertsSwitch: boolean;
+  ruleId: string;
+  name: string;
+}
+
 // eslint-disable-next-line no-shadow
 enum API {
   /**
@@ -580,6 +652,10 @@ enum API {
    */
   lowPowDevice = 'tuya.p.support.dp.cache.get',
   /**
+   * @description 缓存数据
+   */
+  lastDp = 'tuya.m.device.cache.dp.get',
+  /**
    * @description 下发dp
    */
   sendDp = 'tuya.m.device.cache.dp.add',
@@ -592,17 +668,39 @@ enum API {
    */
   productSwitch = 'tuya.m.linkage.dev.warn.set',
   /**
-   * @description 查询联动设备执行日志
+   * @description 查询历史记录数据
    */
-  getAlarmScenesLog = 'tuya.m.linkage.device.execute.log.query',
+  historyList = 'tuya.m.device.dp.history.list',
   /**
-   * @description
+   * @description 邮件导出
    */
-  getLastDp = 'tuya.m.device.cache.dp.get',
+  emailExport = 'tuya.m.sense.data.email.export',
   /**
-   * @description
+   * @description 文件导出
    */
-  addCache = 'tuya.m.device.cache.dp.add',
+  fileExport = 'tuya.m.sense.data.file.export',
+  /**
+   * @description 获取文件导出URL
+   */
+  fileUrl = 'tuya.m.sense.data.file.export.result',
+  /**
+   * @description 获取历史记录数据
+   */
+  historyRecord = 'tuya.m.sense.data.query',
+  /**
+   * @description 查询联动设备执行日志（需要在云端存在绑定关系的)
+   */
+  alarmScenesLog = 'tuya.m.linkage.device.execute.log.query',
+
+  /**
+   * @description 查询严重告警列表
+   */
+  seriousAlarmList = 'tuya.m.linkage.device.criticalAlerts.config.query',
+
+  /**
+   * @description 严重告警开关
+   */
+  saveSeriousAlarm = 'tuya.m.linkage.device.criticalAlerts.config.save',
 }
 
 /** 默认全天开启告警 */
@@ -623,13 +721,38 @@ export interface IDpsInfos<T = Record<string, any>> {
   type: DpType;
   value: string;
 }
+export interface DpHistories {
+  hourTimeStamp: number;
+  noUseDevValidateTime: string;
+  dpValues: string[];
+}
+export interface HistoryListResult {
+  devId: string; // 设备Id
+  taskStatus: number; // 	dp历史记录任务状态：1、同步中 2、完成
+  lastSyncTime: number; // 最后同步时间
+  lastDeviceReportTime: number; // 设备最后上报时间
+  total: number; // 总行数--代表有多少个小时的数据
+  dpHistories: DpHistories[];
+  resultStartTime: number;
+  resultEndTime: number;
+  timeZoneId: string; // 时区
+}
+
+export interface IHistoryReportParams {
+  devId: string;
+  modelCodes: string;
+  startTime: number;
+  endTime: number;
+  granularity: 0 | 1 | 2 | 3 | 4 | 6 | 7;
+  tempUnitCode: 1 | 2;
+  email?: string;
+}
 
 /**
  * @description T -> dpId枚举
  * @description K -> dpCode枚举
  */
 class SensingSDK<I = string, C = string> {
-  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   constructor(BIZ_DOMAIN: string, TYSdk: any, language: string) {
     if (!SensingSDK.INSTANCE) {
       this.BIZ_DOMAIN = BIZ_DOMAIN;
@@ -661,11 +784,16 @@ class SensingSDK<I = string, C = string> {
     | undefined;
 
   /**
+   * @url tuya.m.linkage.associative.entity.query
    * @desc 根据业务域及源实体查询关联的绑定关系
    * @param dpId
    * @returns
    */
-  queryCloudAlarm = (dpId?: I): Promise<IQueryDataItem[]> => {
+  queryCloudAlarm = (
+    dpId: string | null = null,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<IQueryDataItem[]> => {
     const entityID = dpId ? { associativeEntityId: dpId } : null;
     const sourceEntityId = this.devInfo!.devId;
     return apiRequest(
@@ -675,15 +803,27 @@ class SensingSDK<I = string, C = string> {
         bizDomain: this.BIZ_DOMAIN,
         ...entityID,
       },
-      '1.0'
+      version,
+      loading
     );
   };
 
+  /**
+   * @param needApp 是否返回app数据
+   * @param version
+   * @param loading
+   * @returns
+   */
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-  getServerList = async (needApp = false) => {
+  getServerList = async (
+    needApp = false,
+    IsSupportCallVersion = '4.0',
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
     try {
-      const serveLists = await this.getIsSupportCall(); // 服务列表
-      const serveStatus = await this.getCallServiceStatus(); // 开通服务的状态
+      const serveLists = await this.getIsSupportCall(IsSupportCallVersion, loading); // 服务列表
+      const serveStatus = await this.getCallServiceStatus(version, loading); // 开通服务的状态
       const urlQuery = `clientId=${this.devInfo!.appKey}&lang=${this.LANGUAGE}&homeId=${
         this.devInfo!.homeId
       }`;
@@ -726,26 +866,53 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.linkage.bind.enable
    * @description 告警启动&停用
    * @param bindId 绑定告警ID
    * @param enable 开启/禁用
    * @returns {boolean}
    */
-  enableRule = (bindId: string, enable: boolean) => {
-    return apiRequest(API.enableRule, {
-      bindId,
-      enable,
-    });
-  };
-
-  static enableRule = (bindId: string, enable: boolean) => {
-    return apiRequest(API.enableRule, {
-      bindId,
-      enable,
-    });
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  enableRule = (bindId: string, enable: boolean, version = '1.0', loading?: ILoadingOptions) => {
+    return apiRequest(
+      API.enableRule,
+      {
+        bindId,
+        enable,
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url tuya.m.linkage.bind.enable
+   * @param bindId 绑定告警ID
+   * @param enable 开启/关闭
+   * @param version
+   * @param loading
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static enableRule = (
+    bindId: string,
+    enable: boolean,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
+    return apiRequest(
+      API.enableRule,
+      {
+        bindId,
+        enable,
+      },
+      version,
+      loading
+    );
+  };
+
+  /**
+   * @url tuya.m.linkage.associative.entity.bind
    * @description 绑定关联实体模型的业务数据接口
    * @param {Object} params
    * @expr 匹配条件
@@ -763,8 +930,9 @@ class SensingSDK<I = string, C = string> {
       | '>='
       | '<='
       | '==',
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    isBack: boolean = true
+    isBack = true,
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     const {
       dpId,
@@ -854,55 +1022,81 @@ class SensingSDK<I = string, C = string> {
       },
     };
 
-    return apiRequest(API.updateCloudAlarm, postData);
+    return apiRequest(API.updateCloudAlarm, postData, version, loading);
   };
 
   /**
+   * @url tuya.m.linkage.bind.delete
    * @description 取消绑定,单个解绑
    * @param bindId 绑定id
    * @returns
    */
 
-  removeCloudAlarm = (bindId: string) => apiRequest(API.removeCloudAlarm, { bindId });
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  removeCloudAlarm = (bindId: string, version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest(API.removeCloudAlarm, { bindId }, version, loading);
 
-  static removeCloudAlarm = (bindId: string) => apiRequest(API.removeCloudAlarm, { bindId });
+  static removeCloudAlarm = (bindId: string, version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest(API.removeCloudAlarm, { bindId }, version, loading);
 
   /**
-   *
+   * @url tuya.m.linkage.associative.entity.remove
    * @param {string} associativeEntityId 设备ID、DP点、群组ID、规则ID等，保存时无该参数，则不传
    * @param {string} associativeEntityValue 保存时有该参数则必传，否则不传
    * @returns {boolean}
    */
   forceRemoveAlarm = (
     associativeEntityId: string,
-    associativeEntityValue: string
+    associativeEntityValue: string,
+    version = '1.0',
+    loading?: ILoadingOptions
   ): Promise<boolean> => {
-    return apiRequest(API.forceRemoveCloudAlarm, {
-      bizDomain: this.BIZ_DOMAIN, // 业务域标记,必传
-      sourceEntityId: this.devInfo!.devId, // 设备id
-      associativeEntityId: associativeEntityId, // 设备ID、DP点、群组ID、规则ID等，保存时无该参数，则不传
-      associativeEntityValue: associativeEntityValue, // 保存时有该参数则必传，否则不传
-    });
+    return apiRequest(
+      API.forceRemoveCloudAlarm,
+      {
+        bizDomain: this.BIZ_DOMAIN, // 业务域标记,必传
+        sourceEntityId: this.devInfo!.devId, // 设备id
+        associativeEntityId: associativeEntityId, // 设备ID、DP点、群组ID、规则ID等，保存时无该参数，则不传
+        associativeEntityValue: associativeEntityValue, // 保存时有该参数则必传，否则不传
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url tuya.m.app.third.party.info
    * @description 获取支持的服务
    * @returns
    */
-  getIsSupportCall = (): Promise<IResponseSupportCall[]> =>
-    apiRequest(API.supportCall, { homeId: this.devInfo!.homeId }, '4.0');
+  getIsSupportCall = (
+    version = '4.0',
+    loading?: ILoadingOptions
+  ): Promise<IResponseSupportCall[]> =>
+    apiRequest(API.supportCall, { homeId: this.devInfo!.homeId }, version, loading);
 
   /**
+   * @url tuya.m.notification.subscribe.all.info
    * @description 查询电话、短信服务是否开通/是否到期
    * @returns
    */
-  getCallServiceStatus = (): Promise<IResponseCallServiceStatus> =>
-    apiRequest(API.serviceStatus, {});
-
-  static getCallServiceStatus = (): Promise<IResponseCallServiceStatus> =>
-    apiRequest(API.serviceStatus, {});
+  getCallServiceStatus = (
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<IResponseCallServiceStatus> => apiRequest(API.serviceStatus, {}, version, loading);
 
   /**
+   * @url tuya.m.notification.subscribe.all.info
+   * @description 查询电话、短信服务是否开通/是否到期
+   * @returns
+   */
+  static getCallServiceStatus = (
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<IResponseCallServiceStatus> => apiRequest(API.serviceStatus, {}, version, loading);
+
+  /**
+   * @url tuya.m.dp.rang.stat.hour.list
    * @desc 获取一天中每小时的数据
    * @param {array} dateArr - [Date.now()]
    * @param {String} dpCode
@@ -931,17 +1125,16 @@ class SensingSDK<I = string, C = string> {
    * ```
    */
 
-  /* istanbul ignore next */
-
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getHourList = async (
     dateArr: number[],
     dpCode: string,
     type: ApiChartType = 'sum',
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    isSourceData: boolean = false,
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    hideDataStaticLost: boolean = true,
-    devInfo = this.devInfo!
+    isSourceData = false,
+    hideDataStaticLost = true,
+    devInfo = this.devInfo!,
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       const date = moment(dateArr[0])?.format('YYYYMMDD');
@@ -955,7 +1148,7 @@ class SensingSDK<I = string, C = string> {
         keepScalaPoint: true,
       };
       __DEV__ && console.log('日期', date, params);
-      const Ret: Record<string, any> = await apiRequest(API.hourList, params, '1.0');
+      const Ret: Record<string, any> = await apiRequest(API.hourList, params, version, loading);
       if (isSourceData) return Ret;
       const result = wrapCharData(Ret, ['max', 'min'].includes(type) && hideDataStaticLost);
       const len = Object.keys(result).length;
@@ -1003,6 +1196,7 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.dp.rang.stat.day.list
    * @desc 获取一月中每天的数据
    * @param {Array} dateArr - [Date.now(),Date.now()]
    * @param {String} dpCode
@@ -1025,17 +1219,16 @@ class SensingSDK<I = string, C = string> {
    * }
    * ```
    */
-
-  /* istanbul ignore next */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getDayList = async (
     dateArr: number[],
     dpCode: string,
     type: ApiChartType = 'sum',
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    isSourceData: boolean = false,
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    hideDataStaticLost: boolean = true,
-    devInfo = this.devInfo!
+    isSourceData = false,
+    hideDataStaticLost = true,
+    devInfo = this.devInfo!,
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       let startDay;
@@ -1058,7 +1251,7 @@ class SensingSDK<I = string, C = string> {
         auto: '2',
         keepScalaPoint: true,
       };
-      const Ret: any = await apiRequest(API.dayList, params, '1.0');
+      const Ret: any = await apiRequest(API.dayList, params, version, loading);
       if (isSourceData) return Ret.result;
       const result = wrapCharData(Ret.result, ['max', 'min'].includes(type) && hideDataStaticLost);
       let totalNum = 0;
@@ -1096,6 +1289,7 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.dp.rang.stat.month.list
    * @desc 获取一年中每月的数据
    * @param {String} dateArr - [Date.now(),Date.now()]
    * @param {String} dpCode
@@ -1118,16 +1312,16 @@ class SensingSDK<I = string, C = string> {
    * }
    * ```
    */
-  /* istanbul ignore next */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getMonthList = async (
     dateArr: number[],
     dpCode: string,
     type: ApiChartType = 'sum',
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    isSourceData: boolean = false,
-    // eslint-disable-next-line @typescript-eslint/no-inferrable-types
-    hideDataStaticLost: boolean = true,
-    devInfo = this.devInfo!
+    isSourceData = false,
+    hideDataStaticLost = true,
+    devInfo = this.devInfo!,
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       let startMonth;
@@ -1150,7 +1344,7 @@ class SensingSDK<I = string, C = string> {
         auto: '2',
         keepScalaPoint: true,
       };
-      const Ret: any = await apiRequest(API.monthList, params, '1.0');
+      const Ret: any = await apiRequest(API.monthList, params, version, loading);
       if (isSourceData) return Ret.result;
       let totalNum = 0;
       const result = wrapCharData(Ret.result, ['max', 'min'].includes(type) && hideDataStaticLost);
@@ -1183,21 +1377,24 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.dp.rang.stat.hour.export
    * @description 导出历史数据接口（日）
    * @oldApi tuya.m.dp.path.hour.export 老接口，废弃
    * @newApi tuya.m.dp.rang.stat.hour.export 新接口
    * @param {Array} date [Date.now()]
    * @param {array} dpExcelQuery [{dpId:1,name:'温度'}]
-   * @param {string} email 'email.com'
+   * @param {string} email 邮箱账号
    * @param {string} type 'sum' | 'avg
    * @returns
    */
-  /* istanbul ignore next */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   exportHourList = async (
     date: number[],
     dpExcelQuery: IDpExcelQuery[],
     email = '',
-    type: ApiChartType = 'avg'
+    type: ApiChartType = 'avg',
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       const params = {
@@ -1213,29 +1410,32 @@ class SensingSDK<I = string, C = string> {
         keepScalaPoint: true, // 小数点位数是否和scale保持一致~
       };
       __DEV__ && console.log('params', params);
-      return apiRequest(API.exportHourList, params, '1.0');
+      return apiRequest(API.exportHourList, params, version, loading);
     } catch (error) {
       __DEV__ && console.log('error', error);
       throw error;
     }
   };
   /**
+   * @url tuya.m.dp.rang.stat.day.export
    * @description 导出历史数据接口（月）
    * @oldApi tuya.m.dp.path.hour.export 老接口，废弃
    * @newApi tuya.m.dp.rang.stat.hour.export 新接口
    * @param {Array} dateArr [Date.now(),Date.now()]
    * @param {array} dpExcelQuery [{dpId:1,name:'温度'}]
-   * @param {string} email 'email.com'
+   * @param {string} email  邮箱账号
    * @param {string} type 'sum' | 'avg
    * @returns
    */
-  /* istanbul ignore next */
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   exportDayList = async (
     dateArr: number[],
     dpExcelQuery: IDpExcelQuery[],
     email = '',
-    type: ApiChartType = 'avg'
+    type: ApiChartType = 'avg',
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       const params = {
@@ -1251,7 +1451,7 @@ class SensingSDK<I = string, C = string> {
         keepScalaPoint: true, // 小数点位数是否和scale保持一致~
       };
       __DEV__ && console.log('params', params);
-      return apiRequest(API.exportDayList, params, '1.0');
+      return apiRequest(API.exportDayList, params, version, loading);
     } catch (error) {
       __DEV__ && console.log('error', error);
       throw error;
@@ -1259,19 +1459,22 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.dp.rang.stat.month.export
    * @description 导出历史数据接口（年）
    * @param {string} dateArr [Date.now(),Date.now()]
    * @param {array} dpExcelQuery [{dpId:1,name:'温度'}]
-   * @param {string} email 'email.com'
+   * @param {string} email 邮箱账号
    * @param {string} type 'sum' | 'avg
    * @returns
    */
-  /* istanbul ignore next */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   exportMonthList = async (
     dateArr: number[],
     dpExcelQuery: IDpExcelQuery[],
     email = '',
-    type: ApiChartType = 'avg'
+    type: ApiChartType = 'avg',
+    version = '1.0',
+    loading?: ILoadingOptions
   ) => {
     try {
       const params = {
@@ -1286,22 +1489,29 @@ class SensingSDK<I = string, C = string> {
         title: this.TYSdk!.devInfo.name,
         keepScalaPoint: true, // 小数点位数是否和scale保持一致~
       };
-      return apiRequest(API.exportMonthList, params, '1.0');
+      return apiRequest(API.exportMonthList, params, version, loading);
     } catch (error) {
       __DEV__ && console.log('error', error);
       throw error;
     }
   };
   /**
+   * @url tuya.m.dp.total.avg.month
    * @description 获取年平均
    * @param timeArr
    * @param code
    * @param type
    * @returns
    */
-  /* istanbul ignore next */
 
-  getYearAverage = async (timeArr: [number, number], code: C, type: ChartType) => {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  getYearAverage = async (
+    timeArr: [number, number],
+    code: C,
+    type: ChartType,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
     try {
       const startMonth = moment(timeArr[0]).format('YYYYMM');
       const endMonth = moment(timeArr[1]).format('YYYYMM');
@@ -1316,7 +1526,8 @@ class SensingSDK<I = string, C = string> {
           auto: '2',
           keepScalaPoint: true,
         },
-        '1.0'
+        version,
+        loading
       );
       return Ret || 0;
     } catch (error) {
@@ -1326,32 +1537,50 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.app.panel.url.get
    * @description 获取图片域名前缀
    * @returns
    */
 
-  getOssUrl = () => apiRequest<string>(API.ossUrl, {}, '1.0');
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  getOssUrl = (version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest<string>(API.ossUrl, {}, version, loading);
 
-  static getOssUrl = () => apiRequest<string>(API.ossUrl, {}, '1.0');
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static getOssUrl = (version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest<string>(API.ossUrl, {}, version, loading);
 
   /**
+   * @url tuya.m.user.info.get
    * @description 获取用户信息，包含温标信息
    * @returns
    */
-  getUserInfo = () => apiRequest<IUserInfo>(API.userInfo, {});
-
-  // 静态方法
-  static getUserInfo = () => apiRequest<IUserInfo>(API.userInfo, {});
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  getUserInfo = (version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest<IUserInfo>(API.userInfo, {}, version, loading);
 
   /**
-   *
+   * @url tuya.m.user.info.get
+   * @description 获取用户信息，包含温标信息
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static getUserInfo = (version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest<IUserInfo>(API.userInfo, {}, version, loading);
+
+  /**
+   * @url tuya.m.dp.statistics.config.all.get
    * @returns 获取开通统计Dp
    */
-
-  /* istanbul ignore next */
-  getStatisticsConfig = async () => {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  getStatisticsConfig = async (version = '1.0', loading?: ILoadingOptions) => {
     try {
-      const list = await apiRequest(API.statisticsConfig, { pid: this.devInfo!.productId });
+      const list = await apiRequest(
+        API.statisticsConfig,
+        { pid: this.devInfo!.productId },
+        version,
+        loading
+      );
       const obj: IStatisticsConfig = {};
       if (Array.isArray(list)) {
         list.forEach(d => {
@@ -1373,70 +1602,138 @@ class SensingSDK<I = string, C = string> {
   };
 
   /**
+   * @url tuya.m.linkage.device.execute.log.query
    * @description 查询联动设备执行日志（需要在云端存在绑定关系的)
    * @param dps dp点，字符串拼接
    * @param offset
    * @param limit
    * @returns
    */
-  getAlarmScenesLog = <T = any>(dps: string, offset = 0, limit = 10) => {
-    return apiRequest<{ totalCount: number; datas: T }>(API.getAlarmScenesLog, {
-      triggerDevId: this.TYSdk?.devInfo.devId,
-      source: 'associativeEntityBind',
-      triggerDps: dps,
-      offset,
-      limit,
-    });
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  getAlarmScenesLog = <T = IAlarmScenesLogDataItem>(
+    dps: string,
+    offset = 0,
+    limit = 10,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
+    return apiRequest<{ totalCount: number; datas: T[] }>(
+      API.alarmScenesLog,
+      {
+        triggerDevId: this.TYSdk?.devInfo.devId,
+        source: 'associativeEntityBind',
+        triggerDps: dps,
+        offset,
+        limit,
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url tuya.m.operate.log
    * @description 获取设备日志信息
    * @param dpIds dpId 字符串
    * @param offset 偏移量
    * @param limit 显示数量
    * @returns
    */
-  getDeviceLog = (dpIds: string, offset: number, limit: number): Promise<IDeviceLogResponse> => {
-    return apiRequest(API.deviceLog, {
-      dpIds,
-      offset,
-      limit,
-      devId: this.TYSdk!.devInfo.devId,
-      timeLength: '13',
-      breakFrequencyLimit: true,
-    });
+  getDeviceLog = (
+    dpIds: string,
+    offset: number,
+    limit: number,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<IDeviceLogResponse> => {
+    return apiRequest(
+      API.deviceLog,
+      {
+        dpIds,
+        offset,
+        limit,
+        devId: this.TYSdk!.devInfo.devId,
+        timeLength: '13',
+        breakFrequencyLimit: true,
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url tuya.m.linkage.rule.enable/tuya.m.linkage.rule.disable
    * @description 开启关闭自动化场景
    * @param enable 开启/关闭
    * @param ruleId 规则Id
    * @returns Promise
    */
 
-  enableScene = (enable: boolean, ruleId: string | number | undefined) => {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  enableScene = (
+    enable: boolean,
+    ruleId: string | number | undefined,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
     const apiUrl = enable ? API.enableScene : API.disableScene;
-    return apiRequest(apiUrl, {
-      ruleId,
-    });
-  };
-
-  static enableScene = (enable: boolean, ruleId: string | number | undefined) => {
-    const apiUrl = enable ? API.enableScene : API.disableScene;
-    return apiRequest(apiUrl, {
-      ruleId,
-    });
+    return apiRequest(
+      apiUrl,
+      {
+        ruleId,
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url tuya.m.linkage.rule.enable/tuya.m.linkage.rule.disable
+   * @description 开启关闭自动化场景
+   * @param enable 开启/关闭
+   * @param ruleId 规则Id
+   * @returns Promise
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static enableScene = (
+    enable: boolean,
+    ruleId: string | number | undefined,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
+    const apiUrl = enable ? API.enableScene : API.disableScene;
+    return apiRequest(
+      apiUrl,
+      {
+        ruleId,
+      },
+      version,
+      loading
+    );
+  };
+
+  /**
+   * @url tuya.m.linkage.rule.trigger
    * @description  触发场景
    * @param ruleId 规则ID
    * @returns
    */
-  startScene = (ruleId: string | number | undefined) => apiRequest(API.startScene, { ruleId });
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  startScene = (ruleId: string | number | undefined, version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest(API.startScene, { ruleId }, version, loading);
 
-  static startScene = (ruleId: string | number | undefined) =>
-    apiRequest(API.startScene, { ruleId });
+  /**
+   * @url tuya.m.linkage.rule.trigger
+   * @description  触发场景
+   * @param ruleId 规则ID
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  static startScene = (
+    ruleId: string | number | undefined,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => apiRequest(API.startScene, { ruleId }, version, loading);
 
   /**
    *
@@ -1445,51 +1742,73 @@ class SensingSDK<I = string, C = string> {
    * @returns
    */
 
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   getSceneAndAuto = (resolve: (data: ISceneAndAuto) => void, reject: (err: Error) => void) =>
     TYPublicNative.getSceneAndAuto(this.devInfo!.devId, resolve, reject);
 
   /**
+   * @url tuya.app.buyer.high.power.get
    * @param {String} 高级能力Code 默认dp缓存Code-tyabi8xqnc
    * @returns 高级能力获取
    */
 
-  isHighAbility = (code: string): Promise<IHighAbilityResp> =>
-    apiRequest(API.highAbility, { input: { deviceId: this.devInfo!.devId, code } });
+  isHighAbility = (
+    code = 'tyabi8xqnc',
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<IHighAbilityResp> =>
+    apiRequest(
+      API.highAbility,
+      { input: { deviceId: this.devInfo!.devId, code } },
+      version,
+      loading
+    );
 
   /**
+   * @url tuya.p.support.dp.cache.get
    * @description 是否低功耗设备
    * @returns
    */
 
-  isLowPowDevice = (): Promise<boolean> =>
-    apiRequest(API.lowPowDevice, { productId: this.devInfo!.productId });
+  isLowPowDevice = (version = '1.0', loading?: ILoadingOptions): Promise<boolean> =>
+    apiRequest(API.lowPowDevice, { productId: this.devInfo!.productId }, version, loading);
 
   /**
+   * @url tuya.m.device.cache.dp.get
    * @description 获取缓存数据
    * @returns
    */
 
-  getLastDp = (): Promise<any[]> => apiRequest(API.getLastDp, { devId: this.devInfo!.devId });
+  getLastDp = (version = '1.0', loading?: ILoadingOptions): Promise<any[]> =>
+    apiRequest(API.lastDp, { devId: this.devInfo!.devId }, version, loading);
 
   /**
+   * @url tuya.m.device.cache.dp.add
    * @description 添加缓存
    * @param dpInfo dp下发信息
    * @returns
    */
-  addCache = (dpInfo: Record<string, any>) => {
-    return apiRequest<boolean>(API.addCache, {
-      devId: this.TYSdk!.devInfo.devId,
-      dps: JSON.stringify(dpInfo),
-      time: Date.now(),
-    });
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  addCache = (dpInfo: Record<string, any>, version = '1.0', loading?: ILoadingOptions) => {
+    return apiRequest<boolean>(
+      API.sendDp,
+      {
+        devId: this.TYSdk!.devInfo.devId,
+        dps: JSON.stringify(dpInfo),
+        time: Date.now(),
+      },
+      version,
+      loading
+    );
   };
 
   /**
+   * @url s.m.dev.dp.get/s.m.dev.group.dp.get
    * @description 获取设备最近一次在线时间需要
    * @returns {IDpsInfos<T>[]} T 为DPState
    */
-  // eslint-disable-next-line @typescript-eslint/ban-types
-  getDpsInfos = <T = {}>() => {
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types, @typescript-eslint/no-unused-vars
+  getDpsInfos = <T = Record<string, any>>(_version = '1.0', loading?: ILoadingOptions) => {
     const key = this.TYSdk?.devInfo.groupId ? 'group' : 'device';
     const nameMap = {
       device: 's.m.dev.dp.get',
@@ -1506,26 +1825,151 @@ class SensingSDK<I = string, C = string> {
       device: '2.0',
       group: '1.0',
     };
-    return apiRequest<IDpsInfos<T>[]>(nameMap[key], postDataMap[key], versionMap[key]);
+    return apiRequest<IDpsInfos<T>[]>(nameMap[key], postDataMap[key], versionMap[key], loading);
   };
 
   /**
-   *
+   * @url tuya.m.linkage.rule.product.query
    * @returns iot平台上的产品配置
    */
-  productSetting = () => apiRequest<IProduceSetting[]>(API.productSetting, {});
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  productSetting = (version = '1.0', loading?: ILoadingOptions) =>
+    apiRequest<IProduceSetting[]>(API.productSetting, {}, version, loading);
+
   /**
-   *
+   * @url tuya.m.linkage.dev.warn.set
    * @param ruleIds 规则ID
    * @param disabled 开启/关闭
    * @returns
    */
-  productSwitch = (ruleIds: string, disabled: boolean) =>
-    apiRequest<boolean>(API.productSwitch, {
-      devId: this?.devInfo?.devId,
-      disabled,
-      ruleIds,
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  productSwitch = (
+    ruleIds: string,
+    disabled: boolean,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) => {
+    apiRequest<boolean>(
+      API.productSwitch,
+      {
+        devId: this?.devInfo?.devId,
+        disabled,
+        ruleIds,
+      },
+      version,
+      loading
+    );
+  };
+
+  /**
+   * @url tuya.m.device.dp.history.list
+   * @param dpId dpId
+   * @param timeType 时间类型
+   * @param startTime 开始时间
+   * @param endTime 结束时间
+   * @param version 版本号
+   * @param loading 加载配置项
+   * @returns
+   */
+  historyList = (
+    dpId: string,
+    timeType: 1 | 2 | 3 | 4,
+    startTime?: number,
+    endTime?: number,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ): Promise<HistoryListResult> => {
+    return apiRequest(
+      API.historyList,
+      {
+        devId: this.TYSdk?.devInfo.devId,
+        dpId,
+        timeType,
+        startTime: startTime || 0,
+        endTime: endTime || 0,
+      },
+      version,
+      loading
+    );
+  };
+
+  /**
+   * @url tuya.m.sense.data.email.export
+   * @description  导出到邮箱
+   * @param params
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  emailExport = (params: IHistoryReportParams) => apiRequest<boolean>(API.emailExport, params);
+  /**
+   * @url tuya.m.sense.data.file.export
+   * @description 文件导出
+   * @param params IHistoryReportParams
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  fileExport = (params: IHistoryReportParams) => apiRequest<boolean>(API.fileExport, params);
+
+  /**
+   * @url tuya.m.sense.data.file.export.result
+   * @description 获取文件下载路径
+   * @param devInfo
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  fileUrl = (devInfo?: DevInfo) =>
+    apiRequest<{ taskState: number; url: string; fileName: string }>(API.fileUrl, {
+      devId: devInfo ? devInfo.devId : this?.TYSdk?.devInfo.devId,
     });
+
+  /**
+   * @url tuya.m.sense.data.query
+   * @description 设备历史记录
+   * @param params IQueryParam
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  historyRecord = (params: IQueryParam) => apiRequest<IQueryData>(API.historyRecord, params);
+
+  /**
+   * @url tuya.m.linkage.device.criticalAlerts.config.query
+   * @description 获取严重告警列表
+   * @param version 版本号
+   * @param loading 状态
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  seriousAlarmList = (version = '1.0', loading?: ILoadingOptions) => {
+    return apiRequest<ICriticalAlerts[]>(
+      API.seriousAlarmList,
+      { devId: this?.TYSdk?.devInfo.devId },
+      version,
+      loading
+    );
+  };
+
+  /**
+   * @url tuya.m.linkage.device.criticalAlerts.config.save
+   * @description 严重告警开关
+   * @param ruleId 规则ID
+   * @param criticalAlertsSwitch 是否开启
+   * @param version 版本号
+   * @param loading 状态
+   * @returns
+   */
+  // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+  saveSeriousAlarm = (
+    ruleId: string,
+    criticalAlertsSwitch: boolean,
+    version = '1.0',
+    loading?: ILoadingOptions
+  ) =>
+    apiRequest<boolean>(
+      API.saveSeriousAlarm,
+      { devId: this?.TYSdk?.devInfo?.devId, ruleId, criticalAlertsSwitch },
+      version,
+      loading
+    );
 }
 
 export default SensingSDK;
