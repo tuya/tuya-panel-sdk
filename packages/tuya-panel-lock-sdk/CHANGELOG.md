@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.9.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.9.3...@tuya/tuya-panel-lock-sdk@1.9.4) (2022-09-26)
+
+**Note:** Version bump only for package @tuya/tuya-panel-lock-sdk
+
+
+
+
+
 ## [1.9.3](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-lock-sdk@1.9.2...@tuya/tuya-panel-lock-sdk@1.9.3) (2022-07-04)
 
 **Note:** Version bump only for package @tuya/tuya-panel-lock-sdk

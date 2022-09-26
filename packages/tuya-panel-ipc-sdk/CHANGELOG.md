@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.0...@tuya/tuya-panel-ipc-sdk@1.17.1) (2022-09-26)
+
+
+### Bug Fixes
+
+* 修改容器品类 ([#213](https://github.com/tuya/tuya-panel-sdk/issues/213)) ([12c0e4a](https://github.com/tuya/tuya-panel-sdk/commit/12c0e4af22118c3f88d5c70ac55f2bf009559b86))
+
+
+
+
+
 # [1.17.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.16.1...@tuya/tuya-panel-ipc-sdk@1.17.0) (2022-07-04)
 
 
