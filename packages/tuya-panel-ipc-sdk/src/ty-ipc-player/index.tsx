@@ -24,7 +24,12 @@ import {
 import native from '../ty-ipc-native-module';
 import Strings from './i18n';
 import Config from './config';
-import { enterBackTimeOut, cancelEnterBackTimeOut, enterBackTimeOutSpecial } from './utils';
+import {
+  enterBackTimeOut,
+  cancelEnterBackTimeOut,
+  enterBackTimeOutSpecial,
+  judgeIpcContainer,
+} from './utils';
 import styles from './styles';
 import PlayerLoad from './components/playerLoad';
 import CutScreen from './components/cutScreen';
@@ -152,7 +157,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     );
 
     // 非摄像头品类的产品，旋转屏幕使用方法需初始化
-    TYSdk.devInfo.category !== 'sp' &&
+    !judgeIpcContainer() &&
       TYRCTOrientationManager &&
       TYRCTOrientationManager.supportedOrientations &&
       TYRCTOrientationManager.supportedOrientations(['portrait', 'landscape-right']);
@@ -160,7 +165,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     // 进入前台、后台
     // ipc品类与非ipc品类使用不同的方式监听
     // 摄像头品类
-    if (TYSdk.devInfo.category !== 'sp' && TYRCTLifecycleManager) {
+    if (!judgeIpcContainer() && TYRCTLifecycleManager) {
       const TYRCTLifecycleManagerEvent = new NativeEventEmitter(TYRCTLifecycleManager);
 
       // 因监听方法每次会推送两次事件，所以开启防抖来处理

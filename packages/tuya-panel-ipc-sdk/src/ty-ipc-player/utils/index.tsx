@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+import { TYSdk } from 'tuya-panel-kit';
 import Global from '../config/global';
 import Config from '../config';
 import TYIpcPlayerManager from '../../ty-ipc-native';
@@ -24,4 +25,15 @@ export const enterBackTimeOutSpecial = () => {
 
 export const cancelEnterBackTimeOut = () => {
   clearTimeout(Global.enterBackTimeOut);
+};
+
+export const judgeIpcContainer = () => {
+  const categoryStore = ['sp', 'xcjly', 'znmj'];
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  const { bizAttribute, category } = TYSdk?.devInfo;
+  // eslint-disable-next-line no-bitwise
+  const hasIpcAdvanceCap = Boolean(bizAttribute && ((bizAttribute >> 1) & 1) === 1);
+  const useIpcCap = categoryStore.includes(category) || hasIpcAdvanceCap;
+  return useIpcCap;
 };
