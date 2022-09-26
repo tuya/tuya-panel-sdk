@@ -29,6 +29,8 @@ export const cancelEnterBackTimeOut = () => {
 
 export const judgeIpcContainer = () => {
   const categoryStore = ['sp', 'xcjly', 'znmj'];
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   const { bizAttribute, category } = TYSdk?.devInfo;
   // eslint-disable-next-line no-bitwise
   const hasIpcAdvanceCap = Boolean(bizAttribute && ((bizAttribute >> 1) & 1) === 1);
