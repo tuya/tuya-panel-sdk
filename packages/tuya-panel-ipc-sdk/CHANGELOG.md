@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.17.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.1...@tuya/tuya-panel-ipc-sdk@1.17.2) (2022-09-28)
+
+
+### Bug Fixes
+
+* 修复ios旋转问题 ([#214](https://github.com/tuya/tuya-panel-sdk/issues/214)) ([3eaae75](https://github.com/tuya/tuya-panel-sdk/commit/3eaae7585538fa34038b9680d78aec8a125ebc2c))
+
+
+
+
+
 ## [1.17.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.0...@tuya/tuya-panel-ipc-sdk@1.17.1) (2022-09-26)
 
 
