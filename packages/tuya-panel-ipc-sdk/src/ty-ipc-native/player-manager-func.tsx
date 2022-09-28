@@ -11,6 +11,7 @@ import {
   connecP2PAndStartPreviewWithChannel,
   exitPlayPreviewByAudioOrOther,
 } from './nativeManager';
+import { judgeIpcContainer } from '../ty-ipc-player/utils';
 import { decodeClarityDic } from './cameraData';
 import TYRCTOrientationManager from './tyrctOrientationManager';
 import { isTalkBacking } from '../ty-ipc-multiple-player/components/player/playerManagerFunc';
@@ -486,7 +487,7 @@ class PlayerManagerFun {
      横竖屏切换
   */
   setScreenOrientation = (dir: 0 | 1) => {
-    if (TYSdk.devInfo.category === 'sp') {
+    if (judgeIpcContainer()) {
       CameraManager.setScreenOrientation(dir);
     } else {
       TYRCTOrientationManager &&
