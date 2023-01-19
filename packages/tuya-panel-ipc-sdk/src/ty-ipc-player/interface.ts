@@ -187,6 +187,7 @@ export interface TYIpcPlayerProps {
   enterForegroundEvent: () => any;
   activeConnect: 'none' | 'connect' | 'startPreview';
   notNeedJudgeConnectForeground: boolean;
+  cancelSessionEmit: boolean;
 }
 
 export const _defaultProps = {
@@ -239,4 +240,5 @@ export const _defaultProps = {
   enterForegroundEvent: (): void => {},
   activeConnect: 'connect',
   notNeedJudgeConnectForeground: false,
+  cancelSessionEmit: false,
 };

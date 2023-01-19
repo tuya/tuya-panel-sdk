@@ -272,7 +272,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       'sessionDidDisconnected',
       e => {
         // 对于隐私模式为false或undefined时对session处理, 隐私模式为true时不做处理
-        const { privateMode: privateModeState } = this.props;
+        const { privateMode: privateModeState, cancelSessionEmit } = this.props;
         if (!privateModeState) {
           this.setState({
             showLoading: true,
@@ -339,7 +339,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           );
           return false;
         }
-        TYEvent.emit('streamStatus', { status: 5, errCode: 'session_disconnect' });
+        if (!cancelSessionEmit) {
+          TYEvent.emit('streamStatus', { status: 5, errCode: 'session_disconnect' });
+        }
         this.props.onListenSessionDisConnect && this.props.onListenSessionDisConnect();
         // session断开和进入后台调用同样的逻辑
         exitPlayPreview();
