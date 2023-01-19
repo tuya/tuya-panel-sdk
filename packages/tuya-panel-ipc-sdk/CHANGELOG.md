@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.18.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.2...@tuya/tuya-panel-ipc-sdk@1.18.0) (2023-01-19)
+
+
+### Features
+
+* add cancelSessionEmit param ([#215](https://github.com/tuya/tuya-panel-sdk/issues/215)) ([236a813](https://github.com/tuya/tuya-panel-sdk/commit/236a8130125655c649c5110deb831cc5b34ce655))
+
+
+
+
+
 ## [1.17.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.1...@tuya/tuya-panel-ipc-sdk@1.17.2) (2022-09-28)
 
 
