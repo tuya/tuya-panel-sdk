@@ -194,7 +194,7 @@ export const saveRhythmInfo = (propertyList: any[]): Promise<boolean> => {
  * 秒 分 小时 日期 月份 星期 年
  * 秒 分 小时 日期 月份 星期
  */
-export const updateRhythmInfo = (cronExp?: string): Promise<boolean> => {
+export const triggerRhythmStatus = (cronExp?: string): Promise<boolean> => {
   const { groupId, devId } = TYSdk.devInfo;
 
   return new Promise((resolve, reject) => {
@@ -329,4 +329,15 @@ export const getCloudCustomRhythm = async (): Promise<CustomRhythm[]> => {
   const response: any = await fuzzyQueryRhythm('leona_rhythm_%', 0, 10);
   const infoList = response?.filter(n => n.code !== 'leona_rhythm_info');
   return infoList;
+};
+
+export default {
+  getCurrentLocation,
+  getRhythmTimeByLocation,
+  getCityInfoByLocation,
+  getCloudCustomRhythm,
+  getCloudCityInfo,
+  saveRhythmInfo,
+  triggerRhythmStatus,
+  isSupportRhythm,
 };
