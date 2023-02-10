@@ -2,8 +2,7 @@
 /* eslint-disable prefer-destructuring */
 /* eslint-disable literal-check/literal-check */
 // 生物节律接口
-import { TYSdk } from 'tuya-panel-kit';
-
+import { DevInfo, TYSdk } from 'tuya-panel-kit';
 import { parseJSON } from './utils';
 
 const cloneDeep = (data: any) => {
@@ -77,7 +76,6 @@ export const getCityInfoByLocation = (lon: number, lat: number): Promise<TCityIn
 
 /**
  * @description: 根据经纬度获取生物节律时间
- * @param {string} devId 设备id
  * @param {number} lon 经度
  * @param {number} lat 纬度
  */
@@ -155,7 +153,7 @@ const codeList = [
  * @returns boolean
  */
 export const saveRhythmInfo = (propertyList: any[]): Promise<boolean> => {
-  const { groupId, devId } = TYSdk.devInfo;
+  const { groupId, devId } = TYSdk.devInfo as DevInfo & { groupId: string };
   return new Promise((resolve, reject) => {
     const inValidList = propertyList.filter(p => {
       return !codeList.find(c => c === p.code);
@@ -189,13 +187,13 @@ export const saveRhythmInfo = (propertyList: any[]): Promise<boolean> => {
 
 /**
  * @description: 触发定时生物节律开启关闭
- * @param {string} cronExp cron表达式，详情可搜索
+ * @param {string} cronExp cron表达式，详情可搜索，如果不传入cron表达式，默认频率为一个月下发一次
  * cron 有如下两种语法格式：
  * 秒 分 小时 日期 月份 星期 年
  * 秒 分 小时 日期 月份 星期
  */
 export const triggerRhythmStatus = (cronExp?: string): Promise<boolean> => {
-  const { groupId, devId } = TYSdk.devInfo;
+  const { groupId, devId } = TYSdk.devInfo as DevInfo & { groupId: string };
 
   return new Promise((resolve, reject) => {
     const setTimeApi = 'tuya.m.light.rhythm.set.time.trigger';
@@ -237,7 +235,7 @@ export const triggerRhythmStatus = (cronExp?: string): Promise<boolean> => {
  * @param {number} limit 条数
  */
 const fuzzyQueryRhythm = (preCode: string, offset: number, limit: number) => {
-  const { devId, groupId } = TYSdk.devInfo;
+  const { devId, groupId } = TYSdk.devInfo as DevInfo & { groupId: string };
   return new Promise((resolve, reject) => {
     TYSdk.native.apiRNRequest(
       {
@@ -276,7 +274,7 @@ type CityLocationInfo = {
   longitude: string;
 };
 /**
- * 获取云端存储的城市信息
+ * 获取云端存储的城市信息 数据通过saveRhythmInfo保存
  */
 export const getCloudCityInfo = async (): Promise<CityLocationInfo | undefined> => {
   const response: any = await fuzzyQueryRhythm('leona_rhythm_%', 0, 10);
@@ -285,25 +283,13 @@ export const getCloudCityInfo = async (): Promise<CityLocationInfo | undefined> 
   return infoObj.value;
 };
 
-// eslint-disable-next-line no-shadow
-enum EMode {
-  normal, // 0-默认模式
-  nature, // 1-自然模式
-  custom, // 2-自定义模式
-}
-// eslint-disable-next-line no-shadow
-enum EPower {
-  close,
-  open,
-}
-
 /**
  * 获取云端存储的日出日落信息
  */
 type CustomRhythm = {
   value: {
     weeks: number;
-    power: EPower;
+    power: 0 | 1; // 0 => 关； 1 => 开
     number: number;
     rhythm: {
       minute: number;
@@ -315,7 +301,7 @@ type CustomRhythm = {
       lightness: number;
       hue: number;
     };
-    mode: EMode;
+    mode: 0 | 1 | 2; // 0-默认模式 1-自然模式 2-自定义模式
     version: number;
   };
   code:
@@ -325,6 +311,7 @@ type CustomRhythm = {
     | 'leona_rhythm_dp_sunrise'
     | 'leona_rhythm_dp_sunset';
 };
+// 获取自定义生物节律数据 数据通过saveRhythmInfo保存
 export const getCloudCustomRhythm = async (): Promise<CustomRhythm[]> => {
   const response: any = await fuzzyQueryRhythm('leona_rhythm_%', 0, 10);
   const infoList = response?.filter(n => n.code !== 'leona_rhythm_info');
