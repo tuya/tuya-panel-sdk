@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.12.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.11.0...@tuya/tuya-panel-api@1.12.0) (2023-02-13)
+
+
+### Bug Fixes
+
+* 打包ts报错 ([bd26646](https://github.com/tuya/tuya-panel-sdk/commit/bd2664633b5ad7c3d8b3e43803c37ef53d272dba))
+
+
+### Features
+
+* 照明生物节律接口开发 ([b844c87](https://github.com/tuya/tuya-panel-sdk/commit/b844c871c785efb25644fd1f970cf76190a7f91b))
+* rhythm模块导出 ([99f2524](https://github.com/tuya/tuya-panel-sdk/commit/99f252404a9056d2b3c19e2b24178b1dd36c6a47))
+
+
+
+
+
 # [1.11.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-api@1.10.1...@tuya/tuya-panel-api@1.11.0) (2022-01-18)
 
 
