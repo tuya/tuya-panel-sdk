@@ -395,7 +395,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   }
 
   shouldComponentUpdate(nextProps) {
-    if (nextProps.isFullScreen) {
+    if (nextProps.isFullScreen && nextProps.displayInPortrait) {
       if (nextProps.fullPlayerWidth < nextProps.fullPlayerHeight) {
         return false;
       }
@@ -924,6 +924,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       clarityStatus,
       playerProps,
       zoomInTimesStyle,
+      displayInPortrait,
     } = this.props;
     const realWidth = isFullScreen ? fullPlayerWidth : playerWidth;
     const realHeight = isFullScreen ? fullPlayerHeight : playerHeight;
@@ -979,7 +980,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         )}
         {showCutScreen && (
           <CutScreen
-            isFullScreen={isFullScreen}
+            isFullScreen={isFullScreen && displayInPortrait}
             cutStyle={cutStyle}
             pressEnterAlbum={pressEnterAlbum}
           />
@@ -989,7 +990,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         )}
         {showTwoWayMic && isTalking && isTwoWayTalk && (
           <TwoWayMic
-            isFullScreen={isFullScreen}
+            isFullScreen={isFullScreen && displayInPortrait}
             tipText={Strings.getLang('tyIpc_mic_two_way_talking')}
             playerWidth={playerWidth}
             twoMicStyle={twoMicStyle}
@@ -1023,7 +1024,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
         {/* {showLoading ? ( */}
         {showLoading || showCustomVideoLoad ? (
           <PlayerLoad
-            isFullScreen={isFullScreen}
+            isFullScreen={isFullScreen && displayInPortrait}
             showAnimation={showAnimation}
             loadText={showCustomVideoLoad ? showCustomVideoText : loadText}
             showRetry={showCustomRetry || showRetry}
@@ -1037,7 +1038,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
         {videoStatus === 7 && clarityStatus === 'AUDIO' && (
           <AudioOnlyMode
-            isFullScreen={isFullScreen}
+            isFullScreen={isFullScreen && displayInPortrait}
             audioLoadText={audioLoadText}
             audioLoadParam={audioLoadParam}
           />
