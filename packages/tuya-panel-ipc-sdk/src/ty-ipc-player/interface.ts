@@ -188,6 +188,7 @@ export interface TYIpcPlayerProps {
   activeConnect: 'none' | 'connect' | 'startPreview';
   notNeedJudgeConnectForeground: boolean;
   cancelSessionEmit: boolean;
+  displayInPortrait: boolean;
 }
 
 export const _defaultProps = {
@@ -241,4 +242,5 @@ export const _defaultProps = {
   activeConnect: 'connect',
   notNeedJudgeConnectForeground: false,
   cancelSessionEmit: false,
+  displayInPortrait : true,
 };
