@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.19.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.18.0...@tuya/tuya-panel-ipc-sdk@1.19.0) (2023-10-08)
+
+
+### Features
+
+* add attribute displayInPortrait ([6ac515b](https://github.com/tuya/tuya-panel-sdk/commit/6ac515b2fd2a5241f941ab8c72c4c0c6c99c019b))
+
+
+
+
+
 # [1.18.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.17.2...@tuya/tuya-panel-ipc-sdk@1.18.0) (2023-01-19)
 
 
