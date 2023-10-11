@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.0...@tuya/tuya-panel-ipc-sdk@1.19.1) (2023-10-11)
+
+
+### Bug Fixes
+
+* Component object merge repair ([9482d99](https://github.com/tuya/tuya-panel-sdk/commit/9482d99f1b965bd8bc6cf0a0ee5e6c2a7d5cc46d))
+
+
+
+
+
 # [1.19.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.18.0...@tuya/tuya-panel-ipc-sdk@1.19.0) (2023-10-08)
 
 
