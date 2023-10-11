@@ -1012,8 +1012,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             return (
               <item.component
                 key={`${index + 1}`}
-                {...(item.propData,
-                { hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight })}
+                {...item.propData}
+                {...{ hideFullMenu, stopFullAnim, fullPlayerWidth, fullPlayerHeight }}
                 resetFullScreenBtn={value => {
                   this.props.onFullScreenTapView(value);
                 }}
