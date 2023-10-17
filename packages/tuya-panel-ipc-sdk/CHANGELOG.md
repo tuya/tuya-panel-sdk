@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.2](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.1...@tuya/tuya-panel-ipc-sdk@1.19.2) (2023-10-17)
+
+
+### Bug Fixes
+
+* ios orientationManager fix ([a8ff261](https://github.com/tuya/tuya-panel-sdk/commit/a8ff261c7f03d423c2e7b0fef659123ba0b59b9d))
+
+
+
+
+
 ## [1.19.1](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.0...@tuya/tuya-panel-ipc-sdk@1.19.1) (2023-10-11)
 
 
