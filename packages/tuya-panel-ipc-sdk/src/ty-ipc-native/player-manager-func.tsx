@@ -490,6 +490,7 @@ class PlayerManagerFun {
     if (judgeIpcContainer()) {
       CameraManager.setScreenOrientation(dir);
     } else {
+      isIOS && TYRCTOrientationManager.supportedOrientations(dir === 1 ? ['landscape-right']: ['portrait']);
       TYRCTOrientationManager &&
         TYRCTOrientationManager.lockOrientation &&
         TYRCTOrientationManager.lockOrientation(dir === 1 ? 'landscape-right' : 'portrait');
