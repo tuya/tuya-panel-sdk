@@ -583,9 +583,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   };
 
   // 获取视频播放比例值
-  getRealPlayerScale = (isFullScreen, zoomVideoStatus, playerProps) => {
+  getRealPlayerScale = (isFullScreen, zoomVideoStatus, playerProps, displayInPortrait) => {
     // showZoomInTimes 为需要在全屏自己编写全屏比例放大功能时添加
-    if (isFullScreen && isIOS && !playerProps.showZoomInTimes) {
+    if (isFullScreen && isIOS && !playerProps.showZoomInTimes && displayInPortrait) {
       return -2;
     }
     return zoomVideoStatus;
@@ -937,7 +937,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               onChangePreview={this.onChangePreview}
               action={cameraAction}
               // scaleMultiple={isFullScreen ? -2 : zoomVideoStatus}
-              scaleMultiple={this.getRealPlayerScale(isFullScreen, zoomVideoStatus, playerProps)}
+              scaleMultiple={this.getRealPlayerScale(isFullScreen, zoomVideoStatus, playerProps, displayInPortrait)}
               style={{
                 width: realWidth,
                 height: realHeight,
