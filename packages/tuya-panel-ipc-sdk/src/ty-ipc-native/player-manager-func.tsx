@@ -322,7 +322,7 @@ class PlayerManagerFun {
                 errMsg: JSON.stringify(err),
               });
               TYEvent.emit('isRecordingListen', {
-                isRecording: true,
+                isRecording: false,
               });
             }
           );
@@ -486,8 +486,8 @@ class PlayerManagerFun {
   /*
      横竖屏切换
   */
-  setScreenOrientation = (dir: 0 | 1) => {
-    if (judgeIpcContainer()) {
+  setScreenOrientation = (dir: 0 | 1, ipcContainer?: boolean) => {
+    if (judgeIpcContainer() || ipcContainer) {
       CameraManager.setScreenOrientation(dir);
     } else {
       isIOS && TYRCTOrientationManager.supportedOrientations(dir === 1 ? ['landscape-right']: ['portrait']);
