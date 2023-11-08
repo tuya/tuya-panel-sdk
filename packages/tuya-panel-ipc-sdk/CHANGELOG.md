@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.5](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.4...@tuya/tuya-panel-ipc-sdk@1.19.5) (2023-11-08)
+
+
+### Bug Fixes
+
+* add useCustomContainer ([cf877ef](https://github.com/tuya/tuya-panel-sdk/commit/cf877ef12dd60860c35b520aebc084586b024787))
+* useCustomContainer state ([b85fe9a](https://github.com/tuya/tuya-panel-sdk/commit/b85fe9a157183be1fd2dbb311e58e93f113dfa31))
+
+
+
+
+
 ## [1.19.4](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.3...@tuya/tuya-panel-ipc-sdk@1.19.4) (2023-10-31)
 
 **Note:** Version bump only for package @tuya/tuya-panel-ipc-sdk
