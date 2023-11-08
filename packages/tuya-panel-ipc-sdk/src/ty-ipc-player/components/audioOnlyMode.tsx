@@ -12,6 +12,7 @@ export interface AudioOnlyModeProps {
   audioLoadText: string;
   isFullScreen: boolean;
   audioLoadParam: any;
+  useCustomContainer: boolean;
 }
 
 export interface AudioOnlyModeState {}
@@ -37,7 +38,8 @@ class AudioOnlyMode extends React.Component<AudioOnlyModeProps, AudioOnlyModeSta
   rotateV: number;
 
   exitFullScreen = () => {
-    TYIpcPlayerManager.setScreenOrientation(0);
+    const { useCustomContainer } = this.props;
+    TYIpcPlayerManager.setScreenOrientation(0, useCustomContainer);
   };
 
   /*

@@ -190,9 +190,9 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
     // Android 返回键退出全屏
     this.backPressListener = BackHandler.addEventListener('hardwareBackPress', () => {
-      const { isFullScreen } = this.props;
+      const { isFullScreen, useCustomContainer } = this.props;
       if (isFullScreen) {
-        TYIpcPlayerManager.setScreenOrientation(0);
+        TYIpcPlayerManager.setScreenOrientation(0, useCustomContainer);
         return true;
       }
       return false;
@@ -925,6 +925,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       playerProps,
       zoomInTimesStyle,
       displayInPortrait,
+      useCustomContainer,
     } = this.props;
     const realWidth = isFullScreen ? fullPlayerWidth : playerWidth;
     const realHeight = isFullScreen ? fullPlayerHeight : playerHeight;
@@ -1033,6 +1034,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             }
             reConnect={this.reConnect}
             playerLoadParam={playerLoadParam}
+            useCustomContainer={useCustomContainer}
           />
         ) : null}
 
@@ -1041,6 +1043,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
             isFullScreen={isFullScreen && displayInPortrait}
             audioLoadText={audioLoadText}
             audioLoadParam={audioLoadParam}
+            useCustomContainer={useCustomContainer}
           />
         )}
       </View>

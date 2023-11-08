@@ -18,6 +18,7 @@ export interface PlayerLoadProps {
   isFullScreen: boolean;
   reConnect: () => void;
   playerLoadParam: any;
+  useCustomContainer: boolean;
 }
 
 export interface PlayerLoadState {
@@ -82,7 +83,8 @@ class PlayerLoad extends React.Component<PlayerLoadProps, PlayerLoadState> {
   };
 
   exitFullScreen = () => {
-    TYIpcPlayerManager.setScreenOrientation(0);
+    const { useCustomContainer } = this.props;
+    TYIpcPlayerManager.setScreenOrientation(0, useCustomContainer);
   };
 
   /*

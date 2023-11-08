@@ -189,6 +189,7 @@ export interface TYIpcPlayerProps {
   notNeedJudgeConnectForeground: boolean;
   cancelSessionEmit: boolean;
   displayInPortrait: boolean;
+  useCustomContainer: boolean;
 }
 
 export const _defaultProps = {
@@ -243,4 +244,5 @@ export const _defaultProps = {
   notNeedJudgeConnectForeground: false,
   cancelSessionEmit: false,
   displayInPortrait : true,
+  useCustomContainer: false,
 };
