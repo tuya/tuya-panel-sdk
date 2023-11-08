@@ -72,7 +72,6 @@ interface TYIpcPlayerState {
   currentVideoScale: number;
   currentScaleStatus: number;
   isBusy: boolean;
-  useCustomContainer: boolean;
 }
 
 class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
