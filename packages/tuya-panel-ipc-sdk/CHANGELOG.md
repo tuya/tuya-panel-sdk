@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.19.6](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.5...@tuya/tuya-panel-ipc-sdk@1.19.6) (2024-01-19)
+
+
+### Bug Fixes
+
+* compress image ([799d7f7](https://github.com/tuya/tuya-panel-sdk/commit/799d7f7871ccd3018f32ae0cd5a4cfe1e6eee270))
+
+
+
+
+
 ## [1.19.5](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.4...@tuya/tuya-panel-ipc-sdk@1.19.5) (2023-11-08)
 
 
