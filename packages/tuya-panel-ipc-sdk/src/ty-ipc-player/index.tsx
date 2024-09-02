@@ -922,6 +922,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               });
             }, 15000);
           }
+        } else {
+          TYDevice.putDeviceData({
+            basic_private: false,
+          });
         }
 
         return false;
