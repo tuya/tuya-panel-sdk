@@ -6,6 +6,9 @@ export default {
     tyIpc_private_mode_sleep_close: 'Turn on the camera',
     tyIpc_video_channel_connecting: 'Establishing an encrypted channel...',
     tyIpc_video_channel_connect_fail: 'Failed to establish the encrypted channel',
+    tyIpc_private_mode_wireless_device_wake_ing: 'Waking up the device...',
+    tyIpc_private_mode_wireless_device_wake_fail:
+      'Connection failed. Please click below to restart',
     tyIpc_video_get_stream_ing: 'Retrieving video stream...',
     tyIpc_video_get_stream_failure: 'Failed to retrieve video stream',
     tyIpc_net_err: 'Device connection is interrupted, please check the device and network',
@@ -35,6 +38,8 @@ export default {
     tyIpc_private_mode_sleep_close: '开启摄像头',
     tyIpc_video_channel_connecting: '正在构建加密通道',
     tyIpc_video_channel_connect_fail: '构建加密通道失败',
+    tyIpc_private_mode_wireless_device_wake_ing: '正在唤醒设备中',
+    tyIpc_private_mode_wireless_device_wake_fail: '连接失败，点击下方重新开启',
     tyIpc_video_get_stream_ing: '正在获取视频流',
     tyIpc_video_get_stream_failure: '获取视频流失败',
     tyIpc_net_err: '设备连接中断,请检查设备及网络',
