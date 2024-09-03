@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.20.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.7...@tuya/tuya-panel-ipc-sdk@1.20.0) (2024-09-03)
+
+
+### Bug Fixes
+
+* add non-low device ([86926f5](https://github.com/tuya/tuya-panel-sdk/commit/86926f501c036d9f2dab6f9d9429dd6411a0834a))
+
+
+### Features
+
+* Add low-power privacy mode. ([9b62c4c](https://github.com/tuya/tuya-panel-sdk/commit/9b62c4c5a330ece89fa0bd4ba9890f12f89c6aae))
+
+
+
+
+
 ## [1.19.7](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.6...@tuya/tuya-panel-ipc-sdk@1.19.7) (2024-02-21)
 
 
