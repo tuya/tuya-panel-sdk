@@ -3,6 +3,9 @@
 const Global = {
   requestTimeOut: null,
   enterBackTimeOut: null,
+  isLowPowerDevicePrivate: false,
+  lowPrivateFlagTimeOut: null,
+  lowWarlessWakeInterval: null,
 };
 
 export default Global;

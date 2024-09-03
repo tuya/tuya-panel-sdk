@@ -24,6 +24,7 @@ import {
 import native from '../ty-ipc-native-module';
 import Strings from './i18n';
 import Config from './config';
+import Global from './config/global';
 import {
   enterBackTimeOut,
   cancelEnterBackTimeOut,
@@ -42,7 +43,7 @@ import { videoLoadText } from '../ty-ipc-native/cameraData';
 import TYRCTLifecycleManager from './components/tyrctLifecycleManager';
 import TYRCTOrientationManager from '../ty-ipc-native/tyrctOrientationManager';
 
-const { CameraPlayer: NativePlayer, CameraManager } = native;
+const { CameraPlayer: NativePlayer, CameraManager, MqttManager } = native;
 
 const { normalPlayerWidth, normalPlayerHeight, isIOS } = Config;
 if (!isIOS && UIManager.setLayoutAnimationEnabledExperimental) {
@@ -145,6 +146,25 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
     TYEvent.on('getCameraConfig', this.getCameraConfig);
     TYEvent.on('isEnterRnPage', this.judgeIsEnterRnPage);
     TYEvent.on('activeChangeScale', this.activeChangeScale);
+    MqttManager.receiverMqttDataWithDevId(TYSdk.devInfo.devId, 1);
+    TYSdk.DeviceEventEmitter.addListener('receiveMqttData', data => {
+      if (data?.protocol === 1 && data?.messageData?.online) {
+        // 监听到设备唤醒， 清除设置的定时
+        if (Global.isLowPowerDevicePrivate) {
+          // 说明设备唤醒了, 这里延迟1s再进行下发，看日志有时用到唤醒DP会滞后, 隐私模式下发后，监听DP变更即可，走正常拉流
+          Global.lowWarlessWakeInterval && clearInterval(Global.lowWarlessWakeInterval);
+          // 清除15秒唤醒定时
+          Global.lowPrivateFlagTimeOut && clearTimeout(Global.lowPrivateFlagTimeOut);
+          setTimeout(() => {
+            TYDevice.putDeviceData({
+              basic_private: false,
+            });
+          }, 1000);
+          Global.isLowPowerDevicePrivate = false;
+        }
+      }
+    });
+
     TYIpcPlayerManager.startPlay(
       this.props.isWirless,
       this.props.privateMode,
@@ -363,6 +383,7 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       channelNum,
       scaleMultiple,
       activeConnect,
+      wirelessAwake,
     } = this.props;
     if (
       !_.isEqual(privateMode, nextProps.privateMode) ||
@@ -370,6 +391,10 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       !_.isEqual(channelNum, nextProps.channelNum) ||
       !_.isEqual(activeConnect, nextProps.activeConnect)
     ) {
+      if (!_.isEqual(privateMode, nextProps.privateMode) && !nextProps.privateMode) {
+        Global.isLowPowerDevicePrivate = false;
+      }
+
       TYIpcPlayerManager.startPlay(
         nextProps.isWirless,
         nextProps.privateMode,
@@ -386,6 +411,22 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
       this.setState({
         zoomVideoStatus: nextProps.zoomStatus,
       });
+    }
+
+    if (!_.isEqual(wirelessAwake, nextProps.wirelessAwake) && nextProps.wirelessAwake) {
+      // 大部分低功耗设备会接入DP表示设备唤醒
+      if (Global.isLowPowerDevicePrivate) {
+        // 说明设备唤醒了, 这里延迟1s再进行下发，看日志有时用到唤醒DP会滞后, 隐私模式下发后，监听DP变更即可，走正常拉流
+        Global.lowWarlessWakeInterval && clearInterval(Global.lowWarlessWakeInterval);
+        // 清除15秒唤醒定时
+        Global.lowPrivateFlagTimeOut && clearTimeout(Global.lowPrivateFlagTimeOut);
+        setTimeout(() => {
+          TYNative.putDpData({
+            basic_private: false,
+          });
+        }, 1000);
+        Global.isLowPowerDevicePrivate = false;
+      }
     }
     if (!_.isEqual(scaleMultiple, nextProps.scaleMultiple)) {
       this.setState({
@@ -706,12 +747,8 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
   handleAppStateChange = nextAppState => {
     // 表示手机应用滑到后台,统一断开disconenct, 安卓和ios差异限制, 安卓立即断开,ios5秒后断开
-    const {
-      enterBackDisConP2P,
-      isWirless,
-      deviceOnline,
-      notNeedJudgeConnectForeground,
-    } = this.props;
+    const { enterBackDisConP2P, isWirless, deviceOnline, notNeedJudgeConnectForeground } =
+      this.props;
     if (nextAppState === 'background' && !enterBackDisConP2P) {
       enterBackTimeOutSpecial();
     }
@@ -778,6 +815,11 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
 
     status === 1 &&
       ((retryText = Strings.getLang('tyIpc_private_mode_sleep_close')), (showAnimation = false));
+
+    // 新增加状态10, 针对低功耗设备, 提示唤醒中
+    status === 10 &&
+      ((loadText = Strings.getLang('tyIpc_private_mode_wireless_device_wake_ing')),
+      (retryText = ''));
 
     if (status === 3) {
       if (this.netDisconnect) {
@@ -849,9 +891,43 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
           loadText: Strings.getLang('tyIpc_re_connect_stream'),
           showAnimation: true,
         });
-        TYDevice.putDeviceData({
-          basic_private: false,
-        });
+        if (isWirless) {
+          const wirelessAwake = TYSdk.device.getState('wireless_awake');
+          if (wirelessAwake) {
+            // 如果为唤醒直接状态
+            TYDevice.putDeviceData({
+              basic_private: false,
+            });
+          } else {
+            Global.isLowPowerDevicePrivate = true;
+            CameraManager.wakeUpDoorBell();
+            Global.lowWarlessWakeInterval = setInterval(() => {
+              CameraManager.wakeUpDoorBell();
+            }, 300);
+            // 唤醒设备先
+            this.setState({
+              showLoading: true,
+              showRetry: false,
+              loadText: Strings.getLang('tyIpc_private_mode_wireless_device_wake_ing'),
+              showAnimation: true,
+            });
+            // 15秒持续发唤醒, 若唤醒不上来提示失败, 若成功则清除对应定时
+            Global.lowPrivateFlagTimeOut = setTimeout(() => {
+              clearInterval(Global.lowWarlessWakeInterval);
+              this.setState({
+                showLoading: true,
+                showRetry: true,
+                loadText: Strings.getLang('tyIpc_private_mode_wireless_device_wake_fail'),
+                showAnimation: false,
+              });
+            }, 15000);
+          }
+        } else {
+          TYDevice.putDeviceData({
+            basic_private: false,
+          });
+        }
+
         return false;
       }
 
@@ -938,7 +1014,12 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
               onChangePreview={this.onChangePreview}
               action={cameraAction}
               // scaleMultiple={isFullScreen ? -2 : zoomVideoStatus}
-              scaleMultiple={this.getRealPlayerScale(isFullScreen, zoomVideoStatus, playerProps, displayInPortrait)}
+              scaleMultiple={this.getRealPlayerScale(
+                isFullScreen,
+                zoomVideoStatus,
+                playerProps,
+                displayInPortrait
+              )}
               style={{
                 width: realWidth,
                 height: realHeight,

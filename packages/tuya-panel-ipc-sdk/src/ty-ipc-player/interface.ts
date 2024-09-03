@@ -190,6 +190,7 @@ export interface TYIpcPlayerProps {
   cancelSessionEmit: boolean;
   displayInPortrait: boolean;
   useCustomContainer: boolean;
+  wirelessAwake: boolean;
 }
 
 export const _defaultProps = {
@@ -243,6 +244,7 @@ export const _defaultProps = {
   activeConnect: 'connect',
   notNeedJudgeConnectForeground: false,
   cancelSessionEmit: false,
-  displayInPortrait : true,
+  displayInPortrait: true,
   useCustomContainer: false,
+  wirelessAwake: false,
 };

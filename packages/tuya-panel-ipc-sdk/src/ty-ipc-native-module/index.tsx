@@ -1,3 +1,4 @@
+import { NativeModules } from 'react-native';
 import CameraManager from '../ty-ipc-native/nativeApi';
 import CameraPlayer from '../ty-ipc-player/nativePlayer';
 import OrientationManager from '../ty-ipc-native/tyrctOrientationManager';
@@ -10,6 +11,8 @@ import TYRCTLifecycleManager from '../ty-ipc-player/components/tyrctLifecycleMan
 import HomeDeviceManager from '../ty-ipc-multiple-player/native/homeDeviceManager';
 import MultiCameraManager from '../ty-ipc-multiple-player/native/multiCameraManager';
 import MultiDeviceManager from '../ty-ipc-multiple-player/native/multiDeviceManager';
+
+const MqttManager = NativeModules.TYRCTMqttManager;
 
 export default {
   /**
@@ -52,4 +55,8 @@ export default {
    * @description 跨设备下发
    */
   MultiDeviceManager,
+  /**
+   * @description mqtt监听
+   */
+  MqttManager,
 };
