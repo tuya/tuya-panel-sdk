@@ -2129,7 +2129,7 @@
 
 "@react-native-community/blur@^3.6.0":
   version "3.6.0"
-  resolved "https://registry.nlark.com/@react-native-community/blur/download/@react-native-community/blur-3.6.0.tgz#31c9e0f2770519c9b5c4f99418f192246f0d4db8"
+  resolved "https://registry.npmmirror.com/@react-native-community/blur/download/@react-native-community/blur-3.6.0.tgz#31c9e0f2770519c9b5c4f99418f192246f0d4db8"
   integrity sha1-Mcng8ncFGcm1xPmUGPGSJG8NTbg=
   dependencies:
     prop-types "^15.5.10"
@@ -11622,7 +11622,7 @@ react-native-scrolling@^1.0.2:
 
 react-native-shadow@^1.2.2:
   version "1.2.2"
-  resolved "https://registry.npm.taobao.org/react-native-shadow/download/react-native-shadow-1.2.2.tgz#08991cd14b71e32f2fc6363911c139d231949a66"
+  resolved "https://registry.npmmirror.com/react-native-shadow/download/react-native-shadow-1.2.2.tgz#08991cd14b71e32f2fc6363911c139d231949a66"
   integrity sha1-CJkc0Utx4y8vxjY5EcE50jGUmmY=
 
 react-native-svg@5.5.1:
