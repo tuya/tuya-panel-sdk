@@ -191,6 +191,7 @@ export interface TYIpcPlayerProps {
   displayInPortrait: boolean;
   useCustomContainer: boolean;
   wirelessAwake: boolean;
+  needStopPreview: boolean;
 }
 
 export const _defaultProps = {
@@ -247,4 +248,5 @@ export const _defaultProps = {
   displayInPortrait: true,
   useCustomContainer: false,
   wirelessAwake: false,
+  needStopPreview: true
 };
