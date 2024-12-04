@@ -544,15 +544,15 @@ class TYIpcPlayer extends React.Component<TYIpcPlayerProps, TYIpcPlayerState> {
   enterBackground = () => {
     this.goToBack = true;
     this.onLivePage = false;
-    const { enterBackDisConP2P, showCutScreen } = this.props;
+    const { enterBackDisConP2P, showCutScreen, needStopPreview } = this.props;
 
     if (showCutScreen) {
       TYEvent.emit('hideScreenListen', {});
     }
 
-    if (!enterBackDisConP2P) {
+    if (!needStopPreview) {
       TYIpcPlayerManager.exitPlayPreviewSpecial();
-    } else {
+    }  else {
       TYIpcPlayerManager.backPlayPreview(enterBackDisConP2P);
     }
 
