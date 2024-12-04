@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.21.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.20.0...@tuya/tuya-panel-ipc-sdk@1.21.0) (2024-12-04)
+
+
+### Features
+
+* add needStopPreview param ([4d6787a](https://github.com/tuya/tuya-panel-sdk/commit/4d6787a9260aa5c070ef43754e0c640a8174f194))
+
+
+
+
+
 # [1.20.0](https://github.com/tuya/tuya-panel-sdk/compare/@tuya/tuya-panel-ipc-sdk@1.19.7...@tuya/tuya-panel-ipc-sdk@1.20.0) (2024-09-03)
 
 
