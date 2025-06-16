@@ -355,8 +355,19 @@ class PlayerManagerFun {
             TYEvent.emit('isTalkingListen', { isTalking: true });
           },
           err => {
+            // 获取 code
+            let code = (typeof err === 'object' ? err?.code : err) || 'unkown'; // 安卓下直接返回的 错误码
+            if (isIOS) {
+              code = err?.code?.replace(`E${err?.domain?.toUpperCase()}`, '') || 'unkown'; // iOS下返回的错误码是 E+domain+code
+            }
+
             TYEvent.emit('isTalkingListen', { isTalking: false, err });
-            CameraManager.showTip(Strings.getLang('tyIpc_operatorFailed'));
+            CameraManager.showTip(
+              Strings.getLang(
+                `tyIpc_operatorFailed${code}`,
+                Strings.getLang('tyIpc_operatorFailed')
+              )
+            );
           }
         );
       }
